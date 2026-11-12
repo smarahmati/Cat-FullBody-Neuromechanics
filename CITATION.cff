@@ -8,7 +8,7 @@ authors:
   - family-names: Rahmati
     given-names: Seyed Mohammadali
 license: MIT
-abstract: "A reproducible sagittal four-limb cat model with prescribed muscle excitation, activation dynamics, passive fiber force in all limbs, elastic tendons and compliant paw contact. Calibrated reference agreement and motor-input perturbation results are documented, with remaining biological and validation limitations."
+abstract: "Fully forward cat neuromusculoskeletal model with mechanically coupled sagittal four-limb dynamics. Prescribed muscle excitation drives activation dynamics, Hill-type active and passive muscle forces, viscous fiber damping, elastic tendons and compliant paw contact. Includes intact walking results, experimental comparisons, documented equations and parameters, and explicit biological and validation limitations."
 keywords:
   - neuromechanics
   - forward dynamics

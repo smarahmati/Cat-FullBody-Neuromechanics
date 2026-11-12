@@ -1,5 +1,5 @@
 <!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Build the illustrated muscle guide from the current editable configuration.</title><link rel="stylesheet" href="../style.css"></head><body><!-- generated folder guide --><header><div class="tag">Cat · Full-body neuromechanics</div><h1>Build the illustrated muscle guide from the current editable configuration.</h1><nav><a href="../../START_HERE.html">Start here</a> · <a href="../project_structure.html">Find a file</a></nav></header><main><p><a href="../../Code/simulation_tools/create_muscle_model_guide.py">Code/simulation_tools/create_muscle_model_guide.py</a></p><pre style="overflow:auto;white-space:pre"><span id="L1">   1</span> &quot;&quot;&quot;Build the illustrated muscle guide from the current editable configuration.
-<span id="L2">   2</span> 
+<span id="L2">   2</span>
 <span id="L3">   3</span> Run this file after changing muscle parameters to refresh the documentation.
 <span id="L4">   4</span> It reads dictionaries and existing equation documentation; it does not run or
 <span id="L5">   5</span> alter the forward model. Outputs are Documentation/muscle_model.html and its
@@ -10,17 +10,17 @@
 <span id="L10">  10</span> import json
 <span id="L11">  11</span> import re
 <span id="L12">  12</span> import runpy
-<span id="L13">  13</span> 
+<span id="L13">  13</span>
 <span id="L14">  14</span> ROOT = Path(__file__).resolve().parents[2]
 <span id="L15">  15</span> PARAM = ROOT / &#x27;Data/Model_Parameters&#x27;
 <span id="L16">  16</span> DOC = ROOT / &#x27;Documentation&#x27;
-<span id="L17">  17</span> 
-<span id="L18">  18</span> 
+<span id="L17">  17</span>
+<span id="L18">  18</span>
 <span id="L19">  19</span> def read_dictionary(filename):
 <span id="L20">  20</span>     &quot;&quot;&quot;Read the same PARAMETERS dictionary a fresh simulation will use.&quot;&quot;&quot;
 <span id="L21">  21</span>     return runpy.run_path(str(PARAM / filename))[&#x27;PARAMETERS&#x27;]
-<span id="L22">  22</span> 
-<span id="L23">  23</span> 
+<span id="L22">  22</span>
+<span id="L23">  23</span>
 <span id="L24">  24</span> def main():
 <span id="L25">  25</span>     &quot;&quot;&quot;Create an offline-readable figure, parameter selector and equation guide.&quot;&quot;&quot;
 <span id="L26">  26</span>     muscles = read_dictionary(&#x27;muscle_tendon.py&#x27;)
@@ -36,7 +36,7 @@
 <span id="L36">  36</span>     payload = {&#x27;muscles&#x27;: muscles, &#x27;activation&#x27;: activation, &#x27;initial&#x27;: initial,
 <span id="L37">  37</span>                &#x27;descriptions&#x27;: descriptions, &#x27;source&#x27;: &#x27;Current editable Data/Model_Parameters dictionaries&#x27;}
 <span id="L38">  38</span>     (DOC / &#x27;muscle_model_parameters.json&#x27;).write_text(json.dumps(payload, indent=2) + &#x27;\n&#x27;, encoding=&#x27;utf-8&#x27;)
-<span id="L39">  39</span> 
+<span id="L39">  39</span>
 <span id="L40">  40</span>     # Use the same rendered equations and immediate definitions as the methods.
 <span id="L41">  41</span>     # This avoids maintaining a second, potentially inconsistent constitutive law.
 <span id="L42">  42</span>     methods = (DOC / &#x27;model_methods.html&#x27;).read_text(encoding=&#x27;utf-8&#x27;)
@@ -48,7 +48,7 @@
 <span id="L48">  48</span>         heading, body = match.group(1).split(&#x27;&lt;/h3&gt;&#x27;, 1)
 <span id="L49">  49</span>         equations.append(&#x27;&lt;details&#x27; + (&#x27; open&#x27; if number == 3 else &#x27;&#x27;) + &#x27;&gt;&lt;summary&gt;&#x27; +
 <span id="L50">  50</span>                          html.escape(str(number)) + &#x27;. &#x27; + heading + &#x27;&lt;/summary&gt;&#x27; + body + &#x27;&lt;/details&gt;&#x27;)
-<span id="L51">  51</span> 
+<span id="L51">  51</span>
 <span id="L52">  52</span>     constant_meanings = {
 <span id="L53">  53</span>         &#x27;ACTIVE_LENGTH_POWER&#x27;: (&#x27;1&#x27;, &#x27;Power p in the active force–length curve; current source shape p = 1.55.&#x27;),
 <span id="L54">  54</span>         &#x27;ACTIVE_LENGTH_WIDTH&#x27;: (&#x27;1&#x27;, &#x27;Width w in the active force–length curve; current source shape w = 0.55.&#x27;),
@@ -100,7 +100,7 @@
 <span id="L100"> 100</span> &lt;p&gt;The current model uses the passive exponential in Prilutsky et al. (2016), Table 10.3, and Rahmati et al. (2025), Table 3, with coefficients 0.0075 and 11.6. It is enabled in all limb channels, inside the elastic force-equilibrium solve. This constitutive law is part of the muscle equilibrium equations for every limb.&lt;/p&gt;
 <span id="L101"> 101</span> &lt;p&gt;Zeroing compressive values and limiting the exponent for overflow protection are explicit adaptations. Extending one normalized law to added channels is an assumption, not muscle-specific passive calibration. The passive curve coefficients are taken from the cited publications; they are not fitted to this walking trial. &lt;a href=&quot;passive_fiber_mechanics.html&quot;&gt;Passive-force equation and stretch verification&lt;/a&gt;.&lt;/p&gt;
 <span id="L102"> 102</span> &lt;h2&gt;Inspect every parameter for one muscle&lt;/h2&gt;
-<span id="L103"> 103</span> &lt;p&gt;Select a muscle below. These values come from the editable configuration when this guide was generated. They do not change the running model. Edit the linked Python files and start a new simulation to apply changes.&lt;/p&gt;
+<span id="L103"> 103</span> &lt;p&gt;Select a muscle to inspect its saved configuration values. Edit the linked Python files and start a new simulation to apply changes.&lt;/p&gt;
 <span id="L104"> 104</span> &lt;label for=&quot;muscle-choice&quot;&gt;&lt;strong&gt;Muscle:&lt;/strong&gt;&lt;/label&gt; &lt;select id=&quot;muscle-choice&quot;&gt;OPTIONS&lt;/select&gt;
 <span id="L105"> 105</span> &lt;p id=&quot;muscle-state&quot; class=&quot;parameter-note&quot;&gt;&lt;/p&gt;
 <span id="L106"> 106</span> &lt;table id=&quot;muscle-parameters&quot;&gt;&lt;thead&gt;&lt;tr&gt;&lt;th&gt;Configuration parameter&lt;/th&gt;&lt;th&gt;Value&lt;/th&gt;&lt;th&gt;Unit&lt;/th&gt;&lt;th&gt;Meaning and current use&lt;/th&gt;&lt;th&gt;File&lt;/th&gt;&lt;/tr&gt;&lt;/thead&gt;&lt;tbody&gt;&lt;/tbody&gt;&lt;/table&gt;
@@ -159,8 +159,8 @@
 <span id="L159"> 159</span>             .replace(&#x27;PAYLOAD&#x27;, json.dumps(payload, ensure_ascii=False).replace(&#x27;&lt;&#x27;, &#x27;\\u003c&#x27;)))
 <span id="L160"> 160</span>     (DOC / &#x27;muscle_model.html&#x27;).write_text(page, encoding=&#x27;utf-8&#x27;)
 <span id="L161"> 161</span>     print(f&#x27;Wrote illustrated guide and {len(muscles)} muscle parameter records.&#x27;)
-<span id="L162"> 162</span> 
-<span id="L163"> 163</span> 
+<span id="L162"> 162</span>
+<span id="L163"> 163</span>
 <span id="L164"> 164</span> if __name__ == &#x27;__main__&#x27;:
 <span id="L165"> 165</span>     main()
 </pre></main></body></html>

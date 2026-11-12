@@ -2,8 +2,7 @@
 
 Edit, then start a NEW run.py process. Dependent kernels compile afresh so
 edits cannot be masked by a stale Numba cache. These are curve-law constants,
-not individually measured parameters of each cat muscle. Defaults preserve
-the previous numerical model. See Documentation/model_methods.html.
+not individually measured parameters of each cat muscle. Scientific sources and model assumptions are identified beside each constant. See Documentation/model_methods.html.
 """
 
 # Source MATLAB active force-length shape (original 1.55 and 0.55).

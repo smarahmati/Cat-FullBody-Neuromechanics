@@ -100,7 +100,7 @@ Force depends on activation, fiber length and velocity, tendon stretch, pennatio
 <p>The current model uses the passive exponential in Prilutsky et al. (2016), Table 10.3, and Rahmati et al. (2025), Table 3, with coefficients 0.0075 and 11.6. It is enabled in all limb channels, inside the elastic force-equilibrium solve. This constitutive law is part of the muscle equilibrium equations for every limb.</p>
 <p>Zeroing compressive values and limiting the exponent for overflow protection are explicit adaptations. Extending one normalized law to added channels is an assumption, not muscle-specific passive calibration. The passive curve coefficients are taken from the cited publications; they are not fitted to this walking trial. <a href="passive_fiber_mechanics.html">Passive-force equation and stretch verification</a>.</p>
 <h2>Inspect every parameter for one muscle</h2>
-<p>Select a muscle below. These values come from the editable configuration when this guide was generated. They do not change the running model. Edit the linked Python files and start a new simulation to apply changes.</p>
+<p>Select a muscle to inspect its saved configuration values. Edit the linked Python files and start a new simulation to apply changes.</p>
 <label for="muscle-choice"><strong>Muscle:</strong></label> <select id="muscle-choice">OPTIONS</select>
 <p id="muscle-state" class="parameter-note"></p>
 <table id="muscle-parameters"><thead><tr><th>Configuration parameter</th><th>Value</th><th>Unit</th><th>Meaning and current use</th><th>File</th></tr></thead><tbody></tbody></table>

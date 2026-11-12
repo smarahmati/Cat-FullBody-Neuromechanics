@@ -1,162 +1,161 @@
-# Earlier model: hindlimb flags 0; forelimb flags 1. Applied now: all 1.
+# Passive fiber force is enabled for all 104 muscle channels.
 # Published PE law: Prilutsky et al. (2016), Table 10.3, DOI 10.1007/978-1-4939-3267-2_10;
 # Rahmati et al. (2025), Table 3, DOI 10.1113/JP287448.
 # Applying the common normalized law to added toe/girdle channels is a model assumption.
-# No force capacity, length, excitation, contact or initial-state retuning in this revision.
 # Read this file independently: executable numbers in PARAMETERS are the values used in this model.
 # Source-value comments identify verified source numbers; missing sources are explicitly stated.
-# Robustness change FL_ShoulderExtensor.optimal_fiber_length_m: 0.015859438273493873 -> 0.016811004569903507.
-# Robustness change FL_ShoulderExtensor.max_fiber_speed_optimal_lengths_per_s: 11.0 -> 10.377358490566037.
-# Robustness change FL_ElbowExtensor.optimal_fiber_length_m: 0.029062040625 -> 0.0308057630625.
-# Robustness change FL_ElbowExtensor.max_fiber_speed_optimal_lengths_per_s: 8.675125000000001 -> 8.184080188679246.
-# Robustness change FL_BicepsBrachii.optimal_fiber_length_m: 0.0250891425 -> 0.026594491050000002.
-# Robustness change FL_BicepsBrachii.max_fiber_speed_optimal_lengths_per_s: 11.877999999999998 -> 11.20566037735849.
-# Robustness change FL_ElbowFlexor.optimal_fiber_length_m: 0.04448412000000001 -> 0.04715316720000001.
-# Robustness change FL_ElbowFlexor.max_fiber_speed_optimal_lengths_per_s: 12.159742122719733 -> 11.471454832754464.
-# Robustness change FL_ElbowFlexorWristFlexor.optimal_fiber_length_m: 0.027434457000000002 -> 0.029080524420000003.
-# Robustness change FL_ElbowFlexorWristFlexor.max_fiber_speed_optimal_lengths_per_s: 13.256288577154308 -> 12.505932619956894.
-# Robustness change FL_WristFlexor.optimal_fiber_length_m: 0.020987910000000002 -> 0.022247184600000004.
-# Robustness change FL_WristFlexor.max_fiber_speed_optimal_lengths_per_s: 13.152999999999999 -> 12.408490566037734.
-# Robustness change FL_WristExtensor.optimal_fiber_length_m: 0.013195798593749997 -> 0.013987546509374997.
-# Robustness change FL_WristExtensor.max_fiber_speed_optimal_lengths_per_s: 11.741004190642983 -> 11.076419047776398.
-# Robustness change FL_ShoulderFlexor.optimal_fiber_length_m: 0.03949691625000001 -> 0.04186673122500001.
-# Robustness change FL_ShoulderFlexor.max_fiber_speed_optimal_lengths_per_s: 11.0 -> 10.377358490566037.
-# Robustness change FL_TricepsBrachiiLong.optimal_fiber_length_m: 0.0238632075 -> 0.02529499995.
-# Robustness change FL_TricepsBrachiiLong.max_fiber_speed_optimal_lengths_per_s: 11.365 -> 10.721698113207546.
-# Robustness change FR_ShoulderExtensor.optimal_fiber_length_m: 0.015859438273493873 -> 0.016811004569903507.
-# Robustness change FR_ShoulderExtensor.max_fiber_speed_optimal_lengths_per_s: 11.0 -> 10.377358490566037.
-# Robustness change FR_ElbowExtensor.optimal_fiber_length_m: 0.029062040625 -> 0.0308057630625.
-# Robustness change FR_ElbowExtensor.max_fiber_speed_optimal_lengths_per_s: 8.675125000000001 -> 8.184080188679246.
-# Robustness change FR_BicepsBrachii.optimal_fiber_length_m: 0.0250891425 -> 0.026594491050000002.
-# Robustness change FR_BicepsBrachii.max_fiber_speed_optimal_lengths_per_s: 11.877999999999998 -> 11.20566037735849.
-# Robustness change FR_ElbowFlexor.optimal_fiber_length_m: 0.04448412000000001 -> 0.04715316720000001.
-# Robustness change FR_ElbowFlexor.max_fiber_speed_optimal_lengths_per_s: 12.159742122719733 -> 11.471454832754464.
-# Robustness change FR_ElbowFlexorWristFlexor.optimal_fiber_length_m: 0.027434457000000002 -> 0.029080524420000003.
-# Robustness change FR_ElbowFlexorWristFlexor.max_fiber_speed_optimal_lengths_per_s: 13.256288577154308 -> 12.505932619956894.
-# Robustness change FR_WristFlexor.optimal_fiber_length_m: 0.020987910000000002 -> 0.022247184600000004.
-# Robustness change FR_WristFlexor.max_fiber_speed_optimal_lengths_per_s: 13.152999999999999 -> 12.408490566037734.
-# Robustness change FR_WristExtensor.optimal_fiber_length_m: 0.013195798593749997 -> 0.013987546509374997.
-# Robustness change FR_WristExtensor.max_fiber_speed_optimal_lengths_per_s: 11.741004190642983 -> 11.076419047776398.
-# Robustness change FR_ShoulderFlexor.optimal_fiber_length_m: 0.03949691625000001 -> 0.04186673122500001.
-# Robustness change FR_ShoulderFlexor.max_fiber_speed_optimal_lengths_per_s: 11.0 -> 10.377358490566037.
-# Robustness change FR_TricepsBrachiiLong.optimal_fiber_length_m: 0.0238632075 -> 0.02529499995.
-# Robustness change FR_TricepsBrachiiLong.max_fiber_speed_optimal_lengths_per_s: 11.365 -> 10.721698113207546.
-# Robustness change FL_S_C3.optimal_fiber_length_m: 0.048650831997865754 -> 0.0515698819177377.
-# Robustness change FL_S_C3.max_fiber_speed_optimal_lengths_per_s: 10.0 -> 9.433962264150942.
-# Robustness change FR_S_C3.optimal_fiber_length_m: 0.048650831997865754 -> 0.0515698819177377.
-# Robustness change FR_S_C3.max_fiber_speed_optimal_lengths_per_s: 10.0 -> 9.433962264150942.
-# Robustness change FL_S_C4.optimal_fiber_length_m: 0.04350300298959364 -> 0.046113183168969264.
-# Robustness change FL_S_C4.max_fiber_speed_optimal_lengths_per_s: 10.0 -> 9.433962264150942.
-# Robustness change FR_S_C4.optimal_fiber_length_m: 0.04350300298959364 -> 0.046113183168969264.
-# Robustness change FR_S_C4.max_fiber_speed_optimal_lengths_per_s: 10.0 -> 9.433962264150942.
-# Robustness change FL_S_C5.optimal_fiber_length_m: 0.0420306683454802 -> 0.04455250844620901.
-# Robustness change FL_S_C5.max_fiber_speed_optimal_lengths_per_s: 10.0 -> 9.433962264150942.
-# Robustness change FR_S_C5.optimal_fiber_length_m: 0.0420306683454802 -> 0.04455250844620901.
-# Robustness change FR_S_C5.max_fiber_speed_optimal_lengths_per_s: 10.0 -> 9.433962264150942.
-# Robustness change FL_S_C6.optimal_fiber_length_m: 0.03995647987572479 -> 0.04235386866826828.
-# Robustness change FL_S_C6.max_fiber_speed_optimal_lengths_per_s: 10.0 -> 9.433962264150942.
-# Robustness change FR_S_C6.optimal_fiber_length_m: 0.03995647987572479 -> 0.04235386866826828.
-# Robustness change FR_S_C6.max_fiber_speed_optimal_lengths_per_s: 10.0 -> 9.433962264150942.
-# Robustness change FL_S_C7.optimal_fiber_length_m: 0.03644804795181541 -> 0.03863493082892434.
-# Robustness change FL_S_C7.max_fiber_speed_optimal_lengths_per_s: 10.0 -> 9.433962264150942.
-# Robustness change FR_S_C7.optimal_fiber_length_m: 0.03644804795181541 -> 0.03863493082892434.
-# Robustness change FR_S_C7.max_fiber_speed_optimal_lengths_per_s: 10.0 -> 9.433962264150942.
-# Robustness change FL_S_T1.optimal_fiber_length_m: 0.029920528561955463 -> 0.03171576027567279.
-# Robustness change FL_S_T1.max_fiber_speed_optimal_lengths_per_s: 10.0 -> 9.433962264150942.
-# Robustness change FR_S_T1.optimal_fiber_length_m: 0.029920528561955463 -> 0.03171576027567279.
-# Robustness change FR_S_T1.max_fiber_speed_optimal_lengths_per_s: 10.0 -> 9.433962264150942.
-# Robustness change FL_S_T2.optimal_fiber_length_m: 0.0274828205971316 -> 0.029131789832959498.
-# Robustness change FL_S_T2.max_fiber_speed_optimal_lengths_per_s: 10.0 -> 9.433962264150942.
-# Robustness change FR_S_T2.optimal_fiber_length_m: 0.0274828205971316 -> 0.029131789832959498.
-# Robustness change FR_S_T2.max_fiber_speed_optimal_lengths_per_s: 10.0 -> 9.433962264150942.
-# Robustness change FL_S_T3.optimal_fiber_length_m: 0.021500200928927123 -> 0.02279021298466275.
-# Robustness change FL_S_T3.max_fiber_speed_optimal_lengths_per_s: 10.0 -> 9.433962264150942.
-# Robustness change FR_S_T3.optimal_fiber_length_m: 0.021500200928927123 -> 0.02279021298466275.
-# Robustness change FR_S_T3.max_fiber_speed_optimal_lengths_per_s: 10.0 -> 9.433962264150942.
-# Robustness change FL_S_T4.optimal_fiber_length_m: 0.018690074985284615 -> 0.019811479484401692.
-# Robustness change FL_S_T4.max_fiber_speed_optimal_lengths_per_s: 10.0 -> 9.433962264150942.
-# Robustness change FR_S_T4.optimal_fiber_length_m: 0.018690074985284615 -> 0.019811479484401692.
-# Robustness change FR_S_T4.max_fiber_speed_optimal_lengths_per_s: 10.0 -> 9.433962264150942.
-# Robustness change FL_S_T5.optimal_fiber_length_m: 0.021166939184537385 -> 0.022436955535609628.
-# Robustness change FL_S_T5.max_fiber_speed_optimal_lengths_per_s: 10.0 -> 9.433962264150942.
-# Robustness change FR_S_T5.optimal_fiber_length_m: 0.021166939184537385 -> 0.022436955535609628.
-# Robustness change FR_S_T5.max_fiber_speed_optimal_lengths_per_s: 10.0 -> 9.433962264150942.
-# Robustness change FL_S_T6.optimal_fiber_length_m: 0.024986506265879355 -> 0.026485696641832118.
-# Robustness change FL_S_T6.max_fiber_speed_optimal_lengths_per_s: 10.0 -> 9.433962264150942.
-# Robustness change FR_S_T6.optimal_fiber_length_m: 0.024986506265879355 -> 0.026485696641832118.
-# Robustness change FR_S_T6.max_fiber_speed_optimal_lengths_per_s: 10.0 -> 9.433962264150942.
-# Robustness change FL_S_T7.optimal_fiber_length_m: 0.028305567047763127 -> 0.030003901070628915.
-# Robustness change FL_S_T7.max_fiber_speed_optimal_lengths_per_s: 10.0 -> 9.433962264150942.
-# Robustness change FR_S_T7.optimal_fiber_length_m: 0.028305567047763127 -> 0.030003901070628915.
-# Robustness change FR_S_T7.max_fiber_speed_optimal_lengths_per_s: 10.0 -> 9.433962264150942.
-# Robustness change FL_S_T8.optimal_fiber_length_m: 0.03289212405957412 -> 0.03486565150314857.
-# Robustness change FL_S_T8.max_fiber_speed_optimal_lengths_per_s: 10.0 -> 9.433962264150942.
-# Robustness change FR_S_T8.optimal_fiber_length_m: 0.03289212405957412 -> 0.03486565150314857.
-# Robustness change FR_S_T8.max_fiber_speed_optimal_lengths_per_s: 10.0 -> 9.433962264150942.
-# Robustness change FL_S_T9.optimal_fiber_length_m: 0.0356749249823635 -> 0.03781542048130531.
-# Robustness change FL_S_T9.max_fiber_speed_optimal_lengths_per_s: 10.0 -> 9.433962264150942.
-# Robustness change FR_S_T9.optimal_fiber_length_m: 0.0356749249823635 -> 0.03781542048130531.
-# Robustness change FR_S_T9.max_fiber_speed_optimal_lengths_per_s: 10.0 -> 9.433962264150942.
-# Robustness change FL_R_C2.optimal_fiber_length_m: 0.0396878139132284 -> 0.0420690827480221.
-# Robustness change FL_R_C2.max_fiber_speed_optimal_lengths_per_s: 10.0 -> 9.433962264150942.
-# Robustness change FR_R_C2.optimal_fiber_length_m: 0.0396878139132284 -> 0.0420690827480221.
-# Robustness change FR_R_C2.max_fiber_speed_optimal_lengths_per_s: 10.0 -> 9.433962264150942.
-# Robustness change FL_R_C3-7.optimal_fiber_length_m: 0.0272445045010565 -> 0.028879174771119894.
-# Robustness change FL_R_C3-7.max_fiber_speed_optimal_lengths_per_s: 10.0 -> 9.433962264150942.
-# Robustness change FR_R_C3-7.optimal_fiber_length_m: 0.0272445045010565 -> 0.028879174771119894.
-# Robustness change FR_R_C3-7.max_fiber_speed_optimal_lengths_per_s: 10.0 -> 9.433962264150942.
-# Robustness change FL_R_T1.optimal_fiber_length_m: 0.03143511560528716 -> 0.03332122254160439.
-# Robustness change FL_R_T1.max_fiber_speed_optimal_lengths_per_s: 10.0 -> 9.433962264150942.
-# Robustness change FR_R_T1.optimal_fiber_length_m: 0.03143511560528716 -> 0.03332122254160439.
-# Robustness change FR_R_T1.max_fiber_speed_optimal_lengths_per_s: 10.0 -> 9.433962264150942.
-# Robustness change FL_R_T2.optimal_fiber_length_m: 0.03518521911110637 -> 0.037296332257772756.
-# Robustness change FL_R_T2.max_fiber_speed_optimal_lengths_per_s: 10.0 -> 9.433962264150942.
-# Robustness change FR_R_T2.optimal_fiber_length_m: 0.03518521911110637 -> 0.037296332257772756.
-# Robustness change FR_R_T2.max_fiber_speed_optimal_lengths_per_s: 10.0 -> 9.433962264150942.
-# Robustness change FL_R_T3.optimal_fiber_length_m: 0.039447919608617085 -> 0.04181479478513411.
-# Robustness change FL_R_T3.max_fiber_speed_optimal_lengths_per_s: 10.0 -> 9.433962264150942.
-# Robustness change FR_R_T3.optimal_fiber_length_m: 0.039447919608617085 -> 0.04181479478513411.
-# Robustness change FR_R_T3.max_fiber_speed_optimal_lengths_per_s: 10.0 -> 9.433962264150942.
-# Robustness change FL_R_T4.optimal_fiber_length_m: 0.03708250343466457 -> 0.03930745364074445.
-# Robustness change FL_R_T4.max_fiber_speed_optimal_lengths_per_s: 10.0 -> 9.433962264150942.
-# Robustness change FR_R_T4.optimal_fiber_length_m: 0.03708250343466457 -> 0.03930745364074445.
-# Robustness change FR_R_T4.max_fiber_speed_optimal_lengths_per_s: 10.0 -> 9.433962264150942.
-# Robustness change FL_R_T5.optimal_fiber_length_m: 0.03687027241528819 -> 0.03908248876020548.
-# Robustness change FL_R_T5.max_fiber_speed_optimal_lengths_per_s: 10.0 -> 9.433962264150942.
-# Robustness change FR_R_T5.optimal_fiber_length_m: 0.03687027241528819 -> 0.03908248876020548.
-# Robustness change FR_R_T5.max_fiber_speed_optimal_lengths_per_s: 10.0 -> 9.433962264150942.
-# Robustness change FL_DigitalExtensors.optimal_fiber_length_m: 0.022472032500000003 -> 0.023820354450000004.
-# Robustness change FL_DigitalExtensors.max_fiber_speed_optimal_lengths_per_s: 13.29 -> 12.537735849056602.
-# Robustness change FR_DigitalExtensors.optimal_fiber_length_m: 0.022472032500000003 -> 0.023820354450000004.
-# Robustness change FR_DigitalExtensors.max_fiber_speed_optimal_lengths_per_s: 13.29 -> 12.537735849056602.
-# Robustness change FL_DigitalFlexors.optimal_fiber_length_m: 0.017169437323863206 -> 0.018199603563295.
-# Robustness change FL_DigitalFlexors.max_fiber_speed_optimal_lengths_per_s: 12.417739643372183 -> 11.714848720162436.
-# Robustness change FR_DigitalFlexors.optimal_fiber_length_m: 0.017169437323863206 -> 0.018199603563295.
-# Robustness change FR_DigitalFlexors.max_fiber_speed_optimal_lengths_per_s: 12.417739643372183 -> 11.714848720162436.
-# Robustness change FL_TrapeziusCervical.optimal_fiber_length_m: 0.06212335222182076 -> 0.06585075335513.
-# Robustness change FL_TrapeziusCervical.max_fiber_speed_optimal_lengths_per_s: 10.0 -> 9.433962264150942.
-# Robustness change FR_TrapeziusCervical.optimal_fiber_length_m: 0.06212335222182076 -> 0.06585075335513.
-# Robustness change FR_TrapeziusCervical.max_fiber_speed_optimal_lengths_per_s: 10.0 -> 9.433962264150942.
-# Robustness change FL_TrapeziusThoracic.optimal_fiber_length_m: 0.054429384166112565 -> 0.05769514721607932.
-# Robustness change FL_TrapeziusThoracic.max_fiber_speed_optimal_lengths_per_s: 10.0 -> 9.433962264150942.
-# Robustness change FR_TrapeziusThoracic.optimal_fiber_length_m: 0.054429384166112565 -> 0.05769514721607932.
-# Robustness change FR_TrapeziusThoracic.max_fiber_speed_optimal_lengths_per_s: 10.0 -> 9.433962264150942.
-# Robustness change FL_LatissimusDorsi.optimal_fiber_length_m: 0.12469050972206762 -> 0.13217194030539167.
-# Robustness change FL_LatissimusDorsi.max_fiber_speed_optimal_lengths_per_s: 10.0 -> 9.433962264150942.
-# Robustness change FR_LatissimusDorsi.optimal_fiber_length_m: 0.12469050972206762 -> 0.13217194030539167.
-# Robustness change FR_LatissimusDorsi.max_fiber_speed_optimal_lengths_per_s: 10.0 -> 9.433962264150942.
-# Robustness change FL_PectoralisProfundus.optimal_fiber_length_m: 0.05000353058172096 -> 0.05300374241662422.
-# Robustness change FL_PectoralisProfundus.max_fiber_speed_optimal_lengths_per_s: 10.0 -> 9.433962264150942.
-# Robustness change FR_PectoralisProfundus.optimal_fiber_length_m: 0.05000353058172096 -> 0.05300374241662422.
-# Robustness change FR_PectoralisProfundus.max_fiber_speed_optimal_lengths_per_s: 10.0 -> 9.433962264150942.
-# Robustness change FL_PectoralisSuperficialis.optimal_fiber_length_m: 0.03772778349902526 -> 0.039991450508966776.
-# Robustness change FL_PectoralisSuperficialis.max_fiber_speed_optimal_lengths_per_s: 10.0 -> 9.433962264150942.
-# Robustness change FR_PectoralisSuperficialis.optimal_fiber_length_m: 0.03772778349902526 -> 0.039991450508966776.
-# Robustness change FR_PectoralisSuperficialis.max_fiber_speed_optimal_lengths_per_s: 10.0 -> 9.433962264150942.
-# Robustness change FL_Clavobrachialis.optimal_fiber_length_m: 0.08101639314277781 -> 0.08587737673134448.
-# Robustness change FL_Clavobrachialis.max_fiber_speed_optimal_lengths_per_s: 10.0 -> 9.433962264150942.
-# Robustness change FR_Clavobrachialis.optimal_fiber_length_m: 0.08101639314277781 -> 0.08587737673134448.
-# Robustness change FR_Clavobrachialis.max_fiber_speed_optimal_lengths_per_s: 10.0 -> 9.433962264150942.
+# Calibration pair (reference value -> applied value): FL_ShoulderExtensor.optimal_fiber_length_m: 0.015859438273493873 -> 0.016811004569903507.
+# Calibration pair (reference value -> applied value): FL_ShoulderExtensor.max_fiber_speed_optimal_lengths_per_s: 11.0 -> 10.377358490566037.
+# Calibration pair (reference value -> applied value): FL_ElbowExtensor.optimal_fiber_length_m: 0.029062040625 -> 0.0308057630625.
+# Calibration pair (reference value -> applied value): FL_ElbowExtensor.max_fiber_speed_optimal_lengths_per_s: 8.675125000000001 -> 8.184080188679246.
+# Calibration pair (reference value -> applied value): FL_BicepsBrachii.optimal_fiber_length_m: 0.0250891425 -> 0.026594491050000002.
+# Calibration pair (reference value -> applied value): FL_BicepsBrachii.max_fiber_speed_optimal_lengths_per_s: 11.877999999999998 -> 11.20566037735849.
+# Calibration pair (reference value -> applied value): FL_ElbowFlexor.optimal_fiber_length_m: 0.04448412000000001 -> 0.04715316720000001.
+# Calibration pair (reference value -> applied value): FL_ElbowFlexor.max_fiber_speed_optimal_lengths_per_s: 12.159742122719733 -> 11.471454832754464.
+# Calibration pair (reference value -> applied value): FL_ElbowFlexorWristFlexor.optimal_fiber_length_m: 0.027434457000000002 -> 0.029080524420000003.
+# Calibration pair (reference value -> applied value): FL_ElbowFlexorWristFlexor.max_fiber_speed_optimal_lengths_per_s: 13.256288577154308 -> 12.505932619956894.
+# Calibration pair (reference value -> applied value): FL_WristFlexor.optimal_fiber_length_m: 0.020987910000000002 -> 0.022247184600000004.
+# Calibration pair (reference value -> applied value): FL_WristFlexor.max_fiber_speed_optimal_lengths_per_s: 13.152999999999999 -> 12.408490566037734.
+# Calibration pair (reference value -> applied value): FL_WristExtensor.optimal_fiber_length_m: 0.013195798593749997 -> 0.013987546509374997.
+# Calibration pair (reference value -> applied value): FL_WristExtensor.max_fiber_speed_optimal_lengths_per_s: 11.741004190642983 -> 11.076419047776398.
+# Calibration pair (reference value -> applied value): FL_ShoulderFlexor.optimal_fiber_length_m: 0.03949691625000001 -> 0.04186673122500001.
+# Calibration pair (reference value -> applied value): FL_ShoulderFlexor.max_fiber_speed_optimal_lengths_per_s: 11.0 -> 10.377358490566037.
+# Calibration pair (reference value -> applied value): FL_TricepsBrachiiLong.optimal_fiber_length_m: 0.0238632075 -> 0.02529499995.
+# Calibration pair (reference value -> applied value): FL_TricepsBrachiiLong.max_fiber_speed_optimal_lengths_per_s: 11.365 -> 10.721698113207546.
+# Calibration pair (reference value -> applied value): FR_ShoulderExtensor.optimal_fiber_length_m: 0.015859438273493873 -> 0.016811004569903507.
+# Calibration pair (reference value -> applied value): FR_ShoulderExtensor.max_fiber_speed_optimal_lengths_per_s: 11.0 -> 10.377358490566037.
+# Calibration pair (reference value -> applied value): FR_ElbowExtensor.optimal_fiber_length_m: 0.029062040625 -> 0.0308057630625.
+# Calibration pair (reference value -> applied value): FR_ElbowExtensor.max_fiber_speed_optimal_lengths_per_s: 8.675125000000001 -> 8.184080188679246.
+# Calibration pair (reference value -> applied value): FR_BicepsBrachii.optimal_fiber_length_m: 0.0250891425 -> 0.026594491050000002.
+# Calibration pair (reference value -> applied value): FR_BicepsBrachii.max_fiber_speed_optimal_lengths_per_s: 11.877999999999998 -> 11.20566037735849.
+# Calibration pair (reference value -> applied value): FR_ElbowFlexor.optimal_fiber_length_m: 0.04448412000000001 -> 0.04715316720000001.
+# Calibration pair (reference value -> applied value): FR_ElbowFlexor.max_fiber_speed_optimal_lengths_per_s: 12.159742122719733 -> 11.471454832754464.
+# Calibration pair (reference value -> applied value): FR_ElbowFlexorWristFlexor.optimal_fiber_length_m: 0.027434457000000002 -> 0.029080524420000003.
+# Calibration pair (reference value -> applied value): FR_ElbowFlexorWristFlexor.max_fiber_speed_optimal_lengths_per_s: 13.256288577154308 -> 12.505932619956894.
+# Calibration pair (reference value -> applied value): FR_WristFlexor.optimal_fiber_length_m: 0.020987910000000002 -> 0.022247184600000004.
+# Calibration pair (reference value -> applied value): FR_WristFlexor.max_fiber_speed_optimal_lengths_per_s: 13.152999999999999 -> 12.408490566037734.
+# Calibration pair (reference value -> applied value): FR_WristExtensor.optimal_fiber_length_m: 0.013195798593749997 -> 0.013987546509374997.
+# Calibration pair (reference value -> applied value): FR_WristExtensor.max_fiber_speed_optimal_lengths_per_s: 11.741004190642983 -> 11.076419047776398.
+# Calibration pair (reference value -> applied value): FR_ShoulderFlexor.optimal_fiber_length_m: 0.03949691625000001 -> 0.04186673122500001.
+# Calibration pair (reference value -> applied value): FR_ShoulderFlexor.max_fiber_speed_optimal_lengths_per_s: 11.0 -> 10.377358490566037.
+# Calibration pair (reference value -> applied value): FR_TricepsBrachiiLong.optimal_fiber_length_m: 0.0238632075 -> 0.02529499995.
+# Calibration pair (reference value -> applied value): FR_TricepsBrachiiLong.max_fiber_speed_optimal_lengths_per_s: 11.365 -> 10.721698113207546.
+# Calibration pair (reference value -> applied value): FL_S_C3.optimal_fiber_length_m: 0.048650831997865754 -> 0.0515698819177377.
+# Calibration pair (reference value -> applied value): FL_S_C3.max_fiber_speed_optimal_lengths_per_s: 10.0 -> 9.433962264150942.
+# Calibration pair (reference value -> applied value): FR_S_C3.optimal_fiber_length_m: 0.048650831997865754 -> 0.0515698819177377.
+# Calibration pair (reference value -> applied value): FR_S_C3.max_fiber_speed_optimal_lengths_per_s: 10.0 -> 9.433962264150942.
+# Calibration pair (reference value -> applied value): FL_S_C4.optimal_fiber_length_m: 0.04350300298959364 -> 0.046113183168969264.
+# Calibration pair (reference value -> applied value): FL_S_C4.max_fiber_speed_optimal_lengths_per_s: 10.0 -> 9.433962264150942.
+# Calibration pair (reference value -> applied value): FR_S_C4.optimal_fiber_length_m: 0.04350300298959364 -> 0.046113183168969264.
+# Calibration pair (reference value -> applied value): FR_S_C4.max_fiber_speed_optimal_lengths_per_s: 10.0 -> 9.433962264150942.
+# Calibration pair (reference value -> applied value): FL_S_C5.optimal_fiber_length_m: 0.0420306683454802 -> 0.04455250844620901.
+# Calibration pair (reference value -> applied value): FL_S_C5.max_fiber_speed_optimal_lengths_per_s: 10.0 -> 9.433962264150942.
+# Calibration pair (reference value -> applied value): FR_S_C5.optimal_fiber_length_m: 0.0420306683454802 -> 0.04455250844620901.
+# Calibration pair (reference value -> applied value): FR_S_C5.max_fiber_speed_optimal_lengths_per_s: 10.0 -> 9.433962264150942.
+# Calibration pair (reference value -> applied value): FL_S_C6.optimal_fiber_length_m: 0.03995647987572479 -> 0.04235386866826828.
+# Calibration pair (reference value -> applied value): FL_S_C6.max_fiber_speed_optimal_lengths_per_s: 10.0 -> 9.433962264150942.
+# Calibration pair (reference value -> applied value): FR_S_C6.optimal_fiber_length_m: 0.03995647987572479 -> 0.04235386866826828.
+# Calibration pair (reference value -> applied value): FR_S_C6.max_fiber_speed_optimal_lengths_per_s: 10.0 -> 9.433962264150942.
+# Calibration pair (reference value -> applied value): FL_S_C7.optimal_fiber_length_m: 0.03644804795181541 -> 0.03863493082892434.
+# Calibration pair (reference value -> applied value): FL_S_C7.max_fiber_speed_optimal_lengths_per_s: 10.0 -> 9.433962264150942.
+# Calibration pair (reference value -> applied value): FR_S_C7.optimal_fiber_length_m: 0.03644804795181541 -> 0.03863493082892434.
+# Calibration pair (reference value -> applied value): FR_S_C7.max_fiber_speed_optimal_lengths_per_s: 10.0 -> 9.433962264150942.
+# Calibration pair (reference value -> applied value): FL_S_T1.optimal_fiber_length_m: 0.029920528561955463 -> 0.03171576027567279.
+# Calibration pair (reference value -> applied value): FL_S_T1.max_fiber_speed_optimal_lengths_per_s: 10.0 -> 9.433962264150942.
+# Calibration pair (reference value -> applied value): FR_S_T1.optimal_fiber_length_m: 0.029920528561955463 -> 0.03171576027567279.
+# Calibration pair (reference value -> applied value): FR_S_T1.max_fiber_speed_optimal_lengths_per_s: 10.0 -> 9.433962264150942.
+# Calibration pair (reference value -> applied value): FL_S_T2.optimal_fiber_length_m: 0.0274828205971316 -> 0.029131789832959498.
+# Calibration pair (reference value -> applied value): FL_S_T2.max_fiber_speed_optimal_lengths_per_s: 10.0 -> 9.433962264150942.
+# Calibration pair (reference value -> applied value): FR_S_T2.optimal_fiber_length_m: 0.0274828205971316 -> 0.029131789832959498.
+# Calibration pair (reference value -> applied value): FR_S_T2.max_fiber_speed_optimal_lengths_per_s: 10.0 -> 9.433962264150942.
+# Calibration pair (reference value -> applied value): FL_S_T3.optimal_fiber_length_m: 0.021500200928927123 -> 0.02279021298466275.
+# Calibration pair (reference value -> applied value): FL_S_T3.max_fiber_speed_optimal_lengths_per_s: 10.0 -> 9.433962264150942.
+# Calibration pair (reference value -> applied value): FR_S_T3.optimal_fiber_length_m: 0.021500200928927123 -> 0.02279021298466275.
+# Calibration pair (reference value -> applied value): FR_S_T3.max_fiber_speed_optimal_lengths_per_s: 10.0 -> 9.433962264150942.
+# Calibration pair (reference value -> applied value): FL_S_T4.optimal_fiber_length_m: 0.018690074985284615 -> 0.019811479484401692.
+# Calibration pair (reference value -> applied value): FL_S_T4.max_fiber_speed_optimal_lengths_per_s: 10.0 -> 9.433962264150942.
+# Calibration pair (reference value -> applied value): FR_S_T4.optimal_fiber_length_m: 0.018690074985284615 -> 0.019811479484401692.
+# Calibration pair (reference value -> applied value): FR_S_T4.max_fiber_speed_optimal_lengths_per_s: 10.0 -> 9.433962264150942.
+# Calibration pair (reference value -> applied value): FL_S_T5.optimal_fiber_length_m: 0.021166939184537385 -> 0.022436955535609628.
+# Calibration pair (reference value -> applied value): FL_S_T5.max_fiber_speed_optimal_lengths_per_s: 10.0 -> 9.433962264150942.
+# Calibration pair (reference value -> applied value): FR_S_T5.optimal_fiber_length_m: 0.021166939184537385 -> 0.022436955535609628.
+# Calibration pair (reference value -> applied value): FR_S_T5.max_fiber_speed_optimal_lengths_per_s: 10.0 -> 9.433962264150942.
+# Calibration pair (reference value -> applied value): FL_S_T6.optimal_fiber_length_m: 0.024986506265879355 -> 0.026485696641832118.
+# Calibration pair (reference value -> applied value): FL_S_T6.max_fiber_speed_optimal_lengths_per_s: 10.0 -> 9.433962264150942.
+# Calibration pair (reference value -> applied value): FR_S_T6.optimal_fiber_length_m: 0.024986506265879355 -> 0.026485696641832118.
+# Calibration pair (reference value -> applied value): FR_S_T6.max_fiber_speed_optimal_lengths_per_s: 10.0 -> 9.433962264150942.
+# Calibration pair (reference value -> applied value): FL_S_T7.optimal_fiber_length_m: 0.028305567047763127 -> 0.030003901070628915.
+# Calibration pair (reference value -> applied value): FL_S_T7.max_fiber_speed_optimal_lengths_per_s: 10.0 -> 9.433962264150942.
+# Calibration pair (reference value -> applied value): FR_S_T7.optimal_fiber_length_m: 0.028305567047763127 -> 0.030003901070628915.
+# Calibration pair (reference value -> applied value): FR_S_T7.max_fiber_speed_optimal_lengths_per_s: 10.0 -> 9.433962264150942.
+# Calibration pair (reference value -> applied value): FL_S_T8.optimal_fiber_length_m: 0.03289212405957412 -> 0.03486565150314857.
+# Calibration pair (reference value -> applied value): FL_S_T8.max_fiber_speed_optimal_lengths_per_s: 10.0 -> 9.433962264150942.
+# Calibration pair (reference value -> applied value): FR_S_T8.optimal_fiber_length_m: 0.03289212405957412 -> 0.03486565150314857.
+# Calibration pair (reference value -> applied value): FR_S_T8.max_fiber_speed_optimal_lengths_per_s: 10.0 -> 9.433962264150942.
+# Calibration pair (reference value -> applied value): FL_S_T9.optimal_fiber_length_m: 0.0356749249823635 -> 0.03781542048130531.
+# Calibration pair (reference value -> applied value): FL_S_T9.max_fiber_speed_optimal_lengths_per_s: 10.0 -> 9.433962264150942.
+# Calibration pair (reference value -> applied value): FR_S_T9.optimal_fiber_length_m: 0.0356749249823635 -> 0.03781542048130531.
+# Calibration pair (reference value -> applied value): FR_S_T9.max_fiber_speed_optimal_lengths_per_s: 10.0 -> 9.433962264150942.
+# Calibration pair (reference value -> applied value): FL_R_C2.optimal_fiber_length_m: 0.0396878139132284 -> 0.0420690827480221.
+# Calibration pair (reference value -> applied value): FL_R_C2.max_fiber_speed_optimal_lengths_per_s: 10.0 -> 9.433962264150942.
+# Calibration pair (reference value -> applied value): FR_R_C2.optimal_fiber_length_m: 0.0396878139132284 -> 0.0420690827480221.
+# Calibration pair (reference value -> applied value): FR_R_C2.max_fiber_speed_optimal_lengths_per_s: 10.0 -> 9.433962264150942.
+# Calibration pair (reference value -> applied value): FL_R_C3-7.optimal_fiber_length_m: 0.0272445045010565 -> 0.028879174771119894.
+# Calibration pair (reference value -> applied value): FL_R_C3-7.max_fiber_speed_optimal_lengths_per_s: 10.0 -> 9.433962264150942.
+# Calibration pair (reference value -> applied value): FR_R_C3-7.optimal_fiber_length_m: 0.0272445045010565 -> 0.028879174771119894.
+# Calibration pair (reference value -> applied value): FR_R_C3-7.max_fiber_speed_optimal_lengths_per_s: 10.0 -> 9.433962264150942.
+# Calibration pair (reference value -> applied value): FL_R_T1.optimal_fiber_length_m: 0.03143511560528716 -> 0.03332122254160439.
+# Calibration pair (reference value -> applied value): FL_R_T1.max_fiber_speed_optimal_lengths_per_s: 10.0 -> 9.433962264150942.
+# Calibration pair (reference value -> applied value): FR_R_T1.optimal_fiber_length_m: 0.03143511560528716 -> 0.03332122254160439.
+# Calibration pair (reference value -> applied value): FR_R_T1.max_fiber_speed_optimal_lengths_per_s: 10.0 -> 9.433962264150942.
+# Calibration pair (reference value -> applied value): FL_R_T2.optimal_fiber_length_m: 0.03518521911110637 -> 0.037296332257772756.
+# Calibration pair (reference value -> applied value): FL_R_T2.max_fiber_speed_optimal_lengths_per_s: 10.0 -> 9.433962264150942.
+# Calibration pair (reference value -> applied value): FR_R_T2.optimal_fiber_length_m: 0.03518521911110637 -> 0.037296332257772756.
+# Calibration pair (reference value -> applied value): FR_R_T2.max_fiber_speed_optimal_lengths_per_s: 10.0 -> 9.433962264150942.
+# Calibration pair (reference value -> applied value): FL_R_T3.optimal_fiber_length_m: 0.039447919608617085 -> 0.04181479478513411.
+# Calibration pair (reference value -> applied value): FL_R_T3.max_fiber_speed_optimal_lengths_per_s: 10.0 -> 9.433962264150942.
+# Calibration pair (reference value -> applied value): FR_R_T3.optimal_fiber_length_m: 0.039447919608617085 -> 0.04181479478513411.
+# Calibration pair (reference value -> applied value): FR_R_T3.max_fiber_speed_optimal_lengths_per_s: 10.0 -> 9.433962264150942.
+# Calibration pair (reference value -> applied value): FL_R_T4.optimal_fiber_length_m: 0.03708250343466457 -> 0.03930745364074445.
+# Calibration pair (reference value -> applied value): FL_R_T4.max_fiber_speed_optimal_lengths_per_s: 10.0 -> 9.433962264150942.
+# Calibration pair (reference value -> applied value): FR_R_T4.optimal_fiber_length_m: 0.03708250343466457 -> 0.03930745364074445.
+# Calibration pair (reference value -> applied value): FR_R_T4.max_fiber_speed_optimal_lengths_per_s: 10.0 -> 9.433962264150942.
+# Calibration pair (reference value -> applied value): FL_R_T5.optimal_fiber_length_m: 0.03687027241528819 -> 0.03908248876020548.
+# Calibration pair (reference value -> applied value): FL_R_T5.max_fiber_speed_optimal_lengths_per_s: 10.0 -> 9.433962264150942.
+# Calibration pair (reference value -> applied value): FR_R_T5.optimal_fiber_length_m: 0.03687027241528819 -> 0.03908248876020548.
+# Calibration pair (reference value -> applied value): FR_R_T5.max_fiber_speed_optimal_lengths_per_s: 10.0 -> 9.433962264150942.
+# Calibration pair (reference value -> applied value): FL_DigitalExtensors.optimal_fiber_length_m: 0.022472032500000003 -> 0.023820354450000004.
+# Calibration pair (reference value -> applied value): FL_DigitalExtensors.max_fiber_speed_optimal_lengths_per_s: 13.29 -> 12.537735849056602.
+# Calibration pair (reference value -> applied value): FR_DigitalExtensors.optimal_fiber_length_m: 0.022472032500000003 -> 0.023820354450000004.
+# Calibration pair (reference value -> applied value): FR_DigitalExtensors.max_fiber_speed_optimal_lengths_per_s: 13.29 -> 12.537735849056602.
+# Calibration pair (reference value -> applied value): FL_DigitalFlexors.optimal_fiber_length_m: 0.017169437323863206 -> 0.018199603563295.
+# Calibration pair (reference value -> applied value): FL_DigitalFlexors.max_fiber_speed_optimal_lengths_per_s: 12.417739643372183 -> 11.714848720162436.
+# Calibration pair (reference value -> applied value): FR_DigitalFlexors.optimal_fiber_length_m: 0.017169437323863206 -> 0.018199603563295.
+# Calibration pair (reference value -> applied value): FR_DigitalFlexors.max_fiber_speed_optimal_lengths_per_s: 12.417739643372183 -> 11.714848720162436.
+# Calibration pair (reference value -> applied value): FL_TrapeziusCervical.optimal_fiber_length_m: 0.06212335222182076 -> 0.06585075335513.
+# Calibration pair (reference value -> applied value): FL_TrapeziusCervical.max_fiber_speed_optimal_lengths_per_s: 10.0 -> 9.433962264150942.
+# Calibration pair (reference value -> applied value): FR_TrapeziusCervical.optimal_fiber_length_m: 0.06212335222182076 -> 0.06585075335513.
+# Calibration pair (reference value -> applied value): FR_TrapeziusCervical.max_fiber_speed_optimal_lengths_per_s: 10.0 -> 9.433962264150942.
+# Calibration pair (reference value -> applied value): FL_TrapeziusThoracic.optimal_fiber_length_m: 0.054429384166112565 -> 0.05769514721607932.
+# Calibration pair (reference value -> applied value): FL_TrapeziusThoracic.max_fiber_speed_optimal_lengths_per_s: 10.0 -> 9.433962264150942.
+# Calibration pair (reference value -> applied value): FR_TrapeziusThoracic.optimal_fiber_length_m: 0.054429384166112565 -> 0.05769514721607932.
+# Calibration pair (reference value -> applied value): FR_TrapeziusThoracic.max_fiber_speed_optimal_lengths_per_s: 10.0 -> 9.433962264150942.
+# Calibration pair (reference value -> applied value): FL_LatissimusDorsi.optimal_fiber_length_m: 0.12469050972206762 -> 0.13217194030539167.
+# Calibration pair (reference value -> applied value): FL_LatissimusDorsi.max_fiber_speed_optimal_lengths_per_s: 10.0 -> 9.433962264150942.
+# Calibration pair (reference value -> applied value): FR_LatissimusDorsi.optimal_fiber_length_m: 0.12469050972206762 -> 0.13217194030539167.
+# Calibration pair (reference value -> applied value): FR_LatissimusDorsi.max_fiber_speed_optimal_lengths_per_s: 10.0 -> 9.433962264150942.
+# Calibration pair (reference value -> applied value): FL_PectoralisProfundus.optimal_fiber_length_m: 0.05000353058172096 -> 0.05300374241662422.
+# Calibration pair (reference value -> applied value): FL_PectoralisProfundus.max_fiber_speed_optimal_lengths_per_s: 10.0 -> 9.433962264150942.
+# Calibration pair (reference value -> applied value): FR_PectoralisProfundus.optimal_fiber_length_m: 0.05000353058172096 -> 0.05300374241662422.
+# Calibration pair (reference value -> applied value): FR_PectoralisProfundus.max_fiber_speed_optimal_lengths_per_s: 10.0 -> 9.433962264150942.
+# Calibration pair (reference value -> applied value): FL_PectoralisSuperficialis.optimal_fiber_length_m: 0.03772778349902526 -> 0.039991450508966776.
+# Calibration pair (reference value -> applied value): FL_PectoralisSuperficialis.max_fiber_speed_optimal_lengths_per_s: 10.0 -> 9.433962264150942.
+# Calibration pair (reference value -> applied value): FR_PectoralisSuperficialis.optimal_fiber_length_m: 0.03772778349902526 -> 0.039991450508966776.
+# Calibration pair (reference value -> applied value): FR_PectoralisSuperficialis.max_fiber_speed_optimal_lengths_per_s: 10.0 -> 9.433962264150942.
+# Calibration pair (reference value -> applied value): FL_Clavobrachialis.optimal_fiber_length_m: 0.08101639314277781 -> 0.08587737673134448.
+# Calibration pair (reference value -> applied value): FL_Clavobrachialis.max_fiber_speed_optimal_lengths_per_s: 10.0 -> 9.433962264150942.
+# Calibration pair (reference value -> applied value): FR_Clavobrachialis.optimal_fiber_length_m: 0.08101639314277781 -> 0.08587737673134448.
+# Calibration pair (reference value -> applied value): FR_Clavobrachialis.max_fiber_speed_optimal_lengths_per_s: 10.0 -> 9.433962264150942.
 # Exploratory calibration; see ROBUSTNESS_CHANGES.json.
 """Applied model values. Edit the numbers in PARAMETERS, then run run.py.
 Comments and PARAMETER_PROVENANCE.json preserve originals; they do not override your edits.

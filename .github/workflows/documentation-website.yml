@@ -1,6 +1,6 @@
 name: Documentation website
 
-# Publish after a GitHub Desktop push to the repository's default branch.
+# Check documentation after a push. Publishing requires explicit opt-in below.
 # One-time GitHub setting: Settings > Pages > Source > GitHub Actions.
 on:
   push:
@@ -40,6 +40,8 @@ jobs:
           path: _site
 
   deploy:
+    # Private repositories build only. Public hosting is an explicit choice.
+    if: ${{ vars.PUBLISH_DOCUMENTATION_WEBSITE == 'true' && github.event.repository.private == false }}
     needs: build
     runs-on: ubuntu-latest
     permissions:

@@ -1,14 +1,14 @@
 # Cat Full-Body Neuromechanics
 
-**Excitation → activation → elastic muscle–tendon force → coupled motion and paw contact.**
+**Excitation → activation dynamics → Hill-type muscle dynamics with an elastic tendon → muscle force → coupled motion and paw contact.**
 
-A reproducible sagittal four-limb cat research model: **104 muscle channels · 21 generalized coordinates · elastic tendons · raw paw GRFs**. Inputs are fixed in advance; no sensory feedback, CPG or online tracking controller is used.
+**Fully forward cat neuromusculoskeletal model.** A reproducible sagittal four-limb research model: **104 muscle channels · 21 generalized coordinates · elastic tendons · raw paw GRFs**. Inputs are fixed in advance; no sensory feedback, CPG or online tracking controller is used.
 
 ![Forward simulation](Documentation/Figures_and_Videos/walking_preview.gif)
 
-**[Open the documentation website](https://smarahmati.github.io/Cat-FullBody-Neuromechanics/)** · [Methods and equations](https://smarahmati.github.io/Cat-FullBody-Neuromechanics/Documentation/model_methods.html) · [Parameter tables](https://smarahmati.github.io/Cat-FullBody-Neuromechanics/Documentation/parameter_tables.html) · [Scientific references](Documentation/References/references.bib) · [Video](Documentation/Figures_and_Videos/walking_simulation.mp4)
+**[Read the documentation](Documentation/README.md)** · [Methods and equations](Documentation/model_methods.md) · [Parameter tables](Documentation/parameter_tables.md) · [Scientific references](Documentation/References/README.md) · [Video](Documentation/Figures_and_Videos/walking_simulation.mp4)
 
-> Read the styled interactive guides on the documentation website. After downloading and extracting the repository, open `START_HERE.html` for the same guides locally. GitHub renders this README; HTML files in its repository view are source files. The website is available after its first successful deployment.
+Read the guides on GitHub, or download the project and open `START_HERE.html` for interactive plots and the styled HTML documentation.
 
 ```mermaid
 flowchart LR
@@ -34,7 +34,7 @@ The muscle contains an active contractile element, passive elastic fiber tissue 
 
 Given the initial state, mechanical parameters, gravity and ground-contact laws, the model computes:
 
-**muscle excitation → muscle activation → elastic muscle–tendon forces → joint loading and coupled body motion ↔ paw contact and ground-reaction forces.**
+**muscle excitation → muscle activation → muscle forces transmitted through elastic tendons → joint loading and coupled body motion ↔ paw contact and ground-reaction forces.**
 
 Experimental joint angles and GRFs are **not imposed during the forward simulation**. Their role is offline calibration and comparison with computed results. There is no sensory-feedback controller, CPG, tracking controller, online optimization or stride-state reset. A change to one limb’s excitation can affect all four limbs through the body and ground contact. The GUI animates the saved forward prediction, not a prescribed experimental movement.
 
@@ -47,11 +47,11 @@ Experimental joint angles and GRFs are **not imposed during the forward simulati
 | Item | What was changed offline | What happens during a normal run |
 |---|---|---|
 | Excitation | Amplitude gains, waveform/EMG-shape adjustments and an offline forelimb force-balance adjustment; bounded to 0–1 | The saved cycle is repeated unchanged, throughout the forward simulation |
-| Muscle mechanics | Strength scaling; force–velocity law; passive fiber force in all limbs / fiber damping; selected fiber and tendon lengths | Elastic force follows activation, current fiber length and velocity |
+| Muscle mechanics | Strength scaling; force–velocity law; passive fiber force in all limbs / fiber damping; selected fiber and tendon lengths | Muscle–tendon force follows activation, fiber length and velocity, and tendon stretch |
 | Contact and body mechanics | Effective paw-contact coefficients, trunk center of mass, forelimb mounting and selected passive joint properties | Raw contact forces and coupled movement are computed mechanically |
 | Initial state | Starting pose, velocity and internal muscle/contact states prepared for the gait | Applied once; no stride resets |
 
-Offline fitting evaluated **joint-angle errors, AP/vertical GRF errors, EMG phase/shape errors, rhythmic contacts, posture/progress and falls**. It included several stages, not a single universal objective. The [calibration guide](https://smarahmati.github.io/Cat-FullBody-Neuromechanics/Documentation/calibration_summary.html) gives the estimation objectives, definitions, weights/scales, source-to-model examples and the [source-to-model parameter table](Data/Model_Parameters/model_parameter_values.csv).
+Offline fitting evaluated **joint-angle errors, AP/vertical GRF errors, EMG phase/shape errors, rhythmic contacts, posture/progress and falls**. It included several stages, not a single universal objective. The [calibration guide](Documentation/calibration_summary.md) gives the estimation objectives, definitions, weights/scales, source-to-model examples and the [source-to-model parameter table](Data/Model_Parameters/model_parameter_values.csv).
 
 **`run.py` performs a forward prediction from these calibrated inputs; it does not fit the model to the experiment while running.** Editing parameters does not automatically re-optimize excitation. The experimental targets do not enforce joint motion or GRFs. The 60-second baseline sustained the tested duration, but EMG timing/shape and some kinematics/GRF agreement remain imperfect. These results are not independent biological validation or a unique identification of muscle parameters.
 
@@ -65,7 +65,7 @@ The repository reproduces forward simulations from the supplied excitation, para
 | **Value used in this model** | Actual number applied by the simulator. This may be retained from the source, assumed or calibrated. |
 | **What changed and why** | Difference from the source and its documented rationale. Missing individual explanations are stated explicitly. |
 
-For example, right VL maximum isometric tendon force is **202.13 N in the source** and **199.78 N in this model**. See the [full tables](https://smarahmati.github.io/Cat-FullBody-Neuromechanics/Documentation/parameter_tables.html) or [CSV](Data/Model_Parameters/model_parameter_values.csv).
+For example, right VL maximum isometric tendon force is **202.13 N in the source** and **199.78 N in this model**. See the [full tables](Documentation/parameter_tables.md) or [CSV](Data/Model_Parameters/model_parameter_values.csv).
 
 ## Run a fresh simulation
 
@@ -85,11 +85,11 @@ You can also edit `SIMULATION_SECONDS` and `SHOW_GUI` near the top of [run.py](r
 
 $$\dot a_i=(u_i-a_i)/\tau_i,\qquad L_{MT,i}=l_{f,i}\cos\alpha_i+l_{T,i}$$
 
-$$F_{T,i}=F_{0,i}f_T\!\left((l_{T,i}-l_{s,i})/l_{s,i}\right),\qquad Q_{m,j}=\sum_i\left(-\frac{\partial L_{MT,i}}{\partial q_j}\right)F_{T,i}$$
+$$F_{T,i}=F_{0,i}f_T\left((l_{T,i}-l_{s,i})/l_{s,i}\right),\qquad Q_{m,j}=\sum_i\left(-\frac{\partial L_{MT,i}}{\partial q_j}\right)F_{T,i}$$
 
 $$M(q)\ddot q+b(q,\dot q)=Q_m+Q_{passive}+J_c^TF_c+Q_{constraint}$$
 
-Here $u$ is excitation, $a$ activation, $\tau$ an activation time constant, $L_{MT}$ whole muscle–tendon length, $l_f$ fiber length, $l_T$ tendon length, $l_s$ tendon slack length, $\alpha$ pennation, $F_0$ tendon-projected maximum isometric force, $q$ generalized position, $M$ mass matrix, $b$ inertial/gravitational terms, $Q$ generalized forces and $J_c^TF_c$ contact loading. [The methods guide](https://smarahmati.github.io/Cat-FullBody-Neuromechanics/Documentation/model_methods.html) defines **every term immediately after each full equation** and includes a final glossary.
+Here $u$ is excitation, $a$ activation, $\tau$ an activation time constant, $L_{MT}$ whole muscle–tendon length, $l_f$ fiber length, $l_T$ tendon length, $l_s$ tendon slack length, $\alpha$ pennation, $F_0$ tendon-projected maximum isometric force, $q$ generalized position, $M$ mass matrix, $b$ inertial/gravitational terms, $Q$ generalized forces and $J_c^TF_c$ contact loading. [The methods guide](Documentation/model_methods.md) defines **every term immediately after each full equation** and includes a final glossary.
 
 ## From excitation to muscle force: the Hill-type model
 
@@ -97,13 +97,13 @@ Here $u$ is excitation, $a$ activation, $\tau$ an activation time constant, $L_{
 
 **CE** is activation-dependent contractile force; **PE** is passive fiber tension included in all 104 muscle channels; **D** is fiber damping; **SE** is the elastic tendon in series. Tendon stretch and fiber length are solved mechanically. Pennation is constant, and maximum isometric force is already projected along the tendon. The passive contribution is zero below its stretch threshold even though the element is included; tendons remain elastic in all limbs.
 
-**The passive fiber law is included in all limbs.** The curve uses Prilutsky et al. (2016), Table 10.3, and Rahmati et al. (2025), Table 3, with published coefficients 0.0075 and 11.6. Tension-only rectification, exponent capping and application to added channels are disclosed adaptations. The curve coefficients are taken from the publications, not fitted to this trial. [Passive-force equation and verification](https://smarahmati.github.io/Cat-FullBody-Neuromechanics/Documentation/passive_fiber_mechanics.html).
+**The passive fiber law is included in all limbs.** The curve uses Prilutsky et al. (2016), Table 10.3, and Rahmati et al. (2025), Table 3, with published coefficients 0.0075 and 11.6. Tension-only rectification, exponent capping and application to added channels are disclosed adaptations. The curve coefficients are taken from the publications, not fitted to this trial. [Passive-force equation and verification](Documentation/passive_fiber_mechanics.md).
 
-The [illustrated muscle guide](https://smarahmati.github.io/Cat-FullBody-Neuromechanics/Documentation/muscle_model.html) explains every symbol, contains the implemented equations and lets you select any muscle to inspect its activation, active/passive, tendon, pennation and initial-state parameters. It also lists shared curve constants and numerical settings with links to the editable code. The interactive selector works on the documentation website and in the downloaded HTML; this README displays the static figure above.
+The [illustrated muscle guide](Documentation/muscle_model.md) explains every symbol, contains the implemented equations and lets you select any muscle to inspect its activation, active/passive, tendon, pennation and initial-state parameters. It also lists shared curve constants and numerical settings with links to the editable code. The interactive selector works in the downloaded HTML. On GitHub, the guide links to complete parameter tables; this README displays the static figure above.
 
 ## Find what you need
 
-[Open the folder and file guide](https://smarahmati.github.io/Cat-FullBody-Neuromechanics/Documentation/project_structure.html).
+[Open the folder and file guide](Documentation/project_structure.md).
 
 | Folder | Contents |
 |---|---|
@@ -119,7 +119,7 @@ The [illustrated muscle guide](https://smarahmati.github.io/Cat-FullBody-Neurome
 
 ## Inspect the full 60-second result
 
-[Interactive joint angles and GRFs](https://smarahmati.github.io/Cat-FullBody-Neuromechanics/Simulation_Results/Intact_Walking/interactive_experimental_comparison.html) use a movable **four-second window**. Drag the time slider, enter a start time, or select Start, Middle or End. Select one limb to focus the comparison. Static figures show the final four seconds; full-trial error metrics retain their stated scoring interval. The same interactive page opens locally after downloading the project.
+[Joint-angle and GRF comparisons](Simulation_Results/Intact_Walking/interactive_experimental_comparison.md) show readable static figures on GitHub. The downloaded HTML provides a movable **four-second window**. Drag the time slider, enter a start time, or select Start, Middle or End. Select one limb to focus the comparison. Static figures show the final four seconds; full-trial error metrics retain their stated scoring interval. The same interactive page opens locally after downloading the project.
 
 ## Reproduction and limitations
 
@@ -130,15 +130,13 @@ python -m unittest discover -s Verification -v
 python view.py --run Simulation_Results/Intact_Walking
 ```
 
-The intact simulation completed 60 seconds without a detected body fall. See [Results](https://smarahmati.github.io/Cat-FullBody-Neuromechanics/Documentation/results.html) for fit errors, comparison windows. **Finite-horizon numerical walking is not proof of biological validity or arbitrary-perturbation stability.**
+The intact simulation completed 60 seconds without a detected body fall. See [Results](Documentation/results.md) for fit errors, comparison windows. **Finite-horizon numerical walking is not proof of biological validity or arbitrary-perturbation stability.**
 
 RH references are measured; LH is an explicitly assumed mirror. Forelimb references come from a separate study, and forelimb EMGs are pooled. These are not simultaneous measured four-limb validation data. Kinematic/GRF matching is better than EMG timing matching; all discrepancies remain visible. The model is sagittal, and cannot assess lateral falls.
 
-## Publish the documentation website
+## Read online or on your computer
 
-The included GitHub Actions workflow publishes the formatted guides after a push to the default branch. **Once after publishing the repository, select Settings → Pages → Source → GitHub Actions.** If the first deployment ran before enabling Pages, rerun **Actions → Documentation website**. Thereafter, commit and push with GitHub Desktop to update the website automatically.
-
-See [the publishing instructions](https://smarahmati.github.io/Cat-FullBody-Neuromechanics/Documentation/publishing.html) for the exact first-time steps and offline reading. Website publication uses the saved results and does not rerun or retune the simulation.
+Documentation links open formatted Markdown within the repository. For interactive selectors and moving time-window plots, download and extract the **whole project**, then open `START_HERE.html` in a browser. See [documentation formats and hosting](Documentation/publishing.md) for details.
 
 ## Sources and credit
 
