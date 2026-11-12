@@ -1,0 +1,43 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Translate named initial conditions into the native coupled state.</title><link rel="stylesheet" href="../style.css"></head><body><!-- generated folder guide --><header><div class="tag">Cat · Full-body neuromechanics</div><h1>Translate named initial conditions into the native coupled state.</h1><nav><a href="../../START_HERE.html">Start here</a> · <a href="../project_structure.html">Find a file</a></nav></header><main><p><a href="../../Code/neuromechanics/apply_initial_parameter_file.py">Code/neuromechanics/apply_initial_parameter_file.py</a></p><pre style="overflow:auto;white-space:pre"><span id="L1">   1</span> &quot;&quot;&quot;Translate named initial conditions into the native coupled state.&quot;&quot;&quot;
+<span id="L2">   2</span> 
+<span id="L3">   3</span> import numpy as np
+<span id="L4">   4</span> 
+<span id="L5">   5</span> from .load_parameter_file import load_parameter_file
+<span id="L6">   6</span> 
+<span id="L7">   7</span> from .apply_forward_initial_state import apply_forward_initial_state
+<span id="L8">   8</span> 
+<span id="L9">   9</span> 
+<span id="L10">  10</span> def apply_initial_parameter_file(state, path):
+<span id="L11">  11</span>     &quot;&quot;&quot;Apply this state once at t=0. Never reset it at a stride boundary.&quot;&quot;&quot;
+<span id="L12">  12</span>     p = load_parameter_file(path)
+<span id="L13">  13</span>     m = state[&quot;model&quot;]
+<span id="L14">  14</span>     coordinates = [m.joint(i).name for i in range(m.njnt)]
+<span id="L15">  15</span>     if m.nq != m.nv or m.nv != m.njnt:
+<span id="L16">  16</span>         # Stop and explain the invalid model setting or failed calculation.
+<span id="L17">  17</span>         raise ValueError(&quot;Named initial state currently supports scalar joints only&quot;)
+<span id="L18">  18</span>     names = list(state[&quot;names&quot;])
+<span id="L19">  19</span>     pads = [m.geom(int(i)).name for i in state[&quot;pad_ids&quot;]]
+<span id="L20">  20</span>     for section, expected in [
+<span id="L21">  21</span>         (&quot;coordinates&quot;, coordinates),
+<span id="L22">  22</span>         (&quot;muscles&quot;, names),
+<span id="L23">  23</span>         (&quot;contact_memory&quot;, pads),
+<span id="L24">  24</span>     ]:
+<span id="L25">  25</span>         if set(p[section]) != set(expected):
+<span id="L26">  26</span>             # Stop and explain the invalid model setting or failed calculation.
+<span id="L27">  27</span>             raise ValueError(f&quot;Initial {section} names do not match model&quot;)
+<span id="L28">  28</span>     q = np.empty(m.nq)
+<span id="L29">  29</span>     v = np.empty(m.nv)
+<span id="L30">  30</span>     for i, name in enumerate(coordinates):
+<span id="L31">  31</span>         q[m.jnt_qposadr[i]] = p[&quot;coordinates&quot;][name][&quot;position&quot;]
+<span id="L32">  32</span>         v[m.jnt_dofadr[i]] = p[&quot;coordinates&quot;][name][&quot;velocity&quot;]
+<span id="L33">  33</span>     apply_forward_initial_state(
+<span id="L34">  34</span>         state,
+<span id="L35">  35</span>         dict(
+<span id="L36">  36</span>             qpos=q,
+<span id="L37">  37</span>             qvel=v,
+<span id="L38">  38</span>             activation=np.array([p[&quot;muscles&quot;][n][&quot;activation_0_to_1&quot;] for n in names]),
+<span id="L39">  39</span>             fiber_length=np.array([p[&quot;muscles&quot;][n][&quot;fiber_length_m&quot;] for n in names]),
+<span id="L40">  40</span>             bristle=np.array([p[&quot;contact_memory&quot;][n] for n in pads]),
+<span id="L41">  41</span>         ),
+<span id="L42">  42</span>     )
+</pre></main></body></html>

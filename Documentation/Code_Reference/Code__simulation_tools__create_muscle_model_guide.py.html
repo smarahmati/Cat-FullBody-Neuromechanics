@@ -1,0 +1,166 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Build the illustrated muscle guide from the current editable configuration.</title><link rel="stylesheet" href="../style.css"></head><body><!-- generated folder guide --><header><div class="tag">Cat · Full-body neuromechanics</div><h1>Build the illustrated muscle guide from the current editable configuration.</h1><nav><a href="../../START_HERE.html">Start here</a> · <a href="../project_structure.html">Find a file</a></nav></header><main><p><a href="../../Code/simulation_tools/create_muscle_model_guide.py">Code/simulation_tools/create_muscle_model_guide.py</a></p><pre style="overflow:auto;white-space:pre"><span id="L1">   1</span> &quot;&quot;&quot;Build the illustrated muscle guide from the current editable configuration.
+<span id="L2">   2</span> 
+<span id="L3">   3</span> Run this file after changing muscle parameters to refresh the documentation.
+<span id="L4">   4</span> It reads dictionaries and existing equation documentation; it does not run or
+<span id="L5">   5</span> alter the forward model. Outputs are Documentation/muscle_model.html and its
+<span id="L6">   6</span> parameter snapshot. The editable SVG schematic is in Documentation/Figures_and_Videos.
+<span id="L7">   7</span> &quot;&quot;&quot;
+<span id="L8">   8</span> from pathlib import Path
+<span id="L9">   9</span> import html
+<span id="L10">  10</span> import json
+<span id="L11">  11</span> import re
+<span id="L12">  12</span> import runpy
+<span id="L13">  13</span> 
+<span id="L14">  14</span> ROOT = Path(__file__).resolve().parents[2]
+<span id="L15">  15</span> PARAM = ROOT / &#x27;Data/Model_Parameters&#x27;
+<span id="L16">  16</span> DOC = ROOT / &#x27;Documentation&#x27;
+<span id="L17">  17</span> 
+<span id="L18">  18</span> 
+<span id="L19">  19</span> def read_dictionary(filename):
+<span id="L20">  20</span>     &quot;&quot;&quot;Read the same PARAMETERS dictionary a fresh simulation will use.&quot;&quot;&quot;
+<span id="L21">  21</span>     return runpy.run_path(str(PARAM / filename))[&#x27;PARAMETERS&#x27;]
+<span id="L22">  22</span> 
+<span id="L23">  23</span> 
+<span id="L24">  24</span> def main():
+<span id="L25">  25</span>     &quot;&quot;&quot;Create an offline-readable figure, parameter selector and equation guide.&quot;&quot;&quot;
+<span id="L26">  26</span>     muscles = read_dictionary(&#x27;muscle_tendon.py&#x27;)
+<span id="L27">  27</span>     activation = read_dictionary(&#x27;activation.py&#x27;)
+<span id="L28">  28</span>     initial = read_dictionary(&#x27;initial_state.py&#x27;)[&#x27;muscles&#x27;]
+<span id="L29">  29</span>     shared = runpy.run_path(str(PARAM / &#x27;formulation_constants.py&#x27;))
+<span id="L30">  30</span>     numerical = runpy.run_path(str(PARAM / &#x27;numerical_parameters.py&#x27;))
+<span id="L31">  31</span>     records = json.loads((PARAM / &#x27;PARAMETER_PROVENANCE.json&#x27;).read_text(encoding=&#x27;utf-8&#x27;))[&#x27;parameters&#x27;]
+<span id="L32">  32</span>     descriptions = {}
+<span id="L33">  33</span>     for row in records:
+<span id="L34">  34</span>         if row[&#x27;category&#x27;] in [&#x27;muscle_tendon&#x27;, &#x27;activation&#x27;]:
+<span id="L35">  35</span>             descriptions[row[&#x27;field&#x27;]] = {&#x27;unit&#x27;: row[&#x27;unit&#x27;], &#x27;meaning&#x27;: row[&#x27;meaning&#x27;]}
+<span id="L36">  36</span>     payload = {&#x27;muscles&#x27;: muscles, &#x27;activation&#x27;: activation, &#x27;initial&#x27;: initial,
+<span id="L37">  37</span>                &#x27;descriptions&#x27;: descriptions, &#x27;source&#x27;: &#x27;Current editable Data/Model_Parameters dictionaries&#x27;}
+<span id="L38">  38</span>     (DOC / &#x27;muscle_model_parameters.json&#x27;).write_text(json.dumps(payload, indent=2) + &#x27;\n&#x27;, encoding=&#x27;utf-8&#x27;)
+<span id="L39">  39</span> 
+<span id="L40">  40</span>     # Use the same rendered equations and immediate definitions as the methods.
+<span id="L41">  41</span>     # This avoids maintaining a second, potentially inconsistent constitutive law.
+<span id="L42">  42</span>     methods = (DOC / &#x27;model_methods.html&#x27;).read_text(encoding=&#x27;utf-8&#x27;)
+<span id="L43">  43</span>     equations = []
+<span id="L44">  44</span>     for number in range(2, 14):
+<span id="L45">  45</span>         match = re.search(r&#x27;&lt;h3&gt;&#x27; + str(number) + r&#x27;\. (.*?)(?=&lt;h[23]&gt;|&lt;/main&gt;)&#x27;, methods, re.S)
+<span id="L46">  46</span>         if not match:
+<span id="L47">  47</span>             raise ValueError(f&#x27;Equation {number} was not found in the methods guide.&#x27;)
+<span id="L48">  48</span>         heading, body = match.group(1).split(&#x27;&lt;/h3&gt;&#x27;, 1)
+<span id="L49">  49</span>         equations.append(&#x27;&lt;details&#x27; + (&#x27; open&#x27; if number == 3 else &#x27;&#x27;) + &#x27;&gt;&lt;summary&gt;&#x27; +
+<span id="L50">  50</span>                          html.escape(str(number)) + &#x27;. &#x27; + heading + &#x27;&lt;/summary&gt;&#x27; + body + &#x27;&lt;/details&gt;&#x27;)
+<span id="L51">  51</span> 
+<span id="L52">  52</span>     constant_meanings = {
+<span id="L53">  53</span>         &#x27;ACTIVE_LENGTH_POWER&#x27;: (&#x27;1&#x27;, &#x27;Power p in the active force–length curve; current source shape p = 1.55.&#x27;),
+<span id="L54">  54</span>         &#x27;ACTIVE_LENGTH_WIDTH&#x27;: (&#x27;1&#x27;, &#x27;Width w in the active force–length curve; current source shape w = 0.55.&#x27;),
+<span id="L55">  55</span>         &#x27;PASSIVE_LENGTH_SCALE&#x27;: (&#x27;1&#x27;, &#x27;Scale cP = 0.0075 in the tension-only passive exponential.&#x27;),
+<span id="L56">  56</span>         &#x27;PASSIVE_LENGTH_EXPONENT&#x27;: (&#x27;1&#x27;, &#x27;Exponent kP = 11.6 controlling passive force rise beyond optimal length.&#x27;),
+<span id="L57">  57</span>         &#x27;PASSIVE_EXPONENT_CAP&#x27;: (&#x27;1&#x27;, &#x27;Numerical overflow safeguard, not a measured tissue property.&#x27;),
+<span id="L58">  58</span>         &#x27;FV_D1&#x27;: (&#x27;1&#x27;, &#x27;De Groote force–velocity coefficient d1.&#x27;),
+<span id="L59">  59</span>         &#x27;FV_D2&#x27;: (&#x27;1&#x27;, &#x27;De Groote force–velocity coefficient d2.&#x27;),
+<span id="L60">  60</span>         &#x27;FV_D3&#x27;: (&#x27;1&#x27;, &#x27;De Groote force–velocity coefficient d3.&#x27;),
+<span id="L61">  61</span>         &#x27;FV_D4&#x27;: (&#x27;1&#x27;, &#x27;De Groote force–velocity coefficient d4.&#x27;),
+<span id="L62">  62</span>         &#x27;TENDON_TOE_CURVATURE&#x27;: (&#x27;1&#x27;, &#x27;ktoe: exponential toe-region curvature. Toe-to-linear transition is derived for force and slope continuity.&#x27;),
+<span id="L63">  63</span>     }
+<span id="L64">  64</span>     rows = &#x27;&#x27;
+<span id="L65">  65</span>     for key, (unit, meaning) in constant_meanings.items():
+<span id="L66">  66</span>         rows += &#x27;&lt;tr&gt;&#x27; + &#x27;&#x27;.join(&#x27;&lt;td&gt;&#x27; + html.escape(str(x)) + &#x27;&lt;/td&gt;&#x27; for x in [key, unit, shared[key], meaning]) + &#x27;&lt;/tr&gt;&#x27;
+<span id="L67">  67</span>     numeric_rows = &#x27;&#x27;
+<span id="L68">  68</span>     for key, value in numerical.items():
+<span id="L69">  69</span>         if key.startswith((&#x27;MINIMUM_FIBER&#x27;, &#x27;MINIMUM_LENGTH&#x27;, &#x27;MAXIMUM_FIBER&#x27;, &#x27;FIBER_&#x27;, &#x27;NEWTON_&#x27;)):
+<span id="L70">  70</span>             numeric_rows += &#x27;&lt;tr&gt;&lt;td&gt;&#x27; + html.escape(key) + &#x27;&lt;/td&gt;&lt;td&gt;&#x27; + html.escape(str(value)) + &#x27;&lt;/td&gt;&lt;/tr&gt;&#x27;
+<span id="L71">  71</span>     options = &#x27;&#x27;.join(&#x27;&lt;option value=&quot;&#x27; + html.escape(name) + &#x27;&quot;&#x27; + (&#x27; selected&#x27; if name == &#x27;FR_BicepsBrachii&#x27; else &#x27;&#x27;) + &#x27;&gt;&#x27; + html.escape(name) + &#x27;&lt;/option&gt;&#x27; for name in muscles)
+<span id="L72">  72</span>     page = &#x27;&#x27;&#x27;&lt;!doctype html&gt;&lt;html lang=&quot;en&quot;&gt;&lt;head&gt;&lt;meta charset=&quot;utf-8&quot;&gt;&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width,initial-scale=1&quot;&gt;
+<span id="L73">  73</span> &lt;title&gt;Excitation to muscle force · Illustrated Hill-type model&lt;/title&gt;&lt;link rel=&quot;stylesheet&quot; href=&quot;style.css&quot;&gt;
+<span id="L74">  74</span> &lt;style&gt;.muscle-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(270px,1fr));gap:16px}.muscle-grid article{background:white;border:1px solid #cbdde4;border-radius:12px;padding:18px}.inactive{color:#637683;background:#f0f2f3}button{font:inherit;padding:10px 15px;margin:4px;border:1px solid #087f8a;border-radius:7px;background:white;color:#086878;cursor:pointer}select{font:inherit;padding:10px;max-width:100%}figure{margin:20px 0}figcaption{font-size:14px;color:#476674}#muscle-parameters code{font-size:12px}#muscle-parameters th{position:sticky;top:0}.parameter-note{background:#e6f5f3;padding:16px}&lt;/style&gt;&lt;/head&gt;&lt;body&gt;
+<span id="L75">  75</span> &lt;header&gt;&lt;div class=&quot;tag&quot;&gt;Cat · Full-body neuromechanics&lt;/div&gt;&lt;h1&gt;How excitation produces muscle force&lt;/h1&gt;&lt;p&gt;The Hill-type muscle and elastic tendon implemented in this release.&lt;/p&gt;
+<span id="L76">  76</span> &lt;nav&gt;&lt;a href=&quot;../START_HERE.html&quot;&gt;Start here&lt;/a&gt;&lt;a href=&quot;model_methods.html&quot;&gt;All equations&lt;/a&gt;&lt;a href=&quot;parameter_tables.html&quot;&gt;Source-to-model parameters&lt;/a&gt;&lt;a href=&quot;References/index.html&quot;&gt;References&lt;/a&gt;&lt;/nav&gt;&lt;/header&gt;&lt;main&gt;
+<span id="L77">  77</span> &lt;p class=&quot;note&quot;&gt;&lt;strong&gt;Excitation is a command; activation is a dynamic state; tendon force is a mechanical result.&lt;/strong&gt;
+<span id="L78">  78</span> Force depends on activation, fiber length and velocity, tendon stretch, pennation and muscle parameters. The same excitation need not produce the same force when the limb is in a different mechanical state.&lt;/p&gt;
+<span id="L79">  79</span> &lt;h2&gt;The elements actually used in this analysis&lt;/h2&gt;
+<span id="L80">  80</span> &lt;p&gt;&lt;strong&gt;Passive fiber force is included in all 104 channels: 76 forelimb and 28 hindlimb.&lt;/strong&gt; Elastic tendons and fiber damping are included in both. The figures show the applied equations, not an optional menu of elements.&lt;/p&gt;
+<span id="L81">  81</span> &lt;p&gt;&lt;a href=&quot;passive_fiber_mechanics.html&quot;&gt;Passive force–length relationship and verification&lt;/a&gt;&lt;/p&gt;
+<span id="L82">  82</span> &lt;p id=&quot;diagram-status&quot; class=&quot;parameter-note&quot;&gt;All four limbs: passive fiber branch included.&lt;/p&gt;
+<span id="L83">  83</span> &lt;figure&gt;&lt;img id=&quot;muscle-schematic&quot; src=&quot;Figures_and_Videos/hill_muscle_model.svg&quot; alt=&quot;Excitation activates a Hill-type muscle: active contractile element, passive fiber tissue included in all limbs, and damping in parallel, in series with an elastic tendon; constant pennation partitions fiber and tendon length.&quot;&gt;
+<span id="L84">  84</span> &lt;figcaption&gt;Project-specific schematic, not an anatomical scale drawing or a figure copied from a paper. Fiber contributions are written in the implemented tendon-force normalization. &lt;a id=&quot;full-figure-link&quot; href=&quot;Figures_and_Videos/hill_muscle_model.svg&quot;&gt;Open the scalable figure&lt;/a&gt; · &lt;a id=&quot;detail-figure-link&quot; href=&quot;Figures_and_Videos/hill_muscle_pennation_detail.svg&quot;&gt;Enlarge the main panel with pennation angle α&lt;/a&gt;.&lt;/figcaption&gt;&lt;/figure&gt;
+<span id="L85">  85</span> &lt;div class=&quot;muscle-grid&quot;&gt;
+<span id="L86">  86</span> &lt;article&gt;&lt;h3&gt;1. Motor command&lt;/h3&gt;&lt;p&gt;u(t), from 0 to 1, is read from the fixed excitation table. The same prescribed cycle is repeated throughout the forward calculation.&lt;/p&gt;&lt;/article&gt;
+<span id="L87">  87</span> &lt;article&gt;&lt;h3&gt;2. Activation dynamics&lt;/h3&gt;&lt;p&gt;Activation a(t) rises and falls with finite activation/deactivation time constants. It does not instantaneously become equal to excitation.&lt;/p&gt;&lt;/article&gt;
+<span id="L88">  88</span> &lt;article&gt;&lt;h3&gt;3. Mechanical equilibrium&lt;/h3&gt;&lt;p&gt;The elastic solver finds fiber length such that tendon tension balances active, passive and damping contributions. Tendon length changes as the total path and fiber length change.&lt;/p&gt;&lt;/article&gt;
+<span id="L89">  89</span> &lt;article&gt;&lt;h3&gt;4. Coupled movement&lt;/h3&gt;&lt;p&gt;The resulting tendon force acts along the muscle path. Its moment arms convert it to joint loading. All four limbs, the trunk and paw contacts participate in the coupled forward dynamics.&lt;/p&gt;&lt;/article&gt;&lt;/div&gt;
+<span id="L90">  90</span> &lt;h2&gt;What is each element?&lt;/h2&gt;
+<span id="L91">  91</span> &lt;table&gt;&lt;tr&gt;&lt;th&gt;Element&lt;/th&gt;&lt;th&gt;Meaning&lt;/th&gt;&lt;th&gt;Parameters / states&lt;/th&gt;&lt;/tr&gt;
+<span id="L92">  92</span> &lt;tr&gt;&lt;td&gt;CE: active contractile element&lt;/td&gt;&lt;td&gt;Activation-dependent force multiplied by force–length and force–velocity factors.&lt;/td&gt;&lt;td&gt;a, F0, lopt, vmax, active exponent ρ; shared curve constants p, w and d1–d4.&lt;/td&gt;&lt;/tr&gt;
+<span id="L93">  93</span> &lt;tr&gt;&lt;td&gt;PE: parallel elastic element&lt;/td&gt;&lt;td&gt;Included for all 104 channels in the current analysis. It produces tensile force when fiber length exceeds optimal length. It is distinct from tendon elasticity.&lt;/td&gt;&lt;td&gt;Passive switch sP; scale cP; exponent kP; normalized fiber length λ.&lt;/td&gt;&lt;/tr&gt;
+<span id="L94">  94</span> &lt;tr&gt;&lt;td&gt;D: viscous fiber damping&lt;/td&gt;&lt;td&gt;Velocity-dependent contribution βν to normalized equilibrium. Its sign follows fiber velocity; it is not a separate neural input.&lt;/td&gt;&lt;td&gt;β, ν; ν is positive when the fiber lengthens.&lt;/td&gt;&lt;/tr&gt;
+<span id="L95">  95</span> &lt;tr&gt;&lt;td&gt;SE: series elastic tendon&lt;/td&gt;&lt;td&gt;No tensile force at or below slack length; nonlinear exponential toe region followed by a linear region. Tendon stretch is a computed outcome.&lt;/td&gt;&lt;td&gt;ls, ε0, ktoe and F0. ε0 is tendon strain when force equals F0.&lt;/td&gt;&lt;/tr&gt;
+<span id="L96">  96</span> &lt;tr&gt;&lt;td&gt;Pennation and geometry&lt;/td&gt;&lt;td&gt;The fiber makes a constant angle α with the tendon axis. LMT = lf cos α + lT. Whole MT length comes from origin/insertion, via/wrap paths and a fixed length offset.&lt;/td&gt;&lt;td&gt;cos α, ΔL and attachment/routing geometry; q is the current skeletal configuration.&lt;/td&gt;&lt;/tr&gt;
+<span id="L97">  97</span> &lt;tr&gt;&lt;td&gt;Initial state and integration&lt;/td&gt;&lt;td&gt;a(0) and lf(0) initialize the muscle once. A backward-Euler fiber-velocity estimate and safeguarded force-equilibrium solve update fiber length.&lt;/td&gt;&lt;td&gt;Initial activation, fiber length, mechanical time step and numerical tolerances.&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+<span id="L98">  98</span> &lt;p class=&quot;parameter-note&quot;&gt;&lt;strong&gt;Two implementation details:&lt;/strong&gt; Passive fiber force is ON in all channels. It can nevertheless be zero when a fiber is shorter than its passive stretch threshold. The tendon is elastic in all channels. Also, F0 is already a tendon-projected maximum isometric force; applying an additional cos α factor to the force would double-project it. The implementation uses α in the length partition and holds it constant.&lt;/p&gt;
+<span id="L99">  99</span> &lt;h2&gt;Passive fiber force and its sources&lt;/h2&gt;
+<span id="L100"> 100</span> &lt;p&gt;The current model uses the passive exponential in Prilutsky et al. (2016), Table 10.3, and Rahmati et al. (2025), Table 3, with coefficients 0.0075 and 11.6. It is enabled in all limb channels, inside the elastic force-equilibrium solve. This constitutive law is part of the muscle equilibrium equations for every limb.&lt;/p&gt;
+<span id="L101"> 101</span> &lt;p&gt;Zeroing compressive values and limiting the exponent for overflow protection are explicit adaptations. Extending one normalized law to added channels is an assumption, not muscle-specific passive calibration. The passive curve coefficients are taken from the cited publications; they are not fitted to this walking trial. &lt;a href=&quot;passive_fiber_mechanics.html&quot;&gt;Passive-force equation and stretch verification&lt;/a&gt;.&lt;/p&gt;
+<span id="L102"> 102</span> &lt;h2&gt;Inspect every parameter for one muscle&lt;/h2&gt;
+<span id="L103"> 103</span> &lt;p&gt;Select a muscle below. These values come from the editable configuration when this guide was generated. They do not change the running model. Edit the linked Python files and start a new simulation to apply changes.&lt;/p&gt;
+<span id="L104"> 104</span> &lt;label for=&quot;muscle-choice&quot;&gt;&lt;strong&gt;Muscle:&lt;/strong&gt;&lt;/label&gt; &lt;select id=&quot;muscle-choice&quot;&gt;OPTIONS&lt;/select&gt;
+<span id="L105"> 105</span> &lt;p id=&quot;muscle-state&quot; class=&quot;parameter-note&quot;&gt;&lt;/p&gt;
+<span id="L106"> 106</span> &lt;table id=&quot;muscle-parameters&quot;&gt;&lt;thead&gt;&lt;tr&gt;&lt;th&gt;Configuration parameter&lt;/th&gt;&lt;th&gt;Value&lt;/th&gt;&lt;th&gt;Unit&lt;/th&gt;&lt;th&gt;Meaning and current use&lt;/th&gt;&lt;th&gt;File&lt;/th&gt;&lt;/tr&gt;&lt;/thead&gt;&lt;tbody&gt;&lt;/tbody&gt;&lt;/table&gt;
+<span id="L107"> 107</span> &lt;p&gt;&lt;a href=&quot;../Data/Model_Parameters/ATTACHMENT_MAP.html&quot;&gt;Origins, insertions, via points and wrapping&lt;/a&gt; · &lt;a href=&quot;muscle_model_parameters.json&quot;&gt;Exact parameter snapshot&lt;/a&gt; · &lt;a href=&quot;parameter_tables.html&quot;&gt;Source values and calibration explanations&lt;/a&gt;.&lt;/p&gt;
+<span id="L108"> 108</span> &lt;h2&gt;Shared curve constants&lt;/h2&gt;
+<span id="L109"> 109</span> &lt;p&gt;These constants are shared by muscle channels. The selected muscle’s exponent, strength, lengths, speed and switches still differ by channel. Edit &lt;a href=&quot;../Data/Model_Parameters/formulation_constants.py&quot;&gt;formulation_constants.py&lt;/a&gt; and start a new process to apply a change.&lt;/p&gt;
+<span id="L110"> 110</span> &lt;table&gt;&lt;tr&gt;&lt;th&gt;Parameter&lt;/th&gt;&lt;th&gt;Unit&lt;/th&gt;&lt;th&gt;Value&lt;/th&gt;&lt;th&gt;Meaning&lt;/th&gt;&lt;/tr&gt;CONSTANT_ROWS&lt;/table&gt;
+<span id="L111"> 111</span> &lt;p&gt;The tendon’s normalized force at the toe-region endpoint is fixed at 0.33; the remaining rise to normalized force 1 is 0.67. These constants are in &lt;a href=&quot;../Code/neuromechanics/elastic_tendon_force.py&quot;&gt;elastic_tendon_force.py&lt;/a&gt; and &lt;a href=&quot;../Code/neuromechanics/elastic_tendon_transition.py&quot;&gt;elastic_tendon_transition.py&lt;/a&gt;, not separate configuration entries. The transition strain is derived from ε0 and ktoe to keep force and stiffness continuous. The exact piecewise equation is below.&lt;/p&gt;
+<span id="L112"> 112</span> &lt;h2&gt;Implemented equations, with every symbol defined&lt;/h2&gt;
+<span id="L113"> 113</span> &lt;p&gt;Open each equation to inspect its formulation, definitions and corresponding code. These are the same equations as the full methods guide. The alternative source force–velocity curve is documented but inactive when the De Groote switch is 1.&lt;/p&gt;
+<span id="L114"> 114</span> EQUATIONS
+<span id="L115"> 115</span> &lt;details&gt;&lt;summary&gt;Numerical solver settings (not tissue properties)&lt;/summary&gt;
+<span id="L116"> 116</span> &lt;p&gt;These settings control solution accuracy and geometric safeguards. Read &lt;a href=&quot;../Data/Model_Parameters/numerical_parameters.py&quot;&gt;numerical_parameters.py&lt;/a&gt; for units and comments. The mechanical time step is in &lt;a href=&quot;../Data/Model_Parameters/environment.py&quot;&gt;environment.py&lt;/a&gt;; the default integration step is approximately 0.000125 s.&lt;/p&gt;
+<span id="L117"> 117</span> &lt;table&gt;&lt;tr&gt;&lt;th&gt;Setting&lt;/th&gt;&lt;th&gt;Value&lt;/th&gt;&lt;/tr&gt;NUMERIC_ROWS&lt;/table&gt;&lt;/details&gt;
+<span id="L118"> 118</span> &lt;h2&gt;If excitation becomes zero, does force vanish immediately?&lt;/h2&gt;
+<span id="L119"> 119</span> &lt;p&gt;No. Activation first decays according to its time constant. Stretched tendon can retain tension, and passive fiber force can remain. The evolving muscle–tendon and skeletal states determine how force changes. The model therefore distinguishes zero excitation, zero activation and zero tendon force.&lt;/p&gt;
+<span id="L120"> 120</span> &lt;h2&gt;Scientific sources and project choices&lt;/h2&gt;
+<span id="L121"> 121</span> &lt;p&gt;The source muscle geometry/curves are documented with the author’s MATLAB hindlimb Model 3 dataset (bundled under Data/Original_Study_Data/hindlimb), &lt;a href=&quot;References/index.html#Rahmati2025&quot;&gt;Rahmati et al.&lt;/a&gt; and the &lt;a href=&quot;References/index.html&quot;&gt;Prilutsky chapter and supporting literature&lt;/a&gt;. The applied force–velocity adaptation is described in &lt;a href=&quot;../Code/neuromechanics/muscle_force_velocity_degroote.py&quot;&gt;muscle_force_velocity_degroote.py&lt;/a&gt; and the methods guide’s De Groote/OpenSim references. Elastic tendon, the constant-pennation formulation, passive-force switches, fitted values and numerical safeguards are disclosed implementation choices; this assembled model is not an exact reproduction of a single paper.&lt;/p&gt;
+<span id="L122"> 122</span> &lt;p&gt;To refresh this page after parameter edits, run &lt;code&gt;python Code/simulation_tools/create_muscle_model_guide.py&lt;/code&gt; from the repository root. The reusable SVG is in &lt;code&gt;Documentation/Figures_and_Videos/hill_muscle_model.svg&lt;/code&gt;.&lt;/p&gt;
+<span id="L123"> 123</span> &lt;/main&gt;&lt;footer&gt;Hill-type muscle guide · all files work locally without an internet connection · model values are editable separately.&lt;/footer&gt;
+<span id="L124"> 124</span> &lt;script id=&quot;muscle-data&quot; type=&quot;application/json&quot;&gt;PAYLOAD&lt;/script&gt;
+<span id="L125"> 125</span> &lt;script&gt;
+<span id="L126"> 126</span> const data = JSON.parse(document.getElementById(&#x27;muscle-data&#x27;).textContent);
+<span id="L127"> 127</span> const selector = document.getElementById(&#x27;muscle-choice&#x27;);
+<span id="L128"> 128</span> function number(x) { return typeof x === &#x27;number&#x27; ? Number(x.toPrecision(8)).toString() : JSON.stringify(x); }
+<span id="L129"> 129</span> function addRow(body, name, value, unit, meaning, file, inactive=false) {
+<span id="L130"> 130</span>   const row=document.createElement(&#x27;tr&#x27;); if(inactive) row.className=&#x27;inactive&#x27;;
+<span id="L131"> 131</span>   for(const content of [name, number(value), unit, meaning]) { const cell=document.createElement(&#x27;td&#x27;); cell.textContent=content; row.appendChild(cell); }
+<span id="L132"> 132</span>   const cell=document.createElement(&#x27;td&#x27;), link=document.createElement(&#x27;a&#x27;); link.href=&#x27;../Data/Model_Parameters/&#x27;+file; link.textContent=file; cell.appendChild(link); row.appendChild(cell); body.appendChild(row);
+<span id="L133"> 133</span> }
+<span id="L134"> 134</span> function updateMuscle() {
+<span id="L135"> 135</span>   const name=selector.value, muscle=data.muscles[name], act=data.activation[name], body=document.querySelector(&#x27;#muscle-parameters tbody&#x27;); body.replaceChildren();
+<span id="L136"> 136</span>   const isFore=name.startsWith(&#x27;FL_&#x27;) || name.startsWith(&#x27;FR_&#x27;);
+<span id="L137"> 137</span>   const schematic=document.getElementById(&#x27;muscle-schematic&#x27;);
+<span id="L138"> 138</span>   const full=&#x27;hill_muscle_model.svg&#x27;;
+<span id="L139"> 139</span>   const detail=&#x27;hill_muscle_pennation_detail.svg&#x27;;
+<span id="L140"> 140</span>   schematic.src=&#x27;Figures_and_Videos/&#x27;+full;
+<span id="L141"> 141</span>   schematic.alt=&#x27;Applied muscle model with active force, passive fiber branch, damping, elastic tendon and pennation.&#x27;;
+<span id="L142"> 142</span>   document.getElementById(&#x27;full-figure-link&#x27;).href=&#x27;Figures_and_Videos/&#x27;+full;
+<span id="L143"> 143</span>   document.getElementById(&#x27;detail-figure-link&#x27;).href=&#x27;Figures_and_Videos/&#x27;+detail;
+<span id="L144"> 144</span>   document.getElementById(&#x27;diagram-status&#x27;).textContent=name+&#x27; — passive fiber force INCLUDED; elastic tendon and fiber damping included.&#x27;;
+<span id="L145"> 145</span>   const alpha=Math.acos(Math.max(-1,Math.min(1,muscle.pennation_cosine)))*180/Math.PI;
+<span id="L146"> 146</span>   document.getElementById(&#x27;muscle-state&#x27;).textContent=name+&#x27; | Pennation α = &#x27;+alpha.toFixed(3)+&#x27;° (derived from cos α) | Passive fiber force &#x27;+(muscle.passive_fiber_enabled ? &#x27;ON&#x27; : &#x27;OFF&#x27;)+&#x27; | Elastic tendon ON | Force–velocity: &#x27;+(muscle.degroote_force_velocity_enabled ? &#x27;De Groote&#x27; : &#x27;source law&#x27;);
+<span id="L147"> 147</span>   for(const [key,value] of Object.entries(act)) { const info=data.descriptions[key]||{}; addRow(body,key,value,info.unit||&#x27;&#x27;,info.meaning||&#x27;Activation-dynamics setting&#x27;,&#x27;activation.py&#x27;); }
+<span id="L148"> 148</span>   for(const [key,value] of Object.entries(muscle)) {
+<span id="L149"> 149</span>     const info=data.descriptions[key]||{}, inactive=!!muscle.degroote_force_velocity_enabled &amp;&amp; [&#x27;source_shortening_curvature&#x27;,&#x27;source_lengthening_curvature&#x27;].includes(key);
+<span id="L150"> 150</span>     addRow(body,key,value,info.unit||&#x27;&#x27;,(info.meaning||&#x27;Muscle parameter&#x27;)+(inactive?&#x27; Inactive in this run because De Groote force–velocity is enabled.&#x27;:&#x27;&#x27;),&#x27;muscle_tendon.py&#x27;,inactive);
+<span id="L151"> 151</span>   }
+<span id="L152"> 152</span>   for(const [key,value] of Object.entries(data.initial[name]||{})) { addRow(body,key,value,key.includes(&#x27;length&#x27;)?&#x27;m&#x27;:&#x27;1&#x27;,&#x27;Initial muscle state; used once at t = 0.&#x27;,&#x27;initial_state.py&#x27;); }
+<span id="L153"> 153</span> }
+<span id="L154"> 154</span> function chooseDiagram(name) { selector.value=name; updateMuscle(); }
+<span id="L155"> 155</span> selector.addEventListener(&#x27;change&#x27;,updateMuscle);updateMuscle();
+<span id="L156"> 156</span> &lt;/script&gt;&lt;/body&gt;&lt;/html&gt;&#x27;&#x27;&#x27;
+<span id="L157"> 157</span>     page = (page.replace(&#x27;OPTIONS&#x27;, options).replace(&#x27;CONSTANT_ROWS&#x27;, rows)
+<span id="L158"> 158</span>             .replace(&#x27;NUMERIC_ROWS&#x27;, numeric_rows).replace(&#x27;EQUATIONS&#x27;, &#x27;&#x27;.join(equations))
+<span id="L159"> 159</span>             .replace(&#x27;PAYLOAD&#x27;, json.dumps(payload, ensure_ascii=False).replace(&#x27;&lt;&#x27;, &#x27;\\u003c&#x27;)))
+<span id="L160"> 160</span>     (DOC / &#x27;muscle_model.html&#x27;).write_text(page, encoding=&#x27;utf-8&#x27;)
+<span id="L161"> 161</span>     print(f&#x27;Wrote illustrated guide and {len(muscles)} muscle parameter records.&#x27;)
+<span id="L162"> 162</span> 
+<span id="L163"> 163</span> 
+<span id="L164"> 164</span> if __name__ == &#x27;__main__&#x27;:
+<span id="L165"> 165</span>     main()
+</pre></main></body></html>

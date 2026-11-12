@@ -1,0 +1,61 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Advance legacy timestep.</title><link rel="stylesheet" href="../style.css"></head><body><!-- generated folder guide --><header><div class="tag">Cat · Full-body neuromechanics</div><h1>Advance legacy timestep.</h1><nav><a href="../../START_HERE.html">Start here</a> · <a href="../project_structure.html">Find a file</a></nav></header><main><p><a href="../../Code/neuromechanics/advance_partitioned_timestep.py">Code/neuromechanics/advance_partitioned_timestep.py</a></p><pre style="overflow:auto;white-space:pre"><span id="L1">   1</span> &quot;&quot;&quot;Advance legacy timestep.
+<span id="L2">   2</span> 
+<span id="L3">   3</span> Inputs/outputs: see the named function arguments and returned values.
+<span id="L4">   4</span> Lengths use metres, time seconds, force newtons, and angles radians unless stated.
+<span id="L5">   5</span> See Documentation/model_methods.html for equations and parameter definitions.
+<span id="L6">   6</span> &quot;&quot;&quot;
+<span id="L7">   7</span> 
+<span id="L8">   8</span> import numpy as np
+<span id="L9">   9</span> 
+<span id="L10">  10</span> from model_configuration.numerical_parameters import MAXIMUM_GENERALIZED_SPEED
+<span id="L11">  11</span> 
+<span id="L12">  12</span> import mujoco as mj
+<span id="L13">  13</span> 
+<span id="L14">  14</span> from .muscle_excitation import muscle_excitation
+<span id="L15">  15</span> 
+<span id="L16">  16</span> from .update_muscle_paths import update_muscle_paths
+<span id="L17">  17</span> 
+<span id="L18">  18</span> from .compute_paw_contact_forces import compute_paw_contact_forces
+<span id="L19">  19</span> 
+<span id="L20">  20</span> from .solve_elastic_muscle_by_bisection import solve_elastic_muscle_by_bisection
+<span id="L21">  21</span> 
+<span id="L22">  22</span> 
+<span id="L23">  23</span> def advance_partitioned_timestep(s, offline_motor_command=None):
+<span id="L24">  24</span>     &quot;&quot;&quot;Excitation -&gt; activation -&gt; elastic force -&gt; motion -&gt; physical contact.
+<span id="L25">  25</span> 
+<span id="L26">  26</span>     No reference angles, force templates, support controller, inverse dynamics,
+<span id="L27">  27</span>     body-position reset, or externally commanded trunk wrench is used here.
+<span id="L28">  28</span>     &quot;&quot;&quot;
+<span id="L29">  29</span>     m, d = s[&quot;model&quot;], s[&quot;data&quot;]
+<span id="L30">  30</span>     d.ctrl[:] = (
+<span id="L31">  31</span>         muscle_excitation(s, d.time)
+<span id="L32">  32</span>         if offline_motor_command is None
+<span id="L33">  33</span>         else offline_motor_command
+<span id="L34">  34</span>     )
+<span id="L35">  35</span>     d.qfrc_applied[:] = 0.0
+<span id="L36">  36</span>     d.xfrc_applied[:] = s[&quot;contact_wrench&quot;]
+<span id="L37">  37</span>     # Integrate the common skeleton and native activation by one mechanical timestep.
+<span id="L38">  38</span>     mj.mj_step(m, d)
+<span id="L39">  39</span>     update_muscle_paths(s)
+<span id="L40">  40</span>     mj.mj_forward(m, d)
+<span id="L41">  41</span>     lf, v, f, r, b = solve_elastic_muscle_by_bisection(
+<span id="L42">  42</span>         d.actuator_length + s[&quot;mtu_length_offset&quot;],
+<span id="L43">  43</span>         s[&quot;fiber_length&quot;],
+<span id="L44">  44</span>         d.act,
+<span id="L45">  45</span>         s[&quot;lopt&quot;],
+<span id="L46">  46</span>         s[&quot;slack&quot;],
+<span id="L47">  47</span>         s[&quot;muscle_params&quot;],
+<span id="L48">  48</span>         s[&quot;e0&quot;],
+<span id="L49">  49</span>         s[&quot;fiber_damping_coefficients&quot;],
+<span id="L50">  50</span>         m.opt.timestep,
+<span id="L51">  51</span>     )
+<span id="L52">  52</span>     s.update(fiber_length=lf, fiber_velocity=v, force=f, residual=r, fiber_bound=b)
+<span id="L53">  53</span>     m.actuator_biasprm[:, 0] = -f
+<span id="L54">  54</span>     compute_paw_contact_forces(s, m.opt.timestep)
+<span id="L55">  55</span>     mj.mj_forward(m, d)
+<span id="L56">  56</span>     return bool(
+<span id="L57">  57</span>         np.isfinite(d.qpos).all()
+<span id="L58">  58</span>         and np.isfinite(f).all()
+<span id="L59">  59</span>         and np.max(abs(d.qvel)) &lt; MAXIMUM_GENERALIZED_SPEED
+<span id="L60">  60</span>     )
+</pre></main></body></html>

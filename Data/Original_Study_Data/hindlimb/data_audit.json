@@ -1,0 +1,99 @@
+{
+  "selected_model": "model 3 - No AF",
+  "n_trials": 122,
+  "experimental_condition": "all_intact_control_user_confirmed",
+  "n_post_reinnervation_trials": 0,
+  "collection_counts": {
+    "Ted": 68,
+    "Brad": 54
+  },
+  "date_relative_to_reinnervation_counts": {
+    "before": 90,
+    "on_or_after": 0,
+    "unknown_placeholder": 32
+  },
+  "cat_names": [
+    "Cruella",
+    "Squirt",
+    "Stella",
+    "Wenbal",
+    "inna",
+    "karina",
+    "maza",
+    "ryazan",
+    "sveta",
+    "tula"
+  ],
+  "all_kinematics_complete": true,
+  "frame_time_max_discrepancy_s": 0.0,
+  "source_files": [
+    {
+      "source": "E:\\Postdoc (Boris)\\Hindlimb Modeling\\Information and data\\New\\Ted\\Joint_Kinematics\\TedTData35RHNoOutliers.xls",
+      "bytes": 2695168,
+      "sha256": "aed357b79fbc508d8fc1c894b69d3c9dfe8a33436d6d338791d0f18136487790"
+    },
+    {
+      "source": "E:\\Postdoc (Boris)\\Hindlimb Modeling\\Information and data\\New\\Brad\\Joint_Kinematics\\CatsDataBrad5RHTFixNoOutliers.xls",
+      "bytes": 2184704,
+      "sha256": "fc8f3dd2488bb2016d3cf34a6cbad7d0aadf72f7d050e3d81975fe78ed75bb25"
+    },
+    {
+      "source": "E:\\Postdoc (Boris)\\Hindlimb Modeling\\Information and data\\New\\Ted\\EMGs Updated\\TedDataEMG35Fc6RHNoOutliers.xls",
+      "bytes": 1289216,
+      "sha256": "b6fb9e5fb54517f32adddf58e1168ec4667de36ab5cec26530f8bad8698cd6aa"
+    },
+    {
+      "source": "E:\\Postdoc (Boris)\\Hindlimb Modeling\\Information and data\\New\\Brad\\EMGs\\CatsDataBradEMG5Fc6RHTFixNoOutliers.xls",
+      "bytes": 942080,
+      "sha256": "375fbcf4fc3303e4fa13a2e231fad46b6c51fd262d735ad3e4965613779e89bb"
+    },
+    {
+      "source": "E:\\Postdoc (Boris)\\Hindlimb Modeling\\Information and data\\CatsSegmentData.xlsx",
+      "bytes": 24553,
+      "sha256": "d8e5c04cd99d35966d8c83055bddbbb623db0b52a6c0ec066620b963caab30cf"
+    },
+    {
+      "source": "E:\\Postdoc (Boris)\\Hindlimb Modeling\\Information and data\\HindLimb Musculoskeletal Model.xlsx",
+      "bytes": 33199,
+      "sha256": "6b1264746c4340fb3494e7cdb9457f8ec19ad284fe609bf75fd4daff560bc756"
+    },
+    {
+      "source": "E:\\Postdoc (Boris)\\Hindlimb Modeling\\model 3 - No AF\\M1 - Main Model - Applied Adjusted GP & add synergic muscles\\C - Computation of muscle activations\\MTGP.mat",
+      "bytes": 1177,
+      "sha256": "8f55e94f35a4e28f4d0f634a1cd5c9823f2d4a92208317b2d2799f2e40c3e80d"
+    },
+    {
+      "source": "E:\\Postdoc (Boris)\\Hindlimb Modeling\\model 3 - No AF\\M1 - Main Model - Applied Adjusted GP & add synergic muscles\\C - Computation of muscle activations\\MTMP.mat",
+      "bytes": 1551,
+      "sha256": "2b1be91ed91162bfb3146543f7f8e4e4d0fa8180ec5954693ce353309552cb53"
+    },
+    {
+      "source": "E:\\Postdoc (Boris)\\Hindlimb Modeling\\model 3 - No AF\\M1 - Main Model - Applied Adjusted GP & add synergic muscles\\C - Computation of muscle activations\\MTForce.m",
+      "bytes": 1919,
+      "sha256": "6780e101bbf8b8d54e7279780a8e21d2b0f081bbf3e0109560ce66717fb5581d"
+    },
+    {
+      "source": "E:\\Postdoc (Boris)\\Hindlimb Modeling\\model 3 - No AF\\M1 - Main Model - Applied Adjusted GP & add synergic muscles\\C - Computation of muscle activations\\Cost_Function.m",
+      "bytes": 21245,
+      "sha256": "300e15b5e2573ef436e3d87276270b19fc8528a8e7a45ce8d17658902a85184e"
+    },
+    {
+      "source": "E:\\Postdoc (Boris)\\Hindlimb Modeling\\model 3 - No AF\\M1 - Main Model - Applied Adjusted GP & add synergic muscles\\C - Computation of muscle activations\\Constraint_Function.m",
+      "bytes": 21847,
+      "sha256": "e9bb56f4177868f7d2a090185cfb4335d0210c78f103cb440503cf0ccf03e76c"
+    },
+    {
+      "source": "E:\\Postdoc (Boris)\\Hindlimb Modeling\\model 3 - No AF\\M1 - Main Model - Applied Adjusted GP & add synergic muscles\\C - Computation of muscle activations\\Optimization.m",
+      "bytes": 1252,
+      "sha256": "9b966416ed05c7fbf0d54a6f12d43793a9f1a8965f69ce7183dc80af454b4e69"
+    }
+  ],
+  "notes": [
+    "All source files were read without running their optimization scripts or modifying them.",
+    "Time uses 101 uniformly spaced samples and the per-trial CycleTime. Check velocity consistency before simulation.",
+    "Normalized forces use each cats recorded weight; moments additionally use its recorded hindlimb length.",
+    "EMG values, including missing entries and small negative filtered values, are preserved without normalization or clipping.",
+    "The collection names Ted/Brad are dataset labels, not individual animals.",
+    "Model 3 has 11 groups. VI is pooled into VL/VM in the source PCSA partition. Other operated muscles may be aggregated or absent; confirm intervention mapping."
+  ]
+}

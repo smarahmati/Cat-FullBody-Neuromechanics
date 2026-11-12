@@ -1,0 +1,41 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Read the inspectable source-reference tables, without fitting or filtering.</title><link rel="stylesheet" href="../style.css"></head><body><!-- generated folder guide --><header><div class="tag">Cat · Full-body neuromechanics</div><h1>Read the inspectable source-reference tables, without fitting or filtering.</h1><nav><a href="../../START_HERE.html">Start here</a> · <a href="../project_structure.html">Find a file</a></nav></header><main><p><a href="../../Code/neuromechanics/load_reference_tables.py">Code/neuromechanics/load_reference_tables.py</a></p><pre style="overflow:auto;white-space:pre"><span id="L1">   1</span> &quot;&quot;&quot;Read the inspectable source-reference tables, without fitting or filtering.&quot;&quot;&quot;
+<span id="L2">   2</span> 
+<span id="L3">   3</span> import json
+<span id="L4">   4</span> 
+<span id="L5">   5</span> from pathlib import Path
+<span id="L6">   6</span> 
+<span id="L7">   7</span> import numpy as np
+<span id="L8">   8</span> 
+<span id="L9">   9</span> from model_configuration.paths import ROOT
+<span id="L10">  10</span> 
+<span id="L11">  11</span> from .read_time_series import read_time_series
+<span id="L12">  12</span> 
+<span id="L13">  13</span> 
+<span id="L14">  14</span> def load_reference_tables(folder=None):
+<span id="L15">  15</span>     &quot;&quot;&quot;Return source cycles, LH assembly correction and the separate FHL EMG.
+<span id="L16">  16</span> 
+<span id="L17">  17</span>     Optional text tables are exactly the numeric source arrays, not polynomial
+<span id="L18">  18</span>     fits. Each file has its own original sampling grid. The caller applies the
+<span id="L19">  19</span>     documented fixed limb phase offsets. No reference is used as a force.
+<span id="L20">  20</span>     &quot;&quot;&quot;
+<span id="L21">  21</span>     if folder is None:
+<span id="L22">  22</span>         return (
+<span id="L23">  23</span>             dict(np.load(ROOT / &quot;Data/Experimental_Reference_Data/hindlimb_forelimb_reference_cycles.npz&quot;)),
+<span id="L24">  24</span>             np.load(ROOT / &quot;Data/Experimental_Reference_Data/hindlimb_pose_initialization.npz&quot;)[
+<span id="L25">  25</span>                 &quot;left_joint_correction_rad&quot;
+<span id="L26">  26</span>             ],
+<span id="L27">  27</span>             np.load(ROOT / &quot;Data/Experimental_Reference_Data/hindlimb_flexor_hallucis_longus_emg.npz&quot;)[&quot;FHL_peak_normalized&quot;],
+<span id="L28">  28</span>         )
+<span id="L29">  29</span>     folder = ROOT / Path(folder)
+<span id="L30">  30</span>     manifest = json.loads((folder / &quot;TABLE_MANIFEST.json&quot;).read_text())
+<span id="L31">  31</span>     out = {}
+<span id="L32">  32</span>     for name, item in manifest[&quot;tables&quot;].items():
+<span id="L33">  33</span>         phase, channels, values = read_time_series(folder / item[&quot;file&quot;], item[&quot;columns&quot;])
+<span id="L34">  34</span>         if not np.allclose(phase, np.linspace(0, 1, len(phase)), atol=1e-12, rtol=0):
+<span id="L35">  35</span>             # Stop and explain the invalid model setting or failed calculation.
+<span id="L36">  36</span>             raise ValueError(f&quot;Reference {name} needs a uniform phase grid&quot;)
+<span id="L37">  37</span>         out[name] = values.reshape((len(phase),) + tuple(item[&quot;shape_after_time&quot;]))
+<span id="L38">  38</span>     correction = out.pop(&quot;left_joint_correction_rad&quot;)
+<span id="L39">  39</span>     fhl = out.pop(&quot;FHL_peak_normalized&quot;)
+<span id="L40">  40</span>     return out, correction, fhl
+</pre></main></body></html>

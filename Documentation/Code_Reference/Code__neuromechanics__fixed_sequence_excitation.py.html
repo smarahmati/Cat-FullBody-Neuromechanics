@@ -1,0 +1,35 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Interpolate a prerecorded muscle_excitation sequence using time only.</title><link rel="stylesheet" href="../style.css"></head><body><!-- generated folder guide --><header><div class="tag">Cat · Full-body neuromechanics</div><h1>Interpolate a prerecorded muscle_excitation sequence using time only.</h1><nav><a href="../../START_HERE.html">Start here</a> · <a href="../project_structure.html">Find a file</a></nav></header><main><p><a href="../../Code/neuromechanics/fixed_sequence_excitation.py">Code/neuromechanics/fixed_sequence_excitation.py</a></p><pre style="overflow:auto;white-space:pre"><span id="L1">   1</span> &quot;&quot;&quot;Interpolate a prerecorded muscle_excitation sequence using time only.&quot;&quot;&quot;
+<span id="L2">   2</span> 
+<span id="L3">   3</span> import numpy as np
+<span id="L4">   4</span> 
+<span id="L5">   5</span> 
+<span id="L6">   6</span> def fixed_sequence_excitation(state, time):
+<span id="L7">   7</span>     dt = state[&quot;model&quot;].opt.timestep
+<span id="L8">   8</span>     period = state[&quot;settings&quot;][&quot;period_s&quot;]
+<span id="L9">   9</span>     steps = round(period / dt)
+<span id="L10">  10</span>     tick = round(time / dt)
+<span id="L11">  11</span>     if abs(steps * dt - period) &gt; 1e-10:
+<span id="L12">  12</span>         # Stop and explain the invalid model setting or failed calculation.
+<span id="L13">  13</span>         raise ValueError(
+<span id="L14">  14</span>             &quot;Frozen sequence requires an integer number of integration steps per stride&quot;
+<span id="L15">  15</span>         )
+<span id="L16">  16</span>     if &quot;offline_cycle_input&quot; in state:
+<span id="L17">  17</span>         start, table = state[&quot;offline_cycle_input&quot;]
+<span id="L18">  18</span>         phase = np.clip((tick - start) / steps, 0.0, 1.0)
+<span id="L19">  19</span>     else:
+<span id="L20">  20</span>         sequence = state[&quot;excitation_sequence&quot;]
+<span id="L21">  21</span>         cycle, within = divmod(tick, steps)
+<span id="L22">  22</span>         if cycle == len(sequence) and within == 0:
+<span id="L23">  23</span>             return sequence[-1, -1].copy()
+<span id="L24">  24</span>         if cycle &gt;= len(sequence):
+<span id="L25">  25</span>             # Stop and explain the invalid model setting or failed calculation.
+<span id="L26">  26</span>             raise ValueError(
+<span id="L27">  27</span>                 &quot;Frozen muscle_excitation sequence exhausted; no untested repetition is allowed&quot;
+<span id="L28">  28</span>             )
+<span id="L29">  29</span>         table = sequence[cycle]
+<span id="L30">  30</span>         phase = within / steps
+<span id="L31">  31</span>     position = phase * (len(table) - 1)
+<span id="L32">  32</span>     lo = min(int(position), len(table) - 2)
+<span id="L33">  33</span>     weight = position - lo
+<span id="L34">  34</span>     return np.clip((1 - weight) * table[lo] + weight * table[lo + 1], 0.0, 1.0)
+</pre></main></body></html>

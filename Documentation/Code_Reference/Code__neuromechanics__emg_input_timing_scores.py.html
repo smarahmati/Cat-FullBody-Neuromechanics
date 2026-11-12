@@ -1,0 +1,67 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Score every saved stride; never score only the baseline of a varied sequence.</title><link rel="stylesheet" href="../style.css"></head><body><!-- generated folder guide --><header><div class="tag">Cat · Full-body neuromechanics</div><h1>Score every saved stride; never score only the baseline of a varied sequence.</h1><nav><a href="../../START_HERE.html">Start here</a> · <a href="../project_structure.html">Find a file</a></nav></header><main><p><a href="../../Code/neuromechanics/emg_input_timing_scores.py">Code/neuromechanics/emg_input_timing_scores.py</a></p><pre style="overflow:auto;white-space:pre"><span id="L1">   1</span> &quot;&quot;&quot;Score every saved stride; never score only the baseline of a varied sequence.&quot;&quot;&quot;
+<span id="L2">   2</span> 
+<span id="L3">   3</span> import numpy as np
+<span id="L4">   4</span> 
+<span id="L5">   5</span> from model_configuration.paths import ROOT
+<span id="L6">   6</span> 
+<span id="L7">   7</span> from .emg_comparison_cycles import emg_comparison_cycles
+<span id="L8">   8</span> 
+<span id="L9">   9</span> from .emg_phase_metrics import emg_phase_metrics
+<span id="L10">  10</span> 
+<span id="L11">  11</span> 
+<span id="L12">  12</span> def emg_input_timing_scores(names, settings):
+<span id="L13">  13</span>     pairs = emg_comparison_cycles(names, settings)
+<span id="L14">  14</span>     T = settings[&quot;period_s&quot;]
+<span id="L15">  15</span>     threshold = settings.get(&quot;emg_phase_threshold&quot;, 0.10)
+<span id="L16">  16</span>     if not settings.get(&quot;excitation_sequence_file&quot;):
+<span id="L17">  17</span>         return {
+<span id="L18">  18</span>             p[&quot;channel&quot;]: emg_phase_metrics(p[&quot;excitation&quot;], p[&quot;reference&quot;], T, threshold)
+<span id="L19">  19</span>             for p in pairs
+<span id="L20">  20</span>         }
+<span id="L21">  21</span>     sequence = np.load(ROOT / settings[&quot;excitation_sequence_file&quot;])[&quot;excitation_sequence&quot;]
+<span id="L22">  22</span>     names = list(names)
+<span id="L23">  23</span>     peaks = np.maximum(0.02, sequence.max(axis=(0, 1)))
+<span id="L24">  24</span>     scores = {}
+<span id="L25">  25</span>     for pair in pairs:
+<span id="L26">  26</span>         index = names.index(pair[&quot;channel&quot;])
+<span id="L27">  27</span>         phase = np.arange(len(pair[&quot;reference&quot;])) / len(pair[&quot;reference&quot;])
+<span id="L28">  28</span>         rows = [
+<span id="L29">  29</span>             emg_phase_metrics(
+<span id="L30">  30</span>                 np.interp(phase, np.linspace(0, 1, len(table)), table[:, index])
+<span id="L31">  31</span>                 # Use the intact peak so attenuation is still visible in the score.
+<span id="L32">  32</span>                 / peaks[index]
+<span id="L33">  33</span> ,
+<span id="L34">  34</span>                 pair[&quot;reference&quot;],
+<span id="L35">  35</span>                 T,
+<span id="L36">  36</span>                 threshold,
+<span id="L37">  37</span>             )
+<span id="L38">  38</span>             for table in sequence
+<span id="L39">  39</span>         ]
+<span id="L40">  40</span>         summary = dict(rows[0])
+<span id="L41">  41</span>         summary[&quot;active_intersection_over_union&quot;] = min(
+<span id="L42">  42</span>             r[&quot;active_intersection_over_union&quot;]
+<span id="L43">  43</span>             for r in rows
+<span id="L44">  44</span>         )
+<span id="L45">  45</span>         for key in [
+<span id="L46">  46</span>             &quot;phase_disagreement_fraction&quot;,
+<span id="L47">  47</span>             &quot;false_active_fraction_of_cycle&quot;,
+<span id="L48">  48</span>             &quot;missed_active_fraction_of_cycle&quot;,
+<span id="L49">  49</span>         ]:
+<span id="L50">  50</span>             summary[key] = max(r[key] for r in rows)
+<span id="L51">  51</span>         for edge in [&quot;onset&quot;, &quot;offset&quot;]:
+<span id="L52">  52</span>             summary[edge] = {}
+<span id="L53">  53</span>             for key in rows[0][edge]:
+<span id="L54">  54</span>                 values = [r[edge][key] for r in rows if r[edge][key] is not None]
+<span id="L55">  55</span>                 summary[edge][key] = max(values) if values else None
+<span id="L56">  56</span>         for key in [&quot;active_fraction_predicted&quot;, &quot;predicted_burst_count&quot;]:
+<span id="L57">  57</span>             if key in rows[0]:
+<span id="L58">  58</span>                 values = [r[key] for r in rows]
+<span id="L59">  59</span>                 summary[key + &quot;_range&quot;] = [min(values), max(values)]
+<span id="L60">  60</span>                 summary[key] = max(values)
+<span id="L61">  61</span>         summary.update(
+<span id="L62">  62</span>             scope=&quot;Worst timing agreement across every saved input stride; fixed whole-sequence peak normalization&quot;,
+<span id="L63">  63</span>             per_stride=rows,
+<span id="L64">  64</span>         )
+<span id="L65">  65</span>         scores[pair[&quot;channel&quot;]] = summary
+<span id="L66">  66</span>     return scores
+</pre></main></body></html>

@@ -1,0 +1,265 @@
+{
+  "period_s": 0.6833333333333333,
+  "fore_original_period_s": 0.687857483228707,
+  "fixed_phase_offsets_from_input_clock": [
+    1.0,
+    0.5,
+    0.75,
+    1.25
+  ],
+  "source_provenance_file": "INPUT_PROVENANCE.json",
+  "scope": "RH recorded; LH assumed mirror with saved assembly correction; forelimbs separate study, pooled EMG. Not simultaneous four-limb validation.",
+  "tables": {
+    "excitation": {
+      "file": "Inverse_Estimates/excitation.tsv",
+      "shape_after_time": [
+        40
+      ],
+      "unit": "1; mixed EMG-derived and inverse estimates, see INPUT_PROVENANCE.json",
+      "columns": [
+        "L_IP_0_to_1",
+        "L_BFA_0_to_1",
+        "L_VL_0_to_1",
+        "L_VM_0_to_1",
+        "L_TA_0_to_1",
+        "L_SO_0_to_1",
+        "L_RF_0_to_1",
+        "L_BFP_0_to_1",
+        "L_SAM_0_to_1",
+        "L_LG_0_to_1",
+        "L_MG_0_to_1",
+        "R_IP_0_to_1",
+        "R_BFA_0_to_1",
+        "R_VL_0_to_1",
+        "R_VM_0_to_1",
+        "R_TA_0_to_1",
+        "R_SO_0_to_1",
+        "R_RF_0_to_1",
+        "R_BFP_0_to_1",
+        "R_SAM_0_to_1",
+        "R_LG_0_to_1",
+        "R_MG_0_to_1",
+        "FL_ShoulderExtensor_0_to_1",
+        "FL_ElbowExtensor_0_to_1",
+        "FL_BicepsBrachii_0_to_1",
+        "FL_ElbowFlexor_0_to_1",
+        "FL_ElbowFlexorWristFlexor_0_to_1",
+        "FL_WristFlexor_0_to_1",
+        "FL_WristExtensor_0_to_1",
+        "FL_ShoulderFlexor_0_to_1",
+        "FL_TricepsBrachiiLong_0_to_1",
+        "FR_ShoulderExtensor_0_to_1",
+        "FR_ElbowExtensor_0_to_1",
+        "FR_BicepsBrachii_0_to_1",
+        "FR_ElbowFlexor_0_to_1",
+        "FR_ElbowFlexorWristFlexor_0_to_1",
+        "FR_WristFlexor_0_to_1",
+        "FR_WristExtensor_0_to_1",
+        "FR_ShoulderFlexor_0_to_1",
+        "FR_TricepsBrachiiLong_0_to_1"
+      ],
+      "sha256_at_export": "1fe60d3ab3f0c8cc3f615dfb9cc2b4feb9d3a091805ddd1e60c8790226ef0a98"
+    },
+    "optimized_activation": {
+      "file": "Inverse_Estimates/optimized_activation.tsv",
+      "shape_after_time": [
+        40
+      ],
+      "unit": "1; mixed EMG-derived and inverse estimates, see INPUT_PROVENANCE.json",
+      "columns": [
+        "L_IP_0_to_1",
+        "L_BFA_0_to_1",
+        "L_VL_0_to_1",
+        "L_VM_0_to_1",
+        "L_TA_0_to_1",
+        "L_SO_0_to_1",
+        "L_RF_0_to_1",
+        "L_BFP_0_to_1",
+        "L_SAM_0_to_1",
+        "L_LG_0_to_1",
+        "L_MG_0_to_1",
+        "R_IP_0_to_1",
+        "R_BFA_0_to_1",
+        "R_VL_0_to_1",
+        "R_VM_0_to_1",
+        "R_TA_0_to_1",
+        "R_SO_0_to_1",
+        "R_RF_0_to_1",
+        "R_BFP_0_to_1",
+        "R_SAM_0_to_1",
+        "R_LG_0_to_1",
+        "R_MG_0_to_1",
+        "FL_ShoulderExtensor_0_to_1",
+        "FL_ElbowExtensor_0_to_1",
+        "FL_BicepsBrachii_0_to_1",
+        "FL_ElbowFlexor_0_to_1",
+        "FL_ElbowFlexorWristFlexor_0_to_1",
+        "FL_WristFlexor_0_to_1",
+        "FL_WristExtensor_0_to_1",
+        "FL_ShoulderFlexor_0_to_1",
+        "FL_TricepsBrachiiLong_0_to_1",
+        "FR_ShoulderExtensor_0_to_1",
+        "FR_ElbowExtensor_0_to_1",
+        "FR_BicepsBrachii_0_to_1",
+        "FR_ElbowFlexor_0_to_1",
+        "FR_ElbowFlexorWristFlexor_0_to_1",
+        "FR_WristFlexor_0_to_1",
+        "FR_WristExtensor_0_to_1",
+        "FR_ShoulderFlexor_0_to_1",
+        "FR_TricepsBrachiiLong_0_to_1"
+      ],
+      "sha256_at_export": "5349955a4d6c853e3750712310d28d940bb96314367f5d0dc654ec4d463b54d8"
+    },
+    "joint_q": {
+      "file": "Joint_Kinematics/joint_q.tsv",
+      "shape_after_time": [
+        4,
+        4
+      ],
+      "unit": "rad",
+      "columns": [
+        "LH_assumed_hip_native_rad",
+        "LH_assumed_knee_native_rad",
+        "LH_assumed_ankle_native_rad",
+        "LH_assumed_MTP_native_rad",
+        "RH_measured_hip_native_rad",
+        "RH_measured_knee_native_rad",
+        "RH_measured_ankle_native_rad",
+        "RH_measured_MTP_native_rad",
+        "LF_separate_study_shoulder_native_rad",
+        "LF_separate_study_elbow_native_rad",
+        "LF_separate_study_wrist_native_rad",
+        "LF_separate_study_MCP_native_rad",
+        "RF_separate_study_shoulder_native_rad",
+        "RF_separate_study_elbow_native_rad",
+        "RF_separate_study_wrist_native_rad",
+        "RF_separate_study_MCP_native_rad"
+      ],
+      "sha256_at_export": "7081397aecaf9c2363e47539106c0d6dbe839309b1f3b17445c1e75933b520e8"
+    },
+    "grf": {
+      "file": "Ground_Reaction_Forces/grf.tsv",
+      "shape_after_time": [
+        4,
+        3
+      ],
+      "unit": "N",
+      "columns": [
+        "LH_assumed_Fx_N",
+        "LH_assumed_Fy_N",
+        "LH_assumed_Fz_N",
+        "RH_measured_Fx_N",
+        "RH_measured_Fy_N",
+        "RH_measured_Fz_N",
+        "LF_separate_study_Fx_N",
+        "LF_separate_study_Fy_N",
+        "LF_separate_study_Fz_N",
+        "RF_separate_study_Fx_N",
+        "RF_separate_study_Fy_N",
+        "RF_separate_study_Fz_N"
+      ],
+      "sha256_at_export": "5981d71003d52f9e9618317cfe03646bc631cc88cfd11af97caaad626010e1a0"
+    },
+    "pelvis_angle": {
+      "file": "Joint_Kinematics/pelvis_angle.tsv",
+      "shape_after_time": [],
+      "unit": "rad",
+      "columns": [
+        "pelvis_angle_0"
+      ],
+      "sha256_at_export": "29a8a73261d27efd4bafd53217abf36275a7d9dd89959171c3460abb23ed01db"
+    },
+    "pelvis_angular_velocity": {
+      "file": "Joint_Kinematics/pelvis_angular_velocity.tsv",
+      "shape_after_time": [],
+      "unit": "rad/s",
+      "columns": [
+        "pelvis_angular_velocity_0"
+      ],
+      "sha256_at_export": "7603920a9c88c51dd95dd2495bfa87c4d0d5b5281378829cb89abf15e90e44fd"
+    },
+    "hip_x": {
+      "file": "Joint_Kinematics/hip_x.tsv",
+      "shape_after_time": [],
+      "unit": "m",
+      "columns": [
+        "hip_x_0"
+      ],
+      "sha256_at_export": "fdd7436229a0c16ba2778db026afcb46c195353c54d1a2c5d430028c8c1d23a9"
+    },
+    "hip_z": {
+      "file": "Joint_Kinematics/hip_z.tsv",
+      "shape_after_time": [],
+      "unit": "m",
+      "columns": [
+        "hip_z_0"
+      ],
+      "sha256_at_export": "fad3d5e4977beb797720140dfac56dc680e72de18fbaf35b3f130d08fe2cf2d3"
+    },
+    "shoulder_z": {
+      "file": "Joint_Kinematics/shoulder_z.tsv",
+      "shape_after_time": [],
+      "unit": "m",
+      "columns": [
+        "shoulder_z_0"
+      ],
+      "sha256_at_export": "c9374fc3eba60c81dc5f48e51936bfdca77369fe85293c82744969331ae530d4"
+    },
+    "scapula_angle": {
+      "file": "Joint_Kinematics/scapula_angle.tsv",
+      "shape_after_time": [],
+      "unit": "rad",
+      "columns": [
+        "scapula_angle_0"
+      ],
+      "sha256_at_export": "5ed3772c7cc7217770729fb72662b7079aece436bd53cf343e375b021697f14b"
+    },
+    "scapula_angle_by_side": {
+      "file": "Joint_Kinematics/scapula_angle_by_side.tsv",
+      "shape_after_time": [
+        2
+      ],
+      "unit": "rad",
+      "columns": [
+        "scapula_angle_by_side_0",
+        "scapula_angle_by_side_1"
+      ],
+      "sha256_at_export": "ece0c947aacecc91f761be5db9738b0318ba00b6383136e5059d9128d260dfcc"
+    },
+    "shoulder_z_by_side": {
+      "file": "Joint_Kinematics/shoulder_z_by_side.tsv",
+      "shape_after_time": [
+        2
+      ],
+      "unit": "m",
+      "columns": [
+        "shoulder_z_by_side_0",
+        "shoulder_z_by_side_1"
+      ],
+      "sha256_at_export": "7acafe71f8ade9e6b6f2941416b70beac7446342292d840fa1d244f2e01dbc47"
+    },
+    "left_joint_correction_rad": {
+      "file": "Joint_Kinematics/left_joint_correction_rad.tsv",
+      "shape_after_time": [
+        4
+      ],
+      "unit": "rad",
+      "columns": [
+        "left_joint_correction_rad_0",
+        "left_joint_correction_rad_1",
+        "left_joint_correction_rad_2",
+        "left_joint_correction_rad_3"
+      ],
+      "sha256_at_export": "cf3087eaac44ddac092ced882bd3c4e799f08f45f83d74c4ee7e9e6bfc134ec0"
+    },
+    "FHL_peak_normalized": {
+      "file": "Recorded_EMG/FHL_peak_normalized.tsv",
+      "shape_after_time": [],
+      "unit": "1",
+      "columns": [
+        "FHL_peak_normalized_0"
+      ],
+      "sha256_at_export": "a8478795b13ad314d9da02371370fc533778f477f54660b48e4eeffb0a2af9c3"
+    }
+  }
+}

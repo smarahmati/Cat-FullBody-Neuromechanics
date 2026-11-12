@@ -1,0 +1,75 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Elastic fiber step in SI units; see Documentation/model_methods.html, section 5.</title><link rel="stylesheet" href="../style.css"></head><body><!-- generated folder guide --><header><div class="tag">Cat · Full-body neuromechanics</div><h1>Elastic fiber step in SI units; see Documentation/model_methods.html, section 5.</h1><nav><a href="../../START_HERE.html">Start here</a> · <a href="../project_structure.html">Find a file</a></nav></header><main><p><a href="../../Code/neuromechanics/solve_elastic_muscle_by_bisection.py">Code/neuromechanics/solve_elastic_muscle_by_bisection.py</a></p><pre style="overflow:auto;white-space:pre"><span id="L1">   1</span> &quot;&quot;&quot;Elastic fiber step in SI units; see Documentation/model_methods.html, section 5.&quot;&quot;&quot;
+<span id="L2">   2</span> 
+<span id="L3">   3</span> import numpy as np
+<span id="L4">   4</span> 
+<span id="L5">   5</span> # Read the permitted number of fiber-force balancing steps from the config.
+<span id="L6">   6</span> from model_configuration.numerical_parameters import BISECTION_ITERATIONS
+<span id="L7">   7</span> 
+<span id="L8">   8</span> from numba import njit
+<span id="L9">   9</span> 
+<span id="L10">  10</span> from .muscle_force_length_velocity import muscle_force_length_velocity
+<span id="L11">  11</span> 
+<span id="L12">  12</span> from .elastic_tendon_force import elastic_tendon_force
+<span id="L13">  13</span> 
+<span id="L14">  14</span> 
+<span id="L15">  15</span> # This compiled function calls muscle_force_length_velocity/elastic_tendon_force from other modules.
+<span id="L16">  16</span> # Numba disk caches do not reliably invalidate when imported callees change.
+<span id="L17">  17</span> # Compile once per process so edits to those physical laws always take effect.
+<span id="L18">  18</span> @njit(cache=False)
+<span id="L19">  19</span> def solve_elastic_muscle_by_bisection(
+<span id="L20">  20</span>     mt,
+<span id="L21">  21</span>     previous,
+<span id="L22">  22</span>     activation,
+<span id="L23">  23</span>     lopt,
+<span id="L24">  24</span>     slack,
+<span id="L25">  25</span>     params,
+<span id="L26">  26</span>     e0,
+<span id="L27">  27</span>     beta,
+<span id="L28">  28</span>     dt,
+<span id="L29">  29</span> ):
+<span id="L30">  30</span>     &quot;&quot;&quot;Backward-Euler fiber step with native MTU geometry held at its new value.&quot;&quot;&quot;
+<span id="L31">  31</span>     n = len(mt)
+<span id="L32">  32</span>     length = np.empty(n)
+<span id="L33">  33</span>     velocity = np.empty(n)
+<span id="L34">  34</span>     tension = np.empty(n)
+<span id="L35">  35</span>     residual = np.empty(n)
+<span id="L36">  36</span>     bound = np.zeros(n, np.int64)
+<span id="L37">  37</span>     damping = np.asarray(beta).reshape(-1)
+<span id="L38">  38</span>     for i in range(n):
+<span id="L39">  39</span>         coefficient = damping[i] if len(damping) &gt; 1 else damping[0]
+<span id="L40">  40</span>         cosine = params[i, 9] if params.shape[1] &gt; 9 else 1.0
+<span id="L41">  41</span>         low = 0.2 * lopt[i]
+<span id="L42">  42</span>         high = max(low + 1e-9, mt[i] / cosine)
+<span id="L43">  43</span>         vscale = lopt[i] * params[i, 6]
+<span id="L44">  44</span>         # Repeatedly narrow the fiber-length interval until the forces balance.
+<span id="L45">  45</span>         for _ in range(BISECTION_ITERATIONS):
+<span id="L46">  46</span>             lf = 0.5 * (low + high)
+<span id="L47">  47</span>             v = (lf - previous[i]) / (dt * vscale)
+<span id="L48">  48</span>             fl, fv, fp = muscle_force_length_velocity(lf / lopt[i], v, params[i])
+<span id="L49">  49</span>             ft = elastic_tendon_force((mt[i] - lf * cosine) / slack[i] - 1, e0[i])
+<span id="L50">  50</span>             error = ft - activation[i] * fl * fv - fp - coefficient * v
+<span id="L51">  51</span>             if error &gt; 0:
+<span id="L52">  52</span>                 low = lf
+<span id="L53">  53</span>             else:
+<span id="L54">  54</span>                 high = lf
+<span id="L55">  55</span>         lf = 0.5 * (low + high)
+<span id="L56">  56</span>         vf = (lf - previous[i]) / dt
+<span id="L57">  57</span>         fl, fv, fp = muscle_force_length_velocity(lf / lopt[i], vf / vscale, params[i])
+<span id="L58">  58</span>         ft = elastic_tendon_force((mt[i] - lf * cosine) / slack[i] - 1, e0[i])
+<span id="L59">  59</span>         length[i] = lf
+<span id="L60">  60</span>         velocity[i] = vf
+<span id="L61">  61</span>         tension[i] = params[i, 2] * ft
+<span id="L62">  62</span>         residual[i] = params[i, 2] * (
+<span id="L63">  63</span>             ft
+<span id="L64">  64</span>             - activation[i] * fl * fv
+<span id="L65">  65</span>             - fp
+<span id="L66">  66</span>             - coefficient * vf / vscale
+<span id="L67">  67</span>         )
+<span id="L68">  68</span>         if (
+<span id="L69">  69</span>             lf &lt;= 0.200001 * lopt[i]
+<span id="L70">  70</span>             or mt[i] - lf * cosine &lt;= 1e-9
+<span id="L71">  71</span>             or mt[i] &lt;= 0.2 * lopt[i] * cosine
+<span id="L72">  72</span>         ):
+<span id="L73">  73</span>             bound[i] = 1
+<span id="L74">  74</span>     return length, velocity, tension, residual, bound
+</pre></main></body></html>

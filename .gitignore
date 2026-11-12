@@ -1,0 +1,22 @@
+# Runtime environments and temporary products
+.venv/
+__pycache__/
+*.py[cod]
+*.nbc
+*.nbi
+.idea/
+.pytest_cache/
+# New runs are local by default. Explicitly add a selected result to publish it.
+# Third-party visual assets require separate redistribution permission.
+Data/Skeletal_Geometry/Model/meshes/
+Documentation/References/Local_Papers/
+
+# Additional local reproduction runs
+*.log
+
+# Generated documentation website; GitHub Actions builds this from source.
+_site/
+
+# User-generated calculations and full reproducibility output
+Simulation_Results/User_Simulations/
+Simulation_Results/Verification_Runs/

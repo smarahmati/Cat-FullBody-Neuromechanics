@@ -1,0 +1,17 @@
+cff-version: 1.2.0
+message: "Please cite this software and the component scientific sources in Documentation/References/references.bib."
+type: software
+title: "Cat Full-Body Neuromechanics: fixed-excitation forward dynamics"
+version: 1.1.0
+date-released: 2026-11-12
+authors:
+  - family-names: Rahmati
+    given-names: Seyed Mohammadali
+license: MIT
+abstract: "A reproducible sagittal four-limb cat model with prescribed muscle excitation, activation dynamics, passive fiber force in all limbs, elastic tendons and compliant paw contact. Calibrated reference agreement and motor-input perturbation results are documented, with remaining biological and validation limitations."
+keywords:
+  - neuromechanics
+  - forward dynamics
+  - cat locomotion
+  - elastic tendon
+  - muscle excitation

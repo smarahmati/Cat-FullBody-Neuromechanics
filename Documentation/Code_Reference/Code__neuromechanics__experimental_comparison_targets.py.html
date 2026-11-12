@@ -1,0 +1,58 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Experimental comparison targets.</title><link rel="stylesheet" href="../style.css"></head><body><!-- generated folder guide --><header><div class="tag">Cat · Full-body neuromechanics</div><h1>Experimental comparison targets.</h1><nav><a href="../../START_HERE.html">Start here</a> · <a href="../project_structure.html">Find a file</a></nav></header><main><p><a href="../../Code/neuromechanics/experimental_comparison_targets.py">Code/neuromechanics/experimental_comparison_targets.py</a></p><pre style="overflow:auto;white-space:pre"><span id="L1">   1</span> &quot;&quot;&quot;Experimental comparison targets.
+<span id="L2">   2</span> 
+<span id="L3">   3</span> Inputs/outputs: see the named function arguments and returned values.
+<span id="L4">   4</span> Lengths use metres, time seconds, force newtons, and angles radians unless stated.
+<span id="L5">   5</span> See Documentation/model_methods.html for equations and parameter definitions.
+<span id="L6">   6</span> &quot;&quot;&quot;
+<span id="L7">   7</span> 
+<span id="L8">   8</span> import numpy as np
+<span id="L9">   9</span> 
+<span id="L10">  10</span> from model_configuration.paths import ROOT
+<span id="L11">  11</span> 
+<span id="L12">  12</span> from .periodic_interpolate import periodic_interpolate
+<span id="L13">  13</span> 
+<span id="L14">  14</span> 
+<span id="L15">  15</span> def experimental_comparison_targets(times, period_s=0.6833333333333333, reference_dir=None):
+<span id="L16">  16</span>     &quot;&quot;&quot;Side-specific reference clock; only RH is a simultaneous measured trial.
+<span id="L17">  17</span> 
+<span id="L18">  18</span>     LH mirrors RH with the saved geometric consistency adjustment. Forelimb
+<span id="L19">  19</span>     angles/Ground_Reaction_Forces have separate Left/Right source curves, but EMGs are pooled.
+<span id="L20">  20</span>     These arrays score a run; they never enter the forward mechanical step.
+<span id="L21">  21</span>     &quot;&quot;&quot;
+<span id="L22">  22</span>     from .load_reference_tables import load_reference_tables
+<span id="L23">  23</span> 
+<span id="L24">  24</span>     z, correction, _ = load_reference_tables(reference_dir)
+<span id="L25">  25</span>     q = []
+<span id="L26">  26</span>     f = []
+<span id="L27">  27</span>     u = []
+<span id="L28">  28</span>     scap = []
+<span id="L29">  29</span>     for t in times:
+<span id="L30">  30</span>         phase = t / period_s + 0.5 + np.array([0.5, 0.0, 0.25, 0.75])
+<span id="L31">  31</span>         angles = np.array(
+<span id="L32">  32</span>             [periodic_interpolate(z[&quot;joint_q&quot;][:, s], phase[s]) for s in range(4)]
+<span id="L33">  33</span>         )
+<span id="L34">  34</span>         angles[0] += periodic_interpolate(correction, t / period_s)
+<span id="L35">  35</span>         q.append(angles)
+<span id="L36">  36</span>         f.append([periodic_interpolate(z[&quot;grf&quot;][:, s], phase[s]) for s in range(4)])
+<span id="L37">  37</span>         u.append(
+<span id="L38">  38</span>             np.r_[
+<span id="L39">  39</span>                 periodic_interpolate(z[&quot;excitation&quot;][:, :11], phase[0]),
+<span id="L40">  40</span>                 periodic_interpolate(z[&quot;excitation&quot;][:, 11:22], phase[1]),
+<span id="L41">  41</span>                 periodic_interpolate(z[&quot;excitation&quot;][:, 22:31], phase[2]),
+<span id="L42">  42</span>                 periodic_interpolate(z[&quot;excitation&quot;][:, 31:40], phase[3]),
+<span id="L43">  43</span>             ]
+<span id="L44">  44</span>         )
+<span id="L45">  45</span>         scap.append(
+<span id="L46">  46</span>             [
+<span id="L47">  47</span>                 periodic_interpolate(z[&quot;scapula_angle_by_side&quot;][:, s], phase[s + 2])
+<span id="L48">  48</span>                 - np.mean(z[&quot;scapula_angle&quot;])
+<span id="L49">  49</span>                 for s in range(2)
+<span id="L50">  50</span>             ]
+<span id="L51">  51</span>         )
+<span id="L52">  52</span>     return dict(
+<span id="L53">  53</span>         joint_q=np.array(q),
+<span id="L54">  54</span>         grf=np.array(f),
+<span id="L55">  55</span>         excitation=np.array(u),
+<span id="L56">  56</span>         scapula=np.array(scap),
+<span id="L57">  57</span>     )
+</pre></main></body></html>

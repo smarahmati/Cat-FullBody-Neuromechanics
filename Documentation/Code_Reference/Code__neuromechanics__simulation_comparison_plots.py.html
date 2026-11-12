@@ -1,0 +1,286 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Four reusable comparison plots, with fast marker/curve updates by blitting.</title><link rel="stylesheet" href="../style.css"></head><body><!-- generated folder guide --><header><div class="tag">Cat · Full-body neuromechanics</div><h1>Four reusable comparison plots, with fast marker/curve updates by blitting.</h1><nav><a href="../../START_HERE.html">Start here</a> · <a href="../project_structure.html">Find a file</a></nav></header><main><p><a href="../../Code/neuromechanics/simulation_comparison_plots.py">Code/neuromechanics/simulation_comparison_plots.py</a></p><pre style="overflow:auto;white-space:pre"><span id="L1">   1</span> &quot;&quot;&quot;Four reusable comparison plots, with fast marker/curve updates by blitting.&quot;&quot;&quot;
+<span id="L2">   2</span> 
+<span id="L3">   3</span> import time
+<span id="L4">   4</span> 
+<span id="L5">   5</span> from collections import deque
+<span id="L6">   6</span> 
+<span id="L7">   7</span> import numpy as np
+<span id="L8">   8</span> 
+<span id="L9">   9</span> from matplotlib.figure import Figure
+<span id="L10">  10</span> 
+<span id="L11">  11</span> # Choose readable absolute-time tick intervals for both long and short recordings.
+<span id="L12">  12</span> from matplotlib.ticker import MaxNLocator
+<span id="L13">  13</span> 
+<span id="L14">  14</span> from matplotlib.backends.backend_tkagg import FigureCanvasTkAgg
+<span id="L15">  15</span> 
+<span id="L16">  16</span> 
+<span id="L17">  17</span> class ReplayPlotPanel:
+<span id="L18">  18</span>     &quot;&quot;&quot;Keep axes and artists alive; redraw static labels only after selection/resize.
+<span id="L19">  19</span> 
+<span id="L20">  20</span>     A four-second window follows playback, with actual simulation-time labels.
+<span id="L21">  21</span>     Its bounds stay between zero and the last saved sample. Seeking backward
+<span id="L22">  22</span>     moves the window backward too, including after playback has finished.
+<span id="L23">  23</span>     &quot;&quot;&quot;
+<span id="L24">  24</span> 
+<span id="L25">  25</span>     def __init__(self, parent, result, target, pairs, peaks, period_s):
+<span id="L26">  26</span>         self.result, self.target, self.pairs = result, target, pairs
+<span id="L27">  27</span>         self.peaks, self.period = peaks, period_s
+<span id="L28">  28</span>         self.names = list(result[&quot;names&quot;])
+<span id="L29">  29</span>         self.times = result[&quot;time&quot;]
+<span id="L30">  30</span>         # Number of seconds visible at once; short trials use their whole duration.
+<span id="L31">  31</span>         self.window_seconds = 4.0
+<span id="L32">  32</span>         # About four labeled time intervals fit comfortably within each small plot.
+<span id="L33">  33</span>         self.time_tick_locator = MaxNLocator(nbins=4)
+<span id="L34">  34</span>         self.figure = Figure(figsize=(9, 6), dpi=90)
+<span id="L35">  35</span>         self.axes = self.figure.subplots(2, 2)
+<span id="L36">  36</span>         self.figure.subplots_adjust(
+<span id="L37">  37</span>             left=0.09,
+<span id="L38">  38</span>             right=0.98,
+<span id="L39">  39</span>             top=0.93,
+<span id="L40">  40</span>             bottom=0.09,
+<span id="L41">  41</span>             hspace=0.48,
+<span id="L42">  42</span>             wspace=0.28,
+<span id="L43">  43</span>         )
+<span id="L44">  44</span>         self.canvas = FigureCanvasTkAgg(self.figure, master=parent)
+<span id="L45">  45</span>         self.canvas.get_tk_widget().pack(fill=&quot;both&quot;, expand=True)
+<span id="L46">  46</span>         self.background = None
+<span id="L47">  47</span>         self.key = None
+<span id="L48">  48</span>         self.artists = []
+<span id="L49">  49</span>         self.curves = []
+<span id="L50">  50</span>         self.markers = []
+<span id="L51">  51</span>         self.frame_times = deque(maxlen=120)
+<span id="L52">  52</span>         self.emg_cache = {}
+<span id="L53">  53</span>         self.last_time = None
+<span id="L54">  54</span>         self.needs_redraw = True
+<span id="L55">  55</span>         self.canvas.mpl_connect(&quot;draw_event&quot;, self._capture_background)
+<span id="L56">  56</span> 
+<span id="L57">  57</span>     def _capture_background(self, event):
+<span id="L58">  58</span>         self.background = self.canvas.copy_from_bbox(self.figure.bbox)
+<span id="L59">  59</span>         self.needs_redraw = True
+<span id="L60">  60</span> 
+<span id="L61">  61</span>     def _setup(self, side, name, joint_index, normalized, show_emg):
+<span id="L62">  62</span>         # Discard the previous selection&#x27;s lines and moving indicators.
+<span id="L63">  63</span>         self.curves = []
+<span id="L64">  64</span>         # Store one moving dot for every simulated or reference trace.
+<span id="L65">  65</span>         self.markers = []
+<span id="L66">  66</span>         # Redraw only these changing objects during normal playback.
+<span id="L67">  67</span>         self.artists = []
+<span id="L68">  68</span>         # Store a current-time vertical line for each of the four plots.
+<span id="L69">  69</span>         self.cursors = []
+<span id="L70">  70</span>         # Cache movable time labels and vertical grid lines instead of rebuilding axes.
+<span id="L71">  71</span>         self.time_ticks = []
+<span id="L72">  72</span>         for ax in self.axes.ravel():
+<span id="L73">  73</span>             ax.clear()
+<span id="L74">  74</span>             ax.grid(alpha=0.2)
+<span id="L75">  75</span>             # Start with the first four seconds, or the whole trial if it is shorter.
+<span id="L76">  76</span>             ax.set_xlim(0.0, max(min(self.window_seconds, float(self.times[-1])), 0.001))
+<span id="L77">  77</span>             # Standard x ticks would require a costly full canvas redraw while scrolling.
+<span id="L78">  78</span>             ax.set_xticks([])
+<span id="L79">  79</span>             # Reserve enough labels for the small set returned by the time tick locator.
+<span id="L80">  80</span>             for tick_number in range(7):
+<span id="L81">  81</span>                 # Move this vertical grid line to a labeled absolute time during update().
+<span id="L82">  82</span>                 grid_line = ax.axvline(0.0, color=&quot;gray&quot;, alpha=0.2, lw=0.8, animated=True)
+<span id="L83">  83</span>                 # Draw the corresponding time just below the horizontal axis.
+<span id="L84">  84</span>                 tick_label = ax.text(0.0, -0.045, &quot;&quot;, transform=ax.get_xaxis_transform(),
+<span id="L85">  85</span>                                      ha=&quot;center&quot;, va=&quot;top&quot;, fontsize=10, animated=True)
+<span id="L86">  86</span>                 # Keep the grid line and its label together with their assigned tick number.
+<span id="L87">  87</span>                 self.time_ticks.append((tick_number, grid_line, tick_label))
+<span id="L88">  88</span>                 # These lightweight objects can move without redrawing titles and legends.
+<span id="L89">  89</span>                 self.artists.extend([grid_line, tick_label])
+<span id="L90">  90</span>             # Create the moving current-time line; its initial position is zero.
+<span id="L91">  91</span>             cursor = ax.axvline(0.0, color=&quot;#aa7b27&quot;, lw=1.0, animated=True)
+<span id="L92">  92</span>             # Remember the line so update() can move it without rebuilding the axes.
+<span id="L93">  93</span>             self.cursors.append(cursor)
+<span id="L94">  94</span>             # Include the cursor among the objects redrawn at each playback frame.
+<span id="L95">  95</span>             self.artists.append(cursor)
+<span id="L96">  96</span>             # Label the horizontal coordinate as actual elapsed simulation time.
+<span id="L97">  97</span>             ax.set_xlabel(&quot;Simulation time (s)&quot;)
+<span id="L98">  98</span>             # Leave room for the movable numeric labels above the axis caption.
+<span id="L99">  99</span>             ax.xaxis.set_label_coords(0.5, -0.15)
+<span id="L100"> 100</span>         channel = self.names.index(name)
+<span id="L101"> 101</span>         scale = self.peaks[channel] if normalized else 1.0
+<span id="L102"> 102</span>         traces = [
+<span id="L103"> 103</span>             [
+<span id="L104"> 104</span>                 (
+<span id="L105"> 105</span>                     self.result[&quot;excitation&quot;][:, channel] / scale,
+<span id="L106"> 106</span>                     &quot;#087f9c&quot;,
+<span id="L107"> 107</span>                     &quot;-&quot;,
+<span id="L108"> 108</span>                     &quot;Excitation&quot;,
+<span id="L109"> 109</span>                 ),
+<span id="L110"> 110</span>                 (
+<span id="L111"> 111</span>                     self.result[&quot;activation&quot;][:, channel] / scale,
+<span id="L112"> 112</span>                     &quot;#aa3484&quot;,
+<span id="L113"> 113</span>                     &quot;-&quot;,
+<span id="L114"> 114</span>                     &quot;Activation&quot;,
+<span id="L115"> 115</span>                 ),
+<span id="L116"> 116</span>             ]
+<span id="L117"> 117</span>         ]
+<span id="L118"> 118</span>         if show_emg and name in self.pairs:
+<span id="L119"> 119</span>             if name not in self.emg_cache:
+<span id="L120"> 120</span>                 ref = self.pairs[name][&quot;reference&quot;]
+<span id="L121"> 121</span>                 phase = np.arange(len(ref)) / len(ref)
+<span id="L122"> 122</span>                 self.emg_cache[name] = np.interp(
+<span id="L123"> 123</span>                     (self.times / self.period) % 1,
+<span id="L124"> 124</span>                     np.r_[phase, 1.0],
+<span id="L125"> 125</span>                     np.r_[ref, ref[0]],
+<span id="L126"> 126</span>                 )
+<span id="L127"> 127</span>             traces[0].append((self.emg_cache[name], &quot;black&quot;, &quot;--&quot;, &quot;EMG (peak normalized)&quot;))
+<span id="L128"> 128</span>         sign = ([-1, 1, -1, -1] if side &lt; 2 else [1, -1, -1, -1])[joint_index]
+<span id="L129"> 129</span>         offset = ([0, np.pi, np.pi, np.pi] if side &lt; 2 else [np.pi] * 4)[joint_index]
+<span id="L130"> 130</span>         traces.append(
+<span id="L131"> 131</span>             [
+<span id="L132"> 132</span>                 (
+<span id="L133"> 133</span>                     np.rad2deg(
+<span id="L134"> 134</span>                         offset
+<span id="L135"> 135</span>                         + sign * self.target[&quot;joint_q&quot;][:, side, joint_index]
+<span id="L136"> 136</span>                     ),
+<span id="L137"> 137</span>                     &quot;black&quot;,
+<span id="L138"> 138</span>                     &quot;--&quot;,
+<span id="L139"> 139</span>                     &quot;Reference&quot;,
+<span id="L140"> 140</span>                 ),
+<span id="L141"> 141</span>                 (
+<span id="L142"> 142</span>                     np.rad2deg(
+<span id="L143"> 143</span>                         offset
+<span id="L144"> 144</span>                         + sign * self.result[&quot;joint_q&quot;][:, side, joint_index]
+<span id="L145"> 145</span>                     ),
+<span id="L146"> 146</span>                     &quot;#087f9c&quot;,
+<span id="L147"> 147</span>                     &quot;-&quot;,
+<span id="L148"> 148</span>                     &quot;Forward&quot;,
+<span id="L149"> 149</span>                 ),
+<span id="L150"> 150</span>             ]
+<span id="L151"> 151</span>         )
+<span id="L152"> 152</span>         for component in [2, 0]:
+<span id="L153"> 153</span>             traces.append(
+<span id="L154"> 154</span>                 [
+<span id="L155"> 155</span>                     (self.target[&quot;grf&quot;][:, side, component], &quot;black&quot;, &quot;--&quot;, &quot;Reference&quot;),
+<span id="L156"> 156</span>                     (
+<span id="L157"> 157</span>                         self.result[&quot;grf&quot;][:, side, component],
+<span id="L158"> 158</span>                         &quot;#087f9c&quot;,
+<span id="L159"> 159</span>                         &quot;-&quot;,
+<span id="L160"> 160</span>                         &quot;Raw paw force&quot;,
+<span id="L161"> 161</span>                     ),
+<span id="L162"> 162</span>                 ]
+<span id="L163"> 163</span>             )
+<span id="L164"> 164</span>         limb = [&quot;LH&quot;, &quot;RH&quot;, &quot;LF&quot;, &quot;RF&quot;][side]
+<span id="L165"> 165</span>         joint = (
+<span id="L166"> 166</span>             [&quot;Hip&quot;, &quot;Knee&quot;, &quot;Ankle&quot;, &quot;MTP&quot;]
+<span id="L167"> 167</span>             if side &lt; 2
+<span id="L168"> 168</span>             else [&quot;Shoulder&quot;, &quot;Elbow&quot;, &quot;Wrist&quot;, &quot;MCP&quot;]
+<span id="L169"> 169</span>         )[joint_index]
+<span id="L170"> 170</span>         titles = [
+<span id="L171"> 171</span>             name + (&quot; / fixed peak&quot; if normalized else &quot; / absolute input&quot;),
+<span id="L172"> 172</span>             limb + &quot; &quot; + joint,
+<span id="L173"> 173</span>             limb + &quot; vertical GRF&quot;,
+<span id="L174"> 174</span>             limb + &quot; anterior–posterior (AP) GRF&quot;,
+<span id="L175"> 175</span>         ]
+<span id="L176"> 176</span>         for panel, (ax, items) in enumerate(zip(self.axes.ravel(), traces)):
+<span id="L177"> 177</span>             ax.set_title(titles[panel], fontsize=11)
+<span id="L178"> 178</span>             ax.set_ylabel(
+<span id="L179"> 179</span>                 [&quot;Input / activation&quot;, &quot;Anatomical angle (deg)&quot;, &quot;Force (N)&quot;, &quot;Force (N)&quot;][
+<span id="L180"> 180</span>                     panel
+<span id="L181"> 181</span>                 ]
+<span id="L182"> 182</span>             )
+<span id="L183"> 183</span>             lower = min(float(v[0].min()) for v in items)
+<span id="L184"> 184</span>             upper = max(float(v[0].max()) for v in items)
+<span id="L185"> 185</span>             if panel != 1:
+<span id="L186"> 186</span>                 lower = min(0.0, lower)
+<span id="L187"> 187</span>             margin = max(0.05, (upper - lower) * 0.08)
+<span id="L188"> 188</span>             ax.set_ylim(lower - margin, upper + margin)
+<span id="L189"> 189</span>             for values, color, style, label in items:
+<span id="L190"> 190</span>                 (line,) = ax.plot(
+<span id="L191"> 191</span>                     # update() supplies the saved samples inside the current time window.
+<span id="L192"> 192</span>                     [],
+<span id="L193"> 193</span>                     # Data remain unchanged; only the visible interval is selected.
+<span id="L194"> 194</span>                     [],
+<span id="L195"> 195</span>                     color=color,
+<span id="L196"> 196</span>                     linestyle=style,
+<span id="L197"> 197</span>                     label=label,
+<span id="L198"> 198</span>                     lw=1.3,
+<span id="L199"> 199</span>                     # Redraw the visible curve when the four-second window moves.
+<span id="L200"> 200</span>                     animated=True,
+<span id="L201"> 201</span>                 )
+<span id="L202"> 202</span>                 (marker,) = ax.plot([], [], &quot;o&quot;, color=color, ms=4, animated=True)
+<span id="L203"> 203</span>                 self.curves.append((line, values))
+<span id="L204"> 204</span>                 self.markers.append((marker, values))
+<span id="L205"> 205</span>                 # Reuse both the curve and its current-time dot during scrolling.
+<span id="L206"> 206</span>                 self.artists.extend([line, marker])
+<span id="L207"> 207</span>             ax.legend(fontsize=7, loc=&quot;upper right&quot;)
+<span id="L208"> 208</span>         self.canvas.draw()
+<span id="L209"> 209</span> 
+<span id="L210"> 210</span>     def update(self, time_s, side, name, joint_index, normalized=True, show_emg=True):
+<span id="L211"> 211</span>         # Keep the displayed cursor inside the recorded interval, including at Reset.
+<span id="L212"> 212</span>         time_s = float(np.clip(time_s, 0.0, self.times[-1]))
+<span id="L213"> 213</span>         key = (side, name, joint_index, normalized, show_emg)
+<span id="L214"> 214</span>         if key != self.key:
+<span id="L215"> 215</span>             self.key = key
+<span id="L216"> 216</span>             self._setup(*key)
+<span id="L217"> 217</span>         elif time_s == self.last_time and not self.needs_redraw:
+<span id="L218"> 218</span>             return
+<span id="L219"> 219</span>         # Keep a four-second view centered on the current time where possible.
+<span id="L220"> 220</span>         trial_end = max(float(self.times[-1]), 0.001)
+<span id="L221"> 221</span>         # Short recordings need a shorter window so no time outside the trial appears.
+<span id="L222"> 222</span>         window_width = min(self.window_seconds, trial_end)
+<span id="L223"> 223</span>         # Clamp the moving window to the first and last available times.
+<span id="L224"> 224</span>         window_start = min(max(time_s - window_width / 2.0, 0.0), trial_end - window_width)
+<span id="L225"> 225</span>         # All four plots use exactly the same interval.
+<span id="L226"> 226</span>         window_end = window_start + window_width
+<span id="L227"> 227</span>         # Change the time transform without rebuilding static titles, legends, and borders.
+<span id="L228"> 228</span>         if self.axes[0, 0].get_xlim() != (window_start, window_end):
+<span id="L229"> 229</span>             # Move every plot together so excitation, angles, and forces stay aligned.
+<span id="L230"> 230</span>             for axis in self.axes.ravel():
+<span id="L231"> 231</span>                 # These are actual simulation seconds, never time relative to a cursor.
+<span id="L232"> 232</span>                 axis.set_xlim(window_start, window_end)
+<span id="L233"> 233</span>         # Choose readable absolute times for grid lines inside the visible window.
+<span id="L234"> 234</span>         tick_times = self.time_tick_locator.tick_values(window_start, window_end)
+<span id="L235"> 235</span>         # Keep labels within the actual recorded time range.
+<span id="L236"> 236</span>         tick_times = tick_times[(tick_times &gt;= window_start) &amp; (tick_times &lt;= window_end)]
+<span id="L237"> 237</span>         # Move cached labels and grid lines using the same absolute-time transform.
+<span id="L238"> 238</span>         for tick_number, grid_line, tick_label in self.time_ticks:
+<span id="L239"> 239</span>             # Unused label slots must disappear rather than showing old time values.
+<span id="L240"> 240</span>             visible = tick_number &lt; len(tick_times)
+<span id="L241"> 241</span>             # Show only the grid lines needed in this window.
+<span id="L242"> 242</span>             grid_line.set_visible(visible)
+<span id="L243"> 243</span>             # Give the matching label the same visibility.
+<span id="L244"> 244</span>             tick_label.set_visible(visible)
+<span id="L245"> 245</span>             # Update coordinates only for the label slots in use.
+<span id="L246"> 246</span>             if visible:
+<span id="L247"> 247</span>                 # Read this grid line&#x27;s actual simulation time.
+<span id="L248"> 248</span>                 tick_time = float(tick_times[tick_number])
+<span id="L249"> 249</span>                 # Position the grid line at that time.
+<span id="L250"> 250</span>                 grid_line.set_xdata([tick_time, tick_time])
+<span id="L251"> 251</span>                 # Align its numeric label just below the same time coordinate.
+<span id="L252"> 252</span>                 tick_label.set_position((tick_time, -0.045))
+<span id="L253"> 253</span>                 # Avoid long floating-point strings in the small plot panels.
+<span id="L254"> 254</span>                 tick_label.set_text(f&quot;{tick_time:.4g}&quot;)
+<span id="L255"> 255</span>         # Include one neighboring sample on either side for continuous boundary segments.
+<span id="L256"> 256</span>         first_sample = max(0, np.searchsorted(self.times, window_start) - 1)
+<span id="L257"> 257</span>         # Keep the next sample as well, without exceeding the saved array.
+<span id="L258"> 258</span>         last_sample = min(len(self.times), np.searchsorted(self.times, window_end, side=&quot;right&quot;) + 1)
+<span id="L259"> 259</span>         # Draw raw saved samples within the moving window; do not filter the waveforms.
+<span id="L260"> 260</span>         for line, values in self.curves:
+<span id="L261"> 261</span>             # Every visible point retains its absolute simulation time and original value.
+<span id="L262"> 262</span>             line.set_data(self.times[first_sample:last_sample], values[first_sample:last_sample])
+<span id="L263"> 263</span>         # Move all vertical lines to the current absolute simulation time.
+<span id="L264"> 264</span>         for cursor in self.cursors:
+<span id="L265"> 265</span>             # Two equal x coordinates make a vertical line at this time.
+<span id="L266"> 266</span>             cursor.set_xdata([time_s, time_s])
+<span id="L267"> 267</span>         for marker, values in self.markers:
+<span id="L268"> 268</span>             # Move each dot to this time and its interpolated signal value.
+<span id="L269"> 269</span>             marker.set_data([time_s], [np.interp(time_s, self.times, values)])
+<span id="L270"> 270</span>         if self.background is None:
+<span id="L271"> 271</span>             self.canvas.draw()
+<span id="L272"> 272</span>         self.canvas.restore_region(self.background)
+<span id="L273"> 273</span>         for artist in self.artists:
+<span id="L274"> 274</span>             artist.axes.draw_artist(artist)
+<span id="L275"> 275</span>         self.canvas.blit(self.figure.bbox)
+<span id="L276"> 276</span>         self.last_time = time_s
+<span id="L277"> 277</span>         self.needs_redraw = False
+<span id="L278"> 278</span>         self.frame_times.append(time.perf_counter())
+<span id="L279"> 279</span> 
+<span id="L280"> 280</span>     # Apply this function/property behavior.
+<span id="L281"> 281</span>     @property
+<span id="L282"> 282</span>     def measured_hz(self):
+<span id="L283"> 283</span>         if len(self.frame_times) &lt; 2:
+<span id="L284"> 284</span>             return 0.0
+<span id="L285"> 285</span>         return (len(self.frame_times) - 1) / (self.frame_times[-1] - self.frame_times[0])
+</pre></main></body></html>

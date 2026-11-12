@@ -1,0 +1,19 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Advance the common skeleton and native muscle activation by one step.</title><link rel="stylesheet" href="../style.css"></head><body><!-- generated folder guide --><header><div class="tag">Cat · Full-body neuromechanics</div><h1>Advance the common skeleton and native muscle activation by one step.</h1><nav><a href="../../START_HERE.html">Start here</a> · <a href="../project_structure.html">Find a file</a></nav></header><main><p><a href="../../Code/neuromechanics/multibody_system_dynamics.py">Code/neuromechanics/multibody_system_dynamics.py</a></p><pre style="overflow:auto;white-space:pre"><span id="L1">   1</span> &quot;&quot;&quot;Advance the common skeleton and native muscle activation by one step.&quot;&quot;&quot;
+<span id="L2">   2</span> 
+<span id="L3">   3</span> import mujoco as mj
+<span id="L4">   4</span> 
+<span id="L5">   5</span> 
+<span id="L6">   6</span> def multibody_system_dynamics(state, muscle_excitation):
+<span id="L7">   7</span>     &quot;&quot;&quot;All four limbs share one mass matrix and one root; no imposed motion.
+<span id="L8">   8</span> 
+<span id="L9">   9</span>     Native muscle actuators use the elastic tendon forces computed on the
+<span id="L10">  10</span>     preceding step. Paw wrenches are physical contact forces. This partitioned
+<span id="L11">  11</span>     update is why time-step convergence must be checked.
+<span id="L12">  12</span>     &quot;&quot;&quot;
+<span id="L13">  13</span>     model, data = state[&quot;model&quot;], state[&quot;data&quot;]
+<span id="L14">  14</span>     data.ctrl[:] = muscle_excitation
+<span id="L15">  15</span>     data.qfrc_applied[:] = 0.0
+<span id="L16">  16</span>     data.xfrc_applied[:] = state[&quot;contact_wrench&quot;]
+<span id="L17">  17</span>     # Integrate the common skeleton and native activation by one mechanical timestep.
+<span id="L18">  18</span>     mj.mj_step(model, data)
+</pre></main></body></html>

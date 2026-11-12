@@ -1,0 +1,63 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Load exact mechanical arrays; mesh removal only affects rendering.</title><link rel="stylesheet" href="../style.css"></head><body><!-- generated folder guide --><header><div class="tag">Cat · Full-body neuromechanics</div><h1>Load exact mechanical arrays; mesh removal only affects rendering.</h1><nav><a href="../../START_HERE.html">Start here</a> · <a href="../project_structure.html">Find a file</a></nav></header><main><p><a href="../../Code/neuromechanics/load_skeletal_anatomy.py">Code/neuromechanics/load_skeletal_anatomy.py</a></p><pre style="overflow:auto;white-space:pre"><span id="L1">   1</span> &quot;&quot;&quot;Load exact mechanical arrays; mesh removal only affects rendering.&quot;&quot;&quot;
+<span id="L2">   2</span> 
+<span id="L3">   3</span> import xml.etree.ElementTree as ET
+<span id="L4">   4</span> 
+<span id="L5">   5</span> import numpy as np
+<span id="L6">   6</span> 
+<span id="L7">   7</span> import mujoco as mj
+<span id="L8">   8</span> 
+<span id="L9">   9</span> from model_configuration.paths import ROOT
+<span id="L10">  10</span> 
+<span id="L11">  11</span> 
+<span id="L12">  12</span> def load_skeletal_anatomy(graphics=False, variant=&quot;base&quot;):
+<span id="L13">  13</span>     &quot;&quot;&quot;Select an explicitly saved anatomy variant; base files are preserved.&quot;&quot;&quot;
+<span id="L14">  14</span>     directory = ROOT / &quot;Data/Skeletal_Geometry/Model&quot; if variant == &quot;base&quot; else ROOT / &quot;Data/Skeletal_Geometry/Model&quot; / variant
+<span id="L15">  15</span>     root = ET.parse(directory / &quot;cat.xml&quot;).getroot()
+<span id="L16">  16</span>     meshdir = ROOT / &quot;Data/Skeletal_Geometry/Model/meshes&quot;
+<span id="L17">  17</span>     root.find(&quot;compiler&quot;).set(&quot;meshdir&quot;, str(meshdir))
+<span id="L18">  18</span>     use_meshes = graphics and all((meshdir / mesh.get(&quot;file&quot;, &quot;&quot;)).is_file() for mesh in root.find(&quot;asset&quot;).findall(&quot;mesh&quot;))
+<span id="L19">  19</span>     if graphics and not use_meshes:
+<span id="L20">  20</span>         print(&quot;Optional anatomical meshes absent: using schematic bones; mechanics are unchanged.&quot;)
+<span id="L21">  21</span>     if not use_meshes:
+<span id="L22">  22</span>         for geom in root.iter(&quot;geom&quot;):
+<span id="L23">  23</span>             if geom.get(&quot;type&quot;) == &quot;mesh&quot;:
+<span id="L24">  24</span>                 geom.set(&quot;type&quot;, &quot;sphere&quot;)
+<span id="L25">  25</span>                 geom.set(&quot;size&quot;, &quot;1e-6&quot;)
+<span id="L26">  26</span>                 if graphics:
+<span id="L27">  27</span>                     geom.set(&quot;size&quot;, &quot;0.008&quot;)
+<span id="L28">  28</span>                     geom.set(&quot;rgba&quot;, &quot;0.9 0.86 0.72 1&quot;)
+<span id="L29">  29</span>                 geom.attrib.pop(&quot;mesh&quot;, None)
+<span id="L30">  30</span>         for mesh in list(root.find(&quot;asset&quot;).findall(&quot;mesh&quot;)):
+<span id="L31">  31</span>             root.find(&quot;asset&quot;).remove(mesh)
+<span id="L32">  32</span>     if graphics and not use_meshes:
+<span id="L33">  33</span>         for body in root.iter(&quot;body&quot;):
+<span id="L34">  34</span>             child = body.find(&quot;body&quot;)
+<span id="L35">  35</span>             end = np.fromstring(child.get(&quot;pos&quot;, &quot;0.03 0 0&quot;), sep=&quot; &quot;) if child is not None else np.array([0.025, 0, 0])
+<span id="L36">  36</span>             if np.linalg.norm(end) &lt; 0.01:
+<span id="L37">  37</span>                 end = np.array([0.03, 0, 0])
+<span id="L38">  38</span>             for geom in body.findall(&quot;geom&quot;):
+<span id="L39">  39</span>                 if geom.get(&quot;mesh&quot;) is None and (&quot;_bone&quot; in geom.get(&quot;name&quot;, &quot;&quot;) or &quot;axial_surface&quot; in geom.get(&quot;name&quot;, &quot;&quot;)):
+<span id="L40">  40</span>                     geom.set(&quot;type&quot;, &quot;capsule&quot;)
+<span id="L41">  41</span>                     geom.set(&quot;fromto&quot;, &quot;0 0 0 &quot; + &quot; &quot;.join(map(str,end)))
+<span id="L42">  42</span>                     geom.attrib.pop(&quot;pos&quot;, None)
+<span id="L43">  43</span>                     geom.attrib.pop(&quot;quat&quot;, None)
+<span id="L44">  44</span>                     geom.set(&quot;size&quot;, &quot;0.008&quot;)
+<span id="L45">  45</span>     m = mj.MjModel.from_xml_string(ET.tostring(root, encoding=&quot;unicode&quot;))
+<span id="L46">  46</span>     for key, value in np.load(directory / &quot;mechanics_exact.npz&quot;).items():
+<span id="L47">  47</span>         if key.endswith(&quot;_names&quot;):
+<span id="L48">  48</span>             # Skip the remaining work for this item.
+<span id="L49">  49</span>             continue
+<span id="L50">  50</span>         if not use_meshes and key == &quot;geom_size&quot;:
+<span id="L51">  51</span>             ids = [
+<span id="L52">  52</span>                 i
+<span id="L53">  53</span>                 for i in range(m.ngeom)
+<span id="L54">  54</span>                 if m.geom(i).name.find(&quot;_bone&quot;) &lt; 0
+<span id="L55">  55</span>                 and m.geom(i).name.find(&quot;axial_surface&quot;) &lt; 0
+<span id="L56">  56</span>             ]
+<span id="L57">  57</span>             getattr(m, key)[ids] = value[ids]
+<span id="L58">  58</span>         else:
+<span id="L59">  59</span>             getattr(m, key)[:] = value
+<span id="L60">  60</span>     # Mesh geoms never enter collisions and all mass/inertia is explicit.
+<span id="L61">  61</span>     mj.mj_setConst(m, mj.MjData(m))
+<span id="L62">  62</span>     return m
+</pre></main></body></html>

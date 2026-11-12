@@ -1,0 +1,405 @@
+{
+  "status": "Supported four-limb mechanical assembly; no scanned forelimb/trunk surfaces yet",
+  "muscles_per_forelimb": 9,
+  "source_parameters_unchanged": true,
+  "source_routes": [
+    {
+      "muscle": "Shoulder Extensor",
+      "segment": 0,
+      "source_row": 1,
+      "origin_body": "scapula",
+      "origin_local_m": [
+        0.0034642043621170918,
+        0.015424375976162651,
+        0.0
+      ],
+      "insertion_body": "upperarm",
+      "insertion_local_m": [
+        -0.005813670326445113,
+        0.0054158953170269945,
+        0.0
+      ],
+      "geometry": {
+        "a1": 0.0564002012493833,
+        "a2": 0.00794548203380911,
+        "phi1": -0.277010006173251,
+        "phi2": 2.39160180521177,
+        "R1": 0.00794485115987297,
+        "R2": null,
+        "f1": -1,
+        "f2": null,
+        "n1": 1,
+        "n2": null
+      }
+    },
+    {
+      "muscle": "Elbow Extensor",
+      "segment": 0,
+      "source_row": 2,
+      "origin_body": "upperarm",
+      "origin_local_m": [
+        0.03347737572796786,
+        -0.009279374804372012,
+        0.0
+      ],
+      "insertion_body": "forearm",
+      "insertion_local_m": [
+        -0.005023971663288653,
+        -0.0024286591330201198,
+        0.0
+      ],
+      "geometry": {
+        "a1": 0.0600016465411511,
+        "a2": 0.00558020397995713,
+        "phi1": 0.155275208613396,
+        "phi2": -2.69130152425526,
+        "R1": 0.00211767658246807,
+        "R2": null,
+        "f1": 1,
+        "f2": null,
+        "n1": -1,
+        "n2": null
+      }
+    },
+    {
+      "muscle": "Biceps Brachii",
+      "segment": 0,
+      "source_row": 3,
+      "origin_body": "scapula",
+      "origin_local_m": [
+        0.06243595326053015,
+        0.01123498044593019,
+        0.0
+      ],
+      "insertion_body": "forearm",
+      "insertion_local_m": [
+        0.010255675241405497,
+        -0.004336634578383328,
+        0.0
+      ],
+      "geometry": {
+        "a1": 0.012186834291057365,
+        "a2": 0.011134867494658732,
+        "phi1": -1.9686494462266706,
+        "phi2": -0.40005001439213644,
+        "R1": 0.009946928604793973,
+        "R2": 0.005259145389888545,
+        "f1": -1,
+        "f2": -1,
+        "n1": 1,
+        "n2": -1
+      }
+    },
+    {
+      "muscle": "Elbow Flexor",
+      "segment": 0,
+      "source_row": 4,
+      "origin_body": "upperarm",
+      "origin_local_m": [
+        0.021427190335922205,
+        0.004982393596393559,
+        0.0
+      ],
+      "insertion_body": "forearm",
+      "insertion_local_m": [
+        0.004607550668827849,
+        0.0057911120794285845,
+        0.0
+      ],
+      "geometry": {
+        "a1": 0.0715037507591663,
+        "a2": 0.00740043933035868,
+        "phi1": -0.0697366814458689,
+        "phi2": 0.898729071000832,
+        "R1": 0.00320000000000039,
+        "R2": null,
+        "f1": -1,
+        "f2": null,
+        "n1": -1,
+        "n2": null
+      }
+    },
+    {
+      "muscle": "Elbow Flexor Wrist Flexor",
+      "segment": 0,
+      "source_row": 5,
+      "origin_body": "upperarm",
+      "origin_local_m": [
+        0.08182242269299914,
+        -0.0032236508291720372,
+        0.0
+      ],
+      "insertion_body": "forearm",
+      "insertion_local_m": [
+        0.09490224546194542,
+        0.006129750944256109,
+        0.0
+      ],
+      "geometry": {
+        "a1": 0.0114000013042347,
+        "a2": 0.0951000002121869,
+        "phi1": 0.286687371689756,
+        "phi2": 0.0645005602980572,
+        "R1": 0.00536465406611287,
+        "R2": null,
+        "f1": -1,
+        "f2": null,
+        "n1": -1,
+        "n2": null
+      }
+    },
+    {
+      "muscle": "Elbow Flexor Wrist Flexor",
+      "segment": 1,
+      "source_row": 5,
+      "origin_body": "forearm",
+      "origin_local_m": [
+        0.09441204025234055,
+        0.006129750944256109,
+        0.0
+      ],
+      "insertion_body": "carpals",
+      "insertion_local_m": [
+        0.03303668349099529,
+        0.004179360662887023,
+        0.0
+      ],
+      "geometry": {
+        "a1": 0.0061346492911567106,
+        "a2": 0.0332999926671867,
+        "phi1": -1.530831880600672,
+        "phi2": 0.12583820430839,
+        "R1": 0.00350749590190618,
+        "R2": null,
+        "f1": -1,
+        "f2": null,
+        "n1": -1,
+        "n2": null
+      }
+    },
+    {
+      "muscle": "Wrist Flexor",
+      "segment": 0,
+      "source_row": 6,
+      "origin_body": "forearm",
+      "origin_local_m": [
+        0.009341816153249752,
+        -0.005995037194119982,
+        0.0
+      ],
+      "insertion_body": "forearm",
+      "insertion_local_m": [
+        0.09880435723966653,
+        0.004348446901636839,
+        0.0
+      ],
+      "geometry": {
+        "a1": 0.0111,
+        "a2": 0.0989,
+        "phi1": -0.570548132476946,
+        "phi2": 0.0439822971502571,
+        "R1": null,
+        "R2": null,
+        "f1": null,
+        "f2": null,
+        "n1": null,
+        "n2": null
+      }
+    },
+    {
+      "muscle": "Wrist Flexor",
+      "segment": 1,
+      "source_row": 6,
+      "origin_body": "forearm",
+      "origin_local_m": [
+        0.09880435723966685,
+        0.00434844690163684,
+        0.0
+      ],
+      "insertion_body": "carpals",
+      "insertion_local_m": [
+        0.016998910517186643,
+        0.0019601027857303775,
+        0.0
+      ],
+      "geometry": {
+        "a1": 0.006009024678845052,
+        "a2": 0.0171115446907036,
+        "phi1": -2.3325124139914677,
+        "phi2": 0.114800555463146,
+        "R1": 0.0024,
+        "R2": null,
+        "f1": -1,
+        "f2": null,
+        "n1": -1,
+        "n2": null
+      }
+    },
+    {
+      "muscle": "Wrist Extensor",
+      "segment": 0,
+      "source_row": 7,
+      "origin_body": "forearm",
+      "origin_local_m": [
+        0.006369213062286766,
+        -0.00029685234663381487,
+        0.0
+      ],
+      "insertion_body": "forearm",
+      "insertion_local_m": [
+        0.09613280631579318,
+        -0.004972172450585192,
+        0.0
+      ],
+      "geometry": {
+        "a1": 0.00637612706495929,
+        "a2": 0.0962613055647396,
+        "phi1": -0.0465736783811647,
+        "phi2": -0.0516758634738425,
+        "R1": null,
+        "R2": null,
+        "f1": null,
+        "f2": null,
+        "n1": null,
+        "n2": null
+      }
+    },
+    {
+      "muscle": "Wrist Extensor",
+      "segment": 1,
+      "source_row": 7,
+      "origin_body": "forearm",
+      "origin_local_m": [
+        0.0931814793984905,
+        -0.004972172450585193,
+        0.0
+      ],
+      "insertion_body": "carpals",
+      "insertion_local_m": [
+        0.02847542892267019,
+        -0.004688183291220659,
+        0.0
+      ],
+      "geometry": {
+        "a1": 0.00518652885093298,
+        "a2": 0.0288587788186216,
+        "phi1": 1.282292184119631,
+        "phi2": -0.163175752538083,
+        "R1": 0.00271044296770131,
+        "R2": null,
+        "f1": 1,
+        "f2": null,
+        "n1": -1,
+        "n2": null
+      }
+    },
+    {
+      "muscle": "Shoulder Flexor",
+      "segment": 0,
+      "source_row": 8,
+      "origin_body": "scapula",
+      "origin_local_m": [
+        0.007368130527692307,
+        -0.006476028207096081,
+        0.0
+      ],
+      "insertion_body": "upperarm",
+      "insertion_local_m": [
+        0.013834023626670015,
+        0.00935472052307382,
+        0.0
+      ],
+      "geometry": {
+        "a1": 0.0507609523493369,
+        "a2": 0.0167000301127897,
+        "phi1": 0.127927581350083,
+        "phi2": 0.594581222632492,
+        "R1": 0.00184271114122135,
+        "R2": null,
+        "f1": 1,
+        "f2": null,
+        "n1": 1,
+        "n2": null
+      }
+    },
+    {
+      "muscle": "Triceps Brachii Long",
+      "segment": 0,
+      "source_row": 9,
+      "origin_body": "scapula",
+      "origin_local_m": [
+        0.047488676157244,
+        0.0004729577802118338,
+        0.0
+      ],
+      "insertion_body": "forearm",
+      "insertion_local_m": [
+        -0.014150059601265615,
+        -0.004518838579248152,
+        0.0
+      ],
+      "geometry": {
+        "a1": 0.01023654140200321,
+        "a2": 0.014854093335665784,
+        "phi1": -0.04621934250258526,
+        "phi2": -2.8324783497454353,
+        "R1": 0.004419416012604855,
+        "R2": 0.011883274668532628,
+        "f1": 1,
+        "f2": 1,
+        "n1": 1,
+        "n2": -1
+      }
+    }
+  ],
+  "via_gaps": [
+    {
+      "muscle": "FL_ElbowFlexorWristFlexor",
+      "segment": 1,
+      "gap_m": 0.0004902052096048687
+    },
+    {
+      "muscle": "FL_WristFlexor",
+      "segment": 1,
+      "gap_m": 3.1919029805817925e-16
+    },
+    {
+      "muscle": "FL_WristExtensor",
+      "segment": 1,
+      "gap_m": 0.0029513269173026824
+    },
+    {
+      "muscle": "FR_ElbowFlexorWristFlexor",
+      "segment": 1,
+      "gap_m": 0.0004902052096048687
+    },
+    {
+      "muscle": "FR_WristFlexor",
+      "segment": 1,
+      "gap_m": 3.1919029805817925e-16
+    },
+    {
+      "muscle": "FR_WristExtensor",
+      "segment": 1,
+      "gap_m": 0.0029513269173026824
+    }
+  ],
+  "assembly_assumptions": {
+    "shoulder_x_m": 0.25,
+    "shoulder_spacing_m": 0.05,
+    "scapula_fixed_angle_rad": 5.076972996007772,
+    "shoulder_height_m": 0.18398331880612634,
+    "source_mean_shoulder_height_m": 0.17500347919321024,
+    "floor_registration_translation_m": 0.008979839612916088
+  },
+  "limitations": [
+    "Forelimb and trunk graphics are schematic segment solids, not real bone meshes.",
+    "Fixed scapulae and pelvis; no free trunk or scapulothoracic muscle model.",
+    "Source adjacent segment endpoints differ by up to 3.31 mm; separate unit-divisor tendon branches preserve source lengths and local attachments without fabricating a joining path.",
+    "Forelimb source is sagittal geometry; left/right are mirrored parallel copies, not bilateral measured anatomy.",
+    "MCP is a passive spring; no source muscle crosses MCP.",
+    "Nonzero digit inertia is a uniform-rod numerical adaptation; transverse inertia is assumed.",
+    "Native MuJoCo rigid-tendon muscle force dynamics approximate the source Hill dynamics.",
+    "Shoulder-to-pelvis distance and forelimb spacing are assembly assumptions, not measured in these files."
+  ]
+}

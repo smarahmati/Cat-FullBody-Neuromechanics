@@ -1,0 +1,28 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Readable equivalent of native MuJoCo activation dynamics (no smoothing).</title><link rel="stylesheet" href="../style.css"></head><body><!-- generated folder guide --><header><div class="tag">Cat · Full-body neuromechanics</div><h1>Readable equivalent of native MuJoCo activation dynamics (no smoothing).</h1><nav><a href="../../START_HERE.html">Start here</a> · <a href="../project_structure.html">Find a file</a></nav></header><main><p><a href="../../Code/neuromechanics/activation_dynamics.py">Code/neuromechanics/activation_dynamics.py</a></p><pre style="overflow:auto;white-space:pre"><span id="L1">   1</span> &quot;&quot;&quot;Readable equivalent of native MuJoCo activation dynamics (no smoothing).&quot;&quot;&quot;
+<span id="L2">   2</span> 
+<span id="L3">   3</span> import numpy as np
+<span id="L4">   4</span> 
+<span id="L5">   5</span> 
+<span id="L6">   6</span> def activation_dynamics(
+<span id="L7">   7</span>     muscle_excitation,
+<span id="L8">   8</span>     activation,
+<span id="L9">   9</span>     activation_time_s,
+<span id="L10">  10</span>     deactivation_time_s,
+<span id="L11">  11</span> ):
+<span id="L12">  12</span>     &quot;&quot;&quot;Return da/dt in 1/s; this diagnostic does not integrate a second state.
+<span id="L13">  13</span> 
+<span id="L14">  14</span>     The production integrator advances MuJoCo&#x27;s native activation state.
+<span id="L15">  15</span>     The same time constants are supplied by activation.py. This expression
+<span id="L16">  16</span>     documents and tests the zero-switch-smoothing branch used by this model.
+<span id="L17">  17</span>     &quot;&quot;&quot;
+<span id="L18">  18</span>     # Keep the incoming neural command between no excitation (0) and full excitation (1).
+<span id="L19">  19</span>     u = np.clip(muscle_excitation, 0.0, 1.0)
+<span id="L20">  20</span>     # Keep the current active state within its physical range, from 0 to 1.
+<span id="L21">  21</span>     a = np.clip(activation, 0.0, 1.0)
+<span id="L22">  22</span>     # Let the response time depend on the present activation, as in the native muscle law.
+<span id="L23">  23</span>     factor = 0.5 + 1.5 * a
+<span id="L24">  24</span>     # Use activation timing when the command rises and deactivation timing when it falls.
+<span id="L25">  25</span>     tau = np.where(u &gt; a, activation_time_s * factor, deactivation_time_s / factor)
+<span id="L26">  26</span>     # The difference between command and activation determines how quickly activation changes.
+<span id="L27">  27</span>     return (u - a) / tau
+</pre></main></body></html>

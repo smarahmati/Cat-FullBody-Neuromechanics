@@ -1,0 +1,2571 @@
+{
+  "muscles": {
+    "L_IP": {
+      "max_isometric_tendon_force_N": 95.292768017117,
+      "optimal_fiber_length_m": 0.05675811510074906,
+      "tendon_slack_length_m": 0.014151507084623786,
+      "pennation_cosine": 1.0,
+      "tendon_strain_at_max_force": 0.04,
+      "max_fiber_speed_optimal_lengths_per_s": 9.680250125356416,
+      "normalized_fiber_damping": 0.06632749466865116,
+      "MT_path_length_offset_m": 0.0,
+      "active_force_length_exponent": 6.0,
+      "source_shortening_curvature": 0.26983,
+      "source_lengthening_curvature": 0.029496475528975538,
+      "passive_fiber_enabled": 1.0,
+      "degroote_force_velocity_enabled": 1.0
+    },
+    "L_BFA": {
+      "max_isometric_tendon_force_N": 84.53707607564715,
+      "optimal_fiber_length_m": 0.03031805243504585,
+      "tendon_slack_length_m": 0.030739896826219897,
+      "pennation_cosine": 0.9702957493261182,
+      "tendon_strain_at_max_force": 0.04,
+      "max_fiber_speed_optimal_lengths_per_s": 10.68918117097061,
+      "normalized_fiber_damping": 0.080624509553038,
+      "MT_path_length_offset_m": 0.0,
+      "active_force_length_exponent": 6.0,
+      "source_shortening_curvature": 0.10513000000000002,
+      "source_lengthening_curvature": 0.1177044955878341,
+      "passive_fiber_enabled": 1.0,
+      "degroote_force_velocity_enabled": 1.0
+    },
+    "L_VL": {
+      "max_isometric_tendon_force_N": 199.7761418599688,
+      "optimal_fiber_length_m": 0.02701346679368226,
+      "tendon_slack_length_m": 0.07993198717303673,
+      "pennation_cosine": 0.9715491454632413,
+      "tendon_strain_at_max_force": 0.04,
+      "max_fiber_speed_optimal_lengths_per_s": 6.76105147089975,
+      "normalized_fiber_damping": 0.03910940145818813,
+      "MT_path_length_offset_m": 0.0,
+      "active_force_length_exponent": 3.0,
+      "source_shortening_curvature": 0.41623,
+      "source_lengthening_curvature": 0.008980032618377357,
+      "passive_fiber_enabled": 1.0,
+      "degroote_force_velocity_enabled": 1.0
+    },
+    "L_VM": {
+      "max_isometric_tendon_force_N": 229.6315183108968,
+      "optimal_fiber_length_m": 0.02706758436218535,
+      "tendon_slack_length_m": 0.08040611544069562,
+      "pennation_cosine": 0.9715491454632413,
+      "tendon_strain_at_max_force": 0.04,
+      "max_fiber_speed_optimal_lengths_per_s": 6.76105147089975,
+      "normalized_fiber_damping": 0.052070916150421004,
+      "MT_path_length_offset_m": 0.0,
+      "active_force_length_exponent": 3.0,
+      "source_shortening_curvature": 0.41623,
+      "source_lengthening_curvature": 0.008980032618377357,
+      "passive_fiber_enabled": 1.0,
+      "degroote_force_velocity_enabled": 1.0
+    },
+    "L_TA": {
+      "max_isometric_tendon_force_N": 49.47473013648411,
+      "optimal_fiber_length_m": 0.07887595303408174,
+      "tendon_slack_length_m": 0.05711557244594003,
+      "pennation_cosine": 0.992546157447128,
+      "tendon_strain_at_max_force": 0.04,
+      "max_fiber_speed_optimal_lengths_per_s": 9.62049898741689,
+      "normalized_fiber_damping": 0.02342990922161511,
+      "MT_path_length_offset_m": 0.08997560975609757,
+      "active_force_length_exponent": 6.0,
+      "source_shortening_curvature": 0.16918,
+      "source_lengthening_curvature": 0.09993480887235734,
+      "passive_fiber_enabled": 1.0,
+      "degroote_force_velocity_enabled": 1.0
+    },
+    "L_SO": {
+      "max_isometric_tendon_force_N": 9.218608539257296,
+      "optimal_fiber_length_m": 0.03910837792874384,
+      "tendon_slack_length_m": 0.0708209700521574,
+      "pennation_cosine": 0.992546157447128,
+      "tendon_strain_at_max_force": 0.04,
+      "max_fiber_speed_optimal_lengths_per_s": 4.9569960758465506,
+      "normalized_fiber_damping": 0.025948615117133412,
+      "MT_path_length_offset_m": 0.0,
+      "active_force_length_exponent": 3.0,
+      "source_shortening_curvature": 0.8920300000000001,
+      "source_lengthening_curvature": 0.076136239210022,
+      "passive_fiber_enabled": 1.0,
+      "degroote_force_velocity_enabled": 1.0
+    },
+    "L_RF": {
+      "max_isometric_tendon_force_N": 71.08377603814067,
+      "optimal_fiber_length_m": 0.020894134661827768,
+      "tendon_slack_length_m": 0.08471383959946792,
+      "pennation_cosine": 0.992546157447128,
+      "tendon_strain_at_max_force": 0.04,
+      "max_fiber_speed_optimal_lengths_per_s": 9.941173196958237,
+      "normalized_fiber_damping": 0.10213679430059606,
+      "MT_path_length_offset_m": 0.0,
+      "active_force_length_exponent": 3.0,
+      "source_shortening_curvature": 0.19663,
+      "source_lengthening_curvature": 0.060182966026515426,
+      "passive_fiber_enabled": 1.0,
+      "degroote_force_velocity_enabled": 1.0
+    },
+    "L_BFP": {
+      "max_isometric_tendon_force_N": 102.0324360881335,
+      "optimal_fiber_length_m": 0.06067086407795482,
+      "tendon_slack_length_m": 0.06152433317234077,
+      "pennation_cosine": 0.992546157447128,
+      "tendon_strain_at_max_force": 0.04,
+      "max_fiber_speed_optimal_lengths_per_s": 10.078088245015307,
+      "normalized_fiber_damping": 0.06931822486301711,
+      "MT_path_length_offset_m": 0.0,
+      "active_force_length_exponent": 6.0,
+      "source_shortening_curvature": 0.10513000000000002,
+      "source_lengthening_curvature": 0.07127194720771828,
+      "passive_fiber_enabled": 1.0,
+      "degroote_force_velocity_enabled": 1.0
+    },
+    "L_SAM": {
+      "max_isometric_tendon_force_N": 10.447494734981838,
+      "optimal_fiber_length_m": 0.1114918511318332,
+      "tendon_slack_length_m": 0.028342443395879737,
+      "pennation_cosine": 0.9973144793178809,
+      "tendon_strain_at_max_force": 0.04,
+      "max_fiber_speed_optimal_lengths_per_s": 8.700009702991307,
+      "normalized_fiber_damping": 0.073340404563125,
+      "MT_path_length_offset_m": 0.0,
+      "active_force_length_exponent": 6.0,
+      "source_shortening_curvature": 0.26983,
+      "source_lengthening_curvature": 0.212436300221384,
+      "passive_fiber_enabled": 1.0,
+      "degroote_force_velocity_enabled": 1.0
+    },
+    "L_LG": {
+      "max_isometric_tendon_force_N": 94.6728596983433,
+      "optimal_fiber_length_m": 0.0286964829541428,
+      "tendon_slack_length_m": 0.08422212118014866,
+      "pennation_cosine": 0.9455184316586812,
+      "tendon_strain_at_max_force": 0.04,
+      "max_fiber_speed_optimal_lengths_per_s": 9.19570085299403,
+      "normalized_fiber_damping": 0.028104583254387312,
+      "MT_path_length_offset_m": 0.0,
+      "active_force_length_exponent": 3.0,
+      "source_shortening_curvature": 0.192055,
+      "source_lengthening_curvature": 0.03807618274755612,
+      "passive_fiber_enabled": 1.0,
+      "degroote_force_velocity_enabled": 1.0
+    },
+    "L_MG": {
+      "max_isometric_tendon_force_N": 87.8981443205283,
+      "optimal_fiber_length_m": 0.028902184402524074,
+      "tendon_slack_length_m": 0.0849674626289436,
+      "pennation_cosine": 0.9455184316586812,
+      "tendon_strain_at_max_force": 0.04,
+      "max_fiber_speed_optimal_lengths_per_s": 9.19570085299403,
+      "normalized_fiber_damping": 0.04011966722408781,
+      "MT_path_length_offset_m": 0.0,
+      "active_force_length_exponent": 3.0,
+      "source_shortening_curvature": 0.192055,
+      "source_lengthening_curvature": 0.03807618274755612,
+      "passive_fiber_enabled": 1.0,
+      "degroote_force_velocity_enabled": 1.0
+    },
+    "R_IP": {
+      "max_isometric_tendon_force_N": 95.292768017117,
+      "optimal_fiber_length_m": 0.05675811510074906,
+      "tendon_slack_length_m": 0.014151507084623786,
+      "pennation_cosine": 1.0,
+      "tendon_strain_at_max_force": 0.04,
+      "max_fiber_speed_optimal_lengths_per_s": 9.680250125356416,
+      "normalized_fiber_damping": 0.06632749466865116,
+      "MT_path_length_offset_m": 0.0,
+      "active_force_length_exponent": 6.0,
+      "source_shortening_curvature": 0.26983,
+      "source_lengthening_curvature": 0.029496475528975538,
+      "passive_fiber_enabled": 1.0,
+      "degroote_force_velocity_enabled": 1.0
+    },
+    "R_BFA": {
+      "max_isometric_tendon_force_N": 84.53707607564715,
+      "optimal_fiber_length_m": 0.03031805243504585,
+      "tendon_slack_length_m": 0.030739896826219897,
+      "pennation_cosine": 0.9702957493261182,
+      "tendon_strain_at_max_force": 0.04,
+      "max_fiber_speed_optimal_lengths_per_s": 10.68918117097061,
+      "normalized_fiber_damping": 0.080624509553038,
+      "MT_path_length_offset_m": 0.0,
+      "active_force_length_exponent": 6.0,
+      "source_shortening_curvature": 0.10513000000000002,
+      "source_lengthening_curvature": 0.1177044955878341,
+      "passive_fiber_enabled": 1.0,
+      "degroote_force_velocity_enabled": 1.0
+    },
+    "R_VL": {
+      "max_isometric_tendon_force_N": 199.7761418599688,
+      "optimal_fiber_length_m": 0.02701346679368226,
+      "tendon_slack_length_m": 0.07993198717303673,
+      "pennation_cosine": 0.9715491454632413,
+      "tendon_strain_at_max_force": 0.04,
+      "max_fiber_speed_optimal_lengths_per_s": 6.76105147089975,
+      "normalized_fiber_damping": 0.03910940145818813,
+      "MT_path_length_offset_m": 0.0,
+      "active_force_length_exponent": 3.0,
+      "source_shortening_curvature": 0.41623,
+      "source_lengthening_curvature": 0.008980032618377357,
+      "passive_fiber_enabled": 1.0,
+      "degroote_force_velocity_enabled": 1.0
+    },
+    "R_VM": {
+      "max_isometric_tendon_force_N": 229.6315183108968,
+      "optimal_fiber_length_m": 0.02706758436218535,
+      "tendon_slack_length_m": 0.08040611544069562,
+      "pennation_cosine": 0.9715491454632413,
+      "tendon_strain_at_max_force": 0.04,
+      "max_fiber_speed_optimal_lengths_per_s": 6.76105147089975,
+      "normalized_fiber_damping": 0.052070916150421004,
+      "MT_path_length_offset_m": 0.0,
+      "active_force_length_exponent": 3.0,
+      "source_shortening_curvature": 0.41623,
+      "source_lengthening_curvature": 0.008980032618377357,
+      "passive_fiber_enabled": 1.0,
+      "degroote_force_velocity_enabled": 1.0
+    },
+    "R_TA": {
+      "max_isometric_tendon_force_N": 49.47473013648411,
+      "optimal_fiber_length_m": 0.07887595303408174,
+      "tendon_slack_length_m": 0.05711557244594003,
+      "pennation_cosine": 0.992546157447128,
+      "tendon_strain_at_max_force": 0.04,
+      "max_fiber_speed_optimal_lengths_per_s": 9.62049898741689,
+      "normalized_fiber_damping": 0.02342990922161511,
+      "MT_path_length_offset_m": 0.08997560975609757,
+      "active_force_length_exponent": 6.0,
+      "source_shortening_curvature": 0.16918,
+      "source_lengthening_curvature": 0.09993480887235734,
+      "passive_fiber_enabled": 1.0,
+      "degroote_force_velocity_enabled": 1.0
+    },
+    "R_SO": {
+      "max_isometric_tendon_force_N": 9.218608539257296,
+      "optimal_fiber_length_m": 0.03910837792874384,
+      "tendon_slack_length_m": 0.0708209700521574,
+      "pennation_cosine": 0.992546157447128,
+      "tendon_strain_at_max_force": 0.04,
+      "max_fiber_speed_optimal_lengths_per_s": 4.9569960758465506,
+      "normalized_fiber_damping": 0.025948615117133412,
+      "MT_path_length_offset_m": 0.0,
+      "active_force_length_exponent": 3.0,
+      "source_shortening_curvature": 0.8920300000000001,
+      "source_lengthening_curvature": 0.076136239210022,
+      "passive_fiber_enabled": 1.0,
+      "degroote_force_velocity_enabled": 1.0
+    },
+    "R_RF": {
+      "max_isometric_tendon_force_N": 71.08377603814067,
+      "optimal_fiber_length_m": 0.020894134661827768,
+      "tendon_slack_length_m": 0.08471383959946792,
+      "pennation_cosine": 0.992546157447128,
+      "tendon_strain_at_max_force": 0.04,
+      "max_fiber_speed_optimal_lengths_per_s": 9.941173196958237,
+      "normalized_fiber_damping": 0.10213679430059606,
+      "MT_path_length_offset_m": 0.0,
+      "active_force_length_exponent": 3.0,
+      "source_shortening_curvature": 0.19663,
+      "source_lengthening_curvature": 0.060182966026515426,
+      "passive_fiber_enabled": 1.0,
+      "degroote_force_velocity_enabled": 1.0
+    },
+    "R_BFP": {
+      "max_isometric_tendon_force_N": 102.0324360881335,
+      "optimal_fiber_length_m": 0.06067086407795482,
+      "tendon_slack_length_m": 0.06152433317234077,
+      "pennation_cosine": 0.992546157447128,
+      "tendon_strain_at_max_force": 0.04,
+      "max_fiber_speed_optimal_lengths_per_s": 10.078088245015307,
+      "normalized_fiber_damping": 0.06931822486301711,
+      "MT_path_length_offset_m": 0.0,
+      "active_force_length_exponent": 6.0,
+      "source_shortening_curvature": 0.10513000000000002,
+      "source_lengthening_curvature": 0.07127194720771828,
+      "passive_fiber_enabled": 1.0,
+      "degroote_force_velocity_enabled": 1.0
+    },
+    "R_SAM": {
+      "max_isometric_tendon_force_N": 10.447494734981838,
+      "optimal_fiber_length_m": 0.1114918511318332,
+      "tendon_slack_length_m": 0.028342443395879737,
+      "pennation_cosine": 0.9973144793178809,
+      "tendon_strain_at_max_force": 0.04,
+      "max_fiber_speed_optimal_lengths_per_s": 8.700009702991307,
+      "normalized_fiber_damping": 0.073340404563125,
+      "MT_path_length_offset_m": 0.0,
+      "active_force_length_exponent": 6.0,
+      "source_shortening_curvature": 0.26983,
+      "source_lengthening_curvature": 0.212436300221384,
+      "passive_fiber_enabled": 1.0,
+      "degroote_force_velocity_enabled": 1.0
+    },
+    "R_LG": {
+      "max_isometric_tendon_force_N": 94.6728596983433,
+      "optimal_fiber_length_m": 0.0286964829541428,
+      "tendon_slack_length_m": 0.08422212118014866,
+      "pennation_cosine": 0.9455184316586812,
+      "tendon_strain_at_max_force": 0.04,
+      "max_fiber_speed_optimal_lengths_per_s": 9.19570085299403,
+      "normalized_fiber_damping": 0.028104583254387312,
+      "MT_path_length_offset_m": 0.0,
+      "active_force_length_exponent": 3.0,
+      "source_shortening_curvature": 0.192055,
+      "source_lengthening_curvature": 0.03807618274755612,
+      "passive_fiber_enabled": 1.0,
+      "degroote_force_velocity_enabled": 1.0
+    },
+    "R_MG": {
+      "max_isometric_tendon_force_N": 87.8981443205283,
+      "optimal_fiber_length_m": 0.028902184402524074,
+      "tendon_slack_length_m": 0.0849674626289436,
+      "pennation_cosine": 0.9455184316586812,
+      "tendon_strain_at_max_force": 0.04,
+      "max_fiber_speed_optimal_lengths_per_s": 9.19570085299403,
+      "normalized_fiber_damping": 0.04011966722408781,
+      "MT_path_length_offset_m": 0.0,
+      "active_force_length_exponent": 3.0,
+      "source_shortening_curvature": 0.192055,
+      "source_lengthening_curvature": 0.03807618274755612,
+      "passive_fiber_enabled": 1.0,
+      "degroote_force_velocity_enabled": 1.0
+    },
+    "L_EDL": {
+      "max_isometric_tendon_force_N": 22.041212324862613,
+      "optimal_fiber_length_m": 0.03383522379830449,
+      "tendon_slack_length_m": 0.1416173473958588,
+      "pennation_cosine": 0.9902681160825719,
+      "tendon_strain_at_max_force": 0.033,
+      "max_fiber_speed_optimal_lengths_per_s": 10.0,
+      "normalized_fiber_damping": 0.026970482756881943,
+      "MT_path_length_offset_m": 0.0,
+      "active_force_length_exponent": 3.0,
+      "source_shortening_curvature": 0.45283,
+      "source_lengthening_curvature": 0.017284964241730226,
+      "passive_fiber_enabled": 1.0,
+      "degroote_force_velocity_enabled": 1.0
+    },
+    "R_EDL": {
+      "max_isometric_tendon_force_N": 22.041212324862613,
+      "optimal_fiber_length_m": 0.03383522379830449,
+      "tendon_slack_length_m": 0.14157981525844787,
+      "pennation_cosine": 0.9902681160825719,
+      "tendon_strain_at_max_force": 0.033,
+      "max_fiber_speed_optimal_lengths_per_s": 10.0,
+      "normalized_fiber_damping": 0.026970482756881943,
+      "MT_path_length_offset_m": 0.0,
+      "active_force_length_exponent": 3.0,
+      "source_shortening_curvature": 0.45283,
+      "source_lengthening_curvature": 0.017284964241730226,
+      "passive_fiber_enabled": 1.0,
+      "degroote_force_velocity_enabled": 1.0
+    },
+    "L_FDL": {
+      "max_isometric_tendon_force_N": 17.084827927157022,
+      "optimal_fiber_length_m": 0.02068649104938358,
+      "tendon_slack_length_m": 0.1266556737310344,
+      "pennation_cosine": 0.9848079136709821,
+      "tendon_strain_at_max_force": 0.033,
+      "max_fiber_speed_optimal_lengths_per_s": 10.0,
+      "normalized_fiber_damping": 0.025190722468594558,
+      "MT_path_length_offset_m": 0.0,
+      "active_force_length_exponent": 3.0,
+      "source_shortening_curvature": 0.45283,
+      "source_lengthening_curvature": 0.14470994699998194,
+      "passive_fiber_enabled": 1.0,
+      "degroote_force_velocity_enabled": 1.0
+    },
+    "R_FDL": {
+      "max_isometric_tendon_force_N": 17.084827927157022,
+      "optimal_fiber_length_m": 0.02068649104938358,
+      "tendon_slack_length_m": 0.12661522847733533,
+      "pennation_cosine": 0.9848079136709821,
+      "tendon_strain_at_max_force": 0.033,
+      "max_fiber_speed_optimal_lengths_per_s": 10.0,
+      "normalized_fiber_damping": 0.025190722468594558,
+      "MT_path_length_offset_m": 0.0,
+      "active_force_length_exponent": 3.0,
+      "source_shortening_curvature": 0.45283,
+      "source_lengthening_curvature": 0.14470994699998194,
+      "passive_fiber_enabled": 1.0,
+      "degroote_force_velocity_enabled": 1.0
+    },
+    "L_FHL": {
+      "max_isometric_tendon_force_N": 115.6534446266983,
+      "optimal_fiber_length_m": 0.017216742119872043,
+      "tendon_slack_length_m": 0.13125598564084434,
+      "pennation_cosine": 0.992546157447128,
+      "tendon_strain_at_max_force": 0.04,
+      "max_fiber_speed_optimal_lengths_per_s": 10.0,
+      "normalized_fiber_damping": 0.06669762170987022,
+      "MT_path_length_offset_m": 0.0,
+      "active_force_length_exponent": 3.0,
+      "source_shortening_curvature": 0.45283,
+      "source_lengthening_curvature": 0.015752952681268924,
+      "passive_fiber_enabled": 1.0,
+      "degroote_force_velocity_enabled": 1.0
+    },
+    "R_FHL": {
+      "max_isometric_tendon_force_N": 115.6534446266983,
+      "optimal_fiber_length_m": 0.017216742119872043,
+      "tendon_slack_length_m": 0.13125598564084434,
+      "pennation_cosine": 0.992546157447128,
+      "tendon_strain_at_max_force": 0.04,
+      "max_fiber_speed_optimal_lengths_per_s": 10.0,
+      "normalized_fiber_damping": 0.06669762170987022,
+      "MT_path_length_offset_m": 0.0,
+      "active_force_length_exponent": 3.0,
+      "source_shortening_curvature": 0.45283,
+      "source_lengthening_curvature": 0.015752952681268924,
+      "passive_fiber_enabled": 1.0,
+      "degroote_force_velocity_enabled": 1.0
+    },
+    "FL_ShoulderExtensor": {
+      "max_isometric_tendon_force_N": 536.9727865899736,
+      "optimal_fiber_length_m": 0.016811004569903507,
+      "tendon_slack_length_m": 0.04508599379853152,
+      "pennation_cosine": 0.965422094265322,
+      "tendon_strain_at_max_force": 0.04,
+      "max_fiber_speed_optimal_lengths_per_s": 10.377358490566037,
+      "normalized_fiber_damping": 0.0034890764201686523,
+      "MT_path_length_offset_m": 0.0,
+      "active_force_length_exponent": 3.0,
+      "source_shortening_curvature": 0.3718525,
+      "source_lengthening_curvature": 0.003670337776346759,
+      "passive_fiber_enabled": 1.0,
+      "degroote_force_velocity_enabled": 1.0
+    },
+    "FL_ElbowExtensor": {
+      "max_isometric_tendon_force_N": 125.72991797795375,
+      "optimal_fiber_length_m": 0.0308057630625,
+      "tendon_slack_length_m": 0.03274769168240452,
+      "pennation_cosine": 0.9862856015372314,
+      "tendon_strain_at_max_force": 0.04,
+      "max_fiber_speed_optimal_lengths_per_s": 8.184080188679246,
+      "normalized_fiber_damping": 0.0050423367035390635,
+      "MT_path_length_offset_m": 0.0,
+      "active_force_length_exponent": 3.0,
+      "source_shortening_curvature": 0.5008675,
+      "source_lengthening_curvature": 0.012498821226714705,
+      "passive_fiber_enabled": 1.0,
+      "degroote_force_velocity_enabled": 1.0
+    },
+    "FL_BicepsBrachii": {
+      "max_isometric_tendon_force_N": 56.95816789224988,
+      "optimal_fiber_length_m": 0.026594491050000002,
+      "tendon_slack_length_m": 0.08788347958795098,
+      "pennation_cosine": 0.984807753012208,
+      "tendon_strain_at_max_force": 0.04,
+      "max_fiber_speed_optimal_lengths_per_s": 11.20566037735849,
+      "normalized_fiber_damping": 0.0059601766923,
+      "MT_path_length_offset_m": 0.0,
+      "active_force_length_exponent": 3.0,
+      "source_shortening_curvature": 0.17833,
+      "source_lengthening_curvature": 0.0789734752887444,
+      "passive_fiber_enabled": 1.0,
+      "degroote_force_velocity_enabled": 1.0
+    },
+    "FL_ElbowFlexor": {
+      "max_isometric_tendon_force_N": 61.029495040345,
+      "optimal_fiber_length_m": 0.04715316720000001,
+      "tendon_slack_length_m": 0.026006176503227986,
+      "pennation_cosine": 0.9836064595790646,
+      "tendon_strain_at_max_force": 0.04,
+      "max_fiber_speed_optimal_lengths_per_s": 11.471454832754464,
+      "normalized_fiber_damping": 0.010818308555122388,
+      "MT_path_length_offset_m": 0.0,
+      "active_force_length_exponent": 6.0,
+      "source_shortening_curvature": 0.146305,
+      "source_lengthening_curvature": 0.08638997828173837,
+      "passive_fiber_enabled": 1.0,
+      "degroote_force_velocity_enabled": 1.0
+    },
+    "FL_ElbowFlexorWristFlexor": {
+      "max_isometric_tendon_force_N": 21.357653856823912,
+      "optimal_fiber_length_m": 0.029080524420000003,
+      "tendon_slack_length_m": 0.11113157261749292,
+      "pennation_cosine": 0.991968197918445,
+      "tendon_strain_at_max_force": 0.04,
+      "max_fiber_speed_optimal_lengths_per_s": 12.505932619956894,
+      "normalized_fiber_damping": 0.007273581578990622,
+      "MT_path_length_offset_m": 0.0,
+      "active_force_length_exponent": 3.0,
+      "source_shortening_curvature": 0.03193,
+      "source_lengthening_curvature": 0.19358173336595585,
+      "passive_fiber_enabled": 1.0,
+      "degroote_force_velocity_enabled": 1.0
+    },
+    "FL_WristFlexor": {
+      "max_isometric_tendon_force_N": 11.387722858664116,
+      "optimal_fiber_length_m": 0.022247184600000004,
+      "tendon_slack_length_m": 0.0863975414223568,
+      "pennation_cosine": 0.9999323080037622,
+      "tendon_strain_at_max_force": 0.04,
+      "max_fiber_speed_optimal_lengths_per_s": 12.408490566037734,
+      "normalized_fiber_damping": 0.0055210796046,
+      "MT_path_length_offset_m": 0.0,
+      "active_force_length_exponent": 3.0,
+      "source_shortening_curvature": 0.01363,
+      "source_lengthening_curvature": 0.6924960847868652,
+      "passive_fiber_enabled": 1.0,
+      "degroote_force_velocity_enabled": 1.0
+    },
+    "FL_WristExtensor": {
+      "max_isometric_tendon_force_N": 93.48427427318677,
+      "optimal_fiber_length_m": 0.013987546509374997,
+      "tendon_slack_length_m": 0.10741378568145873,
+      "pennation_cosine": 0.9898590415514598,
+      "tendon_strain_at_max_force": 0.04,
+      "max_fiber_speed_optimal_lengths_per_s": 11.076419047776398,
+      "normalized_fiber_damping": 0.00309863853176199,
+      "MT_path_length_offset_m": 0.0,
+      "active_force_length_exponent": 3.0,
+      "source_shortening_curvature": 0.17935937499999993,
+      "source_lengthening_curvature": 0.005314123051063729,
+      "passive_fiber_enabled": 1.0,
+      "degroote_force_velocity_enabled": 1.0
+    },
+    "FL_ShoulderFlexor": {
+      "max_isometric_tendon_force_N": 69.41141750222351,
+      "optimal_fiber_length_m": 0.04186673122500001,
+      "tendon_slack_length_m": 0.024504272450222776,
+      "pennation_cosine": 0.9975640502598242,
+      "tendon_strain_at_max_force": 0.04,
+      "max_fiber_speed_optimal_lengths_per_s": 10.377358490566037,
+      "normalized_fiber_damping": 0.008689321575,
+      "MT_path_length_offset_m": 0.0,
+      "active_force_length_exponent": 6.0,
+      "source_shortening_curvature": 0.19571499999999997,
+      "source_lengthening_curvature": 0.06192853599632381,
+      "passive_fiber_enabled": 1.0,
+      "degroote_force_velocity_enabled": 1.0
+    },
+    "FL_TricepsBrachiiLong": {
+      "max_isometric_tendon_force_N": 189.10697126523593,
+      "optimal_fiber_length_m": 0.02529499995,
+      "tendon_slack_length_m": 0.07811749646205521,
+      "pennation_cosine": 0.9730448705798238,
+      "tendon_strain_at_max_force": 0.04,
+      "max_fiber_speed_optimal_lengths_per_s": 10.721698113207546,
+      "normalized_fiber_damping": 0.0054241070647500006,
+      "MT_path_length_offset_m": 0.0,
+      "active_force_length_exponent": 3.0,
+      "source_shortening_curvature": 0.23323,
+      "source_lengthening_curvature": 0.016191971994796654,
+      "passive_fiber_enabled": 1.0,
+      "degroote_force_velocity_enabled": 1.0
+    },
+    "FR_ShoulderExtensor": {
+      "max_isometric_tendon_force_N": 536.9727865899736,
+      "optimal_fiber_length_m": 0.016811004569903507,
+      "tendon_slack_length_m": 0.04508599379853152,
+      "pennation_cosine": 0.965422094265322,
+      "tendon_strain_at_max_force": 0.04,
+      "max_fiber_speed_optimal_lengths_per_s": 10.377358490566037,
+      "normalized_fiber_damping": 0.0034890764201686523,
+      "MT_path_length_offset_m": 0.0,
+      "active_force_length_exponent": 3.0,
+      "source_shortening_curvature": 0.3718525,
+      "source_lengthening_curvature": 0.003670337776346759,
+      "passive_fiber_enabled": 1.0,
+      "degroote_force_velocity_enabled": 1.0
+    },
+    "FR_ElbowExtensor": {
+      "max_isometric_tendon_force_N": 125.72991797795375,
+      "optimal_fiber_length_m": 0.0308057630625,
+      "tendon_slack_length_m": 0.03274769168240452,
+      "pennation_cosine": 0.9862856015372314,
+      "tendon_strain_at_max_force": 0.04,
+      "max_fiber_speed_optimal_lengths_per_s": 8.184080188679246,
+      "normalized_fiber_damping": 0.0050423367035390635,
+      "MT_path_length_offset_m": 0.0,
+      "active_force_length_exponent": 3.0,
+      "source_shortening_curvature": 0.5008675,
+      "source_lengthening_curvature": 0.012498821226714705,
+      "passive_fiber_enabled": 1.0,
+      "degroote_force_velocity_enabled": 1.0
+    },
+    "FR_BicepsBrachii": {
+      "max_isometric_tendon_force_N": 56.95816789224988,
+      "optimal_fiber_length_m": 0.026594491050000002,
+      "tendon_slack_length_m": 0.08788347958795098,
+      "pennation_cosine": 0.984807753012208,
+      "tendon_strain_at_max_force": 0.04,
+      "max_fiber_speed_optimal_lengths_per_s": 11.20566037735849,
+      "normalized_fiber_damping": 0.0059601766923,
+      "MT_path_length_offset_m": 0.0,
+      "active_force_length_exponent": 3.0,
+      "source_shortening_curvature": 0.17833,
+      "source_lengthening_curvature": 0.0789734752887444,
+      "passive_fiber_enabled": 1.0,
+      "degroote_force_velocity_enabled": 1.0
+    },
+    "FR_ElbowFlexor": {
+      "max_isometric_tendon_force_N": 61.029495040345,
+      "optimal_fiber_length_m": 0.04715316720000001,
+      "tendon_slack_length_m": 0.026006176503227986,
+      "pennation_cosine": 0.9836064595790646,
+      "tendon_strain_at_max_force": 0.04,
+      "max_fiber_speed_optimal_lengths_per_s": 11.471454832754464,
+      "normalized_fiber_damping": 0.010818308555122388,
+      "MT_path_length_offset_m": 0.0,
+      "active_force_length_exponent": 6.0,
+      "source_shortening_curvature": 0.146305,
+      "source_lengthening_curvature": 0.08638997828173837,
+      "passive_fiber_enabled": 1.0,
+      "degroote_force_velocity_enabled": 1.0
+    },
+    "FR_ElbowFlexorWristFlexor": {
+      "max_isometric_tendon_force_N": 21.357653856823912,
+      "optimal_fiber_length_m": 0.029080524420000003,
+      "tendon_slack_length_m": 0.11113157261749292,
+      "pennation_cosine": 0.991968197918445,
+      "tendon_strain_at_max_force": 0.04,
+      "max_fiber_speed_optimal_lengths_per_s": 12.505932619956894,
+      "normalized_fiber_damping": 0.007273581578990622,
+      "MT_path_length_offset_m": 0.0,
+      "active_force_length_exponent": 3.0,
+      "source_shortening_curvature": 0.03193,
+      "source_lengthening_curvature": 0.19358173336595585,
+      "passive_fiber_enabled": 1.0,
+      "degroote_force_velocity_enabled": 1.0
+    },
+    "FR_WristFlexor": {
+      "max_isometric_tendon_force_N": 11.387722858664116,
+      "optimal_fiber_length_m": 0.022247184600000004,
+      "tendon_slack_length_m": 0.0863975414223568,
+      "pennation_cosine": 0.9999323080037622,
+      "tendon_strain_at_max_force": 0.04,
+      "max_fiber_speed_optimal_lengths_per_s": 12.408490566037734,
+      "normalized_fiber_damping": 0.0055210796046,
+      "MT_path_length_offset_m": 0.0,
+      "active_force_length_exponent": 3.0,
+      "source_shortening_curvature": 0.01363,
+      "source_lengthening_curvature": 0.6924960847868652,
+      "passive_fiber_enabled": 1.0,
+      "degroote_force_velocity_enabled": 1.0
+    },
+    "FR_WristExtensor": {
+      "max_isometric_tendon_force_N": 93.48427427318677,
+      "optimal_fiber_length_m": 0.013987546509374997,
+      "tendon_slack_length_m": 0.10741378568145873,
+      "pennation_cosine": 0.9898590415514598,
+      "tendon_strain_at_max_force": 0.04,
+      "max_fiber_speed_optimal_lengths_per_s": 11.076419047776398,
+      "normalized_fiber_damping": 0.00309863853176199,
+      "MT_path_length_offset_m": 0.0,
+      "active_force_length_exponent": 3.0,
+      "source_shortening_curvature": 0.17935937499999993,
+      "source_lengthening_curvature": 0.005314123051063729,
+      "passive_fiber_enabled": 1.0,
+      "degroote_force_velocity_enabled": 1.0
+    },
+    "FR_ShoulderFlexor": {
+      "max_isometric_tendon_force_N": 69.41141750222351,
+      "optimal_fiber_length_m": 0.04186673122500001,
+      "tendon_slack_length_m": 0.024504272450222776,
+      "pennation_cosine": 0.9975640502598242,
+      "tendon_strain_at_max_force": 0.04,
+      "max_fiber_speed_optimal_lengths_per_s": 10.377358490566037,
+      "normalized_fiber_damping": 0.008689321575,
+      "MT_path_length_offset_m": 0.0,
+      "active_force_length_exponent": 6.0,
+      "source_shortening_curvature": 0.19571499999999997,
+      "source_lengthening_curvature": 0.06192853599632381,
+      "passive_fiber_enabled": 1.0,
+      "degroote_force_velocity_enabled": 1.0
+    },
+    "FR_TricepsBrachiiLong": {
+      "max_isometric_tendon_force_N": 189.10697126523593,
+      "optimal_fiber_length_m": 0.02529499995,
+      "tendon_slack_length_m": 0.07811749646205521,
+      "pennation_cosine": 0.9730448705798238,
+      "tendon_strain_at_max_force": 0.04,
+      "max_fiber_speed_optimal_lengths_per_s": 10.721698113207546,
+      "normalized_fiber_damping": 0.0054241070647500006,
+      "MT_path_length_offset_m": 0.0,
+      "active_force_length_exponent": 3.0,
+      "source_shortening_curvature": 0.23323,
+      "source_lengthening_curvature": 0.016191971994796654,
+      "passive_fiber_enabled": 1.0,
+      "degroote_force_velocity_enabled": 1.0
+    },
+    "FL_S_C3": {
+      "max_isometric_tendon_force_N": 3.8436555841564193,
+      "optimal_fiber_length_m": 0.0515698819177377,
+      "tendon_slack_length_m": 0.012162707999466435,
+      "pennation_cosine": 1.0,
+      "tendon_strain_at_max_force": 0.04,
+      "max_fiber_speed_optimal_lengths_per_s": 9.433962264150942,
+      "normalized_fiber_damping": 0.00973016639957315,
+      "MT_path_length_offset_m": 0.0,
+      "active_force_length_exponent": 3.0,
+      "source_shortening_curvature": 0.45283,
+      "source_lengthening_curvature": 0.3705776244850494,
+      "passive_fiber_enabled": 1.0,
+      "degroote_force_velocity_enabled": 1.0
+    },
+    "FR_S_C3": {
+      "max_isometric_tendon_force_N": 3.8436555841564193,
+      "optimal_fiber_length_m": 0.0515698819177377,
+      "tendon_slack_length_m": 0.012162707999466435,
+      "pennation_cosine": 1.0,
+      "tendon_strain_at_max_force": 0.04,
+      "max_fiber_speed_optimal_lengths_per_s": 9.433962264150942,
+      "normalized_fiber_damping": 0.00973016639957315,
+      "MT_path_length_offset_m": 0.0,
+      "active_force_length_exponent": 3.0,
+      "source_shortening_curvature": 0.45283,
+      "source_lengthening_curvature": 0.3705776244850494,
+      "passive_fiber_enabled": 1.0,
+      "degroote_force_velocity_enabled": 1.0
+    },
+    "FL_S_C4": {
+      "max_isometric_tendon_force_N": 4.105006139702811,
+      "optimal_fiber_length_m": 0.046113183168969264,
+      "tendon_slack_length_m": 0.010875750747398407,
+      "pennation_cosine": 1.0,
+      "tendon_strain_at_max_force": 0.04,
+      "max_fiber_speed_optimal_lengths_per_s": 9.433962264150942,
+      "normalized_fiber_damping": 0.008700600597918728,
+      "MT_path_length_offset_m": 0.0,
+      "active_force_length_exponent": 3.0,
+      "source_shortening_curvature": 0.45283,
+      "source_lengthening_curvature": 0.35752841482774195,
+      "passive_fiber_enabled": 1.0,
+      "degroote_force_velocity_enabled": 1.0
+    },
+    "FR_S_C4": {
+      "max_isometric_tendon_force_N": 4.105006139702811,
+      "optimal_fiber_length_m": 0.046113183168969264,
+      "tendon_slack_length_m": 0.010875750747398407,
+      "pennation_cosine": 1.0,
+      "tendon_strain_at_max_force": 0.04,
+      "max_fiber_speed_optimal_lengths_per_s": 9.433962264150942,
+      "normalized_fiber_damping": 0.008700600597918728,
+      "MT_path_length_offset_m": 0.0,
+      "active_force_length_exponent": 3.0,
+      "source_shortening_curvature": 0.45283,
+      "source_lengthening_curvature": 0.35752841482774195,
+      "passive_fiber_enabled": 1.0,
+      "degroote_force_velocity_enabled": 1.0
+    },
+    "FL_S_C5": {
+      "max_isometric_tendon_force_N": 5.83682907386942,
+      "optimal_fiber_length_m": 0.04455250844620901,
+      "tendon_slack_length_m": 0.010507667086370047,
+      "pennation_cosine": 1.0,
+      "tendon_strain_at_max_force": 0.04,
+      "max_fiber_speed_optimal_lengths_per_s": 9.433962264150942,
+      "normalized_fiber_damping": 0.00840613366909604,
+      "MT_path_length_offset_m": 0.0,
+      "active_force_length_exponent": 3.0,
+      "source_shortening_curvature": 0.45283,
+      "source_lengthening_curvature": 0.28988685708720713,
+      "passive_fiber_enabled": 1.0,
+      "degroote_force_velocity_enabled": 1.0
+    },
+    "FR_S_C5": {
+      "max_isometric_tendon_force_N": 5.83682907386942,
+      "optimal_fiber_length_m": 0.04455250844620901,
+      "tendon_slack_length_m": 0.010507667086370047,
+      "pennation_cosine": 1.0,
+      "tendon_strain_at_max_force": 0.04,
+      "max_fiber_speed_optimal_lengths_per_s": 9.433962264150942,
+      "normalized_fiber_damping": 0.00840613366909604,
+      "MT_path_length_offset_m": 0.0,
+      "active_force_length_exponent": 3.0,
+      "source_shortening_curvature": 0.45283,
+      "source_lengthening_curvature": 0.28988685708720713,
+      "passive_fiber_enabled": 1.0,
+      "degroote_force_velocity_enabled": 1.0
+    },
+    "FL_S_C6": {
+      "max_isometric_tendon_force_N": 5.733190060463092,
+      "optimal_fiber_length_m": 0.04235386866826828,
+      "tendon_slack_length_m": 0.009989119968931193,
+      "pennation_cosine": 1.0,
+      "tendon_strain_at_max_force": 0.04,
+      "max_fiber_speed_optimal_lengths_per_s": 9.433962264150942,
+      "normalized_fiber_damping": 0.007991295975144957,
+      "MT_path_length_offset_m": 0.0,
+      "active_force_length_exponent": 3.0,
+      "source_shortening_curvature": 0.45283,
+      "source_lengthening_curvature": 0.2932065389998727,
+      "passive_fiber_enabled": 1.0,
+      "degroote_force_velocity_enabled": 1.0
+    },
+    "FR_S_C6": {
+      "max_isometric_tendon_force_N": 5.733190060463092,
+      "optimal_fiber_length_m": 0.04235386866826828,
+      "tendon_slack_length_m": 0.009989119968931193,
+      "pennation_cosine": 1.0,
+      "tendon_strain_at_max_force": 0.04,
+      "max_fiber_speed_optimal_lengths_per_s": 9.433962264150942,
+      "normalized_fiber_damping": 0.007991295975144957,
+      "MT_path_length_offset_m": 0.0,
+      "active_force_length_exponent": 3.0,
+      "source_shortening_curvature": 0.45283,
+      "source_lengthening_curvature": 0.2932065389998727,
+      "passive_fiber_enabled": 1.0,
+      "degroote_force_velocity_enabled": 1.0
+    },
+    "FL_S_C7": {
+      "max_isometric_tendon_force_N": 5.199974846560971,
+      "optimal_fiber_length_m": 0.03863493082892434,
+      "tendon_slack_length_m": 0.00911201198795385,
+      "pennation_cosine": 1.0,
+      "tendon_strain_at_max_force": 0.04,
+      "max_fiber_speed_optimal_lengths_per_s": 9.433962264150942,
+      "normalized_fiber_damping": 0.007289609590363082,
+      "MT_path_length_offset_m": 0.0,
+      "active_force_length_exponent": 3.0,
+      "source_shortening_curvature": 0.45283,
+      "source_lengthening_curvature": 0.31156318548525574,
+      "passive_fiber_enabled": 1.0,
+      "degroote_force_velocity_enabled": 1.0
+    },
+    "FR_S_C7": {
+      "max_isometric_tendon_force_N": 5.199974846560971,
+      "optimal_fiber_length_m": 0.03863493082892434,
+      "tendon_slack_length_m": 0.00911201198795385,
+      "pennation_cosine": 1.0,
+      "tendon_strain_at_max_force": 0.04,
+      "max_fiber_speed_optimal_lengths_per_s": 9.433962264150942,
+      "normalized_fiber_damping": 0.007289609590363082,
+      "MT_path_length_offset_m": 0.0,
+      "active_force_length_exponent": 3.0,
+      "source_shortening_curvature": 0.45283,
+      "source_lengthening_curvature": 0.31156318548525574,
+      "passive_fiber_enabled": 1.0,
+      "degroote_force_velocity_enabled": 1.0
+    },
+    "FL_S_T1": {
+      "max_isometric_tendon_force_N": 6.609679077234169,
+      "optimal_fiber_length_m": 0.03171576027567279,
+      "tendon_slack_length_m": 0.007480132140488864,
+      "pennation_cosine": 1.0,
+      "tendon_strain_at_max_force": 0.04,
+      "max_fiber_speed_optimal_lengths_per_s": 9.433962264150942,
+      "normalized_fiber_damping": 0.005984105712391092,
+      "MT_path_length_offset_m": 0.0,
+      "active_force_length_exponent": 3.0,
+      "source_shortening_curvature": 0.45283,
+      "source_lengthening_curvature": 0.2706153414001962,
+      "passive_fiber_enabled": 1.0,
+      "degroote_force_velocity_enabled": 1.0
+    },
+    "FR_S_T1": {
+      "max_isometric_tendon_force_N": 6.609679077234169,
+      "optimal_fiber_length_m": 0.03171576027567279,
+      "tendon_slack_length_m": 0.007480132140488864,
+      "pennation_cosine": 1.0,
+      "tendon_strain_at_max_force": 0.04,
+      "max_fiber_speed_optimal_lengths_per_s": 9.433962264150942,
+      "normalized_fiber_damping": 0.005984105712391092,
+      "MT_path_length_offset_m": 0.0,
+      "active_force_length_exponent": 3.0,
+      "source_shortening_curvature": 0.45283,
+      "source_lengthening_curvature": 0.2706153414001962,
+      "passive_fiber_enabled": 1.0,
+      "degroote_force_velocity_enabled": 1.0
+    },
+    "FL_S_T2": {
+      "max_isometric_tendon_force_N": 3.1044071406731777,
+      "optimal_fiber_length_m": 0.029131789832959498,
+      "tendon_slack_length_m": 0.006870705149282897,
+      "pennation_cosine": 1.0,
+      "tendon_strain_at_max_force": 0.04,
+      "max_fiber_speed_optimal_lengths_per_s": 9.433962264150942,
+      "normalized_fiber_damping": 0.005496564119426319,
+      "MT_path_length_offset_m": 0.0,
+      "active_force_length_exponent": 3.0,
+      "source_shortening_curvature": 0.45283,
+      "source_lengthening_curvature": 0.4169289692759675,
+      "passive_fiber_enabled": 1.0,
+      "degroote_force_velocity_enabled": 1.0
+    },
+    "FR_S_T2": {
+      "max_isometric_tendon_force_N": 3.1044071406731777,
+      "optimal_fiber_length_m": 0.029131789832959498,
+      "tendon_slack_length_m": 0.006870705149282897,
+      "pennation_cosine": 1.0,
+      "tendon_strain_at_max_force": 0.04,
+      "max_fiber_speed_optimal_lengths_per_s": 9.433962264150942,
+      "normalized_fiber_damping": 0.005496564119426319,
+      "MT_path_length_offset_m": 0.0,
+      "active_force_length_exponent": 3.0,
+      "source_shortening_curvature": 0.45283,
+      "source_lengthening_curvature": 0.4169289692759675,
+      "passive_fiber_enabled": 1.0,
+      "degroote_force_velocity_enabled": 1.0
+    },
+    "FL_S_T3": {
+      "max_isometric_tendon_force_N": 1.621819403210236,
+      "optimal_fiber_length_m": 0.02279021298466275,
+      "tendon_slack_length_m": 0.005375050232231779,
+      "pennation_cosine": 1.0,
+      "tendon_strain_at_max_force": 0.04,
+      "max_fiber_speed_optimal_lengths_per_s": 9.433962264150942,
+      "normalized_fiber_damping": 0.004300040185785425,
+      "MT_path_length_offset_m": 0.0,
+      "active_force_length_exponent": 3.0,
+      "source_shortening_curvature": 0.45283,
+      "source_lengthening_curvature": 0.5405406135865694,
+      "passive_fiber_enabled": 1.0,
+      "degroote_force_velocity_enabled": 1.0
+    },
+    "FR_S_T3": {
+      "max_isometric_tendon_force_N": 1.621819403210236,
+      "optimal_fiber_length_m": 0.02279021298466275,
+      "tendon_slack_length_m": 0.005375050232231779,
+      "pennation_cosine": 1.0,
+      "tendon_strain_at_max_force": 0.04,
+      "max_fiber_speed_optimal_lengths_per_s": 9.433962264150942,
+      "normalized_fiber_damping": 0.004300040185785425,
+      "MT_path_length_offset_m": 0.0,
+      "active_force_length_exponent": 3.0,
+      "source_shortening_curvature": 0.45283,
+      "source_lengthening_curvature": 0.5405406135865694,
+      "passive_fiber_enabled": 1.0,
+      "degroote_force_velocity_enabled": 1.0
+    },
+    "FL_S_T4": {
+      "max_isometric_tendon_force_N": 2.720372546139433,
+      "optimal_fiber_length_m": 0.019811479484401692,
+      "tendon_slack_length_m": 0.004672518746321153,
+      "pennation_cosine": 1.0,
+      "tendon_strain_at_max_force": 0.04,
+      "max_fiber_speed_optimal_lengths_per_s": 9.433962264150942,
+      "normalized_fiber_damping": 0.0037380149970569227,
+      "MT_path_length_offset_m": 0.0,
+      "active_force_length_exponent": 3.0,
+      "source_shortening_curvature": 0.45283,
+      "source_lengthening_curvature": 0.4431809503277584,
+      "passive_fiber_enabled": 1.0,
+      "degroote_force_velocity_enabled": 1.0
+    },
+    "FR_S_T4": {
+      "max_isometric_tendon_force_N": 2.720372546139433,
+      "optimal_fiber_length_m": 0.019811479484401692,
+      "tendon_slack_length_m": 0.004672518746321153,
+      "pennation_cosine": 1.0,
+      "tendon_strain_at_max_force": 0.04,
+      "max_fiber_speed_optimal_lengths_per_s": 9.433962264150942,
+      "normalized_fiber_damping": 0.0037380149970569227,
+      "MT_path_length_offset_m": 0.0,
+      "active_force_length_exponent": 3.0,
+      "source_shortening_curvature": 0.45283,
+      "source_lengthening_curvature": 0.4431809503277584,
+      "passive_fiber_enabled": 1.0,
+      "degroote_force_velocity_enabled": 1.0
+    },
+    "FL_S_T5": {
+      "max_isometric_tendon_force_N": 2.7647430769819774,
+      "optimal_fiber_length_m": 0.022436955535609628,
+      "tendon_slack_length_m": 0.005291734796134344,
+      "pennation_cosine": 1.0,
+      "tendon_strain_at_max_force": 0.04,
+      "max_fiber_speed_optimal_lengths_per_s": 9.433962264150942,
+      "normalized_fiber_damping": 0.004233387836907477,
+      "MT_path_length_offset_m": 0.0,
+      "active_force_length_exponent": 3.0,
+      "source_shortening_curvature": 0.45283,
+      "source_lengthening_curvature": 0.4399801588747455,
+      "passive_fiber_enabled": 1.0,
+      "degroote_force_velocity_enabled": 1.0
+    },
+    "FR_S_T5": {
+      "max_isometric_tendon_force_N": 2.7647430769819774,
+      "optimal_fiber_length_m": 0.022436955535609628,
+      "tendon_slack_length_m": 0.005291734796134344,
+      "pennation_cosine": 1.0,
+      "tendon_strain_at_max_force": 0.04,
+      "max_fiber_speed_optimal_lengths_per_s": 9.433962264150942,
+      "normalized_fiber_damping": 0.004233387836907477,
+      "MT_path_length_offset_m": 0.0,
+      "active_force_length_exponent": 3.0,
+      "source_shortening_curvature": 0.45283,
+      "source_lengthening_curvature": 0.4399801588747455,
+      "passive_fiber_enabled": 1.0,
+      "degroote_force_velocity_enabled": 1.0
+    },
+    "FL_S_T6": {
+      "max_isometric_tendon_force_N": 6.2516547938839855,
+      "optimal_fiber_length_m": 0.026485696641832118,
+      "tendon_slack_length_m": 0.006246626566469837,
+      "pennation_cosine": 1.0,
+      "tendon_strain_at_max_force": 0.04,
+      "max_fiber_speed_optimal_lengths_per_s": 9.433962264150942,
+      "normalized_fiber_damping": 0.004997301253175872,
+      "MT_path_length_offset_m": 0.0,
+      "active_force_length_exponent": 3.0,
+      "source_shortening_curvature": 0.45283,
+      "source_lengthening_curvature": 0.2806758160012567,
+      "passive_fiber_enabled": 1.0,
+      "degroote_force_velocity_enabled": 1.0
+    },
+    "FR_S_T6": {
+      "max_isometric_tendon_force_N": 6.2516547938839855,
+      "optimal_fiber_length_m": 0.026485696641832118,
+      "tendon_slack_length_m": 0.006246626566469837,
+      "pennation_cosine": 1.0,
+      "tendon_strain_at_max_force": 0.04,
+      "max_fiber_speed_optimal_lengths_per_s": 9.433962264150942,
+      "normalized_fiber_damping": 0.004997301253175872,
+      "MT_path_length_offset_m": 0.0,
+      "active_force_length_exponent": 3.0,
+      "source_shortening_curvature": 0.45283,
+      "source_lengthening_curvature": 0.2806758160012567,
+      "passive_fiber_enabled": 1.0,
+      "degroote_force_velocity_enabled": 1.0
+    },
+    "FL_S_T7": {
+      "max_isometric_tendon_force_N": 5.40708468957073,
+      "optimal_fiber_length_m": 0.030003901070628915,
+      "tendon_slack_length_m": 0.00707639176194078,
+      "pennation_cosine": 1.0,
+      "tendon_strain_at_max_force": 0.04,
+      "max_fiber_speed_optimal_lengths_per_s": 9.433962264150942,
+      "normalized_fiber_damping": 0.005661113409552625,
+      "MT_path_length_offset_m": 0.0,
+      "active_force_length_exponent": 3.0,
+      "source_shortening_curvature": 0.45283,
+      "source_lengthening_curvature": 0.30765666448443235,
+      "passive_fiber_enabled": 1.0,
+      "degroote_force_velocity_enabled": 1.0
+    },
+    "FR_S_T7": {
+      "max_isometric_tendon_force_N": 5.40708468957073,
+      "optimal_fiber_length_m": 0.030003901070628915,
+      "tendon_slack_length_m": 0.00707639176194078,
+      "pennation_cosine": 1.0,
+      "tendon_strain_at_max_force": 0.04,
+      "max_fiber_speed_optimal_lengths_per_s": 9.433962264150942,
+      "normalized_fiber_damping": 0.005661113409552625,
+      "MT_path_length_offset_m": 0.0,
+      "active_force_length_exponent": 3.0,
+      "source_shortening_curvature": 0.45283,
+      "source_lengthening_curvature": 0.30765666448443235,
+      "passive_fiber_enabled": 1.0,
+      "degroote_force_velocity_enabled": 1.0
+    },
+    "FL_S_T8": {
+      "max_isometric_tendon_force_N": 4.183070045638476,
+      "optimal_fiber_length_m": 0.03486565150314857,
+      "tendon_slack_length_m": 0.008223031014893528,
+      "pennation_cosine": 1.0,
+      "tendon_strain_at_max_force": 0.04,
+      "max_fiber_speed_optimal_lengths_per_s": 9.433962264150942,
+      "normalized_fiber_damping": 0.006578424811914823,
+      "MT_path_length_offset_m": 0.0,
+      "active_force_length_exponent": 3.0,
+      "source_shortening_curvature": 0.45283,
+      "source_lengthening_curvature": 0.35745607483686087,
+      "passive_fiber_enabled": 1.0,
+      "degroote_force_velocity_enabled": 1.0
+    },
+    "FR_S_T8": {
+      "max_isometric_tendon_force_N": 4.183070045638476,
+      "optimal_fiber_length_m": 0.03486565150314857,
+      "tendon_slack_length_m": 0.008223031014893528,
+      "pennation_cosine": 1.0,
+      "tendon_strain_at_max_force": 0.04,
+      "max_fiber_speed_optimal_lengths_per_s": 9.433962264150942,
+      "normalized_fiber_damping": 0.006578424811914823,
+      "MT_path_length_offset_m": 0.0,
+      "active_force_length_exponent": 3.0,
+      "source_shortening_curvature": 0.45283,
+      "source_lengthening_curvature": 0.35745607483686087,
+      "passive_fiber_enabled": 1.0,
+      "degroote_force_velocity_enabled": 1.0
+    },
+    "FL_S_T9": {
+      "max_isometric_tendon_force_N": 2.1512057367109354,
+      "optimal_fiber_length_m": 0.03781542048130531,
+      "tendon_slack_length_m": 0.008918731245590873,
+      "pennation_cosine": 1.0,
+      "tendon_strain_at_max_force": 0.04,
+      "max_fiber_speed_optimal_lengths_per_s": 9.433962264150942,
+      "normalized_fiber_damping": 0.0071349849964727,
+      "MT_path_length_offset_m": 0.0,
+      "active_force_length_exponent": 3.0,
+      "source_shortening_curvature": 0.45283,
+      "source_lengthening_curvature": 0.4887946932635501,
+      "passive_fiber_enabled": 1.0,
+      "degroote_force_velocity_enabled": 1.0
+    },
+    "FR_S_T9": {
+      "max_isometric_tendon_force_N": 2.1512057367109354,
+      "optimal_fiber_length_m": 0.03781542048130531,
+      "tendon_slack_length_m": 0.008918731245590873,
+      "pennation_cosine": 1.0,
+      "tendon_strain_at_max_force": 0.04,
+      "max_fiber_speed_optimal_lengths_per_s": 9.433962264150942,
+      "normalized_fiber_damping": 0.0071349849964727,
+      "MT_path_length_offset_m": 0.0,
+      "active_force_length_exponent": 3.0,
+      "source_shortening_curvature": 0.45283,
+      "source_lengthening_curvature": 0.4887946932635501,
+      "passive_fiber_enabled": 1.0,
+      "degroote_force_velocity_enabled": 1.0
+    },
+    "FL_R_C2": {
+      "max_isometric_tendon_force_N": 1.207746371684156,
+      "optimal_fiber_length_m": 0.0420690827480221,
+      "tendon_slack_length_m": 0.009921953478307098,
+      "pennation_cosine": 1.0,
+      "tendon_strain_at_max_force": 0.04,
+      "max_fiber_speed_optimal_lengths_per_s": 9.433962264150942,
+      "normalized_fiber_damping": 0.00793756278264568,
+      "MT_path_length_offset_m": 0.0,
+      "active_force_length_exponent": 3.0,
+      "source_shortening_curvature": 0.45283,
+      "source_lengthening_curvature": 0.5870625374165226,
+      "passive_fiber_enabled": 1.0,
+      "degroote_force_velocity_enabled": 1.0
+    },
+    "FR_R_C2": {
+      "max_isometric_tendon_force_N": 1.207746371684156,
+      "optimal_fiber_length_m": 0.0420690827480221,
+      "tendon_slack_length_m": 0.009921953478307098,
+      "pennation_cosine": 1.0,
+      "tendon_strain_at_max_force": 0.04,
+      "max_fiber_speed_optimal_lengths_per_s": 9.433962264150942,
+      "normalized_fiber_damping": 0.00793756278264568,
+      "MT_path_length_offset_m": 0.0,
+      "active_force_length_exponent": 3.0,
+      "source_shortening_curvature": 0.45283,
+      "source_lengthening_curvature": 0.5870625374165226,
+      "passive_fiber_enabled": 1.0,
+      "degroote_force_velocity_enabled": 1.0
+    },
+    "FL_R_C3-7": {
+      "max_isometric_tendon_force_N": 10.498798983816204,
+      "optimal_fiber_length_m": 0.028879174771119894,
+      "tendon_slack_length_m": 0.0068111261252641235,
+      "pennation_cosine": 1.0,
+      "tendon_strain_at_max_force": 0.04,
+      "max_fiber_speed_optimal_lengths_per_s": 9.433962264150942,
+      "normalized_fiber_damping": 0.0054489009002113,
+      "MT_path_length_offset_m": 0.0,
+      "active_force_length_exponent": 3.0,
+      "source_shortening_curvature": 0.45283,
+      "source_lengthening_curvature": 0.19262926788533075,
+      "passive_fiber_enabled": 1.0,
+      "degroote_force_velocity_enabled": 1.0
+    },
+    "FR_R_C3-7": {
+      "max_isometric_tendon_force_N": 10.498798983816204,
+      "optimal_fiber_length_m": 0.028879174771119894,
+      "tendon_slack_length_m": 0.0068111261252641235,
+      "pennation_cosine": 1.0,
+      "tendon_strain_at_max_force": 0.04,
+      "max_fiber_speed_optimal_lengths_per_s": 9.433962264150942,
+      "normalized_fiber_damping": 0.0054489009002113,
+      "MT_path_length_offset_m": 0.0,
+      "active_force_length_exponent": 3.0,
+      "source_shortening_curvature": 0.45283,
+      "source_lengthening_curvature": 0.19262926788533075,
+      "passive_fiber_enabled": 1.0,
+      "degroote_force_velocity_enabled": 1.0
+    },
+    "FL_R_T1": {
+      "max_isometric_tendon_force_N": 5.84768778140187,
+      "optimal_fiber_length_m": 0.03332122254160439,
+      "tendon_slack_length_m": 0.007858778901321787,
+      "pennation_cosine": 1.0,
+      "tendon_strain_at_max_force": 0.04,
+      "max_fiber_speed_optimal_lengths_per_s": 9.433962264150942,
+      "normalized_fiber_damping": 0.006287023121057432,
+      "MT_path_length_offset_m": 0.0,
+      "active_force_length_exponent": 3.0,
+      "source_shortening_curvature": 0.45283,
+      "source_lengthening_curvature": 0.2898392982750022,
+      "passive_fiber_enabled": 1.0,
+      "degroote_force_velocity_enabled": 1.0
+    },
+    "FR_R_T1": {
+      "max_isometric_tendon_force_N": 5.84768778140187,
+      "optimal_fiber_length_m": 0.03332122254160439,
+      "tendon_slack_length_m": 0.007858778901321787,
+      "pennation_cosine": 1.0,
+      "tendon_strain_at_max_force": 0.04,
+      "max_fiber_speed_optimal_lengths_per_s": 9.433962264150942,
+      "normalized_fiber_damping": 0.006287023121057432,
+      "MT_path_length_offset_m": 0.0,
+      "active_force_length_exponent": 3.0,
+      "source_shortening_curvature": 0.45283,
+      "source_lengthening_curvature": 0.2898392982750022,
+      "passive_fiber_enabled": 1.0,
+      "degroote_force_velocity_enabled": 1.0
+    },
+    "FL_R_T2": {
+      "max_isometric_tendon_force_N": 6.0086609207406925,
+      "optimal_fiber_length_m": 0.037296332257772756,
+      "tendon_slack_length_m": 0.008796304777776591,
+      "pennation_cosine": 1.0,
+      "tendon_strain_at_max_force": 0.04,
+      "max_fiber_speed_optimal_lengths_per_s": 9.433962264150942,
+      "normalized_fiber_damping": 0.007037043822221274,
+      "MT_path_length_offset_m": 0.0,
+      "active_force_length_exponent": 3.0,
+      "source_shortening_curvature": 0.45283,
+      "source_lengthening_curvature": 0.28483911549735497,
+      "passive_fiber_enabled": 1.0,
+      "degroote_force_velocity_enabled": 1.0
+    },
+    "FR_R_T2": {
+      "max_isometric_tendon_force_N": 6.0086609207406925,
+      "optimal_fiber_length_m": 0.037296332257772756,
+      "tendon_slack_length_m": 0.008796304777776591,
+      "pennation_cosine": 1.0,
+      "tendon_strain_at_max_force": 0.04,
+      "max_fiber_speed_optimal_lengths_per_s": 9.433962264150942,
+      "normalized_fiber_damping": 0.007037043822221274,
+      "MT_path_length_offset_m": 0.0,
+      "active_force_length_exponent": 3.0,
+      "source_shortening_curvature": 0.45283,
+      "source_lengthening_curvature": 0.28483911549735497,
+      "passive_fiber_enabled": 1.0,
+      "degroote_force_velocity_enabled": 1.0
+    },
+    "FL_R_T3": {
+      "max_isometric_tendon_force_N": 3.6331787990958366,
+      "optimal_fiber_length_m": 0.04181479478513411,
+      "tendon_slack_length_m": 0.009861979902154268,
+      "pennation_cosine": 1.0,
+      "tendon_strain_at_max_force": 0.04,
+      "max_fiber_speed_optimal_lengths_per_s": 9.433962264150942,
+      "normalized_fiber_damping": 0.007889583921723417,
+      "MT_path_length_offset_m": 0.0,
+      "active_force_length_exponent": 3.0,
+      "source_shortening_curvature": 0.45283,
+      "source_lengthening_curvature": 0.3821197659354033,
+      "passive_fiber_enabled": 1.0,
+      "degroote_force_velocity_enabled": 1.0
+    },
+    "FR_R_T3": {
+      "max_isometric_tendon_force_N": 3.6331787990958366,
+      "optimal_fiber_length_m": 0.04181479478513411,
+      "tendon_slack_length_m": 0.009861979902154268,
+      "pennation_cosine": 1.0,
+      "tendon_strain_at_max_force": 0.04,
+      "max_fiber_speed_optimal_lengths_per_s": 9.433962264150942,
+      "normalized_fiber_damping": 0.007889583921723417,
+      "MT_path_length_offset_m": 0.0,
+      "active_force_length_exponent": 3.0,
+      "source_shortening_curvature": 0.45283,
+      "source_lengthening_curvature": 0.3821197659354033,
+      "passive_fiber_enabled": 1.0,
+      "degroote_force_velocity_enabled": 1.0
+    },
+    "FL_R_T4": {
+      "max_isometric_tendon_force_N": 2.503357979998125,
+      "optimal_fiber_length_m": 0.03930745364074445,
+      "tendon_slack_length_m": 0.009270625858666141,
+      "pennation_cosine": 1.0,
+      "tendon_strain_at_max_force": 0.04,
+      "max_fiber_speed_optimal_lengths_per_s": 9.433962264150942,
+      "normalized_fiber_damping": 0.0074165006869329145,
+      "MT_path_length_offset_m": 0.0,
+      "active_force_length_exponent": 3.0,
+      "source_shortening_curvature": 0.45283,
+      "source_lengthening_curvature": 0.45622802349610825,
+      "passive_fiber_enabled": 1.0,
+      "degroote_force_velocity_enabled": 1.0
+    },
+    "FR_R_T4": {
+      "max_isometric_tendon_force_N": 2.503357979998125,
+      "optimal_fiber_length_m": 0.03930745364074445,
+      "tendon_slack_length_m": 0.009270625858666141,
+      "pennation_cosine": 1.0,
+      "tendon_strain_at_max_force": 0.04,
+      "max_fiber_speed_optimal_lengths_per_s": 9.433962264150942,
+      "normalized_fiber_damping": 0.0074165006869329145,
+      "MT_path_length_offset_m": 0.0,
+      "active_force_length_exponent": 3.0,
+      "source_shortening_curvature": 0.45283,
+      "source_lengthening_curvature": 0.45622802349610825,
+      "passive_fiber_enabled": 1.0,
+      "degroote_force_velocity_enabled": 1.0
+    },
+    "FL_R_T5": {
+      "max_isometric_tendon_force_N": 1.9136246097101053,
+      "optimal_fiber_length_m": 0.03908248876020548,
+      "tendon_slack_length_m": 0.009217568103822044,
+      "pennation_cosine": 1.0,
+      "tendon_strain_at_max_force": 0.04,
+      "max_fiber_speed_optimal_lengths_per_s": 9.433962264150942,
+      "normalized_fiber_damping": 0.007374054483057639,
+      "MT_path_length_offset_m": 0.0,
+      "active_force_length_exponent": 3.0,
+      "source_shortening_curvature": 0.45283,
+      "source_lengthening_curvature": 0.5076142904996381,
+      "passive_fiber_enabled": 1.0,
+      "degroote_force_velocity_enabled": 1.0
+    },
+    "FR_R_T5": {
+      "max_isometric_tendon_force_N": 1.9136246097101053,
+      "optimal_fiber_length_m": 0.03908248876020548,
+      "tendon_slack_length_m": 0.009217568103822044,
+      "pennation_cosine": 1.0,
+      "tendon_strain_at_max_force": 0.04,
+      "max_fiber_speed_optimal_lengths_per_s": 9.433962264150942,
+      "normalized_fiber_damping": 0.007374054483057639,
+      "MT_path_length_offset_m": 0.0,
+      "active_force_length_exponent": 3.0,
+      "source_shortening_curvature": 0.45283,
+      "source_lengthening_curvature": 0.5076142904996381,
+      "passive_fiber_enabled": 1.0,
+      "degroote_force_velocity_enabled": 1.0
+    },
+    "FL_DigitalExtensors": {
+      "max_isometric_tendon_force_N": 78.49590850824231,
+      "optimal_fiber_length_m": 0.023820354450000004,
+      "tendon_slack_length_m": 0.11371409759625146,
+      "pennation_cosine": 0.9956707906498045,
+      "tendon_strain_at_max_force": 0.04,
+      "max_fiber_speed_optimal_lengths_per_s": 12.537735849056602,
+      "normalized_fiber_damping": 0.0059730662385,
+      "MT_path_length_offset_m": 0.0,
+      "active_force_length_exponent": 3.0,
+      "source_shortening_curvature": 0.03193,
+      "source_lengthening_curvature": 0.23318684329623993,
+      "passive_fiber_enabled": 1.0,
+      "degroote_force_velocity_enabled": 1.0
+    },
+    "FR_DigitalExtensors": {
+      "max_isometric_tendon_force_N": 78.49590850824231,
+      "optimal_fiber_length_m": 0.023820354450000004,
+      "tendon_slack_length_m": 0.1134368569001827,
+      "pennation_cosine": 0.9956707906498045,
+      "tendon_strain_at_max_force": 0.04,
+      "max_fiber_speed_optimal_lengths_per_s": 12.537735849056602,
+      "normalized_fiber_damping": 0.0059730662385,
+      "MT_path_length_offset_m": 0.0,
+      "active_force_length_exponent": 3.0,
+      "source_shortening_curvature": 0.03193,
+      "source_lengthening_curvature": 0.23318684329623993,
+      "passive_fiber_enabled": 1.0,
+      "degroote_force_velocity_enabled": 1.0
+    },
+    "FL_DigitalFlexors": {
+      "max_isometric_tendon_force_N": 601.1227378347684,
+      "optimal_fiber_length_m": 0.018199603563295,
+      "tendon_slack_length_m": 0.10709708984572286,
+      "pennation_cosine": 0.9872429102593628,
+      "tendon_strain_at_max_force": 0.04,
+      "max_fiber_speed_optimal_lengths_per_s": 11.714848720162436,
+      "normalized_fiber_damping": 0.004264112050218603,
+      "MT_path_length_offset_m": 0.0,
+      "active_force_length_exponent": 3.0,
+      "source_shortening_curvature": 0.11036903534161019,
+      "source_lengthening_curvature": 0.00977098849329144,
+      "passive_fiber_enabled": 1.0,
+      "degroote_force_velocity_enabled": 1.0
+    },
+    "FR_DigitalFlexors": {
+      "max_isometric_tendon_force_N": 601.1227378347684,
+      "optimal_fiber_length_m": 0.018199603563295,
+      "tendon_slack_length_m": 0.1075947779598452,
+      "pennation_cosine": 0.9872429102593628,
+      "tendon_strain_at_max_force": 0.04,
+      "max_fiber_speed_optimal_lengths_per_s": 11.714848720162436,
+      "normalized_fiber_damping": 0.004264112050218603,
+      "MT_path_length_offset_m": 0.0,
+      "active_force_length_exponent": 3.0,
+      "source_shortening_curvature": 0.11036903534161019,
+      "source_lengthening_curvature": 0.00977098849329144,
+      "passive_fiber_enabled": 1.0,
+      "degroote_force_velocity_enabled": 1.0
+    },
+    "FL_TrapeziusCervical": {
+      "max_isometric_tendon_force_N": 7.508087010046516,
+      "optimal_fiber_length_m": 0.06585075335513,
+      "tendon_slack_length_m": 0.010962944509733077,
+      "pennation_cosine": 1.0,
+      "tendon_strain_at_max_force": 0.04,
+      "max_fiber_speed_optimal_lengths_per_s": 9.433962264150942,
+      "normalized_fiber_damping": 0.012424670444364152,
+      "MT_path_length_offset_m": 0.0,
+      "active_force_length_exponent": 3.0,
+      "source_shortening_curvature": 0.45283,
+      "source_lengthening_curvature": 0.3705776244850494,
+      "passive_fiber_enabled": 1.0,
+      "degroote_force_velocity_enabled": 1.0
+    },
+    "FR_TrapeziusCervical": {
+      "max_isometric_tendon_force_N": 7.508087010046516,
+      "optimal_fiber_length_m": 0.06585075335513,
+      "tendon_slack_length_m": 0.010962944509733077,
+      "pennation_cosine": 1.0,
+      "tendon_strain_at_max_force": 0.04,
+      "max_fiber_speed_optimal_lengths_per_s": 9.433962264150942,
+      "normalized_fiber_damping": 0.012424670444364152,
+      "MT_path_length_offset_m": 0.0,
+      "active_force_length_exponent": 3.0,
+      "source_shortening_curvature": 0.45283,
+      "source_lengthening_curvature": 0.3705776244850494,
+      "passive_fiber_enabled": 1.0,
+      "degroote_force_velocity_enabled": 1.0
+    },
+    "FL_TrapeziusThoracic": {
+      "max_isometric_tendon_force_N": 6.977343336771235,
+      "optimal_fiber_length_m": 0.05769514721607932,
+      "tendon_slack_length_m": 0.00960518544107869,
+      "pennation_cosine": 1.0,
+      "tendon_strain_at_max_force": 0.04,
+      "max_fiber_speed_optimal_lengths_per_s": 9.433962264150942,
+      "normalized_fiber_damping": 0.010885876833222513,
+      "MT_path_length_offset_m": 0.0,
+      "active_force_length_exponent": 3.0,
+      "source_shortening_curvature": 0.45283,
+      "source_lengthening_curvature": 0.3705776244850494,
+      "passive_fiber_enabled": 1.0,
+      "degroote_force_velocity_enabled": 1.0
+    },
+    "FR_TrapeziusThoracic": {
+      "max_isometric_tendon_force_N": 6.977343336771235,
+      "optimal_fiber_length_m": 0.05769514721607932,
+      "tendon_slack_length_m": 0.00960518544107869,
+      "pennation_cosine": 1.0,
+      "tendon_strain_at_max_force": 0.04,
+      "max_fiber_speed_optimal_lengths_per_s": 9.433962264150942,
+      "normalized_fiber_damping": 0.010885876833222513,
+      "MT_path_length_offset_m": 0.0,
+      "active_force_length_exponent": 3.0,
+      "source_shortening_curvature": 0.45283,
+      "source_lengthening_curvature": 0.3705776244850494,
+      "passive_fiber_enabled": 1.0,
+      "degroote_force_velocity_enabled": 1.0
+    },
+    "FL_LatissimusDorsi": {
+      "max_isometric_tendon_force_N": 16.51465085230317,
+      "optimal_fiber_length_m": 0.13217194030539167,
+      "tendon_slack_length_m": 0.022004207598011936,
+      "pennation_cosine": 1.0,
+      "tendon_strain_at_max_force": 0.04,
+      "max_fiber_speed_optimal_lengths_per_s": 9.433962264150942,
+      "normalized_fiber_damping": 0.024938101944413524,
+      "MT_path_length_offset_m": 0.0,
+      "active_force_length_exponent": 3.0,
+      "source_shortening_curvature": 0.45283,
+      "source_lengthening_curvature": 0.3705776244850494,
+      "passive_fiber_enabled": 1.0,
+      "degroote_force_velocity_enabled": 1.0
+    },
+    "FR_LatissimusDorsi": {
+      "max_isometric_tendon_force_N": 16.51465085230317,
+      "optimal_fiber_length_m": 0.13217194030539167,
+      "tendon_slack_length_m": 0.022004207598011936,
+      "pennation_cosine": 1.0,
+      "tendon_strain_at_max_force": 0.04,
+      "max_fiber_speed_optimal_lengths_per_s": 9.433962264150942,
+      "normalized_fiber_damping": 0.024938101944413524,
+      "MT_path_length_offset_m": 0.0,
+      "active_force_length_exponent": 3.0,
+      "source_shortening_curvature": 0.45283,
+      "source_lengthening_curvature": 0.3705776244850494,
+      "passive_fiber_enabled": 1.0,
+      "degroote_force_velocity_enabled": 1.0
+    },
+    "FL_PectoralisProfundus": {
+      "max_isometric_tendon_force_N": 32.59197000797395,
+      "optimal_fiber_length_m": 0.05300374241662422,
+      "tendon_slack_length_m": 0.008824152455597818,
+      "pennation_cosine": 1.0,
+      "tendon_strain_at_max_force": 0.04,
+      "max_fiber_speed_optimal_lengths_per_s": 9.433962264150942,
+      "normalized_fiber_damping": 0.010000706116344191,
+      "MT_path_length_offset_m": 0.0,
+      "active_force_length_exponent": 3.0,
+      "source_shortening_curvature": 0.45283,
+      "source_lengthening_curvature": 0.3705776244850494,
+      "passive_fiber_enabled": 1.0,
+      "degroote_force_velocity_enabled": 1.0
+    },
+    "FR_PectoralisProfundus": {
+      "max_isometric_tendon_force_N": 32.59197000797395,
+      "optimal_fiber_length_m": 0.05300374241662422,
+      "tendon_slack_length_m": 0.008824152455597818,
+      "pennation_cosine": 1.0,
+      "tendon_strain_at_max_force": 0.04,
+      "max_fiber_speed_optimal_lengths_per_s": 9.433962264150942,
+      "normalized_fiber_damping": 0.010000706116344191,
+      "MT_path_length_offset_m": 0.0,
+      "active_force_length_exponent": 3.0,
+      "source_shortening_curvature": 0.45283,
+      "source_lengthening_curvature": 0.3705776244850494,
+      "passive_fiber_enabled": 1.0,
+      "degroote_force_velocity_enabled": 1.0
+    },
+    "FL_PectoralisSuperficialis": {
+      "max_isometric_tendon_force_N": 6.623550618152982,
+      "optimal_fiber_length_m": 0.039991450508966776,
+      "tendon_slack_length_m": 0.006657844146886811,
+      "pennation_cosine": 1.0,
+      "tendon_strain_at_max_force": 0.04,
+      "max_fiber_speed_optimal_lengths_per_s": 9.433962264150942,
+      "normalized_fiber_damping": 0.007545556699805052,
+      "MT_path_length_offset_m": 0.0,
+      "active_force_length_exponent": 3.0,
+      "source_shortening_curvature": 0.45283,
+      "source_lengthening_curvature": 0.3705776244850494,
+      "passive_fiber_enabled": 1.0,
+      "degroote_force_velocity_enabled": 1.0
+    },
+    "FR_PectoralisSuperficialis": {
+      "max_isometric_tendon_force_N": 6.623550618152982,
+      "optimal_fiber_length_m": 0.039991450508966776,
+      "tendon_slack_length_m": 0.006657844146886811,
+      "pennation_cosine": 1.0,
+      "tendon_strain_at_max_force": 0.04,
+      "max_fiber_speed_optimal_lengths_per_s": 9.433962264150942,
+      "normalized_fiber_damping": 0.007545556699805052,
+      "MT_path_length_offset_m": 0.0,
+      "active_force_length_exponent": 3.0,
+      "source_shortening_curvature": 0.45283,
+      "source_lengthening_curvature": 0.3705776244850494,
+      "passive_fiber_enabled": 1.0,
+      "degroote_force_velocity_enabled": 1.0
+    },
+    "FL_Clavobrachialis": {
+      "max_isometric_tendon_force_N": 9.05567148687485,
+      "optimal_fiber_length_m": 0.08587737673134448,
+      "tendon_slack_length_m": 0.014297010554607852,
+      "pennation_cosine": 1.0,
+      "tendon_strain_at_max_force": 0.04,
+      "max_fiber_speed_optimal_lengths_per_s": 9.433962264150942,
+      "normalized_fiber_damping": 0.016203278628555563,
+      "MT_path_length_offset_m": 0.0,
+      "active_force_length_exponent": 3.0,
+      "source_shortening_curvature": 0.45283,
+      "source_lengthening_curvature": 0.3705776244850494,
+      "passive_fiber_enabled": 1.0,
+      "degroote_force_velocity_enabled": 1.0
+    },
+    "FR_Clavobrachialis": {
+      "max_isometric_tendon_force_N": 9.05567148687485,
+      "optimal_fiber_length_m": 0.08587737673134448,
+      "tendon_slack_length_m": 0.014297010554607852,
+      "pennation_cosine": 1.0,
+      "tendon_strain_at_max_force": 0.04,
+      "max_fiber_speed_optimal_lengths_per_s": 9.433962264150942,
+      "normalized_fiber_damping": 0.016203278628555563,
+      "MT_path_length_offset_m": 0.0,
+      "active_force_length_exponent": 3.0,
+      "source_shortening_curvature": 0.45283,
+      "source_lengthening_curvature": 0.3705776244850494,
+      "passive_fiber_enabled": 1.0,
+      "degroote_force_velocity_enabled": 1.0
+    }
+  },
+  "activation": {
+    "L_IP": {
+      "activation_time_constant_s": 0.015,
+      "deactivation_time_constant_s": 0.05,
+      "switch_smoothing_width": 0.0
+    },
+    "L_BFA": {
+      "activation_time_constant_s": 0.015,
+      "deactivation_time_constant_s": 0.05,
+      "switch_smoothing_width": 0.0
+    },
+    "L_VL": {
+      "activation_time_constant_s": 0.015,
+      "deactivation_time_constant_s": 0.05,
+      "switch_smoothing_width": 0.0
+    },
+    "L_VM": {
+      "activation_time_constant_s": 0.015,
+      "deactivation_time_constant_s": 0.05,
+      "switch_smoothing_width": 0.0
+    },
+    "L_TA": {
+      "activation_time_constant_s": 0.015,
+      "deactivation_time_constant_s": 0.05,
+      "switch_smoothing_width": 0.0
+    },
+    "L_SO": {
+      "activation_time_constant_s": 0.015,
+      "deactivation_time_constant_s": 0.05,
+      "switch_smoothing_width": 0.0
+    },
+    "L_RF": {
+      "activation_time_constant_s": 0.015,
+      "deactivation_time_constant_s": 0.05,
+      "switch_smoothing_width": 0.0
+    },
+    "L_BFP": {
+      "activation_time_constant_s": 0.015,
+      "deactivation_time_constant_s": 0.05,
+      "switch_smoothing_width": 0.0
+    },
+    "L_SAM": {
+      "activation_time_constant_s": 0.015,
+      "deactivation_time_constant_s": 0.05,
+      "switch_smoothing_width": 0.0
+    },
+    "L_LG": {
+      "activation_time_constant_s": 0.015,
+      "deactivation_time_constant_s": 0.05,
+      "switch_smoothing_width": 0.0
+    },
+    "L_MG": {
+      "activation_time_constant_s": 0.015,
+      "deactivation_time_constant_s": 0.05,
+      "switch_smoothing_width": 0.0
+    },
+    "R_IP": {
+      "activation_time_constant_s": 0.015,
+      "deactivation_time_constant_s": 0.05,
+      "switch_smoothing_width": 0.0
+    },
+    "R_BFA": {
+      "activation_time_constant_s": 0.015,
+      "deactivation_time_constant_s": 0.05,
+      "switch_smoothing_width": 0.0
+    },
+    "R_VL": {
+      "activation_time_constant_s": 0.015,
+      "deactivation_time_constant_s": 0.05,
+      "switch_smoothing_width": 0.0
+    },
+    "R_VM": {
+      "activation_time_constant_s": 0.015,
+      "deactivation_time_constant_s": 0.05,
+      "switch_smoothing_width": 0.0
+    },
+    "R_TA": {
+      "activation_time_constant_s": 0.015,
+      "deactivation_time_constant_s": 0.05,
+      "switch_smoothing_width": 0.0
+    },
+    "R_SO": {
+      "activation_time_constant_s": 0.015,
+      "deactivation_time_constant_s": 0.05,
+      "switch_smoothing_width": 0.0
+    },
+    "R_RF": {
+      "activation_time_constant_s": 0.015,
+      "deactivation_time_constant_s": 0.05,
+      "switch_smoothing_width": 0.0
+    },
+    "R_BFP": {
+      "activation_time_constant_s": 0.015,
+      "deactivation_time_constant_s": 0.05,
+      "switch_smoothing_width": 0.0
+    },
+    "R_SAM": {
+      "activation_time_constant_s": 0.015,
+      "deactivation_time_constant_s": 0.05,
+      "switch_smoothing_width": 0.0
+    },
+    "R_LG": {
+      "activation_time_constant_s": 0.015,
+      "deactivation_time_constant_s": 0.05,
+      "switch_smoothing_width": 0.0
+    },
+    "R_MG": {
+      "activation_time_constant_s": 0.015,
+      "deactivation_time_constant_s": 0.05,
+      "switch_smoothing_width": 0.0
+    },
+    "L_EDL": {
+      "activation_time_constant_s": 0.01,
+      "deactivation_time_constant_s": 0.04,
+      "switch_smoothing_width": 0.0
+    },
+    "R_EDL": {
+      "activation_time_constant_s": 0.01,
+      "deactivation_time_constant_s": 0.04,
+      "switch_smoothing_width": 0.0
+    },
+    "L_FDL": {
+      "activation_time_constant_s": 0.01,
+      "deactivation_time_constant_s": 0.04,
+      "switch_smoothing_width": 0.0
+    },
+    "R_FDL": {
+      "activation_time_constant_s": 0.01,
+      "deactivation_time_constant_s": 0.04,
+      "switch_smoothing_width": 0.0
+    },
+    "L_FHL": {
+      "activation_time_constant_s": 0.015,
+      "deactivation_time_constant_s": 0.05,
+      "switch_smoothing_width": 0.0
+    },
+    "R_FHL": {
+      "activation_time_constant_s": 0.015,
+      "deactivation_time_constant_s": 0.05,
+      "switch_smoothing_width": 0.0
+    },
+    "FL_ShoulderExtensor": {
+      "activation_time_constant_s": 0.01,
+      "deactivation_time_constant_s": 0.04,
+      "switch_smoothing_width": 0.0
+    },
+    "FL_ElbowExtensor": {
+      "activation_time_constant_s": 0.01,
+      "deactivation_time_constant_s": 0.04,
+      "switch_smoothing_width": 0.0
+    },
+    "FL_BicepsBrachii": {
+      "activation_time_constant_s": 0.01,
+      "deactivation_time_constant_s": 0.04,
+      "switch_smoothing_width": 0.0
+    },
+    "FL_ElbowFlexor": {
+      "activation_time_constant_s": 0.01,
+      "deactivation_time_constant_s": 0.04,
+      "switch_smoothing_width": 0.0
+    },
+    "FL_ElbowFlexorWristFlexor": {
+      "activation_time_constant_s": 0.01,
+      "deactivation_time_constant_s": 0.04,
+      "switch_smoothing_width": 0.0
+    },
+    "FL_WristFlexor": {
+      "activation_time_constant_s": 0.01,
+      "deactivation_time_constant_s": 0.04,
+      "switch_smoothing_width": 0.0
+    },
+    "FL_WristExtensor": {
+      "activation_time_constant_s": 0.01,
+      "deactivation_time_constant_s": 0.04,
+      "switch_smoothing_width": 0.0
+    },
+    "FL_ShoulderFlexor": {
+      "activation_time_constant_s": 0.01,
+      "deactivation_time_constant_s": 0.04,
+      "switch_smoothing_width": 0.0
+    },
+    "FL_TricepsBrachiiLong": {
+      "activation_time_constant_s": 0.01,
+      "deactivation_time_constant_s": 0.04,
+      "switch_smoothing_width": 0.0
+    },
+    "FR_ShoulderExtensor": {
+      "activation_time_constant_s": 0.01,
+      "deactivation_time_constant_s": 0.04,
+      "switch_smoothing_width": 0.0
+    },
+    "FR_ElbowExtensor": {
+      "activation_time_constant_s": 0.01,
+      "deactivation_time_constant_s": 0.04,
+      "switch_smoothing_width": 0.0
+    },
+    "FR_BicepsBrachii": {
+      "activation_time_constant_s": 0.01,
+      "deactivation_time_constant_s": 0.04,
+      "switch_smoothing_width": 0.0
+    },
+    "FR_ElbowFlexor": {
+      "activation_time_constant_s": 0.01,
+      "deactivation_time_constant_s": 0.04,
+      "switch_smoothing_width": 0.0
+    },
+    "FR_ElbowFlexorWristFlexor": {
+      "activation_time_constant_s": 0.01,
+      "deactivation_time_constant_s": 0.04,
+      "switch_smoothing_width": 0.0
+    },
+    "FR_WristFlexor": {
+      "activation_time_constant_s": 0.01,
+      "deactivation_time_constant_s": 0.04,
+      "switch_smoothing_width": 0.0
+    },
+    "FR_WristExtensor": {
+      "activation_time_constant_s": 0.01,
+      "deactivation_time_constant_s": 0.04,
+      "switch_smoothing_width": 0.0
+    },
+    "FR_ShoulderFlexor": {
+      "activation_time_constant_s": 0.01,
+      "deactivation_time_constant_s": 0.04,
+      "switch_smoothing_width": 0.0
+    },
+    "FR_TricepsBrachiiLong": {
+      "activation_time_constant_s": 0.01,
+      "deactivation_time_constant_s": 0.04,
+      "switch_smoothing_width": 0.0
+    },
+    "FL_S_C3": {
+      "activation_time_constant_s": 0.015,
+      "deactivation_time_constant_s": 0.05,
+      "switch_smoothing_width": 0.0
+    },
+    "FR_S_C3": {
+      "activation_time_constant_s": 0.015,
+      "deactivation_time_constant_s": 0.05,
+      "switch_smoothing_width": 0.0
+    },
+    "FL_S_C4": {
+      "activation_time_constant_s": 0.015,
+      "deactivation_time_constant_s": 0.05,
+      "switch_smoothing_width": 0.0
+    },
+    "FR_S_C4": {
+      "activation_time_constant_s": 0.015,
+      "deactivation_time_constant_s": 0.05,
+      "switch_smoothing_width": 0.0
+    },
+    "FL_S_C5": {
+      "activation_time_constant_s": 0.015,
+      "deactivation_time_constant_s": 0.05,
+      "switch_smoothing_width": 0.0
+    },
+    "FR_S_C5": {
+      "activation_time_constant_s": 0.015,
+      "deactivation_time_constant_s": 0.05,
+      "switch_smoothing_width": 0.0
+    },
+    "FL_S_C6": {
+      "activation_time_constant_s": 0.015,
+      "deactivation_time_constant_s": 0.05,
+      "switch_smoothing_width": 0.0
+    },
+    "FR_S_C6": {
+      "activation_time_constant_s": 0.015,
+      "deactivation_time_constant_s": 0.05,
+      "switch_smoothing_width": 0.0
+    },
+    "FL_S_C7": {
+      "activation_time_constant_s": 0.015,
+      "deactivation_time_constant_s": 0.05,
+      "switch_smoothing_width": 0.0
+    },
+    "FR_S_C7": {
+      "activation_time_constant_s": 0.015,
+      "deactivation_time_constant_s": 0.05,
+      "switch_smoothing_width": 0.0
+    },
+    "FL_S_T1": {
+      "activation_time_constant_s": 0.015,
+      "deactivation_time_constant_s": 0.05,
+      "switch_smoothing_width": 0.0
+    },
+    "FR_S_T1": {
+      "activation_time_constant_s": 0.015,
+      "deactivation_time_constant_s": 0.05,
+      "switch_smoothing_width": 0.0
+    },
+    "FL_S_T2": {
+      "activation_time_constant_s": 0.015,
+      "deactivation_time_constant_s": 0.05,
+      "switch_smoothing_width": 0.0
+    },
+    "FR_S_T2": {
+      "activation_time_constant_s": 0.015,
+      "deactivation_time_constant_s": 0.05,
+      "switch_smoothing_width": 0.0
+    },
+    "FL_S_T3": {
+      "activation_time_constant_s": 0.015,
+      "deactivation_time_constant_s": 0.05,
+      "switch_smoothing_width": 0.0
+    },
+    "FR_S_T3": {
+      "activation_time_constant_s": 0.015,
+      "deactivation_time_constant_s": 0.05,
+      "switch_smoothing_width": 0.0
+    },
+    "FL_S_T4": {
+      "activation_time_constant_s": 0.015,
+      "deactivation_time_constant_s": 0.05,
+      "switch_smoothing_width": 0.0
+    },
+    "FR_S_T4": {
+      "activation_time_constant_s": 0.015,
+      "deactivation_time_constant_s": 0.05,
+      "switch_smoothing_width": 0.0
+    },
+    "FL_S_T5": {
+      "activation_time_constant_s": 0.015,
+      "deactivation_time_constant_s": 0.05,
+      "switch_smoothing_width": 0.0
+    },
+    "FR_S_T5": {
+      "activation_time_constant_s": 0.015,
+      "deactivation_time_constant_s": 0.05,
+      "switch_smoothing_width": 0.0
+    },
+    "FL_S_T6": {
+      "activation_time_constant_s": 0.015,
+      "deactivation_time_constant_s": 0.05,
+      "switch_smoothing_width": 0.0
+    },
+    "FR_S_T6": {
+      "activation_time_constant_s": 0.015,
+      "deactivation_time_constant_s": 0.05,
+      "switch_smoothing_width": 0.0
+    },
+    "FL_S_T7": {
+      "activation_time_constant_s": 0.015,
+      "deactivation_time_constant_s": 0.05,
+      "switch_smoothing_width": 0.0
+    },
+    "FR_S_T7": {
+      "activation_time_constant_s": 0.015,
+      "deactivation_time_constant_s": 0.05,
+      "switch_smoothing_width": 0.0
+    },
+    "FL_S_T8": {
+      "activation_time_constant_s": 0.015,
+      "deactivation_time_constant_s": 0.05,
+      "switch_smoothing_width": 0.0
+    },
+    "FR_S_T8": {
+      "activation_time_constant_s": 0.015,
+      "deactivation_time_constant_s": 0.05,
+      "switch_smoothing_width": 0.0
+    },
+    "FL_S_T9": {
+      "activation_time_constant_s": 0.015,
+      "deactivation_time_constant_s": 0.05,
+      "switch_smoothing_width": 0.0
+    },
+    "FR_S_T9": {
+      "activation_time_constant_s": 0.015,
+      "deactivation_time_constant_s": 0.05,
+      "switch_smoothing_width": 0.0
+    },
+    "FL_R_C2": {
+      "activation_time_constant_s": 0.015,
+      "deactivation_time_constant_s": 0.05,
+      "switch_smoothing_width": 0.0
+    },
+    "FR_R_C2": {
+      "activation_time_constant_s": 0.015,
+      "deactivation_time_constant_s": 0.05,
+      "switch_smoothing_width": 0.0
+    },
+    "FL_R_C3-7": {
+      "activation_time_constant_s": 0.015,
+      "deactivation_time_constant_s": 0.05,
+      "switch_smoothing_width": 0.0
+    },
+    "FR_R_C3-7": {
+      "activation_time_constant_s": 0.015,
+      "deactivation_time_constant_s": 0.05,
+      "switch_smoothing_width": 0.0
+    },
+    "FL_R_T1": {
+      "activation_time_constant_s": 0.015,
+      "deactivation_time_constant_s": 0.05,
+      "switch_smoothing_width": 0.0
+    },
+    "FR_R_T1": {
+      "activation_time_constant_s": 0.015,
+      "deactivation_time_constant_s": 0.05,
+      "switch_smoothing_width": 0.0
+    },
+    "FL_R_T2": {
+      "activation_time_constant_s": 0.015,
+      "deactivation_time_constant_s": 0.05,
+      "switch_smoothing_width": 0.0
+    },
+    "FR_R_T2": {
+      "activation_time_constant_s": 0.015,
+      "deactivation_time_constant_s": 0.05,
+      "switch_smoothing_width": 0.0
+    },
+    "FL_R_T3": {
+      "activation_time_constant_s": 0.015,
+      "deactivation_time_constant_s": 0.05,
+      "switch_smoothing_width": 0.0
+    },
+    "FR_R_T3": {
+      "activation_time_constant_s": 0.015,
+      "deactivation_time_constant_s": 0.05,
+      "switch_smoothing_width": 0.0
+    },
+    "FL_R_T4": {
+      "activation_time_constant_s": 0.015,
+      "deactivation_time_constant_s": 0.05,
+      "switch_smoothing_width": 0.0
+    },
+    "FR_R_T4": {
+      "activation_time_constant_s": 0.015,
+      "deactivation_time_constant_s": 0.05,
+      "switch_smoothing_width": 0.0
+    },
+    "FL_R_T5": {
+      "activation_time_constant_s": 0.015,
+      "deactivation_time_constant_s": 0.05,
+      "switch_smoothing_width": 0.0
+    },
+    "FR_R_T5": {
+      "activation_time_constant_s": 0.015,
+      "deactivation_time_constant_s": 0.05,
+      "switch_smoothing_width": 0.0
+    },
+    "FL_DigitalExtensors": {
+      "activation_time_constant_s": 0.015,
+      "deactivation_time_constant_s": 0.05,
+      "switch_smoothing_width": 0.0
+    },
+    "FR_DigitalExtensors": {
+      "activation_time_constant_s": 0.015,
+      "deactivation_time_constant_s": 0.05,
+      "switch_smoothing_width": 0.0
+    },
+    "FL_DigitalFlexors": {
+      "activation_time_constant_s": 0.015,
+      "deactivation_time_constant_s": 0.05,
+      "switch_smoothing_width": 0.0
+    },
+    "FR_DigitalFlexors": {
+      "activation_time_constant_s": 0.015,
+      "deactivation_time_constant_s": 0.05,
+      "switch_smoothing_width": 0.0
+    },
+    "FL_TrapeziusCervical": {
+      "activation_time_constant_s": 0.015,
+      "deactivation_time_constant_s": 0.05,
+      "switch_smoothing_width": 0.0
+    },
+    "FR_TrapeziusCervical": {
+      "activation_time_constant_s": 0.015,
+      "deactivation_time_constant_s": 0.05,
+      "switch_smoothing_width": 0.0
+    },
+    "FL_TrapeziusThoracic": {
+      "activation_time_constant_s": 0.015,
+      "deactivation_time_constant_s": 0.05,
+      "switch_smoothing_width": 0.0
+    },
+    "FR_TrapeziusThoracic": {
+      "activation_time_constant_s": 0.015,
+      "deactivation_time_constant_s": 0.05,
+      "switch_smoothing_width": 0.0
+    },
+    "FL_LatissimusDorsi": {
+      "activation_time_constant_s": 0.015,
+      "deactivation_time_constant_s": 0.05,
+      "switch_smoothing_width": 0.0
+    },
+    "FR_LatissimusDorsi": {
+      "activation_time_constant_s": 0.015,
+      "deactivation_time_constant_s": 0.05,
+      "switch_smoothing_width": 0.0
+    },
+    "FL_PectoralisProfundus": {
+      "activation_time_constant_s": 0.015,
+      "deactivation_time_constant_s": 0.05,
+      "switch_smoothing_width": 0.0
+    },
+    "FR_PectoralisProfundus": {
+      "activation_time_constant_s": 0.015,
+      "deactivation_time_constant_s": 0.05,
+      "switch_smoothing_width": 0.0
+    },
+    "FL_PectoralisSuperficialis": {
+      "activation_time_constant_s": 0.015,
+      "deactivation_time_constant_s": 0.05,
+      "switch_smoothing_width": 0.0
+    },
+    "FR_PectoralisSuperficialis": {
+      "activation_time_constant_s": 0.015,
+      "deactivation_time_constant_s": 0.05,
+      "switch_smoothing_width": 0.0
+    },
+    "FL_Clavobrachialis": {
+      "activation_time_constant_s": 0.015,
+      "deactivation_time_constant_s": 0.05,
+      "switch_smoothing_width": 0.0
+    },
+    "FR_Clavobrachialis": {
+      "activation_time_constant_s": 0.015,
+      "deactivation_time_constant_s": 0.05,
+      "switch_smoothing_width": 0.0
+    }
+  },
+  "initial": {
+    "L_IP": {
+      "activation_0_to_1": 0.870889478246264,
+      "fiber_length_m": 0.039459389117220744
+    },
+    "L_BFA": {
+      "activation_0_to_1": 0.33693246493782775,
+      "fiber_length_m": 0.01999658125733006
+    },
+    "L_VL": {
+      "activation_0_to_1": 0.3951463958189099,
+      "fiber_length_m": 0.01598546639368841
+    },
+    "L_VM": {
+      "activation_0_to_1": 0.44248817183333095,
+      "fiber_length_m": 0.015489368024201101
+    },
+    "L_TA": {
+      "activation_0_to_1": 0.7042631123533936,
+      "fiber_length_m": 0.06007433191440371
+    },
+    "L_SO": {
+      "activation_0_to_1": 0.41423451954983714,
+      "fiber_length_m": 0.02281079349454152
+    },
+    "L_RF": {
+      "activation_0_to_1": 0.8428922714381261,
+      "fiber_length_m": 0.012711978826536503
+    },
+    "L_BFP": {
+      "activation_0_to_1": 0.7238784481010543,
+      "fiber_length_m": 0.05093251618436455
+    },
+    "L_SAM": {
+      "activation_0_to_1": 0.6839514598755866,
+      "fiber_length_m": 0.0808757932216231
+    },
+    "L_LG": {
+      "activation_0_to_1": 0.18879084432780802,
+      "fiber_length_m": 0.016658169614306
+    },
+    "L_MG": {
+      "activation_0_to_1": 0.2870747663958547,
+      "fiber_length_m": 0.015756030482443895
+    },
+    "R_IP": {
+      "activation_0_to_1": 0.44855715358602805,
+      "fiber_length_m": 0.03198255855515641
+    },
+    "R_BFA": {
+      "activation_0_to_1": 0.8189344400897721,
+      "fiber_length_m": 0.024554498211033268
+    },
+    "R_VL": {
+      "activation_0_to_1": 0.6896074649210291,
+      "fiber_length_m": 0.01629905054946983
+    },
+    "R_VM": {
+      "activation_0_to_1": 0.8779689515493411,
+      "fiber_length_m": 0.015736640474542884
+    },
+    "R_TA": {
+      "activation_0_to_1": 0.728821143364574,
+      "fiber_length_m": 0.0573209153625423
+    },
+    "R_SO": {
+      "activation_0_to_1": 0.4804237717184429,
+      "fiber_length_m": 0.02817751661427856
+    },
+    "R_RF": {
+      "activation_0_to_1": 0.7746316830147807,
+      "fiber_length_m": 0.010193743799285913
+    },
+    "R_BFP": {
+      "activation_0_to_1": 0.3841549925181842,
+      "fiber_length_m": 0.05558323243938858
+    },
+    "R_SAM": {
+      "activation_0_to_1": 0.529908388004167,
+      "fiber_length_m": 0.07209592769202408
+    },
+    "R_LG": {
+      "activation_0_to_1": 0.47605841573645397,
+      "fiber_length_m": 0.021134775744557927
+    },
+    "R_MG": {
+      "activation_0_to_1": 0.37804841124834615,
+      "fiber_length_m": 0.02055712052121198
+    },
+    "L_EDL": {
+      "activation_0_to_1": 0.32007026552830325,
+      "fiber_length_m": 0.031201538175173533
+    },
+    "R_EDL": {
+      "activation_0_to_1": 0.47464457639501473,
+      "fiber_length_m": 0.024954205051821984
+    },
+    "L_FDL": {
+      "activation_0_to_1": 0.45453153738225355,
+      "fiber_length_m": 0.015342914221368843
+    },
+    "R_FDL": {
+      "activation_0_to_1": 0.9876062307363418,
+      "fiber_length_m": 0.015224822278158214
+    },
+    "L_FHL": {
+      "activation_0_to_1": 0.5691546170544115,
+      "fiber_length_m": 0.011661573533581361
+    },
+    "R_FHL": {
+      "activation_0_to_1": 0.8306963826058645,
+      "fiber_length_m": 0.012205974902971007
+    },
+    "FL_ShoulderExtensor": {
+      "activation_0_to_1": 0.43063291013457866,
+      "fiber_length_m": 0.01281725001203047
+    },
+    "FL_ElbowExtensor": {
+      "activation_0_to_1": 0.9145343439565062,
+      "fiber_length_m": 0.025610591218516367
+    },
+    "FL_BicepsBrachii": {
+      "activation_0_to_1": 0.29178214880918296,
+      "fiber_length_m": 0.021807489743804954
+    },
+    "FL_ElbowFlexor": {
+      "activation_0_to_1": 0.37732246783215856,
+      "fiber_length_m": 0.04251547778239118
+    },
+    "FL_ElbowFlexorWristFlexor": {
+      "activation_0_to_1": 0.8280355687777172,
+      "fiber_length_m": 0.020747654241316544
+    },
+    "FL_WristFlexor": {
+      "activation_0_to_1": 0.6433008556980415,
+      "fiber_length_m": 0.013797498621129648
+    },
+    "FL_WristExtensor": {
+      "activation_0_to_1": 0.2703704982605658,
+      "fiber_length_m": 0.011151651183557288
+    },
+    "FL_ShoulderFlexor": {
+      "activation_0_to_1": 0.6767523945082969,
+      "fiber_length_m": 0.03801547059163581
+    },
+    "FL_TricepsBrachiiLong": {
+      "activation_0_to_1": 0.8869850405266974,
+      "fiber_length_m": 0.013958299916842547
+    },
+    "FR_ShoulderExtensor": {
+      "activation_0_to_1": 0.301707439802904,
+      "fiber_length_m": 0.011020895425201835
+    },
+    "FR_ElbowExtensor": {
+      "activation_0_to_1": 0.4268164321845187,
+      "fiber_length_m": 0.027428738731987607
+    },
+    "FR_BicepsBrachii": {
+      "activation_0_to_1": 0.6482470786584758,
+      "fiber_length_m": 0.016841006526931677
+    },
+    "FR_ElbowFlexor": {
+      "activation_0_to_1": 0.7247089281622151,
+      "fiber_length_m": 0.04054389076139881
+    },
+    "FR_ElbowFlexorWristFlexor": {
+      "activation_0_to_1": 0.35537596001213295,
+      "fiber_length_m": 0.022476831628234568
+    },
+    "FR_WristFlexor": {
+      "activation_0_to_1": 0.40063667281026594,
+      "fiber_length_m": 0.016932311341653846
+    },
+    "FR_WristExtensor": {
+      "activation_0_to_1": 0.9999997773125731,
+      "fiber_length_m": 0.007894871266194769
+    },
+    "FR_ShoulderFlexor": {
+      "activation_0_to_1": 0.4983023784326215,
+      "fiber_length_m": 0.04035880341714433
+    },
+    "FR_TricepsBrachiiLong": {
+      "activation_0_to_1": 0.6933628005641336,
+      "fiber_length_m": 0.02025531568340672
+    },
+    "FL_S_C3": {
+      "activation_0_to_1": 0.8066081491217026,
+      "fiber_length_m": 0.04766798427958194
+    },
+    "FR_S_C3": {
+      "activation_0_to_1": 0.6492382422071201,
+      "fiber_length_m": 0.04881698938165903
+    },
+    "FL_S_C4": {
+      "activation_0_to_1": 0.805824064245145,
+      "fiber_length_m": 0.04276678897326946
+    },
+    "FR_S_C4": {
+      "activation_0_to_1": 0.6495873248763039,
+      "fiber_length_m": 0.043513500716507204
+    },
+    "FL_S_C5": {
+      "activation_0_to_1": 0.8047254219573989,
+      "fiber_length_m": 0.04152814621519471
+    },
+    "FR_S_C5": {
+      "activation_0_to_1": 0.6502098859327915,
+      "fiber_length_m": 0.041844089260979836
+    },
+    "FL_S_C6": {
+      "activation_0_to_1": 0.802099108140442,
+      "fiber_length_m": 0.04009188627793664
+    },
+    "FR_S_C6": {
+      "activation_0_to_1": 0.6528287003917232,
+      "fiber_length_m": 0.03916847827074793
+    },
+    "FL_S_C7": {
+      "activation_0_to_1": 0.800600700876901,
+      "fiber_length_m": 0.03709822271907364
+    },
+    "FR_S_C7": {
+      "activation_0_to_1": 0.6560678976623533,
+      "fiber_length_m": 0.03520350815217931
+    },
+    "FL_S_T1": {
+      "activation_0_to_1": 0.7271579034932936,
+      "fiber_length_m": 0.03193330040740165
+    },
+    "FR_S_T1": {
+      "activation_0_to_1": 0.9387046902314893,
+      "fiber_length_m": 0.02738812548245359
+    },
+    "FL_S_T2": {
+      "activation_0_to_1": 0.7192702956560972,
+      "fiber_length_m": 0.03003186000311795
+    },
+    "FR_S_T2": {
+      "activation_0_to_1": 0.953439341617972,
+      "fiber_length_m": 0.02445173427524605
+    },
+    "FL_S_T3": {
+      "activation_0_to_1": 0.6910838555588741,
+      "fiber_length_m": 0.024542073725324215
+    },
+    "FR_S_T3": {
+      "activation_0_to_1": 0.9856712532022647,
+      "fiber_length_m": 0.018073043037255147
+    },
+    "FL_S_T4": {
+      "activation_0_to_1": 0.6749288191499689,
+      "fiber_length_m": 0.021694420031772754
+    },
+    "FR_S_T4": {
+      "activation_0_to_1": 1.0,
+      "fiber_length_m": 0.01532101032315631
+    },
+    "FL_S_T5": {
+      "activation_0_to_1": 0.7213261795587402,
+      "fiber_length_m": 0.023017895477601573
+    },
+    "FR_S_T5": {
+      "activation_0_to_1": 0.9520630792006299,
+      "fiber_length_m": 0.018874494065113413
+    },
+    "FL_S_T6": {
+      "activation_0_to_1": 0.7322305916202012,
+      "fiber_length_m": 0.02560183712321325
+    },
+    "FR_S_T6": {
+      "activation_0_to_1": 0.9200696533147289,
+      "fiber_length_m": 0.02385443596083572
+    },
+    "FL_S_T7": {
+      "activation_0_to_1": 0.7394718170818797,
+      "fiber_length_m": 0.02758708960586381
+    },
+    "FR_S_T7": {
+      "activation_0_to_1": 0.9061997489164333,
+      "fiber_length_m": 0.02845481722398855
+    },
+    "FL_S_T8": {
+      "activation_0_to_1": 0.7490953109338967,
+      "fiber_length_m": 0.03100819670956552
+    },
+    "FR_S_T8": {
+      "activation_0_to_1": 0.9028454739809326,
+      "fiber_length_m": 0.03413692998463432
+    },
+    "FL_S_T9": {
+      "activation_0_to_1": 0.7641624239057028,
+      "fiber_length_m": 0.03230694304544618
+    },
+    "FR_S_T9": {
+      "activation_0_to_1": 0.8947121688470366,
+      "fiber_length_m": 0.03838176577411198
+    },
+    "FL_R_C2": {
+      "activation_0_to_1": 0.6309120022392664,
+      "fiber_length_m": 0.038771708507027276
+    },
+    "FR_R_C2": {
+      "activation_0_to_1": 0.5558068110462022,
+      "fiber_length_m": 0.03999777818962708
+    },
+    "FL_R_C3-7": {
+      "activation_0_to_1": 0.632910105602216,
+      "fiber_length_m": 0.0263639343118286
+    },
+    "FR_R_C3-7": {
+      "activation_0_to_1": 0.555190027273887,
+      "fiber_length_m": 0.02771328151854185
+    },
+    "FL_R_T1": {
+      "activation_0_to_1": 0.7187978404483276,
+      "fiber_length_m": 0.0302567885226062
+    },
+    "FR_R_T1": {
+      "activation_0_to_1": 0.3416149866935868,
+      "fiber_length_m": 0.032179828440175445
+    },
+    "FL_R_T2": {
+      "activation_0_to_1": 0.7210398523708139,
+      "fiber_length_m": 0.03359608922860226
+    },
+    "FR_R_T2": {
+      "activation_0_to_1": 0.34138804786212945,
+      "fiber_length_m": 0.036299484278712116
+    },
+    "FL_R_T3": {
+      "activation_0_to_1": 0.7244780858933473,
+      "fiber_length_m": 0.03724505676290237
+    },
+    "FR_R_T3": {
+      "activation_0_to_1": 0.34102545862691186,
+      "fiber_length_m": 0.04112495059230152
+    },
+    "FL_R_T4": {
+      "activation_0_to_1": 0.7328847980699814,
+      "fiber_length_m": 0.03417076634777539
+    },
+    "FR_R_T4": {
+      "activation_0_to_1": 0.3395546807676321,
+      "fiber_length_m": 0.039509586870092504
+    },
+    "FL_R_T5": {
+      "activation_0_to_1": 0.7390484871793741,
+      "fiber_length_m": 0.03343260018164973
+    },
+    "FR_R_T5": {
+      "activation_0_to_1": 0.33773832163507506,
+      "fiber_length_m": 0.03983142647253385
+    },
+    "FL_DigitalExtensors": {
+      "activation_0_to_1": 0.13003897649551047,
+      "fiber_length_m": 0.017055430644364416
+    },
+    "FR_DigitalExtensors": {
+      "activation_0_to_1": 0.7225968465421075,
+      "fiber_length_m": 0.01739462200914173
+    },
+    "FL_DigitalFlexors": {
+      "activation_0_to_1": 0.10778298789458943,
+      "fiber_length_m": 0.015694696672205573
+    },
+    "FR_DigitalFlexors": {
+      "activation_0_to_1": 0.030855137478851703,
+      "fiber_length_m": 0.010108712531143723
+    },
+    "FL_TrapeziusCervical": {
+      "activation_0_to_1": 0.8158144542587283,
+      "fiber_length_m": 0.06628613647545409
+    },
+    "FR_TrapeziusCervical": {
+      "activation_0_to_1": 0.9139421016430548,
+      "fiber_length_m": 0.057151230000366704
+    },
+    "FL_TrapeziusThoracic": {
+      "activation_0_to_1": 0.6407481804841275,
+      "fiber_length_m": 0.05154216864635602
+    },
+    "FR_TrapeziusThoracic": {
+      "activation_0_to_1": 0.24026029228047824,
+      "fiber_length_m": 0.056857006896382616
+    },
+    "FL_LatissimusDorsi": {
+      "activation_0_to_1": 0.4100605376422592,
+      "fiber_length_m": 0.11476552393267118
+    },
+    "FR_LatissimusDorsi": {
+      "activation_0_to_1": 0.09239602871797474,
+      "fiber_length_m": 0.13681561326713626
+    },
+    "FL_PectoralisProfundus": {
+      "activation_0_to_1": 0.5010229242307643,
+      "fiber_length_m": 0.038251000461620645
+    },
+    "FR_PectoralisProfundus": {
+      "activation_0_to_1": 0.04887282220468061,
+      "fiber_length_m": 0.06443379103520389
+    },
+    "FL_PectoralisSuperficialis": {
+      "activation_0_to_1": 0.7657904109014932,
+      "fiber_length_m": 0.04527193394990888
+    },
+    "FR_PectoralisSuperficialis": {
+      "activation_0_to_1": 0.5290556722902369,
+      "fiber_length_m": 0.029620609595436463
+    },
+    "FL_Clavobrachialis": {
+      "activation_0_to_1": 0.7590123734811056,
+      "fiber_length_m": 0.0927788862620518
+    },
+    "FR_Clavobrachialis": {
+      "activation_0_to_1": 0.9999999945105883,
+      "fiber_length_m": 0.06709306153434504
+    }
+  },
+  "descriptions": {
+    "max_isometric_tendon_force_N": {
+      "unit": "N",
+      "meaning": "Maximum isometric force projected along the tendon; do not multiply by pennation cosine twice."
+    },
+    "optimal_fiber_length_m": {
+      "unit": "m",
+      "meaning": "Optimal fascicle/fiber length, not whole muscle-tendon length."
+    },
+    "tendon_slack_length_m": {
+      "unit": "m",
+      "meaning": "Unloaded series tendon length."
+    },
+    "pennation_cosine": {
+      "unit": "1",
+      "meaning": "Cosine of the constant fiber-to-tendon pennation angle."
+    },
+    "tendon_strain_at_max_force": {
+      "unit": "1",
+      "meaning": "Tendon extension/slack length at one maximum isometric tendon force."
+    },
+    "max_fiber_speed_optimal_lengths_per_s": {
+      "unit": "1/s",
+      "meaning": "Positive maximum-shortening speed magnitude, measured in optimal fiber lengths per second."
+    },
+    "normalized_fiber_damping": {
+      "unit": "1",
+      "meaning": "Coefficient of normalized fiber velocity in the normalized tendon-direction force balance."
+    },
+    "MT_path_length_offset_m": {
+      "unit": "m",
+      "meaning": "Constant offset added to the routed path to define muscle-tendon length."
+    },
+    "active_force_length_exponent": {
+      "unit": "1",
+      "meaning": "Exponent rho in the source active force-length curve."
+    },
+    "source_shortening_curvature": {
+      "unit": "1",
+      "meaning": "Source shortening-curve coefficient; inactive when De Groote force-velocity mode is selected."
+    },
+    "source_lengthening_curvature": {
+      "unit": "1",
+      "meaning": "Source lengthening-curve coefficient; inactive when De Groote force-velocity mode is selected."
+    },
+    "passive_fiber_enabled": {
+      "unit": "0/1",
+      "meaning": "1 enables passive fiber tension within the elastic equilibrium; zero force below l_f/l_opt=1 does not mean it is disabled."
+    },
+    "degroote_force_velocity_enabled": {
+      "unit": "0/1",
+      "meaning": "1 uses the documented De Groote/OpenSim velocity curve; 0 uses the source curve."
+    },
+    "activation_time_constant_s": {
+      "unit": "s",
+      "meaning": "Native activation/deactivation time constant."
+    },
+    "deactivation_time_constant_s": {
+      "unit": "s",
+      "meaning": "Native activation/deactivation time constant."
+    },
+    "switch_smoothing_width": {
+      "unit": "1",
+      "meaning": "Width of native smooth switching between time constants; zero uses the piecewise equation."
+    }
+  },
+  "source": "Current editable Data/Model_Parameters dictionaries"
+}

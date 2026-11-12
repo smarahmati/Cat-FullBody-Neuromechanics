@@ -1,0 +1,166 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Render a video of the cat from saved forward-dynamics states.</title><link rel="stylesheet" href="../style.css"></head><body><!-- generated folder guide --><header><div class="tag">Cat · Full-body neuromechanics</div><h1>Render a video of the cat from saved forward-dynamics states.</h1><nav><a href="../../START_HERE.html">Start here</a> · <a href="../project_structure.html">Find a file</a></nav></header><main><p><a href="../../Code/simulation_tools/render_walking_video.py">Code/simulation_tools/render_walking_video.py</a></p><pre style="overflow:auto;white-space:pre"><span id="L1">   1</span> &quot;&quot;&quot;Render a video of the cat from saved forward-dynamics states.
+<span id="L2">   2</span> 
+<span id="L3">   3</span> This script does not drive or solve the model. The visible movement and paw
+<span id="L4">   4</span> forces come from forward_simulation_timeseries.npz. Arguments select the saved time interval,
+<span id="L5">   5</span> output frame rate, and playback speed. Time is in seconds; force is in newtons.
+<span id="L6">   6</span> &quot;&quot;&quot;
+<span id="L7">   7</span> 
+<span id="L8">   8</span> import argparse
+<span id="L9">   9</span> import json
+<span id="L10">  10</span> import os
+<span id="L11">  11</span> from pathlib import Path
+<span id="L12">  12</span> import subprocess
+<span id="L13">  13</span> import sys
+<span id="L14">  14</span> 
+<span id="L15">  15</span> ROOT = Path(__file__).resolve().parents[2]
+<span id="L16">  16</span> sys.path.insert(0, str(ROOT / &quot;Code&quot;))
+<span id="L17">  17</span> import numpy as np
+<span id="L18">  18</span> import mujoco as mj
+<span id="L19">  19</span> import imageio_ffmpeg
+<span id="L20">  20</span> from PIL import Image, ImageDraw, ImageFont
+<span id="L21">  21</span> from neuromechanics.initialize_neuromechanical_model import initialize_neuromechanical_model
+<span id="L22">  22</span> from neuromechanics.interpolate_simulation_for_display import (
+<span id="L23">  23</span>     interpolate_simulation_for_display,
+<span id="L24">  24</span> )
+<span id="L25">  25</span> from neuromechanics.update_saved_visual_state import update_saved_visual_state
+<span id="L26">  26</span> 
+<span id="L27">  27</span> 
+<span id="L28">  28</span> def render_walking_video(
+<span id="L29">  29</span>     run_folder, output, start_s=56.0, end_s=59.9, frames_per_second=40, playback_speed=0.5
+<span id="L30">  30</span> ):
+<span id="L31">  31</span>     &quot;&quot;&quot;Turn saved states into frames; interpolate only for visual smoothness.&quot;&quot;&quot;
+<span id="L32">  32</span>     folder = ROOT / run_folder
+<span id="L33">  33</span>     result = dict(np.load(folder / &quot;forward_simulation_timeseries.npz&quot;))
+<span id="L34">  34</span>     settings = json.loads((folder / &quot;settings.json&quot;).read_text())
+<span id="L35">  35</span>     state = initialize_neuromechanical_model(settings, graphics=True)
+<span id="L36">  36</span>     model, data = state[&quot;model&quot;], state[&quot;data&quot;]
+<span id="L37">  37</span>     width, height = 1100, 720
+<span id="L38">  38</span>     model.vis.global_.offwidth = width
+<span id="L39">  39</span>     model.vis.global_.offheight = height
+<span id="L40">  40</span>     renderer = mj.Renderer(model, height=height, width=width)
+<span id="L41">  41</span>     camera = mj.MjvCamera()
+<span id="L42">  42</span>     camera.distance = 0.95
+<span id="L43">  43</span>     camera.azimuth = 90
+<span id="L44">  44</span>     camera.elevation = -17
+<span id="L45">  45</span>     camera.lookat[:] = [0.15, 0.0, 0.22]
+<span id="L46">  46</span>     output = Path(output)
+<span id="L47">  47</span>     output.parent.mkdir(parents=True, exist_ok=True)
+<span id="L48">  48</span>     command = [
+<span id="L49">  49</span>         imageio_ffmpeg.get_ffmpeg_exe(),
+<span id="L50">  50</span>         &quot;-y&quot;,
+<span id="L51">  51</span>         &quot;-f&quot;,
+<span id="L52">  52</span>         &quot;rawvideo&quot;,
+<span id="L53">  53</span>         &quot;-vcodec&quot;,
+<span id="L54">  54</span>         &quot;rawvideo&quot;,
+<span id="L55">  55</span>         &quot;-s&quot;,
+<span id="L56">  56</span>         f&quot;{width}x{height}&quot;,
+<span id="L57">  57</span>         &quot;-pix_fmt&quot;,
+<span id="L58">  58</span>         &quot;rgb24&quot;,
+<span id="L59">  59</span>         &quot;-r&quot;,
+<span id="L60">  60</span>         str(frames_per_second),
+<span id="L61">  61</span>         &quot;-i&quot;,
+<span id="L62">  62</span>         &quot;-&quot;,
+<span id="L63">  63</span>         &quot;-an&quot;,
+<span id="L64">  64</span>         &quot;-c:v&quot;,
+<span id="L65">  65</span>         &quot;libx264&quot;,
+<span id="L66">  66</span>         &quot;-crf&quot;,
+<span id="L67">  67</span>         &quot;20&quot;,
+<span id="L68">  68</span>         &quot;-pix_fmt&quot;,
+<span id="L69">  69</span>         &quot;yuv420p&quot;,
+<span id="L70">  70</span>         &quot;-movflags&quot;,
+<span id="L71">  71</span>         &quot;+faststart&quot;,
+<span id="L72">  72</span>         str(output),
+<span id="L73">  73</span>     ]
+<span id="L74">  74</span>     encoder = subprocess.Popen(command, stdin=subprocess.PIPE, stderr=subprocess.PIPE)
+<span id="L75">  75</span>     start_s = max(float(result[&quot;time&quot;][0]), start_s)
+<span id="L76">  76</span>     end_s = min(float(result[&quot;time&quot;][-1]), end_s)
+<span id="L77">  77</span>     frame_count = int((end_s - start_s) / playback_speed * frames_per_second)
+<span id="L78">  78</span>     try:
+<span id="L79">  79</span>         font = ImageFont.truetype(&quot;DejaVuSans.ttf&quot;, 22)
+<span id="L80">  80</span>     except OSError:
+<span id="L81">  81</span>         font = ImageFont.load_default(size=22)
+<span id="L82">  82</span>     colors = [(30, 215, 235), (255, 45, 165), (250, 190, 40), (180, 110, 255)]
+<span id="L83">  83</span>     for frame in range(frame_count):
+<span id="L84">  84</span>         current_s = start_s + frame * playback_speed / frames_per_second
+<span id="L85">  85</span>         sample = interpolate_simulation_for_display(result, current_s)
+<span id="L86">  86</span>         update_saved_visual_state(state, sample)
+<span id="L87">  87</span>         camera.lookat[0] = data.xpos[model.body(&quot;pelvis&quot;).id, 0] + 0.12
+<span id="L88">  88</span>         renderer.update_scene(data, camera=camera)
+<span id="L89">  89</span>         renderer.scene.flags[mj.mjtRndFlag.mjRND_SHADOW] = False
+<span id="L90">  90</span>         renderer.scene.flags[mj.mjtRndFlag.mjRND_REFLECTION] = False
+<span id="L91">  91</span>         for paw, force in enumerate(sample[&quot;grf&quot;]):
+<span id="L92">  92</span>             magnitude = float(np.linalg.norm(force))
+<span id="L93">  93</span>             if magnitude &lt; 0.05:
+<span id="L94">  94</span>                 # Skip the remaining work for this item.
+<span id="L95">  95</span>                 continue
+<span id="L96">  96</span>             arrow = renderer.scene.geoms[renderer.scene.ngeom]
+<span id="L97">  97</span>             origin = data.site_xpos[state[&quot;paw_ids&quot;][paw]].copy()
+<span id="L98">  98</span>             origin[2] = 0.002
+<span id="L99">  99</span>             rgba = np.r_[np.asarray(colors[paw]) / 255.0, 1.0]
+<span id="L100"> 100</span>             mj.mjv_initGeom(
+<span id="L101"> 101</span>                 arrow,
+<span id="L102"> 102</span>                 mj.mjtGeom.mjGEOM_ARROW,
+<span id="L103"> 103</span>                 np.zeros(3),
+<span id="L104"> 104</span>                 np.zeros(3),
+<span id="L105"> 105</span>                 np.eye(3).ravel(),
+<span id="L106"> 106</span>                 rgba,
+<span id="L107"> 107</span>             )
+<span id="L108"> 108</span>             mj.mjv_connector(
+<span id="L109"> 109</span>                 arrow, mj.mjtGeom.mjGEOM_ARROW, 0.0035, origin, origin + 0.006 * force
+<span id="L110"> 110</span>             )
+<span id="L111"> 111</span>             renderer.scene.ngeom += 1
+<span id="L112"> 112</span>         pixels = Image.fromarray(renderer.render())
+<span id="L113"> 113</span>         text = ImageDraw.Draw(pixels)
+<span id="L114"> 114</span>         text.rectangle((0, 0, width, 90), fill=(16, 30, 42))
+<span id="L115"> 115</span>         text.text(
+<span id="L116"> 116</span>             (20, 12),
+<span id="L117"> 117</span>             f&quot;CAT | forward dynamics | t = {current_s:.2f} s | playback {playback_speed:g}x&quot;,
+<span id="L118"> 118</span>             font=font,
+<span id="L119"> 119</span>             fill=&quot;white&quot;,
+<span id="L120"> 120</span>         )
+<span id="L121"> 121</span>         text.text(
+<span id="L122"> 122</span>             (20, 48),
+<span id="L123"> 123</span>             &quot;Elastic tendons; prescribed excitation; calculated paw-contact forces&quot;,
+<span id="L124"> 124</span>             font=font,
+<span id="L125"> 125</span>             fill=&quot;white&quot;,
+<span id="L126"> 126</span>         )
+<span id="L127"> 127</span>         for paw, label in enumerate([&quot;LH&quot;, &quot;RH&quot;, &quot;LF&quot;, &quot;RF&quot;]):
+<span id="L128"> 128</span>             text.text(
+<span id="L129"> 129</span>                 (20 + paw * 270, height - 38),
+<span id="L130"> 130</span>                 f&#x27;{label}: Fx {sample[&quot;grf&quot;][paw,0]:+.1f}, Fz {sample[&quot;grf&quot;][paw,2]:.1f} N&#x27;,
+<span id="L131"> 131</span>                 font=font,
+<span id="L132"> 132</span>                 fill=colors[paw],
+<span id="L133"> 133</span>             )
+<span id="L134"> 134</span>         encoder.stdin.write(np.asarray(pixels).tobytes())
+<span id="L135"> 135</span>         if frame == 0:
+<span id="L136"> 136</span>             pixels.save(output.with_suffix(&quot;.png&quot;))
+<span id="L137"> 137</span>     encoder.stdin.close()
+<span id="L138"> 138</span>     error_text = encoder.stderr.read().decode(errors=&quot;replace&quot;)
+<span id="L139"> 139</span>     if encoder.wait() != 0:
+<span id="L140"> 140</span>         # Stop and explain the invalid model setting or failed calculation.
+<span id="L141"> 141</span>         raise RuntimeError(error_text)
+<span id="L142"> 142</span>     renderer.close()
+<span id="L143"> 143</span>     metadata = dict(
+<span id="L144"> 144</span>         source=str(folder / &quot;forward_simulation_timeseries.npz&quot;),
+<span id="L145"> 145</span>         start_s=start_s,
+<span id="L146"> 146</span>         end_s=end_s,
+<span id="L147"> 147</span>         frame_count=frame_count,
+<span id="L148"> 148</span>         frames_per_second=frames_per_second,
+<span id="L149"> 149</span>         playback_speed=playback_speed,
+<span id="L150"> 150</span>         species=&quot;cat&quot;,
+<span id="L151"> 151</span>         arrows=&quot;saved Ground_Reaction_Forces at projected paw sites; archived center of pressure unavailable&quot;,
+<span id="L152"> 152</span>     )
+<span id="L153"> 153</span>     # Save the computed values or figure for inspection and reproducibility.
+<span id="L154"> 154</span>     output.with_suffix(&quot;.json&quot;).write_text(json.dumps(metadata, indent=2))
+<span id="L155"> 155</span>     print(&quot;VIDEO_SAVED &quot; + str(output))
+<span id="L156"> 156</span> 
+<span id="L157"> 157</span> 
+<span id="L158"> 158</span> if __name__ == &quot;__main__&quot;:
+<span id="L159"> 159</span>     parser = argparse.ArgumentParser(description=__doc__)
+<span id="L160"> 160</span>     parser.add_argument(&quot;--run&quot;, default=&quot;Simulation_Results/Intact_Walking&quot;)
+<span id="L161"> 161</span>     parser.add_argument(
+<span id="L162"> 162</span>         &quot;--output&quot;, default=str(ROOT / &quot;Documentation/Figures_and_Videos/walking_simulation.mp4&quot;)
+<span id="L163"> 163</span>     )
+<span id="L164"> 164</span>     arguments = parser.parse_args()
+<span id="L165"> 165</span>     render_walking_video(arguments.run, arguments.output)
+</pre></main></body></html>

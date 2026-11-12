@@ -1,0 +1,162 @@
+[
+  {
+    "channel": "L_IP",
+    "limb": "L",
+    "kind": "assumed_LH_from_recorded_RH"
+  },
+  {
+    "channel": "L_VL",
+    "limb": "L",
+    "kind": "assumed_LH_from_recorded_RH"
+  },
+  {
+    "channel": "L_TA",
+    "limb": "L",
+    "kind": "assumed_LH_from_recorded_RH"
+  },
+  {
+    "channel": "L_SO",
+    "limb": "L",
+    "kind": "assumed_LH_from_recorded_RH"
+  },
+  {
+    "channel": "L_BFP",
+    "limb": "L",
+    "kind": "assumed_LH_from_recorded_RH"
+  },
+  {
+    "channel": "L_SAM",
+    "limb": "L",
+    "kind": "assumed_LH_from_recorded_RH"
+  },
+  {
+    "channel": "L_MG",
+    "limb": "L",
+    "kind": "assumed_LH_from_recorded_RH"
+  },
+  {
+    "channel": "R_IP",
+    "limb": "R",
+    "kind": "recorded_RH_EMG"
+  },
+  {
+    "channel": "R_VL",
+    "limb": "R",
+    "kind": "recorded_RH_EMG"
+  },
+  {
+    "channel": "R_TA",
+    "limb": "R",
+    "kind": "recorded_RH_EMG"
+  },
+  {
+    "channel": "R_SO",
+    "limb": "R",
+    "kind": "recorded_RH_EMG"
+  },
+  {
+    "channel": "R_BFP",
+    "limb": "R",
+    "kind": "recorded_RH_EMG"
+  },
+  {
+    "channel": "R_SAM",
+    "limb": "R",
+    "kind": "recorded_RH_EMG"
+  },
+  {
+    "channel": "R_MG",
+    "limb": "R",
+    "kind": "recorded_RH_EMG"
+  },
+  {
+    "channel": "FL_ShoulderExtensor",
+    "limb": "FL",
+    "kind": "pooled_forelimb_EMG_representative_group"
+  },
+  {
+    "channel": "FL_ElbowExtensor",
+    "limb": "FL",
+    "kind": "pooled_forelimb_EMG_representative_group"
+  },
+  {
+    "channel": "FL_BicepsBrachii",
+    "limb": "FL",
+    "kind": "pooled_forelimb_EMG_representative_group"
+  },
+  {
+    "channel": "FL_ElbowFlexor",
+    "limb": "FL",
+    "kind": "pooled_forelimb_EMG_representative_group"
+  },
+  {
+    "channel": "FL_ElbowFlexorWristFlexor",
+    "limb": "FL",
+    "kind": "pooled_forelimb_EMG_representative_group"
+  },
+  {
+    "channel": "FL_WristExtensor",
+    "limb": "FL",
+    "kind": "pooled_forelimb_EMG_representative_group"
+  },
+  {
+    "channel": "FL_ShoulderFlexor",
+    "limb": "FL",
+    "kind": "pooled_forelimb_EMG_representative_group"
+  },
+  {
+    "channel": "FL_TricepsBrachiiLong",
+    "limb": "FL",
+    "kind": "pooled_forelimb_EMG_representative_group"
+  },
+  {
+    "channel": "FR_ShoulderExtensor",
+    "limb": "FR",
+    "kind": "pooled_forelimb_EMG_representative_group"
+  },
+  {
+    "channel": "FR_ElbowExtensor",
+    "limb": "FR",
+    "kind": "pooled_forelimb_EMG_representative_group"
+  },
+  {
+    "channel": "FR_BicepsBrachii",
+    "limb": "FR",
+    "kind": "pooled_forelimb_EMG_representative_group"
+  },
+  {
+    "channel": "FR_ElbowFlexor",
+    "limb": "FR",
+    "kind": "pooled_forelimb_EMG_representative_group"
+  },
+  {
+    "channel": "FR_ElbowFlexorWristFlexor",
+    "limb": "FR",
+    "kind": "pooled_forelimb_EMG_representative_group"
+  },
+  {
+    "channel": "FR_WristExtensor",
+    "limb": "FR",
+    "kind": "pooled_forelimb_EMG_representative_group"
+  },
+  {
+    "channel": "FR_ShoulderFlexor",
+    "limb": "FR",
+    "kind": "pooled_forelimb_EMG_representative_group"
+  },
+  {
+    "channel": "FR_TricepsBrachiiLong",
+    "limb": "FR",
+    "kind": "pooled_forelimb_EMG_representative_group"
+  },
+  {
+    "channel": "L_FHL",
+    "limb": "L",
+    "kind": "assumed_LH_from_recorded_RH"
+  },
+  {
+    "channel": "R_FHL",
+    "limb": "R",
+    "kind": "recorded_RH_EMG"
+  }
+]

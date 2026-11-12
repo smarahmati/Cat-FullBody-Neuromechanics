@@ -1,0 +1,147 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Assemble reference kinematics.</title><link rel="stylesheet" href="../style.css"></head><body><!-- generated folder guide --><header><div class="tag">Cat · Full-body neuromechanics</div><h1>Assemble reference kinematics.</h1><nav><a href="../../START_HERE.html">Start here</a> · <a href="../project_structure.html">Find a file</a></nav></header><main><p><a href="../../Code/neuromechanics/assemble_reference_kinematics.py">Code/neuromechanics/assemble_reference_kinematics.py</a></p><pre style="overflow:auto;white-space:pre"><span id="L1">   1</span> &quot;&quot;&quot;Assemble reference kinematics.
+<span id="L2">   2</span> 
+<span id="L3">   3</span> Inputs/outputs: see the named function arguments and returned values.
+<span id="L4">   4</span> Lengths use metres, time seconds, force newtons, and angles radians unless stated.
+<span id="L5">   5</span> See Documentation/model_methods.html for equations and parameter definitions.
+<span id="L6">   6</span> &quot;&quot;&quot;
+<span id="L7">   7</span> 
+<span id="L8">   8</span> import numpy as np
+<span id="L9">   9</span> 
+<span id="L10">  10</span> import mujoco as mj
+<span id="L11">  11</span> 
+<span id="L12">  12</span> from model_configuration.paths import ROOT
+<span id="L13">  13</span> 
+<span id="L14">  14</span> from .experimental_comparison_targets import experimental_comparison_targets
+<span id="L15">  15</span> 
+<span id="L16">  16</span> from .periodic_interpolate import periodic_interpolate
+<span id="L17">  17</span> 
+<span id="L18">  18</span> 
+<span id="L19">  19</span> def assemble_reference_kinematics(state, count=240):
+<span id="L20">  20</span>     &quot;&quot;&quot;Offline scoring/initialization trajectory; never called by advance_partitioned_timestep.
+<span id="L21">  21</span> 
+<span id="L22">  22</span>     Each limb retains its source angle convention and a fixed assembly phase.
+<span id="L23">  23</span>     The hind fitted initial offset is applied to the root, not to measurements.
+<span id="L24">  24</span>     This assembles separate studies; it is not a recorded four-limb gait.
+<span id="L25">  25</span>     &quot;&quot;&quot;
+<span id="L26">  26</span>     m = state[&quot;model&quot;]
+<span id="L27">  27</span>     T = state[&quot;settings&quot;][&quot;period_s&quot;]
+<span id="L28">  28</span>     time = np.arange(count) * T / count
+<span id="L29">  29</span>     if state[&quot;settings&quot;].get(&quot;reference_seed&quot;):
+<span id="L30">  30</span>         seed = np.load(ROOT / state[&quot;settings&quot;][&quot;reference_seed&quot;])
+<span id="L31">  31</span>         out = {}
+<span id="L32">  32</span>         for key in [
+<span id="L33">  33</span>             &quot;pose&quot;,
+<span id="L34">  34</span>             &quot;velocity&quot;,
+<span id="L35">  35</span>             &quot;acceleration&quot;,
+<span id="L36">  36</span>             &quot;joint_q&quot;,
+<span id="L37">  37</span>             &quot;grf&quot;,
+<span id="L38">  38</span>             &quot;excitation&quot;,
+<span id="L39">  39</span>             &quot;scapula&quot;,
+<span id="L40">  40</span>         ] + ([&quot;cop&quot;] if &quot;cop&quot; in seed else []):
+<span id="L41">  41</span>             value = seed[key]
+<span id="L42">  42</span>             grid = np.arange(len(value)) / len(value)
+<span id="L43">  43</span>             flat = value.reshape(len(value), -1).copy()
+<span id="L44">  44</span>             if key == &quot;pose&quot;:
+<span id="L45">  45</span>                 stride = (
+<span id="L46">  46</span>                     float(seed[&quot;stride_m&quot;])
+<span id="L47">  47</span>                     if &quot;stride_m&quot; in seed
+<span id="L48">  48</span>                     else float(
+<span id="L49">  49</span>                         np.load(ROOT / &quot;Data/Experimental_Reference_Data/right_hindlimb_walking_reference.npz&quot;)[&quot;stride_m&quot;]
+<span id="L50">  50</span>                     )
+<span id="L51">  51</span>                 )
+<span id="L52">  52</span>                 flat[:, 0] -= stride * grid
+<span id="L53">  53</span>             new = np.column_stack(
+<span id="L54">  54</span>                 [np.interp(time / T, np.r_[grid, 1.0], np.r_[v, v[0]]) for v in flat.T]
+<span id="L55">  55</span>             )
+<span id="L56">  56</span>             if key == &quot;pose&quot;:
+<span id="L57">  57</span>                 new[:, 0] += stride * time / T
+<span id="L58">  58</span>             out[key] = new.reshape((count,) + value.shape[1:])
+<span id="L59">  59</span>         return dict(time=time, **out)
+<span id="L60">  60</span>     ref = dict(np.load(ROOT / &quot;Data/Experimental_Reference_Data/right_hindlimb_walking_reference.npz&quot;))
+<span id="L61">  61</span>     raw = ref[&quot;pose&quot;]
+<span id="L62">  62</span>     phase_grid = np.arange(len(raw)) / len(raw)
+<span id="L63">  63</span>     pose = np.tile(state[&quot;qpos&quot;], (count, 1))
+<span id="L64">  64</span>     target = experimental_comparison_targets(time, T)
+<span id="L65">  65</span>     interp = lambda x: np.interp(
+<span id="L66">  66</span>         np.arange(count) / count,
+<span id="L67">  67</span>         np.r_[phase_grid, 1.0],
+<span id="L68">  68</span>         np.r_[x, x[0]],
+<span id="L69">  69</span>     )
+<span id="L70">  70</span>     stride = float(ref[&quot;stride_m&quot;])
+<span id="L71">  71</span>     detrend = raw[:, 0] - stride * phase_grid
+<span id="L72">  72</span>     pose[:, 0] = interp(detrend) + stride * time / T
+<span id="L73">  73</span>     pose[:, 1] = interp(raw[:, 2]) + (state[&quot;qpos&quot;][1] - raw[0, 2])
+<span id="L74">  74</span>     base = raw[0, 3:7]
+<span id="L75">  75</span>     inverse = base * np.array([1, -1, -1, -1])
+<span id="L76">  76</span>     angles = []
+<span id="L77">  77</span>     for q in raw[:, 3:7]:
+<span id="L78">  78</span>         rel = np.zeros(4)
+<span id="L79">  79</span>         mj.mju_mulQuat(rel, q, inverse)
+<span id="L80">  80</span>         angles.append(2 * np.arctan2(rel[2], rel[0]))
+<span id="L81">  81</span>     pose[:, 2] = interp(np.unwrap(angles)) + state[&quot;qpos&quot;][2]
+<span id="L82">  82</span>     for k in range(4):
+<span id="L83">  83</span>         pose[:, state[&quot;joint_indices&quot;][k]] = target[&quot;joint_q&quot;][:, k]
+<span id="L84">  84</span>     # The separate fore study supplies shoulder heights and scapular angles.
+<span id="L85">  85</span>     # Infer one common trunk pitch offline. This is an assembly assumption;
+<span id="L86">  86</span>     # runtime lumbosacral motion is free and only a passive spring acts there.
+<span id="L87">  87</span>     z = np.load(ROOT / &quot;Data/Experimental_Reference_Data/hindlimb_forelimb_reference_cycles.npz&quot;)
+<span id="L88">  88</span>     scratch = mj.MjData(m)
+<span id="L89">  89</span>     spine = m.joint(&quot;lumbosacral_pitch&quot;).qposadr[0]
+<span id="L90">  90</span>     for k, t in enumerate(time):
+<span id="L91">  91</span>         wanted = np.mean(
+<span id="L92">  92</span>             [
+<span id="L93">  93</span>                 periodic_interpolate(
+<span id="L94">  94</span>                     z[&quot;shoulder_z_by_side&quot;][:, i],
+<span id="L95">  95</span>                     t / T + 0.5 + [0.25, 0.75][i],
+<span id="L96">  96</span>                 )
+<span id="L97">  97</span>                 for i in range(2)
+<span id="L98">  98</span>             ]
+<span id="L99">  99</span>         )
+<span id="L100"> 100</span>         theta = 0.0
+<span id="L101"> 101</span>         for iteration in range(4):
+<span id="L102"> 102</span>             pose[k, spine] = theta - pose[k, 2]
+<span id="L103"> 103</span>             for i, side in enumerate([&quot;FL&quot;, &quot;FR&quot;]):
+<span id="L104"> 104</span>                 pose[k, m.joint(side + &quot;_scapulothoracic&quot;).qposadr[0]] = (
+<span id="L105"> 105</span>                     target[&quot;scapula&quot;][k, i]
+<span id="L106"> 106</span>                     + theta
+<span id="L107"> 107</span>                 )
+<span id="L108"> 108</span>             scratch.qpos[:] = pose[k]
+<span id="L109"> 109</span>             # Recalculate positions and routed muscle lengths at the new pose.
+<span id="L110"> 110</span>             mj.mj_fwdPosition(m, scratch)
+<span id="L111"> 111</span>             actual = np.mean(
+<span id="L112"> 112</span>                 [scratch.xpos[m.body(side + &quot;_upperarm&quot;).id, 2] for side in [&quot;FL&quot;, &quot;FR&quot;]]
+<span id="L113"> 113</span>             )
+<span id="L114"> 114</span>             theta += np.clip((actual - wanted) / 0.2294, -0.10, 0.10)
+<span id="L115"> 115</span>         pose[k, spine] = theta - pose[k, 2]
+<span id="L116"> 116</span>         for i, side in enumerate([&quot;FL&quot;, &quot;FR&quot;]):
+<span id="L117"> 117</span>             pose[k, m.joint(side + &quot;_scapulothoracic&quot;).qposadr[0]] = (
+<span id="L118"> 118</span>                 target[&quot;scapula&quot;][k, i]
+<span id="L119"> 119</span>                 + theta
+<span id="L120"> 120</span>             )
+<span id="L121"> 121</span>         # Match each source shoulder height with the passive sling translation.
+<span id="L122"> 122</span>         # This is OFFLINE reference assembly; during simulation the shoulder
+<span id="L123"> 123</span>         # translation is determined by inertia, muscle forces and contacts.
+<span id="L124"> 124</span>         scratch.qpos[:] = pose[k]
+<span id="L125"> 125</span>         # Recalculate positions and routed muscle lengths at the new pose.
+<span id="L126"> 126</span>         mj.mj_fwdPosition(m, scratch)
+<span id="L127"> 127</span>         for i, side in enumerate([&quot;FL&quot;, &quot;FR&quot;]):
+<span id="L128"> 128</span>             wanted_i = periodic_interpolate(
+<span id="L129"> 129</span>                 z[&quot;shoulder_z_by_side&quot;][:, i],
+<span id="L130"> 130</span>                 t / T + 0.5 + [0.25, 0.75][i],
+<span id="L131"> 131</span>             )
+<span id="L132"> 132</span>             actual_i = scratch.xpos[m.body(side + &quot;_upperarm&quot;).id, 2]
+<span id="L133"> 133</span>             pose[k, m.joint(side + &quot;_scapula_z&quot;).qposadr[0]] = (
+<span id="L134"> 134</span>                 wanted_i
+<span id="L135"> 135</span>                 - actual_i
+<span id="L136"> 136</span>             ) / np.cos(theta)
+<span id="L137"> 137</span>     from .periodic_kinematic_seed import periodic_kinematic_seed
+<span id="L138"> 138</span> 
+<span id="L139"> 139</span>     pose, velocity, acceleration = periodic_kinematic_seed(pose, T, stride, 8)
+<span id="L140"> 140</span>     return dict(
+<span id="L141"> 141</span>         time=time,
+<span id="L142"> 142</span>         pose=pose,
+<span id="L143"> 143</span>         velocity=velocity,
+<span id="L144"> 144</span>         acceleration=acceleration,
+<span id="L145"> 145</span>         **target
+<span id="L146"> 146</span>     )
+</pre></main></body></html>

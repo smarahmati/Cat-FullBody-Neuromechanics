@@ -1,0 +1,7 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Shared constants in the implemented activation, muscle–tendon and contact equations.</title><link rel="stylesheet" href="../style.css"></head><body><!-- generated folder guide --><header><div class="tag">Cat · Full-body neuromechanics</div><h1>Shared constants in the implemented activation, muscle–tendon and contact equations.</h1><nav><a href="../../START_HERE.html">Start here</a> · <a href="../project_structure.html">Find a file</a></nav></header><main><p><a href="../../Code/model_configuration/formulation_constants.py">Code/model_configuration/formulation_constants.py</a></p><pre style="overflow:auto;white-space:pre"><span id="L1">   1</span> &quot;&quot;&quot;Load editable constants from the same parameter bundle as the simulation.&quot;&quot;&quot;
+<span id="L2">   2</span> from pathlib import Path
+<span id="L3">   3</span> import os, runpy
+<span id="L4">   4</span> from .paths import ROOT
+<span id="L5">   5</span> folder = Path(os.environ.get(&quot;CAT_PARAMETER_FOLDER&quot;, ROOT / &quot;Data/Model_Parameters&quot;))
+<span id="L6">   6</span> globals().update({k:v for k,v in runpy.run_path(str(folder / &quot;formulation_constants.py&quot;)).items() if k.isupper()})
+</pre></main></body></html>

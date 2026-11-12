@@ -1,0 +1,86 @@
+{
+  "tests": {
+    "uninterrupted_60s": true,
+    "rhythmic_four_paw_contacts": true,
+    "all_joint_RMSE": false,
+    "all_AP_RMSE": true,
+    "all_vertical_RMSE": false,
+    "braking_and_propulsion_all_paws": true,
+    "available_EMG_shapes": false,
+    "available_EMG_active_quiet_timing": false,
+    "interior_elastic_equilibrium": true,
+    "no_geometric_fiber_bounds": true,
+    "configured_force_velocity_domain": true
+  },
+  "primary_calibration_pass": false,
+  "half_step_and_perturbation_still_required": true,
+  "late_window_start_s": 49.99695140578718,
+  "late_joint_RMSE_deg": [
+    [
+      5.3034077077746264,
+      5.755600303912501,
+      5.300758638307608,
+      3.648147634535865
+    ],
+    [
+      3.681077522003111,
+      3.770030758983005,
+      3.564438355136294,
+      3.859044810812872
+    ],
+    [
+      2.2978788671775177,
+      2.673323399607789,
+      4.910378474049083,
+      9.942369089784002
+    ],
+    [
+      5.669132716576571,
+      8.116439835791546,
+      6.7002527651037544,
+      8.483545971059483
+    ]
+  ],
+  "late_AP_vertical_RMSE_N": [
+    [
+      0.42343831869518483,
+      0.7105797033203753
+    ],
+    [
+      0.5453592215169262,
+      0.8883378874613445
+    ],
+    [
+      0.49088663465368565,
+      1.232364458359053
+    ],
+    [
+      0.4703506660235081,
+      1.8367078643360355
+    ]
+  ],
+  "contact_cycles": [
+    {
+      "completed_cycles": 86,
+      "last_window_median_period_s": 0.6849582342715621,
+      "period_relative_sd": 0.0033764772087788407
+    },
+    {
+      "completed_cycles": 87,
+      "last_window_median_period_s": 0.6849582342715621,
+      "period_relative_sd": 0.0033043653711268333
+    },
+    {
+      "completed_cycles": 87,
+      "last_window_median_period_s": 0.6849582342715621,
+      "period_relative_sd": 0.0033043653711268333
+    },
+    {
+      "completed_cycles": 87,
+      "last_window_median_period_s": 0.6849582342715621,
+      "period_relative_sd": 0.0035066408429165544
+    }
+  ],
+  "threshold_provenance": "Declared engineering targets comparable to preserved hindlimb fit; not published biological tolerances.",
+  "independent_four_limb_validation": false
+}

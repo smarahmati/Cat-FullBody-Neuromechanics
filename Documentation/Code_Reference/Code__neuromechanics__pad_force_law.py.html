@@ -1,0 +1,42 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Local compliant-pad law; force on paw, SI units, no signal filtering.</title><link rel="stylesheet" href="../style.css"></head><body><!-- generated folder guide --><header><div class="tag">Cat · Full-body neuromechanics</div><h1>Local compliant-pad law; force on paw, SI units, no signal filtering.</h1><nav><a href="../../START_HERE.html">Start here</a> · <a href="../project_structure.html">Find a file</a></nav></header><main><p><a href="../../Code/neuromechanics/pad_force_law.py">Code/neuromechanics/pad_force_law.py</a></p><pre style="overflow:auto;white-space:pre"><span id="L1">   1</span> &quot;&quot;&quot;Local compliant-pad law; force on paw, SI units, no signal filtering.&quot;&quot;&quot;
+<span id="L2">   2</span> 
+<span id="L3">   3</span> import numpy as np
+<span id="L4">   4</span> 
+<span id="L5">   5</span> from numba import njit
+<span id="L6">   6</span> 
+<span id="L7">   7</span> 
+<span id="L8">   8</span> # Compile this numerical function for repeated evaluations; its equations stay unchanged.
+<span id="L9">   9</span> @njit(cache=True)
+<span id="L10">  10</span> def pad_force_law(depth, velocity, bristle, dt, parameters):
+<span id="L11">  11</span>     &quot;&quot;&quot;Hunt--Crossley normal force and elastic Coulomb return mapping.
+<span id="L12">  12</span> 
+<span id="L13">  13</span>     depth: positive compression [m]; velocity: surface velocity [m/s].
+<span id="L14">  14</span>     bristle: tangential elastic displacement [m]. dt advances that state.
+<span id="L15">  15</span>     k: N/m^(3/2), dissipation: s/m, tangential stiffness: N/m,
+<span id="L16">  16</span>     tangential damping: N*s/m. All parameters are explicitly calibrated,
+<span id="L17">  17</span>     not claimed as measurements of this animal&#x27;s pads.
+<span id="L18">  18</span>     &quot;&quot;&quot;
+<span id="L19">  19</span>     k, c, kt, bt, mu = parameters
+<span id="L20">  20</span>     if depth &lt;= 0:
+<span id="L21">  21</span>         return np.zeros(3), np.zeros(2), 0.0
+<span id="L22">  22</span>     normal = k * depth**1.5 * max(0.0, 1.0 - c * velocity[2])
+<span id="L23">  23</span>     if normal &lt;= 0:
+<span id="L24">  24</span>         return np.zeros(3), np.zeros(2), k * depth**2.5 / 2.5
+<span id="L25">  25</span>     displacement = bristle + dt * velocity[:2]
+<span id="L26">  26</span>     # The dashpot fades with compression; forces approach zero at contact onset.
+<span id="L27">  27</span>     damping = bt * min(1.0, depth / 0.001)
+<span id="L28">  28</span>     tangent = -kt * displacement - damping * velocity[:2]
+<span id="L29">  29</span>     magnitude = np.linalg.norm(tangent)
+<span id="L30">  30</span>     limit = mu * normal
+<span id="L31">  31</span>     if magnitude &gt; limit:
+<span id="L32">  32</span>         tangent *= limit / max(magnitude, 1.0e-30)
+<span id="L33">  33</span>         displacement = -(tangent + damping * velocity[:2]) / kt
+<span id="L34">  34</span>     force = np.empty(3)
+<span id="L35">  35</span>     force[:2] = tangent
+<span id="L36">  36</span>     force[2] = normal
+<span id="L37">  37</span>     return (
+<span id="L38">  38</span>         force,
+<span id="L39">  39</span>         displacement,
+<span id="L40">  40</span>         (k * depth**2.5 / 2.5 + 0.5 * kt * np.dot(displacement, displacement)),
+<span id="L41">  41</span>     )
+</pre></main></body></html>

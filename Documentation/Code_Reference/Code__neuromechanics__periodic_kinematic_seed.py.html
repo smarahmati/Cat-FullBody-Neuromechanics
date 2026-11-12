@@ -1,0 +1,32 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Periodic kinematic seed.</title><link rel="stylesheet" href="../style.css"></head><body><!-- generated folder guide --><header><div class="tag">Cat · Full-body neuromechanics</div><h1>Periodic kinematic seed.</h1><nav><a href="../../START_HERE.html">Start here</a> · <a href="../project_structure.html">Find a file</a></nav></header><main><p><a href="../../Code/neuromechanics/periodic_kinematic_seed.py">Code/neuromechanics/periodic_kinematic_seed.py</a></p><pre style="overflow:auto;white-space:pre"><span id="L1">   1</span> &quot;&quot;&quot;Periodic kinematic seed.
+<span id="L2">   2</span> 
+<span id="L3">   3</span> Inputs/outputs: see the named function arguments and returned values.
+<span id="L4">   4</span> Lengths use metres, time seconds, force newtons, and angles radians unless stated.
+<span id="L5">   5</span> See Documentation/model_methods.html for equations and parameter definitions.
+<span id="L6">   6</span> &quot;&quot;&quot;
+<span id="L7">   7</span> 
+<span id="L8">   8</span> import numpy as np
+<span id="L9">   9</span> 
+<span id="L10">  10</span> 
+<span id="L11">  11</span> def periodic_kinematic_seed(pose, period, stride, harmonics=8):
+<span id="L12">  12</span>     &quot;&quot;&quot;Smooth OFFLINE pose prior and differentiate it analytically.
+<span id="L13">  13</span> 
+<span id="L14">  14</span>     Raw measurements have a small cycle-end mismatch and linear-interpolation
+<span id="L15">  15</span>     corners. Differentiating those corners creates false accelerations. This
+<span id="L16">  16</span>     band-limited prior is used ONLY for inverse seeding, never for scoring or
+<span id="L17">  17</span>     smoothing a forward result. The retained harmonics are documented.
+<span id="L18">  18</span>     &quot;&quot;&quot;
+<span id="L19">  19</span>     n = len(pose)
+<span id="L20">  20</span>     phase = np.arange(n) / n
+<span id="L21">  21</span>     values = pose.copy()
+<span id="L22">  22</span>     values[:, 0] -= stride * phase
+<span id="L23">  23</span>     coefficients = np.fft.rfft(values, axis=0)
+<span id="L24">  24</span>     coefficients[harmonics + 1 :] = 0.0
+<span id="L25">  25</span>     omega = (2j * np.pi * np.arange(len(coefficients)) / period)[:, None]
+<span id="L26">  26</span>     q = np.fft.irfft(coefficients, n=n, axis=0)
+<span id="L27">  27</span>     v = np.fft.irfft(coefficients * omega, n=n, axis=0)
+<span id="L28">  28</span>     a = np.fft.irfft(coefficients * omega**2, n=n, axis=0)
+<span id="L29">  29</span>     q[:, 0] += stride * phase
+<span id="L30">  30</span>     v[:, 0] += stride / period
+<span id="L31">  31</span>     return q, v, a
+</pre></main></body></html>

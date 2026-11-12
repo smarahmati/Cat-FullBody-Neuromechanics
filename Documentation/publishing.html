@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Publish the documentation · Cat Full-Body Neuromechanics</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+  <div class="tag">Cat · Full-body neuromechanics</div>
+  <h1>Publish the documentation</h1>
+  <p>One project: formatted pages online, the same guides after downloading.</p>
+  <nav><a href="../START_HERE.html">Start here</a><a href="reproducibility.html">Run the model</a><a href="model_methods.html">Equations</a><a href="parameter_tables.html">Parameters</a></nav>
+</header>
+<main>
+  <div class="card">
+    <h2>Website address</h2>
+    <p><a href="https://smarahmati.github.io/Cat-FullBody-Neuromechanics/">smarahmati.github.io/Cat-FullBody-Neuromechanics/</a></p>
+    <p>This address becomes available after the first successful deployment. The repository is <a href="https://github.com/smarahmati/Cat-FullBody-Neuromechanics">smarahmati/Cat-FullBody-Neuromechanics</a>. GitHub's repository view displays HTML source; the website link opens the formatted pages.</p>
+  </div>
+  <h2>First publication using GitHub Desktop</h2>
+  <ol>
+    <li>In GitHub Desktop, choose <strong>File → Add local repository</strong> and select this project's root folder, <code>Cat-FullBody-Neuromechanics</code>.</li>
+    <li>Review the files, enter a commit summary and select <strong>Commit to main</strong>.</li>
+    <li>Select <strong>Publish repository</strong>. Use owner <code>smarahmati</code> and name <code>Cat-FullBody-Neuromechanics</code>. Publish as a public repository for freely accessible code and a GitHub Pages site on GitHub Free.</li>
+    <li>Open the repository on GitHub. Once only, choose <strong>Settings → Pages → Build and deployment → Source → GitHub Actions</strong>. The workflow file is already included; no template or additional workflow is needed.</li>
+    <li>Open <strong>Actions → Documentation website</strong>. If the first push ran before Pages was enabled, select the failed run and <strong>Re-run all jobs</strong>, or select <strong>Run workflow</strong> on the default branch.</li>
+    <li>After the build and deployment succeed, open the website address above. The deployment also displays its address in the workflow summary.</li>
+  </ol>
+  <p>GitHub requires that one-time repository setting. The included workflow does not require a personal access token or additional secret. Repository or organization policies must allow GitHub Actions and Pages. See <a href="https://docs.github.com/en/pages/getting-started-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site">GitHub's publishing-source instructions</a>.</p>
+  <h2>After that: edit, commit, push</h2>
+  <p>Save changes, commit them in GitHub Desktop, and select <strong>Push origin</strong>. Each push to the default <code>main</code> or <code>master</code> branch rebuilds and publishes the documentation. You do not need to upload HTML separately. The workflow checks links before deployment; if the build fails, inspect its error in Actions.</p>
+  <h2>Read the downloaded project</h2>
+  <p>After downloading and extracting the repository, double-click <a href="../START_HERE.html"><code>START_HERE.html</code></a> or <a href="../index.html"><code>index.html</code></a>. Equations, local figures, the muscle selector and linked guides work without a local server. External papers and GitHub links still require internet access.</p>
+  <h2>What the website contains</h2>
+  <table>
+    <tr><th>Content</th><th>Where to find it</th></tr>
+    <tr><td>Methods, equations, flowcharts, parameter tables, figures and animation</td><td>Formatted website and downloaded HTML.</td></tr>
+    <tr><td>Public code, input tables and experimental references</td><td>Repository downloads; also linked from the website.</td></tr>
+    <tr><td>Large raw result arrays and CSV time series</td><td>Kept in the repository. Website links open the matching committed file on GitHub for download.</td></tr>
+    <tr><td>Local test runs, Python environments and files excluded by the project's distribution rules</td><td>Not included in the website. Private reading copies and restricted visual meshes remain excluded.</td></tr>
+  </table>
+  <p>The website uses the saved results. Publishing it does not integrate the model, change parameters or fit new excitation. Compute and deliberately commit new results when you want to publish them.</p>
+  <details>
+    <summary>Files that control publication and optional local build</summary>
+    <p><a href="../.github/workflows/documentation-website.yml">The publication workflow</a> runs <a href="../Code/simulation_tools/build_documentation_website.py">the website builder</a>, checks links and deploys the static artifact. The builder uses only Python's standard library and Git.</p>
+    <pre>python Code/simulation_tools/build_documentation_website.py --output _site</pre>
+    <p>Run from the project root after committing files. For an uncommitted local preview, add <code>--include-untracked</code>. Choose a new or empty output directory each time. The generated <code>_site</code> directory is ignored by Git. The downloaded source HTML does not require this build.</p>
+    <p>Workflow design follows <a href="https://docs.github.com/en/pages/getting-started-with-github-pages/using-custom-workflows-with-github-pages">GitHub's custom Pages workflow documentation</a>.</p>
+  </details>
+</main>
+<footer>Cat Full-Body Neuromechanics · Documentation publication; model calculations are unchanged.</footer>
+</body>
+</html>

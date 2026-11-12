@@ -1,0 +1,23 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Recompute the complete 60-second intact walking simulation.</title><link rel="stylesheet" href="../style.css"></head><body><!-- generated folder guide --><header><div class="tag">Cat · Full-body neuromechanics</div><h1>Recompute the complete 60-second intact walking simulation.</h1><nav><a href="../../START_HERE.html">Start here</a> · <a href="../project_structure.html">Find a file</a></nav></header><main><p><a href="../../reproduce.py">reproduce.py</a></p><pre style="overflow:auto;white-space:pre"><span id="L1">   1</span> &quot;&quot;&quot;Recompute the complete 60-second intact walking simulation.
+<span id="L2">   2</span> 
+<span id="L3">   3</span> Run: python reproduce.py --gui
+<span id="L4">   4</span> Pass any run.py option, such as --seconds or --output, to override the defaults.
+<span id="L5">   5</span> &quot;&quot;&quot;
+<span id="L6">   6</span> from pathlib import Path
+<span id="L7">   7</span> import subprocess
+<span id="L8">   8</span> import sys
+<span id="L9">   9</span> 
+<span id="L10">  10</span> 
+<span id="L11">  11</span> def main():
+<span id="L12">  12</span>     &quot;&quot;&quot;Use the same current parameters and forward integrator as run.py.&quot;&quot;&quot;
+<span id="L13">  13</span>     arguments = list(sys.argv[1:])
+<span id="L14">  14</span>     if &#x27;--seconds&#x27; not in arguments:
+<span id="L15">  15</span>         arguments.extend([&#x27;--seconds&#x27;, &#x27;60&#x27;])
+<span id="L16">  16</span>     if &#x27;--gui&#x27; not in arguments and &#x27;--no-gui&#x27; not in arguments:
+<span id="L17">  17</span>         arguments.append(&#x27;--no-gui&#x27;)
+<span id="L18">  18</span>     subprocess.run([sys.executable, str(Path(__file__).resolve().parent / &#x27;run.py&#x27;), *arguments], check=True)
+<span id="L19">  19</span> 
+<span id="L20">  20</span> 
+<span id="L21">  21</span> if __name__ == &#x27;__main__&#x27;:
+<span id="L22">  22</span>     main()
+</pre></main></body></html>

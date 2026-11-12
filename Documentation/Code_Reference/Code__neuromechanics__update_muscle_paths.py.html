@@ -1,0 +1,19 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Update muscle paths.</title><link rel="stylesheet" href="../style.css"></head><body><!-- generated folder guide --><header><div class="tag">Cat · Full-body neuromechanics</div><h1>Update muscle paths.</h1><nav><a href="../../START_HERE.html">Start here</a> · <a href="../project_structure.html">Find a file</a></nav></header><main><p><a href="../../Code/neuromechanics/update_muscle_paths.py">Code/neuromechanics/update_muscle_paths.py</a></p><pre style="overflow:auto;white-space:pre"><span id="L1">   1</span> &quot;&quot;&quot;Update muscle paths.
+<span id="L2">   2</span> 
+<span id="L3">   3</span> Inputs/outputs: see the named function arguments and returned values.
+<span id="L4">   4</span> Lengths use metres, time seconds, force newtons, and angles radians unless stated.
+<span id="L5">   5</span> See Documentation/model_methods.html for equations and parameter definitions.
+<span id="L6">   6</span> &quot;&quot;&quot;
+<span id="L7">   7</span> 
+<span id="L8">   8</span> from .calculate_muscle_route_points import calculate_muscle_route_points
+<span id="L9">   9</span> 
+<span id="L10">  10</span> 
+<span id="L11">  11</span> def update_muscle_paths(state):
+<span id="L12">  12</span>     &quot;&quot;&quot;Update source pulley tangent sites from current joint positions.&quot;&quot;&quot;
+<span id="L13">  13</span>     meta = state[&quot;routing_meta&quot;]
+<span id="L14">  14</span>     state[&quot;model&quot;].site_pos[meta[:, 5], :2] = calculate_muscle_route_points(
+<span id="L15">  15</span>         state[&quot;data&quot;].qpos,
+<span id="L16">  16</span>         meta,
+<span id="L17">  17</span>         state[&quot;routing_geom&quot;],
+<span id="L18">  18</span>     )
+</pre></main></body></html>

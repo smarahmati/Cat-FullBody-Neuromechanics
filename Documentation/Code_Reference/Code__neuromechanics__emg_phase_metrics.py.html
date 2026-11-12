@@ -1,0 +1,70 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Timing agreement between input muscle_excitation and EMG on the original clock.</title><link rel="stylesheet" href="../style.css"></head><body><!-- generated folder guide --><header><div class="tag">Cat · Full-body neuromechanics</div><h1>Timing agreement between input muscle_excitation and EMG on the original clock.</h1><nav><a href="../../START_HERE.html">Start here</a> · <a href="../project_structure.html">Find a file</a></nav></header><main><p><a href="../../Code/neuromechanics/emg_phase_metrics.py">Code/neuromechanics/emg_phase_metrics.py</a></p><pre style="overflow:auto;white-space:pre"><span id="L1">   1</span> &quot;&quot;&quot;Timing agreement between input muscle_excitation and EMG on the original clock.&quot;&quot;&quot;
+<span id="L2">   2</span> 
+<span id="L3">   3</span> import numpy as np
+<span id="L4">   4</span> 
+<span id="L5">   5</span> from scipy.optimize import linear_sum_assignment
+<span id="L6">   6</span> 
+<span id="L7">   7</span> 
+<span id="L8">   8</span> def emg_phase_metrics(muscle_excitation, reference, period, threshold=0.10):
+<span id="L9">   9</span>     &quot;&quot;&quot;Score one complete cycle; both arrays are already peak-normalized.
+<span id="L10">  10</span> 
+<span id="L11">  11</span>     The detection threshold is an analysis choice. No signal is phase-shifted,
+<span id="L12">  12</span>     filtered, baseline-subtracted or modified. Edge matching is circular, so
+<span id="L13">  13</span>     a burst crossing the end of the cycle is handled as one burst.
+<span id="L14">  14</span>     &quot;&quot;&quot;
+<span id="L15">  15</span>     u = np.asarray(muscle_excitation, float)
+<span id="L16">  16</span>     r = np.asarray(reference, float)
+<span id="L17">  17</span>     if u.shape != r.shape or u.ndim != 1:
+<span id="L18">  18</span>         # Stop and explain the invalid model setting or failed calculation.
+<span id="L19">  19</span>         raise ValueError(&quot;Use equally sampled one-dimensional cycles&quot;)
+<span id="L20">  20</span>     predicted = u &gt; threshold
+<span id="L21">  21</span>     expected = r &gt; threshold
+<span id="L22">  22</span> 
+<span id="L23">  23</span>     def edges(mask):
+<span id="L24">  24</span>         return np.flatnonzero(mask &amp; ~np.roll(mask, 1)), np.flatnonzero(
+<span id="L25">  25</span>             ~mask
+<span id="L26">  26</span>             &amp; np.roll(mask, 1)
+<span id="L27">  27</span>         )
+<span id="L28">  28</span> 
+<span id="L29">  29</span>     on, off = edges(predicted)
+<span id="L30">  30</span>     ron, roff = edges(expected)
+<span id="L31">  31</span>     n = len(u)
+<span id="L32">  32</span> 
+<span id="L33">  33</span>     def match(got, wanted):
+<span id="L34">  34</span>         if not len(got) or not len(wanted):
+<span id="L35">  35</span>             return dict(
+<span id="L36">  36</span>                 mean_absolute_error_s=None,
+<span id="L37">  37</span>                 maximum_absolute_error_s=None,
+<span id="L38">  38</span>                 unmatched_predicted=len(got),
+<span id="L39">  39</span>                 unmatched_reference=len(wanted),
+<span id="L40">  40</span>             )
+<span id="L41">  41</span>         difference = ((got[:, None] - wanted[None, :] + n / 2) % n - n / 2) * period / n
+<span id="L42">  42</span>         rows, cols = linear_sum_assignment(abs(difference))
+<span id="L43">  43</span>         # Calculate the error in this comparison.
+<span id="L44">  44</span>         error = abs(difference[rows, cols])
+<span id="L45">  45</span>         return dict(
+<span id="L46">  46</span>             mean_absolute_error_s=float(error.mean()),
+<span id="L47">  47</span>             maximum_absolute_error_s=float(error.max()),
+<span id="L48">  48</span>             unmatched_predicted=int(len(got) - len(rows)),
+<span id="L49">  49</span>             unmatched_reference=int(len(wanted) - len(cols)),
+<span id="L50">  50</span>         )
+<span id="L51">  51</span> 
+<span id="L52">  52</span>     union = np.count_nonzero(predicted | expected)
+<span id="L53">  53</span>     return dict(
+<span id="L54">  54</span>         threshold_fraction_of_peak=threshold,
+<span id="L55">  55</span>         active_intersection_over_union=(
+<span id="L56">  56</span>             float(np.count_nonzero(predicted &amp; expected) / union)
+<span id="L57">  57</span>             if union
+<span id="L58">  58</span>             else 1.0
+<span id="L59">  59</span>         ),
+<span id="L60">  60</span>         phase_disagreement_fraction=float(np.mean(predicted != expected)),
+<span id="L61">  61</span>         active_fraction_predicted=float(predicted.mean()),
+<span id="L62">  62</span>         active_fraction_reference=float(expected.mean()),
+<span id="L63">  63</span>         false_active_fraction_of_cycle=float(np.mean(predicted &amp; ~expected)),
+<span id="L64">  64</span>         missed_active_fraction_of_cycle=float(np.mean(~predicted &amp; expected)),
+<span id="L65">  65</span>         onset=match(on, ron),
+<span id="L66">  66</span>         offset=match(off, roff),
+<span id="L67">  67</span>         predicted_burst_count=int(len(on)),
+<span id="L68">  68</span>         reference_burst_count=int(len(ron)),
+<span id="L69">  69</span>     )
+</pre></main></body></html>

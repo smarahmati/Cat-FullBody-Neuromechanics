@@ -1,0 +1,313 @@
+{
+  "trial": {
+    "id": "Ted_046",
+    "collection": "Ted",
+    "source_row_1based": 46,
+    "key": [
+      "Stella",
+      "06-27-16a",
+      "26",
+      "3",
+      "RH"
+    ],
+    "info": {
+      "Cat": "Stella",
+      "Date": "06-27-16a",
+      "Trial": "26",
+      "Cycle": "3",
+      "KinFolder": "\\\\130.207.55.145\\vicon2\\Cat Data\\Stella\\0%\\06-27-16a",
+      "EMGFolder": "\\\\130.207.55.145\\vicon2\\Vicon Cat EMG\\Stella\\06-27-16_0a",
+      "ReinnDate": "08-16-16",
+      "KinStartFrame": 136,
+      "Limb": "RH",
+      "bFrame": 211,
+      "pcFrame": 239,
+      "eFrame": 293,
+      "GRF": 1,
+      "DF": 0.6585365853658537,
+      "CycleTime": 0.6833333333333333
+    },
+    "mass_kg": 2.96,
+    "weight_N": 29.0376,
+    "hindlimb_length_m": 0.271,
+    "channels": [
+      "Fx_N",
+      "Fz_N",
+      "MomMp_Nm",
+      "MomAnkle_Nm",
+      "MomKnee_Nm",
+      "MomHip_Nm",
+      "AngMp_rad",
+      "AngAnkle_rad",
+      "AngKnee_rad",
+      "AngHip_rad",
+      "VAMp_rad_per_s",
+      "VAAnkle_rad_per_s",
+      "VAKnee_rad_per_s",
+      "VAHip_rad_per_s",
+      "fiPelvis_rad",
+      "vfiPelvis_rad_per_s",
+      "xHip_m",
+      "yHip_m",
+      "LegLength_m",
+      "LegOrientation_rad"
+    ],
+    "experimental_condition": "intact_control",
+    "condition_provenance": "User confirmation, 2026-10-22; applies to all records.",
+    "reinnervation_date_is_placeholder": false,
+    "date_relative_to_reinnervation": "before",
+    "cycle_time_from_frames_s": 0.6833333333333333,
+    "complete_kinematics": true,
+    "available_EMG": [
+      "BFP",
+      "FHL",
+      "IP",
+      "MG",
+      "SAM",
+      "SAM2",
+      "SO",
+      "TA",
+      "VL"
+    ]
+  },
+  "fore_original_period_s": 0.687857483228707,
+  "applied_period_s": 0.6833333333333333,
+  "fore_swing_fraction": 0.3631838277557241,
+  "channels": [
+    {
+      "channel": "IP",
+      "kind": "recorded_RH_EMG",
+      "source_key": "Ted_046__EMG_IP",
+      "EMG_peak": 0.7199879624737926,
+      "amplitude_gain": 0.5447540543117967,
+      "scale_basis": "peak optimized activation, following source forelimb comparison method; excitation interpretation is an adaptation"
+    },
+    {
+      "channel": "BFA",
+      "kind": "inverse_optimization_activation_converted_to_excitation",
+      "source": "experimental_data\\raw\\hindlimb\\optimized\\Ted\\Activations_46.mat",
+      "diagnostics": {
+        "activation_amplitude_divisor": 1.0,
+        "clipped_fraction": 0.26732673267326734,
+        "smoothing_sigma_samples": 1.0
+      }
+    },
+    {
+      "channel": "VL",
+      "kind": "recorded_RH_EMG",
+      "source_key": "Ted_046__EMG_VL",
+      "EMG_peak": 0.8178546871498935,
+      "amplitude_gain": 1.1099262055125234,
+      "scale_basis": "peak optimized activation, following source forelimb comparison method; excitation interpretation is an adaptation"
+    },
+    {
+      "channel": "VM",
+      "kind": "inverse_optimization_activation_converted_to_excitation",
+      "source": "experimental_data\\raw\\hindlimb\\optimized\\Ted\\Activations_46.mat",
+      "diagnostics": {
+        "activation_amplitude_divisor": 1.0,
+        "clipped_fraction": 0.26732673267326734,
+        "smoothing_sigma_samples": 1.0
+      }
+    },
+    {
+      "channel": "TA",
+      "kind": "recorded_RH_EMG",
+      "source_key": "Ted_046__EMG_TA",
+      "EMG_peak": 0.6829024353555648,
+      "amplitude_gain": 0.18405165445103733,
+      "scale_basis": "peak optimized activation, following source forelimb comparison method; excitation interpretation is an adaptation"
+    },
+    {
+      "channel": "SO",
+      "kind": "recorded_RH_EMG",
+      "source_key": "Ted_046__EMG_SO",
+      "EMG_peak": 0.6819018461900878,
+      "amplitude_gain": 0.42992901478172335,
+      "scale_basis": "peak optimized activation, following source forelimb comparison method; excitation interpretation is an adaptation"
+    },
+    {
+      "channel": "RF",
+      "kind": "inverse_optimization_activation_converted_to_excitation",
+      "source": "experimental_data\\raw\\hindlimb\\optimized\\Ted\\Activations_46.mat",
+      "diagnostics": {
+        "activation_amplitude_divisor": 1.1209387411292417,
+        "clipped_fraction": 0.38613861386138615,
+        "smoothing_sigma_samples": 1.0
+      }
+    },
+    {
+      "channel": "BFP",
+      "kind": "recorded_RH_EMG",
+      "source_key": "Ted_046__EMG_BFP",
+      "EMG_peak": 0.5351126371564421,
+      "amplitude_gain": 1.5462335721718439,
+      "scale_basis": "peak optimized activation, following source forelimb comparison method; excitation interpretation is an adaptation"
+    },
+    {
+      "channel": "SAM",
+      "kind": "recorded_RH_EMG",
+      "source_key": "Ted_046__EMG_SAM",
+      "EMG_peak": 0.7783999593041284,
+      "amplitude_gain": 0.18217762644174793,
+      "scale_basis": "peak optimized activation, following source forelimb comparison method; excitation interpretation is an adaptation"
+    },
+    {
+      "channel": "LG",
+      "kind": "inverse_optimization_activation_converted_to_excitation",
+      "source": "experimental_data\\raw\\hindlimb\\optimized\\Ted\\Activations_46.mat",
+      "diagnostics": {
+        "activation_amplitude_divisor": 1.0,
+        "clipped_fraction": 0.25742574257425743,
+        "smoothing_sigma_samples": 1.0
+      }
+    },
+    {
+      "channel": "MG",
+      "kind": "recorded_RH_EMG",
+      "source_key": "Ted_046__EMG_MG",
+      "EMG_peak": 0.6882998544398149,
+      "amplitude_gain": 0.48073651017285635,
+      "scale_basis": "peak optimized activation, following source forelimb comparison method; excitation interpretation is an adaptation"
+    },
+    {
+      "channel": "ShoulderExtensor",
+      "kind": "pooled_forelimb_EMG_representative_group",
+      "EMGs": [
+        "SPS"
+      ],
+      "counts": {
+        "SPS": 7
+      },
+      "peak_excitation": 0.3151554499424551,
+      "group_combination": "equal mean of normalized representative envelopes; explicit adaptation when two EMGs map to one group"
+    },
+    {
+      "channel": "ElbowExtensor",
+      "kind": "pooled_forelimb_EMG_representative_group",
+      "EMGs": [
+        "TLAT"
+      ],
+      "counts": {
+        "TLAT": 131
+      },
+      "peak_excitation": 0.1307089299728523,
+      "group_combination": "equal mean of normalized representative envelopes; explicit adaptation when two EMGs map to one group"
+    },
+    {
+      "channel": "BicepsBrachii",
+      "kind": "pooled_forelimb_EMG_representative_group",
+      "EMGs": [
+        "BB"
+      ],
+      "counts": {
+        "BB": 125
+      },
+      "peak_excitation": 0.10406218440987265,
+      "group_combination": "equal mean of normalized representative envelopes; explicit adaptation when two EMGs map to one group"
+    },
+    {
+      "channel": "ElbowFlexor",
+      "kind": "pooled_forelimb_EMG_representative_group",
+      "EMGs": [
+        "PT",
+        "BR"
+      ],
+      "counts": {
+        "PT": 45,
+        "BR": 13
+      },
+      "peak_excitation": 0.18788517432477156,
+      "group_combination": "equal mean of normalized representative envelopes; explicit adaptation when two EMGs map to one group"
+    },
+    {
+      "channel": "ElbowFlexorWristFlexor",
+      "kind": "pooled_forelimb_EMG_representative_group",
+      "EMGs": [
+        "ECR"
+      ],
+      "counts": {
+        "ECR": 81
+      },
+      "peak_excitation": 0.3091599176707976,
+      "group_combination": "equal mean of normalized representative envelopes; explicit adaptation when two EMGs map to one group"
+    },
+    {
+      "channel": "WristFlexor",
+      "kind": "inverse_optimization_activation_converted_to_excitation",
+      "source": "forelimb/Activations_9Groups.mat",
+      "diagnostics": {
+        "activation_amplitude_divisor": 1.0,
+        "clipped_fraction": 0.37623762376237624,
+        "smoothing_sigma_samples": 1.0
+      }
+    },
+    {
+      "channel": "WristExtensor",
+      "kind": "pooled_forelimb_EMG_representative_group",
+      "EMGs": [
+        "FCU"
+      ],
+      "counts": {
+        "FCU": 124
+      },
+      "peak_excitation": 0.15925504512629884,
+      "group_combination": "equal mean of normalized representative envelopes; explicit adaptation when two EMGs map to one group"
+    },
+    {
+      "channel": "ShoulderFlexor",
+      "kind": "pooled_forelimb_EMG_representative_group",
+      "EMGs": [
+        "TJ",
+        "SD"
+      ],
+      "counts": {
+        "TJ": 19,
+        "SD": 9
+      },
+      "peak_excitation": 0.12469707504765276,
+      "group_combination": "equal mean of normalized representative envelopes; explicit adaptation when two EMGs map to one group"
+    },
+    {
+      "channel": "TricepsBrachiiLong",
+      "kind": "pooled_forelimb_EMG_representative_group",
+      "EMGs": [
+        "TLONG"
+      ],
+      "counts": {
+        "TLONG": 232
+      },
+      "peak_excitation": 0.5312012205254987,
+      "group_combination": "equal mean of normalized representative envelopes; explicit adaptation when two EMGs map to one group"
+    }
+  ],
+  "seam_correction_last_minus_first": [
+    0.0226931837651157,
+    0.0,
+    -0.02251799560647257,
+    0.0,
+    -0.006766374975265138,
+    0.00012271080237702582,
+    0.0,
+    0.10929694280706448,
+    -0.0032314097010306686,
+    0.0,
+    0.0,
+    0.00010609694310831903,
+    -1.8452353589560537e-05,
+    -0.00972733449196831,
+    -0.010638757984026484,
+    0.013948502108917765,
+    0.0,
+    6.500304922808222e-05,
+    -0.0045224913055580615,
+    -0.00013996310370278616
+  ],
+  "assumptions": [
+    "Left hindlimb is phase-shifted RH template, not measured LH validation.",
+    "Fore EMG is pooled across cats and sides, not side-identified matched recordings.",
+    "Fore and hind are different studies. One common period is imposed on inputs, not on predicted motion.",
+    "No measured Fy: zero placeholders must not be scored as experimental Fy.",
+    "Source native projected fiber convention is retained; true dynamic pennation is not represented."
+  ]
+}

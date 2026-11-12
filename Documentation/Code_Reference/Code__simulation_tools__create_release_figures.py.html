@@ -1,0 +1,89 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Create readable late-trial comparison figures from saved forward results.</title><link rel="stylesheet" href="../style.css"></head><body><!-- generated folder guide --><header><div class="tag">Cat · Full-body neuromechanics</div><h1>Create readable late-trial comparison figures from saved forward results.</h1><nav><a href="../../START_HERE.html">Start here</a> · <a href="../project_structure.html">Find a file</a></nav></header><main><p><a href="../../Code/simulation_tools/create_release_figures.py">Code/simulation_tools/create_release_figures.py</a></p><pre style="overflow:auto;white-space:pre"><span id="L1">   1</span> &quot;&quot;&quot;Create readable late-trial comparison figures from saved forward results.
+<span id="L2">   2</span> 
+<span id="L3">   3</span> This is postprocessing only: it never changes inputs, states, force values or
+<span id="L4">   4</span> time alignment. The last four seconds show the waveform detail. A separate
+<span id="L5">   5</span> last-ten-second table reports RMSE against the same fixed-clock references.
+<span id="L6">   6</span> Run from the root with: python Code/simulation_tools/create_release_figures.py
+<span id="L7">   7</span> &quot;&quot;&quot;
+<span id="L8">   8</span> from pathlib import Path
+<span id="L9">   9</span> import json
+<span id="L10">  10</span> import sys
+<span id="L11">  11</span> import numpy as np
+<span id="L12">  12</span> import matplotlib
+<span id="L13">  13</span> matplotlib.use(&#x27;Agg&#x27;)
+<span id="L14">  14</span> import matplotlib.pyplot as plt
+<span id="L15">  15</span> 
+<span id="L16">  16</span> # Resolve the repository from the script, so the working directory is irrelevant.
+<span id="L17">  17</span> ROOT=Path(__file__).resolve().parents[2]
+<span id="L18">  18</span> sys.path.insert(0,str(ROOT/&#x27;Code&#x27;))
+<span id="L19">  19</span> from neuromechanics.experimental_comparison_targets import experimental_comparison_targets
+<span id="L20">  20</span> from neuromechanics.emg_comparison_cycles import emg_comparison_cycles
+<span id="L21">  21</span> 
+<span id="L22">  22</span> 
+<span id="L23">  23</span> def create_release_figures():
+<span id="L24">  24</span>     &quot;&quot;&quot;Save all-joint, all-paw, all available EMG, and intervention comparisons.&quot;&quot;&quot;
+<span id="L25">  25</span>     folder=ROOT/&#x27;Simulation_Results/Intact_Walking&#x27;
+<span id="L26">  26</span>     output=ROOT/&#x27;Documentation/Figures_and_Videos&#x27;
+<span id="L27">  27</span>     output.mkdir(parents=True,exist_ok=True)
+<span id="L28">  28</span>     with np.load(folder/&#x27;forward_simulation_timeseries.npz&#x27;) as stored:
+<span id="L29">  29</span>         result={key:stored[key] for key in stored.files}
+<span id="L30">  30</span>     settings=json.loads((folder/&#x27;settings.json&#x27;).read_text())
+<span id="L31">  31</span>     times=result[&#x27;time&#x27;]
+<span id="L32">  32</span>     late=times&gt;=times[-1]-4
+<span id="L33">  33</span>     score=times&gt;=times[-1]-10
+<span id="L34">  34</span>     target=experimental_comparison_targets(times,settings[&#x27;period_s&#x27;],settings.get(&#x27;reference_table_dir&#x27;))
+<span id="L35">  35</span>     limb_labels=[&#x27;LH · assumed mirror&#x27;,&#x27;RH · measured&#x27;,&#x27;LF · separate study&#x27;,&#x27;RF · separate study&#x27;]
+<span id="L36">  36</span>     joints=[[&#x27;Hip&#x27;,&#x27;Knee&#x27;,&#x27;Ankle&#x27;,&#x27;MTP&#x27;]]*2+[[&#x27;Shoulder&#x27;,&#x27;Elbow&#x27;,&#x27;Wrist&#x27;,&#x27;MCP&#x27;]]*2
+<span id="L37">  37</span>     plt.rcParams.update({&#x27;font.size&#x27;:10,&#x27;axes.spines.top&#x27;:False,&#x27;axes.spines.right&#x27;:False})
+<span id="L38">  38</span>     fig,axes=plt.subplots(4,4,figsize=(16,10),sharex=True)
+<span id="L39">  39</span>     for side in range(4):
+<span id="L40">  40</span>         signs=np.array([-1,1,-1,-1]) if side&lt;2 else np.array([1,-1,-1,-1])
+<span id="L41">  41</span>         offset=np.array([0,np.pi,np.pi,np.pi]) if side&lt;2 else np.full(4,np.pi)
+<span id="L42">  42</span>         for j in range(4):
+<span id="L43">  43</span>             a=axes[side,j]
+<span id="L44">  44</span>             a.plot(times[late],np.rad2deg(offset[j]+signs[j]*target[&#x27;joint_q&#x27;][late,side,j]),&#x27;k--&#x27;,lw=1.2,label=&#x27;Reference&#x27;)
+<span id="L45">  45</span>             a.plot(times[late],np.rad2deg(offset[j]+signs[j]*result[&#x27;joint_q&#x27;][late,side,j]),color=&#x27;#067f97&#x27;,lw=1.4,label=&#x27;Forward&#x27;)
+<span id="L46">  46</span>             a.set_title(limb_labels[side]+&#x27; · &#x27;+joints[side][j],fontsize=10)
+<span id="L47">  47</span>             a.grid(alpha=.18)
+<span id="L48">  48</span>         axes[side,0].set_ylabel(&#x27;Anatomical angle (deg)&#x27;)
+<span id="L49">  49</span>     axes[0,0].legend(fontsize=8)
+<span id="L50">  50</span>     for a in axes[-1]:a.set_xlabel(&#x27;Simulation time (s)&#x27;)
+<span id="L51">  51</span>     fig.suptitle(&#x27;All 16 joints · same anatomical conventions and fixed reference clocks\nLate four-second interval; no time warping&#x27;,fontsize=15)
+<span id="L52">  52</span>     fig.tight_layout(rect=(0,0,1,.94));fig.savefig(output/&#x27;joint_comparison.png&#x27;,dpi=140);plt.close(fig)
+<span id="L53">  53</span>     fig,axes=plt.subplots(4,2,figsize=(12,10),sharex=True)
+<span id="L54">  54</span>     for side in range(4):
+<span id="L55">  55</span>         for col,k in enumerate([0,2]):
+<span id="L56">  56</span>             a=axes[side,col]
+<span id="L57">  57</span>             a.plot(times[late],target[&#x27;grf&#x27;][late,side,k],&#x27;k--&#x27;,lw=1.2,label=&#x27;Reference&#x27;)
+<span id="L58">  58</span>             a.plot(times[late],result[&#x27;grf&#x27;][late,side,k],color=&#x27;#067f97&#x27;,lw=1.4,label=&#x27;Raw contact force&#x27;)
+<span id="L59">  59</span>             a.set_title(limb_labels[side]+(&#x27; · anterior–posterior (AP) Fx&#x27; if k==0 else &#x27; · vertical Fz&#x27;))
+<span id="L60">  60</span>             a.set_ylabel(&#x27;Force (N)&#x27;);a.grid(alpha=.18)
+<span id="L61">  61</span>             if k==0:a.axhline(0,color=&#x27;gray&#x27;,lw=.5)
+<span id="L62">  62</span>     axes[0,0].legend(fontsize=8)
+<span id="L63">  63</span>     for a in axes[-1]:a.set_xlabel(&#x27;Simulation time (s)&#x27;)
+<span id="L64">  64</span>     fig.suptitle(&#x27;Paw Ground_Reaction_Forces · unfiltered forward contact forces&#x27;,fontsize=16)
+<span id="L65">  65</span>     fig.tight_layout(rect=(0,0,1,.96));fig.savefig(output/&#x27;grf_comparison.png&#x27;,dpi=150);plt.close(fig)
+<span id="L66">  66</span>     pairs=emg_comparison_cycles(result[&#x27;names&#x27;],settings)
+<span id="L67">  67</span>     for prefix in [&#x27;L&#x27;,&#x27;R&#x27;,&#x27;FL&#x27;,&#x27;FR&#x27;]:
+<span id="L68">  68</span>         selected=[p for p in pairs if p[&#x27;limb&#x27;]==prefix]
+<span id="L69">  69</span>         fig,axes=plt.subplots(2,4,figsize=(14,6),sharex=True,sharey=True)
+<span id="L70">  70</span>         for a,pair in zip(axes.flat,selected):
+<span id="L71">  71</span>             phase=np.arange(len(pair[&#x27;reference&#x27;]))/len(pair[&#x27;reference&#x27;])
+<span id="L72">  72</span>             a.plot(phase*100,pair[&#x27;reference&#x27;],&#x27;k--&#x27;,label=&#x27;EMG reference&#x27;)
+<span id="L73">  73</span>             a.plot(phase*100,pair[&#x27;excitation&#x27;],color=&#x27;#067f97&#x27;,label=&#x27;Excitation / cycle peak&#x27;)
+<span id="L74">  74</span>             a.set_title(pair[&#x27;channel&#x27;]);a.grid(alpha=.18)
+<span id="L75">  75</span>         for a in list(axes.flat)[len(selected):]:a.set_visible(False)
+<span id="L76">  76</span>         axes[0,0].legend(fontsize=8)
+<span id="L77">  77</span>         for a in axes[-1]:a.set_xlabel(&#x27;Input cycle (%)&#x27;)
+<span id="L78">  78</span>         for a in axes[:,0]:a.set_ylabel(&#x27;Peak-normalized shape&#x27;)
+<span id="L79">  79</span>         scope=&#x27;measured RH EMG&#x27; if prefix==&#x27;R&#x27; else &#x27;assumed from RH&#x27; if prefix==&#x27;L&#x27; else &#x27;pooled forelimb EMG&#x27;
+<span id="L80">  80</span>         fig.suptitle(prefix+&#x27; · &#x27;+scope+&#x27;\nShape normalization is for comparison only; raw excitation is unchanged.&#x27;,fontsize=14)
+<span id="L81">  81</span>         fig.tight_layout(rect=(0,0,1,.91));fig.savefig(output/(&#x27;emg_&#x27;+prefix+&#x27;.png&#x27;),dpi=140);plt.close(fig)
+<span id="L82">  82</span>     report={&#x27;window_start_s&#x27;:float(times[score][0]),&#x27;window_end_s&#x27;:float(times[-1]),&#x27;joint_RMSE_deg&#x27;:np.sqrt(np.mean(np.rad2deg(result[&#x27;joint_q&#x27;][score]-target[&#x27;joint_q&#x27;][score])**2,axis=0)).tolist(),&#x27;GRF_RMSE_N&#x27;:np.sqrt(np.mean((result[&#x27;grf&#x27;][score]-target[&#x27;grf&#x27;][score])**2,axis=0)).tolist()}
+<span id="L83">  83</span>     (ROOT/&#x27;Simulation_Results/Intact_Walking/late_window_metrics.json&#x27;).write_text(json.dumps(report,indent=2))
+<span id="L84">  84</span>     print(&#x27;Comparison figures and fixed-clock metrics saved.&#x27;)
+<span id="L85">  85</span> 
+<span id="L86">  86</span> 
+<span id="L87">  87</span> if __name__==&#x27;__main__&#x27;:
+<span id="L88">  88</span>     create_release_figures()
+</pre></main></body></html>

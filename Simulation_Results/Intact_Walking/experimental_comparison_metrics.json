@@ -1,0 +1,986 @@
+{
+  "duration_s": 59.99634168712385,
+  "failure": "",
+  "limbs": [
+    {
+      "limb": "LH: assumed mirror",
+      "joint_rmse_deg": [
+        5.261388003141361,
+        5.756800667742678,
+        5.337044956763684,
+        3.6295096802179296
+      ],
+      "ap_grf_rmse_N": 0.4202226493506263,
+      "vertical_grf_rmse_N": 0.7079957042185928
+    },
+    {
+      "limb": "RH: measured Ted_046",
+      "joint_rmse_deg": [
+        3.684511060607246,
+        3.7355145704646286,
+        3.527978669144782,
+        3.8290213809677476
+      ],
+      "ap_grf_rmse_N": 0.552761120874363,
+      "vertical_grf_rmse_N": 0.9021222562268969
+    },
+    {
+      "limb": "LF: separate-study mean; pooled EMG",
+      "joint_rmse_deg": [
+        2.291555470493088,
+        2.660155937122977,
+        4.8648869964672405,
+        9.819556936067558
+      ],
+      "ap_grf_rmse_N": 0.4881394760914731,
+      "vertical_grf_rmse_N": 1.2475340881012766
+    },
+    {
+      "limb": "RF: separate-study mean; pooled EMG",
+      "joint_rmse_deg": [
+        5.671709658493733,
+        8.096561380842132,
+        6.693685243158278,
+        8.478477617841277
+      ],
+      "ap_grf_rmse_N": 0.47575129424539137,
+      "vertical_grf_rmse_N": 1.827230310098478
+    }
+  ],
+  "emg": [
+    {
+      "channel": "L_IP",
+      "kind": "assumed_LH_from_recorded_RH",
+      "peak_normalized_rmse": 0.404481358020336,
+      "correlation": 0.7983401218650352,
+      "complete_input_cycle_timing": {
+        "threshold_fraction_of_peak": 0.1,
+        "active_intersection_over_union": 0.45703125,
+        "phase_disagreement_fraction": 0.54296875,
+        "active_fraction_predicted": 1.0,
+        "active_fraction_reference": 0.45703125,
+        "false_active_fraction_of_cycle": 0.54296875,
+        "missed_active_fraction_of_cycle": 0.0,
+        "onset": {
+          "mean_absolute_error_s": null,
+          "maximum_absolute_error_s": null,
+          "unmatched_predicted": 0,
+          "unmatched_reference": 1
+        },
+        "offset": {
+          "mean_absolute_error_s": null,
+          "maximum_absolute_error_s": null,
+          "unmatched_predicted": 0,
+          "unmatched_reference": 1
+        },
+        "predicted_burst_count": 0,
+        "reference_burst_count": 1
+      }
+    },
+    {
+      "channel": "L_VL",
+      "kind": "assumed_LH_from_recorded_RH",
+      "peak_normalized_rmse": 0.26502020240293095,
+      "correlation": 0.8478032369056281,
+      "complete_input_cycle_timing": {
+        "threshold_fraction_of_peak": 0.1,
+        "active_intersection_over_union": 0.64306640625,
+        "phase_disagreement_fraction": 0.35693359375,
+        "active_fraction_predicted": 1.0,
+        "active_fraction_reference": 0.64306640625,
+        "false_active_fraction_of_cycle": 0.35693359375,
+        "missed_active_fraction_of_cycle": 0.0,
+        "onset": {
+          "mean_absolute_error_s": null,
+          "maximum_absolute_error_s": null,
+          "unmatched_predicted": 0,
+          "unmatched_reference": 1
+        },
+        "offset": {
+          "mean_absolute_error_s": null,
+          "maximum_absolute_error_s": null,
+          "unmatched_predicted": 0,
+          "unmatched_reference": 1
+        },
+        "predicted_burst_count": 0,
+        "reference_burst_count": 1
+      }
+    },
+    {
+      "channel": "L_TA",
+      "kind": "assumed_LH_from_recorded_RH",
+      "peak_normalized_rmse": 0.49030349205039536,
+      "correlation": 0.5138507326319061,
+      "complete_input_cycle_timing": {
+        "threshold_fraction_of_peak": 0.1,
+        "active_intersection_over_union": 0.43798828125,
+        "phase_disagreement_fraction": 0.56201171875,
+        "active_fraction_predicted": 1.0,
+        "active_fraction_reference": 0.43798828125,
+        "false_active_fraction_of_cycle": 0.56201171875,
+        "missed_active_fraction_of_cycle": 0.0,
+        "onset": {
+          "mean_absolute_error_s": null,
+          "maximum_absolute_error_s": null,
+          "unmatched_predicted": 0,
+          "unmatched_reference": 1
+        },
+        "offset": {
+          "mean_absolute_error_s": null,
+          "maximum_absolute_error_s": null,
+          "unmatched_predicted": 0,
+          "unmatched_reference": 1
+        },
+        "predicted_burst_count": 0,
+        "reference_burst_count": 1
+      }
+    },
+    {
+      "channel": "L_SO",
+      "kind": "assumed_LH_from_recorded_RH",
+      "peak_normalized_rmse": 0.37548490132676243,
+      "correlation": 0.5728022686849417,
+      "complete_input_cycle_timing": {
+        "threshold_fraction_of_peak": 0.1,
+        "active_intersection_over_union": 0.53662109375,
+        "phase_disagreement_fraction": 0.46337890625,
+        "active_fraction_predicted": 1.0,
+        "active_fraction_reference": 0.53662109375,
+        "false_active_fraction_of_cycle": 0.46337890625,
+        "missed_active_fraction_of_cycle": 0.0,
+        "onset": {
+          "mean_absolute_error_s": null,
+          "maximum_absolute_error_s": null,
+          "unmatched_predicted": 0,
+          "unmatched_reference": 1
+        },
+        "offset": {
+          "mean_absolute_error_s": null,
+          "maximum_absolute_error_s": null,
+          "unmatched_predicted": 0,
+          "unmatched_reference": 1
+        },
+        "predicted_burst_count": 0,
+        "reference_burst_count": 1
+      }
+    },
+    {
+      "channel": "L_BFP",
+      "kind": "assumed_LH_from_recorded_RH",
+      "peak_normalized_rmse": 0.2702473058742313,
+      "correlation": 0.5425989266563338,
+      "complete_input_cycle_timing": {
+        "threshold_fraction_of_peak": 0.1,
+        "active_intersection_over_union": 0.4104395604395604,
+        "phase_disagreement_fraction": 0.52392578125,
+        "active_fraction_predicted": 0.826171875,
+        "active_fraction_reference": 0.42724609375,
+        "false_active_fraction_of_cycle": 0.46142578125,
+        "missed_active_fraction_of_cycle": 0.0625,
+        "onset": {
+          "mean_absolute_error_s": 0.024690755208333335,
+          "maximum_absolute_error_s": 0.042708333333333334,
+          "unmatched_predicted": 0,
+          "unmatched_reference": 0
+        },
+        "offset": {
+          "mean_absolute_error_s": 0.15431722005208334,
+          "maximum_absolute_error_s": 0.25958658854166666,
+          "unmatched_predicted": 0,
+          "unmatched_reference": 0
+        },
+        "predicted_burst_count": 2,
+        "reference_burst_count": 2
+      }
+    },
+    {
+      "channel": "L_SAM",
+      "kind": "assumed_LH_from_recorded_RH",
+      "peak_normalized_rmse": 0.39160642114078625,
+      "correlation": 0.6247302416230223,
+      "complete_input_cycle_timing": {
+        "threshold_fraction_of_peak": 0.1,
+        "active_intersection_over_union": 0.56982421875,
+        "phase_disagreement_fraction": 0.43017578125,
+        "active_fraction_predicted": 1.0,
+        "active_fraction_reference": 0.56982421875,
+        "false_active_fraction_of_cycle": 0.43017578125,
+        "missed_active_fraction_of_cycle": 0.0,
+        "onset": {
+          "mean_absolute_error_s": null,
+          "maximum_absolute_error_s": null,
+          "unmatched_predicted": 0,
+          "unmatched_reference": 1
+        },
+        "offset": {
+          "mean_absolute_error_s": null,
+          "maximum_absolute_error_s": null,
+          "unmatched_predicted": 0,
+          "unmatched_reference": 1
+        },
+        "predicted_burst_count": 0,
+        "reference_burst_count": 1
+      }
+    },
+    {
+      "channel": "L_MG",
+      "kind": "assumed_LH_from_recorded_RH",
+      "peak_normalized_rmse": 0.27043626879300425,
+      "correlation": 0.7698149670923422,
+      "complete_input_cycle_timing": {
+        "threshold_fraction_of_peak": 0.1,
+        "active_intersection_over_union": 0.7067385444743935,
+        "phase_disagreement_fraction": 0.265625,
+        "active_fraction_predicted": 0.90576171875,
+        "active_fraction_reference": 0.64013671875,
+        "false_active_fraction_of_cycle": 0.265625,
+        "missed_active_fraction_of_cycle": 0.0,
+        "onset": {
+          "mean_absolute_error_s": 0.05472005208333333,
+          "maximum_absolute_error_s": 0.05472005208333333,
+          "unmatched_predicted": 0,
+          "unmatched_reference": 0
+        },
+        "offset": {
+          "mean_absolute_error_s": 0.12679036458333334,
+          "maximum_absolute_error_s": 0.12679036458333334,
+          "unmatched_predicted": 0,
+          "unmatched_reference": 0
+        },
+        "predicted_burst_count": 1,
+        "reference_burst_count": 1
+      }
+    },
+    {
+      "channel": "R_IP",
+      "kind": "recorded_RH_EMG",
+      "peak_normalized_rmse": 0.3745804394487886,
+      "correlation": 0.8862162333189154,
+      "complete_input_cycle_timing": {
+        "threshold_fraction_of_peak": 0.1,
+        "active_intersection_over_union": 0.45703125,
+        "phase_disagreement_fraction": 0.54296875,
+        "active_fraction_predicted": 1.0,
+        "active_fraction_reference": 0.45703125,
+        "false_active_fraction_of_cycle": 0.54296875,
+        "missed_active_fraction_of_cycle": 0.0,
+        "onset": {
+          "mean_absolute_error_s": null,
+          "maximum_absolute_error_s": null,
+          "unmatched_predicted": 0,
+          "unmatched_reference": 1
+        },
+        "offset": {
+          "mean_absolute_error_s": null,
+          "maximum_absolute_error_s": null,
+          "unmatched_predicted": 0,
+          "unmatched_reference": 1
+        },
+        "predicted_burst_count": 0,
+        "reference_burst_count": 1
+      }
+    },
+    {
+      "channel": "R_VL",
+      "kind": "recorded_RH_EMG",
+      "peak_normalized_rmse": 0.2726262593754546,
+      "correlation": 0.8206746541616874,
+      "complete_input_cycle_timing": {
+        "threshold_fraction_of_peak": 0.1,
+        "active_intersection_over_union": 0.64306640625,
+        "phase_disagreement_fraction": 0.35693359375,
+        "active_fraction_predicted": 1.0,
+        "active_fraction_reference": 0.64306640625,
+        "false_active_fraction_of_cycle": 0.35693359375,
+        "missed_active_fraction_of_cycle": 0.0,
+        "onset": {
+          "mean_absolute_error_s": null,
+          "maximum_absolute_error_s": null,
+          "unmatched_predicted": 0,
+          "unmatched_reference": 1
+        },
+        "offset": {
+          "mean_absolute_error_s": null,
+          "maximum_absolute_error_s": null,
+          "unmatched_predicted": 0,
+          "unmatched_reference": 1
+        },
+        "predicted_burst_count": 0,
+        "reference_burst_count": 1
+      }
+    },
+    {
+      "channel": "R_TA",
+      "kind": "recorded_RH_EMG",
+      "peak_normalized_rmse": 0.5472831389671978,
+      "correlation": 0.5136677998452109,
+      "complete_input_cycle_timing": {
+        "threshold_fraction_of_peak": 0.1,
+        "active_intersection_over_union": 0.43798828125,
+        "phase_disagreement_fraction": 0.56201171875,
+        "active_fraction_predicted": 1.0,
+        "active_fraction_reference": 0.43798828125,
+        "false_active_fraction_of_cycle": 0.56201171875,
+        "missed_active_fraction_of_cycle": 0.0,
+        "onset": {
+          "mean_absolute_error_s": null,
+          "maximum_absolute_error_s": null,
+          "unmatched_predicted": 0,
+          "unmatched_reference": 1
+        },
+        "offset": {
+          "mean_absolute_error_s": null,
+          "maximum_absolute_error_s": null,
+          "unmatched_predicted": 0,
+          "unmatched_reference": 1
+        },
+        "predicted_burst_count": 0,
+        "reference_burst_count": 1
+      }
+    },
+    {
+      "channel": "R_SO",
+      "kind": "recorded_RH_EMG",
+      "peak_normalized_rmse": 0.37274787769533924,
+      "correlation": 0.5821397404384137,
+      "complete_input_cycle_timing": {
+        "threshold_fraction_of_peak": 0.1,
+        "active_intersection_over_union": 0.53662109375,
+        "phase_disagreement_fraction": 0.46337890625,
+        "active_fraction_predicted": 1.0,
+        "active_fraction_reference": 0.53662109375,
+        "false_active_fraction_of_cycle": 0.46337890625,
+        "missed_active_fraction_of_cycle": 0.0,
+        "onset": {
+          "mean_absolute_error_s": null,
+          "maximum_absolute_error_s": null,
+          "unmatched_predicted": 0,
+          "unmatched_reference": 1
+        },
+        "offset": {
+          "mean_absolute_error_s": null,
+          "maximum_absolute_error_s": null,
+          "unmatched_predicted": 0,
+          "unmatched_reference": 1
+        },
+        "predicted_burst_count": 0,
+        "reference_burst_count": 1
+      }
+    },
+    {
+      "channel": "R_BFP",
+      "kind": "recorded_RH_EMG",
+      "peak_normalized_rmse": 0.267155784487469,
+      "correlation": 0.5640261394249798,
+      "complete_input_cycle_timing": {
+        "threshold_fraction_of_peak": 0.1,
+        "active_intersection_over_union": 0.37922077922077924,
+        "phase_disagreement_fraction": 0.58349609375,
+        "active_fraction_predicted": 0.869140625,
+        "active_fraction_reference": 0.42724609375,
+        "false_active_fraction_of_cycle": 0.5126953125,
+        "missed_active_fraction_of_cycle": 0.07080078125,
+        "onset": {
+          "mean_absolute_error_s": 0.048380533854166664,
+          "maximum_absolute_error_s": 0.048380533854166664,
+          "unmatched_predicted": 0,
+          "unmatched_reference": 1
+        },
+        "offset": {
+          "mean_absolute_error_s": 0.05038248697916667,
+          "maximum_absolute_error_s": 0.05038248697916667,
+          "unmatched_predicted": 0,
+          "unmatched_reference": 1
+        },
+        "predicted_burst_count": 1,
+        "reference_burst_count": 2
+      }
+    },
+    {
+      "channel": "R_SAM",
+      "kind": "recorded_RH_EMG",
+      "peak_normalized_rmse": 0.4160377385557575,
+      "correlation": 0.6854405862785794,
+      "complete_input_cycle_timing": {
+        "threshold_fraction_of_peak": 0.1,
+        "active_intersection_over_union": 0.56982421875,
+        "phase_disagreement_fraction": 0.43017578125,
+        "active_fraction_predicted": 1.0,
+        "active_fraction_reference": 0.56982421875,
+        "false_active_fraction_of_cycle": 0.43017578125,
+        "missed_active_fraction_of_cycle": 0.0,
+        "onset": {
+          "mean_absolute_error_s": null,
+          "maximum_absolute_error_s": null,
+          "unmatched_predicted": 0,
+          "unmatched_reference": 1
+        },
+        "offset": {
+          "mean_absolute_error_s": null,
+          "maximum_absolute_error_s": null,
+          "unmatched_predicted": 0,
+          "unmatched_reference": 1
+        },
+        "predicted_burst_count": 0,
+        "reference_burst_count": 1
+      }
+    },
+    {
+      "channel": "R_MG",
+      "kind": "recorded_RH_EMG",
+      "peak_normalized_rmse": 0.2529380382133358,
+      "correlation": 0.8041296073732541,
+      "complete_input_cycle_timing": {
+        "threshold_fraction_of_peak": 0.1,
+        "active_intersection_over_union": 0.7402597402597403,
+        "phase_disagreement_fraction": 0.224609375,
+        "active_fraction_predicted": 0.86474609375,
+        "active_fraction_reference": 0.64013671875,
+        "false_active_fraction_of_cycle": 0.224609375,
+        "missed_active_fraction_of_cycle": 0.0,
+        "onset": {
+          "mean_absolute_error_s": 0.0410400390625,
+          "maximum_absolute_error_s": 0.0410400390625,
+          "unmatched_predicted": 0,
+          "unmatched_reference": 0
+        },
+        "offset": {
+          "mean_absolute_error_s": 0.11244303385416667,
+          "maximum_absolute_error_s": 0.11244303385416667,
+          "unmatched_predicted": 0,
+          "unmatched_reference": 0
+        },
+        "predicted_burst_count": 1,
+        "reference_burst_count": 1
+      }
+    },
+    {
+      "channel": "FL_ShoulderExtensor",
+      "kind": "pooled_forelimb_EMG_representative_group",
+      "peak_normalized_rmse": 0.3460807215148538,
+      "correlation": 0.49813229456243163,
+      "complete_input_cycle_timing": {
+        "threshold_fraction_of_peak": 0.1,
+        "active_intersection_over_union": 0.6963207029104888,
+        "phase_disagreement_fraction": 0.27001953125,
+        "active_fraction_predicted": 0.849609375,
+        "active_fraction_reference": 0.65869140625,
+        "false_active_fraction_of_cycle": 0.23046875,
+        "missed_active_fraction_of_cycle": 0.03955078125,
+        "onset": {
+          "mean_absolute_error_s": 0.15748697916666668,
+          "maximum_absolute_error_s": 0.15748697916666668,
+          "unmatched_predicted": 0,
+          "unmatched_reference": 0
+        },
+        "offset": {
+          "mean_absolute_error_s": 0.0270263671875,
+          "maximum_absolute_error_s": 0.0270263671875,
+          "unmatched_predicted": 0,
+          "unmatched_reference": 0
+        },
+        "predicted_burst_count": 1,
+        "reference_burst_count": 1
+      }
+    },
+    {
+      "channel": "FL_ElbowExtensor",
+      "kind": "pooled_forelimb_EMG_representative_group",
+      "peak_normalized_rmse": 0.2754030851920971,
+      "correlation": 0.7459842849223214,
+      "complete_input_cycle_timing": {
+        "threshold_fraction_of_peak": 0.1,
+        "active_intersection_over_union": 0.7364297705651931,
+        "phase_disagreement_fraction": 0.22998046875,
+        "active_fraction_predicted": 0.87255859375,
+        "active_fraction_reference": 0.642578125,
+        "false_active_fraction_of_cycle": 0.22998046875,
+        "missed_active_fraction_of_cycle": 0.0,
+        "onset": {
+          "mean_absolute_error_s": 0.14013671875,
+          "maximum_absolute_error_s": 0.14013671875,
+          "unmatched_predicted": 0,
+          "unmatched_reference": 0
+        },
+        "offset": {
+          "mean_absolute_error_s": 0.0170166015625,
+          "maximum_absolute_error_s": 0.0170166015625,
+          "unmatched_predicted": 0,
+          "unmatched_reference": 0
+        },
+        "predicted_burst_count": 1,
+        "reference_burst_count": 1
+      }
+    },
+    {
+      "channel": "FL_BicepsBrachii",
+      "kind": "pooled_forelimb_EMG_representative_group",
+      "peak_normalized_rmse": 0.3470303273045672,
+      "correlation": 0.7559033756114536,
+      "complete_input_cycle_timing": {
+        "threshold_fraction_of_peak": 0.1,
+        "active_intersection_over_union": 0.38695438940657184,
+        "phase_disagreement_fraction": 0.6103515625,
+        "active_fraction_predicted": 0.9658203125,
+        "active_fraction_reference": 0.4150390625,
+        "false_active_fraction_of_cycle": 0.58056640625,
+        "missed_active_fraction_of_cycle": 0.02978515625,
+        "onset": {
+          "mean_absolute_error_s": 0.02035319010416667,
+          "maximum_absolute_error_s": 0.02035319010416667,
+          "unmatched_predicted": 0,
+          "unmatched_reference": 0
+        },
+        "offset": {
+          "mean_absolute_error_s": 0.2866129557291667,
+          "maximum_absolute_error_s": 0.2866129557291667,
+          "unmatched_predicted": 0,
+          "unmatched_reference": 0
+        },
+        "predicted_burst_count": 1,
+        "reference_burst_count": 1
+      }
+    },
+    {
+      "channel": "FL_ElbowFlexor",
+      "kind": "pooled_forelimb_EMG_representative_group",
+      "peak_normalized_rmse": 0.319983342951132,
+      "correlation": 0.5008609408831267,
+      "complete_input_cycle_timing": {
+        "threshold_fraction_of_peak": 0.1,
+        "active_intersection_over_union": 0.68798828125,
+        "phase_disagreement_fraction": 0.31201171875,
+        "active_fraction_predicted": 1.0,
+        "active_fraction_reference": 0.68798828125,
+        "false_active_fraction_of_cycle": 0.31201171875,
+        "missed_active_fraction_of_cycle": 0.0,
+        "onset": {
+          "mean_absolute_error_s": null,
+          "maximum_absolute_error_s": null,
+          "unmatched_predicted": 0,
+          "unmatched_reference": 1
+        },
+        "offset": {
+          "mean_absolute_error_s": null,
+          "maximum_absolute_error_s": null,
+          "unmatched_predicted": 0,
+          "unmatched_reference": 1
+        },
+        "predicted_burst_count": 0,
+        "reference_burst_count": 1
+      }
+    },
+    {
+      "channel": "FL_ElbowFlexorWristFlexor",
+      "kind": "pooled_forelimb_EMG_representative_group",
+      "peak_normalized_rmse": 0.5631993342667896,
+      "correlation": -0.5297951854888985,
+      "complete_input_cycle_timing": {
+        "threshold_fraction_of_peak": 0.1,
+        "active_intersection_over_union": 0.48828125,
+        "phase_disagreement_fraction": 0.51171875,
+        "active_fraction_predicted": 0.8486328125,
+        "active_fraction_reference": 0.6396484375,
+        "false_active_fraction_of_cycle": 0.3603515625,
+        "missed_active_fraction_of_cycle": 0.1513671875,
+        "onset": {
+          "mean_absolute_error_s": 0.15481770833333333,
+          "maximum_absolute_error_s": 0.15481770833333333,
+          "unmatched_predicted": 2,
+          "unmatched_reference": 0
+        },
+        "offset": {
+          "mean_absolute_error_s": 0.20887044270833333,
+          "maximum_absolute_error_s": 0.20887044270833333,
+          "unmatched_predicted": 2,
+          "unmatched_reference": 0
+        },
+        "predicted_burst_count": 3,
+        "reference_burst_count": 1
+      }
+    },
+    {
+      "channel": "FL_WristExtensor",
+      "kind": "pooled_forelimb_EMG_representative_group",
+      "peak_normalized_rmse": 0.667964419870975,
+      "correlation": -0.6667066771649057,
+      "complete_input_cycle_timing": {
+        "threshold_fraction_of_peak": 0.1,
+        "active_intersection_over_union": 0.67529296875,
+        "phase_disagreement_fraction": 0.32470703125,
+        "active_fraction_predicted": 1.0,
+        "active_fraction_reference": 0.67529296875,
+        "false_active_fraction_of_cycle": 0.32470703125,
+        "missed_active_fraction_of_cycle": 0.0,
+        "onset": {
+          "mean_absolute_error_s": null,
+          "maximum_absolute_error_s": null,
+          "unmatched_predicted": 0,
+          "unmatched_reference": 1
+        },
+        "offset": {
+          "mean_absolute_error_s": null,
+          "maximum_absolute_error_s": null,
+          "unmatched_predicted": 0,
+          "unmatched_reference": 1
+        },
+        "predicted_burst_count": 0,
+        "reference_burst_count": 1
+      }
+    },
+    {
+      "channel": "FL_ShoulderFlexor",
+      "kind": "pooled_forelimb_EMG_representative_group",
+      "peak_normalized_rmse": 0.40569166201562346,
+      "correlation": 0.12875599906340998,
+      "complete_input_cycle_timing": {
+        "threshold_fraction_of_peak": 0.1,
+        "active_intersection_over_union": 0.7744140625,
+        "phase_disagreement_fraction": 0.2255859375,
+        "active_fraction_predicted": 1.0,
+        "active_fraction_reference": 0.7744140625,
+        "false_active_fraction_of_cycle": 0.2255859375,
+        "missed_active_fraction_of_cycle": 0.0,
+        "onset": {
+          "mean_absolute_error_s": null,
+          "maximum_absolute_error_s": null,
+          "unmatched_predicted": 0,
+          "unmatched_reference": 1
+        },
+        "offset": {
+          "mean_absolute_error_s": null,
+          "maximum_absolute_error_s": null,
+          "unmatched_predicted": 0,
+          "unmatched_reference": 1
+        },
+        "predicted_burst_count": 0,
+        "reference_burst_count": 1
+      }
+    },
+    {
+      "channel": "FL_TricepsBrachiiLong",
+      "kind": "pooled_forelimb_EMG_representative_group",
+      "peak_normalized_rmse": 0.3493574360378164,
+      "correlation": 0.586821337192895,
+      "complete_input_cycle_timing": {
+        "threshold_fraction_of_peak": 0.1,
+        "active_intersection_over_union": 0.7741717376605814,
+        "phase_disagreement_fraction": 0.1630859375,
+        "active_fraction_predicted": 0.72216796875,
+        "active_fraction_reference": 0.55908203125,
+        "false_active_fraction_of_cycle": 0.1630859375,
+        "missed_active_fraction_of_cycle": 0.0,
+        "onset": {
+          "mean_absolute_error_s": 0.041707356770833336,
+          "maximum_absolute_error_s": 0.041707356770833336,
+          "unmatched_predicted": 0,
+          "unmatched_reference": 0
+        },
+        "offset": {
+          "mean_absolute_error_s": 0.06973470052083333,
+          "maximum_absolute_error_s": 0.06973470052083333,
+          "unmatched_predicted": 0,
+          "unmatched_reference": 0
+        },
+        "predicted_burst_count": 1,
+        "reference_burst_count": 1
+      }
+    },
+    {
+      "channel": "FR_ShoulderExtensor",
+      "kind": "pooled_forelimb_EMG_representative_group",
+      "peak_normalized_rmse": 0.28852279726313995,
+      "correlation": 0.6472181633189092,
+      "complete_input_cycle_timing": {
+        "threshold_fraction_of_peak": 0.1,
+        "active_intersection_over_union": 0.7319587628865979,
+        "phase_disagreement_fraction": 0.2412109375,
+        "active_fraction_predicted": 0.89990234375,
+        "active_fraction_reference": 0.65869140625,
+        "false_active_fraction_of_cycle": 0.2412109375,
+        "missed_active_fraction_of_cycle": 0.0,
+        "onset": {
+          "mean_absolute_error_s": 0.15748697916666668,
+          "maximum_absolute_error_s": 0.15748697916666668,
+          "unmatched_predicted": 1,
+          "unmatched_reference": 0
+        },
+        "offset": {
+          "mean_absolute_error_s": 0.006339518229166667,
+          "maximum_absolute_error_s": 0.006339518229166667,
+          "unmatched_predicted": 1,
+          "unmatched_reference": 0
+        },
+        "predicted_burst_count": 2,
+        "reference_burst_count": 1
+      }
+    },
+    {
+      "channel": "FR_ElbowExtensor",
+      "kind": "pooled_forelimb_EMG_representative_group",
+      "peak_normalized_rmse": 0.2975288718598767,
+      "correlation": 0.6775457257784352,
+      "complete_input_cycle_timing": {
+        "threshold_fraction_of_peak": 0.1,
+        "active_intersection_over_union": 0.706766917293233,
+        "phase_disagreement_fraction": 0.2666015625,
+        "active_fraction_predicted": 0.9091796875,
+        "active_fraction_reference": 0.642578125,
+        "false_active_fraction_of_cycle": 0.2666015625,
+        "missed_active_fraction_of_cycle": 0.0,
+        "onset": {
+          "mean_absolute_error_s": 0.15481770833333333,
+          "maximum_absolute_error_s": 0.15481770833333333,
+          "unmatched_predicted": 0,
+          "unmatched_reference": 0
+        },
+        "offset": {
+          "mean_absolute_error_s": 0.027360026041666666,
+          "maximum_absolute_error_s": 0.027360026041666666,
+          "unmatched_predicted": 0,
+          "unmatched_reference": 0
+        },
+        "predicted_burst_count": 1,
+        "reference_burst_count": 1
+      }
+    },
+    {
+      "channel": "FR_BicepsBrachii",
+      "kind": "pooled_forelimb_EMG_representative_group",
+      "peak_normalized_rmse": 0.34075459409732206,
+      "correlation": 0.6748203193685351,
+      "complete_input_cycle_timing": {
+        "threshold_fraction_of_peak": 0.1,
+        "active_intersection_over_union": 0.3837890625,
+        "phase_disagreement_fraction": 0.6162109375,
+        "active_fraction_predicted": 0.96875,
+        "active_fraction_reference": 0.4150390625,
+        "false_active_fraction_of_cycle": 0.5849609375,
+        "missed_active_fraction_of_cycle": 0.03125,
+        "onset": {
+          "mean_absolute_error_s": 0.022355143229166666,
+          "maximum_absolute_error_s": 0.022355143229166666,
+          "unmatched_predicted": 0,
+          "unmatched_reference": 0
+        },
+        "offset": {
+          "mean_absolute_error_s": 0.28260904947916665,
+          "maximum_absolute_error_s": 0.28260904947916665,
+          "unmatched_predicted": 0,
+          "unmatched_reference": 0
+        },
+        "predicted_burst_count": 1,
+        "reference_burst_count": 1
+      }
+    },
+    {
+      "channel": "FR_ElbowFlexor",
+      "kind": "pooled_forelimb_EMG_representative_group",
+      "peak_normalized_rmse": 0.3541200778824327,
+      "correlation": 0.42374341802865717,
+      "complete_input_cycle_timing": {
+        "threshold_fraction_of_peak": 0.1,
+        "active_intersection_over_union": 0.68798828125,
+        "phase_disagreement_fraction": 0.31201171875,
+        "active_fraction_predicted": 1.0,
+        "active_fraction_reference": 0.68798828125,
+        "false_active_fraction_of_cycle": 0.31201171875,
+        "missed_active_fraction_of_cycle": 0.0,
+        "onset": {
+          "mean_absolute_error_s": null,
+          "maximum_absolute_error_s": null,
+          "unmatched_predicted": 0,
+          "unmatched_reference": 1
+        },
+        "offset": {
+          "mean_absolute_error_s": null,
+          "maximum_absolute_error_s": null,
+          "unmatched_predicted": 0,
+          "unmatched_reference": 1
+        },
+        "predicted_burst_count": 0,
+        "reference_burst_count": 1
+      }
+    },
+    {
+      "channel": "FR_ElbowFlexorWristFlexor",
+      "kind": "pooled_forelimb_EMG_representative_group",
+      "peak_normalized_rmse": 0.467954084475128,
+      "correlation": -0.2958501521416726,
+      "complete_input_cycle_timing": {
+        "threshold_fraction_of_peak": 0.1,
+        "active_intersection_over_union": 0.392578125,
+        "phase_disagreement_fraction": 0.607421875,
+        "active_fraction_predicted": 0.7529296875,
+        "active_fraction_reference": 0.6396484375,
+        "false_active_fraction_of_cycle": 0.3603515625,
+        "missed_active_fraction_of_cycle": 0.2470703125,
+        "onset": {
+          "mean_absolute_error_s": 0.21787923177083335,
+          "maximum_absolute_error_s": 0.21787923177083335,
+          "unmatched_predicted": 0,
+          "unmatched_reference": 0
+        },
+        "offset": {
+          "mean_absolute_error_s": 0.2952880859375,
+          "maximum_absolute_error_s": 0.2952880859375,
+          "unmatched_predicted": 0,
+          "unmatched_reference": 0
+        },
+        "predicted_burst_count": 1,
+        "reference_burst_count": 1
+      }
+    },
+    {
+      "channel": "FR_WristExtensor",
+      "kind": "pooled_forelimb_EMG_representative_group",
+      "peak_normalized_rmse": 0.6134082999082442,
+      "correlation": -0.5367174407595725,
+      "complete_input_cycle_timing": {
+        "threshold_fraction_of_peak": 0.1,
+        "active_intersection_over_union": 0.6576487948844073,
+        "phase_disagreement_fraction": 0.33984375,
+        "active_fraction_predicted": 0.97021484375,
+        "active_fraction_reference": 0.67529296875,
+        "false_active_fraction_of_cycle": 0.3173828125,
+        "missed_active_fraction_of_cycle": 0.0224609375,
+        "onset": {
+          "mean_absolute_error_s": 0.07874348958333334,
+          "maximum_absolute_error_s": 0.07874348958333334,
+          "unmatched_predicted": 1,
+          "unmatched_reference": 0
+        },
+        "offset": {
+          "mean_absolute_error_s": 0.0070068359375,
+          "maximum_absolute_error_s": 0.0070068359375,
+          "unmatched_predicted": 1,
+          "unmatched_reference": 0
+        },
+        "predicted_burst_count": 2,
+        "reference_burst_count": 1
+      }
+    },
+    {
+      "channel": "FR_ShoulderFlexor",
+      "kind": "pooled_forelimb_EMG_representative_group",
+      "peak_normalized_rmse": 0.3992841536706628,
+      "correlation": 0.10752878004132704,
+      "complete_input_cycle_timing": {
+        "threshold_fraction_of_peak": 0.1,
+        "active_intersection_over_union": 0.77099609375,
+        "phase_disagreement_fraction": 0.22900390625,
+        "active_fraction_predicted": 0.99658203125,
+        "active_fraction_reference": 0.7744140625,
+        "false_active_fraction_of_cycle": 0.2255859375,
+        "missed_active_fraction_of_cycle": 0.00341796875,
+        "onset": {
+          "mean_absolute_error_s": 0.26993001302083336,
+          "maximum_absolute_error_s": 0.26993001302083336,
+          "unmatched_predicted": 0,
+          "unmatched_reference": 0
+        },
+        "offset": {
+          "mean_absolute_error_s": 0.118115234375,
+          "maximum_absolute_error_s": 0.118115234375,
+          "unmatched_predicted": 0,
+          "unmatched_reference": 0
+        },
+        "predicted_burst_count": 1,
+        "reference_burst_count": 1
+      }
+    },
+    {
+      "channel": "FR_TricepsBrachiiLong",
+      "kind": "pooled_forelimb_EMG_representative_group",
+      "peak_normalized_rmse": 0.4290298232829931,
+      "correlation": 0.5142516690624148,
+      "complete_input_cycle_timing": {
+        "threshold_fraction_of_peak": 0.1,
+        "active_intersection_over_union": 0.6831742243436754,
+        "phase_disagreement_fraction": 0.25927734375,
+        "active_fraction_predicted": 0.818359375,
+        "active_fraction_reference": 0.55908203125,
+        "false_active_fraction_of_cycle": 0.25927734375,
+        "missed_active_fraction_of_cycle": 0.0,
+        "onset": {
+          "mean_absolute_error_s": 0.0590576171875,
+          "maximum_absolute_error_s": 0.0590576171875,
+          "unmatched_predicted": 0,
+          "unmatched_reference": 0
+        },
+        "offset": {
+          "mean_absolute_error_s": 0.118115234375,
+          "maximum_absolute_error_s": 0.118115234375,
+          "unmatched_predicted": 0,
+          "unmatched_reference": 0
+        },
+        "predicted_burst_count": 1,
+        "reference_burst_count": 1
+      }
+    },
+    {
+      "channel": "L_FHL",
+      "kind": "assumed_LH_from_recorded_RH",
+      "peak_normalized_rmse": 0.3870650602520499,
+      "correlation": 0.41044553908706066,
+      "complete_input_cycle_timing": {
+        "threshold_fraction_of_peak": 0.1,
+        "active_intersection_over_union": 0.64892578125,
+        "phase_disagreement_fraction": 0.35107421875,
+        "active_fraction_predicted": 1.0,
+        "active_fraction_reference": 0.64892578125,
+        "false_active_fraction_of_cycle": 0.35107421875,
+        "missed_active_fraction_of_cycle": 0.0,
+        "onset": {
+          "mean_absolute_error_s": null,
+          "maximum_absolute_error_s": null,
+          "unmatched_predicted": 0,
+          "unmatched_reference": 1
+        },
+        "offset": {
+          "mean_absolute_error_s": null,
+          "maximum_absolute_error_s": null,
+          "unmatched_predicted": 0,
+          "unmatched_reference": 1
+        },
+        "predicted_burst_count": 0,
+        "reference_burst_count": 1
+      }
+    },
+    {
+      "channel": "R_FHL",
+      "kind": "recorded_RH_EMG",
+      "peak_normalized_rmse": 0.3650012451431481,
+      "correlation": 0.5122448629001389,
+      "complete_input_cycle_timing": {
+        "threshold_fraction_of_peak": 0.1,
+        "active_intersection_over_union": 0.64892578125,
+        "phase_disagreement_fraction": 0.35107421875,
+        "active_fraction_predicted": 1.0,
+        "active_fraction_reference": 0.64892578125,
+        "false_active_fraction_of_cycle": 0.35107421875,
+        "missed_active_fraction_of_cycle": 0.0,
+        "onset": {
+          "mean_absolute_error_s": null,
+          "maximum_absolute_error_s": null,
+          "unmatched_predicted": 0,
+          "unmatched_reference": 1
+        },
+        "offset": {
+          "mean_absolute_error_s": null,
+          "maximum_absolute_error_s": null,
+          "unmatched_predicted": 0,
+          "unmatched_reference": 1
+        },
+        "predicted_burst_count": 0,
+        "reference_burst_count": 1
+      }
+    }
+  ],
+  "completed_60s_without_detected_fall": true,
+  "walking_acceptance_requires_separate_gates": true,
+  "calibration_to_assembled_source_references": true,
+  "EMG_peak_normalization": "Complete configured input cycle, not the displayed interval",
+  "EMG_timing_scope": "Prescribed full-cycle intact input, normalized to intact input peaks; not a claim that the trial completed that cycle. Whole-trial shape RMSE uses the actual saved excitation.",
+  "independent_four_limb_validation": false
+}

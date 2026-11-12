@@ -1,0 +1,26 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>All saved input samples, for one fixed normalization scale per muscle.</title><link rel="stylesheet" href="../style.css"></head><body><!-- generated folder guide --><header><div class="tag">Cat · Full-body neuromechanics</div><h1>All saved input samples, for one fixed normalization scale per muscle.</h1><nav><a href="../../START_HERE.html">Start here</a> · <a href="../project_structure.html">Find a file</a></nav></header><main><p><a href="../../Code/neuromechanics/configured_excitation_samples.py">Code/neuromechanics/configured_excitation_samples.py</a></p><pre style="overflow:auto;white-space:pre"><span id="L1">   1</span> &quot;&quot;&quot;All saved input samples, for one fixed normalization scale per muscle.&quot;&quot;&quot;
+<span id="L2">   2</span> 
+<span id="L3">   3</span> import numpy as np
+<span id="L4">   4</span> 
+<span id="L5">   5</span> from model_configuration.paths import ROOT
+<span id="L6">   6</span> 
+<span id="L7">   7</span> 
+<span id="L8">   8</span> def configured_excitation_samples(settings, fallback=None):
+<span id="L9">   9</span>     if settings.get(&quot;excitation_table_file&quot;):
+<span id="L10">  10</span>         from .read_time_series import read_time_series
+<span id="L11">  11</span> 
+<span id="L12">  12</span>         return read_time_series(ROOT / settings[&quot;excitation_table_file&quot;])[2]
+<span id="L13">  13</span>     if settings.get(&quot;excitation_sequence_file&quot;):
+<span id="L14">  14</span>         sequence = np.load(ROOT / settings[&quot;excitation_sequence_file&quot;])[
+<span id="L15">  15</span>             &quot;excitation_sequence&quot;
+<span id="L16">  16</span>         ]
+<span id="L17">  17</span>         return sequence.reshape(-1, sequence.shape[-1])
+<span id="L18">  18</span>     if &quot;excitation_control_points&quot; in settings:
+<span id="L19">  19</span>         return np.asarray(settings[&quot;excitation_control_points&quot;])
+<span id="L20">  20</span>     if settings.get(&quot;excitation_file&quot;):
+<span id="L21">  21</span>         return np.load(ROOT / settings[&quot;excitation_file&quot;])[&quot;excitation_table&quot;]
+<span id="L22">  22</span>     if fallback is not None:
+<span id="L23">  23</span>         return fallback
+<span id="L24">  24</span>     # Stop and explain the invalid model setting or failed calculation.
+<span id="L25">  25</span>     raise ValueError(&quot;No saved muscle_excitation input is configured&quot;)
+</pre></main></body></html>

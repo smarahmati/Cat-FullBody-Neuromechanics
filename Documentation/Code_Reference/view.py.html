@@ -1,0 +1,10 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Open an already computed trial without recalculating it.</title><link rel="stylesheet" href="../style.css"></head><body><!-- generated folder guide --><header><div class="tag">Cat · Full-body neuromechanics</div><h1>Open an already computed trial without recalculating it.</h1><nav><a href="../../START_HERE.html">Start here</a> · <a href="../project_structure.html">Find a file</a></nav></header><main><p><a href="../../view.py">view.py</a></p><pre style="overflow:auto;white-space:pre"><span id="L1">   1</span> &quot;&quot;&quot;Open an already computed trial without recalculating it.
+<span id="L2">   2</span> Example: python view.py --run Simulation_Results/Intact_Walking
+<span id="L3">   3</span> &quot;&quot;&quot;
+<span id="L4">   4</span> from pathlib import Path
+<span id="L5">   5</span> import runpy, sys
+<span id="L6">   6</span> root = Path(__file__).resolve().parent
+<span id="L7">   7</span> sys.path.insert(0, str(root / &quot;Code&quot;))
+<span id="L8">   8</span> if __name__ == &quot;__main__&quot;:
+<span id="L9">   9</span>     runpy.run_path(str(root / &quot;Code/simulation_tools/view_walking_simulation.py&quot;), run_name=&quot;__main__&quot;)
+</pre></main></body></html>

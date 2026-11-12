@@ -1,0 +1,67 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Numerical kernel of the same physical pad law, compiled for fitting speed.</title><link rel="stylesheet" href="../style.css"></head><body><!-- generated folder guide --><header><div class="tag">Cat · Full-body neuromechanics</div><h1>Numerical kernel of the same physical pad law, compiled for fitting speed.</h1><nav><a href="../../START_HERE.html">Start here</a> · <a href="../project_structure.html">Find a file</a></nav></header><main><p><a href="../../Code/neuromechanics/sum_paw_contact_forces_and_moments.py">Code/neuromechanics/sum_paw_contact_forces_and_moments.py</a></p><pre style="overflow:auto;white-space:pre"><span id="L1">   1</span> &quot;&quot;&quot;Numerical kernel of the same physical pad law, compiled for fitting speed.&quot;&quot;&quot;
+<span id="L2">   2</span> 
+<span id="L3">   3</span> import numpy as np
+<span id="L4">   4</span> 
+<span id="L5">   5</span> from numba import njit
+<span id="L6">   6</span> 
+<span id="L7">   7</span> from .pad_force_law import pad_force_law
+<span id="L8">   8</span> 
+<span id="L9">   9</span> from .viscoelastic_paw_pad import viscoelastic_paw_pad
+<span id="L10">  10</span> 
+<span id="L11">  11</span> 
+<span id="L12">  12</span> # Compile this numerical function for repeated evaluations; its equations stay unchanged.
+<span id="L13">  13</span> @njit(cache=False)
+<span id="L14">  14</span> def sum_paw_contact_forces_and_moments(
+<span id="L15">  15</span>     position,
+<span id="L16">  16</span>     radius,
+<span id="L17">  17</span>     side,
+<span id="L18">  18</span>     body,
+<span id="L19">  19</span>     body_com,
+<span id="L20">  20</span>     paw_position,
+<span id="L21">  21</span>     paw_velocity,
+<span id="L22">  22</span>     bristle,
+<span id="L23">  23</span>     dt,
+<span id="L24">  24</span>     parameters,
+<span id="L25">  25</span>     viscoelastic_slider=False,
+<span id="L26">  26</span> ):
+<span id="L27">  27</span>     force_sum = np.zeros((4, 3))
+<span id="L28">  28</span>     cop = np.zeros((4, 3))
+<span id="L29">  29</span>     weight = np.zeros(4)
+<span id="L30">  30</span>     applied = np.zeros((len(body_com), 6))
+<span id="L31">  31</span>     depth_max = 0.0
+<span id="L32">  32</span>     energy = 0.0
+<span id="L33">  33</span>     power = 0.0
+<span id="L34">  34</span>     for n in range(len(position)):
+<span id="L35">  35</span>         s = side[n]
+<span id="L36">  36</span>         b = body[n]
+<span id="L37">  37</span>         depth = max(0.0, radius[n] - position[n, 2])
+<span id="L38">  38</span>         point = position[n].copy()
+<span id="L39">  39</span>         point[2] = 0.0
+<span id="L40">  40</span>         velocity = paw_velocity[s, 3:] + np.cross(
+<span id="L41">  41</span>             paw_velocity[s, :3],
+<span id="L42">  42</span>             point - paw_position[s],
+<span id="L43">  43</span>         )
+<span id="L44">  44</span>         p = parameters[n] if parameters.ndim == 2 else parameters
+<span id="L45">  45</span>         if viscoelastic_slider:
+<span id="L46">  46</span>             f, displacement, stored = viscoelastic_paw_pad(
+<span id="L47">  47</span>                 depth,
+<span id="L48">  48</span>                 velocity,
+<span id="L49">  49</span>                 bristle[n],
+<span id="L50">  50</span>                 dt,
+<span id="L51">  51</span>                 p,
+<span id="L52">  52</span>             )
+<span id="L53">  53</span>         else:
+<span id="L54">  54</span>             f, displacement, stored = pad_force_law(depth, velocity, bristle[n], dt, p)
+<span id="L55">  55</span>         bristle[n] = displacement
+<span id="L56">  56</span>         applied[b, :3] += f
+<span id="L57">  57</span>         applied[b, 3:] += np.cross(point - body_com[b], f)
+<span id="L58">  58</span>         force_sum[s] += f
+<span id="L59">  59</span>         cop[s] += f[2] * point
+<span id="L60">  60</span>         weight[s] += f[2]
+<span id="L61">  61</span>         depth_max = max(depth_max, depth)
+<span id="L62">  62</span>         energy += stored
+<span id="L63">  63</span>         power += np.dot(f, velocity)
+<span id="L64">  64</span>     for s in range(4):
+<span id="L65">  65</span>         cop[s] = cop[s] / weight[s] if weight[s] &gt; 1e-12 else paw_position[s]
+<span id="L66">  66</span>     return force_sum, cop, applied, depth_max, energy, power
+</pre></main></body></html>

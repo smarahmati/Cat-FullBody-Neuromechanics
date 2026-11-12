@@ -1,0 +1,35 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Run configuration and fixed-excitation timing settings.</title><link rel="stylesheet" href="../style.css"></head><body><!-- generated folder guide --><header><div class="tag">Cat · Full-body neuromechanics</div><h1>Run configuration and fixed-excitation timing settings.</h1><nav><a href="../../START_HERE.html">Start here</a> · <a href="../project_structure.html">Find a file</a></nav></header><main><p><a href="../../Data/Model_Parameters/simulation_settings.py">Data/Model_Parameters/simulation_settings.py</a></p><pre style="overflow:auto;white-space:pre"><span id="L1">   1</span> &quot;&quot;&quot;Run choices. All physical values are in the neighboring named files.&quot;&quot;&quot;
+<span id="L2">   2</span> 
+<span id="L3">   3</span> # Set PARAMETERS.
+<span id="L4">   4</span> PARAMETERS = {
+<span id="L5">   5</span>     # Selects anatomical topology. Changing it requires a matching complete parameter set.
+<span id="L6">   6</span>     &quot;model_variant&quot;: &quot;articulated_girdle&quot;,
+<span id="L7">   7</span>     # Input period (s). Original RH Ted_046: 0.6833333333333333; fore source: 0.687857483228707. No per-channel phase retiming.
+<span id="L8">   8</span>     &quot;period_s&quot;: 0.6833333333333333,
+<span id="L9">   9</span>     # Applied integration step (s). Reference integration step: 0.00012499237851350527. Smaller steps need independent stability tests.
+<span id="L10">  10</span>     &quot;dt_s&quot;: 0.00012499237851350527,
+<span id="L11">  11</span>     # Saved output interval (s), not integration timestep. Original 0.005.
+<span id="L12">  12</span>     &quot;sample_s&quot;: 0.005,
+<span id="L13">  13</span>     # Fallback duration: run.py SIMULATION_SECONDS and CLI --seconds take precedence.
+<span id="L14">  14</span>     # Reference simulation duration: 60 s. Use None in run.py to use this value.
+<span id="L15">  15</span>     &quot;seconds&quot;: 60.0,
+<span id="L16">  16</span>     # Run/analysis option; original defaults are documented in Code/model_configuration/settings.py.
+<span id="L17">  17</span>     &quot;stop_on_fall&quot;: True,
+<span id="L18">  18</span>     # Run/analysis option; original defaults are documented in Code/model_configuration/settings.py.
+<span id="L19">  19</span>     &quot;activation_parameter_mode&quot;: &quot;source&quot;,
+<span id="L20">  20</span>     # Run/analysis option; original defaults are documented in Code/model_configuration/settings.py.
+<span id="L21">  21</span>     &quot;initialize_from_assembled_reference&quot;: False,
+<span id="L22">  22</span>     # Named physical subsystem functions with Newton elastic-fiber solve; partitioned integration with elastic equilibrium at each step.
+<span id="L23">  23</span>     &quot;forward_step_implementation&quot;: &quot;readable&quot;,
+<span id="L24">  24</span>     # Editable source comparison tables, read again each run. They score the result; they never drive the bones or impose Ground_Reaction_Forces.
+<span id="L25">  25</span>     &quot;reference_table_dir&quot;: &quot;Data/Experimental_Reference_Data&quot;,
+<span id="L26">  26</span>     # Run/analysis option; original defaults are documented in Code/model_configuration/settings.py.
+<span id="L27">  27</span>     &quot;fit_angle_scale_deg&quot;: 10.0,
+<span id="L28">  28</span>     # Run/analysis option; original defaults are documented in Code/model_configuration/settings.py.
+<span id="L29">  29</span>     &quot;fit_ap_scale_N&quot;: 3.0,
+<span id="L30">  30</span>     # Run/analysis option; original defaults are documented in Code/model_configuration/settings.py.
+<span id="L31">  31</span>     &quot;fit_vertical_scale_N&quot;: 15.0,
+<span id="L32">  32</span>     # Run/analysis option; original defaults are documented in Code/model_configuration/settings.py.
+<span id="L33">  33</span>     &quot;emg_phase_threshold&quot;: 0.1,
+<span id="L34">  34</span> }
+</pre></main></body></html>

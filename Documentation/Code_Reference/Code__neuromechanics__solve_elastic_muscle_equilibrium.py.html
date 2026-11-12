@@ -1,0 +1,156 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Safeguarded Newton solve of the SAME backward-Euler elastic equation.</title><link rel="stylesheet" href="../style.css"></head><body><!-- generated folder guide --><header><div class="tag">Cat · Full-body neuromechanics</div><h1>Safeguarded Newton solve of the SAME backward-Euler elastic equation.</h1><nav><a href="../../START_HERE.html">Start here</a> · <a href="../project_structure.html">Find a file</a></nav></header><main><p><a href="../../Code/neuromechanics/solve_elastic_muscle_equilibrium.py">Code/neuromechanics/solve_elastic_muscle_equilibrium.py</a></p><pre style="overflow:auto;white-space:pre"><span id="L1">   1</span> &quot;&quot;&quot;Safeguarded Newton solve of the SAME backward-Euler elastic equation.
+<span id="L2">   2</span> 
+<span id="L3">   3</span> This is a numerical acceleration, not a new muscle or tendon law. A bracket
+<span id="L4">   4</span> and bisection fallback protect the solve at piecewise-curve transitions.
+<span id="L5">   5</span> &quot;&quot;&quot;
+<span id="L6">   6</span> 
+<span id="L7">   7</span> import numpy as np
+<span id="L8">   8</span> 
+<span id="L9">   9</span> from numba import njit
+<span id="L10">  10</span> 
+<span id="L11">  11</span> from .muscle_force_curve_derivatives import muscle_force_curve_derivatives
+<span id="L12">  12</span> 
+<span id="L13">  13</span> from .elastic_tendon_force import elastic_tendon_force
+<span id="L14">  14</span> 
+<span id="L15">  15</span> from model_configuration.formulation_constants import TENDON_TOE_CURVATURE
+<span id="L16">  16</span> 
+<span id="L17">  17</span> from model_configuration.numerical_parameters import (
+<span id="L18">  18</span>     MINIMUM_FIBER_LENGTH_RATIO,
+<span id="L19">  19</span>     MINIMUM_LENGTH_GAP_M,
+<span id="L20">  20</span>     MAXIMUM_FIBER_ITERATIONS,
+<span id="L21">  21</span>     FIBER_FORCE_TOLERANCE,
+<span id="L22">  22</span>     FIBER_LENGTH_TOLERANCE_M,
+<span id="L23">  23</span>     NEWTON_FALLBACK_ITERATION,
+<span id="L24">  24</span> )
+<span id="L25">  25</span> 
+<span id="L26">  26</span> from .elastic_tendon_transition import elastic_tendon_transition
+<span id="L27">  27</span> 
+<span id="L28">  28</span> 
+<span id="L29">  29</span> # Compile this numerical function for repeated evaluations; its equations stay unchanged.
+<span id="L30">  30</span> @njit(cache=False)
+<span id="L31">  31</span> def solve_elastic_muscle_equilibrium(
+<span id="L32">  32</span>     muscle_tendon_length_m,
+<span id="L33">  33</span>     previous_fiber_length_m,
+<span id="L34">  34</span>     activation,
+<span id="L35">  35</span>     optimal_fiber_length_m,
+<span id="L36">  36</span>     tendon_slack_length_m,
+<span id="L37">  37</span>     muscle_parameters,
+<span id="L38">  38</span>     strain_at_maximum_force,
+<span id="L39">  39</span>     fiber_damping,
+<span id="L40">  40</span>     step_s,
+<span id="L41">  41</span> ):
+<span id="L42">  42</span>     muscle_count = len(muscle_tendon_length_m)
+<span id="L43">  43</span>     length = np.empty(muscle_count)
+<span id="L44">  44</span>     velocity = np.empty(muscle_count)
+<span id="L45">  45</span>     tension = np.empty(muscle_count)
+<span id="L46">  46</span>     residual = np.empty(muscle_count)
+<span id="L47">  47</span>     bound = np.zeros(muscle_count, np.int64)
+<span id="L48">  48</span>     damping = np.asarray(fiber_damping).reshape(-1)
+<span id="L49">  49</span>     for i in range(muscle_count):
+<span id="L50">  50</span>         coefficient = damping[i] if len(damping) &gt; 1 else damping[0]
+<span id="L51">  51</span>         cosine = muscle_parameters[i, 9] if muscle_parameters.shape[1] &gt; 9 else 1.0
+<span id="L52">  52</span>         lower = MINIMUM_FIBER_LENGTH_RATIO * optimal_fiber_length_m[i]
+<span id="L53">  53</span>         upper = max(lower + MINIMUM_LENGTH_GAP_M, muscle_tendon_length_m[i] / cosine)
+<span id="L54">  54</span>         low, high = lower, upper
+<span id="L55">  55</span>         maximum_fiber_speed_m_s = optimal_fiber_length_m[i] * muscle_parameters[i, 6]
+<span id="L56">  56</span>         fiber_length_m = min(high, max(low, previous_fiber_length_m[i]))
+<span id="L57">  57</span>         curvature = TENDON_TOE_CURVATURE
+<span id="L58">  58</span>         toe = elastic_tendon_transition(strain_at_maximum_force[i])
+<span id="L59">  59</span>         for iteration in range(MAXIMUM_FIBER_ITERATIONS):
+<span id="L60">  60</span>             normalized_velocity = (fiber_length_m - previous_fiber_length_m[i]) / (
+<span id="L61">  61</span>                 step_s
+<span id="L62">  62</span>                 * maximum_fiber_speed_m_s
+<span id="L63">  63</span>             )
+<span id="L64">  64</span>             active_length_factor, velocity_factor, passive_length_factor, dfl, dfv, dfp = (
+<span id="L65">  65</span>                 muscle_force_curve_derivatives(
+<span id="L66">  66</span>                     fiber_length_m / optimal_fiber_length_m[i],
+<span id="L67">  67</span>                     normalized_velocity,
+<span id="L68">  68</span>                     muscle_parameters[i],
+<span id="L69">  69</span>                 )
+<span id="L70">  70</span>             )
+<span id="L71">  71</span>             strain = (
+<span id="L72">  72</span>                 muscle_tendon_length_m[i]
+<span id="L73">  73</span>                 - fiber_length_m * cosine
+<span id="L74">  74</span>             ) / tendon_slack_length_m[i] - 1
+<span id="L75">  75</span>             normalized_tendon_force = elastic_tendon_force(
+<span id="L76">  76</span>                 strain,
+<span id="L77">  77</span>                 strain_at_maximum_force[i],
+<span id="L78">  78</span>             )
+<span id="L79">  79</span>             error = (
+<span id="L80">  80</span>                 normalized_tendon_force
+<span id="L81">  81</span>                 - activation[i] * active_length_factor * velocity_factor
+<span id="L82">  82</span>                 - passive_length_factor
+<span id="L83">  83</span>                 - coefficient * normalized_velocity
+<span id="L84">  84</span>             )
+<span id="L85">  85</span>             if abs(error) &lt; FIBER_FORCE_TOLERANCE:
+<span id="L86">  86</span>                 # Leave this loop because the convergence or stopping condition was met.
+<span id="L87">  87</span>                 break
+<span id="L88">  88</span>             if error &gt; 0:
+<span id="L89">  89</span>                 low = fiber_length_m
+<span id="L90">  90</span>             else:
+<span id="L91">  91</span>                 high = fiber_length_m
+<span id="L92">  92</span>             if high - low &lt; FIBER_LENGTH_TOLERANCE_M:
+<span id="L93">  93</span>                 fiber_length_m = 0.5 * (low + high)
+<span id="L94">  94</span>                 # Leave this loop because the convergence or stopping condition was met.
+<span id="L95">  95</span>                 break
+<span id="L96">  96</span>             dft = (
+<span id="L97">  97</span>                 0.0
+<span id="L98">  98</span>                 if strain &lt;= 0
+<span id="L99">  99</span>                 else (
+<span id="L100"> 100</span>                     0.33
+<span id="L101"> 101</span>                     * curvature
+<span id="L102"> 102</span>                     / toe
+<span id="L103"> 103</span>                     * np.exp(curvature * strain / toe)
+<span id="L104"> 104</span>                     / np.expm1(curvature)
+<span id="L105"> 105</span>                     if strain &lt;= toe
+<span id="L106"> 106</span>                     else 0.67 / (strain_at_maximum_force[i] - toe)
+<span id="L107"> 107</span>                 )
+<span id="L108"> 108</span>             )
+<span id="L109"> 109</span>             derivative = (
+<span id="L110"> 110</span>                 -dft * cosine / tendon_slack_length_m[i]
+<span id="L111"> 111</span>                 - (activation[i] * dfl * velocity_factor + dfp) / optimal_fiber_length_m[i]
+<span id="L112"> 112</span>                 - (activation[i] * active_length_factor * dfv + coefficient)
+<span id="L113"> 113</span>                 / (step_s * maximum_fiber_speed_m_s)
+<span id="L114"> 114</span>             )
+<span id="L115"> 115</span>             candidate = (
+<span id="L116"> 116</span>                 fiber_length_m - error / derivative
+<span id="L117"> 117</span>                 if derivative &lt; 0
+<span id="L118"> 118</span>                 else 0.5 * (low + high)
+<span id="L119"> 119</span>             )
+<span id="L120"> 120</span>             if (
+<span id="L121"> 121</span>                 candidate &lt;= low
+<span id="L122"> 122</span>                 or candidate &gt;= high
+<span id="L123"> 123</span>                 or iteration &gt; NEWTON_FALLBACK_ITERATION
+<span id="L124"> 124</span>             ):
+<span id="L125"> 125</span>                 candidate = 0.5 * (low + high)
+<span id="L126"> 126</span>             fiber_length_m = candidate
+<span id="L127"> 127</span>         fiber_velocity_m_s = (fiber_length_m - previous_fiber_length_m[i]) / step_s
+<span id="L128"> 128</span>         active_length_factor, velocity_factor, passive_length_factor, dfl, dfv, dfp = (
+<span id="L129"> 129</span>             muscle_force_curve_derivatives(
+<span id="L130"> 130</span>                 fiber_length_m / optimal_fiber_length_m[i],
+<span id="L131"> 131</span>                 fiber_velocity_m_s / maximum_fiber_speed_m_s,
+<span id="L132"> 132</span>                 muscle_parameters[i],
+<span id="L133"> 133</span>             )
+<span id="L134"> 134</span>         )
+<span id="L135"> 135</span>         normalized_tendon_force = elastic_tendon_force(
+<span id="L136"> 136</span>             (muscle_tendon_length_m[i] - fiber_length_m * cosine) / tendon_slack_length_m[i]
+<span id="L137"> 137</span>             - 1,
+<span id="L138"> 138</span>             strain_at_maximum_force[i],
+<span id="L139"> 139</span>         )
+<span id="L140"> 140</span>         length[i] = fiber_length_m
+<span id="L141"> 141</span>         velocity[i] = fiber_velocity_m_s
+<span id="L142"> 142</span>         tension[i] = muscle_parameters[i, 2] * normalized_tendon_force
+<span id="L143"> 143</span>         residual[i] = muscle_parameters[i, 2] * (
+<span id="L144"> 144</span>             normalized_tendon_force
+<span id="L145"> 145</span>             - activation[i] * active_length_factor * velocity_factor
+<span id="L146"> 146</span>             - passive_length_factor
+<span id="L147"> 147</span>             - coefficient * fiber_velocity_m_s / maximum_fiber_speed_m_s
+<span id="L148"> 148</span>         )
+<span id="L149"> 149</span>         if (
+<span id="L150"> 150</span>             fiber_length_m &lt;= 0.200001 * optimal_fiber_length_m[i]
+<span id="L151"> 151</span>             or muscle_tendon_length_m[i] - fiber_length_m * cosine &lt;= 1e-9
+<span id="L152"> 152</span>             or muscle_tendon_length_m[i] &lt;= 0.2 * optimal_fiber_length_m[i] * cosine
+<span id="L153"> 153</span>         ):
+<span id="L154"> 154</span>             bound[i] = 1
+<span id="L155"> 155</span>     return length, velocity, tension, residual, bound
+</pre></main></body></html>

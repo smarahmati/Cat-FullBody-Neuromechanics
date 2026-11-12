@@ -1,0 +1,25 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Interpolate saved scalar-coordinate states for display, never for physics.</title><link rel="stylesheet" href="../style.css"></head><body><!-- generated folder guide --><header><div class="tag">Cat · Full-body neuromechanics</div><h1>Interpolate saved scalar-coordinate states for display, never for physics.</h1><nav><a href="../../START_HERE.html">Start here</a> · <a href="../project_structure.html">Find a file</a></nav></header><main><p><a href="../../Code/neuromechanics/interpolate_simulation_for_display.py">Code/neuromechanics/interpolate_simulation_for_display.py</a></p><pre style="overflow:auto;white-space:pre"><span id="L1">   1</span> &quot;&quot;&quot;Interpolate saved scalar-coordinate states for display, never for physics.&quot;&quot;&quot;
+<span id="L2">   2</span> 
+<span id="L3">   3</span> import numpy as np
+<span id="L4">   4</span> 
+<span id="L5">   5</span> 
+<span id="L6">   6</span> def interpolate_simulation_for_display(result, time_s):
+<span id="L7">   7</span>     &quot;&quot;&quot;Return one display sample between the two surrounding archived samples.
+<span id="L8">   8</span> 
+<span id="L9">   9</span>     The present sagittal model has scalar translations/hinges (nq == nv),
+<span id="L10">  10</span>     so coordinate interpolation does not involve quaternions. Recorded arrays
+<span id="L11">  11</span>     and force peaks are never edited. No smoothing or new dynamics is applied.
+<span id="L12">  12</span>     &quot;&quot;&quot;
+<span id="L13">  13</span>     times = result[&quot;time&quot;]
+<span id="L14">  14</span>     t = float(np.clip(time_s, times[0], times[-1]))
+<span id="L15">  15</span>     right = min(len(times) - 1, int(np.searchsorted(times, t, side=&quot;right&quot;)))
+<span id="L16">  16</span>     left = max(0, right - 1)
+<span id="L17">  17</span>     weight = 0.0 if right == left else (t - times[left]) / (times[right] - times[left])
+<span id="L18">  18</span>     fields = [&quot;qpos&quot;, &quot;qvel&quot;, &quot;activation&quot;, &quot;excitation&quot;, &quot;force&quot;, &quot;grf&quot;, &quot;joint_q&quot;]
+<span id="L19">  19</span>     sample = {
+<span id="L20">  20</span>         key: (1.0 - weight) * result[key][left] + weight * result[key][right]
+<span id="L21">  21</span>         for key in fields
+<span id="L22">  22</span>     }
+<span id="L23">  23</span>     sample.update(time=t, left_index=left, right_index=right, fraction=float(weight))
+<span id="L24">  24</span>     return sample
+</pre></main></body></html>

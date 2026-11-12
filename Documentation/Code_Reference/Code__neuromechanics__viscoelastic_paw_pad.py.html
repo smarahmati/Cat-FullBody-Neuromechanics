@@ -1,0 +1,67 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Compliant normal contact plus a passive viscoelastic friction slider.</title><link rel="stylesheet" href="../style.css"></head><body><!-- generated folder guide --><header><div class="tag">Cat · Full-body neuromechanics</div><h1>Compliant normal contact plus a passive viscoelastic friction slider.</h1><nav><a href="../../START_HERE.html">Start here</a> · <a href="../project_structure.html">Find a file</a></nav></header><main><p><a href="../../Code/neuromechanics/viscoelastic_paw_pad.py">Code/neuromechanics/viscoelastic_paw_pad.py</a></p><pre style="overflow:auto;white-space:pre"><span id="L1">   1</span> &quot;&quot;&quot;Compliant normal contact plus a passive viscoelastic friction slider.&quot;&quot;&quot;
+<span id="L2">   2</span> 
+<span id="L3">   3</span> import numpy as np
+<span id="L4">   4</span> 
+<span id="L5">   5</span> from numba import njit
+<span id="L6">   6</span> 
+<span id="L7">   7</span> from model_configuration.formulation_constants import SHEAR_DAMPING_DEPTH_M
+<span id="L8">   8</span> 
+<span id="L9">   9</span> 
+<span id="L10">  10</span> # Compile this numerical function for repeated evaluations; its equations stay unchanged.
+<span id="L11">  11</span> @njit(cache=False)
+<span id="L12">  12</span> def viscoelastic_paw_pad(depth, velocity, bristle, dt, parameters):
+<span id="L13">  13</span>     &quot;&quot;&quot;Kelvin--Voigt shear element in series with a Coulomb slider.
+<span id="L14">  14</span> 
+<span id="L15">  15</span>     The dashpot responds to elastic shear rate, not to the total sliding rate.
+<span id="L16">  16</span>     This distinction makes the backward-Euler return map dissipative even
+<span id="L17">  17</span>     during rapid slip. The same Hunt--Crossley normal law is retained.
+<span id="L18">  18</span>     This is an explicit constitutive modeling choice, not measured cat tissue.
+<span id="L19">  19</span>     &quot;&quot;&quot;
+<span id="L20">  20</span>     k, c, kt, bt, mu = parameters[:5]
+<span id="L21">  21</span>     if depth &lt;= 0:
+<span id="L22">  22</span>         return np.zeros(3), np.zeros(2), 0.0
+<span id="L23">  23</span>     elastic = k * depth**1.5
+<span id="L24">  24</span>     normal_energy = k * depth**2.5 / 2.5
+<span id="L25">  25</span>     # Optional finite-thickness-inspired progressive stiffness. This smooth,
+<span id="L26">  26</span>     # conservative elastic term becomes important near the assumed depth.
+<span id="L27">  27</span>     # Its exact coefficient is a modeling choice, not a cat tissue measurement.
+<span id="L28">  28</span>     if len(parameters) &gt; 5 and parameters[5] &gt; 0.0:
+<span id="L29">  29</span>         scale = parameters[5]
+<span id="L30">  30</span>         elastic *= 1.0 + (depth / scale) ** 4
+<span id="L31">  31</span>         normal_energy += k * depth**6.5 / (6.5 * scale**4)
+<span id="L32">  32</span>     normal = elastic * max(0.0, 1.0 - c * velocity[2])
+<span id="L33">  33</span>     if normal &lt;= 0:
+<span id="L34">  34</span>         return np.zeros(3), np.zeros(2), normal_energy
+<span id="L35">  35</span>     damping = bt * min(1.0, depth / SHEAR_DAMPING_DEPTH_M)
+<span id="L36">  36</span>     displacement = bristle + dt * velocity[:2]
+<span id="L37">  37</span>     trial_stress = kt * displacement + damping * velocity[:2]
+<span id="L38">  38</span>     magnitude = np.linalg.norm(trial_stress)
+<span id="L39">  39</span>     # Optional smooth Stribeck-like sliding envelope. This is an engineering
+<span id="L40">  40</span>     # friction assumption, NOT an identified cat-paw coefficient or an exact
+<span id="L41">  41</span>     # reproduction of the Dupont et al. (2002) elastoplastic state equation.
+<span id="L42">  42</span>     # The nonnegative return-map slip rate still dissipates stored shear energy.
+<span id="L43">  43</span>     if len(parameters) &gt; 7:
+<span id="L44">  44</span>         dynamic_mu = parameters[6]
+<span id="L45">  45</span>         vscale = parameters[7]
+<span id="L46">  46</span>         speed2 = np.dot(velocity[:2], velocity[:2])
+<span id="L47">  47</span>         mu = dynamic_mu + (mu - dynamic_mu) * np.exp(-speed2 / (vscale * vscale))
+<span id="L48">  48</span>     limit = mu * normal
+<span id="L49">  49</span>     stress = trial_stress.copy()
+<span id="L50">  50</span>     if magnitude &gt; limit:
+<span id="L51">  51</span>         direction = trial_stress / magnitude
+<span id="L52">  52</span>         stress = limit * direction
+<span id="L53">  53</span>         if dt &gt; 0:
+<span id="L54">  54</span>             # Plastic slip rate gamma is nonnegative. The implicit spring and
+<span id="L55">  55</span>             # dashpot share the elastic rate (v - gamma*direction).
+<span id="L56">  56</span>             gamma = (magnitude - limit) / (kt * dt + damping)
+<span id="L57">  57</span>             displacement -= dt * gamma * direction
+<span id="L58">  58</span>         # With dt=0 this is a force evaluation only; stored strain is unchanged.
+<span id="L59">  59</span>     force = np.empty(3)
+<span id="L60">  60</span>     force[:2] = -stress
+<span id="L61">  61</span>     force[2] = normal
+<span id="L62">  62</span>     return (
+<span id="L63">  63</span>         force,
+<span id="L64">  64</span>         displacement,
+<span id="L65">  65</span>         normal_energy + 0.5 * kt * np.dot(displacement, displacement),
+<span id="L66">  66</span>     )
+</pre></main></body></html>

@@ -1,0 +1,530 @@
+[
+  {
+    "id": "Rahmati2025",
+    "doi": "10.1113/JP287448",
+    "role": "Forelimb source anatomy, measured/pooled EMG, joint-angle definitions and source muscle laws.",
+    "pdf": "https://www.rybak-et-al.net/pdfs/Rahmati_et_al_2025.pdf",
+    "license": "CC BY-NC (publisher notice in article); separate from code MIT",
+    "public": true,
+    "local_file": "Open_Access_Papers/Rahmati2025.pdf",
+    "sha256": "54fcc1bf31252fa5480ef74bb229fe954d06cbce136ebee62070b6796469acca",
+    "checked": "2026-11-12",
+    "pmid": "39705066",
+    "pmcid": "PMC11737544",
+    "metadata_verification_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?format=json&resultType=core&query=DOI%3A10.1113/JP287448",
+    "metadata": {
+      "title": "Role of forelimb morphology in muscle sensorimotor functions during locomotion in the cat",
+      "authors": [
+        {
+          "family": "Rahmati",
+          "given": "Seyed Mohammadali"
+        },
+        {
+          "family": "Klishko",
+          "given": "Alexander N"
+        },
+        {
+          "family": "Martin",
+          "given": "Ramaldo S"
+        },
+        {
+          "family": "Bunderson",
+          "given": "Nate E"
+        },
+        {
+          "family": "Meslie",
+          "given": "Jeswin A"
+        },
+        {
+          "family": "Nichols",
+          "given": "T Richard"
+        },
+        {
+          "family": "Rybak",
+          "given": "Ilya A"
+        },
+        {
+          "family": "Frigon",
+          "given": "Alain"
+        },
+        {
+          "family": "Burkholder",
+          "given": "Thomas J"
+        },
+        {
+          "family": "Prilutsky",
+          "given": "Boris I"
+        }
+      ],
+      "year": 2025,
+      "journal": "The Journal of physiology",
+      "volume": "603",
+      "pages": "447-487",
+      "type": "journal-article"
+    }
+  },
+  {
+    "id": "Prilutsky2016",
+    "doi": "10.1007/978-1-4939-3267-2_10",
+    "role": "Cat hindlimb EMG-driven modeling, muscle geometry and active/passive muscle constitutive equations.",
+    "pdf": "https://bpb-us-e1.wpmucdn.com/sites.gatech.edu/dist/a/434/files/2016/07/Prilutsky_etal_2016-Ch_10-Computing-sensory-feedback.pdf",
+    "public": false,
+    "metadata": {
+      "title": "Computing Motion Dependent Afferent Activity During Cat Locomotion Using a Forward Dynamics Musculoskeletal Model",
+      "authors": [
+        {
+          "given": "Boris I.",
+          "family": "Prilutsky",
+          "sequence": "first",
+          "affiliation": [],
+          "role": [
+            {
+              "role": "author",
+              "vocabulary": "crossref"
+            }
+          ]
+        },
+        {
+          "given": "Alexander N.",
+          "family": "Klishko",
+          "sequence": "additional",
+          "affiliation": [],
+          "role": [
+            {
+              "role": "author",
+              "vocabulary": "crossref"
+            }
+          ]
+        },
+        {
+          "given": "Douglas J.",
+          "family": "Weber",
+          "sequence": "additional",
+          "affiliation": [],
+          "role": [
+            {
+              "role": "author",
+              "vocabulary": "crossref"
+            }
+          ]
+        },
+        {
+          "given": "Michel A.",
+          "family": "Lemay",
+          "sequence": "additional",
+          "affiliation": [],
+          "role": [
+            {
+              "role": "author",
+              "vocabulary": "crossref"
+            }
+          ]
+        }
+      ],
+      "journal": "Springer Series in Computational Neuroscience",
+      "year": 2015,
+      "volume": "",
+      "pages": "273-307",
+      "type": "book-chapter"
+    },
+    "checked": "2026-11-12"
+  },
+  {
+    "id": "Fujiwara2018",
+    "doi": "10.1111/joa.12778",
+    "role": "Shoulder/trunk visual anatomy and thoracic attachment source. Registration and dynamic articulation are project adaptations.",
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5879960/",
+    "public": false,
+    "checked": "2026-11-12",
+    "pmid": "29322521",
+    "pmcid": null,
+    "metadata_verification_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?format=json&resultType=core&query=DOI%3A10.1111/joa.12778",
+    "metadata": {
+      "title": "Fitting unanchored puzzle pieces in the skeleton: appropriate 3D scapular positions for the quadrupedal support in tetrapods",
+      "authors": [
+        {
+          "family": "Fujiwara",
+          "given": "Shin-Ichi"
+        }
+      ],
+      "year": 2018,
+      "journal": "Journal of anatomy",
+      "volume": "232",
+      "pages": "857-869",
+      "type": "journal-article"
+    }
+  },
+  {
+    "id": "Burkholder2004",
+    "doi": "10.1002/jmor.10233",
+    "role": "Feline hindlimb anatomy and attachment context; not the exact current Model 3 parameter set.",
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC2043500/",
+    "public": false,
+    "metadata": {
+      "title": "Three‐dimensional model of the feline hindlimb",
+      "authors": [
+        {
+          "given": "Thomas J.",
+          "family": "Burkholder",
+          "sequence": "first",
+          "affiliation": [],
+          "role": [
+            {
+              "role": "author",
+              "vocabulary": "crossref"
+            }
+          ]
+        },
+        {
+          "given": "T. Richard",
+          "family": "Nichols",
+          "sequence": "additional",
+          "affiliation": [],
+          "role": [
+            {
+              "role": "author",
+              "vocabulary": "crossref"
+            }
+          ]
+        }
+      ],
+      "journal": "Journal of Morphology",
+      "year": 2004,
+      "volume": "261",
+      "pages": "118-129",
+      "type": "journal-article"
+    },
+    "checked": "2026-11-12",
+    "pmid": "15164372",
+    "pmcid": "PMC2043500",
+    "metadata_verification_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?format=json&resultType=core&query=DOI%3A10.1002/jmor.10233",
+    "full_text_retrieval_note": "HTTP Error 500: "
+  },
+  {
+    "id": "DeGroote2016",
+    "doi": "10.1007/s10439-016-1591-9",
+    "role": "Smooth force-velocity relation; corrected coefficients from OpenSim. General-muscle adaptation, not feline validation.",
+    "pdf": "https://rcnl.rice.edu/PDFs/abe2016.pdf",
+    "public": false,
+    "metadata": {
+      "title": "Evaluation of Direct Collocation Optimal Control Problem Formulations for Solving the Muscle Redundancy Problem",
+      "authors": [
+        {
+          "given": "Friedl",
+          "family": "De Groote",
+          "sequence": "first",
+          "affiliation": [],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Allison L.",
+          "family": "Kinney",
+          "sequence": "additional",
+          "affiliation": [],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Anil V.",
+          "family": "Rao",
+          "sequence": "additional",
+          "affiliation": [],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Benjamin J.",
+          "family": "Fregly",
+          "sequence": "additional",
+          "affiliation": [],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        }
+      ],
+      "journal": "Annals of Biomedical Engineering",
+      "year": 2016,
+      "volume": "44",
+      "pages": "2922-2936",
+      "type": "journal-article"
+    },
+    "checked": "2026-11-12",
+    "pmid": "27001399",
+    "pmcid": "PMC5043004",
+    "metadata_verification_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?format=json&resultType=core&query=DOI%3A10.1007/s10439-016-1591-9"
+  },
+  {
+    "id": "HuntCrossley1975",
+    "doi": "10.1115/1.3423596",
+    "role": "Nonlinear indentation/dissipation normal-contact concept. Tangential bristle slider is this project's implementation.",
+    "public": false,
+    "metadata": {
+      "title": "Coefficient of Restitution Interpreted as Damping in Vibroimpact",
+      "authors": [
+        {
+          "given": "K. H.",
+          "family": "Hunt",
+          "sequence": "first",
+          "affiliation": [
+            {
+              "name": "Monash University, Clayton, Victoria, Australia"
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "F. R. E.",
+          "family": "Crossley",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "Department of Mechanical Engineering, University of Massachusetts, Amherst, Mass."
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        }
+      ],
+      "journal": "Journal of Applied Mechanics",
+      "year": 1975,
+      "volume": "42",
+      "pages": "440-445",
+      "type": "journal-article"
+    },
+    "checked": "2026-11-12"
+  },
+  {
+    "id": "Karabulut2020",
+    "doi": "10.1115/1.4045660",
+    "role": "Cat OpenSim hindlimb/force validation context and SimTK visual model provenance. Not validation of this assembled model.",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/31825073/",
+    "public": false,
+    "metadata": {
+      "title": "Direct Validation of Model-Predicted Muscle Forces in the Cat Hindlimb During Locomotion",
+      "authors": [
+        {
+          "given": "Derya",
+          "family": "Karabulut",
+          "sequence": "first",
+          "affiliation": [
+            {
+              "name": "Department of Mechanical Engineering, Faculty of Engineering, Istanbul University-Cerrahpasa, Avcilar, Istanbul 34320, Turkey"
+            }
+          ],
+          "role": [
+            {
+              "role": "author",
+              "vocabulary": "crossref"
+            }
+          ]
+        },
+        {
+          "given": "Suzan Cansel",
+          "family": "Dogru",
+          "sequence": "first",
+          "affiliation": [
+            {
+              "name": "Department of Mechanical Engineering, Faculty of Engineering, Istanbul University-Cerrahpasa, Avcilar, Istanbul 34320, Turkey"
+            }
+          ],
+          "role": [
+            {
+              "role": "author",
+              "vocabulary": "crossref"
+            }
+          ]
+        },
+        {
+          "given": "Yi-Chung",
+          "family": "Lin",
+          "sequence": "first",
+          "affiliation": [
+            {
+              "name": "Department of Mechanical Engineering, University of Melbourne, Parkville, Victoria 3010, Australia"
+            }
+          ],
+          "role": [
+            {
+              "role": "author",
+              "vocabulary": "crossref"
+            }
+          ]
+        },
+        {
+          "given": "Marcus G.",
+          "family": "Pandy",
+          "sequence": "first",
+          "affiliation": [
+            {
+              "name": "Department of Mechanical Engineering, University of Melbourne, Parkville, Victoria 3010, Australia"
+            }
+          ],
+          "role": [
+            {
+              "role": "author",
+              "vocabulary": "crossref"
+            }
+          ]
+        },
+        {
+          "given": "Walter",
+          "family": "Herzog",
+          "sequence": "first",
+          "affiliation": [
+            {
+              "name": "Human Performance Laboratory, The University of Calgary, Calgary, AB T2N 1N4, Canada"
+            }
+          ],
+          "role": [
+            {
+              "role": "author",
+              "vocabulary": "crossref"
+            }
+          ]
+        },
+        {
+          "given": "Yunus Ziya",
+          "family": "Arslan",
+          "sequence": "first",
+          "affiliation": [
+            {
+              "name": "Department of Mechanical Engineering, Faculty of Engineering, Istanbul University-Cerrahpasa, Avcilar, Istanbul 34320, Turkey"
+            }
+          ],
+          "role": [
+            {
+              "role": "author",
+              "vocabulary": "crossref"
+            }
+          ]
+        }
+      ],
+      "journal": "Journal of Biomechanical Engineering",
+      "year": 2020,
+      "volume": "142",
+      "pages": "",
+      "type": "journal-article"
+    },
+    "checked": "2026-11-12",
+    "pmid": "31825073",
+    "pmcid": null,
+    "metadata_verification_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?format=json&resultType=core&query=DOI%3A10.1115/1.4045660"
+  },
+  {
+    "id": "PawShake2022",
+    "doi": "10.3389/fnint.2022.810139",
+    "role": "Feline hindlimb muscle parameters and related biomechanical source context.",
+    "pdf": "https://public-pages-files-2025.frontiersin.org/journals/integrative-neuroscience/articles/10.3389/fnint.2022.810139/pdf",
+    "license": "CC BY; verify article notice",
+    "public": true,
+    "metadata": {
+      "title": "Emergence of Extreme Paw Accelerations During Cat Paw Shaking: Interactions of Spinal Central Pattern Generator, Hindlimb Mechanics and Muscle Length-Depended Feedback",
+      "authors": [
+        {
+          "given": "Boris I.",
+          "family": "Prilutsky",
+          "sequence": "first",
+          "affiliation": [],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Jessica",
+          "family": "Parker",
+          "sequence": "additional",
+          "affiliation": [],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Gennady S.",
+          "family": "Cymbalyuk",
+          "sequence": "additional",
+          "affiliation": [],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Alexander N.",
+          "family": "Klishko",
+          "sequence": "additional",
+          "affiliation": [],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        }
+      ],
+      "journal": "Frontiers in Integrative Neuroscience",
+      "year": 2022,
+      "volume": "16",
+      "pages": "",
+      "type": "journal-article"
+    },
+    "local_file": "Open_Access_Papers/PawShake2022.pdf",
+    "sha256": "d3ccc053db091adfb2ab08ce409c67c557b92edd23286ceb8275992562c2fb1e",
+    "checked": "2026-11-12",
+    "pmid": "35431821",
+    "pmcid": "PMC9007247",
+    "metadata_verification_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?format=json&resultType=core&query=DOI%3A10.3389/fnint.2022.810139"
+  },
+  {
+    "id": "MuJoCo",
+    "url": "https://mujoco.readthedocs.io/en/stable/computation/index.html",
+    "role": "Multibody equations and activation machinery; tested engine 3.17.0."
+  },
+  {
+    "id": "OpenSimDeGroote",
+    "url": "https://github.com/opensim-org/opensim-core/blob/main/OpenSim/Actuators/DeGrooteFregly2016Muscle.h",
+    "role": "Corrected De Groote velocity coefficients; current simulator uses MuJoCo, not OpenSim."
+  },
+  {
+    "id": "UserRepository",
+    "url": "https://github.com/smarahmati/CatForelimbNeuromechanics",
+    "role": "User forelimb MATLAB source, data and grouped architecture."
+  },
+  {
+    "id": "SimTKCat",
+    "url": "https://simtk.org/frs/?group_id=1811",
+    "role": "Original visual hindlimb archive. Reuse terms must be checked separately."
+  }
+]

@@ -1,0 +1,60 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Draw the saved four-paw force vectors in the passive MuJoCo viewer.</title><link rel="stylesheet" href="../style.css"></head><body><!-- generated folder guide --><header><div class="tag">Cat · Full-body neuromechanics</div><h1>Draw the saved four-paw force vectors in the passive MuJoCo viewer.</h1><nav><a href="../../START_HERE.html">Start here</a> · <a href="../project_structure.html">Find a file</a></nav></header><main><p><a href="../../Code/neuromechanics/draw_saved_grf_vectors.py">Code/neuromechanics/draw_saved_grf_vectors.py</a></p><pre style="overflow:auto;white-space:pre"><span id="L1">   1</span> &quot;&quot;&quot;Draw the saved four-paw force vectors in the passive MuJoCo viewer.&quot;&quot;&quot;
+<span id="L2">   2</span> 
+<span id="L3">   3</span> import mujoco as mj
+<span id="L4">   4</span> 
+<span id="L5">   5</span> import numpy as np
+<span id="L6">   6</span> 
+<span id="L7">   7</span> 
+<span id="L8">   8</span> def draw_saved_grf_vectors(viewer, state, forces, enabled=True, metres_per_newton=0.006):
+<span id="L9">   9</span>     &quot;&quot;&quot;Use actual saved Ground_Reaction_Forces; arrow tails are ground projections of paw sites.
+<span id="L10">  10</span> 
+<span id="L11">  11</span>     The archive has no centre-of-pressure trace. A projected paw site is an
+<span id="L12">  12</span>     explicit visualization anchor, not a measured or reconstructed COP.
+<span id="L13">  13</span>     Forces below 0.05 N are hidden only as arrows; time series remain unchanged.
+<span id="L14">  14</span>     Call with the viewer lock held. This viewer reserves user_scn for arrows.
+<span id="L15">  15</span>     &quot;&quot;&quot;
+<span id="L16">  16</span>     scene = viewer.user_scn
+<span id="L17">  17</span>     scene.ngeom = 0
+<span id="L18">  18</span>     if not enabled:
+<span id="L19">  19</span>         return []
+<span id="L20">  20</span>     colors = [
+<span id="L21">  21</span>         [0.05, 0.82, 1.0, 1.0],
+<span id="L22">  22</span>         [1.0, 0.15, 0.58, 1.0],
+<span id="L23">  23</span>         [1.0, 0.72, 0.05, 1.0],
+<span id="L24">  24</span>         [0.68, 0.35, 1.0, 1.0],
+<span id="L25">  25</span>     ]
+<span id="L26">  26</span>     labels = [&quot;LH&quot;, &quot;RH&quot;, &quot;LF&quot;, &quot;RF&quot;]
+<span id="L27">  27</span>     records = []
+<span id="L28">  28</span>     m, d = state[&quot;model&quot;], state[&quot;data&quot;]
+<span id="L29">  29</span>     planes = np.flatnonzero(m.geom_type == int(mj.mjtGeom.mjGEOM_PLANE))
+<span id="L30">  30</span>     ground_z = float(m.geom_pos[planes[0], 2]) if len(planes) else 0.0
+<span id="L31">  31</span>     for side, force in enumerate(forces):
+<span id="L32">  32</span>         magnitude = float(np.linalg.norm(force))
+<span id="L33">  33</span>         if magnitude &lt; 0.05:
+<span id="L34">  34</span>             # Skip the remaining work for this item.
+<span id="L35">  35</span>             continue
+<span id="L36">  36</span>         origin = d.site_xpos[state[&quot;paw_ids&quot;][side]].copy()
+<span id="L37">  37</span>         origin[2] = ground_z + 0.002
+<span id="L38">  38</span>         tip = origin + metres_per_newton * force
+<span id="L39">  39</span>         geom = scene.geoms[scene.ngeom]
+<span id="L40">  40</span>         mj.mjv_initGeom(
+<span id="L41">  41</span>             geom,
+<span id="L42">  42</span>             mj.mjtGeom.mjGEOM_ARROW,
+<span id="L43">  43</span>             np.zeros(3),
+<span id="L44">  44</span>             origin,
+<span id="L45">  45</span>             np.eye(3).ravel(),
+<span id="L46">  46</span>             np.asarray(colors[side], dtype=np.float32),
+<span id="L47">  47</span>         )
+<span id="L48">  48</span>         mj.mjv_connector(geom, mj.mjtGeom.mjGEOM_ARROW, 0.0035, origin, tip)
+<span id="L49">  49</span>         geom.label = f&quot;{labels[side]} {magnitude:.1f} N&quot;
+<span id="L50">  50</span>         scene.ngeom += 1
+<span id="L51">  51</span>         records.append(
+<span id="L52">  52</span>             dict(
+<span id="L53">  53</span>                 limb=labels[side],
+<span id="L54">  54</span>                 force_N=force.tolist(),
+<span id="L55">  55</span>                 origin_m=origin.tolist(),
+<span id="L56">  56</span>                 tip_m=tip.tolist(),
+<span id="L57">  57</span>             )
+<span id="L58">  58</span>         )
+<span id="L59">  59</span>     return records
+</pre></main></body></html>

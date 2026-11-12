@@ -1,0 +1,67 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Recompute 60 seconds of intact walking and compare all saved state arrays.</title><link rel="stylesheet" href="../style.css"></head><body><!-- generated folder guide --><header><div class="tag">Cat · Full-body neuromechanics</div><h1>Recompute 60 seconds of intact walking and compare all saved state arrays.</h1><nav><a href="../../START_HERE.html">Start here</a> · <a href="../project_structure.html">Find a file</a></nav></header><main><p><a href="../../Verification/verify_intact_walking.py">Verification/verify_intact_walking.py</a></p><pre style="overflow:auto;white-space:pre"><span id="L1">   1</span> &quot;&quot;&quot;Recompute 60 seconds of intact walking and compare all saved state arrays.
+<span id="L2">   2</span> 
+<span id="L3">   3</span> Run: python Verification/verify_intact_walking.py
+<span id="L4">   4</span> Output: a new local Simulation_Results/Verification_Runs folder, or --output.
+<span id="L5">   5</span> This checks numerical reproducibility from the supplied fixed input and model
+<span id="L6">   6</span> parameters. It neither fits parameters nor claims biological validation.
+<span id="L7">   7</span> &quot;&quot;&quot;
+<span id="L8">   8</span> from pathlib import Path
+<span id="L9">   9</span> from datetime import datetime
+<span id="L10">  10</span> import argparse
+<span id="L11">  11</span> import hashlib
+<span id="L12">  12</span> import json
+<span id="L13">  13</span> import os
+<span id="L14">  14</span> import platform
+<span id="L15">  15</span> import sys
+<span id="L16">  16</span> 
+<span id="L17">  17</span> ROOT = Path(__file__).resolve().parents[1]
+<span id="L18">  18</span> os.environ.setdefault(&#x27;OPENBLAS_NUM_THREADS&#x27;, &#x27;1&#x27;)
+<span id="L19">  19</span> os.environ.setdefault(&#x27;OMP_NUM_THREADS&#x27;, &#x27;1&#x27;)
+<span id="L20">  20</span> os.environ[&#x27;CAT_PARAMETER_FOLDER&#x27;] = str(ROOT / &#x27;Data/Model_Parameters&#x27;)
+<span id="L21">  21</span> sys.path.insert(0, str(ROOT / &#x27;Code&#x27;))
+<span id="L22">  22</span> import numpy as np
+<span id="L23">  23</span> from neuromechanics.load_model_configuration import load_model_configuration
+<span id="L24">  24</span> from neuromechanics.simulate_forward_dynamics import simulate_forward_dynamics
+<span id="L25">  25</span> 
+<span id="L26">  26</span> 
+<span id="L27">  27</span> def main():
+<span id="L28">  28</span>     &quot;&quot;&quot;Run the complete intact trial; exit with an error if comparison fails.&quot;&quot;&quot;
+<span id="L29">  29</span>     parser = argparse.ArgumentParser(description=__doc__)
+<span id="L30">  30</span>     parser.add_argument(&#x27;--output&#x27;, type=Path, help=&#x27;New folder for the recomputed arrays and comparison&#x27;)
+<span id="L31">  31</span>     args = parser.parse_args()
+<span id="L32">  32</span>     output = args.output or ROOT / &#x27;Simulation_Results/Verification_Runs&#x27; / datetime.now().strftime(&#x27;%Y%m%d_%H%M%S_%f&#x27;)
+<span id="L33">  33</span>     output.mkdir(parents=True, exist_ok=False)
+<span id="L34">  34</span>     cfg = load_model_configuration(ROOT / &#x27;Data/Model_Parameters&#x27;)
+<span id="L35">  35</span>     cfg[&#x27;seconds&#x27;] = 60.0
+<span id="L36">  36</span>     print(&#x27;Computing 60 seconds of intact walking...&#x27;, flush=True)
+<span id="L37">  37</span>     result, state = simulate_forward_dynamics(cfg)
+<span id="L38">  38</span>     source = ROOT / &#x27;Simulation_Results/Intact_Walking/forward_simulation_timeseries.npz&#x27;
+<span id="L39">  39</span>     relative_tolerance, absolute_tolerance = 1e-7, 1e-8
+<span id="L40">  40</span>     comparisons = {}
+<span id="L41">  41</span>     with np.load(source, allow_pickle=False) as reference:
+<span id="L42">  42</span>         for key in [&#x27;time&#x27;, &#x27;qpos&#x27;, &#x27;qvel&#x27;, &#x27;joint_q&#x27;, &#x27;grf&#x27;, &#x27;excitation&#x27;, &#x27;activation&#x27;,
+<span id="L43">  43</span>                     &#x27;force&#x27;, &#x27;fiber_length&#x27;, &#x27;fiber_velocity&#x27;, &#x27;mtu_length&#x27;, &#x27;tendon_length&#x27;, &#x27;pad_depth&#x27;]:
+<span id="L44">  44</span>             actual, expected = np.asarray(result[key]), reference[key]
+<span id="L45">  45</span>             same_shape = actual.shape == expected.shape
+<span id="L46">  46</span>             comparisons[key] = {
+<span id="L47">  47</span>                 &#x27;shape_matches&#x27;: same_shape,
+<span id="L48">  48</span>                 &#x27;maximum_absolute_difference&#x27;: float(np.max(np.abs(actual - expected))) if same_shape else None,
+<span id="L49">  49</span>                 &#x27;within_tolerance&#x27;: bool(same_shape and np.allclose(actual, expected,
+<span id="L50">  50</span>                     rtol=relative_tolerance, atol=absolute_tolerance, equal_nan=True)),
+<span id="L51">  51</span>             }
+<span id="L52">  52</span>         outcome_matches = str(result[&#x27;failure&#x27;]) == str(reference[&#x27;failure&#x27;])
+<span id="L53">  53</span>     passed = outcome_matches and all(c[&#x27;within_tolerance&#x27;] for c in comparisons.values())
+<span id="L54">  54</span>     report = {&#x27;passed&#x27;: passed, &#x27;requested_duration_s&#x27;: 60.0,
+<span id="L55">  55</span>         &#x27;final_saved_time_s&#x27;: float(result[&#x27;time&#x27;][-1]), &#x27;failure&#x27;: str(result[&#x27;failure&#x27;]),
+<span id="L56">  56</span>         &#x27;relative_tolerance&#x27;: relative_tolerance, &#x27;absolute_tolerance_in_native_units&#x27;: absolute_tolerance,
+<span id="L57">  57</span>         &#x27;comparisons&#x27;: comparisons, &#x27;python&#x27;: platform.python_version(), &#x27;numpy&#x27;: np.__version__,
+<span id="L58">  58</span>         &#x27;platform&#x27;: platform.platform(), &#x27;reference_sha256&#x27;: hashlib.sha256(source.read_bytes()).hexdigest()}
+<span id="L59">  59</span>     np.savez_compressed(output / &#x27;recomputed_forward_timeseries.npz&#x27;, **result)
+<span id="L60">  60</span>     (output / &#x27;numerical_reproduction_comparison.json&#x27;).write_text(json.dumps(report, indent=2), encoding=&#x27;utf-8&#x27;)
+<span id="L61">  61</span>     print((&#x27;PASS&#x27; if passed else &#x27;FAIL&#x27;) + &#x27;: &#x27; + str(output), flush=True)
+<span id="L62">  62</span>     return 0 if passed else 1
+<span id="L63">  63</span> 
+<span id="L64">  64</span> 
+<span id="L65">  65</span> if __name__ == &#x27;__main__&#x27;:
+<span id="L66">  66</span>     raise SystemExit(main())
+</pre></main></body></html>

@@ -1,0 +1,42 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Shared constants in the implemented activation, muscle–tendon and contact equations.</title><link rel="stylesheet" href="../style.css"></head><body><!-- generated folder guide --><header><div class="tag">Cat · Full-body neuromechanics</div><h1>Shared constants in the implemented activation, muscle–tendon and contact equations.</h1><nav><a href="../../START_HERE.html">Start here</a> · <a href="../project_structure.html">Find a file</a></nav></header><main><p><a href="../../Data/Model_Parameters/formulation_constants.py">Data/Model_Parameters/formulation_constants.py</a></p><pre style="overflow:auto;white-space:pre"><span id="L1">   1</span> &quot;&quot;&quot;Shared constitutive constants used by the actual compiled equations.
+<span id="L2">   2</span> 
+<span id="L3">   3</span> Edit, then start a NEW run.py process. Dependent kernels compile afresh so
+<span id="L4">   4</span> edits cannot be masked by a stale Numba cache. These are curve-law constants,
+<span id="L5">   5</span> not individually measured parameters of each cat muscle. Defaults preserve
+<span id="L6">   6</span> the previous numerical model. See Documentation/model_methods.html.
+<span id="L7">   7</span> &quot;&quot;&quot;
+<span id="L8">   8</span> 
+<span id="L9">   9</span> # Source MATLAB active force-length shape (original 1.55 and 0.55).
+<span id="L10">  10</span> ACTIVE_LENGTH_POWER = 1.55
+<span id="L11">  11</span> # Set ACTIVE LENGTH WIDTH.
+<span id="L12">  12</span> ACTIVE_LENGTH_WIDTH = 0.55
+<span id="L13">  13</span> # Published parallel elastic curve: Prilutsky et al. (2016), Table 10.3,
+<span id="L14">  14</span> # DOI 10.1007/978-1-4939-3267-2_10; Rahmati et al. (2025), Table 3,
+<span id="L15">  15</span> # DOI 10.1113/JP287448. Original coefficients are 0.0075 and 11.6.
+<span id="L16">  16</span> # This implementation rectifies the curve to zero for l_f / l_opt &lt;= 1.
+<span id="L17">  17</span> PASSIVE_LENGTH_SCALE = 0.0075
+<span id="L18">  18</span> # Set PASSIVE LENGTH EXPONENT.
+<span id="L19">  19</span> PASSIVE_LENGTH_EXPONENT = 11.6
+<span id="L20">  20</span> # Set PASSIVE EXPONENT CAP.
+<span id="L21">  21</span> PASSIVE_EXPONENT_CAP = 50.0  # Numerical overflow guard; original 50.
+<span id="L22">  22</span> # De Groote 2016 / OpenSim corrected velocity coefficients. Original rounded
+<span id="L23">  23</span> # paper d1=-0.318, d2=-8.149, d3=-0.374, d4=0.886.
+<span id="L24">  24</span> FV_D1 = -0.3211346127989808
+<span id="L25">  25</span> # Set FV D2.
+<span id="L26">  26</span> FV_D2 = -8.149
+<span id="L27">  27</span> # Set FV D3.
+<span id="L28">  28</span> FV_D3 = -0.374
+<span id="L29">  29</span> # Set FV D4.
+<span id="L30">  30</span> FV_D4 = 0.8825327733249912
+<span id="L31">  31</span> # Current exponential-to-linear tendon law: original toe curvature 3.0.
+<span id="L32">  32</span> # The 0.33 toe force and toe-length ratio are coupled to this specific law;
+<span id="L33">  33</span> # changing its shape requires continuity/slope checks, not arbitrary tuning.
+<span id="L34">  34</span> TENDON_TOE_CURVATURE = 3.0
+<span id="L35">  35</span> # Contact assumption: dashpot reaches full strength at 1 mm indentation.
+<span id="L36">  36</span> # This is an engineering regularization, not a measured cat tissue value.
+<span id="L37">  37</span> SHEAR_DAMPING_DEPTH_M = 0.001
+<span id="L38">  38</span> # Numerical collapse criteria, not forces or experimentally identified limits.
+<span id="L39">  39</span> FALL_PELVIS_HEIGHT_M = 0.10
+<span id="L40">  40</span> # Set FALL ROOT PITCH RAD.
+<span id="L41">  41</span> FALL_ROOT_PITCH_RAD = 1.0
+</pre></main></body></html>

@@ -1,0 +1,111 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Plot available EMG envelopes separately for every limb, with provenance.</title><link rel="stylesheet" href="../style.css"></head><body><!-- generated folder guide --><header><div class="tag">Cat · Full-body neuromechanics</div><h1>Plot available EMG envelopes separately for every limb, with provenance.</h1><nav><a href="../../START_HERE.html">Start here</a> · <a href="../project_structure.html">Find a file</a></nav></header><main><p><a href="../../Code/neuromechanics/plot_emg_comparison.py">Code/neuromechanics/plot_emg_comparison.py</a></p><pre style="overflow:auto;white-space:pre"><span id="L1">   1</span> &quot;&quot;&quot;Plot available EMG envelopes separately for every limb, with provenance.&quot;&quot;&quot;
+<span id="L2">   2</span> 
+<span id="L3">   3</span> import json
+<span id="L4">   4</span> 
+<span id="L5">   5</span> import numpy as np
+<span id="L6">   6</span> 
+<span id="L7">   7</span> import matplotlib.pyplot as plt
+<span id="L8">   8</span> 
+<span id="L9">   9</span> from model_configuration.paths import ROOT
+<span id="L10">  10</span> 
+<span id="L11">  11</span> from .experimental_comparison_targets import experimental_comparison_targets
+<span id="L12">  12</span> 
+<span id="L13">  13</span> from .load_reference_tables import load_reference_tables
+<span id="L14">  14</span> 
+<span id="L15">  15</span> from .periodic_interpolate import periodic_interpolate
+<span id="L16">  16</span> 
+<span id="L17">  17</span> from .configured_excitation_samples import configured_excitation_samples
+<span id="L18">  18</span> 
+<span id="L19">  19</span> 
+<span id="L20">  20</span> def plot_emg_comparison(result, settings, folder):
+<span id="L21">  21</span>     t = result[&quot;time&quot;]
+<span id="L22">  22</span>     T = settings[&quot;period_s&quot;]
+<span id="L23">  23</span>     target = experimental_comparison_targets(t, T, settings.get(&quot;reference_table_dir&quot;))
+<span id="L24">  24</span>     full = experimental_comparison_targets(
+<span id="L25">  25</span>         np.linspace(0, T, 801),
+<span id="L26">  26</span>         T,
+<span id="L27">  27</span>         settings.get(&quot;reference_table_dir&quot;),
+<span id="L28">  28</span>     )[&quot;excitation&quot;]
+<span id="L29">  29</span>     provenance = json.loads((ROOT / &quot;Data/Experimental_Reference_Data/INPUT_PROVENANCE.json&quot;).read_text())[
+<span id="L30">  30</span>         &quot;channels&quot;
+<span id="L31">  31</span>     ]
+<span id="L32">  32</span>     names = list(result[&quot;names&quot;])
+<span id="L33">  33</span>     u = result[&quot;excitation&quot;]
+<span id="L34">  34</span>     table = configured_excitation_samples(settings, u)
+<span id="L35">  35</span>     interval = &quot;sequence&quot; if settings.get(&quot;excitation_sequence_file&quot;) else &quot;cycle&quot;
+<span id="L36">  36</span>     fhl = load_reference_tables(settings.get(&quot;reference_table_dir&quot;))[2]
+<span id="L37">  37</span>     files = []
+<span id="L38">  38</span>     for side, prefix in enumerate([&quot;L&quot;, &quot;R&quot;, &quot;FL&quot;, &quot;FR&quot;]):
+<span id="L39">  39</span>         curves = []
+<span id="L40">  40</span>         for index, item in enumerate(provenance):
+<span id="L41">  41</span>             if &quot;EMG&quot; not in item[&quot;kind&quot;] or item[&quot;kind&quot;].startswith(&quot;pooled_fore&quot;) != (
+<span id="L42">  42</span>                 side
+<span id="L43">  43</span>                 &gt;= 2
+<span id="L44">  44</span>             ):
+<span id="L45">  45</span>                 # Skip the remaining work for this item.
+<span id="L46">  46</span>                 continue
+<span id="L47">  47</span>             name = prefix + &quot;_&quot; + item[&quot;channel&quot;]
+<span id="L48">  48</span>             if name not in names:
+<span id="L49">  49</span>                 # Skip the remaining work for this item.
+<span id="L50">  50</span>                 continue
+<span id="L51">  51</span>             column = (
+<span id="L52">  52</span>                 (22 if side == 2 else 31) + index - 11
+<span id="L53">  53</span>                 if side &gt;= 2
+<span id="L54">  54</span>                 else (0 if side == 0 else 11) + index
+<span id="L55">  55</span>             )
+<span id="L56">  56</span>             curves.append(
+<span id="L57">  57</span>                 (
+<span id="L58">  58</span>                     name,
+<span id="L59">  59</span>                     target[&quot;excitation&quot;][:, column]
+<span id="L60">  60</span>                     / max(1e-12, float(full[:, column].max())),
+<span id="L61">  61</span>                 )
+<span id="L62">  62</span>             )
+<span id="L63">  63</span>         if side &lt; 2:
+<span id="L64">  64</span>             curves.append(
+<span id="L65">  65</span>                 (
+<span id="L66">  66</span>                     prefix + &quot;_FHL&quot;,
+<span id="L67">  67</span>                     np.array(
+<span id="L68">  68</span>                         [periodic_interpolate(fhl, x / T + 0.5 + [0.5, 0][side]) for x in t]
+<span id="L69">  69</span>                     ),
+<span id="L70">  70</span>                 )
+<span id="L71">  71</span>             )
+<span id="L72">  72</span>         fig, axes = plt.subplots(2, 4, figsize=(13, 6), sharex=True, sharey=True)
+<span id="L73">  73</span>         for ax, (name, ref) in zip(axes.ravel(), curves):
+<span id="L74">  74</span>             i = names.index(name)
+<span id="L75">  75</span>             peak = max(0.02, float(table[:, i].max()))
+<span id="L76">  76</span>             ax.plot(t, ref, &quot;k--&quot;, label=&quot;EMG shape reference&quot;)
+<span id="L77">  77</span>             ax.plot(
+<span id="L78">  78</span>                 t,
+<span id="L79">  79</span>                 u[:, i] / peak,
+<span id="L80">  80</span>                 color=&quot;#087f9c&quot;,
+<span id="L81">  81</span>                 label=&quot;Excitation / &quot; + interval + &quot; peak&quot;,
+<span id="L82">  82</span>             )
+<span id="L83">  83</span>             ax.set_title(f&quot;{name}\nexcitation peak {peak:.3f}&quot;, fontsize=10)
+<span id="L84">  84</span>             ax.grid(alpha=0.2)
+<span id="L85">  85</span>             ax.set_ylim(-0.05, 1.1)
+<span id="L86">  86</span>         for ax in axes[-1]:
+<span id="L87">  87</span>             ax.set_xlabel(&quot;Time (s)&quot;)
+<span id="L88">  88</span>         for ax in axes[:, 0]:
+<span id="L89">  89</span>             ax.set_ylabel(&quot;Normalized envelope&quot;)
+<span id="L90">  90</span>         axes[0, 0].legend(fontsize=8)
+<span id="L91">  91</span>         label = [
+<span id="L92">  92</span>             &quot;LH: assumed mirror of RH EMG&quot;,
+<span id="L93">  93</span>             &quot;RH: measured EMG envelopes&quot;,
+<span id="L94">  94</span>             &quot;LF: pooled forelimb EMGs&quot;,
+<span id="L95">  95</span>             &quot;RF: pooled forelimb EMGs&quot;,
+<span id="L96">  96</span>         ][side]
+<span id="L97">  97</span>         fig.suptitle(
+<span id="L98">  98</span>             label
+<span id="L99">  99</span>             + &quot;; fixed input clock, no phase shift to improve the fit\nNormalization uses the complete input &quot;
+<span id="L100"> 100</span>             + interval
+<span id="L101"> 101</span>             + &quot;; EMG does not identify absolute muscle_excitation amplitude.&quot;,
+<span id="L102"> 102</span>             fontsize=11,
+<span id="L103"> 103</span>         )
+<span id="L104"> 104</span>         fig.tight_layout()
+<span id="L105"> 105</span>         filename = f&quot;emg_{prefix}.png&quot;
+<span id="L106"> 106</span>         # Save the computed values or figure for inspection and reproducibility.
+<span id="L107"> 107</span>         fig.savefig(folder / filename, dpi=140)
+<span id="L108"> 108</span>         plt.close(fig)
+<span id="L109"> 109</span>         files.append(filename)
+<span id="L110"> 110</span>     return files
+</pre></main></body></html>

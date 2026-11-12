@@ -1,0 +1,54 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Resolve one editable parameter folder into the settings used by run.py.</title><link rel="stylesheet" href="../style.css"></head><body><!-- generated folder guide --><header><div class="tag">Cat · Full-body neuromechanics</div><h1>Resolve one editable parameter folder into the settings used by run.py.</h1><nav><a href="../../START_HERE.html">Start here</a> · <a href="../project_structure.html">Find a file</a></nav></header><main><p><a href="../../Code/neuromechanics/load_model_configuration.py">Code/neuromechanics/load_model_configuration.py</a></p><pre style="overflow:auto;white-space:pre"><span id="L1">   1</span> &quot;&quot;&quot;Resolve one editable parameter folder into the settings used by run.py.&quot;&quot;&quot;
+<span id="L2">   2</span> 
+<span id="L3">   3</span> from pathlib import Path
+<span id="L4">   4</span> 
+<span id="L5">   5</span> from model_configuration.paths import ROOT
+<span id="L6">   6</span> 
+<span id="L7">   7</span> from .load_parameter_file import load_parameter_file
+<span id="L8">   8</span> 
+<span id="L9">   9</span> from .read_time_series import read_time_series
+<span id="L10">  10</span> 
+<span id="L11">  11</span> 
+<span id="L12">  12</span> def load_model_configuration(folder):
+<span id="L13">  13</span>     &quot;&quot;&quot;Read all named physical parameter files once, before t=0.
+<span id="L14">  14</span> 
+<span id="L15">  15</span>     Excitation is read afresh on every run. An edited table therefore changes
+<span id="L16">  16</span>     actual motor input, not just its plotted label. References remain scoring
+<span id="L17">  17</span>     data and do not prescribe the motion.
+<span id="L18">  18</span>     &quot;&quot;&quot;
+<span id="L19">  19</span>     folder = (ROOT / Path(folder)).resolve()
+<span id="L20">  20</span>     cfg = load_parameter_file(folder / &quot;simulation_settings.py&quot;)
+<span id="L21">  21</span>     # Physical overrides belong in the named files. Accepting a legacy
+<span id="L22">  22</span>     # multiplier here would be misleading because absolute values win later.
+<span id="L23">  23</span>     allowed = {
+<span id="L24">  24</span>         &quot;model_variant&quot;,
+<span id="L25">  25</span>         &quot;period_s&quot;,
+<span id="L26">  26</span>         &quot;dt_s&quot;,
+<span id="L27">  27</span>         &quot;sample_s&quot;,
+<span id="L28">  28</span>         &quot;seconds&quot;,
+<span id="L29">  29</span>         &quot;stop_on_fall&quot;,
+<span id="L30">  30</span>         &quot;activation_parameter_mode&quot;,
+<span id="L31">  31</span>         &quot;initialize_from_assembled_reference&quot;,
+<span id="L32">  32</span>         &quot;forward_step_implementation&quot;,
+<span id="L33">  33</span>         &quot;reference_table_dir&quot;,
+<span id="L34">  34</span>         &quot;fit_angle_scale_deg&quot;,
+<span id="L35">  35</span>         &quot;fit_ap_scale_N&quot;,
+<span id="L36">  36</span>         &quot;fit_vertical_scale_N&quot;,
+<span id="L37">  37</span>         &quot;emg_phase_threshold&quot;,
+<span id="L38">  38</span>         &quot;emg_phase_iou_min&quot;,
+<span id="L39">  39</span>         &quot;emg_phase_edge_tolerance_s&quot;,
+<span id="L40">  40</span>     }
+<span id="L41">  41</span>     if set(cfg) - allowed:
+<span id="L42">  42</span>         # Stop and explain the invalid model setting or failed calculation.
+<span id="L43">  43</span>         raise ValueError(&quot;Unknown run settings: &quot; + str(sorted(set(cfg) - allowed)))
+<span id="L44">  44</span>     if any(cfg[key] &lt;= 0 for key in [&quot;dt_s&quot;, &quot;sample_s&quot;, &quot;period_s&quot;, &quot;seconds&quot;]):
+<span id="L45">  45</span>         # Stop and explain the invalid model setting or failed calculation.
+<span id="L46">  46</span>         raise ValueError(&quot;Times and period must be positive&quot;)
+<span id="L47">  47</span>     cfg[&quot;parameter_bundle_dir&quot;] = str(folder)
+<span id="L48">  48</span>     cfg[&quot;initial_parameter_file&quot;] = str(folder / &quot;initial_state.py&quot;)
+<span id="L49">  49</span>     cfg[&quot;excitation_table_file&quot;] = str((folder / &quot;excitation_cycle.tsv&quot;) if (folder / &quot;excitation_cycle.tsv&quot;).exists() else (ROOT / &quot;Data/Muscle_Excitation_Input/excitation_cycle.tsv&quot;))
+<span id="L50">  50</span>     # Keep the exact phase samples; interpolation is performed at runtime.
+<span id="L51">  51</span>     # Validation against muscle names is done after loading the model.
+<span id="L52">  52</span>     read_time_series(cfg[&quot;excitation_table_file&quot;])
+<span id="L53">  53</span>     return cfg
+</pre></main></body></html>

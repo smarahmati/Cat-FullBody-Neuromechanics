@@ -1,0 +1,27 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>De Groote et al. (2016) smooth normalized fiber force-velocity curve.</title><link rel="stylesheet" href="../style.css"></head><body><!-- generated folder guide --><header><div class="tag">Cat · Full-body neuromechanics</div><h1>De Groote et al. (2016) smooth normalized fiber force-velocity curve.</h1><nav><a href="../../START_HERE.html">Start here</a> · <a href="../project_structure.html">Find a file</a></nav></header><main><p><a href="../../Code/neuromechanics/muscle_force_velocity_degroote.py">Code/neuromechanics/muscle_force_velocity_degroote.py</a></p><pre style="overflow:auto;white-space:pre"><span id="L1">   1</span> &quot;&quot;&quot;De Groote et al. (2016) smooth normalized fiber force-velocity curve.
+<span id="L2">   2</span> 
+<span id="L3">   3</span> Primary implementation: OpenSim DeGrooteFregly2016Muscle.h, with its corrected
+<span id="L4">   4</span> constants that pass through (-1,0) and (0,1). Original rounded paper values
+<span id="L5">   5</span> were d1=-0.318 and d4=0.886; applied values are recorded below. This optional
+<span id="L6">   6</span> limb-selectable adaptation is NOT the force-velocity law in Rahmati&#x27;s MATLAB model.
+<span id="L7">   7</span> Normalized velocity is positive for lengthening. Published domain [-1,1].
+<span id="L8">   8</span> Outside that domain we retain the algebraic curve but prevent negative active
+<span id="L9">   9</span> tension; excursions must be reported, not interpreted as validated behavior.
+<span id="L10">  10</span> &quot;&quot;&quot;
+<span id="L11">  11</span> 
+<span id="L12">  12</span> import numpy as np
+<span id="L13">  13</span> 
+<span id="L14">  14</span> from numba import njit
+<span id="L15">  15</span> 
+<span id="L16">  16</span> from model_configuration.formulation_constants import FV_D1, FV_D2, FV_D3, FV_D4
+<span id="L17">  17</span> 
+<span id="L18">  18</span> 
+<span id="L19">  19</span> # Compile this numerical function for repeated evaluations; its equations stay unchanged.
+<span id="L20">  20</span> @njit(cache=False)
+<span id="L21">  21</span> def muscle_force_velocity_degroote(velocity):
+<span id="L22">  22</span>     x = FV_D2 * velocity + FV_D3
+<span id="L23">  23</span>     raw = FV_D1 * np.arcsinh(x) + FV_D4
+<span id="L24">  24</span>     value = max(0.0, raw)
+<span id="L25">  25</span>     derivative = FV_D1 * FV_D2 / np.sqrt(1 + x * x) if raw &gt; 0 else 0.0
+<span id="L26">  26</span>     return value, derivative
+</pre></main></body></html>

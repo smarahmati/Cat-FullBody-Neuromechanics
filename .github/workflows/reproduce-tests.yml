@@ -1,0 +1,16 @@
+name: Reproduction checks
+on: [push, pull_request]
+jobs:
+  mechanics:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+          cache: pip
+      - run: python -m pip install -r requirements-lock.txt
+      - run: python -m unittest discover -s Verification -v
+        env:
+          OPENBLAS_NUM_THREADS: '1'
+          OMP_NUM_THREADS: '1'

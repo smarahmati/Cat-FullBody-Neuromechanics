@@ -1,0 +1,3 @@
+"""Locate the repository independently of drive letter and current folder."""
+from pathlib import Path
+ROOT = Path(__file__).resolve().parents[2]

@@ -1,0 +1,45 @@
+{
+  "nq": 17,
+  "nu": 41,
+  "na": 40,
+  "ntendon": 40,
+  "max_length_error_mm": 0.0017600179600951726,
+  "per_muscle": [
+    {
+      "name": "Shoulder Extensor",
+      "max_error_mm": 6.576822420001349e-10
+    },
+    {
+      "name": "Elbow Extensor",
+      "max_error_mm": 4.85722573273506e-14
+    },
+    {
+      "name": "Biceps Brachii",
+      "max_error_mm": 0.0017600179600951726
+    },
+    {
+      "name": "Elbow Flexor",
+      "max_error_mm": 4.163336342344337e-14
+    },
+    {
+      "name": "Elbow Flexor Wrist Flexor",
+      "max_error_mm": 1.7483237080284653e-10
+    },
+    {
+      "name": "Wrist Flexor",
+      "max_error_mm": 8.326672684688674e-14
+    },
+    {
+      "name": "Wrist Extensor",
+      "max_error_mm": 8.326672684688674e-14
+    },
+    {
+      "name": "Shoulder Flexor",
+      "max_error_mm": 5.551115123125783e-14
+    },
+    {
+      "name": "Triceps Brachii Long",
+      "max_error_mm": 8.326672684688674e-14
+    }
+  ]
+}

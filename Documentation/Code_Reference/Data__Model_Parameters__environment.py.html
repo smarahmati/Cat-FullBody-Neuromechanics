@@ -1,0 +1,19 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Environmental settings such as gravity and ground properties.</title><link rel="stylesheet" href="../style.css"></head><body><!-- generated folder guide --><header><div class="tag">Cat · Full-body neuromechanics</div><h1>Environmental settings such as gravity and ground properties.</h1><nav><a href="../../START_HERE.html">Start here</a> · <a href="../project_structure.html">Find a file</a></nav></header><main><p><a href="../../Data/Model_Parameters/environment.py">Data/Model_Parameters/environment.py</a></p><pre style="overflow:auto;white-space:pre"><span id="L1">   1</span> &quot;&quot;&quot;Applied model values. Edit the numbers in PARAMETERS, then run run.py.
+<span id="L2">   2</span> Comments and PARAMETER_PROVENANCE.json preserve originals; they do not override your edits.
+<span id="L3">   3</span> Missing raw originals are stated honestly. SI units unless noted. Experimental agreement and limitations are documented in Documentation/results.html.
+<span id="L4">   4</span> &quot;&quot;&quot;
+<span id="L5">   5</span> 
+<span id="L6">   6</span> # Set PARAMETERS.
+<span id="L7">   7</span> PARAMETERS = {
+<span id="L8">   8</span>     # Engine integration scheme; original and applied: 3 = implicitfast.
+<span id="L9">   9</span>     # Available engine choices: 0 Euler, 1 RK4, 2 implicit, 3 implicitfast.
+<span id="L10">  10</span>     # This partitioned muscle/contact scheme was tested with 3; retest any change.
+<span id="L11">  11</span>     &quot;integrator&quot;: 3,
+<span id="L12">  12</span>     # Environment/engine setting: gravity_m_s2.
+<span id="L13">  13</span>     &quot;gravity_m_s2&quot;: [0.0, 0.0, -9.81],
+<span id="L14">  14</span>     # Environment/engine setting: solver_iterations.
+<span id="L15">  15</span>     &quot;solver_iterations&quot;: 80,
+<span id="L16">  16</span>     # Environment/engine setting: solver_tolerance.
+<span id="L17">  17</span>     &quot;solver_tolerance&quot;: 1e-08,
+<span id="L18">  18</span> }
+</pre></main></body></html>

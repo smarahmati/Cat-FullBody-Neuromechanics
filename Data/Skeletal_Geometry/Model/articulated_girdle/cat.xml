@@ -1,0 +1,1141 @@
+<mujoco model="coupled_full_body_forward_research">
+  <compiler angle="radian" meshdir="D:\Cat-Neuromechnaics\Cat-FullBody-Forward\models\meshes" inertiafromgeom="false" />
+
+  <option timestep="0.000125" integrator="implicitfast" cone="elliptic" jacobian="dense" iterations="80" />
+
+  <statistic extent="0.5" center="0 0 0.13" />
+
+  <visual>
+    <global offwidth="1500" offheight="1000" />
+    <quality shadowsize="2048" />
+    <headlight ambient="0.4 0.4 0.4" diffuse="0.8 0.8 0.8" specular="0.25 0.25 0.25" />
+    <map znear="0.005" zfar="1000" />
+  </visual>
+
+  <default>
+    <joint armature="2e-06" damping="0.001" limited="true" />
+    <geom contype="0" conaffinity="0" />
+    <site size="0.001 0.005 0.005" rgba="0 0 0 0" />
+  </default>
+
+  <asset>
+    <texture type="2d" colorspace="auto" name="grid" builtin="checker" rgb1="0.12 0.17 0.23" rgb2="0.17 0.23 0.29" width="512" height="512" />
+    <material name="floor" texture="grid" texrepeat="8 8" reflectance="0.1" />
+    <mesh name="pelvis" content_type="model/obj" file="pelvis.obj" />
+    <mesh name="femur" content_type="model/obj" file="femur.obj" />
+    <mesh name="tibia" content_type="model/obj" file="tibia.obj" />
+    <mesh name="foot" content_type="model/obj" file="foot.obj" />
+    <mesh name="digits" content_type="model/obj" file="digits.obj" />
+    <mesh name="femur_mirrored" content_type="model/obj" file="femur_mirrored.obj" />
+    <mesh name="tibia_mirrored" content_type="model/obj" file="tibia_mirrored.obj" />
+    <mesh name="foot_mirrored" content_type="model/obj" file="foot_mirrored.obj" />
+    <mesh name="digits_mirrored" content_type="model/obj" file="digits_mirrored.obj" />
+    <mesh name="FR_scapula_fujiwara" content_type="model/obj" file="FR_scapula_fujiwara.obj" />
+    <mesh name="FR_upperarm_fujiwara" content_type="model/obj" file="FR_upperarm_fujiwara.obj" />
+    <mesh name="FR_forearm_fujiwara" content_type="model/obj" file="FR_forearm_fujiwara.obj" />
+    <mesh name="FR_carpals_fujiwara" content_type="model/obj" file="FR_carpals_fujiwara.obj" />
+    <mesh name="FR_digits_fujiwara" content_type="model/obj" file="FR_digits_fujiwara.obj" />
+    <mesh name="FL_scapula_fujiwara" content_type="model/obj" file="FL_scapula_fujiwara.obj" />
+    <mesh name="FL_upperarm_fujiwara" content_type="model/obj" file="FL_upperarm_fujiwara.obj" />
+    <mesh name="FL_forearm_fujiwara" content_type="model/obj" file="FL_forearm_fujiwara.obj" />
+    <mesh name="FL_carpals_fujiwara" content_type="model/obj" file="FL_carpals_fujiwara.obj" />
+    <mesh name="FL_digits_fujiwara" content_type="model/obj" file="FL_digits_fujiwara.obj" />
+    <mesh name="fujiwara_axial" content_type="model/obj" file="fujiwara_axial.obj" />
+  </asset>
+
+  <worldbody>
+    <geom name="ground_contact" size="0 0 0.02" type="plane" contype="2" conaffinity="1" friction="0.8 0.003" solref="0.012" solimp="0 0.95 0.003" material="floor" />
+    <light pos="-0.4 -0.5 0.8" dir="0.268328 0.357771 -0.894427" type="directional" />
+    <light pos="0.4 0.3 0.6" dir="-0.276172 -0.276172 -0.920575" diffuse="0.45 0.45 0.45" />
+    <body name="pelvis" quat="0.691593 0.691593 -0.147305 0.147305">
+      <inertial pos="0 0 0" mass="0.073967" diaginertia="2.77376e-05 2.77376e-05 2.77376e-05" />
+      <joint name="pelvis_x" type="slide" armature="0" damping="0" axis="0.913205 -0.4075 0" limited="false" />
+      <joint name="pelvis_z" type="slide" armature="0" damping="0" axis="0.4075 0.913205 0" limited="false" />
+      <joint name="pelvis_pitch" armature="0" damping="0" axis="0 0 -1" limited="false" />
+      <geom name="pelvis_bone" quat="1 0 0 0" type="mesh" group="1" rgba="0.88 0.84 0.72 1" mesh="pelvis" />
+      <body name="L_pelvis_anchor" pos="0 0 -0.0204087">
+        <inertial pos="0 0 -0.0204087" mass="0" diaginertia="0 0 0" />
+        <geom name="L_IP_wrap0" size="0.00457124 0.025" type="cylinder" group="4" rgba="0 0 0 0" />
+        <geom name="L_BFA_wrap0" size="0.00457124 0.025" type="cylinder" group="4" rgba="0 0 0 0" />
+        <geom name="L_RF_wrap0" size="0.00476383 0.025" type="cylinder" group="4" rgba="0 0 0 0" />
+        <geom name="L_BFP_wrap0" size="0.00476383 0.025" type="cylinder" group="4" rgba="0 0 0 0" />
+        <geom name="L_SAM_wrap0" size="0.00476383 0.025" type="cylinder" group="4" rgba="0 0 0 0" />
+        <site name="L_IP_origin" size="0.0012" pos="0.0465 0 0" />
+        <site name="L_IP_side0" pos="0 -0.00502836 0" />
+        <site name="L_BFA_origin" size="0.0012" pos="-0.00658236 0.00533034 0" />
+        <site name="L_BFA_side0" pos="0 0.00502836 0" />
+        <site name="L_RF_origin" size="0.0012" pos="0.00542077 0 0" />
+        <site name="L_RF_side0" pos="0 -0.00524021 0" />
+        <site name="L_BFP_origin" size="0.0012" pos="-0.00658236 0.00533034 0" />
+        <site name="L_BFP_side0" pos="0 0.00524021 0" />
+        <site name="L_SAM_origin" size="0.0012" pos="0.0135519 0 0" />
+        <site name="L_SAM_side0" pos="0 -0.00524021 0" />
+        <body name="L_thigh">
+          <inertial pos="0.0423027 0 0" mass="0.138226" diaginertia="1.295e-05 0.000124753 0.000124753" />
+          <joint name="L_hip" solreflimit="0.003" solimplimit="0.99 0.999" range="-2.8 -1.05" />
+          <geom name="L_thigh_bone" pos="0 0 0" quat="1 0 0 0" type="mesh" group="1" rgba="0.88 0.84 0.72 1" mesh="femur" />
+          <geom name="L_VL_wrap0" size="0.0105854 0.025" pos="0.0955 0 0" type="cylinder" group="4" rgba="0 0 0 0" />
+          <geom name="L_VM_wrap0" size="0.0105854 0.025" pos="0.0955 0 0" type="cylinder" group="4" rgba="0 0 0 0" />
+          <geom name="L_RF_wrap1" size="0.0105854 0.025" pos="0.0955 0 0" type="cylinder" group="4" rgba="0 0 0 0" />
+          <geom name="L_BFP_wrap1" size="0.00571659 0.025" pos="0.0955 0 0" type="cylinder" group="4" rgba="0 0 0 0" />
+          <geom name="L_SAM_wrap1" size="0.00571659 0.025" pos="0.0955 0 0" type="cylinder" group="4" rgba="0 0 0 0" />
+          <geom name="L_LG_wrap0" size="0.005889 0.025" pos="0.0955 0 0" type="cylinder" group="4" rgba="0 0 0 0" />
+          <geom name="L_MG_wrap0" size="0.005889 0.025" pos="0.0955 0 0" type="cylinder" group="4" rgba="0 0 0 0" />
+          <site name="L_IP_insert" size="0.0012" pos="0.0123669 0 0" />
+          <site name="L_BFA_insert" size="0.0012" pos="0.049075 0 0" />
+          <site name="L_VL_origin" size="0.0012" />
+          <site name="L_VL_side0" pos="0.0955 0.0116439 0" />
+          <site name="L_VM_origin" size="0.0012" />
+          <site name="L_VM_side0" pos="0.0955 0.0116439 0" />
+          <site name="L_RF_tangent" pos="0.0472822 0.00766032 0" />
+          <site name="L_RF_side1" pos="0.0955 0.0116439 0" />
+          <site name="L_BFP_tangent" pos="0.0561016 -0.0174414 0" />
+          <site name="L_BFP_side1" pos="0.0955 -0.00628825 0" />
+          <site name="L_SAM_tangent" pos="0.0469703 0.00126254 0" />
+          <site name="L_SAM_side1" pos="0.0955 -0.00628825 0" />
+          <site name="L_LG_origin" size="0.0012" pos="0.089611 0 0" />
+          <site name="L_LG_side0" pos="0.0955 -0.0064779 0" />
+          <site name="L_MG_origin" size="0.0012" pos="0.089611 0 0" />
+          <site name="L_MG_side0" pos="0.0955 -0.0064779 0" />
+          <body name="L_shank" pos="0.0955 0 0">
+            <inertial pos="0.0459405 0 0" mass="0.0587113" diaginertia="5.47365e-06 6.13322e-05 6.13322e-05" />
+            <joint name="L_knee" solreflimit="0.003" solimplimit="0.99 0.999" range="-2.3 -0.55" />
+            <geom name="L_shank_bone" pos="0 0 0" quat="1 0 0 0" type="mesh" group="1" rgba="0.88 0.84 0.72 1" mesh="tibia" />
+            <geom name="L_TA_wrap0" size="0.0050774 0.025" pos="0.1085 0 0" type="cylinder" group="4" rgba="0 0 0 0" />
+            <geom name="L_SO_wrap0" size="0.0050774 0.025" pos="0.1085 0 0" type="cylinder" group="4" rgba="0 0 0 0" />
+            <geom name="L_LG_wrap1" size="0.00488481 0.025" pos="0.1085 0 0" type="cylinder" group="4" rgba="0 0 0 0" />
+            <geom name="L_MG_wrap1" size="0.00488481 0.025" pos="0.1085 0 0" type="cylinder" group="4" rgba="0 0 0 0" />
+            <site name="L_VL_insert" size="0.0012" pos="-0.00867104 0.00607149 0" />
+            <site name="L_VM_insert" size="0.0012" pos="-0.00867104 0.00607149 0" />
+            <site name="L_TA_origin" size="0.0012" pos="0.092622 0 0" />
+            <site name="L_TA_side0" pos="0.1085 0.00558514 0" />
+            <site name="L_SO_origin" size="0.0012" pos="0.00370488 0 0" />
+            <site name="L_SO_side0" pos="0.1085 -0.00558514 0" />
+            <site name="L_RF_insert" size="0.0012" pos="-0.00867104 0.00607149 0" />
+            <site name="L_BFP_insert" size="0.0012" pos="0.0317561 0 0" />
+            <site name="L_SAM_insert" size="0.0012" pos="0.0105854 0 0" />
+            <site name="L_LG_tangent" pos="0.0493223 -0.00910945 0" />
+            <site name="L_LG_side1" pos="0.1085 -0.00537329 0" />
+            <site name="L_MG_tangent" pos="0.0493223 -0.00910945 0" />
+            <site name="L_MG_side1" pos="0.1085 -0.00537329 0" />
+            <site name="L_EDL_attachment0" pos="0.0736171 0 0" />
+            <site name="L_EDL_attachment1" pos="0.1085 0.00330122 0" />
+            <site name="L_FDL_attachment0" pos="0.0849513 0 0" />
+            <site name="L_FDL_attachment1" pos="0.1085 -0.00330122 0" />
+            <site name="L_FHL_attachment0" pos="0.0334397 7.16319e-05 -0.00288317" />
+            <site name="L_FHL_attachment1" pos="0.106558 -0.0031339 -0.0098054" />
+            <site name="L_EDL_osim_0" pos="0.00711578 0.00946437 -0.0041373" rgba="0.8 0.2 0.2 1" />
+            <site name="L_EDL_osim_1" pos="0.0153951 0.0127863 -0.00436298" rgba="0.8 0.2 0.2 1" />
+            <site name="L_FDL_osim_0" pos="0.033386 7.16319e-05 -0.00485338" rgba="0.8 0.2 0.2 1" />
+            <site name="L_FDL_osim_1" pos="0.105627 -0.00139682 -0.00978003" rgba="0.8 0.2 0.2 1" />
+            <body name="L_foot" pos="0.1085 0 0">
+              <inertial pos="0.0325762 0 0" mass="0.0200635" diaginertia="8.4572e-07 7.9972e-06 7.9972e-06" />
+              <joint name="L_ankle" solreflimit="0.003" solimplimit="0.99 0.999" range="0.2 1.95" />
+              <geom name="L_foot_bone" quat="1 0 0 0" type="mesh" group="1" rgba="0.88 0.84 0.72 1" mesh="foot" />
+              <site name="L_TA_insert" size="0.0012" pos="0.0145864 0 0" />
+              <site name="L_SO_insert" size="0.0012" pos="-0.0154735 -0.00162638 0" />
+              <site name="L_LG_insert" size="0.0012" pos="-0.0154735 -0.00162638 0" />
+              <site name="L_MG_insert" size="0.0012" pos="-0.0154735 -0.00162638 0" />
+              <site name="L_EDL_attachment2" pos="0.067 0.00169477 0" />
+              <site name="L_FDL_attachment2" pos="0.067 -0.00169477 0" />
+              <site name="L_FHL_attachment2" pos="0.0115269 -0.00919388 -0.0100053" />
+              <site name="L_FHL_attachment3" pos="0.028465 -0.00972245 -0.00844517" />
+              <site name="L_EDL_osim_2" pos="0.01332 -0.000160172 -0.00166036" rgba="0.8 0.2 0.2 1" />
+              <site name="L_EDL_osim_3" pos="0.0264318 0.00113722 -0.0012548" rgba="0.8 0.2 0.2 1" />
+              <site name="L_EDL_osim_4" pos="0.0406323 0.00695147 -0.00288793" rgba="0.8 0.2 0.2 1" />
+              <site name="L_EDL_osim_5" pos="0.0625814 0.00911379 -0.00531757" rgba="0.8 0.2 0.2 1" />
+              <site name="L_FDL_osim_2" pos="0.0121833 -0.00839302 -0.00998495" rgba="0.8 0.2 0.2 1" />
+              <site name="L_FDL_osim_3" pos="0.0268961 -0.00840904 -0.00952987" rgba="0.8 0.2 0.2 1" />
+              <body name="L_digits" pos="0.067 0 0">
+                <inertial pos="0.018 0 0" mass="0.00721178" diaginertia="5.65847e-08 7.8318e-07 7.8318e-07" />
+                <joint name="L_mtp" solreflimit="0.003" solimplimit="0.99 0.999" stiffness="0.01" range="-0.498392 1.8" damping="0.0005" />
+                <geom name="L_digits_bone" quat="1 0 0 0" type="mesh" group="1" rgba="0.88 0.84 0.72 1" mesh="digits" />
+                <geom name="L_paw_pad0" size="0.00694452" pos="0.00692884 0 -0.005" contype="1" conaffinity="2" friction="0.8 0.003" solref="0.012" solimp="0 0.95 0.003" rgba="0.12 0.7 0.8 1" />
+                <geom name="L_paw_pad1" size="0.00694452" pos="0.00692884 0 0.005" contype="1" conaffinity="2" friction="0.8 0.003" solref="0.012" solimp="0 0.95 0.003" rgba="0.12 0.7 0.8 1" />
+                <geom name="L_paw_pad2" size="0.00713951" pos="0.0192984 0 -0.005" contype="1" conaffinity="2" friction="0.8 0.003" solref="0.012" solimp="0 0.95 0.003" rgba="0.12 0.7 0.8 1" />
+                <geom name="L_paw_pad3" size="0.00713951" pos="0.0192984 0 0.005" contype="1" conaffinity="2" friction="0.8 0.003" solref="0.012" solimp="0 0.95 0.003" rgba="0.12 0.7 0.8 1" />
+                <geom name="L_paw_pad4" size="0.0077" pos="0.0313787 0 -0.005" contype="1" conaffinity="2" friction="0.8 0.003" solref="0.012" solimp="0 0.95 0.003" rgba="0.12 0.7 0.8 1" />
+                <geom name="L_paw_pad5" size="0.0077" pos="0.0313787 0 0.005" contype="1" conaffinity="2" friction="0.8 0.003" solref="0.012" solimp="0 0.95 0.003" rgba="0.12 0.7 0.8 1" />
+                <site name="L_paw" pos="0.0270588 0 0" />
+                <site name="L_EDL_attachment3" pos="0.0119952 0 0" />
+                <site name="L_FDL_attachment3" pos="0.0119952 0 0" />
+                <site name="L_FHL_attachment4" pos="-0.00308273 -0.00386647 -0.00274298" />
+                <site name="L_EDL_osim_6" pos="0.00872569 0.00423222 -0.00960044" rgba="0.8 0.2 0.2 1" />
+                <site name="L_FDL_osim_4" pos="-0.00308273 -0.00386647 -0.0137149" rgba="0.8 0.2 0.2 1" />
+              </body>
+            </body>
+          </body>
+        </body>
+      </body>
+      <body name="R_pelvis_anchor" pos="0 0 0.0204087">
+        <inertial pos="0 0 0.0204087" mass="0" diaginertia="0 0 0" />
+        <geom name="R_IP_wrap0" size="0.00457124 0.025" type="cylinder" group="4" rgba="0 0 0 0" />
+        <geom name="R_BFA_wrap0" size="0.00457124 0.025" type="cylinder" group="4" rgba="0 0 0 0" />
+        <geom name="R_RF_wrap0" size="0.00476383 0.025" type="cylinder" group="4" rgba="0 0 0 0" />
+        <geom name="R_BFP_wrap0" size="0.00476383 0.025" type="cylinder" group="4" rgba="0 0 0 0" />
+        <geom name="R_SAM_wrap0" size="0.00476383 0.025" type="cylinder" group="4" rgba="0 0 0 0" />
+        <site name="R_IP_origin" size="0.0012" pos="0.0465 0 0" />
+        <site name="R_IP_side0" pos="0 -0.00502836 0" />
+        <site name="R_BFA_origin" size="0.0012" pos="-0.00658236 0.00533034 0" />
+        <site name="R_BFA_side0" pos="0 0.00502836 0" />
+        <site name="R_RF_origin" size="0.0012" pos="0.00542077 0 0" />
+        <site name="R_RF_side0" pos="0 -0.00524021 0" />
+        <site name="R_BFP_origin" size="0.0012" pos="-0.00658236 0.00533034 0" />
+        <site name="R_BFP_side0" pos="0 0.00524021 0" />
+        <site name="R_SAM_origin" size="0.0012" pos="0.0135519 0 0" />
+        <site name="R_SAM_side0" pos="0 -0.00524021 0" />
+        <body name="R_thigh">
+          <inertial pos="0.0423027 0 0" mass="0.138226" diaginertia="1.295e-05 0.000124753 0.000124753" />
+          <joint name="R_hip" solreflimit="0.003" solimplimit="0.99 0.999" range="-2.8 -1.05" />
+          <geom name="R_thigh_bone" pos="0 0 0" quat="1 0 0 0" type="mesh" group="1" rgba="0.88 0.84 0.72 1" mesh="femur_mirrored" />
+          <geom name="R_VL_wrap0" size="0.0105854 0.025" pos="0.0955 0 0" type="cylinder" group="4" rgba="0 0 0 0" />
+          <geom name="R_VM_wrap0" size="0.0105854 0.025" pos="0.0955 0 0" type="cylinder" group="4" rgba="0 0 0 0" />
+          <geom name="R_RF_wrap1" size="0.0105854 0.025" pos="0.0955 0 0" type="cylinder" group="4" rgba="0 0 0 0" />
+          <geom name="R_BFP_wrap1" size="0.00571659 0.025" pos="0.0955 0 0" type="cylinder" group="4" rgba="0 0 0 0" />
+          <geom name="R_SAM_wrap1" size="0.00571659 0.025" pos="0.0955 0 0" type="cylinder" group="4" rgba="0 0 0 0" />
+          <geom name="R_LG_wrap0" size="0.005889 0.025" pos="0.0955 0 0" type="cylinder" group="4" rgba="0 0 0 0" />
+          <geom name="R_MG_wrap0" size="0.005889 0.025" pos="0.0955 0 0" type="cylinder" group="4" rgba="0 0 0 0" />
+          <site name="R_IP_insert" size="0.0012" pos="0.0123669 0 0" />
+          <site name="R_BFA_insert" size="0.0012" pos="0.049075 0 0" />
+          <site name="R_VL_origin" size="0.0012" />
+          <site name="R_VL_side0" pos="0.0955 0.0116439 0" />
+          <site name="R_VM_origin" size="0.0012" />
+          <site name="R_VM_side0" pos="0.0955 0.0116439 0" />
+          <site name="R_RF_tangent" pos="0.0479706 0.00794526 0" />
+          <site name="R_RF_side1" pos="0.0955 0.0116439 0" />
+          <site name="R_BFP_tangent" pos="0.051821 -0.0168169 0" />
+          <site name="R_BFP_side1" pos="0.0955 -0.00628825 0" />
+          <site name="R_SAM_tangent" pos="0.0514778 0.00195433 0" />
+          <site name="R_SAM_side1" pos="0.0955 -0.00628825 0" />
+          <site name="R_LG_origin" size="0.0012" pos="0.089611 0 0" />
+          <site name="R_LG_side0" pos="0.0955 -0.0064779 0" />
+          <site name="R_MG_origin" size="0.0012" pos="0.089611 0 0" />
+          <site name="R_MG_side0" pos="0.0955 -0.0064779 0" />
+          <body name="R_shank" pos="0.0955 0 0">
+            <inertial pos="0.0459405 0 0" mass="0.0587113" diaginertia="5.47365e-06 6.13322e-05 6.13322e-05" />
+            <joint name="R_knee" solreflimit="0.003" solimplimit="0.99 0.999" range="-2.3 -0.55" />
+            <geom name="R_shank_bone" pos="0 0 0" quat="1 0 0 0" type="mesh" group="1" rgba="0.88 0.84 0.72 1" mesh="tibia_mirrored" />
+            <geom name="R_TA_wrap0" size="0.0050774 0.025" pos="0.1085 0 0" type="cylinder" group="4" rgba="0 0 0 0" />
+            <geom name="R_SO_wrap0" size="0.0050774 0.025" pos="0.1085 0 0" type="cylinder" group="4" rgba="0 0 0 0" />
+            <geom name="R_LG_wrap1" size="0.00488481 0.025" pos="0.1085 0 0" type="cylinder" group="4" rgba="0 0 0 0" />
+            <geom name="R_MG_wrap1" size="0.00488481 0.025" pos="0.1085 0 0" type="cylinder" group="4" rgba="0 0 0 0" />
+            <site name="R_VL_insert" size="0.0012" pos="-0.00867104 0.00607149 0" />
+            <site name="R_VM_insert" size="0.0012" pos="-0.00867104 0.00607149 0" />
+            <site name="R_TA_origin" size="0.0012" pos="0.092622 0 0" />
+            <site name="R_TA_side0" pos="0.1085 0.00558514 0" />
+            <site name="R_SO_origin" size="0.0012" pos="0.00370488 0 0" />
+            <site name="R_SO_side0" pos="0.1085 -0.00558514 0" />
+            <site name="R_RF_insert" size="0.0012" pos="-0.00867104 0.00607149 0" />
+            <site name="R_BFP_insert" size="0.0012" pos="0.0317561 0 0" />
+            <site name="R_SAM_insert" size="0.0012" pos="0.0105854 0 0" />
+            <site name="R_LG_tangent" pos="0.0514881 -0.0102966 0" />
+            <site name="R_LG_side1" pos="0.1085 -0.00537329 0" />
+            <site name="R_MG_tangent" pos="0.0514881 -0.0102966 0" />
+            <site name="R_MG_side1" pos="0.1085 -0.00537329 0" />
+            <site name="R_EDL_attachment0" pos="0.0736171 0 0" />
+            <site name="R_EDL_attachment1" pos="0.1085 0.00330122 0" />
+            <site name="R_FDL_attachment0" pos="0.0849513 0 0" />
+            <site name="R_FDL_attachment1" pos="0.1085 -0.00330122 0" />
+            <site name="R_FHL_attachment0" pos="0.0334397 7.16319e-05 0.00288317" />
+            <site name="R_FHL_attachment1" pos="0.106558 -0.0031339 0.0098054" />
+            <site name="R_EDL_osim_0" pos="0.00711578 0.00946437 0.0041373" rgba="0.8 0.2 0.2 1" />
+            <site name="R_EDL_osim_1" pos="0.0153951 0.0127863 0.00436298" rgba="0.8 0.2 0.2 1" />
+            <site name="R_FDL_osim_0" pos="0.033386 7.16319e-05 0.00485338" rgba="0.8 0.2 0.2 1" />
+            <site name="R_FDL_osim_1" pos="0.105627 -0.00139682 0.00978003" rgba="0.8 0.2 0.2 1" />
+            <body name="R_foot" pos="0.1085 0 0">
+              <inertial pos="0.0325762 0 0" mass="0.0200635" diaginertia="8.4572e-07 7.9972e-06 7.9972e-06" />
+              <joint name="R_ankle" solreflimit="0.003" solimplimit="0.99 0.999" range="0.2 1.95" />
+              <geom name="R_foot_bone" quat="1 0 0 0" type="mesh" group="1" rgba="0.88 0.84 0.72 1" mesh="foot_mirrored" />
+              <site name="R_TA_insert" size="0.0012" pos="0.0145864 0 0" />
+              <site name="R_SO_insert" size="0.0012" pos="-0.0154735 -0.00162638 0" />
+              <site name="R_LG_insert" size="0.0012" pos="-0.0154735 -0.00162638 0" />
+              <site name="R_MG_insert" size="0.0012" pos="-0.0154735 -0.00162638 0" />
+              <site name="R_EDL_attachment2" pos="0.067 0.00169477 0" />
+              <site name="R_FDL_attachment2" pos="0.067 -0.00169477 0" />
+              <site name="R_FHL_attachment2" pos="0.0115269 -0.00919388 0.0100053" />
+              <site name="R_FHL_attachment3" pos="0.028465 -0.00972245 0.00844517" />
+              <site name="R_EDL_osim_2" pos="0.01332 -0.000160172 0.00166036" rgba="0.8 0.2 0.2 1" />
+              <site name="R_EDL_osim_3" pos="0.0264318 0.00113722 0.0012548" rgba="0.8 0.2 0.2 1" />
+              <site name="R_EDL_osim_4" pos="0.0406323 0.00695147 0.00288793" rgba="0.8 0.2 0.2 1" />
+              <site name="R_EDL_osim_5" pos="0.0625814 0.00911379 0.00531757" rgba="0.8 0.2 0.2 1" />
+              <site name="R_FDL_osim_2" pos="0.0121833 -0.00839302 0.00998495" rgba="0.8 0.2 0.2 1" />
+              <site name="R_FDL_osim_3" pos="0.0268961 -0.00840904 0.00952987" rgba="0.8 0.2 0.2 1" />
+              <body name="R_digits" pos="0.067 0 0">
+                <inertial pos="0.018 0 0" mass="0.00721178" diaginertia="5.65847e-08 7.8318e-07 7.8318e-07" />
+                <joint name="R_mtp" solreflimit="0.003" solimplimit="0.99 0.999" stiffness="0.01" range="-0.498392 1.8" damping="0.0005" />
+                <geom name="R_digits_bone" quat="1 0 0 0" type="mesh" group="1" rgba="0.88 0.84 0.72 1" mesh="digits_mirrored" />
+                <geom name="R_paw_pad0" size="0.00694452" pos="0.00692884 0 -0.005" contype="1" conaffinity="2" friction="0.8 0.003" solref="0.012" solimp="0 0.95 0.003" rgba="0.8 0.25 0.65 1" />
+                <geom name="R_paw_pad1" size="0.00694452" pos="0.00692884 0 0.005" contype="1" conaffinity="2" friction="0.8 0.003" solref="0.012" solimp="0 0.95 0.003" rgba="0.8 0.25 0.65 1" />
+                <geom name="R_paw_pad2" size="0.00713951" pos="0.0192984 0 -0.005" contype="1" conaffinity="2" friction="0.8 0.003" solref="0.012" solimp="0 0.95 0.003" rgba="0.8 0.25 0.65 1" />
+                <geom name="R_paw_pad3" size="0.00713951" pos="0.0192984 0 0.005" contype="1" conaffinity="2" friction="0.8 0.003" solref="0.012" solimp="0 0.95 0.003" rgba="0.8 0.25 0.65 1" />
+                <geom name="R_paw_pad4" size="0.0077" pos="0.0313787 0 -0.005" contype="1" conaffinity="2" friction="0.8 0.003" solref="0.012" solimp="0 0.95 0.003" rgba="0.8 0.25 0.65 1" />
+                <geom name="R_paw_pad5" size="0.0077" pos="0.0313787 0 0.005" contype="1" conaffinity="2" friction="0.8 0.003" solref="0.012" solimp="0 0.95 0.003" rgba="0.8 0.25 0.65 1" />
+                <site name="R_paw" pos="0.0270588 0 0" />
+                <site name="R_EDL_attachment3" pos="0.0119952 0 0" />
+                <site name="R_FDL_attachment3" pos="0.0119952 0 0" />
+                <site name="R_FHL_attachment4" pos="-0.00308273 -0.00386647 0.00274298" />
+                <site name="R_EDL_osim_6" pos="0.00872569 0.00423222 0.00960044" rgba="0.8 0.2 0.2 1" />
+                <site name="R_FDL_osim_4" pos="-0.00308273 -0.00386647 0.0137149" rgba="0.8 0.2 0.2 1" />
+              </body>
+            </body>
+          </body>
+        </body>
+      </body>
+      <body name="cat_root" pos="-0.09261350342858944 -0.1997167342633804 0.0" quat="0.6905076763443475 -0.6905076763443476 0.15231266825031237 -0.1523126682503124">
+        <inertial pos="0.14 0 0.22" mass="1.69172" diaginertia="0.00164909 0.00968508 0.00928719" />
+        <geom name="trunk_collision_envelope" size="0.16 0.043 0.055" pos="0.14 0 0.22" type="ellipsoid" contype="1" conaffinity="2" group="3" friction="0.8" solref="0.012" solimp="0 0.95 0.003" rgba="0.3 0.4 0.6 0.12" />
+        <geom name="fujiwara_axial_bones" pos="0 0 0" quat="1 0 0 0" type="mesh" group="1" rgba="0.88 0.84 0.72 1" mesh="fujiwara_axial" />
+        <site name="FL_S_C3_attachment1" pos="0.284721 0.00675996 0.198742" />
+        <site name="FR_S_C3_attachment1" pos="0.284721 -0.00675996 0.198742" />
+        <site name="FL_S_C4_attachment1" pos="0.275457 0.00868581 0.193967" />
+        <site name="FR_S_C4_attachment1" pos="0.275457 -0.00868581 0.193967" />
+        <site name="FL_S_C5_attachment1" pos="0.26662 0.00995425 0.189765" />
+        <site name="FR_S_C5_attachment1" pos="0.26662 -0.00995425 0.189765" />
+        <site name="FL_S_C6_attachment1" pos="0.258512 0.00930298 0.18611" />
+        <site name="FR_S_C6_attachment1" pos="0.258512 -0.00930298 0.18611" />
+        <site name="FL_S_C7_attachment1" pos="0.250683 0.00925304 0.185436" />
+        <site name="FR_S_C7_attachment1" pos="0.250683 -0.00925304 0.185436" />
+        <site name="FL_S_T1_attachment1" pos="0.234113 0.0107994 0.173956" />
+        <site name="FR_S_T1_attachment1" pos="0.234113 -0.0107994 0.173956" />
+        <site name="FL_S_T2_attachment1" pos="0.224438 0.0116763 0.170772" />
+        <site name="FR_S_T2_attachment1" pos="0.224438 -0.0116763 0.170772" />
+        <site name="FL_S_T3_attachment1" pos="0.212432 0.0154094 0.173613" />
+        <site name="FR_S_T3_attachment1" pos="0.212432 -0.0154094 0.173613" />
+        <site name="FL_S_T4_attachment1" pos="0.200081 0.0190866 0.17684" />
+        <site name="FR_S_T4_attachment1" pos="0.200081 -0.0190866 0.17684" />
+        <site name="FL_S_T5_attachment1" pos="0.186568 0.0236746 0.18106" />
+        <site name="FR_S_T5_attachment1" pos="0.186568 -0.0236746 0.18106" />
+        <site name="FL_S_T6_attachment1" pos="0.176064 0.0263728 0.187911" />
+        <site name="FR_S_T6_attachment1" pos="0.176064 -0.0263728 0.187911" />
+        <site name="FL_S_T7_attachment1" pos="0.169428 0.0284873 0.197599" />
+        <site name="FR_S_T7_attachment1" pos="0.169428 -0.0284873 0.197599" />
+        <site name="FL_S_T8_attachment1" pos="0.164253 0.0301368 0.207794" />
+        <site name="FR_S_T8_attachment1" pos="0.164253 -0.0301368 0.207794" />
+        <site name="FL_S_T9_attachment1" pos="0.167006 0.0296474 0.223673" />
+        <site name="FR_S_T9_attachment1" pos="0.167006 -0.0296474 0.223673" />
+        <site name="FL_R_C2_attachment1" pos="0.271428 -0.00265783 0.209828" />
+        <site name="FR_R_C2_attachment1" pos="0.271428 0.00265783 0.209828" />
+        <site name="FL_R_C3-7_attachment1" pos="0.252135 -0.00345922 0.206329" />
+        <site name="FR_R_C3-7_attachment1" pos="0.252135 0.00345922 0.206329" />
+        <site name="FL_R_T1_attachment1" pos="0.247404 -0.00327916 0.215044" />
+        <site name="FR_R_T1_attachment1" pos="0.247404 0.00327916 0.215044" />
+        <site name="FL_R_T2_attachment1" pos="0.242877 -0.00257548 0.21834" />
+        <site name="FR_R_T2_attachment1" pos="0.242877 0.00257548 0.21834" />
+        <site name="FL_R_T3_attachment1" pos="0.235409 -0.00263003 0.223042" />
+        <site name="FR_R_T3_attachment1" pos="0.235409 0.00263003 0.223042" />
+        <site name="FL_R_T4_attachment1" pos="0.225459 -0.00144344 0.227402" />
+        <site name="FR_R_T4_attachment1" pos="0.225459 0.00144344 0.227402" />
+        <site name="FL_R_T5_attachment1" pos="0.217671 -0.00162742 0.231012" />
+        <site name="FR_R_T5_attachment1" pos="0.217671 0.00162742 0.231012" />
+        <body name="FL_scapula" pos="0.22172568021165964 0.02499999999999998 0.20530142419806457" quat="0.5910014263518294 0.5910014263518292 0.38822327860408246 -0.3882232786040824">
+          <inertial pos="0.0274835 0 0" mass="0.0583771" diaginertia="3.23642e-06 3.23642e-05 3.23642e-05" />
+          <joint name="FL_scapulothoracic" solreflimit="0.003" solimplimit="0.99 0.999" stiffness="1.32546" range="-0.8 0.8" springref="0.11643" damping="0.0268381" pos="0.006041293692496915 0.0057710941954443335 -4.16527781698493e-18" axis="-3.16261890488892e-16 1.9589193577125763e-16 0.9999999999999993" />
+          <geom name="FL_ShoulderExtensor_s0_pulley0" size="0.00794485 0.015" pos="0.0577143 0 0" type="cylinder" group="4" rgba="0 0 0 0" />
+          <geom name="FL_BicepsBrachii_s0_pulley0" size="0.00994693 0.015" pos="0.0577143 0 0" type="cylinder" group="4" rgba="0 0 0 0" />
+          <geom name="FL_ShoulderFlexor_s0_pulley0" size="0.00184271 0.015" pos="0.0577143 0 0" type="cylinder" group="4" rgba="0 0 0 0" />
+          <geom name="FL_TricepsBrachiiLong_s0_pulley0" size="0.00441942 0.015" pos="0.0577143 0 0" type="cylinder" group="4" rgba="0 0 0 0" />
+          <geom name="FL_scapula_fujiwara" pos="0 0 0" quat="1 0 0 0" type="mesh" group="1" rgba="0.88 0.84 0.72 1" mesh="FL_scapula_fujiwara" />
+          <site name="FL_ShoulderExtensor_s0_origin" pos="0.0034642 0.0154244 0" />
+          <site name="FL_ShoulderExtensor_s0_preferred" pos="0.0602497 0.00794745 0" />
+          <site name="FL_BicepsBrachii_s0_origin" pos="0.062436 0.011235 0" />
+          <site name="FL_ShoulderFlexor_s0_origin" pos="0.00736813 -0.00647603 0" />
+          <site name="FL_ShoulderFlexor_s0_preferred" pos="0.0578913 -0.00192673 0" />
+          <site name="FL_TricepsBrachiiLong_s0_origin" pos="0.0474887 0.000472958 0" />
+          <site name="FL_S_C3_attachment0" pos="0.00479545 0.00894008 0.00891576" />
+          <site name="FL_S_C4_attachment0" pos="0.00443078 0.00645949 0.0080702" />
+          <site name="FL_S_C5_attachment0" pos="0.00125347 0.00131038 0.00725332" />
+          <site name="FL_S_C6_attachment0" pos="0.000476248 -0.00305232 0.00609804" />
+          <site name="FL_S_C7_attachment0" pos="8.23212e-05 -0.0062889 0.00568748" />
+          <site name="FL_S_T1_attachment0" pos="0.00164902 -0.00758986 0.00458856" />
+          <site name="FL_S_T2_attachment0" pos="0.00151744 -0.00839971 0.00425462" />
+          <site name="FL_S_T3_attachment0" pos="0.00136276 -0.00935178 0.00386206" />
+          <site name="FL_S_T4_attachment0" pos="0.00114492 -0.010278 0.00346678" />
+          <site name="FL_S_T5_attachment0" pos="0.000979784 -0.0109802 0.00316712" />
+          <site name="FL_S_T6_attachment0" pos="0.000556056 -0.0118816 0.00283953" />
+          <site name="FL_S_T7_attachment0" pos="0.000480099 -0.012595 0.00252877" />
+          <site name="FL_S_T8_attachment0" pos="0.000559862 -0.0133439 0.00217089" />
+          <site name="FL_S_T9_attachment0" pos="0.000644 -0.0141339 0.0017934" />
+          <site name="FL_R_C2_attachment0" pos="0.00421428 0.00995628 0.00956128" />
+          <site name="FL_R_C3-7_attachment0" pos="0.00310279 0.00868996 0.00941303" />
+          <site name="FL_R_T1_attachment0" pos="0.000155555 0.000840243 0.00745944" />
+          <site name="FL_R_T2_attachment0" pos="-0.0015068 -0.0069889 0.00563962" />
+          <site name="FL_R_T3_attachment0" pos="-0.00138362 -0.0151645 0.00181747" />
+          <site name="FL_R_T4_attachment0" pos="-0.00061719 -0.0163727 0.0011365" />
+          <site name="FL_R_T5_attachment0" pos="0.000248576 -0.0167481 0.000810671" />
+          <body name="FL_upperarm" pos="0.0577143 0 0">
+            <inertial pos="0.045284 0 0" mass="0.0748516" diaginertia="5.52536e-06 5.52536e-05 5.52536e-05" />
+            <joint name="FL_shoulder" solreflimit="0.003" solimplimit="0.99 0.999" range="-1.8767 -0.721453" />
+            <geom name="FL_ElbowExtensor_s0_pulley0" size="0.00211768 0.015" pos="0.0927571 0 0" type="cylinder" group="4" rgba="0 0 0 0" />
+            <geom name="FL_BicepsBrachii_s0_pulley1" size="0.00525915 0.015" pos="0.0927571 0 0" type="cylinder" group="4" rgba="0 0 0 0" />
+            <geom name="FL_ElbowFlexor_s0_pulley0" size="0.0032 0.015" pos="0.0927571 0 0" type="cylinder" group="4" rgba="0 0 0 0" />
+            <geom name="FL_ElbowFlexorWristFlexor_s0_pulley0" size="0.00536465 0.015" pos="0.0927571 0 0" type="cylinder" group="4" rgba="0 0 0 0" />
+            <geom name="FL_TricepsBrachiiLong_s0_pulley1" size="0.0118833 0.015" pos="0.0927571 0 0" type="cylinder" group="4" rgba="0 0 0 0" />
+            <geom name="FL_upperarm_fujiwara" pos="0 0 0" quat="1 0 0 0" type="mesh" group="1" rgba="0.88 0.84 0.72 1" mesh="FL_upperarm_fujiwara" />
+            <site name="FL_ShoulderExtensor_s0_insert" pos="-0.00581367 0.0054159 0" />
+            <site name="FL_ElbowExtensor_s0_origin" pos="0.0334774 -0.00927937 0" />
+            <site name="FL_ElbowExtensor_s0_preferred" pos="0.0930233 -0.00220758 0" />
+            <site name="FL_BicepsBrachii_s0_tangent" pos="0.0509325 0.00838141 0" />
+            <site name="FL_ElbowFlexor_s0_origin" pos="0.0214272 0.00498239 0" />
+            <site name="FL_ElbowFlexor_s0_preferred" pos="0.092841 0.00335895 0" />
+            <site name="FL_ElbowFlexorWristFlexor_s0_origin" pos="0.0818224 -0.00322365 0" />
+            <site name="FL_ElbowFlexorWristFlexor_s0_preferred" pos="0.0888091 0.00401779 0" />
+            <site name="FL_ShoulderFlexor_s0_insert" pos="0.013834 0.00935472 0" />
+            <site name="FL_TricepsBrachiiLong_s0_tangent" pos="0.0433653 -0.0121627 0" />
+            <body name="FL_forearm" pos="0.0927571 0 0">
+              <inertial pos="0.0430027 0 0" mass="0.0384693" diaginertia="3.27196e-06 3.27196e-05 3.27196e-05" />
+              <joint name="FL_elbow" solreflimit="0.003" solimplimit="0.99 0.999" range="0.343755 2.02073" />
+              <geom name="FL_ElbowFlexorWristFlexor_s1_pulley0" size="0.0035075 0.015" pos="0.0946571 0 0" type="cylinder" group="4" rgba="0 0 0 0" />
+              <geom name="FL_WristFlexor_s1_pulley0" size="0.0024 0.015" pos="0.0946571 0 0" type="cylinder" group="4" rgba="0 0 0 0" />
+              <geom name="FL_WristExtensor_s1_pulley0" size="0.00271044 0.015" pos="0.0946571 0 0" type="cylinder" group="4" rgba="0 0 0 0" />
+              <geom name="FL_forearm_fujiwara" pos="0 0 0" quat="1 0 0 0" type="mesh" group="1" rgba="0.88 0.84 0.72 1" mesh="FL_forearm_fujiwara" />
+              <site name="FL_ElbowExtensor_s0_insert" pos="-0.00502397 -0.00242866 0" />
+              <site name="FL_BicepsBrachii_s0_insert" pos="0.0102557 -0.00433663 0" />
+              <site name="FL_ElbowFlexor_s0_insert" pos="0.00460755 0.00579111 0" />
+              <site name="FL_ElbowFlexorWristFlexor_s0_insert" pos="0.0949022 0.00612975 0" />
+              <site name="FL_ElbowFlexorWristFlexor_s1_origin" pos="0.094412 0.00612975 0" />
+              <site name="FL_ElbowFlexorWristFlexor_s1_preferred" pos="0.0975921 0.00222473 0" />
+              <site name="FL_WristFlexor_s0_origin" pos="0.00934182 -0.00599504 0" />
+              <site name="FL_WristFlexor_s0_insert" pos="0.0988044 0.00434845 0" />
+              <site name="FL_WristFlexor_s1_origin" pos="0.0988044 0.00434845 0" />
+              <site name="FL_WristFlexor_s1_preferred" pos="0.0970236 -0.000866125 0" />
+              <site name="FL_WristExtensor_s0_origin" pos="0.00636921 -0.000296852 0" />
+              <site name="FL_WristExtensor_s0_insert" pos="0.0961328 -0.00497217 0" />
+              <site name="FL_WristExtensor_s1_origin" pos="0.0931815 -0.00497217 0" />
+              <site name="FL_WristExtensor_s1_preferred" pos="0.0965601 -0.00211617 0" />
+              <site name="FL_TricepsBrachiiLong_s0_insert" pos="-0.0141501 -0.00451884 0" />
+              <body name="FL_carpals" pos="0.0946571 0 0">
+                <inertial pos="0.0136649 0 0" mass="0.00695039" diaginertia="5.42411e-08 5.42411e-07 5.42411e-07" />
+                <joint name="FL_wrist" solreflimit="0.003" solimplimit="0.99 0.999" range="-1.16894 0.524162" />
+                <geom name="FL_carpals_fujiwara" quat="1 0 0 0" type="mesh" group="1" rgba="0.88 0.84 0.72 1" mesh="FL_carpals_fujiwara" />
+                <site name="FL_ElbowFlexorWristFlexor_s1_insert" pos="0.0330367 0.00417936 0" />
+                <site name="FL_WristFlexor_s1_insert" pos="0.0169989 0.0019601 0" />
+                <site name="FL_WristExtensor_s1_insert" pos="0.0284754 -0.00468818 0" />
+                <site name="FL_DigitalExtensors_attachment0" pos="-0.0005687 0.00597158 0" />
+                <site name="FL_DigitalFlexors_attachment0" pos="0.000537685 -0.00545445 0" />
+                <body name="FL_digits" pos="0.0261429 0 0">
+                  <inertial pos="0.0127143 0 0" mass="0.00470879" diaginertia="2.5373e-08 2.5373e-07 2.5373e-07" />
+                  <joint name="FL_mcp" solreflimit="0.003" solimplimit="0.99 0.999" stiffness="0.129826" range="-0.590219 1.37915" springref="-0.0197053" damping="0.00223713" />
+                  <geom name="FL_contactpad0" size="0.006" pos="0.004 0 -0.005" contype="1" conaffinity="2" friction="0.8 0.003" solref="0.012" solimp="0 0.95 0.003" rgba="0.9 0.65 0.1 1" />
+                  <geom name="FL_contactpad1" size="0.006" pos="0.004 0 0.005" contype="1" conaffinity="2" friction="0.8 0.003" solref="0.012" solimp="0 0.95 0.003" rgba="0.9 0.65 0.1 1" />
+                  <geom name="FL_contactpad2" size="0.006" pos="0.013 0 -0.005" contype="1" conaffinity="2" friction="0.8 0.003" solref="0.012" solimp="0 0.95 0.003" rgba="0.9 0.65 0.1 1" />
+                  <geom name="FL_contactpad3" size="0.006" pos="0.013 0 0.005" contype="1" conaffinity="2" friction="0.8 0.003" solref="0.012" solimp="0 0.95 0.003" rgba="0.9 0.65 0.1 1" />
+                  <geom name="FL_contactpad4" size="0.006" pos="0.022 0 -0.005" contype="1" conaffinity="2" friction="0.8 0.003" solref="0.012" solimp="0 0.95 0.003" rgba="0.9 0.65 0.1 1" />
+                  <geom name="FL_contactpad5" size="0.006" pos="0.022 0 0.005" contype="1" conaffinity="2" friction="0.8 0.003" solref="0.012" solimp="0 0.95 0.003" rgba="0.9 0.65 0.1 1" />
+                  <geom name="FL_digits_fujiwara" quat="1 0 0 0" type="mesh" group="1" rgba="0.88 0.84 0.72 1" mesh="FL_digits_fujiwara" />
+                  <site name="FL_paw" pos="0.017 0 0" />
+                  <site name="FL_DigitalExtensors_attachment1" pos="0.00486696 0.00225847 0" />
+                  <site name="FL_DigitalFlexors_attachment1" pos="0.00117539 -0.00602153 0" />
+                </body>
+              </body>
+            </body>
+          <site name="FL_LatissimusDorsi_insertion" pos="0.013834 0.00935472 -0.0" size=".001" rgba="0 0 0 0" /><site name="FL_PectoralisProfundus_insertion" pos="0.012 0.01 -0.0" size=".001" rgba="0 0 0 0" /><site name="FL_PectoralisSuperficialis_insertion" pos="0.03 0.005 -0.0" size=".001" rgba="0 0 0 0" /><site name="FL_Clavobrachialis_insertion" pos="0.025 0.003 -0.0" size=".001" rgba="0 0 0 0" /></body>
+        <site name="FL_TrapeziusCervical_insertion" pos="0.03 0.002 0.006" size=".001" rgba="0 0 0 0" /><site name="FL_TrapeziusThoracic_insertion" pos="0.018 -0.006 0.006" size=".001" rgba="0 0 0 0" /></body>
+        <body name="FR_scapula" pos="0.22172568021165964 -0.024999999999999998 0.20530142419806457" quat="0.5910014263518294 0.5910014263518292 0.38822327860408246 -0.3882232786040824">
+          <inertial pos="0.0274835 0 0" mass="0.0583771" diaginertia="3.23642e-06 3.23642e-05 3.23642e-05" />
+          <joint name="FR_scapulothoracic" solreflimit="0.003" solimplimit="0.99 0.999" stiffness="1.32546" range="-0.8 0.8" springref="0.11643" damping="0.0268381" pos="0.006041293692496915 0.0057710941954443335 -4.16527781698493e-18" axis="-3.16261890488892e-16 1.9589193577125763e-16 0.9999999999999993" />
+          <geom name="FR_ShoulderExtensor_s0_pulley0" size="0.00794485 0.015" pos="0.0577143 0 0" type="cylinder" group="4" rgba="0 0 0 0" />
+          <geom name="FR_BicepsBrachii_s0_pulley0" size="0.00994693 0.015" pos="0.0577143 0 0" type="cylinder" group="4" rgba="0 0 0 0" />
+          <geom name="FR_ShoulderFlexor_s0_pulley0" size="0.00184271 0.015" pos="0.0577143 0 0" type="cylinder" group="4" rgba="0 0 0 0" />
+          <geom name="FR_TricepsBrachiiLong_s0_pulley0" size="0.00441942 0.015" pos="0.0577143 0 0" type="cylinder" group="4" rgba="0 0 0 0" />
+          <geom name="FR_scapula_fujiwara" pos="0 0 0" quat="1 0 0 0" type="mesh" group="1" rgba="0.88 0.84 0.72 1" mesh="FR_scapula_fujiwara" />
+          <site name="FR_ShoulderExtensor_s0_origin" pos="0.0034642 0.0154244 0" />
+          <site name="FR_ShoulderExtensor_s0_preferred" pos="0.0594655 0.0081562 0" />
+          <site name="FR_BicepsBrachii_s0_origin" pos="0.062436 0.011235 0" />
+          <site name="FR_ShoulderFlexor_s0_origin" pos="0.00736813 -0.00647603 0" />
+          <site name="FR_ShoulderFlexor_s0_preferred" pos="0.0578913 -0.00192673 0" />
+          <site name="FR_TricepsBrachiiLong_s0_origin" pos="0.0474887 0.000472958 0" />
+          <site name="FR_S_C3_attachment0" pos="0.00479545 0.00894008 -0.00891576" />
+          <site name="FR_S_C4_attachment0" pos="0.00443078 0.00645949 -0.0080702" />
+          <site name="FR_S_C5_attachment0" pos="0.00125347 0.00131038 -0.00725332" />
+          <site name="FR_S_C6_attachment0" pos="0.000476248 -0.00305232 -0.00609804" />
+          <site name="FR_S_C7_attachment0" pos="8.23212e-05 -0.0062889 -0.00568748" />
+          <site name="FR_S_T1_attachment0" pos="0.00164902 -0.00758986 -0.00458856" />
+          <site name="FR_S_T2_attachment0" pos="0.00151744 -0.00839971 -0.00425462" />
+          <site name="FR_S_T3_attachment0" pos="0.00136276 -0.00935178 -0.00386206" />
+          <site name="FR_S_T4_attachment0" pos="0.00114492 -0.010278 -0.00346678" />
+          <site name="FR_S_T5_attachment0" pos="0.000979784 -0.0109802 -0.00316712" />
+          <site name="FR_S_T6_attachment0" pos="0.000556056 -0.0118816 -0.00283953" />
+          <site name="FR_S_T7_attachment0" pos="0.000480099 -0.012595 -0.00252877" />
+          <site name="FR_S_T8_attachment0" pos="0.000559862 -0.0133439 -0.00217089" />
+          <site name="FR_S_T9_attachment0" pos="0.000644 -0.0141339 -0.0017934" />
+          <site name="FR_R_C2_attachment0" pos="0.00421428 0.00995628 -0.00956128" />
+          <site name="FR_R_C3-7_attachment0" pos="0.00310279 0.00868996 -0.00941303" />
+          <site name="FR_R_T1_attachment0" pos="0.000155555 0.000840243 -0.00745944" />
+          <site name="FR_R_T2_attachment0" pos="-0.0015068 -0.0069889 -0.00563962" />
+          <site name="FR_R_T3_attachment0" pos="-0.00138362 -0.0151645 -0.00181747" />
+          <site name="FR_R_T4_attachment0" pos="-0.00061719 -0.0163727 -0.0011365" />
+          <site name="FR_R_T5_attachment0" pos="0.000248576 -0.0167481 -0.000810671" />
+          <body name="FR_upperarm" pos="0.0577143 0 0">
+            <inertial pos="0.045284 0 0" mass="0.0748516" diaginertia="5.52536e-06 5.52536e-05 5.52536e-05" />
+            <joint name="FR_shoulder" solreflimit="0.003" solimplimit="0.99 0.999" range="-1.8767 -0.721453" />
+            <geom name="FR_ElbowExtensor_s0_pulley0" size="0.00211768 0.015" pos="0.0927571 0 0" type="cylinder" group="4" rgba="0 0 0 0" />
+            <geom name="FR_BicepsBrachii_s0_pulley1" size="0.00525915 0.015" pos="0.0927571 0 0" type="cylinder" group="4" rgba="0 0 0 0" />
+            <geom name="FR_ElbowFlexor_s0_pulley0" size="0.0032 0.015" pos="0.0927571 0 0" type="cylinder" group="4" rgba="0 0 0 0" />
+            <geom name="FR_ElbowFlexorWristFlexor_s0_pulley0" size="0.00536465 0.015" pos="0.0927571 0 0" type="cylinder" group="4" rgba="0 0 0 0" />
+            <geom name="FR_TricepsBrachiiLong_s0_pulley1" size="0.0118833 0.015" pos="0.0927571 0 0" type="cylinder" group="4" rgba="0 0 0 0" />
+            <geom name="FR_upperarm_fujiwara" pos="0 0 0" quat="1 0 0 0" type="mesh" group="1" rgba="0.88 0.84 0.72 1" mesh="FR_upperarm_fujiwara" />
+            <site name="FR_ShoulderExtensor_s0_insert" pos="-0.00581367 0.0054159 0" />
+            <site name="FR_ElbowExtensor_s0_origin" pos="0.0334774 -0.00927937 0" />
+            <site name="FR_ElbowExtensor_s0_preferred" pos="0.0930233 -0.00220758 0" />
+            <site name="FR_BicepsBrachii_s0_tangent" pos="0.0490305 0.00987277 0" />
+            <site name="FR_ElbowFlexor_s0_origin" pos="0.0214272 0.00498239 0" />
+            <site name="FR_ElbowFlexor_s0_preferred" pos="0.092841 0.00335895 0" />
+            <site name="FR_ElbowFlexorWristFlexor_s0_origin" pos="0.0818224 -0.00322365 0" />
+            <site name="FR_ElbowFlexorWristFlexor_s0_preferred" pos="0.0888091 0.00401779 0" />
+            <site name="FR_ShoulderFlexor_s0_insert" pos="0.013834 0.00935472 0" />
+            <site name="FR_TricepsBrachiiLong_s0_tangent" pos="0.0455204 -0.0117581 0" />
+            <body name="FR_forearm" pos="0.0927571 0 0">
+              <inertial pos="0.0430027 0 0" mass="0.0384693" diaginertia="3.27196e-06 3.27196e-05 3.27196e-05" />
+              <joint name="FR_elbow" solreflimit="0.003" solimplimit="0.99 0.999" range="0.343755 2.02073" />
+              <geom name="FR_ElbowFlexorWristFlexor_s1_pulley0" size="0.0035075 0.015" pos="0.0946571 0 0" type="cylinder" group="4" rgba="0 0 0 0" />
+              <geom name="FR_WristFlexor_s1_pulley0" size="0.0024 0.015" pos="0.0946571 0 0" type="cylinder" group="4" rgba="0 0 0 0" />
+              <geom name="FR_WristExtensor_s1_pulley0" size="0.00271044 0.015" pos="0.0946571 0 0" type="cylinder" group="4" rgba="0 0 0 0" />
+              <geom name="FR_forearm_fujiwara" pos="0 0 0" quat="1 0 0 0" type="mesh" group="1" rgba="0.88 0.84 0.72 1" mesh="FR_forearm_fujiwara" />
+              <site name="FR_ElbowExtensor_s0_insert" pos="-0.00502397 -0.00242866 0" />
+              <site name="FR_BicepsBrachii_s0_insert" pos="0.0102557 -0.00433663 0" />
+              <site name="FR_ElbowFlexor_s0_insert" pos="0.00460755 0.00579111 0" />
+              <site name="FR_ElbowFlexorWristFlexor_s0_insert" pos="0.0949022 0.00612975 0" />
+              <site name="FR_ElbowFlexorWristFlexor_s1_origin" pos="0.094412 0.00612975 0" />
+              <site name="FR_ElbowFlexorWristFlexor_s1_preferred" pos="0.0975921 0.00222473 0" />
+              <site name="FR_WristFlexor_s0_origin" pos="0.00934182 -0.00599504 0" />
+              <site name="FR_WristFlexor_s0_insert" pos="0.0988044 0.00434845 0" />
+              <site name="FR_WristFlexor_s1_origin" pos="0.0988044 0.00434845 0" />
+              <site name="FR_WristFlexor_s1_preferred" pos="0.0970236 -0.000866125 0" />
+              <site name="FR_WristExtensor_s0_origin" pos="0.00636921 -0.000296852 0" />
+              <site name="FR_WristExtensor_s0_insert" pos="0.0961328 -0.00497217 0" />
+              <site name="FR_WristExtensor_s1_origin" pos="0.0931815 -0.00497217 0" />
+              <site name="FR_WristExtensor_s1_preferred" pos="0.0965601 -0.00211617 0" />
+              <site name="FR_TricepsBrachiiLong_s0_insert" pos="-0.0141501 -0.00451884 0" />
+              <body name="FR_carpals" pos="0.0946571 0 0">
+                <inertial pos="0.0136649 0 0" mass="0.00695039" diaginertia="5.42411e-08 5.42411e-07 5.42411e-07" />
+                <joint name="FR_wrist" solreflimit="0.003" solimplimit="0.99 0.999" range="-1.16894 0.524162" />
+                <geom name="FR_carpals_fujiwara" quat="1 0 0 0" type="mesh" group="1" rgba="0.88 0.84 0.72 1" mesh="FR_carpals_fujiwara" />
+                <site name="FR_ElbowFlexorWristFlexor_s1_insert" pos="0.0330367 0.00417936 0" />
+                <site name="FR_WristFlexor_s1_insert" pos="0.0169989 0.0019601 0" />
+                <site name="FR_WristExtensor_s1_insert" pos="0.0284754 -0.00468818 0" />
+                <site name="FR_DigitalExtensors_attachment0" pos="-0.0005687 0.00597158 0" />
+                <site name="FR_DigitalFlexors_attachment0" pos="0.000537685 -0.00545445 0" />
+                <body name="FR_digits" pos="0.0261429 0 0">
+                  <inertial pos="0.0127143 0 0" mass="0.00470879" diaginertia="2.5373e-08 2.5373e-07 2.5373e-07" />
+                  <joint name="FR_mcp" solreflimit="0.003" solimplimit="0.99 0.999" stiffness="0.129826" range="-0.590219 1.37915" springref="-0.0197053" damping="0.00223713" />
+                  <geom name="FR_contactpad0" size="0.006" pos="0.004 0 -0.005" contype="1" conaffinity="2" friction="0.8 0.003" solref="0.012" solimp="0 0.95 0.003" rgba="0.55 0.35 1 1" />
+                  <geom name="FR_contactpad1" size="0.006" pos="0.004 0 0.005" contype="1" conaffinity="2" friction="0.8 0.003" solref="0.012" solimp="0 0.95 0.003" rgba="0.55 0.35 1 1" />
+                  <geom name="FR_contactpad2" size="0.006" pos="0.013 0 -0.005" contype="1" conaffinity="2" friction="0.8 0.003" solref="0.012" solimp="0 0.95 0.003" rgba="0.55 0.35 1 1" />
+                  <geom name="FR_contactpad3" size="0.006" pos="0.013 0 0.005" contype="1" conaffinity="2" friction="0.8 0.003" solref="0.012" solimp="0 0.95 0.003" rgba="0.55 0.35 1 1" />
+                  <geom name="FR_contactpad4" size="0.006" pos="0.022 0 -0.005" contype="1" conaffinity="2" friction="0.8 0.003" solref="0.012" solimp="0 0.95 0.003" rgba="0.55 0.35 1 1" />
+                  <geom name="FR_contactpad5" size="0.006" pos="0.022 0 0.005" contype="1" conaffinity="2" friction="0.8 0.003" solref="0.012" solimp="0 0.95 0.003" rgba="0.55 0.35 1 1" />
+                  <geom name="FR_digits_fujiwara" quat="1 0 0 0" type="mesh" group="1" rgba="0.88 0.84 0.72 1" mesh="FR_digits_fujiwara" />
+                  <site name="FR_paw" pos="0.017 0 0" />
+                  <site name="FR_DigitalExtensors_attachment1" pos="0.00486696 0.00225847 0" />
+                  <site name="FR_DigitalFlexors_attachment1" pos="0.00117539 -0.00602153 0" />
+                </body>
+              </body>
+            </body>
+          <site name="FR_LatissimusDorsi_insertion" pos="0.013834 0.00935472 0.0" size=".001" rgba="0 0 0 0" /><site name="FR_PectoralisProfundus_insertion" pos="0.012 0.01 0.0" size=".001" rgba="0 0 0 0" /><site name="FR_PectoralisSuperficialis_insertion" pos="0.03 0.005 0.0" size=".001" rgba="0 0 0 0" /><site name="FR_Clavobrachialis_insertion" pos="0.025 0.003 0.0" size=".001" rgba="0 0 0 0" /></body>
+        <site name="FR_TrapeziusCervical_insertion" pos="0.03 0.002 -0.006" size=".001" rgba="0 0 0 0" /><site name="FR_TrapeziusThoracic_insertion" pos="0.018 -0.006 -0.006" size=".001" rgba="0 0 0 0" /></body>
+        <body name="head_neck_mass" pos="0.325 0 0.255">
+          <inertial pos="0 0 0" mass="0.379176" diaginertia="0.000214234 0.000350738 0.0003223" />
+          <geom name="head_collision_envelope" size="0.055 0.035 0.04" type="ellipsoid" contype="1" conaffinity="2" group="3" friction="0.8" solref="0.012" solimp="0 0.95 0.003" rgba="0.3 0.4 0.6 0.12" />
+        </body>
+      <site name="FL_TrapeziusCervical_origin" pos="0.285 -0.0 0.222" size=".001" rgba="0 0 0 0" /><site name="FR_TrapeziusCervical_origin" pos="0.285 0.0 0.222" size=".001" rgba="0 0 0 0" /><site name="FL_TrapeziusThoracic_origin" pos="0.185 -0.0 0.238" size=".001" rgba="0 0 0 0" /><site name="FR_TrapeziusThoracic_origin" pos="0.185 0.0 0.238" size=".001" rgba="0 0 0 0" /><site name="FL_LatissimusDorsi_origin" pos="0.12 0.012 0.227" size=".001" rgba="0 0 0 0" /><site name="FR_LatissimusDorsi_origin" pos="0.12 -0.012 0.227" size=".001" rgba="0 0 0 0" /><site name="FL_PectoralisProfundus_origin" pos="0.185 0.005 0.155" size=".001" rgba="0 0 0 0" /><site name="FR_PectoralisProfundus_origin" pos="0.185 -0.005 0.155" size=".001" rgba="0 0 0 0" /><site name="FL_PectoralisSuperficialis_origin" pos="0.245 0.004 0.157" size=".001" rgba="0 0 0 0" /><site name="FR_PectoralisSuperficialis_origin" pos="0.245 -0.004 0.157" size=".001" rgba="0 0 0 0" /><site name="FL_Clavobrachialis_origin" pos="0.3 0.012 0.19" size=".001" rgba="0 0 0 0" /><site name="FR_Clavobrachialis_origin" pos="0.3 -0.012 0.19" size=".001" rgba="0 0 0 0" /></body>
+    </body>
+  </worldbody>
+
+  <tendon>
+    <spatial name="L_IP" width="0.0013" rgba="0.7 0.15 0.18 1" springlength="0.0423">
+      <site site="L_IP_origin" />
+      <geom geom="L_IP_wrap0" />
+      <site site="L_IP_insert" />
+    </spatial>
+    <spatial name="L_BFA" width="0.0013" rgba="0.7 0.15 0.18 1" springlength="0.0581132">
+      <site site="L_BFA_origin" />
+      <geom geom="L_BFA_wrap0" />
+      <site site="L_BFA_insert" />
+    </spatial>
+    <spatial name="L_VL" width="0.0013" rgba="1 0.4 0.08 1" springlength="0.0892929">
+      <site site="L_VL_origin" />
+      <geom geom="L_VL_wrap0" />
+      <site site="L_VL_insert" />
+    </spatial>
+    <spatial name="L_VM" width="0.0013" rgba="0.7 0.15 0.18 1" springlength="0.0892929">
+      <site site="L_VM_origin" />
+      <geom geom="L_VM_wrap0" />
+      <site site="L_VM_insert" />
+    </spatial>
+    <spatial name="L_TA" width="0.0013" rgba="0.7 0.15 0.18 1" springlength="0.0316826">
+      <site site="L_TA_origin" />
+      <geom geom="L_TA_wrap0" />
+      <site site="L_TA_insert" />
+    </spatial>
+    <spatial name="L_SO" width="0.0013" rgba="0.7 0.15 0.18 1" springlength="0.0831045">
+      <site site="L_SO_origin" />
+      <geom geom="L_SO_wrap0" />
+      <site site="L_SO_insert" />
+    </spatial>
+    <spatial name="L_RF" width="0.0013" rgba="0.7 0.15 0.18 1" springlength="0.083113">
+      <site site="L_RF_origin" />
+      <geom geom="L_RF_wrap0" />
+      <site site="L_RF_tangent" />
+      <geom geom="L_RF_wrap1" />
+      <site site="L_RF_insert" />
+    </spatial>
+    <spatial name="L_BFP" width="0.0013" rgba="0.7 0.15 0.18 1" springlength="0.136394">
+      <site site="L_BFP_origin" />
+      <geom geom="L_BFP_wrap0" />
+      <site site="L_BFP_tangent" />
+      <geom geom="L_BFP_wrap1" />
+      <site site="L_BFP_insert" />
+    </spatial>
+    <spatial name="L_SAM" width="0.0013" rgba="0.3 0.55 1 1" springlength="0.0935315">
+      <site site="L_SAM_origin" />
+      <geom geom="L_SAM_wrap0" />
+      <site site="L_SAM_tangent" />
+      <geom geom="L_SAM_wrap1" />
+      <site site="L_SAM_insert" />
+    </spatial>
+    <spatial name="L_LG" width="0.0013" rgba="0.7 0.15 0.18 1" springlength="0.0926272">
+      <site site="L_LG_origin" />
+      <geom geom="L_LG_wrap0" />
+      <site site="L_LG_tangent" />
+      <geom geom="L_LG_wrap1" />
+      <site site="L_LG_insert" />
+    </spatial>
+    <spatial name="L_MG" width="0.0013" rgba="0.7 0.15 0.18 1" springlength="0.0926272">
+      <site site="L_MG_origin" />
+      <geom geom="L_MG_wrap0" />
+      <site site="L_MG_tangent" />
+      <geom geom="L_MG_wrap1" />
+      <site site="L_MG_insert" />
+    </spatial>
+    <spatial name="R_IP" width="0.0013" rgba="0.7 0.15 0.18 1" springlength="0.0423">
+      <site site="R_IP_origin" />
+      <geom geom="R_IP_wrap0" />
+      <site site="R_IP_insert" />
+    </spatial>
+    <spatial name="R_BFA" width="0.0013" rgba="0.7 0.15 0.18 1" springlength="0.0581132">
+      <site site="R_BFA_origin" />
+      <geom geom="R_BFA_wrap0" />
+      <site site="R_BFA_insert" />
+    </spatial>
+    <spatial name="R_VL" width="0.0013" rgba="1 0.4 0.08 1" springlength="0.0892929">
+      <site site="R_VL_origin" />
+      <geom geom="R_VL_wrap0" />
+      <site site="R_VL_insert" />
+    </spatial>
+    <spatial name="R_VM" width="0.0013" rgba="0.7 0.15 0.18 1" springlength="0.0892929">
+      <site site="R_VM_origin" />
+      <geom geom="R_VM_wrap0" />
+      <site site="R_VM_insert" />
+    </spatial>
+    <spatial name="R_TA" width="0.0013" rgba="0.7 0.15 0.18 1" springlength="0.0316826">
+      <site site="R_TA_origin" />
+      <geom geom="R_TA_wrap0" />
+      <site site="R_TA_insert" />
+    </spatial>
+    <spatial name="R_SO" width="0.0013" rgba="0.7 0.15 0.18 1" springlength="0.0831045">
+      <site site="R_SO_origin" />
+      <geom geom="R_SO_wrap0" />
+      <site site="R_SO_insert" />
+    </spatial>
+    <spatial name="R_RF" width="0.0013" rgba="0.7 0.15 0.18 1" springlength="0.083113">
+      <site site="R_RF_origin" />
+      <geom geom="R_RF_wrap0" />
+      <site site="R_RF_tangent" />
+      <geom geom="R_RF_wrap1" />
+      <site site="R_RF_insert" />
+    </spatial>
+    <spatial name="R_BFP" width="0.0013" rgba="0.7 0.15 0.18 1" springlength="0.136394">
+      <site site="R_BFP_origin" />
+      <geom geom="R_BFP_wrap0" />
+      <site site="R_BFP_tangent" />
+      <geom geom="R_BFP_wrap1" />
+      <site site="R_BFP_insert" />
+    </spatial>
+    <spatial name="R_SAM" width="0.0013" rgba="0.3 0.55 1 1" springlength="0.0935315">
+      <site site="R_SAM_origin" />
+      <geom geom="R_SAM_wrap0" />
+      <site site="R_SAM_tangent" />
+      <geom geom="R_SAM_wrap1" />
+      <site site="R_SAM_insert" />
+    </spatial>
+    <spatial name="R_LG" width="0.0013" rgba="0.7 0.15 0.18 1" springlength="0.0926272">
+      <site site="R_LG_origin" />
+      <geom geom="R_LG_wrap0" />
+      <site site="R_LG_tangent" />
+      <geom geom="R_LG_wrap1" />
+      <site site="R_LG_insert" />
+    </spatial>
+    <spatial name="R_MG" width="0.0013" rgba="0.7 0.15 0.18 1" springlength="0.0926272">
+      <site site="R_MG_origin" />
+      <geom geom="R_MG_wrap0" />
+      <site site="R_MG_tangent" />
+      <geom geom="R_MG_wrap1" />
+      <site site="R_MG_insert" />
+    </spatial>
+    <spatial name="L_EDL" width="0.0006" rgba="0.6 0.3 0.9 1" springlength="0.112537">
+      <site site="L_EDL_osim_0" />
+      <site site="L_EDL_osim_1" />
+      <site site="L_EDL_osim_2" />
+      <site site="L_EDL_osim_3" />
+      <site site="L_EDL_osim_4" />
+      <site site="L_EDL_osim_5" />
+      <site site="L_EDL_osim_6" />
+    </spatial>
+    <spatial name="R_EDL" width="0.0006" rgba="0.6 0.3 0.9 1" springlength="0.112537">
+      <site site="R_EDL_osim_0" />
+      <site site="R_EDL_osim_1" />
+      <site site="R_EDL_osim_2" />
+      <site site="R_EDL_osim_3" />
+      <site site="R_EDL_osim_4" />
+      <site site="R_EDL_osim_5" />
+      <site site="R_EDL_osim_6" />
+    </spatial>
+    <spatial name="L_FDL" width="0.0006" rgba="0.6 0.3 0.9 1" springlength="0.102788">
+      <site site="L_FDL_osim_0" />
+      <site site="L_FDL_osim_1" />
+      <site site="L_FDL_osim_2" />
+      <site site="L_FDL_osim_3" />
+      <site site="L_FDL_osim_4" />
+    </spatial>
+    <spatial name="R_FDL" width="0.0006" rgba="0.6 0.3 0.9 1" springlength="0.102788">
+      <site site="R_FDL_osim_0" />
+      <site site="R_FDL_osim_1" />
+      <site site="R_FDL_osim_2" />
+      <site site="R_FDL_osim_3" />
+      <site site="R_FDL_osim_4" />
+    </spatial>
+    <spatial name="L_FHL" width="0.0006" rgba="0.6 0.3 0.9 1" springlength="0.140128">
+      <site site="L_FHL_attachment0" />
+      <site site="L_FHL_attachment1" />
+      <site site="L_FHL_attachment2" />
+      <site site="L_FHL_attachment3" />
+      <site site="L_FHL_attachment4" />
+    </spatial>
+    <spatial name="R_FHL" width="0.0006" rgba="0.6 0.3 0.9 1" springlength="0.140128">
+      <site site="R_FHL_attachment0" />
+      <site site="R_FHL_attachment1" />
+      <site site="R_FHL_attachment2" />
+      <site site="R_FHL_attachment3" />
+      <site site="R_FHL_attachment4" />
+    </spatial>
+    <spatial name="FL_ShoulderExtensor" width="0.00075" rgba="0.8 0.17 0.1 1" springlength="0.0494596">
+      <site site="FL_ShoulderExtensor_s0_origin" />
+      <geom geom="FL_ShoulderExtensor_s0_pulley0" sidesite="FL_ShoulderExtensor_s0_preferred" />
+      <site site="FL_ShoulderExtensor_s0_insert" />
+    </spatial>
+    <spatial name="FL_ElbowExtensor" width="0.00075" rgba="0.8 0.17 0.1 1" springlength="0.0720542">
+      <site site="FL_ElbowExtensor_s0_origin" />
+      <geom geom="FL_ElbowExtensor_s0_pulley0" sidesite="FL_ElbowExtensor_s0_preferred" />
+      <site site="FL_ElbowExtensor_s0_insert" />
+    </spatial>
+    <spatial name="FL_BicepsBrachii" width="0.00075" rgba="0.8 0.17 0.1 1" springlength="0.10012">
+      <site site="FL_BicepsBrachii_s0_origin" />
+      <geom geom="FL_BicepsBrachii_s0_pulley0" />
+      <site site="FL_BicepsBrachii_s0_tangent" />
+      <geom geom="FL_BicepsBrachii_s0_pulley1" />
+      <site site="FL_BicepsBrachii_s0_insert" />
+    </spatial>
+    <spatial name="FL_ElbowFlexor" width="0.00075" rgba="0.8 0.17 0.1 1" springlength="0.0759418">
+      <site site="FL_ElbowFlexor_s0_origin" />
+      <geom geom="FL_ElbowFlexor_s0_pulley0" sidesite="FL_ElbowFlexor_s0_preferred" />
+      <site site="FL_ElbowFlexor_s0_insert" />
+    </spatial>
+    <spatial name="FL_ElbowFlexorWristFlexor" width="0.00075" rgba="0.8 0.17 0.1 1" springlength="0.142469">
+      <site site="FL_ElbowFlexorWristFlexor_s0_origin" />
+      <geom geom="FL_ElbowFlexorWristFlexor_s0_pulley0" sidesite="FL_ElbowFlexorWristFlexor_s0_preferred" />
+      <site site="FL_ElbowFlexorWristFlexor_s0_insert" />
+      <pulley divisor="1" />
+      <site site="FL_ElbowFlexorWristFlexor_s1_origin" />
+      <geom geom="FL_ElbowFlexorWristFlexor_s1_pulley0" sidesite="FL_ElbowFlexorWristFlexor_s1_preferred" />
+      <site site="FL_ElbowFlexorWristFlexor_s1_insert" />
+    </spatial>
+    <spatial name="FL_WristFlexor" width="0.00075" rgba="0.8 0.17 0.1 1" springlength="0.10313">
+      <site site="FL_WristFlexor_s0_origin" />
+      <site site="FL_WristFlexor_s0_insert" />
+      <pulley divisor="1" />
+      <site site="FL_WristFlexor_s1_origin" />
+      <geom geom="FL_WristFlexor_s1_pulley0" sidesite="FL_WristFlexor_s1_preferred" />
+      <site site="FL_WristFlexor_s1_insert" />
+    </spatial>
+    <spatial name="FL_WristExtensor" width="0.00075" rgba="0.8 0.17 0.1 1" springlength="0.128702">
+      <site site="FL_WristExtensor_s0_origin" />
+      <site site="FL_WristExtensor_s0_insert" />
+      <pulley divisor="1" />
+      <site site="FL_WristExtensor_s1_origin" />
+      <geom geom="FL_WristExtensor_s1_pulley0" sidesite="FL_WristExtensor_s1_preferred" />
+      <site site="FL_WristExtensor_s1_insert" />
+    </spatial>
+    <spatial name="FL_ShoulderFlexor" width="0.00075" rgba="0.8 0.17 0.1 1" springlength="0.0661038">
+      <site site="FL_ShoulderFlexor_s0_origin" />
+      <geom geom="FL_ShoulderFlexor_s0_pulley0" sidesite="FL_ShoulderFlexor_s0_preferred" />
+      <site site="FL_ShoulderFlexor_s0_insert" />
+    </spatial>
+    <spatial name="FL_TricepsBrachiiLong" width="0.00075" rgba="0.8 0.17 0.1 1" springlength="0.0901351">
+      <site site="FL_TricepsBrachiiLong_s0_origin" />
+      <geom geom="FL_TricepsBrachiiLong_s0_pulley0" />
+      <site site="FL_TricepsBrachiiLong_s0_tangent" />
+      <geom geom="FL_TricepsBrachiiLong_s0_pulley1" />
+      <site site="FL_TricepsBrachiiLong_s0_insert" />
+    </spatial>
+    <spatial name="FR_ShoulderExtensor" width="0.00075" rgba="0.8 0.17 0.1 1" springlength="0.0494596">
+      <site site="FR_ShoulderExtensor_s0_origin" />
+      <geom geom="FR_ShoulderExtensor_s0_pulley0" sidesite="FR_ShoulderExtensor_s0_preferred" />
+      <site site="FR_ShoulderExtensor_s0_insert" />
+    </spatial>
+    <spatial name="FR_ElbowExtensor" width="0.00075" rgba="0.8 0.17 0.1 1" springlength="0.0720542">
+      <site site="FR_ElbowExtensor_s0_origin" />
+      <geom geom="FR_ElbowExtensor_s0_pulley0" sidesite="FR_ElbowExtensor_s0_preferred" />
+      <site site="FR_ElbowExtensor_s0_insert" />
+    </spatial>
+    <spatial name="FR_BicepsBrachii" width="0.00075" rgba="0.8 0.17 0.1 1" springlength="0.10012">
+      <site site="FR_BicepsBrachii_s0_origin" />
+      <geom geom="FR_BicepsBrachii_s0_pulley0" />
+      <site site="FR_BicepsBrachii_s0_tangent" />
+      <geom geom="FR_BicepsBrachii_s0_pulley1" />
+      <site site="FR_BicepsBrachii_s0_insert" />
+    </spatial>
+    <spatial name="FR_ElbowFlexor" width="0.00075" rgba="0.8 0.17 0.1 1" springlength="0.0759418">
+      <site site="FR_ElbowFlexor_s0_origin" />
+      <geom geom="FR_ElbowFlexor_s0_pulley0" sidesite="FR_ElbowFlexor_s0_preferred" />
+      <site site="FR_ElbowFlexor_s0_insert" />
+    </spatial>
+    <spatial name="FR_ElbowFlexorWristFlexor" width="0.00075" rgba="0.8 0.17 0.1 1" springlength="0.142469">
+      <site site="FR_ElbowFlexorWristFlexor_s0_origin" />
+      <geom geom="FR_ElbowFlexorWristFlexor_s0_pulley0" sidesite="FR_ElbowFlexorWristFlexor_s0_preferred" />
+      <site site="FR_ElbowFlexorWristFlexor_s0_insert" />
+      <pulley divisor="1" />
+      <site site="FR_ElbowFlexorWristFlexor_s1_origin" />
+      <geom geom="FR_ElbowFlexorWristFlexor_s1_pulley0" sidesite="FR_ElbowFlexorWristFlexor_s1_preferred" />
+      <site site="FR_ElbowFlexorWristFlexor_s1_insert" />
+    </spatial>
+    <spatial name="FR_WristFlexor" width="0.00075" rgba="0.8 0.17 0.1 1" springlength="0.10313">
+      <site site="FR_WristFlexor_s0_origin" />
+      <site site="FR_WristFlexor_s0_insert" />
+      <pulley divisor="1" />
+      <site site="FR_WristFlexor_s1_origin" />
+      <geom geom="FR_WristFlexor_s1_pulley0" sidesite="FR_WristFlexor_s1_preferred" />
+      <site site="FR_WristFlexor_s1_insert" />
+    </spatial>
+    <spatial name="FR_WristExtensor" width="0.00075" rgba="0.8 0.17 0.1 1" springlength="0.128702">
+      <site site="FR_WristExtensor_s0_origin" />
+      <site site="FR_WristExtensor_s0_insert" />
+      <pulley divisor="1" />
+      <site site="FR_WristExtensor_s1_origin" />
+      <geom geom="FR_WristExtensor_s1_pulley0" sidesite="FR_WristExtensor_s1_preferred" />
+      <site site="FR_WristExtensor_s1_insert" />
+    </spatial>
+    <spatial name="FR_ShoulderFlexor" width="0.00075" rgba="0.8 0.17 0.1 1" springlength="0.0661038">
+      <site site="FR_ShoulderFlexor_s0_origin" />
+      <geom geom="FR_ShoulderFlexor_s0_pulley0" sidesite="FR_ShoulderFlexor_s0_preferred" />
+      <site site="FR_ShoulderFlexor_s0_insert" />
+    </spatial>
+    <spatial name="FR_TricepsBrachiiLong" width="0.00075" rgba="0.8 0.17 0.1 1" springlength="0.0901351">
+      <site site="FR_TricepsBrachiiLong_s0_origin" />
+      <geom geom="FR_TricepsBrachiiLong_s0_pulley0" />
+      <site site="FR_TricepsBrachiiLong_s0_tangent" />
+      <geom geom="FR_TricepsBrachiiLong_s0_pulley1" />
+      <site site="FR_TricepsBrachiiLong_s0_insert" />
+    </spatial>
+    <spatial name="FL_S_C3" width="0.0006" rgba="0.6 0.3 0.9 1" springlength="0.0604201">
+      <site site="FL_S_C3_attachment0" />
+      <site site="FL_S_C3_attachment1" />
+    </spatial>
+    <spatial name="FR_S_C3" width="0.0006" rgba="0.6 0.3 0.9 1" springlength="0.0604201">
+      <site site="FR_S_C3_attachment0" />
+      <site site="FR_S_C3_attachment1" />
+    </spatial>
+    <spatial name="FL_S_C4" width="0.0006" rgba="0.6 0.3 0.9 1" springlength="0.0581419">
+      <site site="FL_S_C4_attachment0" />
+      <site site="FL_S_C4_attachment1" />
+    </spatial>
+    <spatial name="FR_S_C4" width="0.0006" rgba="0.6 0.3 0.9 1" springlength="0.0581419">
+      <site site="FR_S_C4_attachment0" />
+      <site site="FR_S_C4_attachment1" />
+    </spatial>
+    <spatial name="FL_S_C5" width="0.0006" rgba="0.6 0.3 0.9 1" springlength="0.0598905">
+      <site site="FL_S_C5_attachment0" />
+      <site site="FL_S_C5_attachment1" />
+    </spatial>
+    <spatial name="FR_S_C5" width="0.0006" rgba="0.6 0.3 0.9 1" springlength="0.0598905">
+      <site site="FR_S_C5_attachment0" />
+      <site site="FR_S_C5_attachment1" />
+    </spatial>
+    <spatial name="FL_S_C6" width="0.0006" rgba="0.6 0.3 0.9 1" springlength="0.0598761">
+      <site site="FL_S_C6_attachment0" />
+      <site site="FL_S_C6_attachment1" />
+    </spatial>
+    <spatial name="FR_S_C6" width="0.0006" rgba="0.6 0.3 0.9 1" springlength="0.0598761">
+      <site site="FR_S_C6_attachment0" />
+      <site site="FR_S_C6_attachment1" />
+    </spatial>
+    <spatial name="FL_S_C7" width="0.0006" rgba="0.6 0.3 0.9 1" springlength="0.0571674">
+      <site site="FL_S_C7_attachment0" />
+      <site site="FL_S_C7_attachment1" />
+    </spatial>
+    <spatial name="FR_S_C7" width="0.0006" rgba="0.6 0.3 0.9 1" springlength="0.0571674">
+      <site site="FR_S_C7_attachment0" />
+      <site site="FR_S_C7_attachment1" />
+    </spatial>
+    <spatial name="FL_S_T1" width="0.0006" rgba="0.6 0.3 0.9 1" springlength="0.0606954">
+      <site site="FL_S_T1_attachment0" />
+      <site site="FL_S_T1_attachment1" />
+    </spatial>
+    <spatial name="FR_S_T1" width="0.0006" rgba="0.6 0.3 0.9 1" springlength="0.0606954">
+      <site site="FR_S_T1_attachment0" />
+      <site site="FR_S_T1_attachment1" />
+    </spatial>
+    <spatial name="FL_S_T2" width="0.0006" rgba="0.6 0.3 0.9 1" springlength="0.0625865">
+      <site site="FL_S_T2_attachment0" />
+      <site site="FL_S_T2_attachment1" />
+    </spatial>
+    <spatial name="FR_S_T2" width="0.0006" rgba="0.6 0.3 0.9 1" springlength="0.0625865">
+      <site site="FR_S_T2_attachment0" />
+      <site site="FR_S_T2_attachment1" />
+    </spatial>
+    <spatial name="FL_S_T3" width="0.0006" rgba="0.6 0.3 0.9 1" springlength="0.0597677">
+      <site site="FL_S_T3_attachment0" />
+      <site site="FL_S_T3_attachment1" />
+    </spatial>
+    <spatial name="FR_S_T3" width="0.0006" rgba="0.6 0.3 0.9 1" springlength="0.0597677">
+      <site site="FR_S_T3_attachment0" />
+      <site site="FR_S_T3_attachment1" />
+    </spatial>
+    <spatial name="FL_S_T4" width="0.0006" rgba="0.6 0.3 0.9 1" springlength="0.0591125">
+      <site site="FL_S_T4_attachment0" />
+      <site site="FL_S_T4_attachment1" />
+    </spatial>
+    <spatial name="FR_S_T4" width="0.0006" rgba="0.6 0.3 0.9 1" springlength="0.0591125">
+      <site site="FR_S_T4_attachment0" />
+      <site site="FR_S_T4_attachment1" />
+    </spatial>
+    <spatial name="FL_S_T5" width="0.0006" rgba="0.6 0.3 0.9 1" springlength="0.0609984">
+      <site site="FL_S_T5_attachment0" />
+      <site site="FL_S_T5_attachment1" />
+    </spatial>
+    <spatial name="FR_S_T5" width="0.0006" rgba="0.6 0.3 0.9 1" springlength="0.0609984">
+      <site site="FR_S_T5_attachment0" />
+      <site site="FR_S_T5_attachment1" />
+    </spatial>
+    <spatial name="FL_S_T6" width="0.0006" rgba="0.6 0.3 0.9 1" springlength="0.061725">
+      <site site="FL_S_T6_attachment0" />
+      <site site="FL_S_T6_attachment1" />
+    </spatial>
+    <spatial name="FR_S_T6" width="0.0006" rgba="0.6 0.3 0.9 1" springlength="0.061725">
+      <site site="FR_S_T6_attachment0" />
+      <site site="FR_S_T6_attachment1" />
+    </spatial>
+    <spatial name="FL_S_T7" width="0.0006" rgba="0.6 0.3 0.9 1" springlength="0.0600135">
+      <site site="FL_S_T7_attachment0" />
+      <site site="FL_S_T7_attachment1" />
+    </spatial>
+    <spatial name="FR_S_T7" width="0.0006" rgba="0.6 0.3 0.9 1" springlength="0.0600135">
+      <site site="FR_S_T7_attachment0" />
+      <site site="FR_S_T7_attachment1" />
+    </spatial>
+    <spatial name="FL_S_T8" width="0.0006" rgba="0.6 0.3 0.9 1" springlength="0.0589539">
+      <site site="FL_S_T8_attachment0" />
+      <site site="FL_S_T8_attachment1" />
+    </spatial>
+    <spatial name="FR_S_T8" width="0.0006" rgba="0.6 0.3 0.9 1" springlength="0.0589539">
+      <site site="FR_S_T8_attachment0" />
+      <site site="FR_S_T8_attachment1" />
+    </spatial>
+    <spatial name="FL_S_T9" width="0.0006" rgba="0.6 0.3 0.9 1" springlength="0.0510935">
+      <site site="FL_S_T9_attachment0" />
+      <site site="FL_S_T9_attachment1" />
+    </spatial>
+    <spatial name="FR_S_T9" width="0.0006" rgba="0.6 0.3 0.9 1" springlength="0.0510935">
+      <site site="FR_S_T9_attachment0" />
+      <site site="FR_S_T9_attachment1" />
+    </spatial>
+    <spatial name="FL_R_C2" width="0.0006" rgba="0.6 0.3 0.9 1" springlength="0.0462683">
+      <site site="FL_R_C2_attachment0" />
+      <site site="FL_R_C2_attachment1" />
+    </spatial>
+    <spatial name="FR_R_C2" width="0.0006" rgba="0.6 0.3 0.9 1" springlength="0.0462683">
+      <site site="FR_R_C2_attachment0" />
+      <site site="FR_R_C2_attachment1" />
+    </spatial>
+    <spatial name="FL_R_C3-7" width="0.0006" rgba="0.6 0.3 0.9 1" springlength="0.0403216">
+      <site site="FL_R_C3-7_attachment0" />
+      <site site="FL_R_C3-7_attachment1" />
+    </spatial>
+    <spatial name="FR_R_C3-7" width="0.0006" rgba="0.6 0.3 0.9 1" springlength="0.0403216">
+      <site site="FR_R_C3-7_attachment0" />
+      <site site="FR_R_C3-7_attachment1" />
+    </spatial>
+    <spatial name="FL_R_T1" width="0.0006" rgba="0.6 0.3 0.9 1" springlength="0.0355278">
+      <site site="FL_R_T1_attachment0" />
+      <site site="FL_R_T1_attachment1" />
+    </spatial>
+    <spatial name="FR_R_T1" width="0.0006" rgba="0.6 0.3 0.9 1" springlength="0.0355278">
+      <site site="FR_R_T1_attachment0" />
+      <site site="FR_R_T1_attachment1" />
+    </spatial>
+    <spatial name="FL_R_T2" width="0.0006" rgba="0.6 0.3 0.9 1" springlength="0.034747">
+      <site site="FL_R_T2_attachment0" />
+      <site site="FL_R_T2_attachment1" />
+    </spatial>
+    <spatial name="FR_R_T2" width="0.0006" rgba="0.6 0.3 0.9 1" springlength="0.034747">
+      <site site="FR_R_T2_attachment0" />
+      <site site="FR_R_T2_attachment1" />
+    </spatial>
+    <spatial name="FL_R_T3" width="0.0006" rgba="0.6 0.3 0.9 1" springlength="0.0339334">
+      <site site="FL_R_T3_attachment0" />
+      <site site="FL_R_T3_attachment1" />
+    </spatial>
+    <spatial name="FR_R_T3" width="0.0006" rgba="0.6 0.3 0.9 1" springlength="0.0339334">
+      <site site="FR_R_T3_attachment0" />
+      <site site="FR_R_T3_attachment1" />
+    </spatial>
+    <spatial name="FL_R_T4" width="0.0006" rgba="0.6 0.3 0.9 1" springlength="0.0277485">
+      <site site="FL_R_T4_attachment0" />
+      <site site="FL_R_T4_attachment1" />
+    </spatial>
+    <spatial name="FR_R_T4" width="0.0006" rgba="0.6 0.3 0.9 1" springlength="0.0277485">
+      <site site="FR_R_T4_attachment0" />
+      <site site="FR_R_T4_attachment1" />
+    </spatial>
+    <spatial name="FL_R_T5" width="0.0006" rgba="0.6 0.3 0.9 1" springlength="0.0260108">
+      <site site="FL_R_T5_attachment0" />
+      <site site="FL_R_T5_attachment1" />
+    </spatial>
+    <spatial name="FR_R_T5" width="0.0006" rgba="0.6 0.3 0.9 1" springlength="0.0260108">
+      <site site="FR_R_T5_attachment0" />
+      <site site="FR_R_T5_attachment1" />
+    </spatial>
+    <spatial name="FL_DigitalExtensors" width="0.0006" rgba="0.6 0.3 0.9 1" springlength="0.137193">
+      <site site="FL_ElbowFlexorWristFlexor_s0_origin" />
+      <geom geom="FL_ElbowFlexorWristFlexor_s0_pulley0" sidesite="FL_ElbowFlexorWristFlexor_s0_preferred" />
+      <site site="FL_ElbowFlexorWristFlexor_s0_insert" />
+      <pulley divisor="1" />
+      <site site="FL_ElbowFlexorWristFlexor_s1_origin" />
+      <geom geom="FL_ElbowFlexorWristFlexor_s1_pulley0" sidesite="FL_ElbowFlexorWristFlexor_s1_preferred" />
+      <site site="FL_DigitalExtensors_attachment0" />
+      <site site="FL_DigitalExtensors_attachment1" />
+    </spatial>
+    <spatial name="FR_DigitalExtensors" width="0.0006" rgba="0.6 0.3 0.9 1" springlength="0.137193">
+      <site site="FR_ElbowFlexorWristFlexor_s0_origin" />
+      <geom geom="FR_ElbowFlexorWristFlexor_s0_pulley0" sidesite="FR_ElbowFlexorWristFlexor_s0_preferred" />
+      <site site="FR_ElbowFlexorWristFlexor_s0_insert" />
+      <pulley divisor="1" />
+      <site site="FR_ElbowFlexorWristFlexor_s1_origin" />
+      <geom geom="FR_ElbowFlexorWristFlexor_s1_pulley0" sidesite="FR_ElbowFlexorWristFlexor_s1_preferred" />
+      <site site="FR_DigitalExtensors_attachment0" />
+      <site site="FR_DigitalExtensors_attachment1" />
+    </spatial>
+    <spatial name="FL_DigitalFlexors" width="0.0006" rgba="0.6 0.3 0.9 1" springlength="0.140759">
+      <site site="FL_WristExtensor_s0_origin" />
+      <site site="FL_WristExtensor_s0_insert" />
+      <pulley divisor="1" />
+      <site site="FL_WristExtensor_s1_origin" />
+      <geom geom="FL_WristExtensor_s1_pulley0" sidesite="FL_WristExtensor_s1_preferred" />
+      <site site="FL_DigitalFlexors_attachment0" />
+      <site site="FL_DigitalFlexors_attachment1" />
+    </spatial>
+    <spatial name="FR_DigitalFlexors" width="0.0006" rgba="0.6 0.3 0.9 1" springlength="0.140759">
+      <site site="FR_WristExtensor_s0_origin" />
+      <site site="FR_WristExtensor_s0_insert" />
+      <pulley divisor="1" />
+      <site site="FR_WristExtensor_s1_origin" />
+      <geom geom="FR_WristExtensor_s1_pulley0" sidesite="FR_WristExtensor_s1_preferred" />
+      <site site="FR_DigitalFlexors_attachment0" />
+      <site site="FR_DigitalFlexors_attachment1" />
+    </spatial>
+  <spatial name="FL_TrapeziusCervical" width=".0007" rgba=".8 .3 .15 1"><site site="FL_TrapeziusCervical_origin" /><site site="FL_TrapeziusCervical_insertion" /></spatial><spatial name="FR_TrapeziusCervical" width=".0007" rgba=".8 .3 .15 1"><site site="FR_TrapeziusCervical_origin" /><site site="FR_TrapeziusCervical_insertion" /></spatial><spatial name="FL_TrapeziusThoracic" width=".0007" rgba=".8 .3 .15 1"><site site="FL_TrapeziusThoracic_origin" /><site site="FL_TrapeziusThoracic_insertion" /></spatial><spatial name="FR_TrapeziusThoracic" width=".0007" rgba=".8 .3 .15 1"><site site="FR_TrapeziusThoracic_origin" /><site site="FR_TrapeziusThoracic_insertion" /></spatial><spatial name="FL_LatissimusDorsi" width=".0007" rgba=".8 .3 .15 1"><site site="FL_LatissimusDorsi_origin" /><site site="FL_LatissimusDorsi_insertion" /></spatial><spatial name="FR_LatissimusDorsi" width=".0007" rgba=".8 .3 .15 1"><site site="FR_LatissimusDorsi_origin" /><site site="FR_LatissimusDorsi_insertion" /></spatial><spatial name="FL_PectoralisProfundus" width=".0007" rgba=".8 .3 .15 1"><site site="FL_PectoralisProfundus_origin" /><site site="FL_PectoralisProfundus_insertion" /></spatial><spatial name="FR_PectoralisProfundus" width=".0007" rgba=".8 .3 .15 1"><site site="FR_PectoralisProfundus_origin" /><site site="FR_PectoralisProfundus_insertion" /></spatial><spatial name="FL_PectoralisSuperficialis" width=".0007" rgba=".8 .3 .15 1"><site site="FL_PectoralisSuperficialis_origin" /><site site="FL_PectoralisSuperficialis_insertion" /></spatial><spatial name="FR_PectoralisSuperficialis" width=".0007" rgba=".8 .3 .15 1"><site site="FR_PectoralisSuperficialis_origin" /><site site="FR_PectoralisSuperficialis_insertion" /></spatial><spatial name="FL_Clavobrachialis" width=".0007" rgba=".8 .3 .15 1"><site site="FL_Clavobrachialis_origin" /><site site="FL_Clavobrachialis_insertion" /></spatial><spatial name="FR_Clavobrachialis" width=".0007" rgba=".8 .3 .15 1"><site site="FR_Clavobrachialis_origin" /><site site="FR_Clavobrachialis_insertion" /></spatial></tendon>
+
+  <actuator>
+    <general name="L_IP" tendon="L_IP" ctrlrange="0 1" ctrllimited="true" lengthrange="0.034 0.1044" dyntype="muscle" dynprm="0.015 0.05" biastype="affine" gainprm="0" />
+    <general name="L_BFA" tendon="L_BFA" ctrlrange="0 1" ctrllimited="true" lengthrange="0.0385518 0.0726518" dyntype="muscle" dynprm="0.015 0.05" biastype="affine" gainprm="0" />
+    <general name="L_VL" tendon="L_VL" ctrlrange="0 1" ctrllimited="true" lengthrange="0.0898202 0.120027" dyntype="muscle" dynprm="0.015 0.05" biastype="affine" gainprm="0" />
+    <general name="L_VM" tendon="L_VM" ctrlrange="0 1" ctrllimited="true" lengthrange="0.0898202 0.120027" dyntype="muscle" dynprm="0.015 0.05" biastype="affine" gainprm="0" />
+    <general name="L_TA" tendon="L_TA" ctrlrange="0 1" ctrllimited="true" lengthrange="0.0177968 0.037802" dyntype="muscle" dynprm="0.015 0.05" biastype="affine" gainprm="0" />
+    <general name="L_SO" tendon="L_SO" ctrlrange="0 1" ctrllimited="true" lengthrange="0.0781151 0.116065" dyntype="muscle" dynprm="0.015 0.05" biastype="affine" gainprm="0" />
+    <general name="L_RF" tendon="L_RF" ctrlrange="0 1" ctrllimited="true" lengthrange="0.0948376 0.119587" dyntype="muscle" dynprm="0.015 0.05" biastype="affine" gainprm="0" />
+    <general name="L_BFP" tendon="L_BFP" ctrlrange="0 1" ctrllimited="true" lengthrange="0.0802659 0.142966" dyntype="muscle" dynprm="0.015 0.05" biastype="affine" gainprm="0" />
+    <general name="L_SAM" tendon="L_SAM" ctrlrange="0 1" ctrllimited="true" lengthrange="0.06 0.1876" dyntype="muscle" dynprm="0.015 0.05" biastype="affine" gainprm="0" />
+    <general name="L_LG" tendon="L_LG" ctrlrange="0 1" ctrllimited="true" lengthrange="0.0852747 0.114975" dyntype="muscle" dynprm="0.015 0.05" biastype="affine" gainprm="0" />
+    <general name="L_MG" tendon="L_MG" ctrlrange="0 1" ctrllimited="true" lengthrange="0.0852747 0.114975" dyntype="muscle" dynprm="0.015 0.05" biastype="affine" gainprm="0" />
+    <general name="R_IP" tendon="R_IP" ctrlrange="0 1" ctrllimited="true" lengthrange="0.034 0.1044" dyntype="muscle" dynprm="0.015 0.05" biastype="affine" gainprm="0" />
+    <general name="R_BFA" tendon="R_BFA" ctrlrange="0 1" ctrllimited="true" lengthrange="0.0385518 0.0726518" dyntype="muscle" dynprm="0.015 0.05" biastype="affine" gainprm="0" />
+    <general name="R_VL" tendon="R_VL" ctrlrange="0 1" ctrllimited="true" lengthrange="0.0898202 0.120027" dyntype="muscle" dynprm="0.015 0.05" biastype="affine" gainprm="0" />
+    <general name="R_VM" tendon="R_VM" ctrlrange="0 1" ctrllimited="true" lengthrange="0.0898202 0.120027" dyntype="muscle" dynprm="0.015 0.05" biastype="affine" gainprm="0" />
+    <general name="R_TA" tendon="R_TA" ctrlrange="0 1" ctrllimited="true" lengthrange="0.0177968 0.037802" dyntype="muscle" dynprm="0.015 0.05" biastype="affine" gainprm="0" />
+    <general name="R_SO" tendon="R_SO" ctrlrange="0 1" ctrllimited="true" lengthrange="0.0781151 0.116065" dyntype="muscle" dynprm="0.015 0.05" biastype="affine" gainprm="0" />
+    <general name="R_RF" tendon="R_RF" ctrlrange="0 1" ctrllimited="true" lengthrange="0.0948376 0.119587" dyntype="muscle" dynprm="0.015 0.05" biastype="affine" gainprm="0" />
+    <general name="R_BFP" tendon="R_BFP" ctrlrange="0 1" ctrllimited="true" lengthrange="0.0802659 0.142966" dyntype="muscle" dynprm="0.015 0.05" biastype="affine" gainprm="0" />
+    <general name="R_SAM" tendon="R_SAM" ctrlrange="0 1" ctrllimited="true" lengthrange="0.06 0.1876" dyntype="muscle" dynprm="0.015 0.05" biastype="affine" gainprm="0" />
+    <general name="R_LG" tendon="R_LG" ctrlrange="0 1" ctrllimited="true" lengthrange="0.0852747 0.114975" dyntype="muscle" dynprm="0.015 0.05" biastype="affine" gainprm="0" />
+    <general name="R_MG" tendon="R_MG" ctrlrange="0 1" ctrllimited="true" lengthrange="0.0852747 0.114975" dyntype="muscle" dynprm="0.015 0.05" biastype="affine" gainprm="0" />
+    <general name="L_EDL" tendon="L_EDL" ctrlrange="0 1" ctrllimited="true" lengthrange="0.001 0.5" dyntype="muscle" dynprm="0.015 0.05" biastype="affine" gainprm="0" />
+    <general name="R_EDL" tendon="R_EDL" ctrlrange="0 1" ctrllimited="true" lengthrange="0.001 0.5" dyntype="muscle" dynprm="0.015 0.05" biastype="affine" gainprm="0" />
+    <general name="L_FDL" tendon="L_FDL" ctrlrange="0 1" ctrllimited="true" lengthrange="0.001 0.5" dyntype="muscle" dynprm="0.015 0.05" biastype="affine" gainprm="0" />
+    <general name="R_FDL" tendon="R_FDL" ctrlrange="0 1" ctrllimited="true" lengthrange="0.001 0.5" dyntype="muscle" dynprm="0.015 0.05" biastype="affine" gainprm="0" />
+    <general name="L_FHL" tendon="L_FHL" ctrlrange="0 1" ctrllimited="true" lengthrange="0.001 0.5" dyntype="muscle" dynprm="0.015 0.05" biastype="affine" gainprm="0" />
+    <general name="R_FHL" tendon="R_FHL" ctrlrange="0 1" ctrllimited="true" lengthrange="0.001 0.5" dyntype="muscle" dynprm="0.015 0.05" biastype="affine" gainprm="0" />
+    <general name="FL_ShoulderExtensor" tendon="FL_ShoulderExtensor" ctrlrange="0 1" ctrllimited="true" lengthrange="0.0527415 0.0695837" dyntype="muscle" dynprm="0.01 0.04" biastype="affine" gainprm="0" />
+    <general name="FL_ElbowExtensor" tendon="FL_ElbowExtensor" ctrlrange="0 1" ctrllimited="true" lengthrange="0.0470794 0.0786092" dyntype="muscle" dynprm="0.01 0.04" biastype="affine" gainprm="0" />
+    <general name="FL_BicepsBrachii" tendon="FL_BicepsBrachii" ctrlrange="0 1" ctrllimited="true" lengthrange="0.100237 0.127416" dyntype="muscle" dynprm="0.01 0.04" biastype="affine" gainprm="0" />
+    <general name="FL_ElbowFlexor" tendon="FL_ElbowFlexor" ctrlrange="0 1" ctrllimited="true" lengthrange="0.0478836 0.096014" dyntype="muscle" dynprm="0.01 0.04" biastype="affine" gainprm="0" />
+    <general name="FL_ElbowFlexorWristFlexor" tendon="FL_ElbowFlexorWristFlexor" ctrlrange="0 1" ctrllimited="true" lengthrange="0.124739 0.154674" dyntype="muscle" dynprm="0.01 0.04" biastype="affine" gainprm="0" />
+    <general name="FL_WristFlexor" tendon="FL_WristFlexor" ctrlrange="0 1" ctrllimited="true" lengthrange="0.0968908 0.119976" dyntype="muscle" dynprm="0.01 0.04" biastype="affine" gainprm="0" />
+    <general name="FL_WristExtensor" tendon="FL_WristExtensor" ctrlrange="0 1" ctrllimited="true" lengthrange="0.113945 0.128313" dyntype="muscle" dynprm="0.01 0.04" biastype="affine" gainprm="0" />
+    <general name="FL_ShoulderFlexor" tendon="FL_ShoulderFlexor" ctrlrange="0 1" ctrllimited="true" lengthrange="0.0442046 0.0875454" dyntype="muscle" dynprm="0.01 0.04" biastype="affine" gainprm="0" />
+    <general name="FL_TricepsBrachiiLong" tendon="FL_TricepsBrachiiLong" ctrlrange="0 1" ctrllimited="true" lengthrange="0.0897275 0.115269" dyntype="muscle" dynprm="0.01 0.04" biastype="affine" gainprm="0" />
+    <general name="FR_ShoulderExtensor" tendon="FR_ShoulderExtensor" ctrlrange="0 1" ctrllimited="true" lengthrange="0.0527415 0.0695837" dyntype="muscle" dynprm="0.01 0.04" biastype="affine" gainprm="0" />
+    <general name="FR_ElbowExtensor" tendon="FR_ElbowExtensor" ctrlrange="0 1" ctrllimited="true" lengthrange="0.0470794 0.0786092" dyntype="muscle" dynprm="0.01 0.04" biastype="affine" gainprm="0" />
+    <general name="FR_BicepsBrachii" tendon="FR_BicepsBrachii" ctrlrange="0 1" ctrllimited="true" lengthrange="0.100237 0.127416" dyntype="muscle" dynprm="0.01 0.04" biastype="affine" gainprm="0" />
+    <general name="FR_ElbowFlexor" tendon="FR_ElbowFlexor" ctrlrange="0 1" ctrllimited="true" lengthrange="0.0478836 0.096014" dyntype="muscle" dynprm="0.01 0.04" biastype="affine" gainprm="0" />
+    <general name="FR_ElbowFlexorWristFlexor" tendon="FR_ElbowFlexorWristFlexor" ctrlrange="0 1" ctrllimited="true" lengthrange="0.124739 0.154674" dyntype="muscle" dynprm="0.01 0.04" biastype="affine" gainprm="0" />
+    <general name="FR_WristFlexor" tendon="FR_WristFlexor" ctrlrange="0 1" ctrllimited="true" lengthrange="0.0968908 0.119976" dyntype="muscle" dynprm="0.01 0.04" biastype="affine" gainprm="0" />
+    <general name="FR_WristExtensor" tendon="FR_WristExtensor" ctrlrange="0 1" ctrllimited="true" lengthrange="0.113945 0.128313" dyntype="muscle" dynprm="0.01 0.04" biastype="affine" gainprm="0" />
+    <general name="FR_ShoulderFlexor" tendon="FR_ShoulderFlexor" ctrlrange="0 1" ctrllimited="true" lengthrange="0.0442046 0.0875454" dyntype="muscle" dynprm="0.01 0.04" biastype="affine" gainprm="0" />
+    <general name="FR_TricepsBrachiiLong" tendon="FR_TricepsBrachiiLong" ctrlrange="0 1" ctrllimited="true" lengthrange="0.0897275 0.115269" dyntype="muscle" dynprm="0.01 0.04" biastype="affine" gainprm="0" />
+    <general name="FL_S_C3" tendon="FL_S_C3" ctrlrange="0 1" ctrllimited="true" lengthrange="0.001 0.5" dyntype="muscle" dynprm="0.015 0.05" biastype="affine" gainprm="0" />
+    <general name="FR_S_C3" tendon="FR_S_C3" ctrlrange="0 1" ctrllimited="true" lengthrange="0.001 0.5" dyntype="muscle" dynprm="0.015 0.05" biastype="affine" gainprm="0" />
+    <general name="FL_S_C4" tendon="FL_S_C4" ctrlrange="0 1" ctrllimited="true" lengthrange="0.001 0.5" dyntype="muscle" dynprm="0.015 0.05" biastype="affine" gainprm="0" />
+    <general name="FR_S_C4" tendon="FR_S_C4" ctrlrange="0 1" ctrllimited="true" lengthrange="0.001 0.5" dyntype="muscle" dynprm="0.015 0.05" biastype="affine" gainprm="0" />
+    <general name="FL_S_C5" tendon="FL_S_C5" ctrlrange="0 1" ctrllimited="true" lengthrange="0.001 0.5" dyntype="muscle" dynprm="0.015 0.05" biastype="affine" gainprm="0" />
+    <general name="FR_S_C5" tendon="FR_S_C5" ctrlrange="0 1" ctrllimited="true" lengthrange="0.001 0.5" dyntype="muscle" dynprm="0.015 0.05" biastype="affine" gainprm="0" />
+    <general name="FL_S_C6" tendon="FL_S_C6" ctrlrange="0 1" ctrllimited="true" lengthrange="0.001 0.5" dyntype="muscle" dynprm="0.015 0.05" biastype="affine" gainprm="0" />
+    <general name="FR_S_C6" tendon="FR_S_C6" ctrlrange="0 1" ctrllimited="true" lengthrange="0.001 0.5" dyntype="muscle" dynprm="0.015 0.05" biastype="affine" gainprm="0" />
+    <general name="FL_S_C7" tendon="FL_S_C7" ctrlrange="0 1" ctrllimited="true" lengthrange="0.001 0.5" dyntype="muscle" dynprm="0.015 0.05" biastype="affine" gainprm="0" />
+    <general name="FR_S_C7" tendon="FR_S_C7" ctrlrange="0 1" ctrllimited="true" lengthrange="0.001 0.5" dyntype="muscle" dynprm="0.015 0.05" biastype="affine" gainprm="0" />
+    <general name="FL_S_T1" tendon="FL_S_T1" ctrlrange="0 1" ctrllimited="true" lengthrange="0.001 0.5" dyntype="muscle" dynprm="0.015 0.05" biastype="affine" gainprm="0" />
+    <general name="FR_S_T1" tendon="FR_S_T1" ctrlrange="0 1" ctrllimited="true" lengthrange="0.001 0.5" dyntype="muscle" dynprm="0.015 0.05" biastype="affine" gainprm="0" />
+    <general name="FL_S_T2" tendon="FL_S_T2" ctrlrange="0 1" ctrllimited="true" lengthrange="0.001 0.5" dyntype="muscle" dynprm="0.015 0.05" biastype="affine" gainprm="0" />
+    <general name="FR_S_T2" tendon="FR_S_T2" ctrlrange="0 1" ctrllimited="true" lengthrange="0.001 0.5" dyntype="muscle" dynprm="0.015 0.05" biastype="affine" gainprm="0" />
+    <general name="FL_S_T3" tendon="FL_S_T3" ctrlrange="0 1" ctrllimited="true" lengthrange="0.001 0.5" dyntype="muscle" dynprm="0.015 0.05" biastype="affine" gainprm="0" />
+    <general name="FR_S_T3" tendon="FR_S_T3" ctrlrange="0 1" ctrllimited="true" lengthrange="0.001 0.5" dyntype="muscle" dynprm="0.015 0.05" biastype="affine" gainprm="0" />
+    <general name="FL_S_T4" tendon="FL_S_T4" ctrlrange="0 1" ctrllimited="true" lengthrange="0.001 0.5" dyntype="muscle" dynprm="0.015 0.05" biastype="affine" gainprm="0" />
+    <general name="FR_S_T4" tendon="FR_S_T4" ctrlrange="0 1" ctrllimited="true" lengthrange="0.001 0.5" dyntype="muscle" dynprm="0.015 0.05" biastype="affine" gainprm="0" />
+    <general name="FL_S_T5" tendon="FL_S_T5" ctrlrange="0 1" ctrllimited="true" lengthrange="0.001 0.5" dyntype="muscle" dynprm="0.015 0.05" biastype="affine" gainprm="0" />
+    <general name="FR_S_T5" tendon="FR_S_T5" ctrlrange="0 1" ctrllimited="true" lengthrange="0.001 0.5" dyntype="muscle" dynprm="0.015 0.05" biastype="affine" gainprm="0" />
+    <general name="FL_S_T6" tendon="FL_S_T6" ctrlrange="0 1" ctrllimited="true" lengthrange="0.001 0.5" dyntype="muscle" dynprm="0.015 0.05" biastype="affine" gainprm="0" />
+    <general name="FR_S_T6" tendon="FR_S_T6" ctrlrange="0 1" ctrllimited="true" lengthrange="0.001 0.5" dyntype="muscle" dynprm="0.015 0.05" biastype="affine" gainprm="0" />
+    <general name="FL_S_T7" tendon="FL_S_T7" ctrlrange="0 1" ctrllimited="true" lengthrange="0.001 0.5" dyntype="muscle" dynprm="0.015 0.05" biastype="affine" gainprm="0" />
+    <general name="FR_S_T7" tendon="FR_S_T7" ctrlrange="0 1" ctrllimited="true" lengthrange="0.001 0.5" dyntype="muscle" dynprm="0.015 0.05" biastype="affine" gainprm="0" />
+    <general name="FL_S_T8" tendon="FL_S_T8" ctrlrange="0 1" ctrllimited="true" lengthrange="0.001 0.5" dyntype="muscle" dynprm="0.015 0.05" biastype="affine" gainprm="0" />
+    <general name="FR_S_T8" tendon="FR_S_T8" ctrlrange="0 1" ctrllimited="true" lengthrange="0.001 0.5" dyntype="muscle" dynprm="0.015 0.05" biastype="affine" gainprm="0" />
+    <general name="FL_S_T9" tendon="FL_S_T9" ctrlrange="0 1" ctrllimited="true" lengthrange="0.001 0.5" dyntype="muscle" dynprm="0.015 0.05" biastype="affine" gainprm="0" />
+    <general name="FR_S_T9" tendon="FR_S_T9" ctrlrange="0 1" ctrllimited="true" lengthrange="0.001 0.5" dyntype="muscle" dynprm="0.015 0.05" biastype="affine" gainprm="0" />
+    <general name="FL_R_C2" tendon="FL_R_C2" ctrlrange="0 1" ctrllimited="true" lengthrange="0.001 0.5" dyntype="muscle" dynprm="0.015 0.05" biastype="affine" gainprm="0" />
+    <general name="FR_R_C2" tendon="FR_R_C2" ctrlrange="0 1" ctrllimited="true" lengthrange="0.001 0.5" dyntype="muscle" dynprm="0.015 0.05" biastype="affine" gainprm="0" />
+    <general name="FL_R_C3-7" tendon="FL_R_C3-7" ctrlrange="0 1" ctrllimited="true" lengthrange="0.001 0.5" dyntype="muscle" dynprm="0.015 0.05" biastype="affine" gainprm="0" />
+    <general name="FR_R_C3-7" tendon="FR_R_C3-7" ctrlrange="0 1" ctrllimited="true" lengthrange="0.001 0.5" dyntype="muscle" dynprm="0.015 0.05" biastype="affine" gainprm="0" />
+    <general name="FL_R_T1" tendon="FL_R_T1" ctrlrange="0 1" ctrllimited="true" lengthrange="0.001 0.5" dyntype="muscle" dynprm="0.015 0.05" biastype="affine" gainprm="0" />
+    <general name="FR_R_T1" tendon="FR_R_T1" ctrlrange="0 1" ctrllimited="true" lengthrange="0.001 0.5" dyntype="muscle" dynprm="0.015 0.05" biastype="affine" gainprm="0" />
+    <general name="FL_R_T2" tendon="FL_R_T2" ctrlrange="0 1" ctrllimited="true" lengthrange="0.001 0.5" dyntype="muscle" dynprm="0.015 0.05" biastype="affine" gainprm="0" />
+    <general name="FR_R_T2" tendon="FR_R_T2" ctrlrange="0 1" ctrllimited="true" lengthrange="0.001 0.5" dyntype="muscle" dynprm="0.015 0.05" biastype="affine" gainprm="0" />
+    <general name="FL_R_T3" tendon="FL_R_T3" ctrlrange="0 1" ctrllimited="true" lengthrange="0.001 0.5" dyntype="muscle" dynprm="0.015 0.05" biastype="affine" gainprm="0" />
+    <general name="FR_R_T3" tendon="FR_R_T3" ctrlrange="0 1" ctrllimited="true" lengthrange="0.001 0.5" dyntype="muscle" dynprm="0.015 0.05" biastype="affine" gainprm="0" />
+    <general name="FL_R_T4" tendon="FL_R_T4" ctrlrange="0 1" ctrllimited="true" lengthrange="0.001 0.5" dyntype="muscle" dynprm="0.015 0.05" biastype="affine" gainprm="0" />
+    <general name="FR_R_T4" tendon="FR_R_T4" ctrlrange="0 1" ctrllimited="true" lengthrange="0.001 0.5" dyntype="muscle" dynprm="0.015 0.05" biastype="affine" gainprm="0" />
+    <general name="FL_R_T5" tendon="FL_R_T5" ctrlrange="0 1" ctrllimited="true" lengthrange="0.001 0.5" dyntype="muscle" dynprm="0.015 0.05" biastype="affine" gainprm="0" />
+    <general name="FR_R_T5" tendon="FR_R_T5" ctrlrange="0 1" ctrllimited="true" lengthrange="0.001 0.5" dyntype="muscle" dynprm="0.015 0.05" biastype="affine" gainprm="0" />
+    <general name="FL_DigitalExtensors" tendon="FL_DigitalExtensors" ctrlrange="0 1" ctrllimited="true" lengthrange="0.001 0.5" dyntype="muscle" dynprm="0.015 0.05" biastype="affine" gainprm="0" />
+    <general name="FR_DigitalExtensors" tendon="FR_DigitalExtensors" ctrlrange="0 1" ctrllimited="true" lengthrange="0.001 0.5" dyntype="muscle" dynprm="0.015 0.05" biastype="affine" gainprm="0" />
+    <general name="FL_DigitalFlexors" tendon="FL_DigitalFlexors" ctrlrange="0 1" ctrllimited="true" lengthrange="0.001 0.5" dyntype="muscle" dynprm="0.015 0.05" biastype="affine" gainprm="0" />
+    <general name="FR_DigitalFlexors" tendon="FR_DigitalFlexors" ctrlrange="0 1" ctrllimited="true" lengthrange="0.001 0.5" dyntype="muscle" dynprm="0.015 0.05" biastype="affine" gainprm="0" />
+  <general name="FL_TrapeziusCervical" tendon="FL_TrapeziusCervical" dyntype="muscle" dynprm=".015 .05" gaintype="fixed" gainprm="0" biastype="affine" biasprm="0" ctrllimited="true" ctrlrange="0 1" lengthrange=".001 .5" /><general name="FR_TrapeziusCervical" tendon="FR_TrapeziusCervical" dyntype="muscle" dynprm=".015 .05" gaintype="fixed" gainprm="0" biastype="affine" biasprm="0" ctrllimited="true" ctrlrange="0 1" lengthrange=".001 .5" /><general name="FL_TrapeziusThoracic" tendon="FL_TrapeziusThoracic" dyntype="muscle" dynprm=".015 .05" gaintype="fixed" gainprm="0" biastype="affine" biasprm="0" ctrllimited="true" ctrlrange="0 1" lengthrange=".001 .5" /><general name="FR_TrapeziusThoracic" tendon="FR_TrapeziusThoracic" dyntype="muscle" dynprm=".015 .05" gaintype="fixed" gainprm="0" biastype="affine" biasprm="0" ctrllimited="true" ctrlrange="0 1" lengthrange=".001 .5" /><general name="FL_LatissimusDorsi" tendon="FL_LatissimusDorsi" dyntype="muscle" dynprm=".015 .05" gaintype="fixed" gainprm="0" biastype="affine" biasprm="0" ctrllimited="true" ctrlrange="0 1" lengthrange=".001 .5" /><general name="FR_LatissimusDorsi" tendon="FR_LatissimusDorsi" dyntype="muscle" dynprm=".015 .05" gaintype="fixed" gainprm="0" biastype="affine" biasprm="0" ctrllimited="true" ctrlrange="0 1" lengthrange=".001 .5" /><general name="FL_PectoralisProfundus" tendon="FL_PectoralisProfundus" dyntype="muscle" dynprm=".015 .05" gaintype="fixed" gainprm="0" biastype="affine" biasprm="0" ctrllimited="true" ctrlrange="0 1" lengthrange=".001 .5" /><general name="FR_PectoralisProfundus" tendon="FR_PectoralisProfundus" dyntype="muscle" dynprm=".015 .05" gaintype="fixed" gainprm="0" biastype="affine" biasprm="0" ctrllimited="true" ctrlrange="0 1" lengthrange=".001 .5" /><general name="FL_PectoralisSuperficialis" tendon="FL_PectoralisSuperficialis" dyntype="muscle" dynprm=".015 .05" gaintype="fixed" gainprm="0" biastype="affine" biasprm="0" ctrllimited="true" ctrlrange="0 1" lengthrange=".001 .5" /><general name="FR_PectoralisSuperficialis" tendon="FR_PectoralisSuperficialis" dyntype="muscle" dynprm=".015 .05" gaintype="fixed" gainprm="0" biastype="affine" biasprm="0" ctrllimited="true" ctrlrange="0 1" lengthrange=".001 .5" /><general name="FL_Clavobrachialis" tendon="FL_Clavobrachialis" dyntype="muscle" dynprm=".015 .05" gaintype="fixed" gainprm="0" biastype="affine" biasprm="0" ctrllimited="true" ctrlrange="0 1" lengthrange=".001 .5" /><general name="FR_Clavobrachialis" tendon="FR_Clavobrachialis" dyntype="muscle" dynprm=".015 .05" gaintype="fixed" gainprm="0" biastype="affine" biasprm="0" ctrllimited="true" ctrlrange="0 1" lengthrange=".001 .5" /></actuator>
+</mujoco>

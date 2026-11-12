@@ -1,0 +1,31 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Read a named, editable tab-delimited numerical time-series table.</title><link rel="stylesheet" href="../style.css"></head><body><!-- generated folder guide --><header><div class="tag">Cat · Full-body neuromechanics</div><h1>Read a named, editable tab-delimited numerical time-series table.</h1><nav><a href="../../START_HERE.html">Start here</a> · <a href="../project_structure.html">Find a file</a></nav></header><main><p><a href="../../Code/neuromechanics/read_time_series.py">Code/neuromechanics/read_time_series.py</a></p><pre style="overflow:auto;white-space:pre"><span id="L1">   1</span> &quot;&quot;&quot;Read a named, editable tab-delimited numerical time-series table.&quot;&quot;&quot;
+<span id="L2">   2</span> 
+<span id="L3">   3</span> from pathlib import Path
+<span id="L4">   4</span> 
+<span id="L5">   5</span> import numpy as np
+<span id="L6">   6</span> 
+<span id="L7">   7</span> 
+<span id="L8">   8</span> def read_time_series(path, expected_channels=None):
+<span id="L9">   9</span>     &quot;&quot;&quot;First column is phase (0..1); remaining headers are channel names.
+<span id="L10">  10</span> 
+<span id="L11">  11</span>     A complete cycle includes both endpoints. No silent clipping, column
+<span id="L12">  12</span>     reordering, phase shift, filtering or extrapolation occurs here.
+<span id="L13">  13</span>     &quot;&quot;&quot;
+<span id="L14">  14</span>     path = Path(path)
+<span id="L15">  15</span>     headers = path.read_text(encoding=&quot;utf-8&quot;).splitlines()[0].split(&quot;\t&quot;)
+<span id="L16">  16</span>     values = np.loadtxt(path, delimiter=&quot;\t&quot;, skiprows=1, ndmin=2)
+<span id="L17">  17</span>     if headers[0] != &quot;phase_0_to_1&quot; or len(headers) != values.shape[1]:
+<span id="L18">  18</span>         # Stop and explain the invalid model setting or failed calculation.
+<span id="L19">  19</span>         raise ValueError(f&quot;{path}: invalid column headers&quot;)
+<span id="L20">  20</span>     if len(set(headers)) != len(headers) or not np.isfinite(values).all():
+<span id="L21">  21</span>         # Stop and explain the invalid model setting or failed calculation.
+<span id="L22">  22</span>         raise ValueError(f&quot;{path}: duplicate names or nonfinite values&quot;)
+<span id="L23">  23</span>     phase = values[:, 0]
+<span id="L24">  24</span>     if len(phase) &lt; 2 or phase[0] != 0 or phase[-1] != 1 or np.any(np.diff(phase) &lt;= 0):
+<span id="L25">  25</span>         # Stop and explain the invalid model setting or failed calculation.
+<span id="L26">  26</span>         raise ValueError(f&quot;{path}: phase must increase strictly from 0 to 1&quot;)
+<span id="L27">  27</span>     if expected_channels is not None and headers[1:] != list(expected_channels):
+<span id="L28">  28</span>         # Stop and explain the invalid model setting or failed calculation.
+<span id="L29">  29</span>         raise ValueError(f&quot;{path}: channel names/order differ from the model&quot;)
+<span id="L30">  30</span>     return phase, headers[1:], values[:, 1:]
+</pre></main></body></html>

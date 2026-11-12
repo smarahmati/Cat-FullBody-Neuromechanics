@@ -1,0 +1,78 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>The existing fiber law and its derivatives, for the elastic root solver.</title><link rel="stylesheet" href="../style.css"></head><body><!-- generated folder guide --><header><div class="tag">Cat · Full-body neuromechanics</div><h1>The existing fiber law and its derivatives, for the elastic root solver.</h1><nav><a href="../../START_HERE.html">Start here</a> · <a href="../project_structure.html">Find a file</a></nav></header><main><p><a href="../../Code/neuromechanics/muscle_force_curve_derivatives.py">Code/neuromechanics/muscle_force_curve_derivatives.py</a></p><pre style="overflow:auto;white-space:pre"><span id="L1">   1</span> &quot;&quot;&quot;The existing fiber law and its derivatives, for the elastic root solver.&quot;&quot;&quot;
+<span id="L2">   2</span> 
+<span id="L3">   3</span> import numpy as np
+<span id="L4">   4</span> 
+<span id="L5">   5</span> from numba import njit
+<span id="L6">   6</span> 
+<span id="L7">   7</span> from .muscle_force_length_velocity import muscle_force_length_velocity
+<span id="L8">   8</span> 
+<span id="L9">   9</span> from .muscle_force_velocity_degroote import muscle_force_velocity_degroote
+<span id="L10">  10</span> 
+<span id="L11">  11</span> from model_configuration.formulation_constants import (
+<span id="L12">  12</span>     ACTIVE_LENGTH_POWER,
+<span id="L13">  13</span>     ACTIVE_LENGTH_WIDTH,
+<span id="L14">  14</span>     PASSIVE_LENGTH_SCALE,
+<span id="L15">  15</span>     PASSIVE_LENGTH_EXPONENT,
+<span id="L16">  16</span>     PASSIVE_EXPONENT_CAP,
+<span id="L17">  17</span> )
+<span id="L18">  18</span> 
+<span id="L19">  19</span> 
+<span id="L20">  20</span> # Compile this numerical function for repeated evaluations; its equations stay unchanged.
+<span id="L21">  21</span> @njit(cache=False)
+<span id="L22">  22</span> def muscle_force_curve_derivatives(l, v, p):
+<span id="L23">  23</span>     fl, fv, fp = muscle_force_length_velocity(l, v, p)
+<span id="L24">  24</span>     if len(p) &gt; 9:
+<span id="L25">  25</span>         x = (max(l, 0.0) ** ACTIVE_LENGTH_POWER - 1) / ACTIVE_LENGTH_WIDTH
+<span id="L26">  26</span>         dfl = (
+<span id="L27">  27</span>             -fl
+<span id="L28">  28</span>             * p[10]
+<span id="L29">  29</span>             * abs(x) ** (p[10] - 1)
+<span id="L30">  30</span>             * np.sign(x)
+<span id="L31">  31</span>             * ACTIVE_LENGTH_POWER
+<span id="L32">  32</span>             * max(l, 0.0) ** (ACTIVE_LENGTH_POWER - 1)
+<span id="L33">  33</span>             / ACTIVE_LENGTH_WIDTH
+<span id="L34">  34</span>         )
+<span id="L35">  35</span>         c, e = p[11], p[12]
+<span id="L36">  36</span>         if v &lt; 0:
+<span id="L37">  37</span>             dfv = c * (c + 1) / (c - v) ** 2 if fv &gt; 0 else 0.0
+<span id="L38">  38</span>         else:
+<span id="L39">  39</span>             dfv = e * (0.8 + 0.8 * e) / (e + v) ** 2
+<span id="L40">  40</span>         if len(p) &gt; 14 and p[14] &gt; 0:
+<span id="L41">  41</span>             dfv = muscle_force_velocity_degroote(v)[1]
+<span id="L42">  42</span>         dfp = (
+<span id="L43">  43</span>             PASSIVE_LENGTH_SCALE * np.exp(PASSIVE_LENGTH_EXPONENT * (l - 1))
+<span id="L44">  44</span>             if len(p) &gt; 13
+<span id="L45">  45</span>             and p[13] &gt; 0
+<span id="L46">  46</span>             and 1 &lt; l &lt; 1 + PASSIVE_EXPONENT_CAP / PASSIVE_LENGTH_EXPONENT
+<span id="L47">  47</span>             else 0.0
+<span id="L48">  48</span>         )
+<span id="L49">  49</span>     else:
+<span id="L50">  50</span>         low, high = p[4], p[5]
+<span id="L51">  51</span>         a = (low + 1) / 2
+<span id="L52">  52</span>         b = (1 + high) / 2
+<span id="L53">  53</span>         if l &lt; low or l &gt; high:
+<span id="L54">  54</span>             dfl = 0.0
+<span id="L55">  55</span>         elif l &lt;= a:
+<span id="L56">  56</span>             dfl = (l - low) / (a - low) ** 2
+<span id="L57">  57</span>         elif l &lt;= 1:
+<span id="L58">  58</span>             dfl = (1 - l) / (1 - a) ** 2
+<span id="L59">  59</span>         elif l &lt;= b:
+<span id="L60">  60</span>             dfl = -(l - 1) / (b - 1) ** 2
+<span id="L61">  61</span>         else:
+<span id="L62">  62</span>             dfl = -(high - l) / (high - b) ** 2
+<span id="L63">  63</span>         if v &lt;= -1:
+<span id="L64">  64</span>             dfv = 0.0
+<span id="L65">  65</span>         elif v &lt;= 0:
+<span id="L66">  66</span>             dfv = 2 * (v + 1)
+<span id="L67">  67</span>         elif v &lt;= p[8] - 1:
+<span id="L68">  68</span>             dfv = 2 * (p[8] - 1 - v) / (p[8] - 1)
+<span id="L69">  69</span>         else:
+<span id="L70">  70</span>             dfv = 0.0
+<span id="L71">  71</span>         if l &lt;= 1:
+<span id="L72">  72</span>             dfp = 0.0
+<span id="L73">  73</span>         elif l &lt;= b:
+<span id="L74">  74</span>             dfp = p[7] * (l - 1) / (b - 1) ** 2
+<span id="L75">  75</span>         else:
+<span id="L76">  76</span>             dfp = p[7] / (b - 1)
+<span id="L77">  77</span>     return fl, fv, fp, dfl, dfv, dfp
+</pre></main></body></html>

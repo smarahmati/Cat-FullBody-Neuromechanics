@@ -1,0 +1,213 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Package the existing HTML documentation for GitHub Pages.</title><link rel="stylesheet" href="../style.css"></head><body><!-- generated folder guide --><header><div class="tag">Cat · Full-body neuromechanics</div><h1>Package the existing HTML documentation for GitHub Pages.</h1><nav><a href="../../START_HERE.html">Start here</a> · <a href="../project_structure.html">Find a file</a></nav></header><main><p><a href="../../Code/simulation_tools/build_documentation_website.py">Code/simulation_tools/build_documentation_website.py</a></p><pre style="overflow:auto;white-space:pre"><span id="L1">   1</span> &quot;&quot;&quot;Package the existing HTML documentation for GitHub Pages.
+<span id="L2">   2</span> 
+<span id="L3">   3</span> This script does not run, fit or alter the neuromechanical model. It copies public
+<span id="L4">   4</span> documentation and supporting files into a NEW output directory, preserving the
+<span id="L5">   5</span> relative paths used by downloaded HTML. Large raw Results arrays stay in GitHub;
+<span id="L6">   6</span> links to those arrays are rewritten to their exact repository revision.
+<span id="L7">   7</span> 
+<span id="L8">   8</span> Parameters:
+<span id="L9">   9</span>   --output: new/empty folder for the website, usually _site in GitHub Actions.
+<span id="L10">  10</span>   --repository: GitHub owner/name; defaults to the confirmed publication address.
+<span id="L11">  11</span>   --revision: commit or branch used for links to downloadable raw result files.
+<span id="L12">  12</span>   --include-untracked: local preview only; honor .gitignore for these files too.
+<span id="L13">  13</span> 
+<span id="L14">  14</span> Example (from repository root):
+<span id="L15">  15</span>   python Code/simulation_tools/build_documentation_website.py --output _site
+<span id="L16">  16</span> 
+<span id="L17">  17</span> Only Python&#x27;s standard library and Git are needed; no simulation dependencies.
+<span id="L18">  18</span> &quot;&quot;&quot;
+<span id="L19">  19</span> 
+<span id="L20">  20</span> from pathlib import Path, PurePosixPath
+<span id="L21">  21</span> from html.parser import HTMLParser
+<span id="L22">  22</span> from urllib.parse import quote, unquote, urlsplit
+<span id="L23">  23</span> import argparse
+<span id="L24">  24</span> import html
+<span id="L25">  25</span> import json
+<span id="L26">  26</span> import os
+<span id="L27">  27</span> import posixpath
+<span id="L28">  28</span> import re
+<span id="L29">  29</span> import shutil
+<span id="L30">  30</span> import subprocess
+<span id="L31">  31</span> 
+<span id="L32">  32</span> ROOT = Path(__file__).resolve().parents[2]
+<span id="L33">  33</span> DEFAULT_REPOSITORY = &#x27;smarahmati/Cat-FullBody-Neuromechanics&#x27;
+<span id="L34">  34</span> ROOT_PAGES = {&#x27;index.html&#x27;, &#x27;START_HERE.html&#x27;, &#x27;.nojekyll&#x27;, &#x27;README.md&#x27;,
+<span id="L35">  35</span>               &#x27;LICENSE&#x27;, &#x27;THIRD_PARTY_NOTICES.md&#x27;, &#x27;CITATION.cff&#x27;,
+<span id="L36">  36</span>               &#x27;run.py&#x27;, &#x27;view.py&#x27;, &#x27;reproduce.py&#x27;, &#x27;requirements.txt&#x27;,
+<span id="L37">  37</span>               &#x27;requirements-lock.txt&#x27;, &#x27;Run Simulation.cmd&#x27;, &#x27;Setup Windows.cmd&#x27;}
+<span id="L38">  38</span> RESULT_WEB_TYPES = {&#x27;.html&#x27;, &#x27;.png&#x27;, &#x27;.svg&#x27;, &#x27;.jpg&#x27;, &#x27;.jpeg&#x27;, &#x27;.gif&#x27;, &#x27;.json&#x27;}
+<span id="L39">  39</span> LINK_ATTRIBUTE = re.compile(r&#x27;(?P&lt;key&gt;\b(?:href|src|data|poster|xlink:href))\s*=\s*(?P&lt;quote&gt;[\&quot;\x27])(?P&lt;url&gt;.*?)(?P=quote)&#x27;, re.I)
+<span id="L40">  40</span> 
+<span id="L41">  41</span> 
+<span id="L42">  42</span> def forbidden_path(relative):
+<span id="L43">  43</span>     &quot;&quot;&quot;Keep ignored environments, private reading copies and restricted meshes out.&quot;&quot;&quot;
+<span id="L44">  44</span>     parts = PurePosixPath(relative).parts
+<span id="L45">  45</span>     return (any(part in {&#x27;.git&#x27;, &#x27;.venv&#x27;, &#x27;__pycache__&#x27;, &#x27;.idea&#x27;, &#x27;_site&#x27;} for part in parts)
+<span id="L46">  46</span>             or relative.startswith(&#x27;Documentation/References/Local_Papers/&#x27;)
+<span id="L47">  47</span>             or relative.startswith(&#x27;Data/Skeletal_Geometry/Model/meshes/&#x27;))
+<span id="L48">  48</span> 
+<span id="L49">  49</span> 
+<span id="L50">  50</span> def public_repository_files(root, include_untracked=False):
+<span id="L51">  51</span>     &quot;&quot;&quot;Use Git&#x27;s publication inventory, never a recursive copy of the workstation.&quot;&quot;&quot;
+<span id="L52">  52</span>     command = [&#x27;git&#x27;, &#x27;-C&#x27;, str(root), &#x27;ls-files&#x27;, &#x27;--cached&#x27;, &#x27;-z&#x27;]
+<span id="L53">  53</span>     if include_untracked:
+<span id="L54">  54</span>         command += [&#x27;--others&#x27;, &#x27;--exclude-standard&#x27;]
+<span id="L55">  55</span>     names = subprocess.check_output(command).decode(&#x27;utf-8&#x27;).split(&#x27;\0&#x27;)
+<span id="L56">  56</span>     return {name for name in names if name and not forbidden_path(name)
+<span id="L57">  57</span>             and (root / name).is_file() and not (root / name).is_symlink()}
+<span id="L58">  58</span> 
+<span id="L59">  59</span> 
+<span id="L60">  60</span> def belongs_in_website(relative):
+<span id="L61">  61</span>     &quot;&quot;&quot;Include reports and assets; leave large raw simulation arrays in GitHub.&quot;&quot;&quot;
+<span id="L62">  62</span>     if forbidden_path(relative):
+<span id="L63">  63</span>         return False
+<span id="L64">  64</span>     if relative in ROOT_PAGES:
+<span id="L65">  65</span>         return True
+<span id="L66">  66</span>     if relative.startswith((&#x27;Documentation/&#x27;, &#x27;Code/&#x27;, &#x27;Data/&#x27;, &#x27;Verification/&#x27;)):
+<span id="L67">  67</span>         return True
+<span id="L68">  68</span>     if relative.startswith(&#x27;Simulation_Results/&#x27;):
+<span id="L69">  69</span>         # These snapshots remain reproducibility downloads, not duplicated web pages.
+<span id="L70">  70</span>         if any(part in {&#x27;Model_Parameters_Used&#x27;, &#x27;Experimental_References_Used&#x27;, &#x27;Simulation_Code_Used&#x27;}
+<span id="L71">  71</span>                for part in PurePosixPath(relative).parts):
+<span id="L72">  72</span>             return False
+<span id="L73">  73</span>         return PurePosixPath(relative).suffix.lower() in RESULT_WEB_TYPES
+<span id="L74">  74</span>     return False
+<span id="L75">  75</span> 
+<span id="L76">  76</span> 
+<span id="L77">  77</span> def local_target(page, link):
+<span id="L78">  78</span>     &quot;&quot;&quot;Resolve a relative HTML link using POSIX rules, also on Windows.&quot;&quot;&quot;
+<span id="L79">  79</span>     parsed = urlsplit(html.unescape(link))
+<span id="L80">  80</span>     if parsed.scheme or parsed.netloc or not parsed.path:
+<span id="L81">  81</span>         return None
+<span id="L82">  82</span>     # Root-relative links break GitHub project-site prefixes: keep links relative.
+<span id="L83">  83</span>     if parsed.path.startswith(&#x27;/&#x27;):
+<span id="L84">  84</span>         raise ValueError(f&#x27;Root-relative link in {page}: {link}&#x27;)
+<span id="L85">  85</span>     target = posixpath.normpath(posixpath.join(posixpath.dirname(page), unquote(parsed.path)))
+<span id="L86">  86</span>     if target == &#x27;..&#x27; or target.startswith(&#x27;../&#x27;):
+<span id="L87">  87</span>         raise ValueError(f&#x27;Link escapes the project in {page}: {link}&#x27;)
+<span id="L88">  88</span>     return target
+<span id="L89">  89</span> 
+<span id="L90">  90</span> 
+<span id="L91">  91</span> def resolve_link(page, link, included, public, repository, revision):
+<span id="L92">  92</span>     &quot;&quot;&quot;Retain local pages and direct omitted public downloads to GitHub.&quot;&quot;&quot;
+<span id="L93">  93</span>     target = local_target(page, link)
+<span id="L94">  94</span>     if target is None:
+<span id="L95">  95</span>         return link
+<span id="L96">  96</span>     parsed = urlsplit(html.unescape(link))
+<span id="L97">  97</span>     suffix = (&#x27;?&#x27; + parsed.query if parsed.query else &#x27;&#x27;) + (&#x27;#&#x27; + parsed.fragment if parsed.fragment else &#x27;&#x27;)
+<span id="L98">  98</span>     if target in included:
+<span id="L99">  99</span>         return link
+<span id="L100"> 100</span>     # Directory URLs should resolve to explicit index pages on file:// and HTTP.
+<span id="L101"> 101</span>     index = target.rstrip(&#x27;/&#x27;) + &#x27;/index.html&#x27;
+<span id="L102"> 102</span>     if index in included:
+<span id="L103"> 103</span>         return posixpath.relpath(index, posixpath.dirname(page) or &#x27;.&#x27;) + suffix
+<span id="L104"> 104</span>     if target in public:
+<span id="L105"> 105</span>         return f&#x27;https://github.com/{repository}/blob/{quote(revision, safe=&quot;&quot;)}/{quote(target, safe=&quot;/&quot;)}&#x27; + suffix
+<span id="L106"> 106</span>     if any(p.startswith(target.rstrip(&#x27;/&#x27;) + &#x27;/&#x27;) for p in public):
+<span id="L107"> 107</span>         return f&#x27;https://github.com/{repository}/tree/{quote(revision, safe=&quot;&quot;)}/{quote(target, safe=&quot;/&quot;)}&#x27; + suffix
+<span id="L108"> 108</span>     raise ValueError(f&#x27;Missing or non-public linked file in {page}: {link}&#x27;)
+<span id="L109"> 109</span> 
+<span id="L110"> 110</span> 
+<span id="L111"> 111</span> def prepare_html(page, source, included, public, repository, revision):
+<span id="L112"> 112</span>     &quot;&quot;&quot;Rewrite attributes inside real tags, leaving JavaScript and source listings intact.&quot;&quot;&quot;
+<span id="L113"> 113</span>     class Rewrite(HTMLParser):
+<span id="L114"> 114</span>         def __init__(self):
+<span id="L115"> 115</span>             super().__init__(convert_charrefs=False)
+<span id="L116"> 116</span>             self.output = []
+<span id="L117"> 117</span> 
+<span id="L118"> 118</span>         def start_tag(self, tag):
+<span id="L119"> 119</span>             raw = self.get_starttag_text()
+<span id="L120"> 120</span>             def replace(match):
+<span id="L121"> 121</span>                 old = match[&#x27;url&#x27;]
+<span id="L122"> 122</span>                 new = resolve_link(page, old, included, public, repository, revision)
+<span id="L123"> 123</span>                 return match[&#x27;key&#x27;] + &#x27;=&#x27; + match[&#x27;quote&#x27;] + html.escape(html.unescape(new), quote=True) + match[&#x27;quote&#x27;]
+<span id="L124"> 124</span>             self.output.append(LINK_ATTRIBUTE.sub(replace, raw))
+<span id="L125"> 125</span> 
+<span id="L126"> 126</span>         handle_starttag = lambda self, tag, attrs: self.start_tag(tag)
+<span id="L127"> 127</span>         handle_startendtag = lambda self, tag, attrs: self.start_tag(tag)
+<span id="L128"> 128</span>         handle_endtag = lambda self, tag: self.output.append(&#x27;&lt;/&#x27; + tag + &#x27;&gt;&#x27;)
+<span id="L129"> 129</span>         handle_data = lambda self, data: self.output.append(data)
+<span id="L130"> 130</span>         handle_entityref = lambda self, name: self.output.append(&#x27;&amp;&#x27; + name + &#x27;;&#x27;)
+<span id="L131"> 131</span>         handle_charref = lambda self, name: self.output.append(&#x27;&amp;#&#x27; + name + &#x27;;&#x27;)
+<span id="L132"> 132</span>         handle_comment = lambda self, data: self.output.append(&#x27;&lt;!--&#x27; + data + &#x27;--&gt;&#x27;)
+<span id="L133"> 133</span>         handle_decl = lambda self, decl: self.output.append(&#x27;&lt;!&#x27; + decl + &#x27;&gt;&#x27;)
+<span id="L134"> 134</span>         handle_pi = lambda self, data: self.output.append(&#x27;&lt;?&#x27; + data + &#x27;&gt;&#x27;)
+<span id="L135"> 135</span> 
+<span id="L136"> 136</span>     parser = Rewrite()
+<span id="L137"> 137</span>     parser.feed(source)
+<span id="L138"> 138</span>     parser.close()
+<span id="L139"> 139</span>     return &#x27;&#x27;.join(parser.output)
+<span id="L140"> 140</span> 
+<span id="L141"> 141</span> 
+<span id="L142"> 142</span> def validate_website(output):
+<span id="L143"> 143</span>     &quot;&quot;&quot;Fail the build if an HTML/SVG link, image, video or stylesheet is missing.&quot;&quot;&quot;
+<span id="L144"> 144</span>     checked = 0
+<span id="L145"> 145</span>     for path in sorted(output.rglob(&#x27;*&#x27;)):
+<span id="L146"> 146</span>         if path.suffix.lower() not in {&#x27;.html&#x27;, &#x27;.svg&#x27;}:
+<span id="L147"> 147</span>             continue
+<span id="L148"> 148</span>         page = path.relative_to(output).as_posix()
+<span id="L149"> 149</span>         class Collect(HTMLParser):
+<span id="L150"> 150</span>             def handle_starttag(self, tag, attrs):
+<span id="L151"> 151</span>                 nonlocal checked
+<span id="L152"> 152</span>                 for key, link in attrs:
+<span id="L153"> 153</span>                     if key not in {&#x27;href&#x27;, &#x27;src&#x27;, &#x27;data&#x27;, &#x27;poster&#x27;, &#x27;xlink:href&#x27;} or not link:
+<span id="L154"> 154</span>                         continue
+<span id="L155"> 155</span>                     target = local_target(page, link)
+<span id="L156"> 156</span>                     if target is not None:
+<span id="L157"> 157</span>                         checked += 1
+<span id="L158"> 158</span>                         if not (output / target).is_file():
+<span id="L159"> 159</span>                             raise ValueError(f&#x27;Broken website link: {page} -&gt; {link}&#x27;)
+<span id="L160"> 160</span>         parser = Collect()
+<span id="L161"> 161</span>         parser.feed(path.read_text(encoding=&#x27;utf-8&#x27;))
+<span id="L162"> 162</span>     return checked
+<span id="L163"> 163</span> 
+<span id="L164"> 164</span> 
+<span id="L165"> 165</span> def build_website(output, repository, revision, include_untracked=False):
+<span id="L166"> 166</span>     &quot;&quot;&quot;Create a new static artifact; leave original files and simulation data intact.&quot;&quot;&quot;
+<span id="L167"> 167</span>     output = Path(output).resolve()
+<span id="L168"> 168</span>     if output == ROOT or output in ROOT.parents:
+<span id="L169"> 169</span>         raise ValueError(&#x27;The output must be a new folder, not the project or its parent.&#x27;)
+<span id="L170"> 170</span>     if output.exists() and any(output.iterdir()):
+<span id="L171"> 171</span>         raise FileExistsError(&#x27;Choose a new/empty output folder; existing output is not deleted.&#x27;)
+<span id="L172"> 172</span>     if not re.fullmatch(r&#x27;[A-Za-z0-9_.-]+/[A-Za-z0-9_.-]+&#x27;, repository):
+<span id="L173"> 173</span>         raise ValueError(&#x27;Repository must be owner/name.&#x27;)
+<span id="L174"> 174</span>     public = public_repository_files(ROOT, include_untracked)
+<span id="L175"> 175</span>     included = {name for name in public if belongs_in_website(name)}
+<span id="L176"> 176</span>     if not {&#x27;index.html&#x27;, &#x27;START_HERE.html&#x27;} &lt;= included:
+<span id="L177"> 177</span>         raise ValueError(&#x27;Missing entry pages. Commit the project first, or use --include-untracked for local preview.&#x27;)
+<span id="L178"> 178</span>     output.mkdir(parents=True, exist_ok=True)
+<span id="L179"> 179</span>     for name in sorted(included):
+<span id="L180"> 180</span>         src, dst = ROOT / name, output / name
+<span id="L181"> 181</span>         dst.parent.mkdir(parents=True, exist_ok=True)
+<span id="L182"> 182</span>         if src.suffix.lower() in {&#x27;.html&#x27;, &#x27;.svg&#x27;}:
+<span id="L183"> 183</span>             text = prepare_html(name, src.read_text(encoding=&#x27;utf-8&#x27;), included, public, repository, revision)
+<span id="L184"> 184</span>             dst.write_text(text, encoding=&#x27;utf-8&#x27;)
+<span id="L185"> 185</span>         else:
+<span id="L186"> 186</span>             shutil.copyfile(src, dst)
+<span id="L187"> 187</span>     count = validate_website(output)
+<span id="L188"> 188</span>     size = sum((output / name).stat().st_size for name in included)
+<span id="L189"> 189</span>     if size &gt; 900 * 1024 * 1024:
+<span id="L190"> 190</span>         raise ValueError(&#x27;Website exceeds the 900 MiB packaging budget; keep large arrays in the repository.&#x27;)
+<span id="L191"> 191</span>     audit = {&#x27;repository&#x27;: repository, &#x27;revision&#x27;: revision, &#x27;files&#x27;: len(included),
+<span id="L192"> 192</span>              &#x27;bytes&#x27;: size, &#x27;checked_local_links&#x27;: count, &#x27;broken_links&#x27;: [],
+<span id="L193"> 193</span>              &#x27;model_recomputed&#x27;: False, &#x27;raw_result_arrays_on_website&#x27;: False,
+<span id="L194"> 194</span>              &#x27;private_papers_or_restricted_meshes_included&#x27;: False}
+<span id="L195"> 195</span>     (output / &#x27;WEBSITE_BUILD.json&#x27;).write_text(json.dumps(audit, indent=2), encoding=&#x27;utf-8&#x27;)
+<span id="L196"> 196</span>     print(json.dumps(audit, indent=2))
+<span id="L197"> 197</span>     return audit
+<span id="L198"> 198</span> 
+<span id="L199"> 199</span> 
+<span id="L200"> 200</span> def main():
+<span id="L201"> 201</span>     &quot;&quot;&quot;Read publishing options; GitHub supplies repository and commit automatically.&quot;&quot;&quot;
+<span id="L202"> 202</span>     parser = argparse.ArgumentParser(description=__doc__)
+<span id="L203"> 203</span>     parser.add_argument(&#x27;--output&#x27;, type=Path, default=ROOT / &#x27;_site&#x27;)
+<span id="L204"> 204</span>     parser.add_argument(&#x27;--repository&#x27;, default=os.environ.get(&#x27;WEBSITE_REPOSITORY&#x27;, DEFAULT_REPOSITORY))
+<span id="L205"> 205</span>     parser.add_argument(&#x27;--revision&#x27;, default=os.environ.get(&#x27;WEBSITE_REVISION&#x27;, &#x27;main&#x27;))
+<span id="L206"> 206</span>     parser.add_argument(&#x27;--include-untracked&#x27;, action=&#x27;store_true&#x27;)
+<span id="L207"> 207</span>     args = parser.parse_args()
+<span id="L208"> 208</span>     build_website(args.output, args.repository, args.revision, args.include_untracked)
+<span id="L209"> 209</span> 
+<span id="L210"> 210</span> 
+<span id="L211"> 211</span> if __name__ == &#x27;__main__&#x27;:
+<span id="L212"> 212</span>     main()
+</pre></main></body></html>

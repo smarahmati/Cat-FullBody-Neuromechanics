@@ -1,0 +1,1320 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Rules defining how muscle paths follow the articulated skeleton.</title><link rel="stylesheet" href="../style.css"></head><body><!-- generated folder guide --><header><div class="tag">Cat · Full-body neuromechanics</div><h1>Rules defining how muscle paths follow the articulated skeleton.</h1><nav><a href="../../START_HERE.html">Start here</a> · <a href="../project_structure.html">Find a file</a></nav></header><main><p><a href="../../Data/Model_Parameters/routing.py">Data/Model_Parameters/routing.py</a></p><pre style="overflow:auto;white-space:pre"><span id="L1">   1</span> # Read this file independently: executable numbers in PARAMETERS are the values used in this model.
+<span id="L2">   2</span> # Source-value comments identify verified source numbers; missing sources are explicitly stated.
+<span id="L3">   3</span> &quot;&quot;&quot;Editable muscle geometry. Read ATTACHMENT_MAP.html for connections and axes.
+<span id="L4">   4</span> All xyz coordinates are METRES in the named BODY frame: 0.001 m = 1 mm.
+<span id="L5">   5</span> The number assigned below is the applied value; comments preserve provenance.
+<span id="L6">   6</span> Changing xyz moves a point on its existing body; it does not reattach a muscle
+<span id="L7">   7</span> to a different bone. Left/right entries are independent. A visible bone mesh
+<span id="L8">   8</span> does not automatically wrap a muscle. Unused sites are labelled explicitly.
+<span id="L9">   9</span> For moving routing sites edit routing.py; for wrap surfaces edit wrapping.py.
+<span id="L10">  10</span> Run run_model.ps1 again to apply edits. Inspect that run&#x27;s ATTACHMENT_MAP.html.
+<span id="L11">  11</span> &quot;&quot;&quot;
+<span id="L12">  12</span> 
+<span id="L13">  13</span> # Set PARAMETERS.
+<span id="L14">  14</span> PARAMETERS = {
+<span id="L15">  15</span>     # ===== L_IP =====
+<span id="L16">  16</span>     # Branch 1, divisor 1.0: L_IP_origin [L_pelvis_anchor] -&gt; L_IP_wrap0 [L_pelvis_anchor] -&gt; L_IP_insert [L_thigh]
+<span id="L17">  17</span>     # ===== L_BFA =====
+<span id="L18">  18</span>     # Branch 1, divisor 1.0: L_BFA_origin [L_pelvis_anchor] -&gt; L_BFA_wrap0 [L_pelvis_anchor] -&gt; L_BFA_insert [L_thigh]
+<span id="L19">  19</span>     # ===== L_VL =====
+<span id="L20">  20</span>     # Branch 1, divisor 1.0: L_VL_origin [L_thigh] -&gt; L_VL_wrap0 [L_thigh] -&gt; L_VL_insert [L_shank]
+<span id="L21">  21</span>     # ===== L_VM =====
+<span id="L22">  22</span>     # Branch 1, divisor 1.0: L_VM_origin [L_thigh] -&gt; L_VM_wrap0 [L_thigh] -&gt; L_VM_insert [L_shank]
+<span id="L23">  23</span>     # ===== L_TA =====
+<span id="L24">  24</span>     # Branch 1, divisor 1.0: L_TA_origin [L_shank] -&gt; L_TA_wrap0 [L_shank] -&gt; L_TA_insert [L_foot]
+<span id="L25">  25</span>     # ===== L_SO =====
+<span id="L26">  26</span>     # Branch 1, divisor 1.0: L_SO_origin [L_shank] -&gt; L_SO_wrap0 [L_shank] -&gt; L_SO_insert [L_foot]
+<span id="L27">  27</span>     # ===== L_RF =====
+<span id="L28">  28</span>     # Branch 1, divisor 1.0: L_RF_origin [L_pelvis_anchor] -&gt; L_RF_wrap0 [L_pelvis_anchor] -&gt; L_RF_tangent [L_thigh] -&gt; L_RF_wrap1 [L_thigh] -&gt; L_RF_insert [L_shank]
+<span id="L29">  29</span>     # VIA POINT for L_RF. Connected body: L_thigh. Computed local coordinates: update_routing.py overwrites them at each step.
+<span id="L30">  30</span>     &quot;L_RF_tangent&quot;: {
+<span id="L31">  31</span>         # Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. Unit: m.
+<span id="L32">  32</span>         # Original raw/source: None; None = not independently established.
+<span id="L33">  33</span>         &quot;origin_radius_m&quot;: 0.005420765027322405,
+<span id="L34">  34</span>         # Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. Unit: m.
+<span id="L35">  35</span>         # Original raw/source: None; None = not independently established.
+<span id="L36">  36</span>         &quot;insertion_radius_m&quot;: 0.010585365853658537,
+<span id="L37">  37</span>         # Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. Unit: rad.
+<span id="L38">  38</span>         # Original raw/source: None; None = not independently established.
+<span id="L39">  39</span>         &quot;origin_angle_rad&quot;: 0.0,
+<span id="L40">  40</span>         # Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. Unit: rad.
+<span id="L41">  41</span>         # Original raw/source: None; None = not independently established.
+<span id="L42">  42</span>         &quot;insertion_angle_rad&quot;: 2.53073,
+<span id="L43">  43</span>         # Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. Unit: m.
+<span id="L44">  44</span>         # Original raw/source: None; None = not independently established.
+<span id="L45">  45</span>         &quot;proximal_wrap_radius_m&quot;: 0.004763827802212448,
+<span id="L46">  46</span>         # Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. Unit: 1.
+<span id="L47">  47</span>         # Original raw/source: None; None = not independently established.
+<span id="L48">  48</span>         &quot;proximal_wrap_sign&quot;: -1.0,
+<span id="L49">  49</span>         # Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. Unit: 1.
+<span id="L50">  50</span>         # Original raw/source: None; None = not independently established.
+<span id="L51">  51</span>         &quot;proximal_joint_sign&quot;: -1.0,
+<span id="L52">  52</span>         # Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. Unit: m.
+<span id="L53">  53</span>         # Original raw/source: None; None = not independently established.
+<span id="L54">  54</span>         &quot;distal_wrap_radius_m&quot;: 0.010585365853658537,
+<span id="L55">  55</span>         # Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. Unit: 1.
+<span id="L56">  56</span>         # Original raw/source: None; None = not independently established.
+<span id="L57">  57</span>         &quot;distal_wrap_sign&quot;: -1.0,
+<span id="L58">  58</span>         # Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. Unit: 1.
+<span id="L59">  59</span>         # Original raw/source: None; None = not independently established.
+<span id="L60">  60</span>         &quot;distal_joint_sign&quot;: 1.0,
+<span id="L61">  61</span>         # Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. Unit: m.
+<span id="L62">  62</span>         # Original raw/source: None; None = not independently established.
+<span id="L63">  63</span>         &quot;joint_spacing_m&quot;: 0.0955,
+<span id="L64">  64</span>     },
+<span id="L65">  65</span>     # ===== L_BFP =====
+<span id="L66">  66</span>     # Branch 1, divisor 1.0: L_BFP_origin [L_pelvis_anchor] -&gt; L_BFP_wrap0 [L_pelvis_anchor] -&gt; L_BFP_tangent [L_thigh] -&gt; L_BFP_wrap1 [L_thigh] -&gt; L_BFP_insert [L_shank]
+<span id="L67">  67</span>     # VIA POINT for L_BFP. Connected body: L_thigh. Computed local coordinates: update_routing.py overwrites them at each step.
+<span id="L68">  68</span>     &quot;L_BFP_tangent&quot;: {
+<span id="L69">  69</span>         # Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. Unit: m.
+<span id="L70">  70</span>         # Original raw/source: None; None = not independently established.
+<span id="L71">  71</span>         &quot;origin_radius_m&quot;: 0.008469945355191258,
+<span id="L72">  72</span>         # Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. Unit: m.
+<span id="L73">  73</span>         # Original raw/source: None; None = not independently established.
+<span id="L74">  74</span>         &quot;insertion_radius_m&quot;: 0.03175609756097561,
+<span id="L75">  75</span>         # Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. Unit: rad.
+<span id="L76">  76</span>         # Original raw/source: None; None = not independently established.
+<span id="L77">  77</span>         &quot;origin_angle_rad&quot;: 2.46091,
+<span id="L78">  78</span>         # Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. Unit: rad.
+<span id="L79">  79</span>         # Original raw/source: None; None = not independently established.
+<span id="L80">  80</span>         &quot;insertion_angle_rad&quot;: 0.0,
+<span id="L81">  81</span>         # Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. Unit: m.
+<span id="L82">  82</span>         # Original raw/source: None; None = not independently established.
+<span id="L83">  83</span>         &quot;proximal_wrap_radius_m&quot;: 0.004763827802212448,
+<span id="L84">  84</span>         # Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. Unit: 1.
+<span id="L85">  85</span>         # Original raw/source: None; None = not independently established.
+<span id="L86">  86</span>         &quot;proximal_wrap_sign&quot;: 1.0,
+<span id="L87">  87</span>         # Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. Unit: 1.
+<span id="L88">  88</span>         # Original raw/source: None; None = not independently established.
+<span id="L89">  89</span>         &quot;proximal_joint_sign&quot;: -1.0,
+<span id="L90">  90</span>         # Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. Unit: m.
+<span id="L91">  91</span>         # Original raw/source: None; None = not independently established.
+<span id="L92">  92</span>         &quot;distal_wrap_radius_m&quot;: 0.005716593362654938,
+<span id="L93">  93</span>         # Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. Unit: 1.
+<span id="L94">  94</span>         # Original raw/source: None; None = not independently established.
+<span id="L95">  95</span>         &quot;distal_wrap_sign&quot;: 1.0,
+<span id="L96">  96</span>         # Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. Unit: 1.
+<span id="L97">  97</span>         # Original raw/source: None; None = not independently established.
+<span id="L98">  98</span>         &quot;distal_joint_sign&quot;: 1.0,
+<span id="L99">  99</span>         # Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. Unit: m.
+<span id="L100"> 100</span>         # Original raw/source: None; None = not independently established.
+<span id="L101"> 101</span>         &quot;joint_spacing_m&quot;: 0.0955,
+<span id="L102"> 102</span>     },
+<span id="L103"> 103</span>     # ===== L_SAM =====
+<span id="L104"> 104</span>     # Branch 1, divisor 1.0: L_SAM_origin [L_pelvis_anchor] -&gt; L_SAM_wrap0 [L_pelvis_anchor] -&gt; L_SAM_tangent [L_thigh] -&gt; L_SAM_wrap1 [L_thigh] -&gt; L_SAM_insert [L_shank]
+<span id="L105"> 105</span>     # VIA POINT for L_SAM. Connected body: L_thigh. Computed local coordinates: update_routing.py overwrites them at each step.
+<span id="L106"> 106</span>     &quot;L_SAM_tangent&quot;: {
+<span id="L107"> 107</span>         # Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. Unit: m.
+<span id="L108"> 108</span>         # Original raw/source: None; None = not independently established.
+<span id="L109"> 109</span>         &quot;origin_radius_m&quot;: 0.013551912568306013,
+<span id="L110"> 110</span>         # Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. Unit: m.
+<span id="L111"> 111</span>         # Original raw/source: None; None = not independently established.
+<span id="L112"> 112</span>         &quot;insertion_radius_m&quot;: 0.010585365853658537,
+<span id="L113"> 113</span>         # Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. Unit: rad.
+<span id="L114"> 114</span>         # Original raw/source: None; None = not independently established.
+<span id="L115"> 115</span>         &quot;origin_angle_rad&quot;: 0.0,
+<span id="L116"> 116</span>         # Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. Unit: rad.
+<span id="L117"> 117</span>         # Original raw/source: None; None = not independently established.
+<span id="L118"> 118</span>         &quot;insertion_angle_rad&quot;: 0.0,
+<span id="L119"> 119</span>         # Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. Unit: m.
+<span id="L120"> 120</span>         # Original raw/source: None; None = not independently established.
+<span id="L121"> 121</span>         &quot;proximal_wrap_radius_m&quot;: 0.004763827802212448,
+<span id="L122"> 122</span>         # Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. Unit: 1.
+<span id="L123"> 123</span>         # Original raw/source: None; None = not independently established.
+<span id="L124"> 124</span>         &quot;proximal_wrap_sign&quot;: -1.0,
+<span id="L125"> 125</span>         # Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. Unit: 1.
+<span id="L126"> 126</span>         # Original raw/source: None; None = not independently established.
+<span id="L127"> 127</span>         &quot;proximal_joint_sign&quot;: -1.0,
+<span id="L128"> 128</span>         # Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. Unit: m.
+<span id="L129"> 129</span>         # Original raw/source: None; None = not independently established.
+<span id="L130"> 130</span>         &quot;distal_wrap_radius_m&quot;: 0.005716593362654938,
+<span id="L131"> 131</span>         # Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. Unit: 1.
+<span id="L132"> 132</span>         # Original raw/source: None; None = not independently established.
+<span id="L133"> 133</span>         &quot;distal_wrap_sign&quot;: 1.0,
+<span id="L134"> 134</span>         # Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. Unit: 1.
+<span id="L135"> 135</span>         # Original raw/source: None; None = not independently established.
+<span id="L136"> 136</span>         &quot;distal_joint_sign&quot;: 1.0,
+<span id="L137"> 137</span>         # Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. Unit: m.
+<span id="L138"> 138</span>         # Original raw/source: None; None = not independently established.
+<span id="L139"> 139</span>         &quot;joint_spacing_m&quot;: 0.0955,
+<span id="L140"> 140</span>     },
+<span id="L141"> 141</span>     # ===== L_LG =====
+<span id="L142"> 142</span>     # Branch 1, divisor 1.0: L_LG_origin [L_thigh] -&gt; L_LG_wrap0 [L_thigh] -&gt; L_LG_tangent [L_shank] -&gt; L_LG_wrap1 [L_shank] -&gt; L_LG_insert [L_foot]
+<span id="L143"> 143</span>     # VIA POINT for L_LG. Connected body: L_shank. Computed local coordinates: update_routing.py overwrites them at each step.
+<span id="L144"> 144</span>     &quot;L_LG_tangent&quot;: {
+<span id="L145"> 145</span>         # Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. Unit: m.
+<span id="L146"> 146</span>         # Original raw/source: None; None = not independently established.
+<span id="L147"> 147</span>         &quot;origin_radius_m&quot;: 0.0058890030832476885,
+<span id="L148"> 148</span>         # Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. Unit: m.
+<span id="L149"> 149</span>         # Original raw/source: None; None = not independently established.
+<span id="L150"> 150</span>         &quot;insertion_radius_m&quot;: 0.01555878084179971,
+<span id="L151"> 151</span>         # Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. Unit: rad.
+<span id="L152"> 152</span>         # Original raw/source: None; None = not independently established.
+<span id="L153"> 153</span>         &quot;origin_angle_rad&quot;: 0.0,
+<span id="L154"> 154</span>         # Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. Unit: rad.
+<span id="L155"> 155</span>         # Original raw/source: None; None = not independently established.
+<span id="L156"> 156</span>         &quot;insertion_angle_rad&quot;: -3.03687,
+<span id="L157"> 157</span>         # Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. Unit: m.
+<span id="L158"> 158</span>         # Original raw/source: None; None = not independently established.
+<span id="L159"> 159</span>         &quot;proximal_wrap_radius_m&quot;: 0.0058890030832476885,
+<span id="L160"> 160</span>         # Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. Unit: 1.
+<span id="L161"> 161</span>         # Original raw/source: None; None = not independently established.
+<span id="L162"> 162</span>         &quot;proximal_wrap_sign&quot;: 1.0,
+<span id="L163"> 163</span>         # Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. Unit: 1.
+<span id="L164"> 164</span>         # Original raw/source: None; None = not independently established.
+<span id="L165"> 165</span>         &quot;proximal_joint_sign&quot;: 1.0,
+<span id="L166"> 166</span>         # Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. Unit: m.
+<span id="L167"> 167</span>         # Original raw/source: None; None = not independently established.
+<span id="L168"> 168</span>         &quot;distal_wrap_radius_m&quot;: 0.004884810791217741,
+<span id="L169"> 169</span>         # Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. Unit: 1.
+<span id="L170"> 170</span>         # Original raw/source: None; None = not independently established.
+<span id="L171"> 171</span>         &quot;distal_wrap_sign&quot;: 1.0,
+<span id="L172"> 172</span>         # Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. Unit: 1.
+<span id="L173"> 173</span>         # Original raw/source: None; None = not independently established.
+<span id="L174"> 174</span>         &quot;distal_joint_sign&quot;: -1.0,
+<span id="L175"> 175</span>         # Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. Unit: m.
+<span id="L176"> 176</span>         # Original raw/source: None; None = not independently established.
+<span id="L177"> 177</span>         &quot;joint_spacing_m&quot;: 0.1085,
+<span id="L178"> 178</span>     },
+<span id="L179"> 179</span>     # ===== L_MG =====
+<span id="L180"> 180</span>     # Branch 1, divisor 1.0: L_MG_origin [L_thigh] -&gt; L_MG_wrap0 [L_thigh] -&gt; L_MG_tangent [L_shank] -&gt; L_MG_wrap1 [L_shank] -&gt; L_MG_insert [L_foot]
+<span id="L181"> 181</span>     # VIA POINT for L_MG. Connected body: L_shank. Computed local coordinates: update_routing.py overwrites them at each step.
+<span id="L182"> 182</span>     &quot;L_MG_tangent&quot;: {
+<span id="L183"> 183</span>         # Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. Unit: m.
+<span id="L184"> 184</span>         # Original raw/source: None; None = not independently established.
+<span id="L185"> 185</span>         &quot;origin_radius_m&quot;: 0.0058890030832476885,
+<span id="L186"> 186</span>         # Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. Unit: m.
+<span id="L187"> 187</span>         # Original raw/source: None; None = not independently established.
+<span id="L188"> 188</span>         &quot;insertion_radius_m&quot;: 0.01555878084179971,
+<span id="L189"> 189</span>         # Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. Unit: rad.
+<span id="L190"> 190</span>         # Original raw/source: None; None = not independently established.
+<span id="L191"> 191</span>         &quot;origin_angle_rad&quot;: 0.0,
+<span id="L192"> 192</span>         # Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. Unit: rad.
+<span id="L193"> 193</span>         # Original raw/source: None; None = not independently established.
+<span id="L194"> 194</span>         &quot;insertion_angle_rad&quot;: -3.03687,
+<span id="L195"> 195</span>         # Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. Unit: m.
+<span id="L196"> 196</span>         # Original raw/source: None; None = not independently established.
+<span id="L197"> 197</span>         &quot;proximal_wrap_radius_m&quot;: 0.0058890030832476885,
+<span id="L198"> 198</span>         # Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. Unit: 1.
+<span id="L199"> 199</span>         # Original raw/source: None; None = not independently established.
+<span id="L200"> 200</span>         &quot;proximal_wrap_sign&quot;: 1.0,
+<span id="L201"> 201</span>         # Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. Unit: 1.
+<span id="L202"> 202</span>         # Original raw/source: None; None = not independently established.
+<span id="L203"> 203</span>         &quot;proximal_joint_sign&quot;: 1.0,
+<span id="L204"> 204</span>         # Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. Unit: m.
+<span id="L205"> 205</span>         # Original raw/source: None; None = not independently established.
+<span id="L206"> 206</span>         &quot;distal_wrap_radius_m&quot;: 0.004884810791217741,
+<span id="L207"> 207</span>         # Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. Unit: 1.
+<span id="L208"> 208</span>         # Original raw/source: None; None = not independently established.
+<span id="L209"> 209</span>         &quot;distal_wrap_sign&quot;: 1.0,
+<span id="L210"> 210</span>         # Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. Unit: 1.
+<span id="L211"> 211</span>         # Original raw/source: None; None = not independently established.
+<span id="L212"> 212</span>         &quot;distal_joint_sign&quot;: -1.0,
+<span id="L213"> 213</span>         # Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. Unit: m.
+<span id="L214"> 214</span>         # Original raw/source: None; None = not independently established.
+<span id="L215"> 215</span>         &quot;joint_spacing_m&quot;: 0.1085,
+<span id="L216"> 216</span>     },
+<span id="L217"> 217</span>     # ===== R_IP =====
+<span id="L218"> 218</span>     # Branch 1, divisor 1.0: R_IP_origin [R_pelvis_anchor] -&gt; R_IP_wrap0 [R_pelvis_anchor] -&gt; R_IP_insert [R_thigh]
+<span id="L219"> 219</span>     # ===== R_BFA =====
+<span id="L220"> 220</span>     # Branch 1, divisor 1.0: R_BFA_origin [R_pelvis_anchor] -&gt; R_BFA_wrap0 [R_pelvis_anchor] -&gt; R_BFA_insert [R_thigh]
+<span id="L221"> 221</span>     # ===== R_VL =====
+<span id="L222"> 222</span>     # Branch 1, divisor 1.0: R_VL_origin [R_thigh] -&gt; R_VL_wrap0 [R_thigh] -&gt; R_VL_insert [R_shank]
+<span id="L223"> 223</span>     # ===== R_VM =====
+<span id="L224"> 224</span>     # Branch 1, divisor 1.0: R_VM_origin [R_thigh] -&gt; R_VM_wrap0 [R_thigh] -&gt; R_VM_insert [R_shank]
+<span id="L225"> 225</span>     # ===== R_TA =====
+<span id="L226"> 226</span>     # Branch 1, divisor 1.0: R_TA_origin [R_shank] -&gt; R_TA_wrap0 [R_shank] -&gt; R_TA_insert [R_foot]
+<span id="L227"> 227</span>     # ===== R_SO =====
+<span id="L228"> 228</span>     # Branch 1, divisor 1.0: R_SO_origin [R_shank] -&gt; R_SO_wrap0 [R_shank] -&gt; R_SO_insert [R_foot]
+<span id="L229"> 229</span>     # ===== R_RF =====
+<span id="L230"> 230</span>     # Branch 1, divisor 1.0: R_RF_origin [R_pelvis_anchor] -&gt; R_RF_wrap0 [R_pelvis_anchor] -&gt; R_RF_tangent [R_thigh] -&gt; R_RF_wrap1 [R_thigh] -&gt; R_RF_insert [R_shank]
+<span id="L231"> 231</span>     # VIA POINT for R_RF. Connected body: R_thigh. Computed local coordinates: update_routing.py overwrites them at each step.
+<span id="L232"> 232</span>     &quot;R_RF_tangent&quot;: {
+<span id="L233"> 233</span>         # Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. Unit: m.
+<span id="L234"> 234</span>         # Original raw/source: None; None = not independently established.
+<span id="L235"> 235</span>         &quot;origin_radius_m&quot;: 0.005420765027322405,
+<span id="L236"> 236</span>         # Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. Unit: m.
+<span id="L237"> 237</span>         # Original raw/source: None; None = not independently established.
+<span id="L238"> 238</span>         &quot;insertion_radius_m&quot;: 0.010585365853658537,
+<span id="L239"> 239</span>         # Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. Unit: rad.
+<span id="L240"> 240</span>         # Original raw/source: None; None = not independently established.
+<span id="L241"> 241</span>         &quot;origin_angle_rad&quot;: 0.0,
+<span id="L242"> 242</span>         # Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. Unit: rad.
+<span id="L243"> 243</span>         # Original raw/source: None; None = not independently established.
+<span id="L244"> 244</span>         &quot;insertion_angle_rad&quot;: 2.53073,
+<span id="L245"> 245</span>         # Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. Unit: m.
+<span id="L246"> 246</span>         # Original raw/source: None; None = not independently established.
+<span id="L247"> 247</span>         &quot;proximal_wrap_radius_m&quot;: 0.004763827802212448,
+<span id="L248"> 248</span>         # Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. Unit: 1.
+<span id="L249"> 249</span>         # Original raw/source: None; None = not independently established.
+<span id="L250"> 250</span>         &quot;proximal_wrap_sign&quot;: -1.0,
+<span id="L251"> 251</span>         # Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. Unit: 1.
+<span id="L252"> 252</span>         # Original raw/source: None; None = not independently established.
+<span id="L253"> 253</span>         &quot;proximal_joint_sign&quot;: -1.0,
+<span id="L254"> 254</span>         # Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. Unit: m.
+<span id="L255"> 255</span>         # Original raw/source: None; None = not independently established.
+<span id="L256"> 256</span>         &quot;distal_wrap_radius_m&quot;: 0.010585365853658537,
+<span id="L257"> 257</span>         # Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. Unit: 1.
+<span id="L258"> 258</span>         # Original raw/source: None; None = not independently established.
+<span id="L259"> 259</span>         &quot;distal_wrap_sign&quot;: -1.0,
+<span id="L260"> 260</span>         # Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. Unit: 1.
+<span id="L261"> 261</span>         # Original raw/source: None; None = not independently established.
+<span id="L262"> 262</span>         &quot;distal_joint_sign&quot;: 1.0,
+<span id="L263"> 263</span>         # Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. Unit: m.
+<span id="L264"> 264</span>         # Original raw/source: None; None = not independently established.
+<span id="L265"> 265</span>         &quot;joint_spacing_m&quot;: 0.0955,
+<span id="L266"> 266</span>     },
+<span id="L267"> 267</span>     # ===== R_BFP =====
+<span id="L268"> 268</span>     # Branch 1, divisor 1.0: R_BFP_origin [R_pelvis_anchor] -&gt; R_BFP_wrap0 [R_pelvis_anchor] -&gt; R_BFP_tangent [R_thigh] -&gt; R_BFP_wrap1 [R_thigh] -&gt; R_BFP_insert [R_shank]
+<span id="L269"> 269</span>     # VIA POINT for R_BFP. Connected body: R_thigh. Computed local coordinates: update_routing.py overwrites them at each step.
+<span id="L270"> 270</span>     &quot;R_BFP_tangent&quot;: {
+<span id="L271"> 271</span>         # Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. Unit: m.
+<span id="L272"> 272</span>         # Original raw/source: None; None = not independently established.
+<span id="L273"> 273</span>         &quot;origin_radius_m&quot;: 0.008469945355191258,
+<span id="L274"> 274</span>         # Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. Unit: m.
+<span id="L275"> 275</span>         # Original raw/source: None; None = not independently established.
+<span id="L276"> 276</span>         &quot;insertion_radius_m&quot;: 0.03175609756097561,
+<span id="L277"> 277</span>         # Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. Unit: rad.
+<span id="L278"> 278</span>         # Original raw/source: None; None = not independently established.
+<span id="L279"> 279</span>         &quot;origin_angle_rad&quot;: 2.46091,
+<span id="L280"> 280</span>         # Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. Unit: rad.
+<span id="L281"> 281</span>         # Original raw/source: None; None = not independently established.
+<span id="L282"> 282</span>         &quot;insertion_angle_rad&quot;: 0.0,
+<span id="L283"> 283</span>         # Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. Unit: m.
+<span id="L284"> 284</span>         # Original raw/source: None; None = not independently established.
+<span id="L285"> 285</span>         &quot;proximal_wrap_radius_m&quot;: 0.004763827802212448,
+<span id="L286"> 286</span>         # Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. Unit: 1.
+<span id="L287"> 287</span>         # Original raw/source: None; None = not independently established.
+<span id="L288"> 288</span>         &quot;proximal_wrap_sign&quot;: 1.0,
+<span id="L289"> 289</span>         # Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. Unit: 1.
+<span id="L290"> 290</span>         # Original raw/source: None; None = not independently established.
+<span id="L291"> 291</span>         &quot;proximal_joint_sign&quot;: -1.0,
+<span id="L292"> 292</span>         # Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. Unit: m.
+<span id="L293"> 293</span>         # Original raw/source: None; None = not independently established.
+<span id="L294"> 294</span>         &quot;distal_wrap_radius_m&quot;: 0.005716593362654938,
+<span id="L295"> 295</span>         # Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. Unit: 1.
+<span id="L296"> 296</span>         # Original raw/source: None; None = not independently established.
+<span id="L297"> 297</span>         &quot;distal_wrap_sign&quot;: 1.0,
+<span id="L298"> 298</span>         # Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. Unit: 1.
+<span id="L299"> 299</span>         # Original raw/source: None; None = not independently established.
+<span id="L300"> 300</span>         &quot;distal_joint_sign&quot;: 1.0,
+<span id="L301"> 301</span>         # Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. Unit: m.
+<span id="L302"> 302</span>         # Original raw/source: None; None = not independently established.
+<span id="L303"> 303</span>         &quot;joint_spacing_m&quot;: 0.0955,
+<span id="L304"> 304</span>     },
+<span id="L305"> 305</span>     # ===== R_SAM =====
+<span id="L306"> 306</span>     # Branch 1, divisor 1.0: R_SAM_origin [R_pelvis_anchor] -&gt; R_SAM_wrap0 [R_pelvis_anchor] -&gt; R_SAM_tangent [R_thigh] -&gt; R_SAM_wrap1 [R_thigh] -&gt; R_SAM_insert [R_shank]
+<span id="L307"> 307</span>     # VIA POINT for R_SAM. Connected body: R_thigh. Computed local coordinates: update_routing.py overwrites them at each step.
+<span id="L308"> 308</span>     &quot;R_SAM_tangent&quot;: {
+<span id="L309"> 309</span>         # Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. Unit: m.
+<span id="L310"> 310</span>         # Original raw/source: None; None = not independently established.
+<span id="L311"> 311</span>         &quot;origin_radius_m&quot;: 0.013551912568306013,
+<span id="L312"> 312</span>         # Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. Unit: m.
+<span id="L313"> 313</span>         # Original raw/source: None; None = not independently established.
+<span id="L314"> 314</span>         &quot;insertion_radius_m&quot;: 0.010585365853658537,
+<span id="L315"> 315</span>         # Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. Unit: rad.
+<span id="L316"> 316</span>         # Original raw/source: None; None = not independently established.
+<span id="L317"> 317</span>         &quot;origin_angle_rad&quot;: 0.0,
+<span id="L318"> 318</span>         # Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. Unit: rad.
+<span id="L319"> 319</span>         # Original raw/source: None; None = not independently established.
+<span id="L320"> 320</span>         &quot;insertion_angle_rad&quot;: 0.0,
+<span id="L321"> 321</span>         # Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. Unit: m.
+<span id="L322"> 322</span>         # Original raw/source: None; None = not independently established.
+<span id="L323"> 323</span>         &quot;proximal_wrap_radius_m&quot;: 0.004763827802212448,
+<span id="L324"> 324</span>         # Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. Unit: 1.
+<span id="L325"> 325</span>         # Original raw/source: None; None = not independently established.
+<span id="L326"> 326</span>         &quot;proximal_wrap_sign&quot;: -1.0,
+<span id="L327"> 327</span>         # Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. Unit: 1.
+<span id="L328"> 328</span>         # Original raw/source: None; None = not independently established.
+<span id="L329"> 329</span>         &quot;proximal_joint_sign&quot;: -1.0,
+<span id="L330"> 330</span>         # Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. Unit: m.
+<span id="L331"> 331</span>         # Original raw/source: None; None = not independently established.
+<span id="L332"> 332</span>         &quot;distal_wrap_radius_m&quot;: 0.005716593362654938,
+<span id="L333"> 333</span>         # Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. Unit: 1.
+<span id="L334"> 334</span>         # Original raw/source: None; None = not independently established.
+<span id="L335"> 335</span>         &quot;distal_wrap_sign&quot;: 1.0,
+<span id="L336"> 336</span>         # Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. Unit: 1.
+<span id="L337"> 337</span>         # Original raw/source: None; None = not independently established.
+<span id="L338"> 338</span>         &quot;distal_joint_sign&quot;: 1.0,
+<span id="L339"> 339</span>         # Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. Unit: m.
+<span id="L340"> 340</span>         # Original raw/source: None; None = not independently established.
+<span id="L341"> 341</span>         &quot;joint_spacing_m&quot;: 0.0955,
+<span id="L342"> 342</span>     },
+<span id="L343"> 343</span>     # ===== R_LG =====
+<span id="L344"> 344</span>     # Branch 1, divisor 1.0: R_LG_origin [R_thigh] -&gt; R_LG_wrap0 [R_thigh] -&gt; R_LG_tangent [R_shank] -&gt; R_LG_wrap1 [R_shank] -&gt; R_LG_insert [R_foot]
+<span id="L345"> 345</span>     # VIA POINT for R_LG. Connected body: R_shank. Computed local coordinates: update_routing.py overwrites them at each step.
+<span id="L346"> 346</span>     &quot;R_LG_tangent&quot;: {
+<span id="L347"> 347</span>         # Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. Unit: m.
+<span id="L348"> 348</span>         # Original raw/source: None; None = not independently established.
+<span id="L349"> 349</span>         &quot;origin_radius_m&quot;: 0.0058890030832476885,
+<span id="L350"> 350</span>         # Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. Unit: m.
+<span id="L351"> 351</span>         # Original raw/source: None; None = not independently established.
+<span id="L352"> 352</span>         &quot;insertion_radius_m&quot;: 0.01555878084179971,
+<span id="L353"> 353</span>         # Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. Unit: rad.
+<span id="L354"> 354</span>         # Original raw/source: None; None = not independently established.
+<span id="L355"> 355</span>         &quot;origin_angle_rad&quot;: 0.0,
+<span id="L356"> 356</span>         # Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. Unit: rad.
+<span id="L357"> 357</span>         # Original raw/source: None; None = not independently established.
+<span id="L358"> 358</span>         &quot;insertion_angle_rad&quot;: -3.03687,
+<span id="L359"> 359</span>         # Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. Unit: m.
+<span id="L360"> 360</span>         # Original raw/source: None; None = not independently established.
+<span id="L361"> 361</span>         &quot;proximal_wrap_radius_m&quot;: 0.0058890030832476885,
+<span id="L362"> 362</span>         # Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. Unit: 1.
+<span id="L363"> 363</span>         # Original raw/source: None; None = not independently established.
+<span id="L364"> 364</span>         &quot;proximal_wrap_sign&quot;: 1.0,
+<span id="L365"> 365</span>         # Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. Unit: 1.
+<span id="L366"> 366</span>         # Original raw/source: None; None = not independently established.
+<span id="L367"> 367</span>         &quot;proximal_joint_sign&quot;: 1.0,
+<span id="L368"> 368</span>         # Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. Unit: m.
+<span id="L369"> 369</span>         # Original raw/source: None; None = not independently established.
+<span id="L370"> 370</span>         &quot;distal_wrap_radius_m&quot;: 0.004884810791217741,
+<span id="L371"> 371</span>         # Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. Unit: 1.
+<span id="L372"> 372</span>         # Original raw/source: None; None = not independently established.
+<span id="L373"> 373</span>         &quot;distal_wrap_sign&quot;: 1.0,
+<span id="L374"> 374</span>         # Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. Unit: 1.
+<span id="L375"> 375</span>         # Original raw/source: None; None = not independently established.
+<span id="L376"> 376</span>         &quot;distal_joint_sign&quot;: -1.0,
+<span id="L377"> 377</span>         # Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. Unit: m.
+<span id="L378"> 378</span>         # Original raw/source: None; None = not independently established.
+<span id="L379"> 379</span>         &quot;joint_spacing_m&quot;: 0.1085,
+<span id="L380"> 380</span>     },
+<span id="L381"> 381</span>     # ===== R_MG =====
+<span id="L382"> 382</span>     # Branch 1, divisor 1.0: R_MG_origin [R_thigh] -&gt; R_MG_wrap0 [R_thigh] -&gt; R_MG_tangent [R_shank] -&gt; R_MG_wrap1 [R_shank] -&gt; R_MG_insert [R_foot]
+<span id="L383"> 383</span>     # VIA POINT for R_MG. Connected body: R_shank. Computed local coordinates: update_routing.py overwrites them at each step.
+<span id="L384"> 384</span>     &quot;R_MG_tangent&quot;: {
+<span id="L385"> 385</span>         # Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. Unit: m.
+<span id="L386"> 386</span>         # Original raw/source: None; None = not independently established.
+<span id="L387"> 387</span>         &quot;origin_radius_m&quot;: 0.0058890030832476885,
+<span id="L388"> 388</span>         # Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. Unit: m.
+<span id="L389"> 389</span>         # Original raw/source: None; None = not independently established.
+<span id="L390"> 390</span>         &quot;insertion_radius_m&quot;: 0.01555878084179971,
+<span id="L391"> 391</span>         # Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. Unit: rad.
+<span id="L392"> 392</span>         # Original raw/source: None; None = not independently established.
+<span id="L393"> 393</span>         &quot;origin_angle_rad&quot;: 0.0,
+<span id="L394"> 394</span>         # Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. Unit: rad.
+<span id="L395"> 395</span>         # Original raw/source: None; None = not independently established.
+<span id="L396"> 396</span>         &quot;insertion_angle_rad&quot;: -3.03687,
+<span id="L397"> 397</span>         # Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. Unit: m.
+<span id="L398"> 398</span>         # Original raw/source: None; None = not independently established.
+<span id="L399"> 399</span>         &quot;proximal_wrap_radius_m&quot;: 0.0058890030832476885,
+<span id="L400"> 400</span>         # Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. Unit: 1.
+<span id="L401"> 401</span>         # Original raw/source: None; None = not independently established.
+<span id="L402"> 402</span>         &quot;proximal_wrap_sign&quot;: 1.0,
+<span id="L403"> 403</span>         # Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. Unit: 1.
+<span id="L404"> 404</span>         # Original raw/source: None; None = not independently established.
+<span id="L405"> 405</span>         &quot;proximal_joint_sign&quot;: 1.0,
+<span id="L406"> 406</span>         # Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. Unit: m.
+<span id="L407"> 407</span>         # Original raw/source: None; None = not independently established.
+<span id="L408"> 408</span>         &quot;distal_wrap_radius_m&quot;: 0.004884810791217741,
+<span id="L409"> 409</span>         # Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. Unit: 1.
+<span id="L410"> 410</span>         # Original raw/source: None; None = not independently established.
+<span id="L411"> 411</span>         &quot;distal_wrap_sign&quot;: 1.0,
+<span id="L412"> 412</span>         # Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. Unit: 1.
+<span id="L413"> 413</span>         # Original raw/source: None; None = not independently established.
+<span id="L414"> 414</span>         &quot;distal_joint_sign&quot;: -1.0,
+<span id="L415"> 415</span>         # Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. Unit: m.
+<span id="L416"> 416</span>         # Original raw/source: None; None = not independently established.
+<span id="L417"> 417</span>         &quot;joint_spacing_m&quot;: 0.1085,
+<span id="L418"> 418</span>     },
+<span id="L419"> 419</span>     # ===== L_EDL =====
+<span id="L420"> 420</span>     # Branch 1, divisor 1.0: L_EDL_osim_0 [L_shank] -&gt; L_EDL_osim_1 [L_shank] -&gt; L_EDL_osim_2 [L_foot] -&gt; L_EDL_osim_3 [L_foot] -&gt; L_EDL_osim_4 [L_foot] -&gt; L_EDL_osim_5 [L_foot] -&gt; L_EDL_osim_6 [L_digits]
+<span id="L421"> 421</span>     # ===== R_EDL =====
+<span id="L422"> 422</span>     # Branch 1, divisor 1.0: R_EDL_osim_0 [R_shank] -&gt; R_EDL_osim_1 [R_shank] -&gt; R_EDL_osim_2 [R_foot] -&gt; R_EDL_osim_3 [R_foot] -&gt; R_EDL_osim_4 [R_foot] -&gt; R_EDL_osim_5 [R_foot] -&gt; R_EDL_osim_6 [R_digits]
+<span id="L423"> 423</span>     # ===== L_FDL =====
+<span id="L424"> 424</span>     # Branch 1, divisor 1.0: L_FDL_osim_0 [L_shank] -&gt; L_FDL_osim_1 [L_shank] -&gt; L_FDL_osim_2 [L_foot] -&gt; L_FDL_osim_3 [L_foot] -&gt; L_FDL_osim_4 [L_digits]
+<span id="L425"> 425</span>     # ===== R_FDL =====
+<span id="L426"> 426</span>     # Branch 1, divisor 1.0: R_FDL_osim_0 [R_shank] -&gt; R_FDL_osim_1 [R_shank] -&gt; R_FDL_osim_2 [R_foot] -&gt; R_FDL_osim_3 [R_foot] -&gt; R_FDL_osim_4 [R_digits]
+<span id="L427"> 427</span>     # ===== L_FHL =====
+<span id="L428"> 428</span>     # Branch 1, divisor 1.0: L_FHL_attachment0 [L_shank] -&gt; L_FHL_attachment1 [L_shank] -&gt; L_FHL_attachment2 [L_foot] -&gt; L_FHL_attachment3 [L_foot] -&gt; L_FHL_attachment4 [L_digits]
+<span id="L429"> 429</span>     # ===== R_FHL =====
+<span id="L430"> 430</span>     # Branch 1, divisor 1.0: R_FHL_attachment0 [R_shank] -&gt; R_FHL_attachment1 [R_shank] -&gt; R_FHL_attachment2 [R_foot] -&gt; R_FHL_attachment3 [R_foot] -&gt; R_FHL_attachment4 [R_digits]
+<span id="L431"> 431</span>     # ===== FL_ShoulderExtensor =====
+<span id="L432"> 432</span>     # Branch 1, divisor 1.0: FL_ShoulderExtensor_s0_origin [FL_scapula] -&gt; FL_ShoulderExtensor_s0_pulley0 [FL_scapula] -&gt; FL_ShoulderExtensor_s0_insert [FL_upperarm]
+<span id="L433"> 433</span>     # WRAP SIDE SELECTOR for FL_ShoulderExtensor. Body: FL_scapula. NOT a path vertex or anatomical attachment.
+<span id="L434"> 434</span>     &quot;FL_ShoulderExtensor_s0_preferred&quot;: {
+<span id="L435"> 435</span>         # Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. Unit: m.
+<span id="L436"> 436</span>         # Original raw/source: None; None = not independently established.
+<span id="L437"> 437</span>         &quot;origin_radius_m&quot;: 0.0564002012493833,
+<span id="L438"> 438</span>         # Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. Unit: m.
+<span id="L439"> 439</span>         # Original raw/source: None; None = not independently established.
+<span id="L440"> 440</span>         &quot;insertion_radius_m&quot;: 0.00794548203380911,
+<span id="L441"> 441</span>         # Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. Unit: rad.
+<span id="L442"> 442</span>         # Original raw/source: None; None = not independently established.
+<span id="L443"> 443</span>         &quot;origin_angle_rad&quot;: -0.277010006173251,
+<span id="L444"> 444</span>         # Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. Unit: rad.
+<span id="L445"> 445</span>         # Original raw/source: None; None = not independently established.
+<span id="L446"> 446</span>         &quot;insertion_angle_rad&quot;: 2.39160180521177,
+<span id="L447"> 447</span>         # Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. Unit: m.
+<span id="L448"> 448</span>         # Original raw/source: None; None = not independently established.
+<span id="L449"> 449</span>         &quot;proximal_wrap_radius_m&quot;: 0.00794485115987297,
+<span id="L450"> 450</span>         # Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. Unit: 1.
+<span id="L451"> 451</span>         # Original raw/source: None; None = not independently established.
+<span id="L452"> 452</span>         &quot;proximal_wrap_sign&quot;: -1.0,
+<span id="L453"> 453</span>         # Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. Unit: 1.
+<span id="L454"> 454</span>         # Original raw/source: None; None = not independently established.
+<span id="L455"> 455</span>         &quot;proximal_joint_sign&quot;: 1.0,
+<span id="L456"> 456</span>         # Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. Unit: m.
+<span id="L457"> 457</span>         # Original raw/source: None; None = not independently established.
+<span id="L458"> 458</span>         &quot;distal_wrap_radius_m&quot;: 0.0,
+<span id="L459"> 459</span>         # Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. Unit: 1.
+<span id="L460"> 460</span>         # Original raw/source: None; None = not independently established.
+<span id="L461"> 461</span>         &quot;distal_wrap_sign&quot;: 0.0,
+<span id="L462"> 462</span>         # Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. Unit: 1.
+<span id="L463"> 463</span>         # Original raw/source: None; None = not independently established.
+<span id="L464"> 464</span>         &quot;distal_joint_sign&quot;: 0.0,
+<span id="L465"> 465</span>         # Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. Unit: m.
+<span id="L466"> 466</span>         # Original raw/source: None; None = not independently established.
+<span id="L467"> 467</span>         &quot;joint_spacing_m&quot;: 0.05771428571428572,
+<span id="L468"> 468</span>     },
+<span id="L469"> 469</span>     # ===== FL_ElbowExtensor =====
+<span id="L470"> 470</span>     # Branch 1, divisor 1.0: FL_ElbowExtensor_s0_origin [FL_upperarm] -&gt; FL_ElbowExtensor_s0_pulley0 [FL_upperarm] -&gt; FL_ElbowExtensor_s0_insert [FL_forearm]
+<span id="L471"> 471</span>     # WRAP SIDE SELECTOR for FL_ElbowExtensor. Body: FL_upperarm. NOT a path vertex or anatomical attachment.
+<span id="L472"> 472</span>     &quot;FL_ElbowExtensor_s0_preferred&quot;: {
+<span id="L473"> 473</span>         # Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. Unit: m.
+<span id="L474"> 474</span>         # Original raw/source: None; None = not independently established.
+<span id="L475"> 475</span>         &quot;origin_radius_m&quot;: 0.0600016465411511,
+<span id="L476"> 476</span>         # Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. Unit: m.
+<span id="L477"> 477</span>         # Original raw/source: None; None = not independently established.
+<span id="L478"> 478</span>         &quot;insertion_radius_m&quot;: 0.00558020397995713,
+<span id="L479"> 479</span>         # Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. Unit: rad.
+<span id="L480"> 480</span>         # Original raw/source: None; None = not independently established.
+<span id="L481"> 481</span>         &quot;origin_angle_rad&quot;: 0.155275208613396,
+<span id="L482"> 482</span>         # Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. Unit: rad.
+<span id="L483"> 483</span>         # Original raw/source: None; None = not independently established.
+<span id="L484"> 484</span>         &quot;insertion_angle_rad&quot;: -2.69130152425526,
+<span id="L485"> 485</span>         # Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. Unit: m.
+<span id="L486"> 486</span>         # Original raw/source: None; None = not independently established.
+<span id="L487"> 487</span>         &quot;proximal_wrap_radius_m&quot;: 0.00211767658246807,
+<span id="L488"> 488</span>         # Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. Unit: 1.
+<span id="L489"> 489</span>         # Original raw/source: None; None = not independently established.
+<span id="L490"> 490</span>         &quot;proximal_wrap_sign&quot;: 1.0,
+<span id="L491"> 491</span>         # Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. Unit: 1.
+<span id="L492"> 492</span>         # Original raw/source: None; None = not independently established.
+<span id="L493"> 493</span>         &quot;proximal_joint_sign&quot;: -1.0,
+<span id="L494"> 494</span>         # Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. Unit: m.
+<span id="L495"> 495</span>         # Original raw/source: None; None = not independently established.
+<span id="L496"> 496</span>         &quot;distal_wrap_radius_m&quot;: 0.0,
+<span id="L497"> 497</span>         # Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. Unit: 1.
+<span id="L498"> 498</span>         # Original raw/source: None; None = not independently established.
+<span id="L499"> 499</span>         &quot;distal_wrap_sign&quot;: 0.0,
+<span id="L500"> 500</span>         # Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. Unit: 1.
+<span id="L501"> 501</span>         # Original raw/source: None; None = not independently established.
+<span id="L502"> 502</span>         &quot;distal_joint_sign&quot;: 0.0,
+<span id="L503"> 503</span>         # Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. Unit: m.
+<span id="L504"> 504</span>         # Original raw/source: None; None = not independently established.
+<span id="L505"> 505</span>         &quot;joint_spacing_m&quot;: 0.09275714285714286,
+<span id="L506"> 506</span>     },
+<span id="L507"> 507</span>     # ===== FL_BicepsBrachii =====
+<span id="L508"> 508</span>     # Branch 1, divisor 1.0: FL_BicepsBrachii_s0_origin [FL_scapula] -&gt; FL_BicepsBrachii_s0_pulley0 [FL_scapula] -&gt; FL_BicepsBrachii_s0_tangent [FL_upperarm] -&gt; FL_BicepsBrachii_s0_pulley1 [FL_upperarm] -&gt; FL_BicepsBrachii_s0_insert [FL_forearm]
+<span id="L509"> 509</span>     # VIA POINT for FL_BicepsBrachii. Connected body: FL_upperarm. Computed local coordinates: update_routing.py overwrites them at each step.
+<span id="L510"> 510</span>     &quot;FL_BicepsBrachii_s0_tangent&quot;: {
+<span id="L511"> 511</span>         # Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. Unit: m.
+<span id="L512"> 512</span>         # Original raw/source: None; None = not independently established.
+<span id="L513"> 513</span>         &quot;origin_radius_m&quot;: 0.012186834291057365,
+<span id="L514"> 514</span>         # Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. Unit: m.
+<span id="L515"> 515</span>         # Original raw/source: None; None = not independently established.
+<span id="L516"> 516</span>         &quot;insertion_radius_m&quot;: 0.011134867494658732,
+<span id="L517"> 517</span>         # Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. Unit: rad.
+<span id="L518"> 518</span>         # Original raw/source: None; None = not independently established.
+<span id="L519"> 519</span>         &quot;origin_angle_rad&quot;: -1.9686494462266706,
+<span id="L520"> 520</span>         # Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. Unit: rad.
+<span id="L521"> 521</span>         # Original raw/source: None; None = not independently established.
+<span id="L522"> 522</span>         &quot;insertion_angle_rad&quot;: -0.40005001439213644,
+<span id="L523"> 523</span>         # Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. Unit: m.
+<span id="L524"> 524</span>         # Original raw/source: None; None = not independently established.
+<span id="L525"> 525</span>         &quot;proximal_wrap_radius_m&quot;: 0.009946928604793973,
+<span id="L526"> 526</span>         # Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. Unit: 1.
+<span id="L527"> 527</span>         # Original raw/source: None; None = not independently established.
+<span id="L528"> 528</span>         &quot;proximal_wrap_sign&quot;: -1.0,
+<span id="L529"> 529</span>         # Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. Unit: 1.
+<span id="L530"> 530</span>         # Original raw/source: None; None = not independently established.
+<span id="L531"> 531</span>         &quot;proximal_joint_sign&quot;: 1.0,
+<span id="L532"> 532</span>         # Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. Unit: m.
+<span id="L533"> 533</span>         # Original raw/source: None; None = not independently established.
+<span id="L534"> 534</span>         &quot;distal_wrap_radius_m&quot;: 0.005259145389888545,
+<span id="L535"> 535</span>         # Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. Unit: 1.
+<span id="L536"> 536</span>         # Original raw/source: None; None = not independently established.
+<span id="L537"> 537</span>         &quot;distal_wrap_sign&quot;: -1.0,
+<span id="L538"> 538</span>         # Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. Unit: 1.
+<span id="L539"> 539</span>         # Original raw/source: None; None = not independently established.
+<span id="L540"> 540</span>         &quot;distal_joint_sign&quot;: -1.0,
+<span id="L541"> 541</span>         # Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. Unit: m.
+<span id="L542"> 542</span>         # Original raw/source: None; None = not independently established.
+<span id="L543"> 543</span>         &quot;joint_spacing_m&quot;: 0.09275714285714286,
+<span id="L544"> 544</span>     },
+<span id="L545"> 545</span>     # ===== FL_ElbowFlexor =====
+<span id="L546"> 546</span>     # Branch 1, divisor 1.0: FL_ElbowFlexor_s0_origin [FL_upperarm] -&gt; FL_ElbowFlexor_s0_pulley0 [FL_upperarm] -&gt; FL_ElbowFlexor_s0_insert [FL_forearm]
+<span id="L547"> 547</span>     # WRAP SIDE SELECTOR for FL_ElbowFlexor. Body: FL_upperarm. NOT a path vertex or anatomical attachment.
+<span id="L548"> 548</span>     &quot;FL_ElbowFlexor_s0_preferred&quot;: {
+<span id="L549"> 549</span>         # Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. Unit: m.
+<span id="L550"> 550</span>         # Original raw/source: None; None = not independently established.
+<span id="L551"> 551</span>         &quot;origin_radius_m&quot;: 0.0715037507591663,
+<span id="L552"> 552</span>         # Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. Unit: m.
+<span id="L553"> 553</span>         # Original raw/source: None; None = not independently established.
+<span id="L554"> 554</span>         &quot;insertion_radius_m&quot;: 0.00740043933035868,
+<span id="L555"> 555</span>         # Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. Unit: rad.
+<span id="L556"> 556</span>         # Original raw/source: None; None = not independently established.
+<span id="L557"> 557</span>         &quot;origin_angle_rad&quot;: -0.0697366814458689,
+<span id="L558"> 558</span>         # Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. Unit: rad.
+<span id="L559"> 559</span>         # Original raw/source: None; None = not independently established.
+<span id="L560"> 560</span>         &quot;insertion_angle_rad&quot;: 0.898729071000832,
+<span id="L561"> 561</span>         # Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. Unit: m.
+<span id="L562"> 562</span>         # Original raw/source: None; None = not independently established.
+<span id="L563"> 563</span>         &quot;proximal_wrap_radius_m&quot;: 0.00320000000000039,
+<span id="L564"> 564</span>         # Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. Unit: 1.
+<span id="L565"> 565</span>         # Original raw/source: None; None = not independently established.
+<span id="L566"> 566</span>         &quot;proximal_wrap_sign&quot;: -1.0,
+<span id="L567"> 567</span>         # Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. Unit: 1.
+<span id="L568"> 568</span>         # Original raw/source: None; None = not independently established.
+<span id="L569"> 569</span>         &quot;proximal_joint_sign&quot;: -1.0,
+<span id="L570"> 570</span>         # Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. Unit: m.
+<span id="L571"> 571</span>         # Original raw/source: None; None = not independently established.
+<span id="L572"> 572</span>         &quot;distal_wrap_radius_m&quot;: 0.0,
+<span id="L573"> 573</span>         # Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. Unit: 1.
+<span id="L574"> 574</span>         # Original raw/source: None; None = not independently established.
+<span id="L575"> 575</span>         &quot;distal_wrap_sign&quot;: 0.0,
+<span id="L576"> 576</span>         # Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. Unit: 1.
+<span id="L577"> 577</span>         # Original raw/source: None; None = not independently established.
+<span id="L578"> 578</span>         &quot;distal_joint_sign&quot;: 0.0,
+<span id="L579"> 579</span>         # Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. Unit: m.
+<span id="L580"> 580</span>         # Original raw/source: None; None = not independently established.
+<span id="L581"> 581</span>         &quot;joint_spacing_m&quot;: 0.09275714285714286,
+<span id="L582"> 582</span>     },
+<span id="L583"> 583</span>     # ===== FL_ElbowFlexorWristFlexor =====
+<span id="L584"> 584</span>     # Branch 1, divisor 1.0: FL_ElbowFlexorWristFlexor_s0_origin [FL_upperarm] -&gt; FL_ElbowFlexorWristFlexor_s0_pulley0 [FL_upperarm] -&gt; FL_ElbowFlexorWristFlexor_s0_insert [FL_forearm]
+<span id="L585"> 585</span>     # WRAP SIDE SELECTOR for FL_ElbowFlexorWristFlexor. Body: FL_upperarm. NOT a path vertex or anatomical attachment.
+<span id="L586"> 586</span>     &quot;FL_ElbowFlexorWristFlexor_s0_preferred&quot;: {
+<span id="L587"> 587</span>         # Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. Unit: m.
+<span id="L588"> 588</span>         # Original raw/source: None; None = not independently established.
+<span id="L589"> 589</span>         &quot;origin_radius_m&quot;: 0.0114000013042347,
+<span id="L590"> 590</span>         # Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. Unit: m.
+<span id="L591"> 591</span>         # Original raw/source: None; None = not independently established.
+<span id="L592"> 592</span>         &quot;insertion_radius_m&quot;: 0.0951000002121869,
+<span id="L593"> 593</span>         # Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. Unit: rad.
+<span id="L594"> 594</span>         # Original raw/source: None; None = not independently established.
+<span id="L595"> 595</span>         &quot;origin_angle_rad&quot;: 0.286687371689756,
+<span id="L596"> 596</span>         # Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. Unit: rad.
+<span id="L597"> 597</span>         # Original raw/source: None; None = not independently established.
+<span id="L598"> 598</span>         &quot;insertion_angle_rad&quot;: 0.0645005602980572,
+<span id="L599"> 599</span>         # Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. Unit: m.
+<span id="L600"> 600</span>         # Original raw/source: None; None = not independently established.
+<span id="L601"> 601</span>         &quot;proximal_wrap_radius_m&quot;: 0.00536465406611287,
+<span id="L602"> 602</span>         # Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. Unit: 1.
+<span id="L603"> 603</span>         # Original raw/source: None; None = not independently established.
+<span id="L604"> 604</span>         &quot;proximal_wrap_sign&quot;: -1.0,
+<span id="L605"> 605</span>         # Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. Unit: 1.
+<span id="L606"> 606</span>         # Original raw/source: None; None = not independently established.
+<span id="L607"> 607</span>         &quot;proximal_joint_sign&quot;: -1.0,
+<span id="L608"> 608</span>         # Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. Unit: m.
+<span id="L609"> 609</span>         # Original raw/source: None; None = not independently established.
+<span id="L610"> 610</span>         &quot;distal_wrap_radius_m&quot;: 0.0,
+<span id="L611"> 611</span>         # Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. Unit: 1.
+<span id="L612"> 612</span>         # Original raw/source: None; None = not independently established.
+<span id="L613"> 613</span>         &quot;distal_wrap_sign&quot;: 0.0,
+<span id="L614"> 614</span>         # Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. Unit: 1.
+<span id="L615"> 615</span>         # Original raw/source: None; None = not independently established.
+<span id="L616"> 616</span>         &quot;distal_joint_sign&quot;: 0.0,
+<span id="L617"> 617</span>         # Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. Unit: m.
+<span id="L618"> 618</span>         # Original raw/source: None; None = not independently established.
+<span id="L619"> 619</span>         &quot;joint_spacing_m&quot;: 0.09275714285714286,
+<span id="L620"> 620</span>     },
+<span id="L621"> 621</span>     # Branch 2, divisor 1.0: FL_ElbowFlexorWristFlexor_s1_origin [FL_forearm] -&gt; FL_ElbowFlexorWristFlexor_s1_pulley0 [FL_forearm] -&gt; FL_ElbowFlexorWristFlexor_s1_insert [FL_carpals]
+<span id="L622"> 622</span>     # WRAP SIDE SELECTOR for FL_ElbowFlexorWristFlexor. Body: FL_forearm. NOT a path vertex or anatomical attachment.
+<span id="L623"> 623</span>     &quot;FL_ElbowFlexorWristFlexor_s1_preferred&quot;: {
+<span id="L624"> 624</span>         # Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. Unit: m.
+<span id="L625"> 625</span>         # Original raw/source: None; None = not independently established.
+<span id="L626"> 626</span>         &quot;origin_radius_m&quot;: 0.0061346492911567106,
+<span id="L627"> 627</span>         # Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. Unit: m.
+<span id="L628"> 628</span>         # Original raw/source: None; None = not independently established.
+<span id="L629"> 629</span>         &quot;insertion_radius_m&quot;: 0.0332999926671867,
+<span id="L630"> 630</span>         # Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. Unit: rad.
+<span id="L631"> 631</span>         # Original raw/source: None; None = not independently established.
+<span id="L632"> 632</span>         &quot;origin_angle_rad&quot;: -1.530831880600672,
+<span id="L633"> 633</span>         # Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. Unit: rad.
+<span id="L634"> 634</span>         # Original raw/source: None; None = not independently established.
+<span id="L635"> 635</span>         &quot;insertion_angle_rad&quot;: 0.12583820430839,
+<span id="L636"> 636</span>         # Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. Unit: m.
+<span id="L637"> 637</span>         # Original raw/source: None; None = not independently established.
+<span id="L638"> 638</span>         &quot;proximal_wrap_radius_m&quot;: 0.00350749590190618,
+<span id="L639"> 639</span>         # Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. Unit: 1.
+<span id="L640"> 640</span>         # Original raw/source: None; None = not independently established.
+<span id="L641"> 641</span>         &quot;proximal_wrap_sign&quot;: -1.0,
+<span id="L642"> 642</span>         # Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. Unit: 1.
+<span id="L643"> 643</span>         # Original raw/source: None; None = not independently established.
+<span id="L644"> 644</span>         &quot;proximal_joint_sign&quot;: -1.0,
+<span id="L645"> 645</span>         # Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. Unit: m.
+<span id="L646"> 646</span>         # Original raw/source: None; None = not independently established.
+<span id="L647"> 647</span>         &quot;distal_wrap_radius_m&quot;: 0.0,
+<span id="L648"> 648</span>         # Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. Unit: 1.
+<span id="L649"> 649</span>         # Original raw/source: None; None = not independently established.
+<span id="L650"> 650</span>         &quot;distal_wrap_sign&quot;: 0.0,
+<span id="L651"> 651</span>         # Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. Unit: 1.
+<span id="L652"> 652</span>         # Original raw/source: None; None = not independently established.
+<span id="L653"> 653</span>         &quot;distal_joint_sign&quot;: 0.0,
+<span id="L654"> 654</span>         # Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. Unit: m.
+<span id="L655"> 655</span>         # Original raw/source: None; None = not independently established.
+<span id="L656"> 656</span>         &quot;joint_spacing_m&quot;: 0.09465714285714286,
+<span id="L657"> 657</span>     },
+<span id="L658"> 658</span>     # ===== FL_WristFlexor =====
+<span id="L659"> 659</span>     # Branch 1, divisor 1.0: FL_WristFlexor_s0_origin [FL_forearm] -&gt; FL_WristFlexor_s0_insert [FL_forearm]
+<span id="L660"> 660</span>     # Branch 2, divisor 1.0: FL_WristFlexor_s1_origin [FL_forearm] -&gt; FL_WristFlexor_s1_pulley0 [FL_forearm] -&gt; FL_WristFlexor_s1_insert [FL_carpals]
+<span id="L661"> 661</span>     # WRAP SIDE SELECTOR for FL_WristFlexor. Body: FL_forearm. NOT a path vertex or anatomical attachment.
+<span id="L662"> 662</span>     &quot;FL_WristFlexor_s1_preferred&quot;: {
+<span id="L663"> 663</span>         # Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. Unit: m.
+<span id="L664"> 664</span>         # Original raw/source: None; None = not independently established.
+<span id="L665"> 665</span>         &quot;origin_radius_m&quot;: 0.006009024678845052,
+<span id="L666"> 666</span>         # Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. Unit: m.
+<span id="L667"> 667</span>         # Original raw/source: None; None = not independently established.
+<span id="L668"> 668</span>         &quot;insertion_radius_m&quot;: 0.0171115446907036,
+<span id="L669"> 669</span>         # Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. Unit: rad.
+<span id="L670"> 670</span>         # Original raw/source: None; None = not independently established.
+<span id="L671"> 671</span>         &quot;origin_angle_rad&quot;: -2.3325124139914677,
+<span id="L672"> 672</span>         # Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. Unit: rad.
+<span id="L673"> 673</span>         # Original raw/source: None; None = not independently established.
+<span id="L674"> 674</span>         &quot;insertion_angle_rad&quot;: 0.114800555463146,
+<span id="L675"> 675</span>         # Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. Unit: m.
+<span id="L676"> 676</span>         # Original raw/source: None; None = not independently established.
+<span id="L677"> 677</span>         &quot;proximal_wrap_radius_m&quot;: 0.0024,
+<span id="L678"> 678</span>         # Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. Unit: 1.
+<span id="L679"> 679</span>         # Original raw/source: None; None = not independently established.
+<span id="L680"> 680</span>         &quot;proximal_wrap_sign&quot;: -1.0,
+<span id="L681"> 681</span>         # Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. Unit: 1.
+<span id="L682"> 682</span>         # Original raw/source: None; None = not independently established.
+<span id="L683"> 683</span>         &quot;proximal_joint_sign&quot;: -1.0,
+<span id="L684"> 684</span>         # Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. Unit: m.
+<span id="L685"> 685</span>         # Original raw/source: None; None = not independently established.
+<span id="L686"> 686</span>         &quot;distal_wrap_radius_m&quot;: 0.0,
+<span id="L687"> 687</span>         # Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. Unit: 1.
+<span id="L688"> 688</span>         # Original raw/source: None; None = not independently established.
+<span id="L689"> 689</span>         &quot;distal_wrap_sign&quot;: 0.0,
+<span id="L690"> 690</span>         # Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. Unit: 1.
+<span id="L691"> 691</span>         # Original raw/source: None; None = not independently established.
+<span id="L692"> 692</span>         &quot;distal_joint_sign&quot;: 0.0,
+<span id="L693"> 693</span>         # Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. Unit: m.
+<span id="L694"> 694</span>         # Original raw/source: None; None = not independently established.
+<span id="L695"> 695</span>         &quot;joint_spacing_m&quot;: 0.09465714285714286,
+<span id="L696"> 696</span>     },
+<span id="L697"> 697</span>     # ===== FL_WristExtensor =====
+<span id="L698"> 698</span>     # Branch 1, divisor 1.0: FL_WristExtensor_s0_origin [FL_forearm] -&gt; FL_WristExtensor_s0_insert [FL_forearm]
+<span id="L699"> 699</span>     # Branch 2, divisor 1.0: FL_WristExtensor_s1_origin [FL_forearm] -&gt; FL_WristExtensor_s1_pulley0 [FL_forearm] -&gt; FL_WristExtensor_s1_insert [FL_carpals]
+<span id="L700"> 700</span>     # WRAP SIDE SELECTOR for FL_WristExtensor. Body: FL_forearm. NOT a path vertex or anatomical attachment.
+<span id="L701"> 701</span>     &quot;FL_WristExtensor_s1_preferred&quot;: {
+<span id="L702"> 702</span>         # Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. Unit: m.
+<span id="L703"> 703</span>         # Original raw/source: None; None = not independently established.
+<span id="L704"> 704</span>         &quot;origin_radius_m&quot;: 0.00518652885093298,
+<span id="L705"> 705</span>         # Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. Unit: m.
+<span id="L706"> 706</span>         # Original raw/source: None; None = not independently established.
+<span id="L707"> 707</span>         &quot;insertion_radius_m&quot;: 0.0288587788186216,
+<span id="L708"> 708</span>         # Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. Unit: rad.
+<span id="L709"> 709</span>         # Original raw/source: None; None = not independently established.
+<span id="L710"> 710</span>         &quot;origin_angle_rad&quot;: 1.282292184119631,
+<span id="L711"> 711</span>         # Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. Unit: rad.
+<span id="L712"> 712</span>         # Original raw/source: None; None = not independently established.
+<span id="L713"> 713</span>         &quot;insertion_angle_rad&quot;: -0.163175752538083,
+<span id="L714"> 714</span>         # Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. Unit: m.
+<span id="L715"> 715</span>         # Original raw/source: None; None = not independently established.
+<span id="L716"> 716</span>         &quot;proximal_wrap_radius_m&quot;: 0.00271044296770131,
+<span id="L717"> 717</span>         # Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. Unit: 1.
+<span id="L718"> 718</span>         # Original raw/source: None; None = not independently established.
+<span id="L719"> 719</span>         &quot;proximal_wrap_sign&quot;: 1.0,
+<span id="L720"> 720</span>         # Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. Unit: 1.
+<span id="L721"> 721</span>         # Original raw/source: None; None = not independently established.
+<span id="L722"> 722</span>         &quot;proximal_joint_sign&quot;: -1.0,
+<span id="L723"> 723</span>         # Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. Unit: m.
+<span id="L724"> 724</span>         # Original raw/source: None; None = not independently established.
+<span id="L725"> 725</span>         &quot;distal_wrap_radius_m&quot;: 0.0,
+<span id="L726"> 726</span>         # Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. Unit: 1.
+<span id="L727"> 727</span>         # Original raw/source: None; None = not independently established.
+<span id="L728"> 728</span>         &quot;distal_wrap_sign&quot;: 0.0,
+<span id="L729"> 729</span>         # Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. Unit: 1.
+<span id="L730"> 730</span>         # Original raw/source: None; None = not independently established.
+<span id="L731"> 731</span>         &quot;distal_joint_sign&quot;: 0.0,
+<span id="L732"> 732</span>         # Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. Unit: m.
+<span id="L733"> 733</span>         # Original raw/source: None; None = not independently established.
+<span id="L734"> 734</span>         &quot;joint_spacing_m&quot;: 0.09465714285714286,
+<span id="L735"> 735</span>     },
+<span id="L736"> 736</span>     # ===== FL_ShoulderFlexor =====
+<span id="L737"> 737</span>     # Branch 1, divisor 1.0: FL_ShoulderFlexor_s0_origin [FL_scapula] -&gt; FL_ShoulderFlexor_s0_pulley0 [FL_scapula] -&gt; FL_ShoulderFlexor_s0_insert [FL_upperarm]
+<span id="L738"> 738</span>     # WRAP SIDE SELECTOR for FL_ShoulderFlexor. Body: FL_scapula. NOT a path vertex or anatomical attachment.
+<span id="L739"> 739</span>     &quot;FL_ShoulderFlexor_s0_preferred&quot;: {
+<span id="L740"> 740</span>         # Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. Unit: m.
+<span id="L741"> 741</span>         # Original raw/source: None; None = not independently established.
+<span id="L742"> 742</span>         &quot;origin_radius_m&quot;: 0.0507609523493369,
+<span id="L743"> 743</span>         # Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. Unit: m.
+<span id="L744"> 744</span>         # Original raw/source: None; None = not independently established.
+<span id="L745"> 745</span>         &quot;insertion_radius_m&quot;: 0.0167000301127897,
+<span id="L746"> 746</span>         # Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. Unit: rad.
+<span id="L747"> 747</span>         # Original raw/source: None; None = not independently established.
+<span id="L748"> 748</span>         &quot;origin_angle_rad&quot;: 0.127927581350083,
+<span id="L749"> 749</span>         # Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. Unit: rad.
+<span id="L750"> 750</span>         # Original raw/source: None; None = not independently established.
+<span id="L751"> 751</span>         &quot;insertion_angle_rad&quot;: 0.594581222632492,
+<span id="L752"> 752</span>         # Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. Unit: m.
+<span id="L753"> 753</span>         # Original raw/source: None; None = not independently established.
+<span id="L754"> 754</span>         &quot;proximal_wrap_radius_m&quot;: 0.00184271114122135,
+<span id="L755"> 755</span>         # Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. Unit: 1.
+<span id="L756"> 756</span>         # Original raw/source: None; None = not independently established.
+<span id="L757"> 757</span>         &quot;proximal_wrap_sign&quot;: 1.0,
+<span id="L758"> 758</span>         # Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. Unit: 1.
+<span id="L759"> 759</span>         # Original raw/source: None; None = not independently established.
+<span id="L760"> 760</span>         &quot;proximal_joint_sign&quot;: 1.0,
+<span id="L761"> 761</span>         # Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. Unit: m.
+<span id="L762"> 762</span>         # Original raw/source: None; None = not independently established.
+<span id="L763"> 763</span>         &quot;distal_wrap_radius_m&quot;: 0.0,
+<span id="L764"> 764</span>         # Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. Unit: 1.
+<span id="L765"> 765</span>         # Original raw/source: None; None = not independently established.
+<span id="L766"> 766</span>         &quot;distal_wrap_sign&quot;: 0.0,
+<span id="L767"> 767</span>         # Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. Unit: 1.
+<span id="L768"> 768</span>         # Original raw/source: None; None = not independently established.
+<span id="L769"> 769</span>         &quot;distal_joint_sign&quot;: 0.0,
+<span id="L770"> 770</span>         # Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. Unit: m.
+<span id="L771"> 771</span>         # Original raw/source: None; None = not independently established.
+<span id="L772"> 772</span>         &quot;joint_spacing_m&quot;: 0.05771428571428572,
+<span id="L773"> 773</span>     },
+<span id="L774"> 774</span>     # ===== FL_TricepsBrachiiLong =====
+<span id="L775"> 775</span>     # Branch 1, divisor 1.0: FL_TricepsBrachiiLong_s0_origin [FL_scapula] -&gt; FL_TricepsBrachiiLong_s0_pulley0 [FL_scapula] -&gt; FL_TricepsBrachiiLong_s0_tangent [FL_upperarm] -&gt; FL_TricepsBrachiiLong_s0_pulley1 [FL_upperarm] -&gt; FL_TricepsBrachiiLong_s0_insert [FL_forearm]
+<span id="L776"> 776</span>     # VIA POINT for FL_TricepsBrachiiLong. Connected body: FL_upperarm. Computed local coordinates: update_routing.py overwrites them at each step.
+<span id="L777"> 777</span>     &quot;FL_TricepsBrachiiLong_s0_tangent&quot;: {
+<span id="L778"> 778</span>         # Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. Unit: m.
+<span id="L779"> 779</span>         # Original raw/source: None; None = not independently established.
+<span id="L780"> 780</span>         &quot;origin_radius_m&quot;: 0.01023654140200321,
+<span id="L781"> 781</span>         # Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. Unit: m.
+<span id="L782"> 782</span>         # Original raw/source: None; None = not independently established.
+<span id="L783"> 783</span>         &quot;insertion_radius_m&quot;: 0.014854093335665784,
+<span id="L784"> 784</span>         # Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. Unit: rad.
+<span id="L785"> 785</span>         # Original raw/source: None; None = not independently established.
+<span id="L786"> 786</span>         &quot;origin_angle_rad&quot;: -0.04621934250258526,
+<span id="L787"> 787</span>         # Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. Unit: rad.
+<span id="L788"> 788</span>         # Original raw/source: None; None = not independently established.
+<span id="L789"> 789</span>         &quot;insertion_angle_rad&quot;: -2.8324783497454353,
+<span id="L790"> 790</span>         # Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. Unit: m.
+<span id="L791"> 791</span>         # Original raw/source: None; None = not independently established.
+<span id="L792"> 792</span>         &quot;proximal_wrap_radius_m&quot;: 0.004419416012604855,
+<span id="L793"> 793</span>         # Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. Unit: 1.
+<span id="L794"> 794</span>         # Original raw/source: None; None = not independently established.
+<span id="L795"> 795</span>         &quot;proximal_wrap_sign&quot;: 1.0,
+<span id="L796"> 796</span>         # Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. Unit: 1.
+<span id="L797"> 797</span>         # Original raw/source: None; None = not independently established.
+<span id="L798"> 798</span>         &quot;proximal_joint_sign&quot;: 1.0,
+<span id="L799"> 799</span>         # Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. Unit: m.
+<span id="L800"> 800</span>         # Original raw/source: None; None = not independently established.
+<span id="L801"> 801</span>         &quot;distal_wrap_radius_m&quot;: 0.011883274668532628,
+<span id="L802"> 802</span>         # Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. Unit: 1.
+<span id="L803"> 803</span>         # Original raw/source: None; None = not independently established.
+<span id="L804"> 804</span>         &quot;distal_wrap_sign&quot;: 1.0,
+<span id="L805"> 805</span>         # Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. Unit: 1.
+<span id="L806"> 806</span>         # Original raw/source: None; None = not independently established.
+<span id="L807"> 807</span>         &quot;distal_joint_sign&quot;: -1.0,
+<span id="L808"> 808</span>         # Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. Unit: m.
+<span id="L809"> 809</span>         # Original raw/source: None; None = not independently established.
+<span id="L810"> 810</span>         &quot;joint_spacing_m&quot;: 0.09275714285714286,
+<span id="L811"> 811</span>     },
+<span id="L812"> 812</span>     # ===== FR_ShoulderExtensor =====
+<span id="L813"> 813</span>     # Branch 1, divisor 1.0: FR_ShoulderExtensor_s0_origin [FR_scapula] -&gt; FR_ShoulderExtensor_s0_pulley0 [FR_scapula] -&gt; FR_ShoulderExtensor_s0_insert [FR_upperarm]
+<span id="L814"> 814</span>     # WRAP SIDE SELECTOR for FR_ShoulderExtensor. Body: FR_scapula. NOT a path vertex or anatomical attachment.
+<span id="L815"> 815</span>     &quot;FR_ShoulderExtensor_s0_preferred&quot;: {
+<span id="L816"> 816</span>         # Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. Unit: m.
+<span id="L817"> 817</span>         # Original raw/source: None; None = not independently established.
+<span id="L818"> 818</span>         &quot;origin_radius_m&quot;: 0.0564002012493833,
+<span id="L819"> 819</span>         # Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. Unit: m.
+<span id="L820"> 820</span>         # Original raw/source: None; None = not independently established.
+<span id="L821"> 821</span>         &quot;insertion_radius_m&quot;: 0.00794548203380911,
+<span id="L822"> 822</span>         # Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. Unit: rad.
+<span id="L823"> 823</span>         # Original raw/source: None; None = not independently established.
+<span id="L824"> 824</span>         &quot;origin_angle_rad&quot;: -0.277010006173251,
+<span id="L825"> 825</span>         # Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. Unit: rad.
+<span id="L826"> 826</span>         # Original raw/source: None; None = not independently established.
+<span id="L827"> 827</span>         &quot;insertion_angle_rad&quot;: 2.39160180521177,
+<span id="L828"> 828</span>         # Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. Unit: m.
+<span id="L829"> 829</span>         # Original raw/source: None; None = not independently established.
+<span id="L830"> 830</span>         &quot;proximal_wrap_radius_m&quot;: 0.00794485115987297,
+<span id="L831"> 831</span>         # Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. Unit: 1.
+<span id="L832"> 832</span>         # Original raw/source: None; None = not independently established.
+<span id="L833"> 833</span>         &quot;proximal_wrap_sign&quot;: -1.0,
+<span id="L834"> 834</span>         # Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. Unit: 1.
+<span id="L835"> 835</span>         # Original raw/source: None; None = not independently established.
+<span id="L836"> 836</span>         &quot;proximal_joint_sign&quot;: 1.0,
+<span id="L837"> 837</span>         # Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. Unit: m.
+<span id="L838"> 838</span>         # Original raw/source: None; None = not independently established.
+<span id="L839"> 839</span>         &quot;distal_wrap_radius_m&quot;: 0.0,
+<span id="L840"> 840</span>         # Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. Unit: 1.
+<span id="L841"> 841</span>         # Original raw/source: None; None = not independently established.
+<span id="L842"> 842</span>         &quot;distal_wrap_sign&quot;: 0.0,
+<span id="L843"> 843</span>         # Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. Unit: 1.
+<span id="L844"> 844</span>         # Original raw/source: None; None = not independently established.
+<span id="L845"> 845</span>         &quot;distal_joint_sign&quot;: 0.0,
+<span id="L846"> 846</span>         # Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. Unit: m.
+<span id="L847"> 847</span>         # Original raw/source: None; None = not independently established.
+<span id="L848"> 848</span>         &quot;joint_spacing_m&quot;: 0.05771428571428572,
+<span id="L849"> 849</span>     },
+<span id="L850"> 850</span>     # ===== FR_ElbowExtensor =====
+<span id="L851"> 851</span>     # Branch 1, divisor 1.0: FR_ElbowExtensor_s0_origin [FR_upperarm] -&gt; FR_ElbowExtensor_s0_pulley0 [FR_upperarm] -&gt; FR_ElbowExtensor_s0_insert [FR_forearm]
+<span id="L852"> 852</span>     # WRAP SIDE SELECTOR for FR_ElbowExtensor. Body: FR_upperarm. NOT a path vertex or anatomical attachment.
+<span id="L853"> 853</span>     &quot;FR_ElbowExtensor_s0_preferred&quot;: {
+<span id="L854"> 854</span>         # Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. Unit: m.
+<span id="L855"> 855</span>         # Original raw/source: None; None = not independently established.
+<span id="L856"> 856</span>         &quot;origin_radius_m&quot;: 0.0600016465411511,
+<span id="L857"> 857</span>         # Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. Unit: m.
+<span id="L858"> 858</span>         # Original raw/source: None; None = not independently established.
+<span id="L859"> 859</span>         &quot;insertion_radius_m&quot;: 0.00558020397995713,
+<span id="L860"> 860</span>         # Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. Unit: rad.
+<span id="L861"> 861</span>         # Original raw/source: None; None = not independently established.
+<span id="L862"> 862</span>         &quot;origin_angle_rad&quot;: 0.155275208613396,
+<span id="L863"> 863</span>         # Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. Unit: rad.
+<span id="L864"> 864</span>         # Original raw/source: None; None = not independently established.
+<span id="L865"> 865</span>         &quot;insertion_angle_rad&quot;: -2.69130152425526,
+<span id="L866"> 866</span>         # Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. Unit: m.
+<span id="L867"> 867</span>         # Original raw/source: None; None = not independently established.
+<span id="L868"> 868</span>         &quot;proximal_wrap_radius_m&quot;: 0.00211767658246807,
+<span id="L869"> 869</span>         # Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. Unit: 1.
+<span id="L870"> 870</span>         # Original raw/source: None; None = not independently established.
+<span id="L871"> 871</span>         &quot;proximal_wrap_sign&quot;: 1.0,
+<span id="L872"> 872</span>         # Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. Unit: 1.
+<span id="L873"> 873</span>         # Original raw/source: None; None = not independently established.
+<span id="L874"> 874</span>         &quot;proximal_joint_sign&quot;: -1.0,
+<span id="L875"> 875</span>         # Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. Unit: m.
+<span id="L876"> 876</span>         # Original raw/source: None; None = not independently established.
+<span id="L877"> 877</span>         &quot;distal_wrap_radius_m&quot;: 0.0,
+<span id="L878"> 878</span>         # Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. Unit: 1.
+<span id="L879"> 879</span>         # Original raw/source: None; None = not independently established.
+<span id="L880"> 880</span>         &quot;distal_wrap_sign&quot;: 0.0,
+<span id="L881"> 881</span>         # Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. Unit: 1.
+<span id="L882"> 882</span>         # Original raw/source: None; None = not independently established.
+<span id="L883"> 883</span>         &quot;distal_joint_sign&quot;: 0.0,
+<span id="L884"> 884</span>         # Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. Unit: m.
+<span id="L885"> 885</span>         # Original raw/source: None; None = not independently established.
+<span id="L886"> 886</span>         &quot;joint_spacing_m&quot;: 0.09275714285714286,
+<span id="L887"> 887</span>     },
+<span id="L888"> 888</span>     # ===== FR_BicepsBrachii =====
+<span id="L889"> 889</span>     # Branch 1, divisor 1.0: FR_BicepsBrachii_s0_origin [FR_scapula] -&gt; FR_BicepsBrachii_s0_pulley0 [FR_scapula] -&gt; FR_BicepsBrachii_s0_tangent [FR_upperarm] -&gt; FR_BicepsBrachii_s0_pulley1 [FR_upperarm] -&gt; FR_BicepsBrachii_s0_insert [FR_forearm]
+<span id="L890"> 890</span>     # VIA POINT for FR_BicepsBrachii. Connected body: FR_upperarm. Computed local coordinates: update_routing.py overwrites them at each step.
+<span id="L891"> 891</span>     &quot;FR_BicepsBrachii_s0_tangent&quot;: {
+<span id="L892"> 892</span>         # Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. Unit: m.
+<span id="L893"> 893</span>         # Original raw/source: None; None = not independently established.
+<span id="L894"> 894</span>         &quot;origin_radius_m&quot;: 0.012186834291057365,
+<span id="L895"> 895</span>         # Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. Unit: m.
+<span id="L896"> 896</span>         # Original raw/source: None; None = not independently established.
+<span id="L897"> 897</span>         &quot;insertion_radius_m&quot;: 0.011134867494658732,
+<span id="L898"> 898</span>         # Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. Unit: rad.
+<span id="L899"> 899</span>         # Original raw/source: None; None = not independently established.
+<span id="L900"> 900</span>         &quot;origin_angle_rad&quot;: -1.9686494462266706,
+<span id="L901"> 901</span>         # Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. Unit: rad.
+<span id="L902"> 902</span>         # Original raw/source: None; None = not independently established.
+<span id="L903"> 903</span>         &quot;insertion_angle_rad&quot;: -0.40005001439213644,
+<span id="L904"> 904</span>         # Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. Unit: m.
+<span id="L905"> 905</span>         # Original raw/source: None; None = not independently established.
+<span id="L906"> 906</span>         &quot;proximal_wrap_radius_m&quot;: 0.009946928604793973,
+<span id="L907"> 907</span>         # Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. Unit: 1.
+<span id="L908"> 908</span>         # Original raw/source: None; None = not independently established.
+<span id="L909"> 909</span>         &quot;proximal_wrap_sign&quot;: -1.0,
+<span id="L910"> 910</span>         # Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. Unit: 1.
+<span id="L911"> 911</span>         # Original raw/source: None; None = not independently established.
+<span id="L912"> 912</span>         &quot;proximal_joint_sign&quot;: 1.0,
+<span id="L913"> 913</span>         # Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. Unit: m.
+<span id="L914"> 914</span>         # Original raw/source: None; None = not independently established.
+<span id="L915"> 915</span>         &quot;distal_wrap_radius_m&quot;: 0.005259145389888545,
+<span id="L916"> 916</span>         # Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. Unit: 1.
+<span id="L917"> 917</span>         # Original raw/source: None; None = not independently established.
+<span id="L918"> 918</span>         &quot;distal_wrap_sign&quot;: -1.0,
+<span id="L919"> 919</span>         # Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. Unit: 1.
+<span id="L920"> 920</span>         # Original raw/source: None; None = not independently established.
+<span id="L921"> 921</span>         &quot;distal_joint_sign&quot;: -1.0,
+<span id="L922"> 922</span>         # Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. Unit: m.
+<span id="L923"> 923</span>         # Original raw/source: None; None = not independently established.
+<span id="L924"> 924</span>         &quot;joint_spacing_m&quot;: 0.09275714285714286,
+<span id="L925"> 925</span>     },
+<span id="L926"> 926</span>     # ===== FR_ElbowFlexor =====
+<span id="L927"> 927</span>     # Branch 1, divisor 1.0: FR_ElbowFlexor_s0_origin [FR_upperarm] -&gt; FR_ElbowFlexor_s0_pulley0 [FR_upperarm] -&gt; FR_ElbowFlexor_s0_insert [FR_forearm]
+<span id="L928"> 928</span>     # WRAP SIDE SELECTOR for FR_ElbowFlexor. Body: FR_upperarm. NOT a path vertex or anatomical attachment.
+<span id="L929"> 929</span>     &quot;FR_ElbowFlexor_s0_preferred&quot;: {
+<span id="L930"> 930</span>         # Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. Unit: m.
+<span id="L931"> 931</span>         # Original raw/source: None; None = not independently established.
+<span id="L932"> 932</span>         &quot;origin_radius_m&quot;: 0.0715037507591663,
+<span id="L933"> 933</span>         # Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. Unit: m.
+<span id="L934"> 934</span>         # Original raw/source: None; None = not independently established.
+<span id="L935"> 935</span>         &quot;insertion_radius_m&quot;: 0.00740043933035868,
+<span id="L936"> 936</span>         # Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. Unit: rad.
+<span id="L937"> 937</span>         # Original raw/source: None; None = not independently established.
+<span id="L938"> 938</span>         &quot;origin_angle_rad&quot;: -0.0697366814458689,
+<span id="L939"> 939</span>         # Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. Unit: rad.
+<span id="L940"> 940</span>         # Original raw/source: None; None = not independently established.
+<span id="L941"> 941</span>         &quot;insertion_angle_rad&quot;: 0.898729071000832,
+<span id="L942"> 942</span>         # Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. Unit: m.
+<span id="L943"> 943</span>         # Original raw/source: None; None = not independently established.
+<span id="L944"> 944</span>         &quot;proximal_wrap_radius_m&quot;: 0.00320000000000039,
+<span id="L945"> 945</span>         # Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. Unit: 1.
+<span id="L946"> 946</span>         # Original raw/source: None; None = not independently established.
+<span id="L947"> 947</span>         &quot;proximal_wrap_sign&quot;: -1.0,
+<span id="L948"> 948</span>         # Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. Unit: 1.
+<span id="L949"> 949</span>         # Original raw/source: None; None = not independently established.
+<span id="L950"> 950</span>         &quot;proximal_joint_sign&quot;: -1.0,
+<span id="L951"> 951</span>         # Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. Unit: m.
+<span id="L952"> 952</span>         # Original raw/source: None; None = not independently established.
+<span id="L953"> 953</span>         &quot;distal_wrap_radius_m&quot;: 0.0,
+<span id="L954"> 954</span>         # Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. Unit: 1.
+<span id="L955"> 955</span>         # Original raw/source: None; None = not independently established.
+<span id="L956"> 956</span>         &quot;distal_wrap_sign&quot;: 0.0,
+<span id="L957"> 957</span>         # Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. Unit: 1.
+<span id="L958"> 958</span>         # Original raw/source: None; None = not independently established.
+<span id="L959"> 959</span>         &quot;distal_joint_sign&quot;: 0.0,
+<span id="L960"> 960</span>         # Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. Unit: m.
+<span id="L961"> 961</span>         # Original raw/source: None; None = not independently established.
+<span id="L962"> 962</span>         &quot;joint_spacing_m&quot;: 0.09275714285714286,
+<span id="L963"> 963</span>     },
+<span id="L964"> 964</span>     # ===== FR_ElbowFlexorWristFlexor =====
+<span id="L965"> 965</span>     # Branch 1, divisor 1.0: FR_ElbowFlexorWristFlexor_s0_origin [FR_upperarm] -&gt; FR_ElbowFlexorWristFlexor_s0_pulley0 [FR_upperarm] -&gt; FR_ElbowFlexorWristFlexor_s0_insert [FR_forearm]
+<span id="L966"> 966</span>     # WRAP SIDE SELECTOR for FR_ElbowFlexorWristFlexor. Body: FR_upperarm. NOT a path vertex or anatomical attachment.
+<span id="L967"> 967</span>     &quot;FR_ElbowFlexorWristFlexor_s0_preferred&quot;: {
+<span id="L968"> 968</span>         # Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. Unit: m.
+<span id="L969"> 969</span>         # Original raw/source: None; None = not independently established.
+<span id="L970"> 970</span>         &quot;origin_radius_m&quot;: 0.0114000013042347,
+<span id="L971"> 971</span>         # Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. Unit: m.
+<span id="L972"> 972</span>         # Original raw/source: None; None = not independently established.
+<span id="L973"> 973</span>         &quot;insertion_radius_m&quot;: 0.0951000002121869,
+<span id="L974"> 974</span>         # Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. Unit: rad.
+<span id="L975"> 975</span>         # Original raw/source: None; None = not independently established.
+<span id="L976"> 976</span>         &quot;origin_angle_rad&quot;: 0.286687371689756,
+<span id="L977"> 977</span>         # Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. Unit: rad.
+<span id="L978"> 978</span>         # Original raw/source: None; None = not independently established.
+<span id="L979"> 979</span>         &quot;insertion_angle_rad&quot;: 0.0645005602980572,
+<span id="L980"> 980</span>         # Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. Unit: m.
+<span id="L981"> 981</span>         # Original raw/source: None; None = not independently established.
+<span id="L982"> 982</span>         &quot;proximal_wrap_radius_m&quot;: 0.00536465406611287,
+<span id="L983"> 983</span>         # Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. Unit: 1.
+<span id="L984"> 984</span>         # Original raw/source: None; None = not independently established.
+<span id="L985"> 985</span>         &quot;proximal_wrap_sign&quot;: -1.0,
+<span id="L986"> 986</span>         # Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. Unit: 1.
+<span id="L987"> 987</span>         # Original raw/source: None; None = not independently established.
+<span id="L988"> 988</span>         &quot;proximal_joint_sign&quot;: -1.0,
+<span id="L989"> 989</span>         # Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. Unit: m.
+<span id="L990"> 990</span>         # Original raw/source: None; None = not independently established.
+<span id="L991"> 991</span>         &quot;distal_wrap_radius_m&quot;: 0.0,
+<span id="L992"> 992</span>         # Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. Unit: 1.
+<span id="L993"> 993</span>         # Original raw/source: None; None = not independently established.
+<span id="L994"> 994</span>         &quot;distal_wrap_sign&quot;: 0.0,
+<span id="L995"> 995</span>         # Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. Unit: 1.
+<span id="L996"> 996</span>         # Original raw/source: None; None = not independently established.
+<span id="L997"> 997</span>         &quot;distal_joint_sign&quot;: 0.0,
+<span id="L998"> 998</span>         # Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. Unit: m.
+<span id="L999"> 999</span>         # Original raw/source: None; None = not independently established.
+<span id="L1000">1000</span>         &quot;joint_spacing_m&quot;: 0.09275714285714286,
+<span id="L1001">1001</span>     },
+<span id="L1002">1002</span>     # Branch 2, divisor 1.0: FR_ElbowFlexorWristFlexor_s1_origin [FR_forearm] -&gt; FR_ElbowFlexorWristFlexor_s1_pulley0 [FR_forearm] -&gt; FR_ElbowFlexorWristFlexor_s1_insert [FR_carpals]
+<span id="L1003">1003</span>     # WRAP SIDE SELECTOR for FR_ElbowFlexorWristFlexor. Body: FR_forearm. NOT a path vertex or anatomical attachment.
+<span id="L1004">1004</span>     &quot;FR_ElbowFlexorWristFlexor_s1_preferred&quot;: {
+<span id="L1005">1005</span>         # Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. Unit: m.
+<span id="L1006">1006</span>         # Original raw/source: None; None = not independently established.
+<span id="L1007">1007</span>         &quot;origin_radius_m&quot;: 0.0061346492911567106,
+<span id="L1008">1008</span>         # Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. Unit: m.
+<span id="L1009">1009</span>         # Original raw/source: None; None = not independently established.
+<span id="L1010">1010</span>         &quot;insertion_radius_m&quot;: 0.0332999926671867,
+<span id="L1011">1011</span>         # Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. Unit: rad.
+<span id="L1012">1012</span>         # Original raw/source: None; None = not independently established.
+<span id="L1013">1013</span>         &quot;origin_angle_rad&quot;: -1.530831880600672,
+<span id="L1014">1014</span>         # Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. Unit: rad.
+<span id="L1015">1015</span>         # Original raw/source: None; None = not independently established.
+<span id="L1016">1016</span>         &quot;insertion_angle_rad&quot;: 0.12583820430839,
+<span id="L1017">1017</span>         # Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. Unit: m.
+<span id="L1018">1018</span>         # Original raw/source: None; None = not independently established.
+<span id="L1019">1019</span>         &quot;proximal_wrap_radius_m&quot;: 0.00350749590190618,
+<span id="L1020">1020</span>         # Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. Unit: 1.
+<span id="L1021">1021</span>         # Original raw/source: None; None = not independently established.
+<span id="L1022">1022</span>         &quot;proximal_wrap_sign&quot;: -1.0,
+<span id="L1023">1023</span>         # Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. Unit: 1.
+<span id="L1024">1024</span>         # Original raw/source: None; None = not independently established.
+<span id="L1025">1025</span>         &quot;proximal_joint_sign&quot;: -1.0,
+<span id="L1026">1026</span>         # Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. Unit: m.
+<span id="L1027">1027</span>         # Original raw/source: None; None = not independently established.
+<span id="L1028">1028</span>         &quot;distal_wrap_radius_m&quot;: 0.0,
+<span id="L1029">1029</span>         # Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. Unit: 1.
+<span id="L1030">1030</span>         # Original raw/source: None; None = not independently established.
+<span id="L1031">1031</span>         &quot;distal_wrap_sign&quot;: 0.0,
+<span id="L1032">1032</span>         # Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. Unit: 1.
+<span id="L1033">1033</span>         # Original raw/source: None; None = not independently established.
+<span id="L1034">1034</span>         &quot;distal_joint_sign&quot;: 0.0,
+<span id="L1035">1035</span>         # Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. Unit: m.
+<span id="L1036">1036</span>         # Original raw/source: None; None = not independently established.
+<span id="L1037">1037</span>         &quot;joint_spacing_m&quot;: 0.09465714285714286,
+<span id="L1038">1038</span>     },
+<span id="L1039">1039</span>     # ===== FR_WristFlexor =====
+<span id="L1040">1040</span>     # Branch 1, divisor 1.0: FR_WristFlexor_s0_origin [FR_forearm] -&gt; FR_WristFlexor_s0_insert [FR_forearm]
+<span id="L1041">1041</span>     # Branch 2, divisor 1.0: FR_WristFlexor_s1_origin [FR_forearm] -&gt; FR_WristFlexor_s1_pulley0 [FR_forearm] -&gt; FR_WristFlexor_s1_insert [FR_carpals]
+<span id="L1042">1042</span>     # WRAP SIDE SELECTOR for FR_WristFlexor. Body: FR_forearm. NOT a path vertex or anatomical attachment.
+<span id="L1043">1043</span>     &quot;FR_WristFlexor_s1_preferred&quot;: {
+<span id="L1044">1044</span>         # Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. Unit: m.
+<span id="L1045">1045</span>         # Original raw/source: None; None = not independently established.
+<span id="L1046">1046</span>         &quot;origin_radius_m&quot;: 0.006009024678845052,
+<span id="L1047">1047</span>         # Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. Unit: m.
+<span id="L1048">1048</span>         # Original raw/source: None; None = not independently established.
+<span id="L1049">1049</span>         &quot;insertion_radius_m&quot;: 0.0171115446907036,
+<span id="L1050">1050</span>         # Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. Unit: rad.
+<span id="L1051">1051</span>         # Original raw/source: None; None = not independently established.
+<span id="L1052">1052</span>         &quot;origin_angle_rad&quot;: -2.3325124139914677,
+<span id="L1053">1053</span>         # Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. Unit: rad.
+<span id="L1054">1054</span>         # Original raw/source: None; None = not independently established.
+<span id="L1055">1055</span>         &quot;insertion_angle_rad&quot;: 0.114800555463146,
+<span id="L1056">1056</span>         # Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. Unit: m.
+<span id="L1057">1057</span>         # Original raw/source: None; None = not independently established.
+<span id="L1058">1058</span>         &quot;proximal_wrap_radius_m&quot;: 0.0024,
+<span id="L1059">1059</span>         # Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. Unit: 1.
+<span id="L1060">1060</span>         # Original raw/source: None; None = not independently established.
+<span id="L1061">1061</span>         &quot;proximal_wrap_sign&quot;: -1.0,
+<span id="L1062">1062</span>         # Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. Unit: 1.
+<span id="L1063">1063</span>         # Original raw/source: None; None = not independently established.
+<span id="L1064">1064</span>         &quot;proximal_joint_sign&quot;: -1.0,
+<span id="L1065">1065</span>         # Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. Unit: m.
+<span id="L1066">1066</span>         # Original raw/source: None; None = not independently established.
+<span id="L1067">1067</span>         &quot;distal_wrap_radius_m&quot;: 0.0,
+<span id="L1068">1068</span>         # Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. Unit: 1.
+<span id="L1069">1069</span>         # Original raw/source: None; None = not independently established.
+<span id="L1070">1070</span>         &quot;distal_wrap_sign&quot;: 0.0,
+<span id="L1071">1071</span>         # Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. Unit: 1.
+<span id="L1072">1072</span>         # Original raw/source: None; None = not independently established.
+<span id="L1073">1073</span>         &quot;distal_joint_sign&quot;: 0.0,
+<span id="L1074">1074</span>         # Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. Unit: m.
+<span id="L1075">1075</span>         # Original raw/source: None; None = not independently established.
+<span id="L1076">1076</span>         &quot;joint_spacing_m&quot;: 0.09465714285714286,
+<span id="L1077">1077</span>     },
+<span id="L1078">1078</span>     # ===== FR_WristExtensor =====
+<span id="L1079">1079</span>     # Branch 1, divisor 1.0: FR_WristExtensor_s0_origin [FR_forearm] -&gt; FR_WristExtensor_s0_insert [FR_forearm]
+<span id="L1080">1080</span>     # Branch 2, divisor 1.0: FR_WristExtensor_s1_origin [FR_forearm] -&gt; FR_WristExtensor_s1_pulley0 [FR_forearm] -&gt; FR_WristExtensor_s1_insert [FR_carpals]
+<span id="L1081">1081</span>     # WRAP SIDE SELECTOR for FR_WristExtensor. Body: FR_forearm. NOT a path vertex or anatomical attachment.
+<span id="L1082">1082</span>     &quot;FR_WristExtensor_s1_preferred&quot;: {
+<span id="L1083">1083</span>         # Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. Unit: m.
+<span id="L1084">1084</span>         # Original raw/source: None; None = not independently established.
+<span id="L1085">1085</span>         &quot;origin_radius_m&quot;: 0.00518652885093298,
+<span id="L1086">1086</span>         # Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. Unit: m.
+<span id="L1087">1087</span>         # Original raw/source: None; None = not independently established.
+<span id="L1088">1088</span>         &quot;insertion_radius_m&quot;: 0.0288587788186216,
+<span id="L1089">1089</span>         # Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. Unit: rad.
+<span id="L1090">1090</span>         # Original raw/source: None; None = not independently established.
+<span id="L1091">1091</span>         &quot;origin_angle_rad&quot;: 1.282292184119631,
+<span id="L1092">1092</span>         # Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. Unit: rad.
+<span id="L1093">1093</span>         # Original raw/source: None; None = not independently established.
+<span id="L1094">1094</span>         &quot;insertion_angle_rad&quot;: -0.163175752538083,
+<span id="L1095">1095</span>         # Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. Unit: m.
+<span id="L1096">1096</span>         # Original raw/source: None; None = not independently established.
+<span id="L1097">1097</span>         &quot;proximal_wrap_radius_m&quot;: 0.00271044296770131,
+<span id="L1098">1098</span>         # Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. Unit: 1.
+<span id="L1099">1099</span>         # Original raw/source: None; None = not independently established.
+<span id="L1100">1100</span>         &quot;proximal_wrap_sign&quot;: 1.0,
+<span id="L1101">1101</span>         # Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. Unit: 1.
+<span id="L1102">1102</span>         # Original raw/source: None; None = not independently established.
+<span id="L1103">1103</span>         &quot;proximal_joint_sign&quot;: -1.0,
+<span id="L1104">1104</span>         # Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. Unit: m.
+<span id="L1105">1105</span>         # Original raw/source: None; None = not independently established.
+<span id="L1106">1106</span>         &quot;distal_wrap_radius_m&quot;: 0.0,
+<span id="L1107">1107</span>         # Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. Unit: 1.
+<span id="L1108">1108</span>         # Original raw/source: None; None = not independently established.
+<span id="L1109">1109</span>         &quot;distal_wrap_sign&quot;: 0.0,
+<span id="L1110">1110</span>         # Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. Unit: 1.
+<span id="L1111">1111</span>         # Original raw/source: None; None = not independently established.
+<span id="L1112">1112</span>         &quot;distal_joint_sign&quot;: 0.0,
+<span id="L1113">1113</span>         # Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. Unit: m.
+<span id="L1114">1114</span>         # Original raw/source: None; None = not independently established.
+<span id="L1115">1115</span>         &quot;joint_spacing_m&quot;: 0.09465714285714286,
+<span id="L1116">1116</span>     },
+<span id="L1117">1117</span>     # ===== FR_ShoulderFlexor =====
+<span id="L1118">1118</span>     # Branch 1, divisor 1.0: FR_ShoulderFlexor_s0_origin [FR_scapula] -&gt; FR_ShoulderFlexor_s0_pulley0 [FR_scapula] -&gt; FR_ShoulderFlexor_s0_insert [FR_upperarm]
+<span id="L1119">1119</span>     # WRAP SIDE SELECTOR for FR_ShoulderFlexor. Body: FR_scapula. NOT a path vertex or anatomical attachment.
+<span id="L1120">1120</span>     &quot;FR_ShoulderFlexor_s0_preferred&quot;: {
+<span id="L1121">1121</span>         # Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. Unit: m.
+<span id="L1122">1122</span>         # Original raw/source: None; None = not independently established.
+<span id="L1123">1123</span>         &quot;origin_radius_m&quot;: 0.0507609523493369,
+<span id="L1124">1124</span>         # Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. Unit: m.
+<span id="L1125">1125</span>         # Original raw/source: None; None = not independently established.
+<span id="L1126">1126</span>         &quot;insertion_radius_m&quot;: 0.0167000301127897,
+<span id="L1127">1127</span>         # Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. Unit: rad.
+<span id="L1128">1128</span>         # Original raw/source: None; None = not independently established.
+<span id="L1129">1129</span>         &quot;origin_angle_rad&quot;: 0.127927581350083,
+<span id="L1130">1130</span>         # Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. Unit: rad.
+<span id="L1131">1131</span>         # Original raw/source: None; None = not independently established.
+<span id="L1132">1132</span>         &quot;insertion_angle_rad&quot;: 0.594581222632492,
+<span id="L1133">1133</span>         # Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. Unit: m.
+<span id="L1134">1134</span>         # Original raw/source: None; None = not independently established.
+<span id="L1135">1135</span>         &quot;proximal_wrap_radius_m&quot;: 0.00184271114122135,
+<span id="L1136">1136</span>         # Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. Unit: 1.
+<span id="L1137">1137</span>         # Original raw/source: None; None = not independently established.
+<span id="L1138">1138</span>         &quot;proximal_wrap_sign&quot;: 1.0,
+<span id="L1139">1139</span>         # Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. Unit: 1.
+<span id="L1140">1140</span>         # Original raw/source: None; None = not independently established.
+<span id="L1141">1141</span>         &quot;proximal_joint_sign&quot;: 1.0,
+<span id="L1142">1142</span>         # Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. Unit: m.
+<span id="L1143">1143</span>         # Original raw/source: None; None = not independently established.
+<span id="L1144">1144</span>         &quot;distal_wrap_radius_m&quot;: 0.0,
+<span id="L1145">1145</span>         # Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. Unit: 1.
+<span id="L1146">1146</span>         # Original raw/source: None; None = not independently established.
+<span id="L1147">1147</span>         &quot;distal_wrap_sign&quot;: 0.0,
+<span id="L1148">1148</span>         # Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. Unit: 1.
+<span id="L1149">1149</span>         # Original raw/source: None; None = not independently established.
+<span id="L1150">1150</span>         &quot;distal_joint_sign&quot;: 0.0,
+<span id="L1151">1151</span>         # Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. Unit: m.
+<span id="L1152">1152</span>         # Original raw/source: None; None = not independently established.
+<span id="L1153">1153</span>         &quot;joint_spacing_m&quot;: 0.05771428571428572,
+<span id="L1154">1154</span>     },
+<span id="L1155">1155</span>     # ===== FR_TricepsBrachiiLong =====
+<span id="L1156">1156</span>     # Branch 1, divisor 1.0: FR_TricepsBrachiiLong_s0_origin [FR_scapula] -&gt; FR_TricepsBrachiiLong_s0_pulley0 [FR_scapula] -&gt; FR_TricepsBrachiiLong_s0_tangent [FR_upperarm] -&gt; FR_TricepsBrachiiLong_s0_pulley1 [FR_upperarm] -&gt; FR_TricepsBrachiiLong_s0_insert [FR_forearm]
+<span id="L1157">1157</span>     # VIA POINT for FR_TricepsBrachiiLong. Connected body: FR_upperarm. Computed local coordinates: update_routing.py overwrites them at each step.
+<span id="L1158">1158</span>     &quot;FR_TricepsBrachiiLong_s0_tangent&quot;: {
+<span id="L1159">1159</span>         # Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. Unit: m.
+<span id="L1160">1160</span>         # Original raw/source: None; None = not independently established.
+<span id="L1161">1161</span>         &quot;origin_radius_m&quot;: 0.01023654140200321,
+<span id="L1162">1162</span>         # Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. Unit: m.
+<span id="L1163">1163</span>         # Original raw/source: None; None = not independently established.
+<span id="L1164">1164</span>         &quot;insertion_radius_m&quot;: 0.014854093335665784,
+<span id="L1165">1165</span>         # Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. Unit: rad.
+<span id="L1166">1166</span>         # Original raw/source: None; None = not independently established.
+<span id="L1167">1167</span>         &quot;origin_angle_rad&quot;: -0.04621934250258526,
+<span id="L1168">1168</span>         # Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. Unit: rad.
+<span id="L1169">1169</span>         # Original raw/source: None; None = not independently established.
+<span id="L1170">1170</span>         &quot;insertion_angle_rad&quot;: -2.8324783497454353,
+<span id="L1171">1171</span>         # Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. Unit: m.
+<span id="L1172">1172</span>         # Original raw/source: None; None = not independently established.
+<span id="L1173">1173</span>         &quot;proximal_wrap_radius_m&quot;: 0.004419416012604855,
+<span id="L1174">1174</span>         # Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. Unit: 1.
+<span id="L1175">1175</span>         # Original raw/source: None; None = not independently established.
+<span id="L1176">1176</span>         &quot;proximal_wrap_sign&quot;: 1.0,
+<span id="L1177">1177</span>         # Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. Unit: 1.
+<span id="L1178">1178</span>         # Original raw/source: None; None = not independently established.
+<span id="L1179">1179</span>         &quot;proximal_joint_sign&quot;: 1.0,
+<span id="L1180">1180</span>         # Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. Unit: m.
+<span id="L1181">1181</span>         # Original raw/source: None; None = not independently established.
+<span id="L1182">1182</span>         &quot;distal_wrap_radius_m&quot;: 0.011883274668532628,
+<span id="L1183">1183</span>         # Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. Unit: 1.
+<span id="L1184">1184</span>         # Original raw/source: None; None = not independently established.
+<span id="L1185">1185</span>         &quot;distal_wrap_sign&quot;: 1.0,
+<span id="L1186">1186</span>         # Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. Unit: 1.
+<span id="L1187">1187</span>         # Original raw/source: None; None = not independently established.
+<span id="L1188">1188</span>         &quot;distal_joint_sign&quot;: -1.0,
+<span id="L1189">1189</span>         # Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. Unit: m.
+<span id="L1190">1190</span>         # Original raw/source: None; None = not independently established.
+<span id="L1191">1191</span>         &quot;joint_spacing_m&quot;: 0.09275714285714286,
+<span id="L1192">1192</span>     },
+<span id="L1193">1193</span>     # ===== FL_S_C3 =====
+<span id="L1194">1194</span>     # Branch 1, divisor 1.0: FL_S_C3_attachment0 [FL_scapula] -&gt; FL_S_C3_attachment1 [cat_root]
+<span id="L1195">1195</span>     # ===== FR_S_C3 =====
+<span id="L1196">1196</span>     # Branch 1, divisor 1.0: FR_S_C3_attachment0 [FR_scapula] -&gt; FR_S_C3_attachment1 [cat_root]
+<span id="L1197">1197</span>     # ===== FL_S_C4 =====
+<span id="L1198">1198</span>     # Branch 1, divisor 1.0: FL_S_C4_attachment0 [FL_scapula] -&gt; FL_S_C4_attachment1 [cat_root]
+<span id="L1199">1199</span>     # ===== FR_S_C4 =====
+<span id="L1200">1200</span>     # Branch 1, divisor 1.0: FR_S_C4_attachment0 [FR_scapula] -&gt; FR_S_C4_attachment1 [cat_root]
+<span id="L1201">1201</span>     # ===== FL_S_C5 =====
+<span id="L1202">1202</span>     # Branch 1, divisor 1.0: FL_S_C5_attachment0 [FL_scapula] -&gt; FL_S_C5_attachment1 [cat_root]
+<span id="L1203">1203</span>     # ===== FR_S_C5 =====
+<span id="L1204">1204</span>     # Branch 1, divisor 1.0: FR_S_C5_attachment0 [FR_scapula] -&gt; FR_S_C5_attachment1 [cat_root]
+<span id="L1205">1205</span>     # ===== FL_S_C6 =====
+<span id="L1206">1206</span>     # Branch 1, divisor 1.0: FL_S_C6_attachment0 [FL_scapula] -&gt; FL_S_C6_attachment1 [cat_root]
+<span id="L1207">1207</span>     # ===== FR_S_C6 =====
+<span id="L1208">1208</span>     # Branch 1, divisor 1.0: FR_S_C6_attachment0 [FR_scapula] -&gt; FR_S_C6_attachment1 [cat_root]
+<span id="L1209">1209</span>     # ===== FL_S_C7 =====
+<span id="L1210">1210</span>     # Branch 1, divisor 1.0: FL_S_C7_attachment0 [FL_scapula] -&gt; FL_S_C7_attachment1 [cat_root]
+<span id="L1211">1211</span>     # ===== FR_S_C7 =====
+<span id="L1212">1212</span>     # Branch 1, divisor 1.0: FR_S_C7_attachment0 [FR_scapula] -&gt; FR_S_C7_attachment1 [cat_root]
+<span id="L1213">1213</span>     # ===== FL_S_T1 =====
+<span id="L1214">1214</span>     # Branch 1, divisor 1.0: FL_S_T1_attachment0 [FL_scapula] -&gt; FL_S_T1_attachment1 [cat_root]
+<span id="L1215">1215</span>     # ===== FR_S_T1 =====
+<span id="L1216">1216</span>     # Branch 1, divisor 1.0: FR_S_T1_attachment0 [FR_scapula] -&gt; FR_S_T1_attachment1 [cat_root]
+<span id="L1217">1217</span>     # ===== FL_S_T2 =====
+<span id="L1218">1218</span>     # Branch 1, divisor 1.0: FL_S_T2_attachment0 [FL_scapula] -&gt; FL_S_T2_attachment1 [cat_root]
+<span id="L1219">1219</span>     # ===== FR_S_T2 =====
+<span id="L1220">1220</span>     # Branch 1, divisor 1.0: FR_S_T2_attachment0 [FR_scapula] -&gt; FR_S_T2_attachment1 [cat_root]
+<span id="L1221">1221</span>     # ===== FL_S_T3 =====
+<span id="L1222">1222</span>     # Branch 1, divisor 1.0: FL_S_T3_attachment0 [FL_scapula] -&gt; FL_S_T3_attachment1 [cat_root]
+<span id="L1223">1223</span>     # ===== FR_S_T3 =====
+<span id="L1224">1224</span>     # Branch 1, divisor 1.0: FR_S_T3_attachment0 [FR_scapula] -&gt; FR_S_T3_attachment1 [cat_root]
+<span id="L1225">1225</span>     # ===== FL_S_T4 =====
+<span id="L1226">1226</span>     # Branch 1, divisor 1.0: FL_S_T4_attachment0 [FL_scapula] -&gt; FL_S_T4_attachment1 [cat_root]
+<span id="L1227">1227</span>     # ===== FR_S_T4 =====
+<span id="L1228">1228</span>     # Branch 1, divisor 1.0: FR_S_T4_attachment0 [FR_scapula] -&gt; FR_S_T4_attachment1 [cat_root]
+<span id="L1229">1229</span>     # ===== FL_S_T5 =====
+<span id="L1230">1230</span>     # Branch 1, divisor 1.0: FL_S_T5_attachment0 [FL_scapula] -&gt; FL_S_T5_attachment1 [cat_root]
+<span id="L1231">1231</span>     # ===== FR_S_T5 =====
+<span id="L1232">1232</span>     # Branch 1, divisor 1.0: FR_S_T5_attachment0 [FR_scapula] -&gt; FR_S_T5_attachment1 [cat_root]
+<span id="L1233">1233</span>     # ===== FL_S_T6 =====
+<span id="L1234">1234</span>     # Branch 1, divisor 1.0: FL_S_T6_attachment0 [FL_scapula] -&gt; FL_S_T6_attachment1 [cat_root]
+<span id="L1235">1235</span>     # ===== FR_S_T6 =====
+<span id="L1236">1236</span>     # Branch 1, divisor 1.0: FR_S_T6_attachment0 [FR_scapula] -&gt; FR_S_T6_attachment1 [cat_root]
+<span id="L1237">1237</span>     # ===== FL_S_T7 =====
+<span id="L1238">1238</span>     # Branch 1, divisor 1.0: FL_S_T7_attachment0 [FL_scapula] -&gt; FL_S_T7_attachment1 [cat_root]
+<span id="L1239">1239</span>     # ===== FR_S_T7 =====
+<span id="L1240">1240</span>     # Branch 1, divisor 1.0: FR_S_T7_attachment0 [FR_scapula] -&gt; FR_S_T7_attachment1 [cat_root]
+<span id="L1241">1241</span>     # ===== FL_S_T8 =====
+<span id="L1242">1242</span>     # Branch 1, divisor 1.0: FL_S_T8_attachment0 [FL_scapula] -&gt; FL_S_T8_attachment1 [cat_root]
+<span id="L1243">1243</span>     # ===== FR_S_T8 =====
+<span id="L1244">1244</span>     # Branch 1, divisor 1.0: FR_S_T8_attachment0 [FR_scapula] -&gt; FR_S_T8_attachment1 [cat_root]
+<span id="L1245">1245</span>     # ===== FL_S_T9 =====
+<span id="L1246">1246</span>     # Branch 1, divisor 1.0: FL_S_T9_attachment0 [FL_scapula] -&gt; FL_S_T9_attachment1 [cat_root]
+<span id="L1247">1247</span>     # ===== FR_S_T9 =====
+<span id="L1248">1248</span>     # Branch 1, divisor 1.0: FR_S_T9_attachment0 [FR_scapula] -&gt; FR_S_T9_attachment1 [cat_root]
+<span id="L1249">1249</span>     # ===== FL_R_C2 =====
+<span id="L1250">1250</span>     # Branch 1, divisor 1.0: FL_R_C2_attachment0 [FL_scapula] -&gt; FL_R_C2_attachment1 [cat_root]
+<span id="L1251">1251</span>     # ===== FR_R_C2 =====
+<span id="L1252">1252</span>     # Branch 1, divisor 1.0: FR_R_C2_attachment0 [FR_scapula] -&gt; FR_R_C2_attachment1 [cat_root]
+<span id="L1253">1253</span>     # ===== FL_R_C3-7 =====
+<span id="L1254">1254</span>     # Branch 1, divisor 1.0: FL_R_C3-7_attachment0 [FL_scapula] -&gt; FL_R_C3-7_attachment1 [cat_root]
+<span id="L1255">1255</span>     # ===== FR_R_C3-7 =====
+<span id="L1256">1256</span>     # Branch 1, divisor 1.0: FR_R_C3-7_attachment0 [FR_scapula] -&gt; FR_R_C3-7_attachment1 [cat_root]
+<span id="L1257">1257</span>     # ===== FL_R_T1 =====
+<span id="L1258">1258</span>     # Branch 1, divisor 1.0: FL_R_T1_attachment0 [FL_scapula] -&gt; FL_R_T1_attachment1 [cat_root]
+<span id="L1259">1259</span>     # ===== FR_R_T1 =====
+<span id="L1260">1260</span>     # Branch 1, divisor 1.0: FR_R_T1_attachment0 [FR_scapula] -&gt; FR_R_T1_attachment1 [cat_root]
+<span id="L1261">1261</span>     # ===== FL_R_T2 =====
+<span id="L1262">1262</span>     # Branch 1, divisor 1.0: FL_R_T2_attachment0 [FL_scapula] -&gt; FL_R_T2_attachment1 [cat_root]
+<span id="L1263">1263</span>     # ===== FR_R_T2 =====
+<span id="L1264">1264</span>     # Branch 1, divisor 1.0: FR_R_T2_attachment0 [FR_scapula] -&gt; FR_R_T2_attachment1 [cat_root]
+<span id="L1265">1265</span>     # ===== FL_R_T3 =====
+<span id="L1266">1266</span>     # Branch 1, divisor 1.0: FL_R_T3_attachment0 [FL_scapula] -&gt; FL_R_T3_attachment1 [cat_root]
+<span id="L1267">1267</span>     # ===== FR_R_T3 =====
+<span id="L1268">1268</span>     # Branch 1, divisor 1.0: FR_R_T3_attachment0 [FR_scapula] -&gt; FR_R_T3_attachment1 [cat_root]
+<span id="L1269">1269</span>     # ===== FL_R_T4 =====
+<span id="L1270">1270</span>     # Branch 1, divisor 1.0: FL_R_T4_attachment0 [FL_scapula] -&gt; FL_R_T4_attachment1 [cat_root]
+<span id="L1271">1271</span>     # ===== FR_R_T4 =====
+<span id="L1272">1272</span>     # Branch 1, divisor 1.0: FR_R_T4_attachment0 [FR_scapula] -&gt; FR_R_T4_attachment1 [cat_root]
+<span id="L1273">1273</span>     # ===== FL_R_T5 =====
+<span id="L1274">1274</span>     # Branch 1, divisor 1.0: FL_R_T5_attachment0 [FL_scapula] -&gt; FL_R_T5_attachment1 [cat_root]
+<span id="L1275">1275</span>     # ===== FR_R_T5 =====
+<span id="L1276">1276</span>     # Branch 1, divisor 1.0: FR_R_T5_attachment0 [FR_scapula] -&gt; FR_R_T5_attachment1 [cat_root]
+<span id="L1277">1277</span>     # ===== FL_DigitalExtensors =====
+<span id="L1278">1278</span>     # Branch 1, divisor 1.0: FL_ElbowFlexorWristFlexor_s0_origin [FL_upperarm] -&gt; FL_ElbowFlexorWristFlexor_s0_pulley0 [FL_upperarm] -&gt; FL_ElbowFlexorWristFlexor_s0_insert [FL_forearm]
+<span id="L1279">1279</span>     # Shared entry &#x27;FL_ElbowFlexorWristFlexor_s0_preferred&#x27;: already defined above.
+<span id="L1280">1280</span>     # Branch 2, divisor 1.0: FL_ElbowFlexorWristFlexor_s1_origin [FL_forearm] -&gt; FL_ElbowFlexorWristFlexor_s1_pulley0 [FL_forearm] -&gt; FL_DigitalExtensors_attachment0 [FL_carpals] -&gt; FL_DigitalExtensors_attachment1 [FL_digits]
+<span id="L1281">1281</span>     # Shared entry &#x27;FL_ElbowFlexorWristFlexor_s1_preferred&#x27;: already defined above.
+<span id="L1282">1282</span>     # ===== FR_DigitalExtensors =====
+<span id="L1283">1283</span>     # Branch 1, divisor 1.0: FR_ElbowFlexorWristFlexor_s0_origin [FR_upperarm] -&gt; FR_ElbowFlexorWristFlexor_s0_pulley0 [FR_upperarm] -&gt; FR_ElbowFlexorWristFlexor_s0_insert [FR_forearm]
+<span id="L1284">1284</span>     # Shared entry &#x27;FR_ElbowFlexorWristFlexor_s0_preferred&#x27;: already defined above.
+<span id="L1285">1285</span>     # Branch 2, divisor 1.0: FR_ElbowFlexorWristFlexor_s1_origin [FR_forearm] -&gt; FR_ElbowFlexorWristFlexor_s1_pulley0 [FR_forearm] -&gt; FR_DigitalExtensors_attachment0 [FR_carpals] -&gt; FR_DigitalExtensors_attachment1 [FR_digits]
+<span id="L1286">1286</span>     # Shared entry &#x27;FR_ElbowFlexorWristFlexor_s1_preferred&#x27;: already defined above.
+<span id="L1287">1287</span>     # ===== FL_DigitalFlexors =====
+<span id="L1288">1288</span>     # Branch 1, divisor 1.0: FL_WristExtensor_s0_origin [FL_forearm] -&gt; FL_WristExtensor_s0_insert [FL_forearm]
+<span id="L1289">1289</span>     # Branch 2, divisor 1.0: FL_WristExtensor_s1_origin [FL_forearm] -&gt; FL_WristExtensor_s1_pulley0 [FL_forearm] -&gt; FL_DigitalFlexors_attachment0 [FL_carpals] -&gt; FL_DigitalFlexors_attachment1 [FL_digits]
+<span id="L1290">1290</span>     # Shared entry &#x27;FL_WristExtensor_s1_preferred&#x27;: already defined above.
+<span id="L1291">1291</span>     # ===== FR_DigitalFlexors =====
+<span id="L1292">1292</span>     # Branch 1, divisor 1.0: FR_WristExtensor_s0_origin [FR_forearm] -&gt; FR_WristExtensor_s0_insert [FR_forearm]
+<span id="L1293">1293</span>     # Branch 2, divisor 1.0: FR_WristExtensor_s1_origin [FR_forearm] -&gt; FR_WristExtensor_s1_pulley0 [FR_forearm] -&gt; FR_DigitalFlexors_attachment0 [FR_carpals] -&gt; FR_DigitalFlexors_attachment1 [FR_digits]
+<span id="L1294">1294</span>     # Shared entry &#x27;FR_WristExtensor_s1_preferred&#x27;: already defined above.
+<span id="L1295">1295</span>     # ===== FL_TrapeziusCervical =====
+<span id="L1296">1296</span>     # Branch 1, divisor 1.0: FL_TrapeziusCervical_origin [cat_root] -&gt; FL_TrapeziusCervical_insertion [FL_scapula]
+<span id="L1297">1297</span>     # ===== FR_TrapeziusCervical =====
+<span id="L1298">1298</span>     # Branch 1, divisor 1.0: FR_TrapeziusCervical_origin [cat_root] -&gt; FR_TrapeziusCervical_insertion [FR_scapula]
+<span id="L1299">1299</span>     # ===== FL_TrapeziusThoracic =====
+<span id="L1300">1300</span>     # Branch 1, divisor 1.0: FL_TrapeziusThoracic_origin [cat_root] -&gt; FL_TrapeziusThoracic_insertion [FL_scapula]
+<span id="L1301">1301</span>     # ===== FR_TrapeziusThoracic =====
+<span id="L1302">1302</span>     # Branch 1, divisor 1.0: FR_TrapeziusThoracic_origin [cat_root] -&gt; FR_TrapeziusThoracic_insertion [FR_scapula]
+<span id="L1303">1303</span>     # ===== FL_LatissimusDorsi =====
+<span id="L1304">1304</span>     # Branch 1, divisor 1.0: FL_LatissimusDorsi_origin [cat_root] -&gt; FL_LatissimusDorsi_insertion [FL_upperarm]
+<span id="L1305">1305</span>     # ===== FR_LatissimusDorsi =====
+<span id="L1306">1306</span>     # Branch 1, divisor 1.0: FR_LatissimusDorsi_origin [cat_root] -&gt; FR_LatissimusDorsi_insertion [FR_upperarm]
+<span id="L1307">1307</span>     # ===== FL_PectoralisProfundus =====
+<span id="L1308">1308</span>     # Branch 1, divisor 1.0: FL_PectoralisProfundus_origin [cat_root] -&gt; FL_PectoralisProfundus_insertion [FL_upperarm]
+<span id="L1309">1309</span>     # ===== FR_PectoralisProfundus =====
+<span id="L1310">1310</span>     # Branch 1, divisor 1.0: FR_PectoralisProfundus_origin [cat_root] -&gt; FR_PectoralisProfundus_insertion [FR_upperarm]
+<span id="L1311">1311</span>     # ===== FL_PectoralisSuperficialis =====
+<span id="L1312">1312</span>     # Branch 1, divisor 1.0: FL_PectoralisSuperficialis_origin [cat_root] -&gt; FL_PectoralisSuperficialis_insertion [FL_upperarm]
+<span id="L1313">1313</span>     # ===== FR_PectoralisSuperficialis =====
+<span id="L1314">1314</span>     # Branch 1, divisor 1.0: FR_PectoralisSuperficialis_origin [cat_root] -&gt; FR_PectoralisSuperficialis_insertion [FR_upperarm]
+<span id="L1315">1315</span>     # ===== FL_Clavobrachialis =====
+<span id="L1316">1316</span>     # Branch 1, divisor 1.0: FL_Clavobrachialis_origin [cat_root] -&gt; FL_Clavobrachialis_insertion [FL_upperarm]
+<span id="L1317">1317</span>     # ===== FR_Clavobrachialis =====
+<span id="L1318">1318</span>     # Branch 1, divisor 1.0: FR_Clavobrachialis_origin [cat_root] -&gt; FR_Clavobrachialis_insertion [FR_upperarm]
+<span id="L1319">1319</span> }
+</pre></main></body></html>

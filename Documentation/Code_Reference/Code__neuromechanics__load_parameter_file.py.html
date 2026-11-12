@@ -1,0 +1,31 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Read a commented, editable Python dictionary without executing code.</title><link rel="stylesheet" href="../style.css"></head><body><!-- generated folder guide --><header><div class="tag">Cat · Full-body neuromechanics</div><h1>Read a commented, editable Python dictionary without executing code.</h1><nav><a href="../../START_HERE.html">Start here</a> · <a href="../project_structure.html">Find a file</a></nav></header><main><p><a href="../../Code/neuromechanics/load_parameter_file.py">Code/neuromechanics/load_parameter_file.py</a></p><pre style="overflow:auto;white-space:pre"><span id="L1">   1</span> &quot;&quot;&quot;Read a commented, editable Python dictionary without executing code.&quot;&quot;&quot;
+<span id="L2">   2</span> 
+<span id="L3">   3</span> import ast
+<span id="L4">   4</span> 
+<span id="L5">   5</span> from pathlib import Path
+<span id="L6">   6</span> 
+<span id="L7">   7</span> 
+<span id="L8">   8</span> def load_parameter_file(path):
+<span id="L9">   9</span>     &quot;&quot;&quot;The file contains comments/docstrings and one PARAMETERS assignment.
+<span id="L10">  10</span> 
+<span id="L11">  11</span>     Using literal dictionaries keeps configuration approachable while avoiding
+<span id="L12">  12</span>     hidden computations. Every applied number is visible in the file.
+<span id="L13">  13</span>     &quot;&quot;&quot;
+<span id="L14">  14</span>     tree = ast.parse(Path(path).read_text(encoding=&quot;utf-8&quot;))
+<span id="L15">  15</span>     assignments = [
+<span id="L16">  16</span>         node
+<span id="L17">  17</span>         for node in tree.body
+<span id="L18">  18</span>         if isinstance(node, ast.Assign)
+<span id="L19">  19</span>         and len(node.targets) == 1
+<span id="L20">  20</span>         and isinstance(node.targets[0], ast.Name)
+<span id="L21">  21</span>         and node.targets[0].id == &quot;PARAMETERS&quot;
+<span id="L22">  22</span>     ]
+<span id="L23">  23</span>     if len(assignments) != 1:
+<span id="L24">  24</span>         # Stop and explain the invalid model setting or failed calculation.
+<span id="L25">  25</span>         raise ValueError(f&quot;{path}: expected one PARAMETERS dictionary&quot;)
+<span id="L26">  26</span>     values = ast.literal_eval(assignments[0].value)
+<span id="L27">  27</span>     if not isinstance(values, dict):
+<span id="L28">  28</span>         # Stop and explain the invalid model setting or failed calculation.
+<span id="L29">  29</span>         raise ValueError(&quot;PARAMETERS must be a dictionary&quot;)
+<span id="L30">  30</span>     return values
+</pre></main></body></html>

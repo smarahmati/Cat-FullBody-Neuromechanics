@@ -1,0 +1,114 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Read the real tendon transmission, including branches and wrap objects.</title><link rel="stylesheet" href="../style.css"></head><body><!-- generated folder guide --><header><div class="tag">Cat · Full-body neuromechanics</div><h1>Read the real tendon transmission, including branches and wrap objects.</h1><nav><a href="../../START_HERE.html">Start here</a> · <a href="../project_structure.html">Find a file</a></nav></header><main><p><a href="../../Code/neuromechanics/describe_muscle_paths.py">Code/neuromechanics/describe_muscle_paths.py</a></p><pre style="overflow:auto;white-space:pre"><span id="L1">   1</span> &quot;&quot;&quot;Read the real tendon transmission, including branches and wrap objects.
+<span id="L2">   2</span> 
+<span id="L3">   3</span> This is an inspection function. It never substitutes a straight line for the
+<span id="L4">   4</span> engine path and never changes anatomy. Names come from the loaded model.
+<span id="L5">   5</span> &quot;&quot;&quot;
+<span id="L6">   6</span> 
+<span id="L7">   7</span> import numpy as np
+<span id="L8">   8</span> 
+<span id="L9">   9</span> import mujoco as mj
+<span id="L10">  10</span> 
+<span id="L11">  11</span> 
+<span id="L12">  12</span> def describe_muscle_paths(state):
+<span id="L13">  13</span>     &quot;&quot;&quot;Return SI coordinates, connected bodies and ordered path elements.
+<span id="L14">  14</span> 
+<span id="L15">  15</span>     A MuJoCo spatial tendon can contain multiple branches. A branch endpoint
+<span id="L16">  16</span>     is not necessarily a separate anatomical origin/insertion. Side sites
+<span id="L17">  17</span>     choose the side of a wrapping object; the tendon does not pass through
+<span id="L18">  18</span>     those sites. The distinction matters when interpreting an attachment edit.
+<span id="L19">  19</span>     &quot;&quot;&quot;
+<span id="L20">  20</span>     s = state
+<span id="L21">  21</span>     m = s[&quot;model&quot;]
+<span id="L22">  22</span>     d = s[&quot;data&quot;]
+<span id="L23">  23</span>     moving = {int(meta[5]): row for row, meta in enumerate(s[&quot;routing_meta&quot;])}
+<span id="L24">  24</span>     result = []
+<span id="L25">  25</span>     for i, name in enumerate(s[&quot;names&quot;]):
+<span id="L26">  26</span>         tendon_id = int(m.actuator_trnid[i, 0])
+<span id="L27">  27</span>         if int(m.actuator_trntype[i]) != int(mj.mjtTrn.mjTRN_TENDON):
+<span id="L28">  28</span>             # Stop and explain the invalid model setting or failed calculation.
+<span id="L29">  29</span>             raise ValueError(f&quot;{name}: inspection expects a tendon transmission&quot;)
+<span id="L30">  30</span>         start = int(m.tendon_adr[tendon_id])
+<span id="L31">  31</span>         branches = [dict(divisor=1.0, elements=[])]
+<span id="L32">  32</span>         for k in range(start, start + int(m.tendon_num[tendon_id])):
+<span id="L33">  33</span>             kind = int(m.wrap_type[k])
+<span id="L34">  34</span>             object_id = int(m.wrap_objid[k])
+<span id="L35">  35</span>             if kind == int(mj.mjtWrap.mjWRAP_PULLEY):
+<span id="L36">  36</span>                 branches.append(dict(divisor=float(m.wrap_prm[k]), elements=[]))
+<span id="L37">  37</span>                 # Skip the remaining work for this item.
+<span id="L38">  38</span>                 continue
+<span id="L39">  39</span>             if kind == int(mj.mjtWrap.mjWRAP_SITE):
+<span id="L40">  40</span>                 body = int(m.site_bodyid[object_id])
+<span id="L41">  41</span>                 entry = dict(
+<span id="L42">  42</span>                     kind=&quot;site&quot;,
+<span id="L43">  43</span>                     name=m.site(object_id).name,
+<span id="L44">  44</span>                     body=m.body(body).name,
+<span id="L45">  45</span>                     local_position_m=m.site_pos[object_id].tolist(),
+<span id="L46">  46</span>                     world_position_m=d.site_xpos[object_id].tolist(),
+<span id="L47">  47</span>                     moving=object_id in moving,
+<span id="L48">  48</span>                     editable_file=&quot;routing.py&quot; if object_id in moving else &quot;attachments.py&quot;,
+<span id="L49">  49</span>                 )
+<span id="L50">  50</span>             elif kind in (int(mj.mjtWrap.mjWRAP_CYLINDER), int(mj.mjtWrap.mjWRAP_SPHERE)):
+<span id="L51">  51</span>                 body = int(m.geom_bodyid[object_id])
+<span id="L52">  52</span>                 side = int(m.wrap_prm[k])
+<span id="L53">  53</span>                 entry = dict(
+<span id="L54">  54</span>                     kind=&quot;wrap&quot;,
+<span id="L55">  55</span>                     name=m.geom(object_id).name,
+<span id="L56">  56</span>                     shape=(
+<span id="L57">  57</span>                         &quot;cylinder&quot;
+<span id="L58">  58</span>                         if kind == int(mj.mjtWrap.mjWRAP_CYLINDER)
+<span id="L59">  59</span>                         else &quot;sphere&quot;
+<span id="L60">  60</span>                     ),
+<span id="L61">  61</span>                     body=m.body(body).name,
+<span id="L62">  62</span>                     local_position_m=m.geom_pos[object_id].tolist(),
+<span id="L63">  63</span>                     radius_m=float(m.geom_size[object_id, 0]),
+<span id="L64">  64</span>                     editable_file=&quot;wrapping.py&quot;,
+<span id="L65">  65</span>                     side_site=(
+<span id="L66">  66</span>                         None
+<span id="L67">  67</span>                         if side &lt; 0
+<span id="L68">  68</span>                         else dict(
+<span id="L69">  69</span>                             name=m.site(side).name,
+<span id="L70">  70</span>                             body=m.body(int(m.site_bodyid[side])).name,
+<span id="L71">  71</span>                             local_position_m=m.site_pos[side].tolist(),
+<span id="L72">  72</span>                             moving=side in moving,
+<span id="L73">  73</span>                             editable_file=(
+<span id="L74">  74</span>                                 &quot;routing.py&quot;
+<span id="L75">  75</span>                                 if side in moving
+<span id="L76">  76</span>                                 else &quot;attachments.py&quot;
+<span id="L77">  77</span>                             ),
+<span id="L78">  78</span>                         )
+<span id="L79">  79</span>                     ),
+<span id="L80">  80</span>                 )
+<span id="L81">  81</span>             else:
+<span id="L82">  82</span>                 # Stop and explain the invalid model setting or failed calculation.
+<span id="L83">  83</span>                 raise ValueError(f&quot;{name}: unsupported wrap type {kind}&quot;)
+<span id="L84">  84</span>             branches[-1][&quot;elements&quot;].append(entry)
+<span id="L85">  85</span>         branches = [b for b in branches if b[&quot;elements&quot;]]
+<span id="L86">  86</span>         for branch_index, branch in enumerate(branches):
+<span id="L87">  87</span>             sites = [e for e in branch[&quot;elements&quot;] if e[&quot;kind&quot;] == &quot;site&quot;]
+<span id="L88">  88</span>             for index, point in enumerate(sites):
+<span id="L89">  89</span>                 point[&quot;role&quot;] = (
+<span id="L90">  90</span>                     (&quot;origin&quot; if branch_index == 0 else &quot;internal branch start&quot;)
+<span id="L91">  91</span>                     if index == 0
+<span id="L92">  92</span>                     else (
+<span id="L93">  93</span>                         (
+<span id="L94">  94</span>                             &quot;insertion&quot;
+<span id="L95">  95</span>                             if branch_index == len(branches) - 1
+<span id="L96">  96</span>                             else &quot;internal branch end&quot;
+<span id="L97">  97</span>                         )
+<span id="L98">  98</span>                         if index == len(sites) - 1
+<span id="L99">  99</span>                         else &quot;via point&quot;
+<span id="L100"> 100</span>                     )
+<span id="L101"> 101</span>                 )
+<span id="L102"> 102</span>         result.append(
+<span id="L103"> 103</span>             dict(
+<span id="L104"> 104</span>                 muscle=str(name),
+<span id="L105"> 105</span>                 tendon=m.tendon(tendon_id).name,
+<span id="L106"> 106</span>                 branches=branches,
+<span id="L107"> 107</span>                 path_length_m=float(d.actuator_length[i]),
+<span id="L108"> 108</span>                 length_offset_m=float(s[&quot;mtu_length_offset&quot;][i]),
+<span id="L109"> 109</span>                 MT_length_m=float(d.actuator_length[i] + s[&quot;mtu_length_offset&quot;][i]),
+<span id="L110"> 110</span>                 tendon_gear=float(m.actuator_gear[i, 0]),
+<span id="L111"> 111</span>             )
+<span id="L112"> 112</span>         )
+<span id="L113"> 113</span>     return result
+</pre></main></body></html>

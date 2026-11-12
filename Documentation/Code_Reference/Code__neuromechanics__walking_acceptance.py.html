@@ -1,0 +1,148 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Explicit calibration gates; completing integration alone is not walking.</title><link rel="stylesheet" href="../style.css"></head><body><!-- generated folder guide --><header><div class="tag">Cat · Full-body neuromechanics</div><h1>Explicit calibration gates; completing integration alone is not walking.</h1><nav><a href="../../START_HERE.html">Start here</a> · <a href="../project_structure.html">Find a file</a></nav></header><main><p><a href="../../Code/neuromechanics/walking_acceptance.py">Code/neuromechanics/walking_acceptance.py</a></p><pre style="overflow:auto;white-space:pre"><span id="L1">   1</span> &quot;&quot;&quot;Explicit calibration gates; completing integration alone is not walking.&quot;&quot;&quot;
+<span id="L2">   2</span> 
+<span id="L3">   3</span> import numpy as np
+<span id="L4">   4</span> 
+<span id="L5">   5</span> from .compare_simulation_with_experiment import compare_simulation_with_experiment
+<span id="L6">   6</span> 
+<span id="L7">   7</span> from .experimental_comparison_targets import experimental_comparison_targets
+<span id="L8">   8</span> 
+<span id="L9">   9</span> 
+<span id="L10">  10</span> def walking_acceptance(result, settings):
+<span id="L11">  11</span>     &quot;&quot;&quot;Compare unfiltered signals and sustained contact cycles to fixed targets.
+<span id="L12">  12</span> 
+<span id="L13">  13</span>     These tolerances are engineering acceptance targets, not uncertainty
+<span id="L14">  14</span>     intervals for the biological recordings. LH and fore EMG data limitations
+<span id="L15">  15</span>     remain in compare_simulation_with_experiment(). Contact dwell is only event detection, never force
+<span id="L16">  16</span>     smoothing or an alteration of plotted/scored Ground_Reaction_Forces.
+<span id="L17">  17</span>     &quot;&quot;&quot;
+<span id="L18">  18</span>     t = result[&quot;time&quot;]
+<span id="L19">  19</span>     metrics = compare_simulation_with_experiment(result, settings)
+<span id="L20">  20</span>     T = settings[&quot;period_s&quot;]
+<span id="L21">  21</span>     target = experimental_comparison_targets(t, T, settings.get(&quot;reference_table_dir&quot;))
+<span id="L22">  22</span>     late = t &gt;= max(0.0, float(t[-1]) - 10.0)
+<span id="L23">  23</span>     q = np.sqrt(
+<span id="L24">  24</span>         np.mean(np.rad2deg(result[&quot;joint_q&quot;][late] - target[&quot;joint_q&quot;][late]) ** 2, axis=0)
+<span id="L25">  25</span>     )
+<span id="L26">  26</span>     grf = np.sqrt(np.mean((result[&quot;grf&quot;][late] - target[&quot;grf&quot;][late]) ** 2, axis=0))
+<span id="L27">  27</span>     angle_limit = np.array([8.0, 6.0, 8.0, 8.0])[:, None]
+<span id="L28">  28</span>     cycles = []
+<span id="L29">  29</span>     dt = float(np.median(np.diff(t)))
+<span id="L30">  30</span>     dwell = max(1, round(0.025 / dt))
+<span id="L31">  31</span>     for limb in range(4):
+<span id="L32">  32</span>         raw = result[&quot;grf&quot;][:, limb, 2] &gt; 1.0
+<span id="L33">  33</span>         on = bool(raw[0])
+<span id="L34">  34</span>         counter = 0
+<span id="L35">  35</span>         touch = []
+<span id="L36">  36</span>         off = []
+<span id="L37">  37</span>         for k, value in enumerate(raw):
+<span id="L38">  38</span>             counter = counter + 1 if bool(value) != on else 0
+<span id="L39">  39</span>             if counter &gt;= dwell:
+<span id="L40">  40</span>                 on = bool(value)
+<span id="L41">  41</span>                 (touch if on else off).append(float(t[k - dwell + 1]))
+<span id="L42">  42</span>                 counter = 0
+<span id="L43">  43</span>         recent = np.array(off)
+<span id="L44">  44</span>         recent = recent[recent &gt;= max(0.0, float(t[-1]) - 10.0)]
+<span id="L45">  45</span>         periods = np.diff(recent)
+<span id="L46">  46</span>         cycles.append(
+<span id="L47">  47</span>             dict(
+<span id="L48">  48</span>                 completed_cycles=max(0, len(off) - 1),
+<span id="L49">  49</span>                 last_window_median_period_s=(
+<span id="L50">  50</span>                     float(np.median(periods))
+<span id="L51">  51</span>                     if len(periods)
+<span id="L52">  52</span>                     else None
+<span id="L53">  53</span>                 ),
+<span id="L54">  54</span>                 period_relative_sd=(
+<span id="L55">  55</span>                     float(np.std(periods) / np.mean(periods))
+<span id="L56">  56</span>                     if len(periods) &gt; 1
+<span id="L57">  57</span>                     else None
+<span id="L58">  58</span>                 ),
+<span id="L59">  59</span>             )
+<span id="L60">  60</span>         )
+<span id="L61">  61</span>     sufficient = bool(float(t[-1]) &gt;= 59.99 and not str(result[&quot;failure&quot;]))
+<span id="L62">  62</span>     rhythm = bool(
+<span id="L63">  63</span>         sufficient
+<span id="L64">  64</span>         and all(
+<span id="L65">  65</span>             c[&quot;completed_cycles&quot;] &gt;= int(0.8 * float(t[-1]) / T)
+<span id="L66">  66</span>             and c[&quot;last_window_median_period_s&quot;] is not None
+<span id="L67">  67</span>             and abs(c[&quot;last_window_median_period_s&quot;] / T - 1) &lt; 0.10
+<span id="L68">  68</span>             and c[&quot;period_relative_sd&quot;] is not None
+<span id="L69">  69</span>             and c[&quot;period_relative_sd&quot;] &lt; 0.10
+<span id="L70">  70</span>             for c in cycles
+<span id="L71">  71</span>         )
+<span id="L72">  72</span>     )
+<span id="L73">  73</span>     force_signs = []
+<span id="L74">  74</span>     for limb in range(4):
+<span id="L75">  75</span>         fx = result[&quot;grf&quot;][late, limb, 0]
+<span id="L76">  76</span>         force_signs.append(bool(fx.min() &lt; -0.5 and fx.max() &gt; 0.5))
+<span id="L77">  77</span>     emg_pass = all(
+<span id="L78">  78</span>         e[&quot;peak_normalized_rmse&quot;] &lt; 0.25 and e[&quot;correlation&quot;] &gt; 0.7
+<span id="L79">  79</span>         for e in metrics[&quot;emg&quot;]
+<span id="L80">  80</span>     )
+<span id="L81">  81</span>     timing = []
+<span id="L82">  82</span>     for item in metrics[&quot;emg&quot;]:
+<span id="L83">  83</span>         score = item[&quot;complete_input_cycle_timing&quot;]
+<span id="L84">  84</span>         edges = all(
+<span id="L85">  85</span>             score[key][&quot;unmatched_predicted&quot;] == 0
+<span id="L86">  86</span>             and score[key][&quot;unmatched_reference&quot;] == 0
+<span id="L87">  87</span>             and (
+<span id="L88">  88</span>                 score[key][&quot;maximum_absolute_error_s&quot;] is None
+<span id="L89">  89</span>                 or score[key][&quot;maximum_absolute_error_s&quot;]
+<span id="L90">  90</span>                 &lt;= settings.get(&quot;emg_phase_edge_tolerance_s&quot;, 0.035)
+<span id="L91">  91</span>             )
+<span id="L92">  92</span>             for key in [&quot;onset&quot;, &quot;offset&quot;]
+<span id="L93">  93</span>         )
+<span id="L94">  94</span>         timing.append(
+<span id="L95">  95</span>             bool(
+<span id="L96">  96</span>                 score[&quot;active_intersection_over_union&quot;]
+<span id="L97">  97</span>                 &gt;= settings.get(&quot;emg_phase_iou_min&quot;, 0.8)
+<span id="L98">  98</span>                 and edges
+<span id="L99">  99</span>             )
+<span id="L100"> 100</span>         )
+<span id="L101"> 101</span>     tests = dict(
+<span id="L102"> 102</span>         uninterrupted_60s=sufficient,
+<span id="L103"> 103</span>         rhythmic_four_paw_contacts=rhythm,
+<span id="L104"> 104</span>         all_joint_RMSE=bool(np.all(q &lt; angle_limit)),
+<span id="L105"> 105</span>         all_AP_RMSE=bool(np.all(grf[:, 0] &lt; 0.6)),
+<span id="L106"> 106</span>         all_vertical_RMSE=bool(np.all(grf[:, 2] &lt; 1.5)),
+<span id="L107"> 107</span>         braking_and_propulsion_all_paws=all(force_signs),
+<span id="L108"> 108</span>         available_EMG_shapes=bool(emg_pass),
+<span id="L109"> 109</span>     )
+<span id="L110"> 110</span>     tests[&quot;available_EMG_active_quiet_timing&quot;] = bool(all(timing))
+<span id="L111"> 111</span>     if &quot;max_interior_fiber_residual_N&quot; in result:
+<span id="L112"> 112</span>         tests[&quot;interior_elastic_equilibrium&quot;] = bool(
+<span id="L113"> 113</span>             float(result[&quot;max_interior_fiber_residual_N&quot;])
+<span id="L114"> 114</span>             &lt; 1e-4
+<span id="L115"> 115</span>         )
+<span id="L116"> 116</span>         tests[&quot;no_geometric_fiber_bounds&quot;] = bool(int(result[&quot;fiber_bound_steps&quot;]) == 0)
+<span id="L117"> 117</span>     else:
+<span id="L118"> 118</span>         tests[&quot;interior_elastic_equilibrium&quot;] = False
+<span id="L119"> 119</span>         tests[&quot;no_geometric_fiber_bounds&quot;] = False
+<span id="L120"> 120</span>     if settings.get(&quot;fore_force_velocity_mode&quot;) == &quot;degroote_2016&quot;:
+<span id="L121"> 121</span>         tests[&quot;published_fore_force_velocity_domain&quot;] = bool(
+<span id="L122"> 122</span>             &quot;peak_abs_normalized_fiber_velocity&quot; in result
+<span id="L123"> 123</span>             and np.max(result[&quot;peak_abs_normalized_fiber_velocity&quot;][28:]) &lt;= 1.0 + 1e-6
+<span id="L124"> 124</span>         )
+<span id="L125"> 125</span>     if settings.get(&quot;hind_force_velocity_mode&quot;) == &quot;degroote_2016&quot;:
+<span id="L126"> 126</span>         tests[&quot;published_hind_force_velocity_domain&quot;] = bool(
+<span id="L127"> 127</span>             &quot;peak_abs_normalized_fiber_velocity&quot; in result
+<span id="L128"> 128</span>             and np.max(result[&quot;peak_abs_normalized_fiber_velocity&quot;][:28]) &lt;= 1.0 + 1e-6
+<span id="L129"> 129</span>         )
+<span id="L130"> 130</span>     if &quot;degroote_force_velocity_enabled&quot; in result:
+<span id="L131"> 131</span>         enabled = np.asarray(result[&quot;degroote_force_velocity_enabled&quot;], bool)
+<span id="L132"> 132</span>         if np.any(enabled):
+<span id="L133"> 133</span>             tests[&quot;configured_force_velocity_domain&quot;] = bool(
+<span id="L134"> 134</span>                 np.max(result[&quot;peak_abs_normalized_fiber_velocity&quot;][enabled])
+<span id="L135"> 135</span>                 &lt;= 1.0 + 1e-6
+<span id="L136"> 136</span>             )
+<span id="L137"> 137</span>     return dict(
+<span id="L138"> 138</span>         tests=tests,
+<span id="L139"> 139</span>         primary_calibration_pass=bool(all(tests.values())),
+<span id="L140"> 140</span>         half_step_and_perturbation_still_required=True,
+<span id="L141"> 141</span>         late_window_start_s=float(t[late][0]),
+<span id="L142"> 142</span>         late_joint_RMSE_deg=q.tolist(),
+<span id="L143"> 143</span>         late_AP_vertical_RMSE_N=grf[:, [0, 2]].tolist(),
+<span id="L144"> 144</span>         contact_cycles=cycles,
+<span id="L145"> 145</span>         threshold_provenance=&quot;Declared engineering targets comparable to preserved hindlimb fit; not published biological tolerances.&quot;,
+<span id="L146"> 146</span>         independent_four_limb_validation=False,
+<span id="L147"> 147</span>     )
+</pre></main></body></html>

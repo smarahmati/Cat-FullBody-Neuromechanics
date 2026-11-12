@@ -1,0 +1,170 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Independent 3D playback loop so Tk plotting cannot dictate frame timing.</title><link rel="stylesheet" href="../style.css"></head><body><!-- generated folder guide --><header><div class="tag">Cat · Full-body neuromechanics</div><h1>Independent 3D playback loop so Tk plotting cannot dictate frame timing.</h1><nav><a href="../../START_HERE.html">Start here</a> · <a href="../project_structure.html">Find a file</a></nav></header><main><p><a href="../../Code/neuromechanics/simulation_playback_worker.py">Code/neuromechanics/simulation_playback_worker.py</a></p><pre style="overflow:auto;white-space:pre"><span id="L1">   1</span> &quot;&quot;&quot;Independent 3D playback loop so Tk plotting cannot dictate frame timing.&quot;&quot;&quot;
+<span id="L2">   2</span> 
+<span id="L3">   3</span> from collections import deque
+<span id="L4">   4</span> 
+<span id="L5">   5</span> import json
+<span id="L6">   6</span> 
+<span id="L7">   7</span> import threading
+<span id="L8">   8</span> 
+<span id="L9">   9</span> import time
+<span id="L10">  10</span> 
+<span id="L11">  11</span> import numpy as np
+<span id="L12">  12</span> 
+<span id="L13">  13</span> import mujoco as mj
+<span id="L14">  14</span> 
+<span id="L15">  15</span> from .interpolate_simulation_for_display import interpolate_simulation_for_display
+<span id="L16">  16</span> 
+<span id="L17">  17</span> from .update_saved_visual_state import update_saved_visual_state
+<span id="L18">  18</span> 
+<span id="L19">  19</span> from .draw_saved_grf_vectors import draw_saved_grf_vectors
+<span id="L20">  20</span> 
+<span id="L21">  21</span> 
+<span id="L22">  22</span> class SavedReplayWorker:
+<span id="L23">  23</span>     &quot;&quot;&quot;Own MuJoCo data/viewer mutations; exchange plain values with the Tk thread.&quot;&quot;&quot;
+<span id="L24">  24</span> 
+<span id="L25">  25</span>     def __init__(self, viewer, state, result, profile_path, profile_seconds=12.0):
+<span id="L26">  26</span>         self.viewer, self.state, self.result = viewer, state, result
+<span id="L27">  27</span>         self.profile_path, self.profile_seconds = profile_path, profile_seconds
+<span id="L28">  28</span>         self.lock = threading.Lock()
+<span id="L29">  29</span>         self.stop_event = threading.Event()
+<span id="L30">  30</span>         self.controls = dict(
+<span id="L31">  31</span>             paused=True,
+<span id="L32">  32</span>             speed=0.5,
+<span id="L33">  33</span>             fps=60.0,
+<span id="L34">  34</span>             forces=True,
+<span id="L35">  35</span>             rich=False,
+<span id="L36">  36</span>             follow=True,
+<span id="L37">  37</span>             seek=None,
+<span id="L38">  38</span>         )
+<span id="L39">  39</span>         self.current = dict(
+<span id="L40">  40</span>             time=0.0,
+<span id="L41">  41</span>             update_hz=0.0,
+<span id="L42">  42</span>             # Calculate the error in this comparison.
+<span id="L43">  43</span>             error=None,
+<span id="L44">  44</span>             forces=np.zeros((4, 3)),
+<span id="L45">  45</span>             arrows=[],
+<span id="L46">  46</span>         )
+<span id="L47">  47</span>         self.intervals = []
+<span id="L48">  48</span>         self.work_seconds = []
+<span id="L49">  49</span>         self.profile_saved = False
+<span id="L50">  50</span>         self.thread = threading.Thread(
+<span id="L51">  51</span>             target=self._run,
+<span id="L52">  52</span>             name=&quot;cat-saved-3d-replay&quot;,
+<span id="L53">  53</span>             daemon=True,
+<span id="L54">  54</span>         )
+<span id="L55">  55</span> 
+<span id="L56">  56</span>     def start(self):
+<span id="L57">  57</span>         self.thread.start()
+<span id="L58">  58</span> 
+<span id="L59">  59</span>     def command(self, **values):
+<span id="L60">  60</span>         # Keep this file or shared state safely scoped to the following operations.
+<span id="L61">  61</span>         with self.lock:
+<span id="L62">  62</span>             self.controls.update(values)
+<span id="L63">  63</span> 
+<span id="L64">  64</span>     def snapshot(self):
+<span id="L65">  65</span>         # Keep this file or shared state safely scoped to the following operations.
+<span id="L66">  66</span>         with self.lock:
+<span id="L67">  67</span>             return dict(self.current)
+<span id="L68">  68</span> 
+<span id="L69">  69</span>     def stop(self):
+<span id="L70">  70</span>         self.stop_event.set()
+<span id="L71">  71</span>         self.thread.join(timeout=3.0)
+<span id="L72">  72</span> 
+<span id="L73">  73</span>     def _run(self):
+<span id="L74">  74</span>         # Attempt the operation and report a failure in the exception branch.
+<span id="L75">  75</span>         try:
+<span id="L76">  76</span>             self._loop()
+<span id="L77">  77</span>         # Handle the stated error without hiding its cause.
+<span id="L78">  78</span>         except Exception as error:
+<span id="L79">  79</span>             import traceback
+<span id="L80">  80</span> 
+<span id="L81">  81</span>             traceback.print_exc()
+<span id="L82">  82</span>             # Keep this file or shared state safely scoped to the following operations.
+<span id="L83">  83</span>             with self.lock:
+<span id="L84">  84</span>                 self.current[&quot;error&quot;] = str(error)
+<span id="L85">  85</span> 
+<span id="L86">  86</span>     def _loop(self):
+<span id="L87">  87</span>         frame_times = deque(maxlen=180)
+<span id="L88">  88</span>         beginning = previous = time.perf_counter()
+<span id="L89">  89</span>         simulation_time = 0.0
+<span id="L90">  90</span>         pelvis_id = self.state[&quot;model&quot;].body(&quot;pelvis&quot;).id
+<span id="L91">  91</span>         # Repeat while not self.stop_event.is_set() and self.viewer.is_running().
+<span id="L92">  92</span>         while not self.stop_event.is_set() and self.viewer.is_running():
+<span id="L93">  93</span>             started = time.perf_counter()
+<span id="L94">  94</span>             elapsed = started - previous
+<span id="L95">  95</span>             previous = started
+<span id="L96">  96</span>             # Keep this file or shared state safely scoped to the following operations.
+<span id="L97">  97</span>             with self.lock:
+<span id="L98">  98</span>                 control = dict(self.controls)
+<span id="L99">  99</span>                 self.controls[&quot;seek&quot;] = None
+<span id="L100"> 100</span>             if control[&quot;seek&quot;] is not None:
+<span id="L101"> 101</span>                 simulation_time = float(
+<span id="L102"> 102</span>                     np.clip(control[&quot;seek&quot;], 0.0, self.result[&quot;time&quot;][-1])
+<span id="L103"> 103</span>                 )
+<span id="L104"> 104</span>             elif not control[&quot;paused&quot;]:
+<span id="L105"> 105</span>                 simulation_time = min(
+<span id="L106"> 106</span>                     float(self.result[&quot;time&quot;][-1]),
+<span id="L107"> 107</span>                     simulation_time + elapsed * control[&quot;speed&quot;],
+<span id="L108"> 108</span>                 )
+<span id="L109"> 109</span>             sample = interpolate_simulation_for_display(self.result, simulation_time)
+<span id="L110"> 110</span>             # Keep this file or shared state safely scoped to the following operations.
+<span id="L111"> 111</span>             with self.viewer.lock():
+<span id="L112"> 112</span>                 update_saved_visual_state(self.state, sample)
+<span id="L113"> 113</span>                 if control[&quot;follow&quot;]:
+<span id="L114"> 114</span>                     self.viewer.cam.lookat[0] = self.state[&quot;data&quot;].xpos[pelvis_id, 0] + 0.12
+<span id="L115"> 115</span>                 self.viewer.user_scn.flags[mj.mjtRndFlag.mjRND_SHADOW] = control[&quot;rich&quot;]
+<span id="L116"> 116</span>                 self.viewer.user_scn.flags[mj.mjtRndFlag.mjRND_REFLECTION] = control[&quot;rich&quot;]
+<span id="L117"> 117</span>                 arrows = draw_saved_grf_vectors(
+<span id="L118"> 118</span>                     self.viewer,
+<span id="L119"> 119</span>                     self.state,
+<span id="L120"> 120</span>                     sample[&quot;grf&quot;],
+<span id="L121"> 121</span>                     control[&quot;forces&quot;],
+<span id="L122"> 122</span>                 )
+<span id="L123"> 123</span>             self.viewer.sync()
+<span id="L124"> 124</span>             finished = time.perf_counter()
+<span id="L125"> 125</span>             frame_times.append(finished)
+<span id="L126"> 126</span>             if len(frame_times) &gt; 1:
+<span id="L127"> 127</span>                 rate = (len(frame_times) - 1) / (frame_times[-1] - frame_times[0])
+<span id="L128"> 128</span>             else:
+<span id="L129"> 129</span>                 rate = 0.0
+<span id="L130"> 130</span>             if started - beginning &gt; 2.0 and len(frame_times) &gt; 1:
+<span id="L131"> 131</span>                 self.intervals.append(frame_times[-1] - frame_times[-2])
+<span id="L132"> 132</span>                 self.work_seconds.append(finished - started)
+<span id="L133"> 133</span>             # Keep this file or shared state safely scoped to the following operations.
+<span id="L134"> 134</span>             with self.lock:
+<span id="L135"> 135</span>                 self.current.update(
+<span id="L136"> 136</span>                     time=simulation_time,
+<span id="L137"> 137</span>                     update_hz=rate,
+<span id="L138"> 138</span>                     forces=sample[&quot;grf&quot;].copy(),
+<span id="L139"> 139</span>                     arrows=arrows,
+<span id="L140"> 140</span>                 )
+<span id="L141"> 141</span>                 if simulation_time &gt;= self.result[&quot;time&quot;][-1]:
+<span id="L142"> 142</span>                     self.controls[&quot;paused&quot;] = True
+<span id="L143"> 143</span>             if (
+<span id="L144"> 144</span>                 not self.profile_saved
+<span id="L145"> 145</span>                 and started - beginning &gt;= self.profile_seconds
+<span id="L146"> 146</span>                 and self.intervals
+<span id="L147"> 147</span>             ):
+<span id="L148"> 148</span>                 report = dict(
+<span id="L149"> 149</span>                     target_update_hz=control[&quot;fps&quot;],
+<span id="L150"> 150</span>                     measured_3d_update_hz=1.0 / float(np.mean(self.intervals)),
+<span id="L151"> 151</span>                     frame_interval_ms_median=1000 * float(np.median(self.intervals)),
+<span id="L152"> 152</span>                     frame_interval_ms_p95=1000 * float(np.quantile(self.intervals, 0.95)),
+<span id="L153"> 153</span>                     frame_work_ms_median=1000 * float(np.median(self.work_seconds)),
+<span id="L154"> 154</span>                     displayed_arrow_count=len(arrows),
+<span id="L155"> 155</span>                     mesh_triangles=int(self.state[&quot;model&quot;].nmeshface),
+<span id="L156"> 156</span>                     shadows_and_reflections=control[&quot;rich&quot;],
+<span id="L157"> 157</span>                     rate_scope=&quot;Python state + passive-viewer synchronization, not measured monitor/GPU presentation FPS&quot;,
+<span id="L158"> 158</span>                     recording_unchanged=True,
+<span id="L159"> 159</span>                     interpolation=&quot;Linear between saved scalar-coordinate states for display only&quot;,
+<span id="L160"> 160</span>                 )
+<span id="L161"> 161</span>                 self.profile_path.parent.mkdir(parents=True, exist_ok=True)
+<span id="L162"> 162</span>                 # Save the computed values or figure for inspection and reproducibility.
+<span id="L163"> 163</span>                 self.profile_path.write_text(json.dumps(report, indent=2))
+<span id="L164"> 164</span>                 print(&quot;GUI_PERFORMANCE &quot; + json.dumps(report), flush=True)
+<span id="L165"> 165</span>                 self.profile_saved = True
+<span id="L166"> 166</span>             # Python 3.12 sleep uses a high-resolution Windows waitable timer.
+<span id="L167"> 167</span>             # Event.wait rounds short waits to the coarser system tick on this
+<span id="L168"> 168</span>             # host, which reduced a 60-Hz request to roughly 30 actual updates.
+<span id="L169"> 169</span>             time.sleep(max(0.0, 1.0 / control[&quot;fps&quot;] - (time.perf_counter() - started)))
+</pre></main></body></html>

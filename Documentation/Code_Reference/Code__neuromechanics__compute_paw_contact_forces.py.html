@@ -1,0 +1,47 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Calculate paw deformation and slip, then apply their contact forces and moments.</title><link rel="stylesheet" href="../style.css"></head><body><!-- generated folder guide --><header><div class="tag">Cat · Full-body neuromechanics</div><h1>Calculate paw deformation and slip, then apply their contact forces and moments.</h1><nav><a href="../../START_HERE.html">Start here</a> · <a href="../project_structure.html">Find a file</a></nav></header><main><p><a href="../../Code/neuromechanics/compute_paw_contact_forces.py">Code/neuromechanics/compute_paw_contact_forces.py</a></p><pre style="overflow:auto;white-space:pre"><span id="L1">   1</span> &quot;&quot;&quot;Calculate paw deformation and slip, then apply their contact forces and moments.
+<span id="L2">   2</span> 
+<span id="L3">   3</span> Inputs/outputs: see the named function arguments and returned values.
+<span id="L4">   4</span> Lengths use metres, time seconds, force newtons, and angles radians unless stated.
+<span id="L5">   5</span> See Documentation/model_methods.html for equations and parameter definitions.
+<span id="L6">   6</span> &quot;&quot;&quot;
+<span id="L7">   7</span> 
+<span id="L8">   8</span> import numpy as np
+<span id="L9">   9</span> 
+<span id="L10">  10</span> import mujoco as mj
+<span id="L11">  11</span> 
+<span id="L12">  12</span> from .sum_paw_contact_forces_and_moments import sum_paw_contact_forces_and_moments
+<span id="L13">  13</span> 
+<span id="L14">  14</span> 
+<span id="L15">  15</span> def compute_paw_contact_forces(state, advance_s=0.0):
+<span id="L16">  16</span>     &quot;&quot;&quot;Actual paw deformation/slip -&gt; forces and body wrenches, all four paws.&quot;&quot;&quot;
+<span id="L17">  17</span>     model, data = state[&quot;model&quot;], state[&quot;data&quot;]
+<span id="L18">  18</span>     pad_indices = state[&quot;pad_ids&quot;]
+<span id="L19">  19</span>     velocity = np.zeros((4, 6))
+<span id="L20">  20</span>     position = np.zeros((4, 3))
+<span id="L21">  21</span>     for i, site in enumerate(state[&quot;paw_ids&quot;]):
+<span id="L22">  22</span>         mj.mj_objectVelocity(model, data, mj.mjtObj.mjOBJ_SITE, int(site), velocity[i], 0)
+<span id="L23">  23</span>         position[i] = data.site_xpos[site]
+<span id="L24">  24</span>     paw_forces, center_of_pressure, wrench, depth, energy, power = (
+<span id="L25">  25</span>         sum_paw_contact_forces_and_moments(
+<span id="L26">  26</span>             data.geom_xpos[pad_indices],
+<span id="L27">  27</span>             model.geom_size[pad_indices, 0],
+<span id="L28">  28</span>             state[&quot;pad_side&quot;],
+<span id="L29">  29</span>             model.geom_bodyid[pad_indices],
+<span id="L30">  30</span>             data.xipos,
+<span id="L31">  31</span>             position,
+<span id="L32">  32</span>             velocity,
+<span id="L33">  33</span>             state[&quot;bristle&quot;],
+<span id="L34">  34</span>             advance_s,
+<span id="L35">  35</span>             state[&quot;contact_parameters&quot;],
+<span id="L36">  36</span>             True,
+<span id="L37">  37</span>         )
+<span id="L38">  38</span>     )
+<span id="L39">  39</span>     state.update(
+<span id="L40">  40</span>         grf=paw_forces,
+<span id="L41">  41</span>         center_of_pressure=center_of_pressure,
+<span id="L42">  42</span>         contact_wrench=wrench,
+<span id="L43">  43</span>         pad_depth=depth,
+<span id="L44">  44</span>         pad_energy=energy,
+<span id="L45">  45</span>         contact_power=power,
+<span id="L46">  46</span>     )
+</pre></main></body></html>

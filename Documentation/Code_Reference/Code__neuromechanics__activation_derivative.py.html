@@ -1,0 +1,18 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Activation derivative.</title><link rel="stylesheet" href="../style.css"></head><body><!-- generated folder guide --><header><div class="tag">Cat · Full-body neuromechanics</div><h1>Activation derivative.</h1><nav><a href="../../START_HERE.html">Start here</a> · <a href="../project_structure.html">Find a file</a></nav></header><main><p><a href="../../Code/neuromechanics/activation_derivative.py">Code/neuromechanics/activation_derivative.py</a></p><pre style="overflow:auto;white-space:pre"><span id="L1">   1</span> &quot;&quot;&quot;Activation derivative.
+<span id="L2">   2</span> 
+<span id="L3">   3</span> Inputs/outputs: see the named function arguments and returned values.
+<span id="L4">   4</span> Lengths use metres, time seconds, force newtons, and angles radians unless stated.
+<span id="L5">   5</span> See Documentation/model_methods.html for equations and parameter definitions.
+<span id="L6">   6</span> &quot;&quot;&quot;
+<span id="L7">   7</span> 
+<span id="L8">   8</span> import numpy as np
+<span id="L9">   9</span> 
+<span id="L10">  10</span> 
+<span id="L11">  11</span> def activation_derivative(muscle_excitation, activation, time_constants):
+<span id="L12">  12</span>     &quot;&quot;&quot;MuJoCo muscle activation law; tau=[activation,deactivation] in seconds.&quot;&quot;&quot;
+<span id="L13">  13</span>     u = np.clip(muscle_excitation, 0, 1)
+<span id="L14">  14</span>     a = np.clip(activation, 0, 1)
+<span id="L15">  15</span>     factor = 0.5 + 1.5 * a
+<span id="L16">  16</span>     tau = np.where(u &gt; a, time_constants[:, 0] * factor, time_constants[:, 1] / factor)
+<span id="L17">  17</span>     return (u - a) / tau
+</pre></main></body></html>

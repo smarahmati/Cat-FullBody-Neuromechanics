@@ -1,0 +1,68 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Make t=0 muscle states consistent with each candidate&#x27;s own waveform.</title><link rel="stylesheet" href="../style.css"></head><body><!-- generated folder guide --><header><div class="tag">Cat · Full-body neuromechanics</div><h1>Make t=0 muscle states consistent with each candidate&#x27;s own waveform.</h1><nav><a href="../../START_HERE.html">Start here</a> · <a href="../project_structure.html">Find a file</a></nav></header><main><p><a href="../../Code/neuromechanics/precondition_periodic_muscles.py">Code/neuromechanics/precondition_periodic_muscles.py</a></p><pre style="overflow:auto;white-space:pre"><span id="L1">   1</span> &quot;&quot;&quot;Make t=0 muscle states consistent with each candidate&#x27;s own waveform.&quot;&quot;&quot;
+<span id="L2">   2</span> 
+<span id="L3">   3</span> import numpy as np
+<span id="L4">   4</span> 
+<span id="L5">   5</span> import mujoco as mj
+<span id="L6">   6</span> 
+<span id="L7">   7</span> from .assemble_reference_kinematics import assemble_reference_kinematics
+<span id="L8">   8</span> 
+<span id="L9">   9</span> from .update_muscle_paths import update_muscle_paths
+<span id="L10">  10</span> 
+<span id="L11">  11</span> from .periodic_muscle_history_kernel import periodic_muscle_history_kernel
+<span id="L12">  12</span> 
+<span id="L13">  13</span> 
+<span id="L14">  14</span> def precondition_periodic_muscles(s):
+<span id="L15">  15</span>     &quot;&quot;&quot;Reference kinematics apply only to the negative-time muscle prehistory.
+<span id="L16">  16</span> 
+<span id="L17">  17</span>     No joint pose, velocity or contact state is reset after t=0. The cached
+<span id="L18">  18</span>     reference lengths depend on fixed geometry/reference, never on muscle_excitation.
+<span id="L19">  19</span>     In contrast, activation and fiber states are recomputed for every input.
+<span id="L20">  20</span>     &quot;&quot;&quot;
+<span id="L21">  21</span>     m, d = s[&quot;model&quot;], s[&quot;data&quot;]
+<span id="L22">  22</span>     q = d.qpos.copy()
+<span id="L23">  23</span>     v0 = d.qvel.copy()
+<span id="L24">  24</span>     cfg = s[&quot;settings&quot;]
+<span id="L25">  25</span>     n = cfg[&quot;prehistory_samples&quot;]
+<span id="L26">  26</span>     offsets = cfg.get(&quot;initial_joint_angle_offsets_rad&quot;, {})
+<span id="L27">  27</span>     cache_key = tuple(sorted(offsets.items()))
+<span id="L28">  28</span>     if &quot;prehistory_mtu&quot; not in s or s.get(&quot;prehistory_geometry_key&quot;, ()) != cache_key:
+<span id="L29">  29</span>         reference = assemble_reference_kinematics(s, n)
+<span id="L30">  30</span>         length = []
+<span id="L31">  31</span>         for row in reference[&quot;pose&quot;]:
+<span id="L32">  32</span>             d.qpos[:] = row
+<span id="L33">  33</span>             for name, value in offsets.items():
+<span id="L34">  34</span>                 d.qpos[m.joint(name).qposadr[0]] += value
+<span id="L35">  35</span>             update_muscle_paths(s)
+<span id="L36">  36</span>             # Recalculate positions and routed muscle lengths at the new pose.
+<span id="L37">  37</span>             mj.mj_fwdPosition(m, d)
+<span id="L38">  38</span>             length.append(d.actuator_length + s[&quot;mtu_length_offset&quot;])
+<span id="L39">  39</span>         s[&quot;prehistory_mtu&quot;] = np.asarray(length)
+<span id="L40">  40</span>         s[&quot;prehistory_geometry_key&quot;] = cache_key
+<span id="L41">  41</span>     a, lf, v, f, r, b, da, dl = periodic_muscle_history_kernel(
+<span id="L42">  42</span>         s[&quot;prehistory_mtu&quot;],
+<span id="L43">  43</span>         s[&quot;excitation_table&quot;],
+<span id="L44">  44</span>         s[&quot;lopt&quot;],
+<span id="L45">  45</span>         s[&quot;slack&quot;],
+<span id="L46">  46</span>         s[&quot;muscle_params&quot;],
+<span id="L47">  47</span>         s[&quot;e0&quot;],
+<span id="L48">  48</span>         s[&quot;fiber_damping_coefficients&quot;],
+<span id="L49">  49</span>         s[&quot;time_constants&quot;],
+<span id="L50">  50</span>         cfg[&quot;period_s&quot;],
+<span id="L51">  51</span>         cfg[&quot;prehistory_cycles&quot;],
+<span id="L52">  52</span>     )
+<span id="L53">  53</span>     d.qpos[:] = q
+<span id="L54">  54</span>     d.qvel[:] = v0
+<span id="L55">  55</span>     d.act[:] = a
+<span id="L56">  56</span>     s.update(
+<span id="L57">  57</span>         fiber_length=lf,
+<span id="L58">  58</span>         fiber_velocity=v,
+<span id="L59">  59</span>         force=f,
+<span id="L60">  60</span>         residual=r,
+<span id="L61">  61</span>         fiber_bound=b,
+<span id="L62">  62</span>         prehistory_activation_repeat_error=da,
+<span id="L63">  63</span>         prehistory_fiber_repeat_error=dl,
+<span id="L64">  64</span>     )
+<span id="L65">  65</span>     m.actuator_biasprm[:, 0] = -f
+<span id="L66">  66</span>     update_muscle_paths(s)
+<span id="L67">  67</span>     mj.mj_forward(m, d)
+</pre></main></body></html>

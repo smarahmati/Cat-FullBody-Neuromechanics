@@ -1,0 +1,105 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Editable applied settings. Original values live in source_snapshots.</title><link rel="stylesheet" href="../style.css"></head><body><!-- generated folder guide --><header><div class="tag">Cat · Full-body neuromechanics</div><h1>Editable applied settings. Original values live in source_snapshots.</h1><nav><a href="../../START_HERE.html">Start here</a> · <a href="../project_structure.html">Find a file</a></nav></header><main><p><a href="../../Code/model_configuration/settings.py">Code/model_configuration/settings.py</a></p><pre style="overflow:auto;white-space:pre"><span id="L1">   1</span> &quot;&quot;&quot;Editable applied settings. Original values live in source_snapshots.
+<span id="L2">   2</span> 
+<span id="L3">   3</span> These are research starting values, not a validated full-body walking fit.
+<span id="L4">   4</span> Every calibrated override is saved as JSON in config/ and copied to results.
+<span id="L5">   5</span> &quot;&quot;&quot;
+<span id="L6">   6</span> 
+<span id="L7">   7</span> from .paths import ROOT
+<span id="L8">   8</span> 
+<span id="L9">   9</span> SETTINGS = {
+<span id="L10">  10</span>     &quot;parameter_bundle_dir&quot;: None,  # Optional named, commented absolute physical values. Applied once before initialization; no runtime controller. None preserves historical configs.
+<span id="L11">  11</span>     &quot;model_variant&quot;: &quot;base&quot;,  # Separate anatomy candidates never replace the saved base model.
+<span id="L12">  12</span>     &quot;activation_parameter_mode&quot;: &quot;legacy&quot;,  # legacy preserves historical trials; source synchronizes native activation and offline prediction to saved time_constants (s).
+<span id="L13">  13</span>     &quot;muscle_force_scales&quot;: {},  # Actuator name -&gt; multiplier on original Fmax; calibrated values must be documented. Original all 1.
+<span id="L14">  14</span>     &quot;period_s&quot;: 0.6833333333333333,  # Measured RH Stella trial Ted_046.
+<span id="L15">  15</span>     &quot;dt_s&quot;: 0.000125,  # Resolved hindlimb contact step; test full model at half step.
+<span id="L16">  16</span>     &quot;sample_s&quot;: 0.005,
+<span id="L17">  17</span>     &quot;seconds&quot;: 3.0,
+<span id="L18">  18</span>     &quot;fore_contact_scale&quot;: [1.0, 1.0, 1.0, 1.0],  # k_normal, dissipation, k_shear, c_shear.
+<span id="L19">  19</span>     &quot;fore_strength_scale&quot;: 1.0,  # Source Fmax unchanged.
+<span id="L20">  20</span>     &quot;girdle_strength_scale&quot;: 1.0,  # Source shoulder-girdle Fmax unchanged.
+<span id="L21">  21</span>     &quot;fore_slack_scale&quot;: 1.0,  # Source LT0 unchanged.
+<span id="L22">  22</span>     &quot;fore_fiber_damping&quot;: 0.10,  # Generic normalized damping, not measured cat value.
+<span id="L23">  23</span>     &quot;fore_passive_fiber&quot;: False,  # Historical candidate omitted passive fiber force. Optional source-exponential tensile branch; original MATLAB excludes it only in its a==1 maximum-force calculation.
+<span id="L24">  24</span>     &quot;fore_damping_mode&quot;: &quot;normalized&quot;,  # Alternative source_velocity maps bM=0.02 times physical fiber velocity to normalized beta. A separate candidate, never a silent default change.
+<span id="L25">  25</span>     &quot;fore_force_velocity_mode&quot;: &quot;source&quot;,  # Original/source curve remains default. Optional &#x27;degroote_2016&#x27; is an explicit general-muscle adaptation, not cat-specific validation.
+<span id="L26">  26</span>     &quot;hind_force_velocity_mode&quot;: &quot;source&quot;,  # Separate exploratory option; the preserved hindlimb release is never modified.
+<span id="L27">  27</span>     &quot;fore_mount_offset_m&quot;: [0.0, 0.0, 0.0],  # Original registered fore mounts retained.
+<span id="L28">  28</span>     &quot;trunk_com_offset_m&quot;: [
+<span id="L29">  29</span>         0.0,
+<span id="L30">  30</span>         0.0,
+<span id="L31">  31</span>         0.0,
+<span id="L32">  32</span>     ],  # Body-local shift of the lumped trunk COM, not bone geometry. Original zero. Fitted values require a recorded balance audit.
+<span id="L33">  33</span>     &quot;fore_pad_radius_offset_m&quot;: 0.0,  # Original radii retained; calibrated only offline.
+<span id="L34">  34</span>     &quot;passive_joint_overrides&quot;: {},  # Optional named stiffness (N m/rad), damping (N m s/rad), springref (rad). Empty preserves source values; every fitted override must be logged.
+<span id="L35">  35</span>     &quot;contact_material_scale&quot;: [
+<span id="L36">  36</span>         1.0,
+<span id="L37">  37</span>         1.0,
+<span id="L38">  38</span>         1.0,
+<span id="L39">  39</span>         1.0,
+<span id="L40">  40</span>         1.0,
+<span id="L41">  41</span>     ],  # Shared pad k_normal, normal dissipation, k_shear, c_shear, friction multipliers. Original all 1; no force filtering.
+<span id="L42">  42</span>     &quot;initial_height_offset_m&quot;: 0.0,
+<span id="L43">  43</span>     &quot;initial_pitch_offset_rad&quot;: 0.0,
+<span id="L44">  44</span>     &quot;initial_root_velocity_offset&quot;: [
+<span id="L45">  45</span>         0.0,
+<span id="L46">  46</span>         0.0,
+<span id="L47">  47</span>         0.0,
+<span id="L48">  48</span>     ],  # t=0 forward/vertical speed (m/s), pitch speed (rad/s); offline initial-condition fitting only.
+<span id="L49">  49</span>     &quot;initial_joint_angle_offsets_rad&quot;: {},  # Named hinges, applied once at t=0 and to negative-time muscle prehistory only. Original zero.
+<span id="L50">  50</span>     &quot;initial_joint_velocity_offsets_rad_s&quot;: {},  # Named hinge rates, applied once at t=0 only. Original zero.
+<span id="L51">  51</span>     &quot;excitation_file&quot;: None,  # Fixed periodic table. Never a feedback controller.
+<span id="L52">  52</span>     &quot;excitation_sequence_file&quot;: None,  # Optional frozen per-stride tables, indexed only by time. No online correction; simulation may not exceed their recorded duration.
+<span id="L53">  53</span>     &quot;initialization_excitation_file&quot;: None,  # Optional separate waveform used only for t&lt;0 fiber/activation initialization; runtime excitation still uses excitation_file.
+<span id="L54">  54</span>     &quot;precondition_fibers&quot;: False,  # Optional offline reference prehistory at t&lt;0.
+<span id="L55">  55</span>     &quot;periodic_muscle_initialization&quot;: False,  # Recompute t=0 activation/fiber states from the candidate&#x27;s own periodic input. No state resetting after t=0.
+<span id="L56">  56</span>     &quot;prehistory_samples&quot;: 1024,  # Samples per cycle in negative-time initialization only.
+<span id="L57">  57</span>     &quot;prehistory_cycles&quot;: 4,
+<span id="L58">  58</span>     &quot;initialize_contact_memory&quot;: False,  # Optional saved periodic bristle strain at t=0 only. No ongoing replay.
+<span id="L59">  59</span>     &quot;reference_seed&quot;: None,  # Offline reference variant, never runtime pose replay.
+<span id="L60">  60</span>     &quot;forward_initial_state_file&quot;: None,  # Optional explicitly fitted native state, applied only at t=0. No cycle resets. Original: absent.
+<span id="L61">  61</span>     &quot;initialize_from_assembled_reference&quot;: True,  # Initial pose only, no ongoing tracking.
+<span id="L62">  62</span>     &quot;spine_passive&quot;: [0.5, 0.0, 0.04],  # N m/rad, rad, N m s/rad; effective assumptions.
+<span id="L63">  63</span>     &quot;scapula_translation_passive&quot;: [10.0, 0.3],  # N/m and N s/m; assumed sling centering.
+<span id="L64">  64</span>     &quot;joint_limit_overrides&quot;: {
+<span id="L65">  65</span>         &quot;L_hip&quot;: [-2.8, -0.89]
+<span id="L66">  66</span>     },  # Original [-2.8,-1.05] excluded the assumed LH reference peak (-.981 rad). New upper bound includes a 5-degree margin; NOT a measured end stop.
+<span id="L67">  67</span>     &quot;girdle_length_overrides&quot;: {},  # Name -&gt; [LF0,LT0] metres. Originals remain in source snapshot.
+<span id="L68">  68</span>     &quot;stop_on_fall&quot;: True,
+<span id="L69">  69</span>     &quot;fit_angle_scale_deg&quot;: 10.0,
+<span id="L70">  70</span>     &quot;fit_ap_scale_N&quot;: 3.0,
+<span id="L71">  71</span>     &quot;fit_vertical_scale_N&quot;: 15.0,
+<span id="L72">  72</span>     &quot;fit_emg_weight&quot;: 2.0,  # Separate per-side, peak-normalized EMG discrepancy.
+<span id="L73">  73</span>     &quot;emg_phase_threshold&quot;: 0.10,  # New analysis setting: active when above 10% of complete-cycle peak. Not a measured neural threshold.
+<span id="L74">  74</span>     &quot;emg_phase_iou_min&quot;: 0.80,  # Engineering timing target: overlap / union of active regions. Previously timing was not separately scored.
+<span id="L75">  75</span>     &quot;emg_phase_edge_tolerance_s&quot;: 0.035,  # Engineering onset/offset tolerance (35 ms); no signal shift is permitted to obtain it.
+<span id="L76">  76</span>     &quot;native_fit_cycles&quot;: 1,  # Offline shooting horizon only. The phase-priority revision tests 2 uninterrupted input periods per fitting trial.
+<span id="L77">  77</span>     &quot;native_closure_weight&quot;: 10.0,  # Historical residual multiplier. The balanced phase-priority candidate uses 5; both values are recorded per run.
+<span id="L78">  78</span>     &quot;native_stride_residual_weight&quot;: 1.0,  # Historical displacement-target penalty. An explicit zero-weight initial-state audit predicts natural stride distance instead of requiring an exact experimental distance.
+<span id="L79">  79</span>     &quot;native_parameter_regularization&quot;: 0.001,  # Historical numerical parameter penalty; zero is allowed in a separately logged fixed-input initial-state closure audit. No runtime effect.
+<span id="L80">  80</span>     &quot;native_fit_emg_blend&quot;: False,  # Optional offline mixture toward available source EMG shapes; never an online input. Disabled in existing stability fits.
+<span id="L81">  81</span>     &quot;native_emg_blend_min&quot;: 0.0,  # 0 retains starting shape; 1 reproduces source shape at the fitted peak, with unchanged timing.
+<span id="L82">  82</span>     &quot;native_emg_blend_max&quot;: 0.05,  # Small continuation stage, not a physiological parameter. Raise only with a new documented forward fit.
+<span id="L83">  83</span>     &quot;native_emg_shape_weight&quot;: 0.05,  # Dimensionless residual weights; no motor or mechanical action.
+<span id="L84">  84</span>     &quot;native_emg_quiet_weight&quot;: 0.5,
+<span id="L85">  85</span>     &quot;native_emg_active_weight&quot;: 0.5,
+<span id="L86">  86</span>     &quot;native_waveform_weight&quot;: 0.1,  # Historical native-shooting angle/GRF residual multiplier. Revised candidate: 1.
+<span id="L87">  87</span>     &quot;native_balance_residual_families&quot;: False,  # Historical: sum all states. Revised candidate: normalize each state family by sqrt(channel count).
+<span id="L88">  88</span>     &quot;native_center_emg_blend&quot;: False,  # Numerical coordinates only; true means b=(x+1)/2, still b in [0,1]. No change to the physical input family.
+<span id="L89">  89</span>     &quot;native_unmeasured_log_gain_scale&quot;: 0.1,  # Original +/-0.1 log-amplitude range. Exploratory distal-stability fits use 0.7 ONLY for groups without source EMG. This tunes fixed input amplitudes, not Fmax; measured groups keep 0.1. Actual inputs remain 0..1.
+<span id="L90">  90</span>     &quot;native_fit_distal_waveforms&quot;: False,  # Offline only: two harmonics for six forelimb groups without source EMG; no clock shift.
+<span id="L91">  91</span>     &quot;native_distal_waveform_bound&quot;: 0.25,  # Bounds each log-waveform harmonic. Engineering fitting range, not a measured physiological coefficient.
+<span id="L92">  92</span>     &quot;native_extra_unmeasured_waveform_groups&quot;: [],  # Optional explicitly named additional groups. The fitter rejects any group with source EMG; original default adds none.
+<span id="L93">  93</span>     &quot;native_excitation_softcap_width&quot;: 0.0,  # Original hard [0,1] clip. Optional C1 upper-cap band; epsilon=.005 reduces raw u=1 by .00125, retains exact quiet zeros, and changes only the offline estimated input.
+<span id="L94">  94</span>     &quot;native_robust_direction_file&quot;: None,  # Optional diagnosed state direction for three independent OFFLINE trials. No runtime feedback is added.
+<span id="L95">  95</span>     &quot;native_robust_angle_deg&quot;: 0.1,  # Largest joint-angle error in each plus/minus offline robustness trial.
+<span id="L96">  96</span>     &quot;native_robust_target_gain&quot;: 0.9,  # Numerical contraction target over one stride, not a biological measurement.
+<span id="L97">  97</span>     &quot;native_robust_weight&quot;: 0.5,  # Weight on error growth above target; documented per optimization run.
+<span id="L98">  98</span>     &quot;native_robust_directions&quot;: 1,  # Number of diagnosed initial error directions; one plus/minus trial pair each.
+<span id="L99">  99</span>     &quot;native_fit_passive_damping&quot;: False,  # Offline calibration of bilateral wrist/MCP damping. Default preserves coefficients.
+<span id="L100"> 100</span>     &quot;native_robust_measure&quot;: &quot;directional_gain&quot;,  # Original paired norm-growth penalty. Candidate subspace_spectrum instead targets reduced stride multipliers; full-state/long replay still required.
+<span id="L101"> 101</span>     &quot;native_robust_leakage_weight&quot;: 0.01,  # Numerical penalty for propagation outside a frozen diagnosed subspace. Not a physiological parameter.
+<span id="L102"> 102</span>     &quot;native_passive_log_bound&quot;: 0.6931471805599453,  # +/-log(2): 0.5..2 times candidate baseline; always positive/passive. Not a measured feline uncertainty range.
+<span id="L103"> 103</span>     &quot;fit_limb_weights&quot;: [1.0, 1.0, 1.0, 1.0],  # LH,RH,LF,RF equal aggregate influence.
+<span id="L104"> 104</span> }
+</pre></main></body></html>

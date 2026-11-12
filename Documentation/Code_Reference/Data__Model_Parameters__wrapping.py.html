@@ -1,0 +1,912 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Geometric wrapping settings where supported by the configured muscle paths.</title><link rel="stylesheet" href="../style.css"></head><body><!-- generated folder guide --><header><div class="tag">Cat · Full-body neuromechanics</div><h1>Geometric wrapping settings where supported by the configured muscle paths.</h1><nav><a href="../../START_HERE.html">Start here</a> · <a href="../project_structure.html">Find a file</a></nav></header><main><p><a href="../../Data/Model_Parameters/wrapping.py">Data/Model_Parameters/wrapping.py</a></p><pre style="overflow:auto;white-space:pre"><span id="L1">   1</span> # Read this file independently: executable numbers in PARAMETERS are the values used in this model.
+<span id="L2">   2</span> # Source-value comments identify verified source numbers; missing sources are explicitly stated.
+<span id="L3">   3</span> &quot;&quot;&quot;Editable muscle geometry. Read ATTACHMENT_MAP.html for connections and axes.
+<span id="L4">   4</span> All xyz coordinates are METRES in the named BODY frame: 0.001 m = 1 mm.
+<span id="L5">   5</span> The number assigned below is the applied value; comments preserve provenance.
+<span id="L6">   6</span> Changing xyz moves a point on its existing body; it does not reattach a muscle
+<span id="L7">   7</span> to a different bone. Left/right entries are independent. A visible bone mesh
+<span id="L8">   8</span> does not automatically wrap a muscle. Unused sites are labelled explicitly.
+<span id="L9">   9</span> For moving routing sites edit routing.py; for wrap surfaces edit wrapping.py.
+<span id="L10">  10</span> Run run_model.ps1 again to apply edits. Inspect that run&#x27;s ATTACHMENT_MAP.html.
+<span id="L11">  11</span> &quot;&quot;&quot;
+<span id="L12">  12</span> 
+<span id="L13">  13</span> # Set PARAMETERS.
+<span id="L14">  14</span> PARAMETERS = {
+<span id="L15">  15</span>     # ===== L_IP =====
+<span id="L16">  16</span>     # Branch 1, divisor 1.0: L_IP_origin [L_pelvis_anchor] -&gt; L_IP_wrap0 [L_pelvis_anchor] -&gt; L_IP_insert [L_thigh]
+<span id="L17">  17</span>     # CYLINDER WRAP for L_IP. Connected body: L_pelvis_anchor. Geometry of a routing surface, not a bone attachment.
+<span id="L18">  18</span>     &quot;L_IP_wrap0&quot;: {
+<span id="L19">  19</span>         # Muscle wrap surface geometry in its owning body frame; not a visual bone or paw contact. Unit: m.
+<span id="L20">  20</span>         # Original raw/source: None; None = not independently established.
+<span id="L21">  21</span>         &quot;position_in_body_m&quot;: [0.0, 0.0, 0.0],
+<span id="L22">  22</span>         # Muscle wrap surface geometry in its owning body frame; not a visual bone or paw contact. Unit: 1.
+<span id="L23">  23</span>         # Original raw/source: None; None = not independently established.
+<span id="L24">  24</span>         &quot;orientation_in_body_wxyz&quot;: [1.0, 0.0, 0.0, 0.0],
+<span id="L25">  25</span>         # Muscle wrap surface geometry in its owning body frame; not a visual bone or paw contact. Unit: m.
+<span id="L26">  26</span>         # Original raw/source: None; None = not independently established.
+<span id="L27">  27</span>         &quot;radius_m&quot;: 0.004571237622484351,
+<span id="L28">  28</span>     },
+<span id="L29">  29</span>     # ===== L_BFA =====
+<span id="L30">  30</span>     # Branch 1, divisor 1.0: L_BFA_origin [L_pelvis_anchor] -&gt; L_BFA_wrap0 [L_pelvis_anchor] -&gt; L_BFA_insert [L_thigh]
+<span id="L31">  31</span>     # CYLINDER WRAP for L_BFA. Connected body: L_pelvis_anchor. Geometry of a routing surface, not a bone attachment.
+<span id="L32">  32</span>     &quot;L_BFA_wrap0&quot;: {
+<span id="L33">  33</span>         # Muscle wrap surface geometry in its owning body frame; not a visual bone or paw contact. Unit: m.
+<span id="L34">  34</span>         # Original raw/source: None; None = not independently established.
+<span id="L35">  35</span>         &quot;position_in_body_m&quot;: [0.0, 0.0, 0.0],
+<span id="L36">  36</span>         # Muscle wrap surface geometry in its owning body frame; not a visual bone or paw contact. Unit: 1.
+<span id="L37">  37</span>         # Original raw/source: None; None = not independently established.
+<span id="L38">  38</span>         &quot;orientation_in_body_wxyz&quot;: [1.0, 0.0, 0.0, 0.0],
+<span id="L39">  39</span>         # Muscle wrap surface geometry in its owning body frame; not a visual bone or paw contact. Unit: m.
+<span id="L40">  40</span>         # Original raw/source: None; None = not independently established.
+<span id="L41">  41</span>         &quot;radius_m&quot;: 0.004571237622484351,
+<span id="L42">  42</span>     },
+<span id="L43">  43</span>     # ===== L_VL =====
+<span id="L44">  44</span>     # Branch 1, divisor 1.0: L_VL_origin [L_thigh] -&gt; L_VL_wrap0 [L_thigh] -&gt; L_VL_insert [L_shank]
+<span id="L45">  45</span>     # CYLINDER WRAP for L_VL. Connected body: L_thigh. Geometry of a routing surface, not a bone attachment.
+<span id="L46">  46</span>     &quot;L_VL_wrap0&quot;: {
+<span id="L47">  47</span>         # Muscle wrap surface geometry in its owning body frame; not a visual bone or paw contact. Unit: m.
+<span id="L48">  48</span>         # Original raw/source: None; None = not independently established.
+<span id="L49">  49</span>         &quot;position_in_body_m&quot;: [0.0955, 0.0, 0.0],
+<span id="L50">  50</span>         # Muscle wrap surface geometry in its owning body frame; not a visual bone or paw contact. Unit: 1.
+<span id="L51">  51</span>         # Original raw/source: None; None = not independently established.
+<span id="L52">  52</span>         &quot;orientation_in_body_wxyz&quot;: [1.0, 0.0, 0.0, 0.0],
+<span id="L53">  53</span>         # Muscle wrap surface geometry in its owning body frame; not a visual bone or paw contact. Unit: m.
+<span id="L54">  54</span>         # Original raw/source: None; None = not independently established.
+<span id="L55">  55</span>         &quot;radius_m&quot;: 0.010585365852658537,
+<span id="L56">  56</span>     },
+<span id="L57">  57</span>     # ===== L_VM =====
+<span id="L58">  58</span>     # Branch 1, divisor 1.0: L_VM_origin [L_thigh] -&gt; L_VM_wrap0 [L_thigh] -&gt; L_VM_insert [L_shank]
+<span id="L59">  59</span>     # CYLINDER WRAP for L_VM. Connected body: L_thigh. Geometry of a routing surface, not a bone attachment.
+<span id="L60">  60</span>     &quot;L_VM_wrap0&quot;: {
+<span id="L61">  61</span>         # Muscle wrap surface geometry in its owning body frame; not a visual bone or paw contact. Unit: m.
+<span id="L62">  62</span>         # Original raw/source: None; None = not independently established.
+<span id="L63">  63</span>         &quot;position_in_body_m&quot;: [0.0955, 0.0, 0.0],
+<span id="L64">  64</span>         # Muscle wrap surface geometry in its owning body frame; not a visual bone or paw contact. Unit: 1.
+<span id="L65">  65</span>         # Original raw/source: None; None = not independently established.
+<span id="L66">  66</span>         &quot;orientation_in_body_wxyz&quot;: [1.0, 0.0, 0.0, 0.0],
+<span id="L67">  67</span>         # Muscle wrap surface geometry in its owning body frame; not a visual bone or paw contact. Unit: m.
+<span id="L68">  68</span>         # Original raw/source: None; None = not independently established.
+<span id="L69">  69</span>         &quot;radius_m&quot;: 0.010585365852658537,
+<span id="L70">  70</span>     },
+<span id="L71">  71</span>     # ===== L_TA =====
+<span id="L72">  72</span>     # Branch 1, divisor 1.0: L_TA_origin [L_shank] -&gt; L_TA_wrap0 [L_shank] -&gt; L_TA_insert [L_foot]
+<span id="L73">  73</span>     # CYLINDER WRAP for L_TA. Connected body: L_shank. Geometry of a routing surface, not a bone attachment.
+<span id="L74">  74</span>     &quot;L_TA_wrap0&quot;: {
+<span id="L75">  75</span>         # Muscle wrap surface geometry in its owning body frame; not a visual bone or paw contact. Unit: m.
+<span id="L76">  76</span>         # Original raw/source: None; None = not independently established.
+<span id="L77">  77</span>         &quot;position_in_body_m&quot;: [0.1085, 0.0, 0.0],
+<span id="L78">  78</span>         # Muscle wrap surface geometry in its owning body frame; not a visual bone or paw contact. Unit: 1.
+<span id="L79">  79</span>         # Original raw/source: None; None = not independently established.
+<span id="L80">  80</span>         &quot;orientation_in_body_wxyz&quot;: [1.0, 0.0, 0.0, 0.0],
+<span id="L81">  81</span>         # Muscle wrap surface geometry in its owning body frame; not a visual bone or paw contact. Unit: m.
+<span id="L82">  82</span>         # Original raw/source: None; None = not independently established.
+<span id="L83">  83</span>         &quot;radius_m&quot;: 0.005077400968945839,
+<span id="L84">  84</span>     },
+<span id="L85">  85</span>     # ===== L_SO =====
+<span id="L86">  86</span>     # Branch 1, divisor 1.0: L_SO_origin [L_shank] -&gt; L_SO_wrap0 [L_shank] -&gt; L_SO_insert [L_foot]
+<span id="L87">  87</span>     # CYLINDER WRAP for L_SO. Connected body: L_shank. Geometry of a routing surface, not a bone attachment.
+<span id="L88">  88</span>     &quot;L_SO_wrap0&quot;: {
+<span id="L89">  89</span>         # Muscle wrap surface geometry in its owning body frame; not a visual bone or paw contact. Unit: m.
+<span id="L90">  90</span>         # Original raw/source: None; None = not independently established.
+<span id="L91">  91</span>         &quot;position_in_body_m&quot;: [0.1085, 0.0, 0.0],
+<span id="L92">  92</span>         # Muscle wrap surface geometry in its owning body frame; not a visual bone or paw contact. Unit: 1.
+<span id="L93">  93</span>         # Original raw/source: None; None = not independently established.
+<span id="L94">  94</span>         &quot;orientation_in_body_wxyz&quot;: [1.0, 0.0, 0.0, 0.0],
+<span id="L95">  95</span>         # Muscle wrap surface geometry in its owning body frame; not a visual bone or paw contact. Unit: m.
+<span id="L96">  96</span>         # Original raw/source: None; None = not independently established.
+<span id="L97">  97</span>         &quot;radius_m&quot;: 0.005077400968945839,
+<span id="L98">  98</span>     },
+<span id="L99">  99</span>     # ===== L_RF =====
+<span id="L100"> 100</span>     # Branch 1, divisor 1.0: L_RF_origin [L_pelvis_anchor] -&gt; L_RF_wrap0 [L_pelvis_anchor] -&gt; L_RF_tangent [L_thigh] -&gt; L_RF_wrap1 [L_thigh] -&gt; L_RF_insert [L_shank]
+<span id="L101"> 101</span>     # CYLINDER WRAP for L_RF. Connected body: L_pelvis_anchor. Geometry of a routing surface, not a bone attachment.
+<span id="L102"> 102</span>     &quot;L_RF_wrap0&quot;: {
+<span id="L103"> 103</span>         # Muscle wrap surface geometry in its owning body frame; not a visual bone or paw contact. Unit: m.
+<span id="L104"> 104</span>         # Original raw/source: None; None = not independently established.
+<span id="L105"> 105</span>         &quot;position_in_body_m&quot;: [0.0, 0.0, 0.0],
+<span id="L106"> 106</span>         # Muscle wrap surface geometry in its owning body frame; not a visual bone or paw contact. Unit: 1.
+<span id="L107"> 107</span>         # Original raw/source: None; None = not independently established.
+<span id="L108"> 108</span>         &quot;orientation_in_body_wxyz&quot;: [1.0, 0.0, 0.0, 0.0],
+<span id="L109"> 109</span>         # Muscle wrap surface geometry in its owning body frame; not a visual bone or paw contact. Unit: m.
+<span id="L110"> 110</span>         # Original raw/source: None; None = not independently established.
+<span id="L111"> 111</span>         &quot;radius_m&quot;: 0.004763827801212448,
+<span id="L112"> 112</span>     },
+<span id="L113"> 113</span>     # CYLINDER WRAP for L_RF. Connected body: L_thigh. Geometry of a routing surface, not a bone attachment.
+<span id="L114"> 114</span>     &quot;L_RF_wrap1&quot;: {
+<span id="L115"> 115</span>         # Muscle wrap surface geometry in its owning body frame; not a visual bone or paw contact. Unit: m.
+<span id="L116"> 116</span>         # Original raw/source: None; None = not independently established.
+<span id="L117"> 117</span>         &quot;position_in_body_m&quot;: [0.0955, 0.0, 0.0],
+<span id="L118"> 118</span>         # Muscle wrap surface geometry in its owning body frame; not a visual bone or paw contact. Unit: 1.
+<span id="L119"> 119</span>         # Original raw/source: None; None = not independently established.
+<span id="L120"> 120</span>         &quot;orientation_in_body_wxyz&quot;: [1.0, 0.0, 0.0, 0.0],
+<span id="L121"> 121</span>         # Muscle wrap surface geometry in its owning body frame; not a visual bone or paw contact. Unit: m.
+<span id="L122"> 122</span>         # Original raw/source: None; None = not independently established.
+<span id="L123"> 123</span>         &quot;radius_m&quot;: 0.010585365852658537,
+<span id="L124"> 124</span>     },
+<span id="L125"> 125</span>     # ===== L_BFP =====
+<span id="L126"> 126</span>     # Branch 1, divisor 1.0: L_BFP_origin [L_pelvis_anchor] -&gt; L_BFP_wrap0 [L_pelvis_anchor] -&gt; L_BFP_tangent [L_thigh] -&gt; L_BFP_wrap1 [L_thigh] -&gt; L_BFP_insert [L_shank]
+<span id="L127"> 127</span>     # CYLINDER WRAP for L_BFP. Connected body: L_pelvis_anchor. Geometry of a routing surface, not a bone attachment.
+<span id="L128"> 128</span>     &quot;L_BFP_wrap0&quot;: {
+<span id="L129"> 129</span>         # Muscle wrap surface geometry in its owning body frame; not a visual bone or paw contact. Unit: m.
+<span id="L130"> 130</span>         # Original raw/source: None; None = not independently established.
+<span id="L131"> 131</span>         &quot;position_in_body_m&quot;: [0.0, 0.0, 0.0],
+<span id="L132"> 132</span>         # Muscle wrap surface geometry in its owning body frame; not a visual bone or paw contact. Unit: 1.
+<span id="L133"> 133</span>         # Original raw/source: None; None = not independently established.
+<span id="L134"> 134</span>         &quot;orientation_in_body_wxyz&quot;: [1.0, 0.0, 0.0, 0.0],
+<span id="L135"> 135</span>         # Muscle wrap surface geometry in its owning body frame; not a visual bone or paw contact. Unit: m.
+<span id="L136"> 136</span>         # Original raw/source: None; None = not independently established.
+<span id="L137"> 137</span>         &quot;radius_m&quot;: 0.004763827801212448,
+<span id="L138"> 138</span>     },
+<span id="L139"> 139</span>     # CYLINDER WRAP for L_BFP. Connected body: L_thigh. Geometry of a routing surface, not a bone attachment.
+<span id="L140"> 140</span>     &quot;L_BFP_wrap1&quot;: {
+<span id="L141"> 141</span>         # Muscle wrap surface geometry in its owning body frame; not a visual bone or paw contact. Unit: m.
+<span id="L142"> 142</span>         # Original raw/source: None; None = not independently established.
+<span id="L143"> 143</span>         &quot;position_in_body_m&quot;: [0.0955, 0.0, 0.0],
+<span id="L144"> 144</span>         # Muscle wrap surface geometry in its owning body frame; not a visual bone or paw contact. Unit: 1.
+<span id="L145"> 145</span>         # Original raw/source: None; None = not independently established.
+<span id="L146"> 146</span>         &quot;orientation_in_body_wxyz&quot;: [1.0, 0.0, 0.0, 0.0],
+<span id="L147"> 147</span>         # Muscle wrap surface geometry in its owning body frame; not a visual bone or paw contact. Unit: m.
+<span id="L148"> 148</span>         # Original raw/source: None; None = not independently established.
+<span id="L149"> 149</span>         &quot;radius_m&quot;: 0.005716593361654938,
+<span id="L150"> 150</span>     },
+<span id="L151"> 151</span>     # ===== L_SAM =====
+<span id="L152"> 152</span>     # Branch 1, divisor 1.0: L_SAM_origin [L_pelvis_anchor] -&gt; L_SAM_wrap0 [L_pelvis_anchor] -&gt; L_SAM_tangent [L_thigh] -&gt; L_SAM_wrap1 [L_thigh] -&gt; L_SAM_insert [L_shank]
+<span id="L153"> 153</span>     # CYLINDER WRAP for L_SAM. Connected body: L_pelvis_anchor. Geometry of a routing surface, not a bone attachment.
+<span id="L154"> 154</span>     &quot;L_SAM_wrap0&quot;: {
+<span id="L155"> 155</span>         # Muscle wrap surface geometry in its owning body frame; not a visual bone or paw contact. Unit: m.
+<span id="L156"> 156</span>         # Original raw/source: None; None = not independently established.
+<span id="L157"> 157</span>         &quot;position_in_body_m&quot;: [0.0, 0.0, 0.0],
+<span id="L158"> 158</span>         # Muscle wrap surface geometry in its owning body frame; not a visual bone or paw contact. Unit: 1.
+<span id="L159"> 159</span>         # Original raw/source: None; None = not independently established.
+<span id="L160"> 160</span>         &quot;orientation_in_body_wxyz&quot;: [1.0, 0.0, 0.0, 0.0],
+<span id="L161"> 161</span>         # Muscle wrap surface geometry in its owning body frame; not a visual bone or paw contact. Unit: m.
+<span id="L162"> 162</span>         # Original raw/source: None; None = not independently established.
+<span id="L163"> 163</span>         &quot;radius_m&quot;: 0.004763827801212448,
+<span id="L164"> 164</span>     },
+<span id="L165"> 165</span>     # CYLINDER WRAP for L_SAM. Connected body: L_thigh. Geometry of a routing surface, not a bone attachment.
+<span id="L166"> 166</span>     &quot;L_SAM_wrap1&quot;: {
+<span id="L167"> 167</span>         # Muscle wrap surface geometry in its owning body frame; not a visual bone or paw contact. Unit: m.
+<span id="L168"> 168</span>         # Original raw/source: None; None = not independently established.
+<span id="L169"> 169</span>         &quot;position_in_body_m&quot;: [0.0955, 0.0, 0.0],
+<span id="L170"> 170</span>         # Muscle wrap surface geometry in its owning body frame; not a visual bone or paw contact. Unit: 1.
+<span id="L171"> 171</span>         # Original raw/source: None; None = not independently established.
+<span id="L172"> 172</span>         &quot;orientation_in_body_wxyz&quot;: [1.0, 0.0, 0.0, 0.0],
+<span id="L173"> 173</span>         # Muscle wrap surface geometry in its owning body frame; not a visual bone or paw contact. Unit: m.
+<span id="L174"> 174</span>         # Original raw/source: None; None = not independently established.
+<span id="L175"> 175</span>         &quot;radius_m&quot;: 0.005716593361654938,
+<span id="L176"> 176</span>     },
+<span id="L177"> 177</span>     # ===== L_LG =====
+<span id="L178"> 178</span>     # Branch 1, divisor 1.0: L_LG_origin [L_thigh] -&gt; L_LG_wrap0 [L_thigh] -&gt; L_LG_tangent [L_shank] -&gt; L_LG_wrap1 [L_shank] -&gt; L_LG_insert [L_foot]
+<span id="L179"> 179</span>     # CYLINDER WRAP for L_LG. Connected body: L_thigh. Geometry of a routing surface, not a bone attachment.
+<span id="L180"> 180</span>     &quot;L_LG_wrap0&quot;: {
+<span id="L181"> 181</span>         # Muscle wrap surface geometry in its owning body frame; not a visual bone or paw contact. Unit: m.
+<span id="L182"> 182</span>         # Original raw/source: None; None = not independently established.
+<span id="L183"> 183</span>         &quot;position_in_body_m&quot;: [0.0955, 0.0, 0.0],
+<span id="L184"> 184</span>         # Muscle wrap surface geometry in its owning body frame; not a visual bone or paw contact. Unit: 1.
+<span id="L185"> 185</span>         # Original raw/source: None; None = not independently established.
+<span id="L186"> 186</span>         &quot;orientation_in_body_wxyz&quot;: [1.0, 0.0, 0.0, 0.0],
+<span id="L187"> 187</span>         # Muscle wrap surface geometry in its owning body frame; not a visual bone or paw contact. Unit: m.
+<span id="L188"> 188</span>         # Original raw/source: None; None = not independently established.
+<span id="L189"> 189</span>         &quot;radius_m&quot;: 0.005889003082247688,
+<span id="L190"> 190</span>     },
+<span id="L191"> 191</span>     # CYLINDER WRAP for L_LG. Connected body: L_shank. Geometry of a routing surface, not a bone attachment.
+<span id="L192"> 192</span>     &quot;L_LG_wrap1&quot;: {
+<span id="L193"> 193</span>         # Muscle wrap surface geometry in its owning body frame; not a visual bone or paw contact. Unit: m.
+<span id="L194"> 194</span>         # Original raw/source: None; None = not independently established.
+<span id="L195"> 195</span>         &quot;position_in_body_m&quot;: [0.1085, 0.0, 0.0],
+<span id="L196"> 196</span>         # Muscle wrap surface geometry in its owning body frame; not a visual bone or paw contact. Unit: 1.
+<span id="L197"> 197</span>         # Original raw/source: None; None = not independently established.
+<span id="L198"> 198</span>         &quot;orientation_in_body_wxyz&quot;: [1.0, 0.0, 0.0, 0.0],
+<span id="L199"> 199</span>         # Muscle wrap surface geometry in its owning body frame; not a visual bone or paw contact. Unit: m.
+<span id="L200"> 200</span>         # Original raw/source: None; None = not independently established.
+<span id="L201"> 201</span>         &quot;radius_m&quot;: 0.004884810790217741,
+<span id="L202"> 202</span>     },
+<span id="L203"> 203</span>     # ===== L_MG =====
+<span id="L204"> 204</span>     # Branch 1, divisor 1.0: L_MG_origin [L_thigh] -&gt; L_MG_wrap0 [L_thigh] -&gt; L_MG_tangent [L_shank] -&gt; L_MG_wrap1 [L_shank] -&gt; L_MG_insert [L_foot]
+<span id="L205"> 205</span>     # CYLINDER WRAP for L_MG. Connected body: L_thigh. Geometry of a routing surface, not a bone attachment.
+<span id="L206"> 206</span>     &quot;L_MG_wrap0&quot;: {
+<span id="L207"> 207</span>         # Muscle wrap surface geometry in its owning body frame; not a visual bone or paw contact. Unit: m.
+<span id="L208"> 208</span>         # Original raw/source: None; None = not independently established.
+<span id="L209"> 209</span>         &quot;position_in_body_m&quot;: [0.0955, 0.0, 0.0],
+<span id="L210"> 210</span>         # Muscle wrap surface geometry in its owning body frame; not a visual bone or paw contact. Unit: 1.
+<span id="L211"> 211</span>         # Original raw/source: None; None = not independently established.
+<span id="L212"> 212</span>         &quot;orientation_in_body_wxyz&quot;: [1.0, 0.0, 0.0, 0.0],
+<span id="L213"> 213</span>         # Muscle wrap surface geometry in its owning body frame; not a visual bone or paw contact. Unit: m.
+<span id="L214"> 214</span>         # Original raw/source: None; None = not independently established.
+<span id="L215"> 215</span>         &quot;radius_m&quot;: 0.005889003082247688,
+<span id="L216"> 216</span>     },
+<span id="L217"> 217</span>     # CYLINDER WRAP for L_MG. Connected body: L_shank. Geometry of a routing surface, not a bone attachment.
+<span id="L218"> 218</span>     &quot;L_MG_wrap1&quot;: {
+<span id="L219"> 219</span>         # Muscle wrap surface geometry in its owning body frame; not a visual bone or paw contact. Unit: m.
+<span id="L220"> 220</span>         # Original raw/source: None; None = not independently established.
+<span id="L221"> 221</span>         &quot;position_in_body_m&quot;: [0.1085, 0.0, 0.0],
+<span id="L222"> 222</span>         # Muscle wrap surface geometry in its owning body frame; not a visual bone or paw contact. Unit: 1.
+<span id="L223"> 223</span>         # Original raw/source: None; None = not independently established.
+<span id="L224"> 224</span>         &quot;orientation_in_body_wxyz&quot;: [1.0, 0.0, 0.0, 0.0],
+<span id="L225"> 225</span>         # Muscle wrap surface geometry in its owning body frame; not a visual bone or paw contact. Unit: m.
+<span id="L226"> 226</span>         # Original raw/source: None; None = not independently established.
+<span id="L227"> 227</span>         &quot;radius_m&quot;: 0.004884810790217741,
+<span id="L228"> 228</span>     },
+<span id="L229"> 229</span>     # ===== R_IP =====
+<span id="L230"> 230</span>     # Branch 1, divisor 1.0: R_IP_origin [R_pelvis_anchor] -&gt; R_IP_wrap0 [R_pelvis_anchor] -&gt; R_IP_insert [R_thigh]
+<span id="L231"> 231</span>     # CYLINDER WRAP for R_IP. Connected body: R_pelvis_anchor. Geometry of a routing surface, not a bone attachment.
+<span id="L232"> 232</span>     &quot;R_IP_wrap0&quot;: {
+<span id="L233"> 233</span>         # Muscle wrap surface geometry in its owning body frame; not a visual bone or paw contact. Unit: m.
+<span id="L234"> 234</span>         # Original raw/source: None; None = not independently established.
+<span id="L235"> 235</span>         &quot;position_in_body_m&quot;: [0.0, 0.0, 0.0],
+<span id="L236"> 236</span>         # Muscle wrap surface geometry in its owning body frame; not a visual bone or paw contact. Unit: 1.
+<span id="L237"> 237</span>         # Original raw/source: None; None = not independently established.
+<span id="L238"> 238</span>         &quot;orientation_in_body_wxyz&quot;: [1.0, 0.0, 0.0, 0.0],
+<span id="L239"> 239</span>         # Muscle wrap surface geometry in its owning body frame; not a visual bone or paw contact. Unit: m.
+<span id="L240"> 240</span>         # Original raw/source: None; None = not independently established.
+<span id="L241"> 241</span>         &quot;radius_m&quot;: 0.004571237622484351,
+<span id="L242"> 242</span>     },
+<span id="L243"> 243</span>     # ===== R_BFA =====
+<span id="L244"> 244</span>     # Branch 1, divisor 1.0: R_BFA_origin [R_pelvis_anchor] -&gt; R_BFA_wrap0 [R_pelvis_anchor] -&gt; R_BFA_insert [R_thigh]
+<span id="L245"> 245</span>     # CYLINDER WRAP for R_BFA. Connected body: R_pelvis_anchor. Geometry of a routing surface, not a bone attachment.
+<span id="L246"> 246</span>     &quot;R_BFA_wrap0&quot;: {
+<span id="L247"> 247</span>         # Muscle wrap surface geometry in its owning body frame; not a visual bone or paw contact. Unit: m.
+<span id="L248"> 248</span>         # Original raw/source: None; None = not independently established.
+<span id="L249"> 249</span>         &quot;position_in_body_m&quot;: [0.0, 0.0, 0.0],
+<span id="L250"> 250</span>         # Muscle wrap surface geometry in its owning body frame; not a visual bone or paw contact. Unit: 1.
+<span id="L251"> 251</span>         # Original raw/source: None; None = not independently established.
+<span id="L252"> 252</span>         &quot;orientation_in_body_wxyz&quot;: [1.0, 0.0, 0.0, 0.0],
+<span id="L253"> 253</span>         # Muscle wrap surface geometry in its owning body frame; not a visual bone or paw contact. Unit: m.
+<span id="L254"> 254</span>         # Original raw/source: None; None = not independently established.
+<span id="L255"> 255</span>         &quot;radius_m&quot;: 0.004571237622484351,
+<span id="L256"> 256</span>     },
+<span id="L257"> 257</span>     # ===== R_VL =====
+<span id="L258"> 258</span>     # Branch 1, divisor 1.0: R_VL_origin [R_thigh] -&gt; R_VL_wrap0 [R_thigh] -&gt; R_VL_insert [R_shank]
+<span id="L259"> 259</span>     # CYLINDER WRAP for R_VL. Connected body: R_thigh. Geometry of a routing surface, not a bone attachment.
+<span id="L260"> 260</span>     &quot;R_VL_wrap0&quot;: {
+<span id="L261"> 261</span>         # Muscle wrap surface geometry in its owning body frame; not a visual bone or paw contact. Unit: m.
+<span id="L262"> 262</span>         # Original raw/source: None; None = not independently established.
+<span id="L263"> 263</span>         &quot;position_in_body_m&quot;: [0.0955, 0.0, 0.0],
+<span id="L264"> 264</span>         # Muscle wrap surface geometry in its owning body frame; not a visual bone or paw contact. Unit: 1.
+<span id="L265"> 265</span>         # Original raw/source: None; None = not independently established.
+<span id="L266"> 266</span>         &quot;orientation_in_body_wxyz&quot;: [1.0, 0.0, 0.0, 0.0],
+<span id="L267"> 267</span>         # Muscle wrap surface geometry in its owning body frame; not a visual bone or paw contact. Unit: m.
+<span id="L268"> 268</span>         # Original raw/source: None; None = not independently established.
+<span id="L269"> 269</span>         &quot;radius_m&quot;: 0.010585365852658537,
+<span id="L270"> 270</span>     },
+<span id="L271"> 271</span>     # ===== R_VM =====
+<span id="L272"> 272</span>     # Branch 1, divisor 1.0: R_VM_origin [R_thigh] -&gt; R_VM_wrap0 [R_thigh] -&gt; R_VM_insert [R_shank]
+<span id="L273"> 273</span>     # CYLINDER WRAP for R_VM. Connected body: R_thigh. Geometry of a routing surface, not a bone attachment.
+<span id="L274"> 274</span>     &quot;R_VM_wrap0&quot;: {
+<span id="L275"> 275</span>         # Muscle wrap surface geometry in its owning body frame; not a visual bone or paw contact. Unit: m.
+<span id="L276"> 276</span>         # Original raw/source: None; None = not independently established.
+<span id="L277"> 277</span>         &quot;position_in_body_m&quot;: [0.0955, 0.0, 0.0],
+<span id="L278"> 278</span>         # Muscle wrap surface geometry in its owning body frame; not a visual bone or paw contact. Unit: 1.
+<span id="L279"> 279</span>         # Original raw/source: None; None = not independently established.
+<span id="L280"> 280</span>         &quot;orientation_in_body_wxyz&quot;: [1.0, 0.0, 0.0, 0.0],
+<span id="L281"> 281</span>         # Muscle wrap surface geometry in its owning body frame; not a visual bone or paw contact. Unit: m.
+<span id="L282"> 282</span>         # Original raw/source: None; None = not independently established.
+<span id="L283"> 283</span>         &quot;radius_m&quot;: 0.010585365852658537,
+<span id="L284"> 284</span>     },
+<span id="L285"> 285</span>     # ===== R_TA =====
+<span id="L286"> 286</span>     # Branch 1, divisor 1.0: R_TA_origin [R_shank] -&gt; R_TA_wrap0 [R_shank] -&gt; R_TA_insert [R_foot]
+<span id="L287"> 287</span>     # CYLINDER WRAP for R_TA. Connected body: R_shank. Geometry of a routing surface, not a bone attachment.
+<span id="L288"> 288</span>     &quot;R_TA_wrap0&quot;: {
+<span id="L289"> 289</span>         # Muscle wrap surface geometry in its owning body frame; not a visual bone or paw contact. Unit: m.
+<span id="L290"> 290</span>         # Original raw/source: None; None = not independently established.
+<span id="L291"> 291</span>         &quot;position_in_body_m&quot;: [0.1085, 0.0, 0.0],
+<span id="L292"> 292</span>         # Muscle wrap surface geometry in its owning body frame; not a visual bone or paw contact. Unit: 1.
+<span id="L293"> 293</span>         # Original raw/source: None; None = not independently established.
+<span id="L294"> 294</span>         &quot;orientation_in_body_wxyz&quot;: [1.0, 0.0, 0.0, 0.0],
+<span id="L295"> 295</span>         # Muscle wrap surface geometry in its owning body frame; not a visual bone or paw contact. Unit: m.
+<span id="L296"> 296</span>         # Original raw/source: None; None = not independently established.
+<span id="L297"> 297</span>         &quot;radius_m&quot;: 0.005077400968945839,
+<span id="L298"> 298</span>     },
+<span id="L299"> 299</span>     # ===== R_SO =====
+<span id="L300"> 300</span>     # Branch 1, divisor 1.0: R_SO_origin [R_shank] -&gt; R_SO_wrap0 [R_shank] -&gt; R_SO_insert [R_foot]
+<span id="L301"> 301</span>     # CYLINDER WRAP for R_SO. Connected body: R_shank. Geometry of a routing surface, not a bone attachment.
+<span id="L302"> 302</span>     &quot;R_SO_wrap0&quot;: {
+<span id="L303"> 303</span>         # Muscle wrap surface geometry in its owning body frame; not a visual bone or paw contact. Unit: m.
+<span id="L304"> 304</span>         # Original raw/source: None; None = not independently established.
+<span id="L305"> 305</span>         &quot;position_in_body_m&quot;: [0.1085, 0.0, 0.0],
+<span id="L306"> 306</span>         # Muscle wrap surface geometry in its owning body frame; not a visual bone or paw contact. Unit: 1.
+<span id="L307"> 307</span>         # Original raw/source: None; None = not independently established.
+<span id="L308"> 308</span>         &quot;orientation_in_body_wxyz&quot;: [1.0, 0.0, 0.0, 0.0],
+<span id="L309"> 309</span>         # Muscle wrap surface geometry in its owning body frame; not a visual bone or paw contact. Unit: m.
+<span id="L310"> 310</span>         # Original raw/source: None; None = not independently established.
+<span id="L311"> 311</span>         &quot;radius_m&quot;: 0.005077400968945839,
+<span id="L312"> 312</span>     },
+<span id="L313"> 313</span>     # ===== R_RF =====
+<span id="L314"> 314</span>     # Branch 1, divisor 1.0: R_RF_origin [R_pelvis_anchor] -&gt; R_RF_wrap0 [R_pelvis_anchor] -&gt; R_RF_tangent [R_thigh] -&gt; R_RF_wrap1 [R_thigh] -&gt; R_RF_insert [R_shank]
+<span id="L315"> 315</span>     # CYLINDER WRAP for R_RF. Connected body: R_pelvis_anchor. Geometry of a routing surface, not a bone attachment.
+<span id="L316"> 316</span>     &quot;R_RF_wrap0&quot;: {
+<span id="L317"> 317</span>         # Muscle wrap surface geometry in its owning body frame; not a visual bone or paw contact. Unit: m.
+<span id="L318"> 318</span>         # Original raw/source: None; None = not independently established.
+<span id="L319"> 319</span>         &quot;position_in_body_m&quot;: [0.0, 0.0, 0.0],
+<span id="L320"> 320</span>         # Muscle wrap surface geometry in its owning body frame; not a visual bone or paw contact. Unit: 1.
+<span id="L321"> 321</span>         # Original raw/source: None; None = not independently established.
+<span id="L322"> 322</span>         &quot;orientation_in_body_wxyz&quot;: [1.0, 0.0, 0.0, 0.0],
+<span id="L323"> 323</span>         # Muscle wrap surface geometry in its owning body frame; not a visual bone or paw contact. Unit: m.
+<span id="L324"> 324</span>         # Original raw/source: None; None = not independently established.
+<span id="L325"> 325</span>         &quot;radius_m&quot;: 0.004763827801212448,
+<span id="L326"> 326</span>     },
+<span id="L327"> 327</span>     # CYLINDER WRAP for R_RF. Connected body: R_thigh. Geometry of a routing surface, not a bone attachment.
+<span id="L328"> 328</span>     &quot;R_RF_wrap1&quot;: {
+<span id="L329"> 329</span>         # Muscle wrap surface geometry in its owning body frame; not a visual bone or paw contact. Unit: m.
+<span id="L330"> 330</span>         # Original raw/source: None; None = not independently established.
+<span id="L331"> 331</span>         &quot;position_in_body_m&quot;: [0.0955, 0.0, 0.0],
+<span id="L332"> 332</span>         # Muscle wrap surface geometry in its owning body frame; not a visual bone or paw contact. Unit: 1.
+<span id="L333"> 333</span>         # Original raw/source: None; None = not independently established.
+<span id="L334"> 334</span>         &quot;orientation_in_body_wxyz&quot;: [1.0, 0.0, 0.0, 0.0],
+<span id="L335"> 335</span>         # Muscle wrap surface geometry in its owning body frame; not a visual bone or paw contact. Unit: m.
+<span id="L336"> 336</span>         # Original raw/source: None; None = not independently established.
+<span id="L337"> 337</span>         &quot;radius_m&quot;: 0.010585365852658537,
+<span id="L338"> 338</span>     },
+<span id="L339"> 339</span>     # ===== R_BFP =====
+<span id="L340"> 340</span>     # Branch 1, divisor 1.0: R_BFP_origin [R_pelvis_anchor] -&gt; R_BFP_wrap0 [R_pelvis_anchor] -&gt; R_BFP_tangent [R_thigh] -&gt; R_BFP_wrap1 [R_thigh] -&gt; R_BFP_insert [R_shank]
+<span id="L341"> 341</span>     # CYLINDER WRAP for R_BFP. Connected body: R_pelvis_anchor. Geometry of a routing surface, not a bone attachment.
+<span id="L342"> 342</span>     &quot;R_BFP_wrap0&quot;: {
+<span id="L343"> 343</span>         # Muscle wrap surface geometry in its owning body frame; not a visual bone or paw contact. Unit: m.
+<span id="L344"> 344</span>         # Original raw/source: None; None = not independently established.
+<span id="L345"> 345</span>         &quot;position_in_body_m&quot;: [0.0, 0.0, 0.0],
+<span id="L346"> 346</span>         # Muscle wrap surface geometry in its owning body frame; not a visual bone or paw contact. Unit: 1.
+<span id="L347"> 347</span>         # Original raw/source: None; None = not independently established.
+<span id="L348"> 348</span>         &quot;orientation_in_body_wxyz&quot;: [1.0, 0.0, 0.0, 0.0],
+<span id="L349"> 349</span>         # Muscle wrap surface geometry in its owning body frame; not a visual bone or paw contact. Unit: m.
+<span id="L350"> 350</span>         # Original raw/source: None; None = not independently established.
+<span id="L351"> 351</span>         &quot;radius_m&quot;: 0.004763827801212448,
+<span id="L352"> 352</span>     },
+<span id="L353"> 353</span>     # CYLINDER WRAP for R_BFP. Connected body: R_thigh. Geometry of a routing surface, not a bone attachment.
+<span id="L354"> 354</span>     &quot;R_BFP_wrap1&quot;: {
+<span id="L355"> 355</span>         # Muscle wrap surface geometry in its owning body frame; not a visual bone or paw contact. Unit: m.
+<span id="L356"> 356</span>         # Original raw/source: None; None = not independently established.
+<span id="L357"> 357</span>         &quot;position_in_body_m&quot;: [0.0955, 0.0, 0.0],
+<span id="L358"> 358</span>         # Muscle wrap surface geometry in its owning body frame; not a visual bone or paw contact. Unit: 1.
+<span id="L359"> 359</span>         # Original raw/source: None; None = not independently established.
+<span id="L360"> 360</span>         &quot;orientation_in_body_wxyz&quot;: [1.0, 0.0, 0.0, 0.0],
+<span id="L361"> 361</span>         # Muscle wrap surface geometry in its owning body frame; not a visual bone or paw contact. Unit: m.
+<span id="L362"> 362</span>         # Original raw/source: None; None = not independently established.
+<span id="L363"> 363</span>         &quot;radius_m&quot;: 0.005716593361654938,
+<span id="L364"> 364</span>     },
+<span id="L365"> 365</span>     # ===== R_SAM =====
+<span id="L366"> 366</span>     # Branch 1, divisor 1.0: R_SAM_origin [R_pelvis_anchor] -&gt; R_SAM_wrap0 [R_pelvis_anchor] -&gt; R_SAM_tangent [R_thigh] -&gt; R_SAM_wrap1 [R_thigh] -&gt; R_SAM_insert [R_shank]
+<span id="L367"> 367</span>     # CYLINDER WRAP for R_SAM. Connected body: R_pelvis_anchor. Geometry of a routing surface, not a bone attachment.
+<span id="L368"> 368</span>     &quot;R_SAM_wrap0&quot;: {
+<span id="L369"> 369</span>         # Muscle wrap surface geometry in its owning body frame; not a visual bone or paw contact. Unit: m.
+<span id="L370"> 370</span>         # Original raw/source: None; None = not independently established.
+<span id="L371"> 371</span>         &quot;position_in_body_m&quot;: [0.0, 0.0, 0.0],
+<span id="L372"> 372</span>         # Muscle wrap surface geometry in its owning body frame; not a visual bone or paw contact. Unit: 1.
+<span id="L373"> 373</span>         # Original raw/source: None; None = not independently established.
+<span id="L374"> 374</span>         &quot;orientation_in_body_wxyz&quot;: [1.0, 0.0, 0.0, 0.0],
+<span id="L375"> 375</span>         # Muscle wrap surface geometry in its owning body frame; not a visual bone or paw contact. Unit: m.
+<span id="L376"> 376</span>         # Original raw/source: None; None = not independently established.
+<span id="L377"> 377</span>         &quot;radius_m&quot;: 0.004763827801212448,
+<span id="L378"> 378</span>     },
+<span id="L379"> 379</span>     # CYLINDER WRAP for R_SAM. Connected body: R_thigh. Geometry of a routing surface, not a bone attachment.
+<span id="L380"> 380</span>     &quot;R_SAM_wrap1&quot;: {
+<span id="L381"> 381</span>         # Muscle wrap surface geometry in its owning body frame; not a visual bone or paw contact. Unit: m.
+<span id="L382"> 382</span>         # Original raw/source: None; None = not independently established.
+<span id="L383"> 383</span>         &quot;position_in_body_m&quot;: [0.0955, 0.0, 0.0],
+<span id="L384"> 384</span>         # Muscle wrap surface geometry in its owning body frame; not a visual bone or paw contact. Unit: 1.
+<span id="L385"> 385</span>         # Original raw/source: None; None = not independently established.
+<span id="L386"> 386</span>         &quot;orientation_in_body_wxyz&quot;: [1.0, 0.0, 0.0, 0.0],
+<span id="L387"> 387</span>         # Muscle wrap surface geometry in its owning body frame; not a visual bone or paw contact. Unit: m.
+<span id="L388"> 388</span>         # Original raw/source: None; None = not independently established.
+<span id="L389"> 389</span>         &quot;radius_m&quot;: 0.005716593361654938,
+<span id="L390"> 390</span>     },
+<span id="L391"> 391</span>     # ===== R_LG =====
+<span id="L392"> 392</span>     # Branch 1, divisor 1.0: R_LG_origin [R_thigh] -&gt; R_LG_wrap0 [R_thigh] -&gt; R_LG_tangent [R_shank] -&gt; R_LG_wrap1 [R_shank] -&gt; R_LG_insert [R_foot]
+<span id="L393"> 393</span>     # CYLINDER WRAP for R_LG. Connected body: R_thigh. Geometry of a routing surface, not a bone attachment.
+<span id="L394"> 394</span>     &quot;R_LG_wrap0&quot;: {
+<span id="L395"> 395</span>         # Muscle wrap surface geometry in its owning body frame; not a visual bone or paw contact. Unit: m.
+<span id="L396"> 396</span>         # Original raw/source: None; None = not independently established.
+<span id="L397"> 397</span>         &quot;position_in_body_m&quot;: [0.0955, 0.0, 0.0],
+<span id="L398"> 398</span>         # Muscle wrap surface geometry in its owning body frame; not a visual bone or paw contact. Unit: 1.
+<span id="L399"> 399</span>         # Original raw/source: None; None = not independently established.
+<span id="L400"> 400</span>         &quot;orientation_in_body_wxyz&quot;: [1.0, 0.0, 0.0, 0.0],
+<span id="L401"> 401</span>         # Muscle wrap surface geometry in its owning body frame; not a visual bone or paw contact. Unit: m.
+<span id="L402"> 402</span>         # Original raw/source: None; None = not independently established.
+<span id="L403"> 403</span>         &quot;radius_m&quot;: 0.005889003082247688,
+<span id="L404"> 404</span>     },
+<span id="L405"> 405</span>     # CYLINDER WRAP for R_LG. Connected body: R_shank. Geometry of a routing surface, not a bone attachment.
+<span id="L406"> 406</span>     &quot;R_LG_wrap1&quot;: {
+<span id="L407"> 407</span>         # Muscle wrap surface geometry in its owning body frame; not a visual bone or paw contact. Unit: m.
+<span id="L408"> 408</span>         # Original raw/source: None; None = not independently established.
+<span id="L409"> 409</span>         &quot;position_in_body_m&quot;: [0.1085, 0.0, 0.0],
+<span id="L410"> 410</span>         # Muscle wrap surface geometry in its owning body frame; not a visual bone or paw contact. Unit: 1.
+<span id="L411"> 411</span>         # Original raw/source: None; None = not independently established.
+<span id="L412"> 412</span>         &quot;orientation_in_body_wxyz&quot;: [1.0, 0.0, 0.0, 0.0],
+<span id="L413"> 413</span>         # Muscle wrap surface geometry in its owning body frame; not a visual bone or paw contact. Unit: m.
+<span id="L414"> 414</span>         # Original raw/source: None; None = not independently established.
+<span id="L415"> 415</span>         &quot;radius_m&quot;: 0.004884810790217741,
+<span id="L416"> 416</span>     },
+<span id="L417"> 417</span>     # ===== R_MG =====
+<span id="L418"> 418</span>     # Branch 1, divisor 1.0: R_MG_origin [R_thigh] -&gt; R_MG_wrap0 [R_thigh] -&gt; R_MG_tangent [R_shank] -&gt; R_MG_wrap1 [R_shank] -&gt; R_MG_insert [R_foot]
+<span id="L419"> 419</span>     # CYLINDER WRAP for R_MG. Connected body: R_thigh. Geometry of a routing surface, not a bone attachment.
+<span id="L420"> 420</span>     &quot;R_MG_wrap0&quot;: {
+<span id="L421"> 421</span>         # Muscle wrap surface geometry in its owning body frame; not a visual bone or paw contact. Unit: m.
+<span id="L422"> 422</span>         # Original raw/source: None; None = not independently established.
+<span id="L423"> 423</span>         &quot;position_in_body_m&quot;: [0.0955, 0.0, 0.0],
+<span id="L424"> 424</span>         # Muscle wrap surface geometry in its owning body frame; not a visual bone or paw contact. Unit: 1.
+<span id="L425"> 425</span>         # Original raw/source: None; None = not independently established.
+<span id="L426"> 426</span>         &quot;orientation_in_body_wxyz&quot;: [1.0, 0.0, 0.0, 0.0],
+<span id="L427"> 427</span>         # Muscle wrap surface geometry in its owning body frame; not a visual bone or paw contact. Unit: m.
+<span id="L428"> 428</span>         # Original raw/source: None; None = not independently established.
+<span id="L429"> 429</span>         &quot;radius_m&quot;: 0.005889003082247688,
+<span id="L430"> 430</span>     },
+<span id="L431"> 431</span>     # CYLINDER WRAP for R_MG. Connected body: R_shank. Geometry of a routing surface, not a bone attachment.
+<span id="L432"> 432</span>     &quot;R_MG_wrap1&quot;: {
+<span id="L433"> 433</span>         # Muscle wrap surface geometry in its owning body frame; not a visual bone or paw contact. Unit: m.
+<span id="L434"> 434</span>         # Original raw/source: None; None = not independently established.
+<span id="L435"> 435</span>         &quot;position_in_body_m&quot;: [0.1085, 0.0, 0.0],
+<span id="L436"> 436</span>         # Muscle wrap surface geometry in its owning body frame; not a visual bone or paw contact. Unit: 1.
+<span id="L437"> 437</span>         # Original raw/source: None; None = not independently established.
+<span id="L438"> 438</span>         &quot;orientation_in_body_wxyz&quot;: [1.0, 0.0, 0.0, 0.0],
+<span id="L439"> 439</span>         # Muscle wrap surface geometry in its owning body frame; not a visual bone or paw contact. Unit: m.
+<span id="L440"> 440</span>         # Original raw/source: None; None = not independently established.
+<span id="L441"> 441</span>         &quot;radius_m&quot;: 0.004884810790217741,
+<span id="L442"> 442</span>     },
+<span id="L443"> 443</span>     # ===== L_EDL =====
+<span id="L444"> 444</span>     # Branch 1, divisor 1.0: L_EDL_osim_0 [L_shank] -&gt; L_EDL_osim_1 [L_shank] -&gt; L_EDL_osim_2 [L_foot] -&gt; L_EDL_osim_3 [L_foot] -&gt; L_EDL_osim_4 [L_foot] -&gt; L_EDL_osim_5 [L_foot] -&gt; L_EDL_osim_6 [L_digits]
+<span id="L445"> 445</span>     # ===== R_EDL =====
+<span id="L446"> 446</span>     # Branch 1, divisor 1.0: R_EDL_osim_0 [R_shank] -&gt; R_EDL_osim_1 [R_shank] -&gt; R_EDL_osim_2 [R_foot] -&gt; R_EDL_osim_3 [R_foot] -&gt; R_EDL_osim_4 [R_foot] -&gt; R_EDL_osim_5 [R_foot] -&gt; R_EDL_osim_6 [R_digits]
+<span id="L447"> 447</span>     # ===== L_FDL =====
+<span id="L448"> 448</span>     # Branch 1, divisor 1.0: L_FDL_osim_0 [L_shank] -&gt; L_FDL_osim_1 [L_shank] -&gt; L_FDL_osim_2 [L_foot] -&gt; L_FDL_osim_3 [L_foot] -&gt; L_FDL_osim_4 [L_digits]
+<span id="L449"> 449</span>     # ===== R_FDL =====
+<span id="L450"> 450</span>     # Branch 1, divisor 1.0: R_FDL_osim_0 [R_shank] -&gt; R_FDL_osim_1 [R_shank] -&gt; R_FDL_osim_2 [R_foot] -&gt; R_FDL_osim_3 [R_foot] -&gt; R_FDL_osim_4 [R_digits]
+<span id="L451"> 451</span>     # ===== L_FHL =====
+<span id="L452"> 452</span>     # Branch 1, divisor 1.0: L_FHL_attachment0 [L_shank] -&gt; L_FHL_attachment1 [L_shank] -&gt; L_FHL_attachment2 [L_foot] -&gt; L_FHL_attachment3 [L_foot] -&gt; L_FHL_attachment4 [L_digits]
+<span id="L453"> 453</span>     # ===== R_FHL =====
+<span id="L454"> 454</span>     # Branch 1, divisor 1.0: R_FHL_attachment0 [R_shank] -&gt; R_FHL_attachment1 [R_shank] -&gt; R_FHL_attachment2 [R_foot] -&gt; R_FHL_attachment3 [R_foot] -&gt; R_FHL_attachment4 [R_digits]
+<span id="L455"> 455</span>     # ===== FL_ShoulderExtensor =====
+<span id="L456"> 456</span>     # Branch 1, divisor 1.0: FL_ShoulderExtensor_s0_origin [FL_scapula] -&gt; FL_ShoulderExtensor_s0_pulley0 [FL_scapula] -&gt; FL_ShoulderExtensor_s0_insert [FL_upperarm]
+<span id="L457"> 457</span>     # CYLINDER WRAP for FL_ShoulderExtensor. Connected body: FL_scapula. Geometry of a routing surface, not a bone attachment.
+<span id="L458"> 458</span>     &quot;FL_ShoulderExtensor_s0_pulley0&quot;: {
+<span id="L459"> 459</span>         # Muscle wrap surface geometry in its owning body frame; not a visual bone or paw contact. Unit: m.
+<span id="L460"> 460</span>         # Original raw/source: None; None = not independently established.
+<span id="L461"> 461</span>         &quot;position_in_body_m&quot;: [0.05771428571428572, 0.0, 0.0],
+<span id="L462"> 462</span>         # Muscle wrap surface geometry in its owning body frame; not a visual bone or paw contact. Unit: 1.
+<span id="L463"> 463</span>         # Original raw/source: None; None = not independently established.
+<span id="L464"> 464</span>         &quot;orientation_in_body_wxyz&quot;: [1.0, 0.0, 0.0, 0.0],
+<span id="L465"> 465</span>         # Muscle wrap surface geometry in its owning body frame; not a visual bone or paw contact. Unit: m.
+<span id="L466"> 466</span>         # Original raw/source: None; None = not independently established.
+<span id="L467"> 467</span>         &quot;radius_m&quot;: 0.00794485115887297,
+<span id="L468"> 468</span>     },
+<span id="L469"> 469</span>     # ===== FL_ElbowExtensor =====
+<span id="L470"> 470</span>     # Branch 1, divisor 1.0: FL_ElbowExtensor_s0_origin [FL_upperarm] -&gt; FL_ElbowExtensor_s0_pulley0 [FL_upperarm] -&gt; FL_ElbowExtensor_s0_insert [FL_forearm]
+<span id="L471"> 471</span>     # CYLINDER WRAP for FL_ElbowExtensor. Connected body: FL_upperarm. Geometry of a routing surface, not a bone attachment.
+<span id="L472"> 472</span>     &quot;FL_ElbowExtensor_s0_pulley0&quot;: {
+<span id="L473"> 473</span>         # Muscle wrap surface geometry in its owning body frame; not a visual bone or paw contact. Unit: m.
+<span id="L474"> 474</span>         # Original raw/source: None; None = not independently established.
+<span id="L475"> 475</span>         &quot;position_in_body_m&quot;: [0.09275714285714286, 0.0, 0.0],
+<span id="L476"> 476</span>         # Muscle wrap surface geometry in its owning body frame; not a visual bone or paw contact. Unit: 1.
+<span id="L477"> 477</span>         # Original raw/source: None; None = not independently established.
+<span id="L478"> 478</span>         &quot;orientation_in_body_wxyz&quot;: [1.0, 0.0, 0.0, 0.0],
+<span id="L479"> 479</span>         # Muscle wrap surface geometry in its owning body frame; not a visual bone or paw contact. Unit: m.
+<span id="L480"> 480</span>         # Original raw/source: None; None = not independently established.
+<span id="L481"> 481</span>         &quot;radius_m&quot;: 0.00211767658146807,
+<span id="L482"> 482</span>     },
+<span id="L483"> 483</span>     # ===== FL_BicepsBrachii =====
+<span id="L484"> 484</span>     # Branch 1, divisor 1.0: FL_BicepsBrachii_s0_origin [FL_scapula] -&gt; FL_BicepsBrachii_s0_pulley0 [FL_scapula] -&gt; FL_BicepsBrachii_s0_tangent [FL_upperarm] -&gt; FL_BicepsBrachii_s0_pulley1 [FL_upperarm] -&gt; FL_BicepsBrachii_s0_insert [FL_forearm]
+<span id="L485"> 485</span>     # CYLINDER WRAP for FL_BicepsBrachii. Connected body: FL_scapula. Geometry of a routing surface, not a bone attachment.
+<span id="L486"> 486</span>     &quot;FL_BicepsBrachii_s0_pulley0&quot;: {
+<span id="L487"> 487</span>         # Muscle wrap surface geometry in its owning body frame; not a visual bone or paw contact. Unit: m.
+<span id="L488"> 488</span>         # Original raw/source: None; None = not independently established.
+<span id="L489"> 489</span>         &quot;position_in_body_m&quot;: [0.05771428571428572, 0.0, 0.0],
+<span id="L490"> 490</span>         # Muscle wrap surface geometry in its owning body frame; not a visual bone or paw contact. Unit: 1.
+<span id="L491"> 491</span>         # Original raw/source: None; None = not independently established.
+<span id="L492"> 492</span>         &quot;orientation_in_body_wxyz&quot;: [1.0, 0.0, 0.0, 0.0],
+<span id="L493"> 493</span>         # Muscle wrap surface geometry in its owning body frame; not a visual bone or paw contact. Unit: m.
+<span id="L494"> 494</span>         # Original raw/source: None; None = not independently established.
+<span id="L495"> 495</span>         &quot;radius_m&quot;: 0.009946928603793972,
+<span id="L496"> 496</span>     },
+<span id="L497"> 497</span>     # CYLINDER WRAP for FL_BicepsBrachii. Connected body: FL_upperarm. Geometry of a routing surface, not a bone attachment.
+<span id="L498"> 498</span>     &quot;FL_BicepsBrachii_s0_pulley1&quot;: {
+<span id="L499"> 499</span>         # Muscle wrap surface geometry in its owning body frame; not a visual bone or paw contact. Unit: m.
+<span id="L500"> 500</span>         # Original raw/source: None; None = not independently established.
+<span id="L501"> 501</span>         &quot;position_in_body_m&quot;: [0.09275714285714286, 0.0, 0.0],
+<span id="L502"> 502</span>         # Muscle wrap surface geometry in its owning body frame; not a visual bone or paw contact. Unit: 1.
+<span id="L503"> 503</span>         # Original raw/source: None; None = not independently established.
+<span id="L504"> 504</span>         &quot;orientation_in_body_wxyz&quot;: [1.0, 0.0, 0.0, 0.0],
+<span id="L505"> 505</span>         # Muscle wrap surface geometry in its owning body frame; not a visual bone or paw contact. Unit: m.
+<span id="L506"> 506</span>         # Original raw/source: None; None = not independently established.
+<span id="L507"> 507</span>         &quot;radius_m&quot;: 0.005259145388888544,
+<span id="L508"> 508</span>     },
+<span id="L509"> 509</span>     # ===== FL_ElbowFlexor =====
+<span id="L510"> 510</span>     # Branch 1, divisor 1.0: FL_ElbowFlexor_s0_origin [FL_upperarm] -&gt; FL_ElbowFlexor_s0_pulley0 [FL_upperarm] -&gt; FL_ElbowFlexor_s0_insert [FL_forearm]
+<span id="L511"> 511</span>     # CYLINDER WRAP for FL_ElbowFlexor. Connected body: FL_upperarm. Geometry of a routing surface, not a bone attachment.
+<span id="L512"> 512</span>     &quot;FL_ElbowFlexor_s0_pulley0&quot;: {
+<span id="L513"> 513</span>         # Muscle wrap surface geometry in its owning body frame; not a visual bone or paw contact. Unit: m.
+<span id="L514"> 514</span>         # Original raw/source: None; None = not independently established.
+<span id="L515"> 515</span>         &quot;position_in_body_m&quot;: [0.09275714285714286, 0.0, 0.0],
+<span id="L516"> 516</span>         # Muscle wrap surface geometry in its owning body frame; not a visual bone or paw contact. Unit: 1.
+<span id="L517"> 517</span>         # Original raw/source: None; None = not independently established.
+<span id="L518"> 518</span>         &quot;orientation_in_body_wxyz&quot;: [1.0, 0.0, 0.0, 0.0],
+<span id="L519"> 519</span>         # Muscle wrap surface geometry in its owning body frame; not a visual bone or paw contact. Unit: m.
+<span id="L520"> 520</span>         # Original raw/source: None; None = not independently established.
+<span id="L521"> 521</span>         &quot;radius_m&quot;: 0.00319999999900039,
+<span id="L522"> 522</span>     },
+<span id="L523"> 523</span>     # ===== FL_ElbowFlexorWristFlexor =====
+<span id="L524"> 524</span>     # Branch 1, divisor 1.0: FL_ElbowFlexorWristFlexor_s0_origin [FL_upperarm] -&gt; FL_ElbowFlexorWristFlexor_s0_pulley0 [FL_upperarm] -&gt; FL_ElbowFlexorWristFlexor_s0_insert [FL_forearm]
+<span id="L525"> 525</span>     # CYLINDER WRAP for FL_ElbowFlexorWristFlexor. Connected body: FL_upperarm. Geometry of a routing surface, not a bone attachment.
+<span id="L526"> 526</span>     &quot;FL_ElbowFlexorWristFlexor_s0_pulley0&quot;: {
+<span id="L527"> 527</span>         # Muscle wrap surface geometry in its owning body frame; not a visual bone or paw contact. Unit: m.
+<span id="L528"> 528</span>         # Original raw/source: None; None = not independently established.
+<span id="L529"> 529</span>         &quot;position_in_body_m&quot;: [0.09275714285714286, 0.0, 0.0],
+<span id="L530"> 530</span>         # Muscle wrap surface geometry in its owning body frame; not a visual bone or paw contact. Unit: 1.
+<span id="L531"> 531</span>         # Original raw/source: None; None = not independently established.
+<span id="L532"> 532</span>         &quot;orientation_in_body_wxyz&quot;: [1.0, 0.0, 0.0, 0.0],
+<span id="L533"> 533</span>         # Muscle wrap surface geometry in its owning body frame; not a visual bone or paw contact. Unit: m.
+<span id="L534"> 534</span>         # Original raw/source: None; None = not independently established.
+<span id="L535"> 535</span>         &quot;radius_m&quot;: 0.00536465406511287,
+<span id="L536"> 536</span>     },
+<span id="L537"> 537</span>     # Branch 2, divisor 1.0: FL_ElbowFlexorWristFlexor_s1_origin [FL_forearm] -&gt; FL_ElbowFlexorWristFlexor_s1_pulley0 [FL_forearm] -&gt; FL_ElbowFlexorWristFlexor_s1_insert [FL_carpals]
+<span id="L538"> 538</span>     # CYLINDER WRAP for FL_ElbowFlexorWristFlexor. Connected body: FL_forearm. Geometry of a routing surface, not a bone attachment.
+<span id="L539"> 539</span>     &quot;FL_ElbowFlexorWristFlexor_s1_pulley0&quot;: {
+<span id="L540"> 540</span>         # Muscle wrap surface geometry in its owning body frame; not a visual bone or paw contact. Unit: m.
+<span id="L541"> 541</span>         # Original raw/source: None; None = not independently established.
+<span id="L542"> 542</span>         &quot;position_in_body_m&quot;: [0.09465714285714286, 0.0, 0.0],
+<span id="L543"> 543</span>         # Muscle wrap surface geometry in its owning body frame; not a visual bone or paw contact. Unit: 1.
+<span id="L544"> 544</span>         # Original raw/source: None; None = not independently established.
+<span id="L545"> 545</span>         &quot;orientation_in_body_wxyz&quot;: [1.0, 0.0, 0.0, 0.0],
+<span id="L546"> 546</span>         # Muscle wrap surface geometry in its owning body frame; not a visual bone or paw contact. Unit: m.
+<span id="L547"> 547</span>         # Original raw/source: None; None = not independently established.
+<span id="L548"> 548</span>         &quot;radius_m&quot;: 0.00350749590090618,
+<span id="L549"> 549</span>     },
+<span id="L550"> 550</span>     # ===== FL_WristFlexor =====
+<span id="L551"> 551</span>     # Branch 1, divisor 1.0: FL_WristFlexor_s0_origin [FL_forearm] -&gt; FL_WristFlexor_s0_insert [FL_forearm]
+<span id="L552"> 552</span>     # Branch 2, divisor 1.0: FL_WristFlexor_s1_origin [FL_forearm] -&gt; FL_WristFlexor_s1_pulley0 [FL_forearm] -&gt; FL_WristFlexor_s1_insert [FL_carpals]
+<span id="L553"> 553</span>     # CYLINDER WRAP for FL_WristFlexor. Connected body: FL_forearm. Geometry of a routing surface, not a bone attachment.
+<span id="L554"> 554</span>     &quot;FL_WristFlexor_s1_pulley0&quot;: {
+<span id="L555"> 555</span>         # Muscle wrap surface geometry in its owning body frame; not a visual bone or paw contact. Unit: m.
+<span id="L556"> 556</span>         # Original raw/source: None; None = not independently established.
+<span id="L557"> 557</span>         &quot;position_in_body_m&quot;: [0.09465714285714286, 0.0, 0.0],
+<span id="L558"> 558</span>         # Muscle wrap surface geometry in its owning body frame; not a visual bone or paw contact. Unit: 1.
+<span id="L559"> 559</span>         # Original raw/source: None; None = not independently established.
+<span id="L560"> 560</span>         &quot;orientation_in_body_wxyz&quot;: [1.0, 0.0, 0.0, 0.0],
+<span id="L561"> 561</span>         # Muscle wrap surface geometry in its owning body frame; not a visual bone or paw contact. Unit: m.
+<span id="L562"> 562</span>         # Original raw/source: None; None = not independently established.
+<span id="L563"> 563</span>         &quot;radius_m&quot;: 0.002399999999,
+<span id="L564"> 564</span>     },
+<span id="L565"> 565</span>     # ===== FL_WristExtensor =====
+<span id="L566"> 566</span>     # Branch 1, divisor 1.0: FL_WristExtensor_s0_origin [FL_forearm] -&gt; FL_WristExtensor_s0_insert [FL_forearm]
+<span id="L567"> 567</span>     # Branch 2, divisor 1.0: FL_WristExtensor_s1_origin [FL_forearm] -&gt; FL_WristExtensor_s1_pulley0 [FL_forearm] -&gt; FL_WristExtensor_s1_insert [FL_carpals]
+<span id="L568"> 568</span>     # CYLINDER WRAP for FL_WristExtensor. Connected body: FL_forearm. Geometry of a routing surface, not a bone attachment.
+<span id="L569"> 569</span>     &quot;FL_WristExtensor_s1_pulley0&quot;: {
+<span id="L570"> 570</span>         # Muscle wrap surface geometry in its owning body frame; not a visual bone or paw contact. Unit: m.
+<span id="L571"> 571</span>         # Original raw/source: None; None = not independently established.
+<span id="L572"> 572</span>         &quot;position_in_body_m&quot;: [0.09465714285714286, 0.0, 0.0],
+<span id="L573"> 573</span>         # Muscle wrap surface geometry in its owning body frame; not a visual bone or paw contact. Unit: 1.
+<span id="L574"> 574</span>         # Original raw/source: None; None = not independently established.
+<span id="L575"> 575</span>         &quot;orientation_in_body_wxyz&quot;: [1.0, 0.0, 0.0, 0.0],
+<span id="L576"> 576</span>         # Muscle wrap surface geometry in its owning body frame; not a visual bone or paw contact. Unit: m.
+<span id="L577"> 577</span>         # Original raw/source: None; None = not independently established.
+<span id="L578"> 578</span>         &quot;radius_m&quot;: 0.00271044296670131,
+<span id="L579"> 579</span>     },
+<span id="L580"> 580</span>     # ===== FL_ShoulderFlexor =====
+<span id="L581"> 581</span>     # Branch 1, divisor 1.0: FL_ShoulderFlexor_s0_origin [FL_scapula] -&gt; FL_ShoulderFlexor_s0_pulley0 [FL_scapula] -&gt; FL_ShoulderFlexor_s0_insert [FL_upperarm]
+<span id="L582"> 582</span>     # CYLINDER WRAP for FL_ShoulderFlexor. Connected body: FL_scapula. Geometry of a routing surface, not a bone attachment.
+<span id="L583"> 583</span>     &quot;FL_ShoulderFlexor_s0_pulley0&quot;: {
+<span id="L584"> 584</span>         # Muscle wrap surface geometry in its owning body frame; not a visual bone or paw contact. Unit: m.
+<span id="L585"> 585</span>         # Original raw/source: None; None = not independently established.
+<span id="L586"> 586</span>         &quot;position_in_body_m&quot;: [0.05771428571428572, 0.0, 0.0],
+<span id="L587"> 587</span>         # Muscle wrap surface geometry in its owning body frame; not a visual bone or paw contact. Unit: 1.
+<span id="L588"> 588</span>         # Original raw/source: None; None = not independently established.
+<span id="L589"> 589</span>         &quot;orientation_in_body_wxyz&quot;: [1.0, 0.0, 0.0, 0.0],
+<span id="L590"> 590</span>         # Muscle wrap surface geometry in its owning body frame; not a visual bone or paw contact. Unit: m.
+<span id="L591"> 591</span>         # Original raw/source: None; None = not independently established.
+<span id="L592"> 592</span>         &quot;radius_m&quot;: 0.00184271114022135,
+<span id="L593"> 593</span>     },
+<span id="L594"> 594</span>     # ===== FL_TricepsBrachiiLong =====
+<span id="L595"> 595</span>     # Branch 1, divisor 1.0: FL_TricepsBrachiiLong_s0_origin [FL_scapula] -&gt; FL_TricepsBrachiiLong_s0_pulley0 [FL_scapula] -&gt; FL_TricepsBrachiiLong_s0_tangent [FL_upperarm] -&gt; FL_TricepsBrachiiLong_s0_pulley1 [FL_upperarm] -&gt; FL_TricepsBrachiiLong_s0_insert [FL_forearm]
+<span id="L596"> 596</span>     # CYLINDER WRAP for FL_TricepsBrachiiLong. Connected body: FL_scapula. Geometry of a routing surface, not a bone attachment.
+<span id="L597"> 597</span>     &quot;FL_TricepsBrachiiLong_s0_pulley0&quot;: {
+<span id="L598"> 598</span>         # Muscle wrap surface geometry in its owning body frame; not a visual bone or paw contact. Unit: m.
+<span id="L599"> 599</span>         # Original raw/source: None; None = not independently established.
+<span id="L600"> 600</span>         &quot;position_in_body_m&quot;: [0.05771428571428572, 0.0, 0.0],
+<span id="L601"> 601</span>         # Muscle wrap surface geometry in its owning body frame; not a visual bone or paw contact. Unit: 1.
+<span id="L602"> 602</span>         # Original raw/source: None; None = not independently established.
+<span id="L603"> 603</span>         &quot;orientation_in_body_wxyz&quot;: [1.0, 0.0, 0.0, 0.0],
+<span id="L604"> 604</span>         # Muscle wrap surface geometry in its owning body frame; not a visual bone or paw contact. Unit: m.
+<span id="L605"> 605</span>         # Original raw/source: None; None = not independently established.
+<span id="L606"> 606</span>         &quot;radius_m&quot;: 0.004419416011604855,
+<span id="L607"> 607</span>     },
+<span id="L608"> 608</span>     # CYLINDER WRAP for FL_TricepsBrachiiLong. Connected body: FL_upperarm. Geometry of a routing surface, not a bone attachment.
+<span id="L609"> 609</span>     &quot;FL_TricepsBrachiiLong_s0_pulley1&quot;: {
+<span id="L610"> 610</span>         # Muscle wrap surface geometry in its owning body frame; not a visual bone or paw contact. Unit: m.
+<span id="L611"> 611</span>         # Original raw/source: None; None = not independently established.
+<span id="L612"> 612</span>         &quot;position_in_body_m&quot;: [0.09275714285714286, 0.0, 0.0],
+<span id="L613"> 613</span>         # Muscle wrap surface geometry in its owning body frame; not a visual bone or paw contact. Unit: 1.
+<span id="L614"> 614</span>         # Original raw/source: None; None = not independently established.
+<span id="L615"> 615</span>         &quot;orientation_in_body_wxyz&quot;: [1.0, 0.0, 0.0, 0.0],
+<span id="L616"> 616</span>         # Muscle wrap surface geometry in its owning body frame; not a visual bone or paw contact. Unit: m.
+<span id="L617"> 617</span>         # Original raw/source: None; None = not independently established.
+<span id="L618"> 618</span>         &quot;radius_m&quot;: 0.011883274667532627,
+<span id="L619"> 619</span>     },
+<span id="L620"> 620</span>     # ===== FR_ShoulderExtensor =====
+<span id="L621"> 621</span>     # Branch 1, divisor 1.0: FR_ShoulderExtensor_s0_origin [FR_scapula] -&gt; FR_ShoulderExtensor_s0_pulley0 [FR_scapula] -&gt; FR_ShoulderExtensor_s0_insert [FR_upperarm]
+<span id="L622"> 622</span>     # CYLINDER WRAP for FR_ShoulderExtensor. Connected body: FR_scapula. Geometry of a routing surface, not a bone attachment.
+<span id="L623"> 623</span>     &quot;FR_ShoulderExtensor_s0_pulley0&quot;: {
+<span id="L624"> 624</span>         # Muscle wrap surface geometry in its owning body frame; not a visual bone or paw contact. Unit: m.
+<span id="L625"> 625</span>         # Original raw/source: None; None = not independently established.
+<span id="L626"> 626</span>         &quot;position_in_body_m&quot;: [0.05771428571428572, 0.0, 0.0],
+<span id="L627"> 627</span>         # Muscle wrap surface geometry in its owning body frame; not a visual bone or paw contact. Unit: 1.
+<span id="L628"> 628</span>         # Original raw/source: None; None = not independently established.
+<span id="L629"> 629</span>         &quot;orientation_in_body_wxyz&quot;: [1.0, 0.0, 0.0, 0.0],
+<span id="L630"> 630</span>         # Muscle wrap surface geometry in its owning body frame; not a visual bone or paw contact. Unit: m.
+<span id="L631"> 631</span>         # Original raw/source: None; None = not independently established.
+<span id="L632"> 632</span>         &quot;radius_m&quot;: 0.00794485115887297,
+<span id="L633"> 633</span>     },
+<span id="L634"> 634</span>     # ===== FR_ElbowExtensor =====
+<span id="L635"> 635</span>     # Branch 1, divisor 1.0: FR_ElbowExtensor_s0_origin [FR_upperarm] -&gt; FR_ElbowExtensor_s0_pulley0 [FR_upperarm] -&gt; FR_ElbowExtensor_s0_insert [FR_forearm]
+<span id="L636"> 636</span>     # CYLINDER WRAP for FR_ElbowExtensor. Connected body: FR_upperarm. Geometry of a routing surface, not a bone attachment.
+<span id="L637"> 637</span>     &quot;FR_ElbowExtensor_s0_pulley0&quot;: {
+<span id="L638"> 638</span>         # Muscle wrap surface geometry in its owning body frame; not a visual bone or paw contact. Unit: m.
+<span id="L639"> 639</span>         # Original raw/source: None; None = not independently established.
+<span id="L640"> 640</span>         &quot;position_in_body_m&quot;: [0.09275714285714286, 0.0, 0.0],
+<span id="L641"> 641</span>         # Muscle wrap surface geometry in its owning body frame; not a visual bone or paw contact. Unit: 1.
+<span id="L642"> 642</span>         # Original raw/source: None; None = not independently established.
+<span id="L643"> 643</span>         &quot;orientation_in_body_wxyz&quot;: [1.0, 0.0, 0.0, 0.0],
+<span id="L644"> 644</span>         # Muscle wrap surface geometry in its owning body frame; not a visual bone or paw contact. Unit: m.
+<span id="L645"> 645</span>         # Original raw/source: None; None = not independently established.
+<span id="L646"> 646</span>         &quot;radius_m&quot;: 0.00211767658146807,
+<span id="L647"> 647</span>     },
+<span id="L648"> 648</span>     # ===== FR_BicepsBrachii =====
+<span id="L649"> 649</span>     # Branch 1, divisor 1.0: FR_BicepsBrachii_s0_origin [FR_scapula] -&gt; FR_BicepsBrachii_s0_pulley0 [FR_scapula] -&gt; FR_BicepsBrachii_s0_tangent [FR_upperarm] -&gt; FR_BicepsBrachii_s0_pulley1 [FR_upperarm] -&gt; FR_BicepsBrachii_s0_insert [FR_forearm]
+<span id="L650"> 650</span>     # CYLINDER WRAP for FR_BicepsBrachii. Connected body: FR_scapula. Geometry of a routing surface, not a bone attachment.
+<span id="L651"> 651</span>     &quot;FR_BicepsBrachii_s0_pulley0&quot;: {
+<span id="L652"> 652</span>         # Muscle wrap surface geometry in its owning body frame; not a visual bone or paw contact. Unit: m.
+<span id="L653"> 653</span>         # Original raw/source: None; None = not independently established.
+<span id="L654"> 654</span>         &quot;position_in_body_m&quot;: [0.05771428571428572, 0.0, 0.0],
+<span id="L655"> 655</span>         # Muscle wrap surface geometry in its owning body frame; not a visual bone or paw contact. Unit: 1.
+<span id="L656"> 656</span>         # Original raw/source: None; None = not independently established.
+<span id="L657"> 657</span>         &quot;orientation_in_body_wxyz&quot;: [1.0, 0.0, 0.0, 0.0],
+<span id="L658"> 658</span>         # Muscle wrap surface geometry in its owning body frame; not a visual bone or paw contact. Unit: m.
+<span id="L659"> 659</span>         # Original raw/source: None; None = not independently established.
+<span id="L660"> 660</span>         &quot;radius_m&quot;: 0.009946928603793972,
+<span id="L661"> 661</span>     },
+<span id="L662"> 662</span>     # CYLINDER WRAP for FR_BicepsBrachii. Connected body: FR_upperarm. Geometry of a routing surface, not a bone attachment.
+<span id="L663"> 663</span>     &quot;FR_BicepsBrachii_s0_pulley1&quot;: {
+<span id="L664"> 664</span>         # Muscle wrap surface geometry in its owning body frame; not a visual bone or paw contact. Unit: m.
+<span id="L665"> 665</span>         # Original raw/source: None; None = not independently established.
+<span id="L666"> 666</span>         &quot;position_in_body_m&quot;: [0.09275714285714286, 0.0, 0.0],
+<span id="L667"> 667</span>         # Muscle wrap surface geometry in its owning body frame; not a visual bone or paw contact. Unit: 1.
+<span id="L668"> 668</span>         # Original raw/source: None; None = not independently established.
+<span id="L669"> 669</span>         &quot;orientation_in_body_wxyz&quot;: [1.0, 0.0, 0.0, 0.0],
+<span id="L670"> 670</span>         # Muscle wrap surface geometry in its owning body frame; not a visual bone or paw contact. Unit: m.
+<span id="L671"> 671</span>         # Original raw/source: None; None = not independently established.
+<span id="L672"> 672</span>         &quot;radius_m&quot;: 0.005259145388888544,
+<span id="L673"> 673</span>     },
+<span id="L674"> 674</span>     # ===== FR_ElbowFlexor =====
+<span id="L675"> 675</span>     # Branch 1, divisor 1.0: FR_ElbowFlexor_s0_origin [FR_upperarm] -&gt; FR_ElbowFlexor_s0_pulley0 [FR_upperarm] -&gt; FR_ElbowFlexor_s0_insert [FR_forearm]
+<span id="L676"> 676</span>     # CYLINDER WRAP for FR_ElbowFlexor. Connected body: FR_upperarm. Geometry of a routing surface, not a bone attachment.
+<span id="L677"> 677</span>     &quot;FR_ElbowFlexor_s0_pulley0&quot;: {
+<span id="L678"> 678</span>         # Muscle wrap surface geometry in its owning body frame; not a visual bone or paw contact. Unit: m.
+<span id="L679"> 679</span>         # Original raw/source: None; None = not independently established.
+<span id="L680"> 680</span>         &quot;position_in_body_m&quot;: [0.09275714285714286, 0.0, 0.0],
+<span id="L681"> 681</span>         # Muscle wrap surface geometry in its owning body frame; not a visual bone or paw contact. Unit: 1.
+<span id="L682"> 682</span>         # Original raw/source: None; None = not independently established.
+<span id="L683"> 683</span>         &quot;orientation_in_body_wxyz&quot;: [1.0, 0.0, 0.0, 0.0],
+<span id="L684"> 684</span>         # Muscle wrap surface geometry in its owning body frame; not a visual bone or paw contact. Unit: m.
+<span id="L685"> 685</span>         # Original raw/source: None; None = not independently established.
+<span id="L686"> 686</span>         &quot;radius_m&quot;: 0.00319999999900039,
+<span id="L687"> 687</span>     },
+<span id="L688"> 688</span>     # ===== FR_ElbowFlexorWristFlexor =====
+<span id="L689"> 689</span>     # Branch 1, divisor 1.0: FR_ElbowFlexorWristFlexor_s0_origin [FR_upperarm] -&gt; FR_ElbowFlexorWristFlexor_s0_pulley0 [FR_upperarm] -&gt; FR_ElbowFlexorWristFlexor_s0_insert [FR_forearm]
+<span id="L690"> 690</span>     # CYLINDER WRAP for FR_ElbowFlexorWristFlexor. Connected body: FR_upperarm. Geometry of a routing surface, not a bone attachment.
+<span id="L691"> 691</span>     &quot;FR_ElbowFlexorWristFlexor_s0_pulley0&quot;: {
+<span id="L692"> 692</span>         # Muscle wrap surface geometry in its owning body frame; not a visual bone or paw contact. Unit: m.
+<span id="L693"> 693</span>         # Original raw/source: None; None = not independently established.
+<span id="L694"> 694</span>         &quot;position_in_body_m&quot;: [0.09275714285714286, 0.0, 0.0],
+<span id="L695"> 695</span>         # Muscle wrap surface geometry in its owning body frame; not a visual bone or paw contact. Unit: 1.
+<span id="L696"> 696</span>         # Original raw/source: None; None = not independently established.
+<span id="L697"> 697</span>         &quot;orientation_in_body_wxyz&quot;: [1.0, 0.0, 0.0, 0.0],
+<span id="L698"> 698</span>         # Muscle wrap surface geometry in its owning body frame; not a visual bone or paw contact. Unit: m.
+<span id="L699"> 699</span>         # Original raw/source: None; None = not independently established.
+<span id="L700"> 700</span>         &quot;radius_m&quot;: 0.00536465406511287,
+<span id="L701"> 701</span>     },
+<span id="L702"> 702</span>     # Branch 2, divisor 1.0: FR_ElbowFlexorWristFlexor_s1_origin [FR_forearm] -&gt; FR_ElbowFlexorWristFlexor_s1_pulley0 [FR_forearm] -&gt; FR_ElbowFlexorWristFlexor_s1_insert [FR_carpals]
+<span id="L703"> 703</span>     # CYLINDER WRAP for FR_ElbowFlexorWristFlexor. Connected body: FR_forearm. Geometry of a routing surface, not a bone attachment.
+<span id="L704"> 704</span>     &quot;FR_ElbowFlexorWristFlexor_s1_pulley0&quot;: {
+<span id="L705"> 705</span>         # Muscle wrap surface geometry in its owning body frame; not a visual bone or paw contact. Unit: m.
+<span id="L706"> 706</span>         # Original raw/source: None; None = not independently established.
+<span id="L707"> 707</span>         &quot;position_in_body_m&quot;: [0.09465714285714286, 0.0, 0.0],
+<span id="L708"> 708</span>         # Muscle wrap surface geometry in its owning body frame; not a visual bone or paw contact. Unit: 1.
+<span id="L709"> 709</span>         # Original raw/source: None; None = not independently established.
+<span id="L710"> 710</span>         &quot;orientation_in_body_wxyz&quot;: [1.0, 0.0, 0.0, 0.0],
+<span id="L711"> 711</span>         # Muscle wrap surface geometry in its owning body frame; not a visual bone or paw contact. Unit: m.
+<span id="L712"> 712</span>         # Original raw/source: None; None = not independently established.
+<span id="L713"> 713</span>         &quot;radius_m&quot;: 0.00350749590090618,
+<span id="L714"> 714</span>     },
+<span id="L715"> 715</span>     # ===== FR_WristFlexor =====
+<span id="L716"> 716</span>     # Branch 1, divisor 1.0: FR_WristFlexor_s0_origin [FR_forearm] -&gt; FR_WristFlexor_s0_insert [FR_forearm]
+<span id="L717"> 717</span>     # Branch 2, divisor 1.0: FR_WristFlexor_s1_origin [FR_forearm] -&gt; FR_WristFlexor_s1_pulley0 [FR_forearm] -&gt; FR_WristFlexor_s1_insert [FR_carpals]
+<span id="L718"> 718</span>     # CYLINDER WRAP for FR_WristFlexor. Connected body: FR_forearm. Geometry of a routing surface, not a bone attachment.
+<span id="L719"> 719</span>     &quot;FR_WristFlexor_s1_pulley0&quot;: {
+<span id="L720"> 720</span>         # Muscle wrap surface geometry in its owning body frame; not a visual bone or paw contact. Unit: m.
+<span id="L721"> 721</span>         # Original raw/source: None; None = not independently established.
+<span id="L722"> 722</span>         &quot;position_in_body_m&quot;: [0.09465714285714286, 0.0, 0.0],
+<span id="L723"> 723</span>         # Muscle wrap surface geometry in its owning body frame; not a visual bone or paw contact. Unit: 1.
+<span id="L724"> 724</span>         # Original raw/source: None; None = not independently established.
+<span id="L725"> 725</span>         &quot;orientation_in_body_wxyz&quot;: [1.0, 0.0, 0.0, 0.0],
+<span id="L726"> 726</span>         # Muscle wrap surface geometry in its owning body frame; not a visual bone or paw contact. Unit: m.
+<span id="L727"> 727</span>         # Original raw/source: None; None = not independently established.
+<span id="L728"> 728</span>         &quot;radius_m&quot;: 0.002399999999,
+<span id="L729"> 729</span>     },
+<span id="L730"> 730</span>     # ===== FR_WristExtensor =====
+<span id="L731"> 731</span>     # Branch 1, divisor 1.0: FR_WristExtensor_s0_origin [FR_forearm] -&gt; FR_WristExtensor_s0_insert [FR_forearm]
+<span id="L732"> 732</span>     # Branch 2, divisor 1.0: FR_WristExtensor_s1_origin [FR_forearm] -&gt; FR_WristExtensor_s1_pulley0 [FR_forearm] -&gt; FR_WristExtensor_s1_insert [FR_carpals]
+<span id="L733"> 733</span>     # CYLINDER WRAP for FR_WristExtensor. Connected body: FR_forearm. Geometry of a routing surface, not a bone attachment.
+<span id="L734"> 734</span>     &quot;FR_WristExtensor_s1_pulley0&quot;: {
+<span id="L735"> 735</span>         # Muscle wrap surface geometry in its owning body frame; not a visual bone or paw contact. Unit: m.
+<span id="L736"> 736</span>         # Original raw/source: None; None = not independently established.
+<span id="L737"> 737</span>         &quot;position_in_body_m&quot;: [0.09465714285714286, 0.0, 0.0],
+<span id="L738"> 738</span>         # Muscle wrap surface geometry in its owning body frame; not a visual bone or paw contact. Unit: 1.
+<span id="L739"> 739</span>         # Original raw/source: None; None = not independently established.
+<span id="L740"> 740</span>         &quot;orientation_in_body_wxyz&quot;: [1.0, 0.0, 0.0, 0.0],
+<span id="L741"> 741</span>         # Muscle wrap surface geometry in its owning body frame; not a visual bone or paw contact. Unit: m.
+<span id="L742"> 742</span>         # Original raw/source: None; None = not independently established.
+<span id="L743"> 743</span>         &quot;radius_m&quot;: 0.00271044296670131,
+<span id="L744"> 744</span>     },
+<span id="L745"> 745</span>     # ===== FR_ShoulderFlexor =====
+<span id="L746"> 746</span>     # Branch 1, divisor 1.0: FR_ShoulderFlexor_s0_origin [FR_scapula] -&gt; FR_ShoulderFlexor_s0_pulley0 [FR_scapula] -&gt; FR_ShoulderFlexor_s0_insert [FR_upperarm]
+<span id="L747"> 747</span>     # CYLINDER WRAP for FR_ShoulderFlexor. Connected body: FR_scapula. Geometry of a routing surface, not a bone attachment.
+<span id="L748"> 748</span>     &quot;FR_ShoulderFlexor_s0_pulley0&quot;: {
+<span id="L749"> 749</span>         # Muscle wrap surface geometry in its owning body frame; not a visual bone or paw contact. Unit: m.
+<span id="L750"> 750</span>         # Original raw/source: None; None = not independently established.
+<span id="L751"> 751</span>         &quot;position_in_body_m&quot;: [0.05771428571428572, 0.0, 0.0],
+<span id="L752"> 752</span>         # Muscle wrap surface geometry in its owning body frame; not a visual bone or paw contact. Unit: 1.
+<span id="L753"> 753</span>         # Original raw/source: None; None = not independently established.
+<span id="L754"> 754</span>         &quot;orientation_in_body_wxyz&quot;: [1.0, 0.0, 0.0, 0.0],
+<span id="L755"> 755</span>         # Muscle wrap surface geometry in its owning body frame; not a visual bone or paw contact. Unit: m.
+<span id="L756"> 756</span>         # Original raw/source: None; None = not independently established.
+<span id="L757"> 757</span>         &quot;radius_m&quot;: 0.00184271114022135,
+<span id="L758"> 758</span>     },
+<span id="L759"> 759</span>     # ===== FR_TricepsBrachiiLong =====
+<span id="L760"> 760</span>     # Branch 1, divisor 1.0: FR_TricepsBrachiiLong_s0_origin [FR_scapula] -&gt; FR_TricepsBrachiiLong_s0_pulley0 [FR_scapula] -&gt; FR_TricepsBrachiiLong_s0_tangent [FR_upperarm] -&gt; FR_TricepsBrachiiLong_s0_pulley1 [FR_upperarm] -&gt; FR_TricepsBrachiiLong_s0_insert [FR_forearm]
+<span id="L761"> 761</span>     # CYLINDER WRAP for FR_TricepsBrachiiLong. Connected body: FR_scapula. Geometry of a routing surface, not a bone attachment.
+<span id="L762"> 762</span>     &quot;FR_TricepsBrachiiLong_s0_pulley0&quot;: {
+<span id="L763"> 763</span>         # Muscle wrap surface geometry in its owning body frame; not a visual bone or paw contact. Unit: m.
+<span id="L764"> 764</span>         # Original raw/source: None; None = not independently established.
+<span id="L765"> 765</span>         &quot;position_in_body_m&quot;: [0.05771428571428572, 0.0, 0.0],
+<span id="L766"> 766</span>         # Muscle wrap surface geometry in its owning body frame; not a visual bone or paw contact. Unit: 1.
+<span id="L767"> 767</span>         # Original raw/source: None; None = not independently established.
+<span id="L768"> 768</span>         &quot;orientation_in_body_wxyz&quot;: [1.0, 0.0, 0.0, 0.0],
+<span id="L769"> 769</span>         # Muscle wrap surface geometry in its owning body frame; not a visual bone or paw contact. Unit: m.
+<span id="L770"> 770</span>         # Original raw/source: None; None = not independently established.
+<span id="L771"> 771</span>         &quot;radius_m&quot;: 0.004419416011604855,
+<span id="L772"> 772</span>     },
+<span id="L773"> 773</span>     # CYLINDER WRAP for FR_TricepsBrachiiLong. Connected body: FR_upperarm. Geometry of a routing surface, not a bone attachment.
+<span id="L774"> 774</span>     &quot;FR_TricepsBrachiiLong_s0_pulley1&quot;: {
+<span id="L775"> 775</span>         # Muscle wrap surface geometry in its owning body frame; not a visual bone or paw contact. Unit: m.
+<span id="L776"> 776</span>         # Original raw/source: None; None = not independently established.
+<span id="L777"> 777</span>         &quot;position_in_body_m&quot;: [0.09275714285714286, 0.0, 0.0],
+<span id="L778"> 778</span>         # Muscle wrap surface geometry in its owning body frame; not a visual bone or paw contact. Unit: 1.
+<span id="L779"> 779</span>         # Original raw/source: None; None = not independently established.
+<span id="L780"> 780</span>         &quot;orientation_in_body_wxyz&quot;: [1.0, 0.0, 0.0, 0.0],
+<span id="L781"> 781</span>         # Muscle wrap surface geometry in its owning body frame; not a visual bone or paw contact. Unit: m.
+<span id="L782"> 782</span>         # Original raw/source: None; None = not independently established.
+<span id="L783"> 783</span>         &quot;radius_m&quot;: 0.011883274667532627,
+<span id="L784"> 784</span>     },
+<span id="L785"> 785</span>     # ===== FL_S_C3 =====
+<span id="L786"> 786</span>     # Branch 1, divisor 1.0: FL_S_C3_attachment0 [FL_scapula] -&gt; FL_S_C3_attachment1 [cat_root]
+<span id="L787"> 787</span>     # ===== FR_S_C3 =====
+<span id="L788"> 788</span>     # Branch 1, divisor 1.0: FR_S_C3_attachment0 [FR_scapula] -&gt; FR_S_C3_attachment1 [cat_root]
+<span id="L789"> 789</span>     # ===== FL_S_C4 =====
+<span id="L790"> 790</span>     # Branch 1, divisor 1.0: FL_S_C4_attachment0 [FL_scapula] -&gt; FL_S_C4_attachment1 [cat_root]
+<span id="L791"> 791</span>     # ===== FR_S_C4 =====
+<span id="L792"> 792</span>     # Branch 1, divisor 1.0: FR_S_C4_attachment0 [FR_scapula] -&gt; FR_S_C4_attachment1 [cat_root]
+<span id="L793"> 793</span>     # ===== FL_S_C5 =====
+<span id="L794"> 794</span>     # Branch 1, divisor 1.0: FL_S_C5_attachment0 [FL_scapula] -&gt; FL_S_C5_attachment1 [cat_root]
+<span id="L795"> 795</span>     # ===== FR_S_C5 =====
+<span id="L796"> 796</span>     # Branch 1, divisor 1.0: FR_S_C5_attachment0 [FR_scapula] -&gt; FR_S_C5_attachment1 [cat_root]
+<span id="L797"> 797</span>     # ===== FL_S_C6 =====
+<span id="L798"> 798</span>     # Branch 1, divisor 1.0: FL_S_C6_attachment0 [FL_scapula] -&gt; FL_S_C6_attachment1 [cat_root]
+<span id="L799"> 799</span>     # ===== FR_S_C6 =====
+<span id="L800"> 800</span>     # Branch 1, divisor 1.0: FR_S_C6_attachment0 [FR_scapula] -&gt; FR_S_C6_attachment1 [cat_root]
+<span id="L801"> 801</span>     # ===== FL_S_C7 =====
+<span id="L802"> 802</span>     # Branch 1, divisor 1.0: FL_S_C7_attachment0 [FL_scapula] -&gt; FL_S_C7_attachment1 [cat_root]
+<span id="L803"> 803</span>     # ===== FR_S_C7 =====
+<span id="L804"> 804</span>     # Branch 1, divisor 1.0: FR_S_C7_attachment0 [FR_scapula] -&gt; FR_S_C7_attachment1 [cat_root]
+<span id="L805"> 805</span>     # ===== FL_S_T1 =====
+<span id="L806"> 806</span>     # Branch 1, divisor 1.0: FL_S_T1_attachment0 [FL_scapula] -&gt; FL_S_T1_attachment1 [cat_root]
+<span id="L807"> 807</span>     # ===== FR_S_T1 =====
+<span id="L808"> 808</span>     # Branch 1, divisor 1.0: FR_S_T1_attachment0 [FR_scapula] -&gt; FR_S_T1_attachment1 [cat_root]
+<span id="L809"> 809</span>     # ===== FL_S_T2 =====
+<span id="L810"> 810</span>     # Branch 1, divisor 1.0: FL_S_T2_attachment0 [FL_scapula] -&gt; FL_S_T2_attachment1 [cat_root]
+<span id="L811"> 811</span>     # ===== FR_S_T2 =====
+<span id="L812"> 812</span>     # Branch 1, divisor 1.0: FR_S_T2_attachment0 [FR_scapula] -&gt; FR_S_T2_attachment1 [cat_root]
+<span id="L813"> 813</span>     # ===== FL_S_T3 =====
+<span id="L814"> 814</span>     # Branch 1, divisor 1.0: FL_S_T3_attachment0 [FL_scapula] -&gt; FL_S_T3_attachment1 [cat_root]
+<span id="L815"> 815</span>     # ===== FR_S_T3 =====
+<span id="L816"> 816</span>     # Branch 1, divisor 1.0: FR_S_T3_attachment0 [FR_scapula] -&gt; FR_S_T3_attachment1 [cat_root]
+<span id="L817"> 817</span>     # ===== FL_S_T4 =====
+<span id="L818"> 818</span>     # Branch 1, divisor 1.0: FL_S_T4_attachment0 [FL_scapula] -&gt; FL_S_T4_attachment1 [cat_root]
+<span id="L819"> 819</span>     # ===== FR_S_T4 =====
+<span id="L820"> 820</span>     # Branch 1, divisor 1.0: FR_S_T4_attachment0 [FR_scapula] -&gt; FR_S_T4_attachment1 [cat_root]
+<span id="L821"> 821</span>     # ===== FL_S_T5 =====
+<span id="L822"> 822</span>     # Branch 1, divisor 1.0: FL_S_T5_attachment0 [FL_scapula] -&gt; FL_S_T5_attachment1 [cat_root]
+<span id="L823"> 823</span>     # ===== FR_S_T5 =====
+<span id="L824"> 824</span>     # Branch 1, divisor 1.0: FR_S_T5_attachment0 [FR_scapula] -&gt; FR_S_T5_attachment1 [cat_root]
+<span id="L825"> 825</span>     # ===== FL_S_T6 =====
+<span id="L826"> 826</span>     # Branch 1, divisor 1.0: FL_S_T6_attachment0 [FL_scapula] -&gt; FL_S_T6_attachment1 [cat_root]
+<span id="L827"> 827</span>     # ===== FR_S_T6 =====
+<span id="L828"> 828</span>     # Branch 1, divisor 1.0: FR_S_T6_attachment0 [FR_scapula] -&gt; FR_S_T6_attachment1 [cat_root]
+<span id="L829"> 829</span>     # ===== FL_S_T7 =====
+<span id="L830"> 830</span>     # Branch 1, divisor 1.0: FL_S_T7_attachment0 [FL_scapula] -&gt; FL_S_T7_attachment1 [cat_root]
+<span id="L831"> 831</span>     # ===== FR_S_T7 =====
+<span id="L832"> 832</span>     # Branch 1, divisor 1.0: FR_S_T7_attachment0 [FR_scapula] -&gt; FR_S_T7_attachment1 [cat_root]
+<span id="L833"> 833</span>     # ===== FL_S_T8 =====
+<span id="L834"> 834</span>     # Branch 1, divisor 1.0: FL_S_T8_attachment0 [FL_scapula] -&gt; FL_S_T8_attachment1 [cat_root]
+<span id="L835"> 835</span>     # ===== FR_S_T8 =====
+<span id="L836"> 836</span>     # Branch 1, divisor 1.0: FR_S_T8_attachment0 [FR_scapula] -&gt; FR_S_T8_attachment1 [cat_root]
+<span id="L837"> 837</span>     # ===== FL_S_T9 =====
+<span id="L838"> 838</span>     # Branch 1, divisor 1.0: FL_S_T9_attachment0 [FL_scapula] -&gt; FL_S_T9_attachment1 [cat_root]
+<span id="L839"> 839</span>     # ===== FR_S_T9 =====
+<span id="L840"> 840</span>     # Branch 1, divisor 1.0: FR_S_T9_attachment0 [FR_scapula] -&gt; FR_S_T9_attachment1 [cat_root]
+<span id="L841"> 841</span>     # ===== FL_R_C2 =====
+<span id="L842"> 842</span>     # Branch 1, divisor 1.0: FL_R_C2_attachment0 [FL_scapula] -&gt; FL_R_C2_attachment1 [cat_root]
+<span id="L843"> 843</span>     # ===== FR_R_C2 =====
+<span id="L844"> 844</span>     # Branch 1, divisor 1.0: FR_R_C2_attachment0 [FR_scapula] -&gt; FR_R_C2_attachment1 [cat_root]
+<span id="L845"> 845</span>     # ===== FL_R_C3-7 =====
+<span id="L846"> 846</span>     # Branch 1, divisor 1.0: FL_R_C3-7_attachment0 [FL_scapula] -&gt; FL_R_C3-7_attachment1 [cat_root]
+<span id="L847"> 847</span>     # ===== FR_R_C3-7 =====
+<span id="L848"> 848</span>     # Branch 1, divisor 1.0: FR_R_C3-7_attachment0 [FR_scapula] -&gt; FR_R_C3-7_attachment1 [cat_root]
+<span id="L849"> 849</span>     # ===== FL_R_T1 =====
+<span id="L850"> 850</span>     # Branch 1, divisor 1.0: FL_R_T1_attachment0 [FL_scapula] -&gt; FL_R_T1_attachment1 [cat_root]
+<span id="L851"> 851</span>     # ===== FR_R_T1 =====
+<span id="L852"> 852</span>     # Branch 1, divisor 1.0: FR_R_T1_attachment0 [FR_scapula] -&gt; FR_R_T1_attachment1 [cat_root]
+<span id="L853"> 853</span>     # ===== FL_R_T2 =====
+<span id="L854"> 854</span>     # Branch 1, divisor 1.0: FL_R_T2_attachment0 [FL_scapula] -&gt; FL_R_T2_attachment1 [cat_root]
+<span id="L855"> 855</span>     # ===== FR_R_T2 =====
+<span id="L856"> 856</span>     # Branch 1, divisor 1.0: FR_R_T2_attachment0 [FR_scapula] -&gt; FR_R_T2_attachment1 [cat_root]
+<span id="L857"> 857</span>     # ===== FL_R_T3 =====
+<span id="L858"> 858</span>     # Branch 1, divisor 1.0: FL_R_T3_attachment0 [FL_scapula] -&gt; FL_R_T3_attachment1 [cat_root]
+<span id="L859"> 859</span>     # ===== FR_R_T3 =====
+<span id="L860"> 860</span>     # Branch 1, divisor 1.0: FR_R_T3_attachment0 [FR_scapula] -&gt; FR_R_T3_attachment1 [cat_root]
+<span id="L861"> 861</span>     # ===== FL_R_T4 =====
+<span id="L862"> 862</span>     # Branch 1, divisor 1.0: FL_R_T4_attachment0 [FL_scapula] -&gt; FL_R_T4_attachment1 [cat_root]
+<span id="L863"> 863</span>     # ===== FR_R_T4 =====
+<span id="L864"> 864</span>     # Branch 1, divisor 1.0: FR_R_T4_attachment0 [FR_scapula] -&gt; FR_R_T4_attachment1 [cat_root]
+<span id="L865"> 865</span>     # ===== FL_R_T5 =====
+<span id="L866"> 866</span>     # Branch 1, divisor 1.0: FL_R_T5_attachment0 [FL_scapula] -&gt; FL_R_T5_attachment1 [cat_root]
+<span id="L867"> 867</span>     # ===== FR_R_T5 =====
+<span id="L868"> 868</span>     # Branch 1, divisor 1.0: FR_R_T5_attachment0 [FR_scapula] -&gt; FR_R_T5_attachment1 [cat_root]
+<span id="L869"> 869</span>     # ===== FL_DigitalExtensors =====
+<span id="L870"> 870</span>     # Branch 1, divisor 1.0: FL_ElbowFlexorWristFlexor_s0_origin [FL_upperarm] -&gt; FL_ElbowFlexorWristFlexor_s0_pulley0 [FL_upperarm] -&gt; FL_ElbowFlexorWristFlexor_s0_insert [FL_forearm]
+<span id="L871"> 871</span>     # Shared entry &#x27;FL_ElbowFlexorWristFlexor_s0_pulley0&#x27;: already defined above.
+<span id="L872"> 872</span>     # Branch 2, divisor 1.0: FL_ElbowFlexorWristFlexor_s1_origin [FL_forearm] -&gt; FL_ElbowFlexorWristFlexor_s1_pulley0 [FL_forearm] -&gt; FL_DigitalExtensors_attachment0 [FL_carpals] -&gt; FL_DigitalExtensors_attachment1 [FL_digits]
+<span id="L873"> 873</span>     # Shared entry &#x27;FL_ElbowFlexorWristFlexor_s1_pulley0&#x27;: already defined above.
+<span id="L874"> 874</span>     # ===== FR_DigitalExtensors =====
+<span id="L875"> 875</span>     # Branch 1, divisor 1.0: FR_ElbowFlexorWristFlexor_s0_origin [FR_upperarm] -&gt; FR_ElbowFlexorWristFlexor_s0_pulley0 [FR_upperarm] -&gt; FR_ElbowFlexorWristFlexor_s0_insert [FR_forearm]
+<span id="L876"> 876</span>     # Shared entry &#x27;FR_ElbowFlexorWristFlexor_s0_pulley0&#x27;: already defined above.
+<span id="L877"> 877</span>     # Branch 2, divisor 1.0: FR_ElbowFlexorWristFlexor_s1_origin [FR_forearm] -&gt; FR_ElbowFlexorWristFlexor_s1_pulley0 [FR_forearm] -&gt; FR_DigitalExtensors_attachment0 [FR_carpals] -&gt; FR_DigitalExtensors_attachment1 [FR_digits]
+<span id="L878"> 878</span>     # Shared entry &#x27;FR_ElbowFlexorWristFlexor_s1_pulley0&#x27;: already defined above.
+<span id="L879"> 879</span>     # ===== FL_DigitalFlexors =====
+<span id="L880"> 880</span>     # Branch 1, divisor 1.0: FL_WristExtensor_s0_origin [FL_forearm] -&gt; FL_WristExtensor_s0_insert [FL_forearm]
+<span id="L881"> 881</span>     # Branch 2, divisor 1.0: FL_WristExtensor_s1_origin [FL_forearm] -&gt; FL_WristExtensor_s1_pulley0 [FL_forearm] -&gt; FL_DigitalFlexors_attachment0 [FL_carpals] -&gt; FL_DigitalFlexors_attachment1 [FL_digits]
+<span id="L882"> 882</span>     # Shared entry &#x27;FL_WristExtensor_s1_pulley0&#x27;: already defined above.
+<span id="L883"> 883</span>     # ===== FR_DigitalFlexors =====
+<span id="L884"> 884</span>     # Branch 1, divisor 1.0: FR_WristExtensor_s0_origin [FR_forearm] -&gt; FR_WristExtensor_s0_insert [FR_forearm]
+<span id="L885"> 885</span>     # Branch 2, divisor 1.0: FR_WristExtensor_s1_origin [FR_forearm] -&gt; FR_WristExtensor_s1_pulley0 [FR_forearm] -&gt; FR_DigitalFlexors_attachment0 [FR_carpals] -&gt; FR_DigitalFlexors_attachment1 [FR_digits]
+<span id="L886"> 886</span>     # Shared entry &#x27;FR_WristExtensor_s1_pulley0&#x27;: already defined above.
+<span id="L887"> 887</span>     # ===== FL_TrapeziusCervical =====
+<span id="L888"> 888</span>     # Branch 1, divisor 1.0: FL_TrapeziusCervical_origin [cat_root] -&gt; FL_TrapeziusCervical_insertion [FL_scapula]
+<span id="L889"> 889</span>     # ===== FR_TrapeziusCervical =====
+<span id="L890"> 890</span>     # Branch 1, divisor 1.0: FR_TrapeziusCervical_origin [cat_root] -&gt; FR_TrapeziusCervical_insertion [FR_scapula]
+<span id="L891"> 891</span>     # ===== FL_TrapeziusThoracic =====
+<span id="L892"> 892</span>     # Branch 1, divisor 1.0: FL_TrapeziusThoracic_origin [cat_root] -&gt; FL_TrapeziusThoracic_insertion [FL_scapula]
+<span id="L893"> 893</span>     # ===== FR_TrapeziusThoracic =====
+<span id="L894"> 894</span>     # Branch 1, divisor 1.0: FR_TrapeziusThoracic_origin [cat_root] -&gt; FR_TrapeziusThoracic_insertion [FR_scapula]
+<span id="L895"> 895</span>     # ===== FL_LatissimusDorsi =====
+<span id="L896"> 896</span>     # Branch 1, divisor 1.0: FL_LatissimusDorsi_origin [cat_root] -&gt; FL_LatissimusDorsi_insertion [FL_upperarm]
+<span id="L897"> 897</span>     # ===== FR_LatissimusDorsi =====
+<span id="L898"> 898</span>     # Branch 1, divisor 1.0: FR_LatissimusDorsi_origin [cat_root] -&gt; FR_LatissimusDorsi_insertion [FR_upperarm]
+<span id="L899"> 899</span>     # ===== FL_PectoralisProfundus =====
+<span id="L900"> 900</span>     # Branch 1, divisor 1.0: FL_PectoralisProfundus_origin [cat_root] -&gt; FL_PectoralisProfundus_insertion [FL_upperarm]
+<span id="L901"> 901</span>     # ===== FR_PectoralisProfundus =====
+<span id="L902"> 902</span>     # Branch 1, divisor 1.0: FR_PectoralisProfundus_origin [cat_root] -&gt; FR_PectoralisProfundus_insertion [FR_upperarm]
+<span id="L903"> 903</span>     # ===== FL_PectoralisSuperficialis =====
+<span id="L904"> 904</span>     # Branch 1, divisor 1.0: FL_PectoralisSuperficialis_origin [cat_root] -&gt; FL_PectoralisSuperficialis_insertion [FL_upperarm]
+<span id="L905"> 905</span>     # ===== FR_PectoralisSuperficialis =====
+<span id="L906"> 906</span>     # Branch 1, divisor 1.0: FR_PectoralisSuperficialis_origin [cat_root] -&gt; FR_PectoralisSuperficialis_insertion [FR_upperarm]
+<span id="L907"> 907</span>     # ===== FL_Clavobrachialis =====
+<span id="L908"> 908</span>     # Branch 1, divisor 1.0: FL_Clavobrachialis_origin [cat_root] -&gt; FL_Clavobrachialis_insertion [FL_upperarm]
+<span id="L909"> 909</span>     # ===== FR_Clavobrachialis =====
+<span id="L910"> 910</span>     # Branch 1, divisor 1.0: FR_Clavobrachialis_origin [cat_root] -&gt; FR_Clavobrachialis_insertion [FR_upperarm]
+<span id="L911"> 911</span> }
+</pre></main></body></html>

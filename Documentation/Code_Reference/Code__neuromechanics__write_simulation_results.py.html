@@ -1,0 +1,139 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Write simulation results.</title><link rel="stylesheet" href="../style.css"></head><body><!-- generated folder guide --><header><div class="tag">Cat · Full-body neuromechanics</div><h1>Write simulation results.</h1><nav><a href="../../START_HERE.html">Start here</a> · <a href="../project_structure.html">Find a file</a></nav></header><main><p><a href="../../Code/neuromechanics/write_simulation_results.py">Code/neuromechanics/write_simulation_results.py</a></p><pre style="overflow:auto;white-space:pre"><span id="L1">   1</span> &quot;&quot;&quot;Write simulation results.
+<span id="L2">   2</span> 
+<span id="L3">   3</span> Inputs/outputs: see the named function arguments and returned values.
+<span id="L4">   4</span> Lengths use metres, time seconds, force newtons, and angles radians unless stated.
+<span id="L5">   5</span> See Documentation/model_methods.html for equations and parameter definitions.
+<span id="L6">   6</span> &quot;&quot;&quot;
+<span id="L7">   7</span> 
+<span id="L8">   8</span> import json, html, os
+<span id="L9">   9</span> 
+<span id="L10">  10</span> import numpy as np
+<span id="L11">  11</span> 
+<span id="L12">  12</span> import matplotlib
+<span id="L13">  13</span> 
+<span id="L14">  14</span> matplotlib.use(&quot;Agg&quot;)
+<span id="L15">  15</span> import matplotlib.pyplot as plt
+<span id="L16">  16</span> 
+<span id="L17">  17</span> from .experimental_comparison_targets import experimental_comparison_targets
+<span id="L18">  18</span> 
+<span id="L19">  19</span> from .compare_simulation_with_experiment import compare_simulation_with_experiment
+<span id="L20">  20</span> 
+<span id="L21">  21</span> from .plot_emg_comparison import plot_emg_comparison
+<span id="L22">  22</span> 
+<span id="L23">  23</span> from model_configuration.paths import ROOT
+<span id="L24">  24</span> 
+<span id="L25">  25</span> 
+<span id="L26">  26</span> def write_simulation_results(result, settings, folder):
+<span id="L27">  27</span>     &quot;&quot;&quot;Compare raw predictions on the source clock, with readable time windows.&quot;&quot;&quot;
+<span id="L28">  28</span>     metrics = compare_simulation_with_experiment(result, settings)
+<span id="L29">  29</span>     # Save the computed values or figure for inspection and reproducibility.
+<span id="L30">  30</span>     (folder / &quot;experimental_comparison_metrics.json&quot;).write_text(json.dumps(metrics, indent=2))
+<span id="L31">  31</span>     target = experimental_comparison_targets(
+<span id="L32">  32</span>         result[&quot;time&quot;],
+<span id="L33">  33</span>         settings[&quot;period_s&quot;],
+<span id="L34">  34</span>         settings.get(&quot;reference_table_dir&quot;),
+<span id="L35">  35</span>     )
+<span id="L36">  36</span>     # Plot a short interval for waveform detail; metrics still use the full trial.
+<span id="L37">  37</span>     window_end = float(result[&quot;time&quot;][-1])
+<span id="L38">  38</span>     window_start = max(float(result[&quot;time&quot;][0]), window_end - 4.0)
+<span id="L39">  39</span>     names = [[&quot;Hip&quot;, &quot;Knee&quot;, &quot;Ankle&quot;, &quot;MTP&quot;]] * 2 + [
+<span id="L40">  40</span>         [&quot;Shoulder&quot;, &quot;Elbow&quot;, &quot;Wrist&quot;, &quot;MCP&quot;]
+<span id="L41">  41</span>     ] * 2
+<span id="L42">  42</span>     limbs = [&quot;LH (assumed)&quot;, &quot;RH (measured)&quot;, &quot;LF (separate study)&quot;, &quot;RF (separate study)&quot;]
+<span id="L43">  43</span>     fig, ax = plt.subplots(4, 4, figsize=(15, 10), sharex=True)
+<span id="L44">  44</span>     for side in range(4):
+<span id="L45">  45</span>         signs = np.array([-1, 1, -1, -1]) if side &lt; 2 else np.array([1, -1, -1, -1])
+<span id="L46">  46</span>         offset = np.array([0, np.pi, np.pi, np.pi]) if side &lt; 2 else np.full(4, np.pi)
+<span id="L47">  47</span>         for j in range(4):
+<span id="L48">  48</span>             a = ax[side, j]
+<span id="L49">  49</span>             a.plot(
+<span id="L50">  50</span>                 result[&quot;time&quot;],
+<span id="L51">  51</span>                 np.rad2deg(offset[j] + signs[j] * target[&quot;joint_q&quot;][:, side, j]),
+<span id="L52">  52</span>                 &quot;k--&quot;,
+<span id="L53">  53</span>                 label=&quot;Source reference&quot;,
+<span id="L54">  54</span>             )
+<span id="L55">  55</span>             a.plot(
+<span id="L56">  56</span>                 result[&quot;time&quot;],
+<span id="L57">  57</span>                 np.rad2deg(offset[j] + signs[j] * result[&quot;joint_q&quot;][:, side, j]),
+<span id="L58">  58</span>                 color=&quot;#087f9c&quot;,
+<span id="L59">  59</span>                 label=&quot;Forward result&quot;,
+<span id="L60">  60</span>             )
+<span id="L61">  61</span>             a.set_title(
+<span id="L62">  62</span>                 f&#x27;{limbs[side]} {names[side][j]}\nRMSE {metrics[&quot;limbs&quot;][side][&quot;joint_rmse_deg&quot;][j]:.1f}°&#x27;,
+<span id="L63">  63</span>                 fontsize=10,
+<span id="L64">  64</span>             )
+<span id="L65">  65</span>             a.grid(alpha=0.2)
+<span id="L66">  66</span>             a.set_xlim(window_start, window_end)
+<span id="L67">  67</span>         ax[side, 0].set_ylabel(&quot;Anatomical angle (deg)&quot;)
+<span id="L68">  68</span>     ax[0, 0].legend(fontsize=8)
+<span id="L69">  69</span>     [a.set_xlabel(&quot;Time (s)&quot;) for a in ax[-1]]
+<span id="L70">  70</span>     fig.suptitle(f&quot;Joint angles · {window_start:.2f}–{window_end:.2f} s\nRMSE labels use the complete trial; explore any interval in the interactive comparison&quot;, fontsize=12)
+<span id="L71">  71</span>     fig.tight_layout(rect=(0, 0, 1, .94))
+<span id="L72">  72</span>     # Save the computed values or figure for inspection and reproducibility.
+<span id="L73">  73</span>     fig.savefig(folder / &quot;all_joint_angles.png&quot;, dpi=140)
+<span id="L74">  74</span>     plt.close(fig)
+<span id="L75">  75</span>     fig, ax = plt.subplots(4, 2, figsize=(12, 10), sharex=True)
+<span id="L76">  76</span>     for side in range(4):
+<span id="L77">  77</span>         for col, index in enumerate([0, 2]):
+<span id="L78">  78</span>             a = ax[side, col]
+<span id="L79">  79</span>             a.plot(
+<span id="L80">  80</span>                 result[&quot;time&quot;],
+<span id="L81">  81</span>                 target[&quot;grf&quot;][:, side, index],
+<span id="L82">  82</span>                 &quot;k--&quot;,
+<span id="L83">  83</span>                 label=&quot;Source reference&quot;,
+<span id="L84">  84</span>             )
+<span id="L85">  85</span>             a.plot(
+<span id="L86">  86</span>                 result[&quot;time&quot;],
+<span id="L87">  87</span>                 result[&quot;grf&quot;][:, side, index],
+<span id="L88">  88</span>                 color=&quot;#087f9c&quot;,
+<span id="L89">  89</span>                 label=&quot;Raw contact prediction&quot;,
+<span id="L90">  90</span>             )
+<span id="L91">  91</span>             a.set_title(limbs[side] + (&quot; anterior–posterior (AP)&quot; if col == 0 else &quot; vertical&quot;))
+<span id="L92">  92</span>             a.set_ylabel(&quot;Force (N)&quot;)
+<span id="L93">  93</span>             a.grid(alpha=0.2)
+<span id="L94">  94</span>             a.set_xlim(window_start, window_end)
+<span id="L95">  95</span>     ax[0, 0].legend(fontsize=8)
+<span id="L96">  96</span>     [a.set_xlabel(&quot;Time (s)&quot;) for a in ax[-1]]
+<span id="L97">  97</span>     fig.suptitle(f&quot;Raw paw contact forces · {window_start:.2f}–{window_end:.2f} s&quot;, fontsize=12)
+<span id="L98">  98</span>     fig.tight_layout(rect=(0, 0, 1, .95))
+<span id="L99">  99</span>     # Save the computed values or figure for inspection and reproducibility.
+<span id="L100"> 100</span>     fig.savefig(folder / &quot;all_grfs.png&quot;, dpi=140)
+<span id="L101"> 101</span>     plt.close(fig)
+<span id="L102"> 102</span>     rows = &quot;&quot;.join(
+<span id="L103"> 103</span>         &quot;&lt;tr&gt;&lt;td&gt;&quot;
+<span id="L104"> 104</span>         + html.escape(m[&quot;limb&quot;])
+<span id="L105"> 105</span>         + &quot;&lt;/td&gt;&lt;td&gt;&quot;
+<span id="L106"> 106</span>         + &quot;, &quot;.join(f&quot;{x:.2f}&quot; for x in m[&quot;joint_rmse_deg&quot;])
+<span id="L107"> 107</span>         + f&#x27;&lt;/td&gt;&lt;td&gt;{m[&quot;ap_grf_rmse_N&quot;]:.2f}&lt;/td&gt;&lt;td&gt;{m[&quot;vertical_grf_rmse_N&quot;]:.2f}&lt;/td&gt;&lt;/tr&gt;&#x27;
+<span id="L108"> 108</span>         for m in metrics[&quot;limbs&quot;]
+<span id="L109"> 109</span>     )
+<span id="L110"> 110</span>     content = f&quot;&quot;&quot;&lt;!doctype html&gt;&lt;meta charset=&quot;utf-8&quot;&gt;&lt;title&gt;Four-limb forward fit&lt;/title&gt;&lt;style&gt;body{{max-width:1200px;margin:35px auto;font:17px/1.5 Arial;color:#19313e}}img{{width:100%}}table{{border-collapse:collapse;width:100%}}td,th{{border:1px solid #bbc;padding:8px}}.status{{background:#fff2d7;padding:15px}}&lt;/style&gt;&lt;h1&gt;Four-limb forward model: current trial&lt;/h1&gt;&lt;p class=&quot;status&quot;&gt;Duration: {metrics[&#x27;duration_s&#x27;]:.3f} s. Failure: {html.escape(metrics[&#x27;failure&#x27;] or &#x27;none detected within this run&#x27;)}. This trial does not establish the requested 60-second fit unless the separate validation tests pass.&lt;/p&gt;&lt;p&gt;The four limbs are mechanically coupled. Excitation drives activation, elastic muscle–tendon forces and native articulated dynamics. Ground_Reaction_Forces come from physical paw contact. Raw reference curves and raw forward outputs use the same clock.&lt;/p&gt;&lt;table&gt;&lt;tr&gt;&lt;th&gt;Limb and data basis&lt;/th&gt;&lt;th&gt;Joint RMSE (degrees, proximal to distal)&lt;/th&gt;&lt;th&gt;AP GRF RMSE (N)&lt;/th&gt;&lt;th&gt;Vertical GRF RMSE (N)&lt;/th&gt;&lt;/tr&gt;{rows}&lt;/table&gt;&lt;p&gt;LH is assumed from RH. Forelimb recordings are from a separate study; EMGs are pooled across sides. These are fitting targets, not simultaneous four-limb validation.&lt;/p&gt;&lt;img src=&quot;all_joint_angles.png&quot;&gt;&lt;img src=&quot;all_grfs.png&quot;&gt;&lt;p&gt;&lt;a href=&quot;experimental_comparison_metrics.json&quot;&gt;All metrics, including each EMG channel&lt;/a&gt; · &lt;a href=&quot;settings.json&quot;&gt;Applied parameters&lt;/a&gt; · &lt;a href=&quot;../../Documentation/model_methods.html&quot;&gt;Equations, sources and assumptions&lt;/a&gt;&lt;/p&gt;&quot;&quot;&quot;
+<span id="L111"> 111</span>     emg_files = plot_emg_comparison(result, settings, folder)
+<span id="L112"> 112</span>     # Browser navigation exposes the complete recording without crowding 60 s.
+<span id="L113"> 113</span>     from .write_interactive_comparison import write_interactive_comparison
+<span id="L114"> 114</span>     write_interactive_comparison(result, settings, folder)
+<span id="L115"> 115</span>     content = content.replace(&quot;Ground_Reaction_Forces&quot;, &quot;GRFs&quot;)
+<span id="L116"> 116</span>     content = content.replace(&quot;Four-limb forward model: current trial&quot;, &quot;Intact-cat forward simulation&quot;)
+<span id="L117"> 117</span>     content = content.replace(&quot;This trial does not establish the requested 60-second fit unless the separate validation tests pass.&quot;, &quot;Duration alone does not establish complete experimental agreement or stability beyond the simulated interval.&quot;)
+<span id="L118"> 118</span>     content = content.replace(&quot;&lt;table&gt;&quot;, &#x27;&lt;p style=&quot;padding:16px;background:#e6f5f3&quot;&gt;&lt;a href=&quot;interactive_experimental_comparison.html&quot;&gt;&lt;b&gt;Explore all time points: movable four-second window, joint angles and GRFs&lt;/b&gt;&lt;/a&gt;&lt;/p&gt;&lt;p&gt;Static figures show the final four seconds. The table and plot-title RMSE values use the complete saved trial, without phase shifting.&lt;/p&gt;&lt;table&gt;&#x27;, 1)
+<span id="L119"> 119</span>     if settings.get(&quot;excitation_sequence_file&quot;):
+<span id="L120"> 120</span>         note = &#x27;&lt;p class=&quot;status&quot;&gt;&lt;b&gt;Finite, frozen muscle_excitation sequence.&lt;/b&gt; Amplitudes were optimized offline across successive strides. The replay uses elapsed time only, with one initial state and no runtime corrections. This is not a demonstration of an autonomously stable periodic gait, and no repetition beyond the saved sequence is assumed.&lt;/p&gt;&#x27;
+<span id="L121"> 121</span>         content = content.replace(&quot;&lt;table&gt;&quot;, note + &quot;&lt;table&gt;&quot;, 1)
+<span id="L122"> 122</span>     gallery = &quot;&lt;h2&gt;Excitation shapes compared with available EMG&lt;/h2&gt;&quot; + &quot;&quot;.join(
+<span id="L123"> 123</span>         f&#x27;&lt;img src=&quot;{name}&quot; alt=&quot;Separate limb muscle_excitation and EMG comparison&quot;&gt;&#x27;
+<span id="L124"> 124</span>         for name in emg_files
+<span id="L125"> 125</span>     )
+<span id="L126"> 126</span>     content = content.replace(
+<span id="L127"> 127</span>         &#x27;&lt;p&gt;&lt;a href=&quot;experimental_comparison_metrics.json&quot;&gt;&#x27;,
+<span id="L128"> 128</span>         gallery + &#x27;&lt;p&gt;&lt;a href=&quot;experimental_comparison_metrics.json&quot;&gt;&#x27;,
+<span id="L129"> 129</span>     )
+<span id="L130"> 130</span>     doc_link = os.path.relpath(ROOT / &quot;Documentation/model_methods.html&quot;, folder).replace(os.sep, &quot;/&quot;)
+<span id="L131"> 131</span>     content = content.replace(&quot;../../Documentation/model_methods.html&quot;, doc_link)
+<span id="L132"> 132</span>     if (folder / &quot;APPLIED_PARAMETERS.html&quot;).exists():
+<span id="L133"> 133</span>         content += &#x27;&lt;p&gt;&lt;a href=&quot;APPLIED_PARAMETERS.html&quot;&gt;Actual applied parameter table&lt;/a&gt; · &lt;a href=&quot;APPLIED_PARAMETERS.json&quot;&gt;Machine-readable values&lt;/a&gt; · &lt;a href=&quot;INPUT_HASHES.json&quot;&gt;Frozen config/reference hashes&lt;/a&gt; · &lt;a href=&quot;walking_quality_metrics.json&quot;&gt;Walking acceptance checks&lt;/a&gt;&lt;/p&gt;&#x27;
+<span id="L134"> 134</span>     if (folder / &quot;ATTACHMENT_MAP.html&quot;).exists():
+<span id="L135"> 135</span>         content += &#x27;&lt;p&gt;&lt;a href=&quot;ATTACHMENT_MAP.html&quot;&gt;Actual muscle origins, insertions, via points and wrapping&lt;/a&gt; · &lt;a href=&quot;ATTACHMENT_MAP.json&quot;&gt;Connection and coordinate data&lt;/a&gt;&lt;/p&gt;&#x27;
+<span id="L136"> 136</span>     # Save the computed values or figure for inspection and reproducibility.
+<span id="L137"> 137</span>     (folder / &quot;simulation_report.html&quot;).write_text(content, encoding=&quot;utf-8&quot;)
+<span id="L138"> 138</span>     return metrics
+</pre></main></body></html>

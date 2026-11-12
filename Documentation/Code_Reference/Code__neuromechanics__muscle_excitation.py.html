@@ -1,0 +1,32 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Read the intact muscle excitation table using simulation time.</title><link rel="stylesheet" href="../style.css"></head><body><!-- generated folder guide --><header><div class="tag">Cat · Full-body neuromechanics</div><h1>Read the intact muscle excitation table using simulation time.</h1><nav><a href="../../START_HERE.html">Start here</a> · <a href="../project_structure.html">Find a file</a></nav></header><main><p><a href="../../Code/neuromechanics/muscle_excitation.py">Code/neuromechanics/muscle_excitation.py</a></p><pre style="overflow:auto;white-space:pre"><span id="L1">   1</span> &quot;&quot;&quot;Read the intact muscle excitation table using simulation time.
+<span id="L2">   2</span> 
+<span id="L3">   3</span> Input: time in seconds and a table with values between 0 and 1. Output: one
+<span id="L4">   4</span> excitation per muscle-tendon path. Joint angles and forces do not alter it.
+<span id="L5">   5</span> &quot;&quot;&quot;
+<span id="L6">   6</span> 
+<span id="L7">   7</span> import numpy as np
+<span id="L8">   8</span> 
+<span id="L9">   9</span> from .periodic_interpolate import periodic_interpolate
+<span id="L10">  10</span> 
+<span id="L11">  11</span> 
+<span id="L12">  12</span> 
+<span id="L13">  13</span> def muscle_excitation(state, time_s):
+<span id="L14">  14</span>     &quot;&quot;&quot;Calculate every muscle&#x27;s prescribed excitation at this time.&quot;&quot;&quot;
+<span id="L15">  15</span>     # Fixed finite sequences use their specified time index.
+<span id="L16">  16</span>     if &quot;excitation_sequence&quot; in state or &quot;offline_cycle_input&quot; in state:
+<span id="L17">  17</span>         from .fixed_sequence_excitation import fixed_sequence_excitation
+<span id="L18">  18</span> 
+<span id="L19">  19</span>         original_excitation = fixed_sequence_excitation(state, time_s)
+<span id="L20">  20</span>     else:
+<span id="L21">  21</span>         # Find how far time has progressed through the input cycle.
+<span id="L22">  22</span>         cycle_fraction = time_s / state[&quot;settings&quot;][&quot;period_s&quot;]
+<span id="L23">  23</span>         # Interpolate neighboring rows of the repeated excitation table.
+<span id="L24">  24</span>         original_excitation = periodic_interpolate(
+<span id="L25">  25</span>             state[&quot;excitation_table&quot;],
+<span id="L26">  26</span>             cycle_fraction,
+<span id="L27">  27</span>         )
+<span id="L28">  28</span>         # Keep excitation inside the defined 0-to-1 range.
+<span id="L29">  29</span>         original_excitation = np.clip(original_excitation, 0.0, 1.0)
+<span id="L30">  30</span>     # The prescribed input is independent of the resulting motion and forces.
+<span id="L31">  31</span>     return original_excitation
+</pre></main></body></html>

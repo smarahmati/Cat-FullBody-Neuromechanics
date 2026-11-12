@@ -1,0 +1,1661 @@
+[
+  {
+    "file": "Data/Experimental_Reference_Data/Ground_Reaction_Forces/grf.tsv",
+    "bytes": 14386,
+    "sha256": "5981d71003d52f9e9618317cfe03646bc631cc88cfd11af97caaad626010e1a0",
+    "git_included": true,
+    "role": "Reference force cycles for all four paws, in newtons. Column labels identify limb, axis and whether the reference is recorded or assumed."
+  },
+  {
+    "file": "Data/Experimental_Reference_Data/Ground_Reaction_Forces/index.html",
+    "bytes": 1141,
+    "sha256": "c12fe2422c535cc3fce1a9353ee1662bbaa96a5d213ba78f91745818696ec285",
+    "git_included": true,
+    "role": "index."
+  },
+  {
+    "file": "Data/Experimental_Reference_Data/INPUT_PROVENANCE.json",
+    "bytes": 10202,
+    "sha256": "eeecd6fc84821d476b5b62feadb08306997cc7ef2684f40837e2e7aefe31cf29",
+    "git_included": true,
+    "role": "Experimental origin and assumptions for the reference signals."
+  },
+  {
+    "file": "Data/Experimental_Reference_Data/Inverse_Estimates/excitation.tsv",
+    "bytes": 75298,
+    "sha256": "1fe60d3ab3f0c8cc3f615dfb9cc2b4feb9d3a091805ddd1e60c8790226ef0a98",
+    "git_included": true,
+    "role": "Source inverse-estimated excitation reference, dimensionless; the applied 104-channel input is in Muscle_Excitation_Input/excitation_cycle.tsv."
+  },
+  {
+    "file": "Data/Experimental_Reference_Data/Inverse_Estimates/index.html",
+    "bytes": 1360,
+    "sha256": "33863861387f234ed50c49d28bd97d19f32208362c278bd50097e22ab236ef44",
+    "git_included": true,
+    "role": "index."
+  },
+  {
+    "file": "Data/Experimental_Reference_Data/Inverse_Estimates/optimized_activation.tsv",
+    "bytes": 89444,
+    "sha256": "5349955a4d6c853e3750712310d28d940bb96314367f5d0dc654ec4d463b54d8",
+    "git_included": true,
+    "role": "Source inverse-estimated activation reference, dimensionless; it is not activation calculated by the current forward run."
+  },
+  {
+    "file": "Data/Experimental_Reference_Data/Joint_Kinematics/hip_x.tsv",
+    "bytes": 3967,
+    "sha256": "fdd7436229a0c16ba2778db026afcb46c195353c54d1a2c5d430028c8c1d23a9",
+    "git_included": true,
+    "role": "Reference hip position along the direction of progression, in metres."
+  },
+  {
+    "file": "Data/Experimental_Reference_Data/Joint_Kinematics/hip_z.tsv",
+    "bytes": 3821,
+    "sha256": "fad3d5e4977beb797720140dfac56dc680e72de18fbaf35b3f130d08fe2cf2d3",
+    "git_included": true,
+    "role": "Reference hip height in metres."
+  },
+  {
+    "file": "Data/Experimental_Reference_Data/Joint_Kinematics/index.html",
+    "bytes": 2237,
+    "sha256": "065da72da1b0767e4a05772d6952f9ab6910469f125e47430c8c369f5d9833c3",
+    "git_included": true,
+    "role": "index."
+  },
+  {
+    "file": "Data/Experimental_Reference_Data/Joint_Kinematics/joint_q.tsv",
+    "bytes": 34452,
+    "sha256": "7081397aecaf9c2363e47539106c0d6dbe839309b1f3b17445c1e75933b520e8",
+    "git_included": true,
+    "role": "Reference joint-coordinate cycles in radians. Use the documented anatomical conversion before comparing them with angle plots in degrees."
+  },
+  {
+    "file": "Data/Experimental_Reference_Data/Joint_Kinematics/left_joint_correction_rad.tsv",
+    "bytes": 20575,
+    "sha256": "cf3087eaac44ddac092ced882bd3c4e799f08f45f83d74c4ee7e9e6bfc134ec0",
+    "git_included": true,
+    "role": "Saved left-side assembly correction in radians used with the assumed mirrored hindlimb reference; this is not a measured left-side recording."
+  },
+  {
+    "file": "Data/Experimental_Reference_Data/Joint_Kinematics/pelvis_angle.tsv",
+    "bytes": 3844,
+    "sha256": "29a8a73261d27efd4bafd53217abf36275a7d9dd89959171c3460abb23ed01db",
+    "git_included": true,
+    "role": "Reference pelvis orientation in radians."
+  },
+  {
+    "file": "Data/Experimental_Reference_Data/Joint_Kinematics/pelvis_angular_velocity.tsv",
+    "bytes": 3866,
+    "sha256": "7603920a9c88c51dd95dd2495bfa87c4d0d5b5281378829cb89abf15e90e44fd",
+    "git_included": true,
+    "role": "Reference pelvis angular velocity in rad/s."
+  },
+  {
+    "file": "Data/Experimental_Reference_Data/Joint_Kinematics/scapula_angle.tsv",
+    "bytes": 3742,
+    "sha256": "5ed3772c7cc7217770729fb72662b7079aece436bd53cf343e375b021697f14b",
+    "git_included": true,
+    "role": "Reference scapula orientation in radians."
+  },
+  {
+    "file": "Data/Experimental_Reference_Data/Joint_Kinematics/scapula_angle_by_side.tsv",
+    "bytes": 5677,
+    "sha256": "ece0c947aacecc91f761be5db9738b0318ba00b6383136e5059d9128d260dfcc",
+    "git_included": true,
+    "role": "Side-specific scapula reference orientations in radians."
+  },
+  {
+    "file": "Data/Experimental_Reference_Data/Joint_Kinematics/shoulder_z.tsv",
+    "bytes": 3843,
+    "sha256": "c9374fc3eba60c81dc5f48e51936bfdca77369fe85293c82744969331ae530d4",
+    "git_included": true,
+    "role": "Reference shoulder height in metres."
+  },
+  {
+    "file": "Data/Experimental_Reference_Data/Joint_Kinematics/shoulder_z_by_side.tsv",
+    "bytes": 5880,
+    "sha256": "7acafe71f8ade9e6b6f2941416b70beac7446342292d840fa1d244f2e01dbc47",
+    "git_included": true,
+    "role": "Side-specific reference shoulder heights in metres."
+  },
+  {
+    "file": "Data/Experimental_Reference_Data/Joint_Moments/index.html",
+    "bytes": 1032,
+    "sha256": "feb56b45165e484facbc5563d547c78438f58dd32eaf5ab97e5f4532aece5da3",
+    "git_included": true,
+    "role": "index."
+  },
+  {
+    "file": "Data/Experimental_Reference_Data/Recorded_EMG/EMG_PROVENANCE.json",
+    "bytes": 3433,
+    "sha256": "bb5446a1bf7d3fdf8097385e7398edf4eb9fdbd84eee2ecbd89af1c7464c7fbe",
+    "git_included": true,
+    "role": "Identifies the EMG source, channel correspondence and normalization/availability limitations."
+  },
+  {
+    "file": "Data/Experimental_Reference_Data/Recorded_EMG/FHL_peak_normalized.tsv",
+    "bytes": 3503,
+    "sha256": "a8478795b13ad314d9da02371370fc533778f477f54660b48e4eeffb0a2af9c3",
+    "git_included": true,
+    "role": "Peak-normalized flexor hallucis longus EMG envelope used for shape comparison."
+  },
+  {
+    "file": "Data/Experimental_Reference_Data/Recorded_EMG/index.html",
+    "bytes": 1476,
+    "sha256": "c422386645e88b42cd868ec888a528dcc39646a619bf26fcf75f37bb34015cb8",
+    "git_included": true,
+    "role": "index."
+  },
+  {
+    "file": "Data/Experimental_Reference_Data/Recorded_EMG/phase_aligned_available_EMG.csv",
+    "bytes": 168018,
+    "sha256": "695ed3254fefb57ccee7a8fee1f3626e95db8df1a64d20e8009169017c93b3d9",
+    "git_included": true,
+    "role": "Available peak-normalized EMG envelopes on the comparison phase grid. Only channels with available source EMG are represented."
+  },
+  {
+    "file": "Data/Experimental_Reference_Data/TABLE_MANIFEST.json",
+    "bytes": 8347,
+    "sha256": "ca1bf31de0a00cf9fc690d4c383b7603d2115895e1485347e23e3c4bdedf8d3f",
+    "git_included": true,
+    "role": "Reference file paths, units, array shapes and phase convention."
+  },
+  {
+    "file": "Data/Experimental_Reference_Data/aligned_forelimb_EMG_individual_cycles.npz",
+    "bytes": 671114,
+    "sha256": "5038ce722c5b8dc7fd9325f1c0c7a5bc4e5957c3ab244520418776758dc4cbc0",
+    "git_included": true,
+    "role": "Available individual forelimb EMG cycles on the comparison phase grid; the source recordings are from a separate study."
+  },
+  {
+    "file": "Data/Experimental_Reference_Data/hindlimb_flexor_hallucis_longus_emg.npz",
+    "bytes": 2621,
+    "sha256": "bd1bc25a8c142efa83f4aba23dba15717375db56e6636e66feb3e6b4d507c1c5",
+    "git_included": true,
+    "role": "Numerical flexor hallucis longus EMG reference, with its source sampling information. Used for waveform comparison, not as an imposed activation state."
+  },
+  {
+    "file": "Data/Experimental_Reference_Data/hindlimb_forelimb_reference_cycles.npz",
+    "bytes": 104042,
+    "sha256": "9dfba2c1e7325d774336fac3486ff8ecc967198d2f4b51824ca39130685f5b2a",
+    "git_included": true,
+    "role": "Named arrays of the hindlimb and forelimb comparison cycles, including their phase convention and reference signals."
+  },
+  {
+    "file": "Data/Experimental_Reference_Data/hindlimb_pose_initialization.npz",
+    "bytes": 102004,
+    "sha256": "975cdd8aaa5bbc872bc1c06f833e38e36382895b7836459e550d92edb9ed67c8",
+    "git_included": true,
+    "role": "Source arrays for constructing the initial hindlimb pose. The applied starting state is recorded in Model_Parameters/initial_state.py."
+  },
+  {
+    "file": "Data/Experimental_Reference_Data/index.html",
+    "bytes": 3704,
+    "sha256": "4a642e93704942b6e820aaae3650d566ad8262d0d833666cd40dd6df34d988b8",
+    "git_included": true,
+    "role": "index."
+  },
+  {
+    "file": "Data/Experimental_Reference_Data/paw_contact_initialization.npz",
+    "bytes": 1346494,
+    "sha256": "10ddcef7b9c81b9e87ebabe1969d33ef93e6f24aba1a106242e8bfe67e36c547",
+    "git_included": true,
+    "role": "Stored source arrays associated with preparing paw contact and the starting state; the live run calculates forces from its current mechanics."
+  },
+  {
+    "file": "Data/Experimental_Reference_Data/right_hindlimb_walking_reference.npz",
+    "bytes": 43492,
+    "sha256": "157b7da50dbd87eab5cd60266dd06e5b141556cd186624a247d85c2dd0753b56",
+    "git_included": true,
+    "role": "Right hindlimb walking reference arrays associated with the selected source trial."
+  },
+  {
+    "file": "Data/Model_Parameters/APPLIED_PARAMETER_READBACK.json",
+    "bytes": 247529,
+    "sha256": "b4db4b90c2564fdf4f264f52335354aee3e11368137ba06a4b15650148b7021f",
+    "git_included": true,
+    "role": "Parameter values read back from the assembled mechanical model, for checking what was actually applied."
+  },
+  {
+    "file": "Data/Model_Parameters/ATTACHMENT_MAP.html",
+    "bytes": 137223,
+    "sha256": "5cd0a72100ec70d951371a1029239534fea666c25e9dec9c4058180d54749814",
+    "git_included": true,
+    "role": "Readable map of muscle origins, insertions and intermediate routing points, with their body-local coordinates."
+  },
+  {
+    "file": "Data/Model_Parameters/ATTACHMENT_MAP.json",
+    "bytes": 247470,
+    "sha256": "e1ebedeeeda7b03960b289f75f8e04fc576630dec2b9989a39acb5a2926ce9cc",
+    "git_included": true,
+    "role": "Machine-readable muscle attachment and routing coordinates corresponding to the anatomical map."
+  },
+  {
+    "file": "Data/Model_Parameters/PARAMETER_PROVENANCE.json",
+    "bytes": 1716153,
+    "sha256": "221109a3e277dabc9e72444782a507bddbb06614f17b69d2138a8d180e4c8b87",
+    "git_included": true,
+    "role": "Verified source values, applied values, units and scientific attribution."
+  },
+  {
+    "file": "Data/Model_Parameters/activation.py",
+    "bytes": 77018,
+    "sha256": "fb887f250f7dc623357cbe08113323bc46d9167f3206f0496943f72b3f8a768e",
+    "git_included": true,
+    "role": "Activation and deactivation time constants governing how quickly excitation changes muscle activation. Values are in seconds."
+  },
+  {
+    "file": "Data/Model_Parameters/attachments.py",
+    "bytes": 248402,
+    "sha256": "5ab08119a0ec6cdb6c501a7e4f8d74404c81333994877410f9dcafe5298a39b7",
+    "git_included": true,
+    "role": "Muscle origins, insertions and intermediate attachment coordinates relative to the named bones. Changing a point changes the muscle path, length and moment arms."
+  },
+  {
+    "file": "Data/Model_Parameters/bodies.py",
+    "bytes": 40539,
+    "sha256": "fae70626fae7416dbe8f5a513877c87f37a33bcb2c25801fe51270c1f2ac25cb",
+    "git_included": true,
+    "role": "Body mass, center-of-mass location and inertia used in coupled skeletal dynamics."
+  },
+  {
+    "file": "Data/Model_Parameters/contact.py",
+    "bytes": 43260,
+    "sha256": "efcaa083b2548bd1c6a56c388a6e622e5b9ce20066d26b3b158308b80595472f",
+    "git_included": true,
+    "role": "Paw-pad geometry, normal stiffness and dissipation, tangential stiffness and friction parameters used to predict GRFs."
+  },
+  {
+    "file": "Data/Model_Parameters/environment.py",
+    "bytes": 880,
+    "sha256": "f81582a06f818c429503dbeb01ebffcefbbedc8fe4c0d0da73c0d51e143b3aae",
+    "git_included": true,
+    "role": "Environmental settings such as gravity and ground properties."
+  },
+  {
+    "file": "Data/Model_Parameters/formulation_constants.py",
+    "bytes": 1875,
+    "sha256": "54be4d53dcc20b7e14bff15f04ce3e0b9819e41c73c3fd9cd1c60efbb67c0ba4",
+    "git_included": true,
+    "role": "Shared constants in the implemented activation, muscle–tendon and contact equations."
+  },
+  {
+    "file": "Data/Model_Parameters/index.html",
+    "bytes": 4131,
+    "sha256": "35c0aa204367559c354d02bb03f32535a03a5b0b6f3fb12c445ec59f9aa79c9d",
+    "git_included": true,
+    "role": "index."
+  },
+  {
+    "file": "Data/Model_Parameters/initial_state.py",
+    "bytes": 31963,
+    "sha256": "0acae334896ba0de1d0a4d80baa2fd959ce148952fe26ba3929a5d7beabcbf0e",
+    "git_included": true,
+    "role": "Starting mechanical and internal states applied once when a forward run begins."
+  },
+  {
+    "file": "Data/Model_Parameters/joints.py",
+    "bytes": 46441,
+    "sha256": "5c1b48a721a45769ba5ee16233f215afc9c482c1ccd7a96d8f3a671123d53315",
+    "git_included": true,
+    "role": "Joint properties, including mechanical limits and passive stiffness or damping where specified."
+  },
+  {
+    "file": "Data/Model_Parameters/model_parameter_values.csv",
+    "bytes": 1757341,
+    "sha256": "6c26f2ecdb531b9300778f2dcec42ee4b54520221450f53f2d90b465ad9b3c75",
+    "git_included": true,
+    "role": "Human-readable table of source values, applied values, units and explanations of parameter differences."
+  },
+  {
+    "file": "Data/Model_Parameters/muscle_tendon.py",
+    "bytes": 343396,
+    "sha256": "f36033369d707d888655cd24058f0a334d73f27c1fa1fda4dbf4145ccfa6ff99",
+    "git_included": true,
+    "role": "Per-channel strength, optimal fiber length, tendon slack length, pennation, damping and force-law settings. Units and source values appear beside the applied entries."
+  },
+  {
+    "file": "Data/Model_Parameters/numerical_parameters.py",
+    "bytes": 921,
+    "sha256": "3cdf058f4a5ee4541af2582916b0c0d4a82b7e0eb95de2648111ab5183f01545",
+    "git_included": true,
+    "role": "Integration and sampling settings, including time steps and numerical tolerances."
+  },
+  {
+    "file": "Data/Model_Parameters/routing.py",
+    "bytes": 100214,
+    "sha256": "cbfe6dbf799dc7c3b61f457697e1c9b9d1f509d219e87cd252d871f6f679d26e",
+    "git_included": true,
+    "role": "Rules defining how muscle paths follow the articulated skeleton."
+  },
+  {
+    "file": "Data/Model_Parameters/simulation_settings.py",
+    "bytes": 2246,
+    "sha256": "18f2092cb5ec28dabb34cf809a772074909d0cb4bf3e8d2c1bc484b3c4da1f66",
+    "git_included": true,
+    "role": "Run configuration and fixed-excitation timing settings."
+  },
+  {
+    "file": "Data/Model_Parameters/wrapping.py",
+    "bytes": 68232,
+    "sha256": "72ca262ae58c4f641e7849e32c181ccc389469305c2c56a832cec4658f265784",
+    "git_included": true,
+    "role": "Geometric wrapping settings where supported by the configured muscle paths."
+  },
+  {
+    "file": "Data/Muscle_Excitation_Input/excitation_cycle.tsv",
+    "bytes": 2086601,
+    "sha256": "02263ad695d2e00c24c6ec0824921b9705098fead93bee8e9ce61d786fc82948",
+    "git_included": true,
+    "role": "One prescribed cycle: phase plus 104 dimensionless excitation columns."
+  },
+  {
+    "file": "Data/Muscle_Excitation_Input/index.html",
+    "bytes": 1554,
+    "sha256": "5747efbdbca9712d788b8126b915930ed1ba7f3d5b208fcaad41e4494dff5add",
+    "git_included": true,
+    "role": "index."
+  },
+  {
+    "file": "Data/Muscle_Excitation_Input/muscle_input_dictionary.csv",
+    "bytes": 25076,
+    "sha256": "a90a00fd3e95b047fa9d85e57745bc76a8e5efd02244cd46838815b5c83bdb53",
+    "git_included": true,
+    "role": "Channel identifiers, limb, anatomy, function and source/measurement status."
+  },
+  {
+    "file": "Data/Original_Study_Data/additional_muscles/Cluster_Function.mat",
+    "bytes": 307,
+    "sha256": "0a4438e7c1ec7fa346bc492a09b5cafc73d8c94c30a7a11e283e25bca1747a3e",
+    "git_included": true,
+    "role": "Original MATLAB numerical data. Open with MATLAB or scipy.io.loadmat to inspect named variables; source units and conventions follow the associated study code."
+  },
+  {
+    "file": "Data/Original_Study_Data/additional_muscles/MuscleMPScaled.mat",
+    "bytes": 4140,
+    "sha256": "54f4c69fc1e3b9dad64b17d5d6aa98b273f771ddad9fddfedfc10e5a26b787a0",
+    "git_included": true,
+    "role": "Original MATLAB numerical data. Open with MATLAB or scipy.io.loadmat to inspect named variables; source units and conventions follow the associated study code."
+  },
+  {
+    "file": "Data/Original_Study_Data/additional_muscles/MusculoskeletalData_9_Groups.m",
+    "bytes": 11817,
+    "sha256": "0acc82da5c23e08b6325d7e59b4fae12c6586eb1ca57d92f1ae8820b29790436",
+    "git_included": true,
+    "role": "Original MATLAB source for the cited study. Open it to inspect its equations, variable names and source parameter conventions."
+  },
+  {
+    "file": "Data/Original_Study_Data/additional_muscles/TomMuscleMP.mat",
+    "bytes": 4140,
+    "sha256": "a639286df14d7e291f53232184836c7d633d7008e0bafa49ce58a6bbc74297bb",
+    "git_included": true,
+    "role": "Original MATLAB numerical data. Open with MATLAB or scipy.io.loadmat to inspect named variables; source units and conventions follow the associated study code."
+  },
+  {
+    "file": "Data/Original_Study_Data/additional_muscles/TomMusculoskeletalData.mat",
+    "bytes": 7284,
+    "sha256": "63ea07dc8006909af2027ab466ba6c0bfe6ecee288a692f2ba8a2904d38ae4d7",
+    "git_included": true,
+    "role": "Original MATLAB numerical data. Open with MATLAB or scipy.io.loadmat to inspect named variables; source units and conventions follow the associated study code."
+  },
+  {
+    "file": "Data/Original_Study_Data/additional_muscles/fore_individual_architecture.json",
+    "bytes": 46503,
+    "sha256": "3bf3d2a58656efe00cf466cb235635a6d3c2a4306608f800cf4ca1144b1e558f",
+    "git_included": true,
+    "role": "Original study source record documenting its data or anatomical calculations; retained for scientific traceability."
+  },
+  {
+    "file": "Data/Original_Study_Data/additional_muscles/index.html",
+    "bytes": 2237,
+    "sha256": "71ba1eca6f1610b584af8cfbf0a3322b351c49ea1ed168014d5a23d4ed2c1d2e",
+    "git_included": true,
+    "role": "Original study source record documenting its data or anatomical calculations; retained for scientific traceability."
+  },
+  {
+    "file": "Data/Original_Study_Data/forelimb/A1_TAll_Change_Format_To_VerticalActivations.m",
+    "bytes": 907,
+    "sha256": "fa10ca1aa87c787028a5f0477d33768e5ba9b7a0a21938b058ced9d8a7c6ea42",
+    "git_included": true,
+    "role": "Original MATLAB source for the cited study. Open it to inspect its equations, variable names and source parameter conventions."
+  },
+  {
+    "file": "Data/Original_Study_Data/forelimb/A2_EMGs3_RepresentativeMuscles_WithoutSecondAxis.m",
+    "bytes": 19362,
+    "sha256": "4926296cdd3ac7a03df8fea5997f5f94f575c946c29b2bc15613b32c0f99f7f1",
+    "git_included": true,
+    "role": "Original MATLAB source for the cited study. Open it to inspect its equations, variable names and source parameter conventions."
+  },
+  {
+    "file": "Data/Original_Study_Data/forelimb/Activations_9Groups.mat",
+    "bytes": 7662,
+    "sha256": "8c660ae3489a37240a367390a5c8a170206c7f67a8b2aff0162b4260e01954f3",
+    "git_included": true,
+    "role": "Original inverse-analysis activation estimates for the trial number in the filename; not a measured EMG recording."
+  },
+  {
+    "file": "Data/Original_Study_Data/forelimb/CatMotion.m",
+    "bytes": 77918,
+    "sha256": "8e0695309d90e5c9a445e64360627ae315f7d09271fd735948ba2279f69d9ee6",
+    "git_included": true,
+    "role": "Original MATLAB source for the cited study. Open it to inspect its equations, variable names and source parameter conventions."
+  },
+  {
+    "file": "Data/Original_Study_Data/forelimb/ForeLimbMuscles_EMG_Vertical.xlsx",
+    "bytes": 1245902,
+    "sha256": "42ff11fc2c5a334bd3edfa1ccbcb3e7ee05d2bed72a13550cb1564a1d061a371",
+    "git_included": true,
+    "role": "Original study source record documenting its data or anatomical calculations; retained for scientific traceability."
+  },
+  {
+    "file": "Data/Original_Study_Data/forelimb/MTForce.m",
+    "bytes": 2663,
+    "sha256": "e1ae4d40469f6250095302f1227c9860c7486b54bdcfa862d6b9dff3566a329e",
+    "git_included": true,
+    "role": "Original MATLAB source for the cited study. Open it to inspect its equations, variable names and source parameter conventions."
+  },
+  {
+    "file": "Data/Original_Study_Data/forelimb/MuscleLengthVelocityMomentArm_9Groups.mat",
+    "bytes": 22893,
+    "sha256": "5f9c070348f24c18cc3e5c57fa28e163915838aac2266b2159bd926c138a38a1",
+    "git_included": true,
+    "role": "Original MATLAB numerical data. Open with MATLAB or scipy.io.loadmat to inspect named variables; source units and conventions follow the associated study code."
+  },
+  {
+    "file": "Data/Original_Study_Data/forelimb/Results_Function.m",
+    "bytes": 6124,
+    "sha256": "5de866a1ead7a7cb7f20a1e20c07e60a565c9919287b999ca3da18a7d1b711f5",
+    "git_included": true,
+    "role": "Original MATLAB source for the cited study. Open it to inspect its equations, variable names and source parameter conventions."
+  },
+  {
+    "file": "Data/Original_Study_Data/forelimb/assembly_provenance.json",
+    "bytes": 10506,
+    "sha256": "73efdd56b461312f8c756abcb791b19d7539035a82525df30839b3463e5f0e1a",
+    "git_included": true,
+    "role": "Original study source record documenting its data or anatomical calculations; retained for scientific traceability."
+  },
+  {
+    "file": "Data/Original_Study_Data/forelimb/forelimb_9groups_parameters.json",
+    "bytes": 656347,
+    "sha256": "36f28945b6a5cbe115b520acd60c2adce5e184808b1fdc6756fc58c262446713",
+    "git_included": true,
+    "role": "Original study source record documenting its data or anatomical calculations; retained for scientific traceability."
+  },
+  {
+    "file": "Data/Original_Study_Data/forelimb/geometry_audit/Results_4.m",
+    "bytes": 23006,
+    "sha256": "1ebad4f86e938b3dd6acfe238e7e8d15c9039e123c3aa117b7f7411190ae7c15",
+    "git_included": true,
+    "role": "Original MATLAB source for the cited study. Open it to inspect its equations, variable names and source parameter conventions."
+  },
+  {
+    "file": "Data/Original_Study_Data/forelimb/geometry_audit/index.html",
+    "bytes": 1086,
+    "sha256": "ac8f0c297fc63d453562c0c22cb63b65797cdb7f70734ca7831d5547b1c72f40",
+    "git_included": true,
+    "role": "Original study source record documenting its data or anatomical calculations; retained for scientific traceability."
+  },
+  {
+    "file": "Data/Original_Study_Data/forelimb/index.html",
+    "bytes": 3362,
+    "sha256": "bce46969a910be4afaabcaa859056e26a46baf685fd65ad5e09d297f4b2663eb",
+    "git_included": true,
+    "role": "Original study source record documenting its data or anatomical calculations; retained for scientific traceability."
+  },
+  {
+    "file": "Data/Original_Study_Data/forelimb/native_length_validation.json",
+    "bytes": 987,
+    "sha256": "41ed193c9db407b738f66c6b5924f9da3c64c69c08a99ba79b529877f4f4da19",
+    "git_included": true,
+    "role": "Original study source record documenting its data or anatomical calculations; retained for scientific traceability."
+  },
+  {
+    "file": "Data/Original_Study_Data/hindlimb/MTForce.m",
+    "bytes": 1919,
+    "sha256": "6780e101bbf8b8d54e7279780a8e21d2b0f081bbf3e0109560ce66717fb5581d",
+    "git_included": true,
+    "role": "Original MATLAB source for the cited study. Open it to inspect its equations, variable names and source parameter conventions."
+  },
+  {
+    "file": "Data/Original_Study_Data/hindlimb/Results_Function.m",
+    "bytes": 21361,
+    "sha256": "45c9989a394f77c8b43297fc0966db44b98c6523708b684143cdc754d84dff87",
+    "git_included": true,
+    "role": "Original MATLAB source for the cited study. Open it to inspect its equations, variable names and source parameter conventions."
+  },
+  {
+    "file": "Data/Original_Study_Data/hindlimb/Source_M2_Results_Function.m",
+    "bytes": 30486,
+    "sha256": "b2d633d1d6578cdc36c670d24a6994b5374f7cbd314149d38dc930040f442c69",
+    "git_included": true,
+    "role": "Original MATLAB source for the cited study. Open it to inspect its equations, variable names and source parameter conventions."
+  },
+  {
+    "file": "Data/Original_Study_Data/hindlimb/data_audit.json",
+    "bytes": 4750,
+    "sha256": "2e840d8be8d1c10c1d2e8e348c6a40cf7015648767a1e599758faa25a6ce833b",
+    "git_included": true,
+    "role": "Original study source record documenting its data or anatomical calculations; retained for scientific traceability."
+  },
+  {
+    "file": "Data/Original_Study_Data/hindlimb/geometry_M2/CatsSegmentData.mat",
+    "bytes": 1427,
+    "sha256": "67b4c35deadd3bbc479cae8946cd8a27a0380be97a618d21d091c575c16a62cd",
+    "git_included": true,
+    "role": "Original MATLAB numerical data. Open with MATLAB or scipy.io.loadmat to inspect named variables; source units and conventions follow the associated study code."
+  },
+  {
+    "file": "Data/Original_Study_Data/hindlimb/geometry_M2/MT5_TibialisAnterior.m",
+    "bytes": 30862,
+    "sha256": "2997675653eaf561e75871a529f736d03d0e5d7c7b1e085ef30163728ffabecd",
+    "git_included": true,
+    "role": "Original MATLAB source for the cited study. Open it to inspect its equations, variable names and source parameter conventions."
+  },
+  {
+    "file": "Data/Original_Study_Data/hindlimb/geometry_M2/MTGP_activation.mat",
+    "bytes": 1177,
+    "sha256": "8f55e94f35a4e28f4d0f634a1cd5c9823f2d4a92208317b2d2799f2e40c3e80d",
+    "git_included": true,
+    "role": "Original MATLAB numerical data. Open with MATLAB or scipy.io.loadmat to inspect named variables; source units and conventions follow the associated study code."
+  },
+  {
+    "file": "Data/Original_Study_Data/hindlimb/geometry_M2/MTGP_geometry.mat",
+    "bytes": 1177,
+    "sha256": "8f55e94f35a4e28f4d0f634a1cd5c9823f2d4a92208317b2d2799f2e40c3e80d",
+    "git_included": true,
+    "role": "Original MATLAB numerical data. Open with MATLAB or scipy.io.loadmat to inspect named variables; source units and conventions follow the associated study code."
+  },
+  {
+    "file": "Data/Original_Study_Data/hindlimb/geometry_M2/MTTwoJoints_JointAngles.m",
+    "bytes": 7375,
+    "sha256": "6a6654d07b200afd657b782acc5672a216dd242b40e2331038b2e6ebe68aba8e",
+    "git_included": true,
+    "role": "Original MATLAB source for the cited study. Open it to inspect its equations, variable names and source parameter conventions."
+  },
+  {
+    "file": "Data/Original_Study_Data/hindlimb/geometry_M2/index.html",
+    "bytes": 1981,
+    "sha256": "842ea86cc18839480f562f53e165591052ca50269030fb127fc8ce382d17978a",
+    "git_included": true,
+    "role": "Original study source record documenting its data or anatomical calculations; retained for scientific traceability."
+  },
+  {
+    "file": "Data/Original_Study_Data/hindlimb/index.html",
+    "bytes": 3450,
+    "sha256": "dfc1683847da8545a585c8a5715ade27a57d20d48945cab2a5466af5f5f47896",
+    "git_included": true,
+    "role": "Original study source record documenting its data or anatomical calculations; retained for scientific traceability."
+  },
+  {
+    "file": "Data/Original_Study_Data/hindlimb/matched_trial/Activations_46.mat",
+    "bytes": 9257,
+    "sha256": "5c514ead49a7bcdc0bac52b71d2d5bcb91ddfd19863d1fab1bd128a707bd49f9",
+    "git_included": true,
+    "role": "Original inverse-analysis activation estimates for the trial number in the filename; not a measured EMG recording."
+  },
+  {
+    "file": "Data/Original_Study_Data/hindlimb/matched_trial/CatsMassLengthData.mat",
+    "bytes": 1196,
+    "sha256": "2b8c5a1a4562862c51ff3522c78bd84fe49f6bd27db93c781a4ca07812d2a915",
+    "git_included": true,
+    "role": "Original MATLAB numerical data. Open with MATLAB or scipy.io.loadmat to inspect named variables; source units and conventions follow the associated study code."
+  },
+  {
+    "file": "Data/Original_Study_Data/hindlimb/matched_trial/MTLengthVelocityMomentArm_46.mat",
+    "bytes": 24681,
+    "sha256": "14bc7f345f3260d2ad5dcf57ac539cf02e1135e3f831f7e1bdcb547e6003cd1f",
+    "git_included": true,
+    "role": "Original MATLAB numerical data. Open with MATLAB or scipy.io.loadmat to inspect named variables; source units and conventions follow the associated study code."
+  },
+  {
+    "file": "Data/Original_Study_Data/hindlimb/matched_trial/MTMP.mat",
+    "bytes": 1551,
+    "sha256": "2b1be91ed91162bfb3146543f7f8e4e4d0fa8180ec5954693ce353309552cb53",
+    "git_included": true,
+    "role": "Original MATLAB numerical data. Open with MATLAB or scipy.io.loadmat to inspect named variables; source units and conventions follow the associated study code."
+  },
+  {
+    "file": "Data/Original_Study_Data/hindlimb/matched_trial/MaxMTLengthCats.mat",
+    "bytes": 1280,
+    "sha256": "2808fb343a0ebbcb1d38334d69d03f5f624429c6e4b2a4eb628b1f2a92a56c43",
+    "git_included": true,
+    "role": "Original MATLAB numerical data. Open with MATLAB or scipy.io.loadmat to inspect named variables; source units and conventions follow the associated study code."
+  },
+  {
+    "file": "Data/Original_Study_Data/hindlimb/matched_trial/MaxMTLength_ref.mat",
+    "bytes": 1029,
+    "sha256": "73f5570ee90277ab65f1d7479f0321eb7991ea5fd0b34f9bf41c3219ffbd61d5",
+    "git_included": true,
+    "role": "Original MATLAB numerical data. Open with MATLAB or scipy.io.loadmat to inspect named variables; source units and conventions follow the associated study code."
+  },
+  {
+    "file": "Data/Original_Study_Data/hindlimb/matched_trial/Results_Function.m",
+    "bytes": 30486,
+    "sha256": "b2d633d1d6578cdc36c670d24a6994b5374f7cbd314149d38dc930040f442c69",
+    "git_included": true,
+    "role": "Original MATLAB source for the cited study. Open it to inspect its equations, variable names and source parameter conventions."
+  },
+  {
+    "file": "Data/Original_Study_Data/hindlimb/matched_trial/index.html",
+    "bytes": 2417,
+    "sha256": "ce5956857fa5c0f3506e88775c82913fcabd4b4a7227ee000813fe6ca9cafad5",
+    "git_included": true,
+    "role": "Original study source record documenting its data or anatomical calculations; retained for scientific traceability."
+  },
+  {
+    "file": "Data/Original_Study_Data/hindlimb/matched_trial_geometry.json",
+    "bytes": 5521,
+    "sha256": "f7db2ab7e3c468a500dcd0e0d0510247e644d71cf482abdd3c724b7732ef8b18",
+    "git_included": true,
+    "role": "Geometry values associated with the selected hindlimb trial; used to identify the source dimensions and muscle-length conventions."
+  },
+  {
+    "file": "Data/Original_Study_Data/hindlimb/model3_parameters.json",
+    "bytes": 7579,
+    "sha256": "8b182ef7f2bd92dd1cc896d3914725e1f39086807ae16bbcb9bab894b684527e",
+    "git_included": true,
+    "role": "Original study source record documenting its data or anatomical calculations; retained for scientific traceability."
+  },
+  {
+    "file": "Data/Original_Study_Data/hindlimb/optimized/Brad/Activations_01.mat",
+    "bytes": 9260,
+    "sha256": "5874a68d95689125c12873d19de88ea1c4f01e0bd516fc00874a0fb4bd65bd62",
+    "git_included": true,
+    "role": "Original inverse-analysis activation estimates for the trial number in the filename; not a measured EMG recording."
+  },
+  {
+    "file": "Data/Original_Study_Data/hindlimb/optimized/Brad/Activations_02.mat",
+    "bytes": 9262,
+    "sha256": "8acaf0531d1ebc6b04b16bed24b4de25ebdbfe2759518422b0b98e285e5d1c27",
+    "git_included": true,
+    "role": "Original inverse-analysis activation estimates for the trial number in the filename; not a measured EMG recording."
+  },
+  {
+    "file": "Data/Original_Study_Data/hindlimb/optimized/Brad/Activations_03.mat",
+    "bytes": 9243,
+    "sha256": "6e0ed9d31164a2a7ef1e8816007f5ee0ce1a2a0965803db9a61b828831a0abb6",
+    "git_included": true,
+    "role": "Original inverse-analysis activation estimates for the trial number in the filename; not a measured EMG recording."
+  },
+  {
+    "file": "Data/Original_Study_Data/hindlimb/optimized/Brad/Activations_04.mat",
+    "bytes": 9249,
+    "sha256": "e6dddcbf833ff70a85e5f92df5771cf24a09776021e96da9e00ac849c3c0351f",
+    "git_included": true,
+    "role": "Original inverse-analysis activation estimates for the trial number in the filename; not a measured EMG recording."
+  },
+  {
+    "file": "Data/Original_Study_Data/hindlimb/optimized/Brad/Activations_05.mat",
+    "bytes": 9255,
+    "sha256": "e81ee742d4b90fa07e54e506d0479a13edd3e0cda6da267c70eafd1eed72910e",
+    "git_included": true,
+    "role": "Original inverse-analysis activation estimates for the trial number in the filename; not a measured EMG recording."
+  },
+  {
+    "file": "Data/Original_Study_Data/hindlimb/optimized/Brad/Activations_06.mat",
+    "bytes": 9245,
+    "sha256": "1ddbe699718eed79a5e8f0edf28edf70a43903af615e1d91075ebdd7c4573513",
+    "git_included": true,
+    "role": "Original inverse-analysis activation estimates for the trial number in the filename; not a measured EMG recording."
+  },
+  {
+    "file": "Data/Original_Study_Data/hindlimb/optimized/Brad/Activations_07.mat",
+    "bytes": 9256,
+    "sha256": "c27f80d588e9200b45c4c8bf781c13ee32185723faa8918716beea13c566b84e",
+    "git_included": true,
+    "role": "Original inverse-analysis activation estimates for the trial number in the filename; not a measured EMG recording."
+  },
+  {
+    "file": "Data/Original_Study_Data/hindlimb/optimized/Brad/Activations_08.mat",
+    "bytes": 9251,
+    "sha256": "20d45b3cfe3f2776c049af2b3d03e924ec34aa25f32432558ed283a2479e5576",
+    "git_included": true,
+    "role": "Original inverse-analysis activation estimates for the trial number in the filename; not a measured EMG recording."
+  },
+  {
+    "file": "Data/Original_Study_Data/hindlimb/optimized/Brad/Activations_09.mat",
+    "bytes": 9252,
+    "sha256": "513c2c371d3da95fb977850fd13a12ecae1c24ac2950ce94424b63ceb3c57791",
+    "git_included": true,
+    "role": "Original inverse-analysis activation estimates for the trial number in the filename; not a measured EMG recording."
+  },
+  {
+    "file": "Data/Original_Study_Data/hindlimb/optimized/Brad/Activations_10.mat",
+    "bytes": 9255,
+    "sha256": "11e2672cc16669955741b1d181814b6066640873bd9a6e96870b7b79d63f8070",
+    "git_included": true,
+    "role": "Original inverse-analysis activation estimates for the trial number in the filename; not a measured EMG recording."
+  },
+  {
+    "file": "Data/Original_Study_Data/hindlimb/optimized/Brad/Activations_11.mat",
+    "bytes": 9260,
+    "sha256": "dc11073d5e9a3d763a9914ea9244f95696eff8a0dee377acc7bd220c425329b0",
+    "git_included": true,
+    "role": "Original inverse-analysis activation estimates for the trial number in the filename; not a measured EMG recording."
+  },
+  {
+    "file": "Data/Original_Study_Data/hindlimb/optimized/Brad/Activations_12.mat",
+    "bytes": 9265,
+    "sha256": "133f22592ae55ec9ff53d9bdbcd00a8945d4ec67f44a792591d6ce0182550df8",
+    "git_included": true,
+    "role": "Original inverse-analysis activation estimates for the trial number in the filename; not a measured EMG recording."
+  },
+  {
+    "file": "Data/Original_Study_Data/hindlimb/optimized/Brad/Activations_13.mat",
+    "bytes": 9270,
+    "sha256": "e0b84748ac593a67c0c0710b6bb4940943175e0f6ae6533cce41201c3e00f519",
+    "git_included": true,
+    "role": "Original inverse-analysis activation estimates for the trial number in the filename; not a measured EMG recording."
+  },
+  {
+    "file": "Data/Original_Study_Data/hindlimb/optimized/Brad/Activations_14.mat",
+    "bytes": 9256,
+    "sha256": "123ed1676639fcf22b0c1a513ea3cfb40b9cd5cd1121dd7229d78f5db508dc9f",
+    "git_included": true,
+    "role": "Original inverse-analysis activation estimates for the trial number in the filename; not a measured EMG recording."
+  },
+  {
+    "file": "Data/Original_Study_Data/hindlimb/optimized/Brad/Activations_15.mat",
+    "bytes": 9267,
+    "sha256": "6105eedcc60cd0af16b2830c0f9874d898b9cf49c0514b99909bf7679232b3f6",
+    "git_included": true,
+    "role": "Original inverse-analysis activation estimates for the trial number in the filename; not a measured EMG recording."
+  },
+  {
+    "file": "Data/Original_Study_Data/hindlimb/optimized/Brad/Activations_16.mat",
+    "bytes": 9271,
+    "sha256": "b40a4d2bacb8d847902e0498d8cdd3c0cbec410af53f2a0057371d21d9d74358",
+    "git_included": true,
+    "role": "Original inverse-analysis activation estimates for the trial number in the filename; not a measured EMG recording."
+  },
+  {
+    "file": "Data/Original_Study_Data/hindlimb/optimized/Brad/Activations_17.mat",
+    "bytes": 9253,
+    "sha256": "ce1c85623038c151826b4fb10703984625bb6ec58ed5328ebf3bf9d362894f9d",
+    "git_included": true,
+    "role": "Original inverse-analysis activation estimates for the trial number in the filename; not a measured EMG recording."
+  },
+  {
+    "file": "Data/Original_Study_Data/hindlimb/optimized/Brad/Activations_18.mat",
+    "bytes": 9262,
+    "sha256": "6d1f0ea1d205e8da4763cca3a2a202ada5ebb2c212389a5ef5c557c9df388afe",
+    "git_included": true,
+    "role": "Original inverse-analysis activation estimates for the trial number in the filename; not a measured EMG recording."
+  },
+  {
+    "file": "Data/Original_Study_Data/hindlimb/optimized/Brad/Activations_19.mat",
+    "bytes": 9267,
+    "sha256": "76860072fa62d90fdc8481a76d9e418af3402f447e149dccf6e4a254479a0645",
+    "git_included": true,
+    "role": "Original inverse-analysis activation estimates for the trial number in the filename; not a measured EMG recording."
+  },
+  {
+    "file": "Data/Original_Study_Data/hindlimb/optimized/Brad/Activations_20.mat",
+    "bytes": 9247,
+    "sha256": "a76295b81c34d70e09775a7ed413008777d31ea448f22e06d76d46fbcc0ead24",
+    "git_included": true,
+    "role": "Original inverse-analysis activation estimates for the trial number in the filename; not a measured EMG recording."
+  },
+  {
+    "file": "Data/Original_Study_Data/hindlimb/optimized/Brad/Activations_21.mat",
+    "bytes": 9267,
+    "sha256": "f96de168ec5a5bb691ea5d560340225aa11147a2851fb6fb794cb033bdd03d85",
+    "git_included": true,
+    "role": "Original inverse-analysis activation estimates for the trial number in the filename; not a measured EMG recording."
+  },
+  {
+    "file": "Data/Original_Study_Data/hindlimb/optimized/Brad/Activations_22.mat",
+    "bytes": 9250,
+    "sha256": "5d7158814e3d8823081258ea4fff54ed59c22afaa7740617f5a928104a931e79",
+    "git_included": true,
+    "role": "Original inverse-analysis activation estimates for the trial number in the filename; not a measured EMG recording."
+  },
+  {
+    "file": "Data/Original_Study_Data/hindlimb/optimized/Brad/Activations_23.mat",
+    "bytes": 9258,
+    "sha256": "f105bf2ac278197e244dccb4dada43c200ba4de2cd247aa716703cea5b829f38",
+    "git_included": true,
+    "role": "Original inverse-analysis activation estimates for the trial number in the filename; not a measured EMG recording."
+  },
+  {
+    "file": "Data/Original_Study_Data/hindlimb/optimized/Brad/Activations_24.mat",
+    "bytes": 9268,
+    "sha256": "acd98779d8aafa713bb4666b918e8855fb787e5b8ffdec5eb11da4c7c1ce2b89",
+    "git_included": true,
+    "role": "Original inverse-analysis activation estimates for the trial number in the filename; not a measured EMG recording."
+  },
+  {
+    "file": "Data/Original_Study_Data/hindlimb/optimized/Brad/Activations_25.mat",
+    "bytes": 9251,
+    "sha256": "af8f9a1a031081d12a47c53faea23e753b31872c7be6facd744ee7584c2c2b77",
+    "git_included": true,
+    "role": "Original inverse-analysis activation estimates for the trial number in the filename; not a measured EMG recording."
+  },
+  {
+    "file": "Data/Original_Study_Data/hindlimb/optimized/Brad/Activations_26.mat",
+    "bytes": 9263,
+    "sha256": "eb13c841b4712eb9207299e6dbccc22e0fb19fb7c27dda6d898866157a7dae5c",
+    "git_included": true,
+    "role": "Original inverse-analysis activation estimates for the trial number in the filename; not a measured EMG recording."
+  },
+  {
+    "file": "Data/Original_Study_Data/hindlimb/optimized/Brad/Activations_27.mat",
+    "bytes": 9270,
+    "sha256": "6ed9818c82af0a4536b9d46ff7849931d9ff7c1f9ca4ec61db47029d62a57ba6",
+    "git_included": true,
+    "role": "Original inverse-analysis activation estimates for the trial number in the filename; not a measured EMG recording."
+  },
+  {
+    "file": "Data/Original_Study_Data/hindlimb/optimized/Brad/Activations_28.mat",
+    "bytes": 9257,
+    "sha256": "8dd4debb931210ad6c29f06a01e7513ffb35f9663e4644419373d7a6845e21fa",
+    "git_included": true,
+    "role": "Original inverse-analysis activation estimates for the trial number in the filename; not a measured EMG recording."
+  },
+  {
+    "file": "Data/Original_Study_Data/hindlimb/optimized/Brad/Activations_29.mat",
+    "bytes": 9270,
+    "sha256": "90e2efa873e372325bf27416f9e6f05ec35986668eb9a2fa1422daa15aace3c5",
+    "git_included": true,
+    "role": "Original inverse-analysis activation estimates for the trial number in the filename; not a measured EMG recording."
+  },
+  {
+    "file": "Data/Original_Study_Data/hindlimb/optimized/Brad/Activations_30.mat",
+    "bytes": 9252,
+    "sha256": "28059cbf1a9dd2fa37335b3d172b2239f903b611109714da112c7472819da2c6",
+    "git_included": true,
+    "role": "Original inverse-analysis activation estimates for the trial number in the filename; not a measured EMG recording."
+  },
+  {
+    "file": "Data/Original_Study_Data/hindlimb/optimized/Brad/Activations_31.mat",
+    "bytes": 9265,
+    "sha256": "29b319b62231482c4e47edd4d5527866df8d8740b0c57e8053b29aeb24336bf2",
+    "git_included": true,
+    "role": "Original inverse-analysis activation estimates for the trial number in the filename; not a measured EMG recording."
+  },
+  {
+    "file": "Data/Original_Study_Data/hindlimb/optimized/Brad/Activations_32.mat",
+    "bytes": 9267,
+    "sha256": "556851a62898550bab16a3d1b616d490bf16f46905aa24cbeef769eec72f8b83",
+    "git_included": true,
+    "role": "Original inverse-analysis activation estimates for the trial number in the filename; not a measured EMG recording."
+  },
+  {
+    "file": "Data/Original_Study_Data/hindlimb/optimized/Brad/Activations_33.mat",
+    "bytes": 9261,
+    "sha256": "ad4847a55e12784461cb1ccc47824ab6438f23ba77aefa4cb1da73b087ff82b1",
+    "git_included": true,
+    "role": "Original inverse-analysis activation estimates for the trial number in the filename; not a measured EMG recording."
+  },
+  {
+    "file": "Data/Original_Study_Data/hindlimb/optimized/Brad/Activations_34.mat",
+    "bytes": 9248,
+    "sha256": "8f5dbc9853e2e789642338c2c127b64c50e135de89dfb47735ca7579aab8583d",
+    "git_included": true,
+    "role": "Original inverse-analysis activation estimates for the trial number in the filename; not a measured EMG recording."
+  },
+  {
+    "file": "Data/Original_Study_Data/hindlimb/optimized/Brad/Activations_35.mat",
+    "bytes": 9246,
+    "sha256": "fe97380bfb2114299d358c37d44c39af71749488122db0297c4a890190283a7e",
+    "git_included": true,
+    "role": "Original inverse-analysis activation estimates for the trial number in the filename; not a measured EMG recording."
+  },
+  {
+    "file": "Data/Original_Study_Data/hindlimb/optimized/Brad/Activations_36.mat",
+    "bytes": 9266,
+    "sha256": "50f827217fb0ee1beb89220fde64717092fd330e767abcbc00f2d4d089ec4ef4",
+    "git_included": true,
+    "role": "Original inverse-analysis activation estimates for the trial number in the filename; not a measured EMG recording."
+  },
+  {
+    "file": "Data/Original_Study_Data/hindlimb/optimized/Brad/Activations_37.mat",
+    "bytes": 9262,
+    "sha256": "5ed91e2c309159e77125540ff33414bea216cb0a50d3e480eb18430a67d6a31c",
+    "git_included": true,
+    "role": "Original inverse-analysis activation estimates for the trial number in the filename; not a measured EMG recording."
+  },
+  {
+    "file": "Data/Original_Study_Data/hindlimb/optimized/Brad/Activations_38.mat",
+    "bytes": 9252,
+    "sha256": "d112ffe54dc43255ab08c7c48b933f53a31044fab970be1f5c2ca5701ca62015",
+    "git_included": true,
+    "role": "Original inverse-analysis activation estimates for the trial number in the filename; not a measured EMG recording."
+  },
+  {
+    "file": "Data/Original_Study_Data/hindlimb/optimized/Brad/Activations_39.mat",
+    "bytes": 9246,
+    "sha256": "b2fe8da0334b176ba311afbdc9c386ba2c195456e039d699aa004699c52946d9",
+    "git_included": true,
+    "role": "Original inverse-analysis activation estimates for the trial number in the filename; not a measured EMG recording."
+  },
+  {
+    "file": "Data/Original_Study_Data/hindlimb/optimized/Brad/Activations_40.mat",
+    "bytes": 9256,
+    "sha256": "0e03e7dabad2af2b2c12b5d915ccd3ccb2e8092ec1022275c9262eba01a5cf79",
+    "git_included": true,
+    "role": "Original inverse-analysis activation estimates for the trial number in the filename; not a measured EMG recording."
+  },
+  {
+    "file": "Data/Original_Study_Data/hindlimb/optimized/Brad/Activations_41.mat",
+    "bytes": 9244,
+    "sha256": "f33049c29beef5f7dad7a950b36ae2a5d6d4ea233815ac4f497ae7c2a27739b4",
+    "git_included": true,
+    "role": "Original inverse-analysis activation estimates for the trial number in the filename; not a measured EMG recording."
+  },
+  {
+    "file": "Data/Original_Study_Data/hindlimb/optimized/Brad/Activations_42.mat",
+    "bytes": 9249,
+    "sha256": "13a3a978b01120c3809429b93baa8da93fd0586285fd4149060e8fa6909a8420",
+    "git_included": true,
+    "role": "Original inverse-analysis activation estimates for the trial number in the filename; not a measured EMG recording."
+  },
+  {
+    "file": "Data/Original_Study_Data/hindlimb/optimized/Brad/Activations_43.mat",
+    "bytes": 9259,
+    "sha256": "f68cccd8d09c72ea9e09baa04070f506a4a551e8a974d297adc74ea278b6a83d",
+    "git_included": true,
+    "role": "Original inverse-analysis activation estimates for the trial number in the filename; not a measured EMG recording."
+  },
+  {
+    "file": "Data/Original_Study_Data/hindlimb/optimized/Brad/Activations_44.mat",
+    "bytes": 9252,
+    "sha256": "ccc5dc57c31cd9eacfb0fc8885c454ab4cd3ba390e79ec27534fb2bd7ea30e71",
+    "git_included": true,
+    "role": "Original inverse-analysis activation estimates for the trial number in the filename; not a measured EMG recording."
+  },
+  {
+    "file": "Data/Original_Study_Data/hindlimb/optimized/Brad/Activations_45.mat",
+    "bytes": 9263,
+    "sha256": "85feda9231b18f7e648cde21bf849ebcd5f12cb6716d078663f1a283e3dfac1c",
+    "git_included": true,
+    "role": "Original inverse-analysis activation estimates for the trial number in the filename; not a measured EMG recording."
+  },
+  {
+    "file": "Data/Original_Study_Data/hindlimb/optimized/Brad/Activations_46.mat",
+    "bytes": 9257,
+    "sha256": "f73433880cfb27acc7c7d36e590945653e785d31e93594bbb54cabb3dff4f5d9",
+    "git_included": true,
+    "role": "Original inverse-analysis activation estimates for the trial number in the filename; not a measured EMG recording."
+  },
+  {
+    "file": "Data/Original_Study_Data/hindlimb/optimized/Brad/Activations_47.mat",
+    "bytes": 9271,
+    "sha256": "8054645127932fdd694cda79d78eee82f870536c1d9e48303c734935b42a3eb4",
+    "git_included": true,
+    "role": "Original inverse-analysis activation estimates for the trial number in the filename; not a measured EMG recording."
+  },
+  {
+    "file": "Data/Original_Study_Data/hindlimb/optimized/Brad/Activations_48.mat",
+    "bytes": 9267,
+    "sha256": "0aaa2603400954f91a5d35e0c90c4f287a5ec7ba4f07da39847006ff082ba074",
+    "git_included": true,
+    "role": "Original inverse-analysis activation estimates for the trial number in the filename; not a measured EMG recording."
+  },
+  {
+    "file": "Data/Original_Study_Data/hindlimb/optimized/Brad/Activations_49.mat",
+    "bytes": 9263,
+    "sha256": "0706b6bf577577d8dfc2742dbe9428bb90975546ce6a7bed55d258178230ab4a",
+    "git_included": true,
+    "role": "Original inverse-analysis activation estimates for the trial number in the filename; not a measured EMG recording."
+  },
+  {
+    "file": "Data/Original_Study_Data/hindlimb/optimized/Brad/Activations_50.mat",
+    "bytes": 9262,
+    "sha256": "96b29dad1b692209b1389d2882f4adab553eaba3958dae73019adc749480e07d",
+    "git_included": true,
+    "role": "Original inverse-analysis activation estimates for the trial number in the filename; not a measured EMG recording."
+  },
+  {
+    "file": "Data/Original_Study_Data/hindlimb/optimized/Brad/Activations_51.mat",
+    "bytes": 9257,
+    "sha256": "3106a52ad05c741306c6fcf6aefde9e3d14670fd9c4fd34bb3b45a244c53e243",
+    "git_included": true,
+    "role": "Original inverse-analysis activation estimates for the trial number in the filename; not a measured EMG recording."
+  },
+  {
+    "file": "Data/Original_Study_Data/hindlimb/optimized/Brad/Activations_52.mat",
+    "bytes": 9275,
+    "sha256": "320ff6ca78690111e4ebb6657cd553afcbcbfff58c56dedc08bd55290df566b4",
+    "git_included": true,
+    "role": "Original inverse-analysis activation estimates for the trial number in the filename; not a measured EMG recording."
+  },
+  {
+    "file": "Data/Original_Study_Data/hindlimb/optimized/Brad/Activations_53.mat",
+    "bytes": 9266,
+    "sha256": "3a2371c10bf57c244d4941894125491db7c96e905a699b730d994be11f54a41a",
+    "git_included": true,
+    "role": "Original inverse-analysis activation estimates for the trial number in the filename; not a measured EMG recording."
+  },
+  {
+    "file": "Data/Original_Study_Data/hindlimb/optimized/Brad/Activations_54.mat",
+    "bytes": 9275,
+    "sha256": "5838956a9b37bfcb801800d5b26aa19aed275b596622c99236bcb37f7035ee21",
+    "git_included": true,
+    "role": "Original inverse-analysis activation estimates for the trial number in the filename; not a measured EMG recording."
+  },
+  {
+    "file": "Data/Original_Study_Data/hindlimb/optimized/Brad/Optimization.m",
+    "bytes": 1489,
+    "sha256": "aff25c56e740b803aa449985c78368f9c2e05372c4a269720c85d0bace406477",
+    "git_included": true,
+    "role": "Original MATLAB source for the cited study. Open it to inspect its equations, variable names and source parameter conventions."
+  },
+  {
+    "file": "Data/Original_Study_Data/hindlimb/optimized/Brad/Results_Function.m",
+    "bytes": 30583,
+    "sha256": "1993b0336c0db54b6715f430c6daf7e98be52c67a4b7e312f51a459181ee9de7",
+    "git_included": true,
+    "role": "Original MATLAB source for the cited study. Open it to inspect its equations, variable names and source parameter conventions."
+  },
+  {
+    "file": "Data/Original_Study_Data/hindlimb/optimized/Brad/index.html",
+    "bytes": 10944,
+    "sha256": "903ca08de60e42288aff3834dda0f7a21952a85d7036ee80853067500796fa67",
+    "git_included": true,
+    "role": "Original study source record documenting its data or anatomical calculations; retained for scientific traceability."
+  },
+  {
+    "file": "Data/Original_Study_Data/hindlimb/optimized/Ted/Activations_01.mat",
+    "bytes": 9229,
+    "sha256": "6ec61a7c15704b20d5431e3037befce782071e02e77ca0ece885610c866d225e",
+    "git_included": true,
+    "role": "Original inverse-analysis activation estimates for the trial number in the filename; not a measured EMG recording."
+  },
+  {
+    "file": "Data/Original_Study_Data/hindlimb/optimized/Ted/Activations_02.mat",
+    "bytes": 9229,
+    "sha256": "3970aa8510a21193154c962b72586e3a7ce4ec16172ecba202a24d49442ca2d9",
+    "git_included": true,
+    "role": "Original inverse-analysis activation estimates for the trial number in the filename; not a measured EMG recording."
+  },
+  {
+    "file": "Data/Original_Study_Data/hindlimb/optimized/Ted/Activations_03.mat",
+    "bytes": 9229,
+    "sha256": "4f05b8bf13eaf5911a80611a82c5a7938d27e8789b7ddd4b8d382be299d1df12",
+    "git_included": true,
+    "role": "Original inverse-analysis activation estimates for the trial number in the filename; not a measured EMG recording."
+  },
+  {
+    "file": "Data/Original_Study_Data/hindlimb/optimized/Ted/Activations_04.mat",
+    "bytes": 9234,
+    "sha256": "d459a7849b717a4ff5bf1c349e31e39c5a70093eebba664af50bdc91fee40781",
+    "git_included": true,
+    "role": "Original inverse-analysis activation estimates for the trial number in the filename; not a measured EMG recording."
+  },
+  {
+    "file": "Data/Original_Study_Data/hindlimb/optimized/Ted/Activations_05.mat",
+    "bytes": 9238,
+    "sha256": "1d96430707f11d1a47714f8bb5857106465541bdcb95e84743561482a6da19ec",
+    "git_included": true,
+    "role": "Original inverse-analysis activation estimates for the trial number in the filename; not a measured EMG recording."
+  },
+  {
+    "file": "Data/Original_Study_Data/hindlimb/optimized/Ted/Activations_06.mat",
+    "bytes": 9242,
+    "sha256": "d3e1caa5b1bb71141106b2f7334d1e29d80c43742fae5781d9562b4dd3c69126",
+    "git_included": true,
+    "role": "Original inverse-analysis activation estimates for the trial number in the filename; not a measured EMG recording."
+  },
+  {
+    "file": "Data/Original_Study_Data/hindlimb/optimized/Ted/Activations_07.mat",
+    "bytes": 9233,
+    "sha256": "edcaa6e6c7fd11eb980af8d7b89e974c605962539cc6c745f53b54157c7cbdf5",
+    "git_included": true,
+    "role": "Original inverse-analysis activation estimates for the trial number in the filename; not a measured EMG recording."
+  },
+  {
+    "file": "Data/Original_Study_Data/hindlimb/optimized/Ted/Activations_08.mat",
+    "bytes": 9226,
+    "sha256": "78c5d24d2e874be2bdb0980cc7d98da16070e1630036416867a27406b7ac3b64",
+    "git_included": true,
+    "role": "Original inverse-analysis activation estimates for the trial number in the filename; not a measured EMG recording."
+  },
+  {
+    "file": "Data/Original_Study_Data/hindlimb/optimized/Ted/Activations_09.mat",
+    "bytes": 9233,
+    "sha256": "ef9692a0991a718db52f7c5107a6154fafa10f7badfd0afc877b1468f52b7276",
+    "git_included": true,
+    "role": "Original inverse-analysis activation estimates for the trial number in the filename; not a measured EMG recording."
+  },
+  {
+    "file": "Data/Original_Study_Data/hindlimb/optimized/Ted/Activations_10.mat",
+    "bytes": 9252,
+    "sha256": "b19205e61d5105ae3cbdb9505d2ec7f70364d637b906fb0084e303468eeb2da4",
+    "git_included": true,
+    "role": "Original inverse-analysis activation estimates for the trial number in the filename; not a measured EMG recording."
+  },
+  {
+    "file": "Data/Original_Study_Data/hindlimb/optimized/Ted/Activations_11.mat",
+    "bytes": 9258,
+    "sha256": "941ced4a1e1840ca9afa93d9b518439e100159eb0635b7e2cb808d0e7658e33d",
+    "git_included": true,
+    "role": "Original inverse-analysis activation estimates for the trial number in the filename; not a measured EMG recording."
+  },
+  {
+    "file": "Data/Original_Study_Data/hindlimb/optimized/Ted/Activations_12.mat",
+    "bytes": 9257,
+    "sha256": "905d3600bf2ff002c1046c981bee07dc533931bf0a2afa5483aaaae91a03e0d9",
+    "git_included": true,
+    "role": "Original inverse-analysis activation estimates for the trial number in the filename; not a measured EMG recording."
+  },
+  {
+    "file": "Data/Original_Study_Data/hindlimb/optimized/Ted/Activations_13.mat",
+    "bytes": 9252,
+    "sha256": "d577d45478eff400a06ca290e60b59054178f90e4f71c8be21c476e1bb469d6e",
+    "git_included": true,
+    "role": "Original inverse-analysis activation estimates for the trial number in the filename; not a measured EMG recording."
+  },
+  {
+    "file": "Data/Original_Study_Data/hindlimb/optimized/Ted/Activations_14.mat",
+    "bytes": 9257,
+    "sha256": "35abd5d95091e1cdbc9b75faf86ff93f7acdbb351f3ed95f6347f91c577bdb78",
+    "git_included": true,
+    "role": "Original inverse-analysis activation estimates for the trial number in the filename; not a measured EMG recording."
+  },
+  {
+    "file": "Data/Original_Study_Data/hindlimb/optimized/Ted/Activations_15.mat",
+    "bytes": 9250,
+    "sha256": "8717e713e67e310fae26cf50b94d3c6dfd0165013ef8172748673afd7a095c38",
+    "git_included": true,
+    "role": "Original inverse-analysis activation estimates for the trial number in the filename; not a measured EMG recording."
+  },
+  {
+    "file": "Data/Original_Study_Data/hindlimb/optimized/Ted/Activations_16.mat",
+    "bytes": 9265,
+    "sha256": "2f84126dbbd5a83f6e78ed49c7948526d9d26caf7ab9399af6052437a45200b4",
+    "git_included": true,
+    "role": "Original inverse-analysis activation estimates for the trial number in the filename; not a measured EMG recording."
+  },
+  {
+    "file": "Data/Original_Study_Data/hindlimb/optimized/Ted/Activations_17.mat",
+    "bytes": 9248,
+    "sha256": "d970224df1d5419320a04af106adb81b833062abec6d973b76ad015259664934",
+    "git_included": true,
+    "role": "Original inverse-analysis activation estimates for the trial number in the filename; not a measured EMG recording."
+  },
+  {
+    "file": "Data/Original_Study_Data/hindlimb/optimized/Ted/Activations_18.mat",
+    "bytes": 9252,
+    "sha256": "b3181d9775b6e7e2e4c3179417a4ad7da316846b0dcfe2c803d5aa43d86f2b5e",
+    "git_included": true,
+    "role": "Original inverse-analysis activation estimates for the trial number in the filename; not a measured EMG recording."
+  },
+  {
+    "file": "Data/Original_Study_Data/hindlimb/optimized/Ted/Activations_19.mat",
+    "bytes": 9263,
+    "sha256": "e75a82edeef25d33a3e8137ef2eb3b821067742923b792f1e31408149bc60735",
+    "git_included": true,
+    "role": "Original inverse-analysis activation estimates for the trial number in the filename; not a measured EMG recording."
+  },
+  {
+    "file": "Data/Original_Study_Data/hindlimb/optimized/Ted/Activations_20.mat",
+    "bytes": 9268,
+    "sha256": "ba1b8503e2941ad3c5db0a89b75e3c2aa00a3f81af16747536935ac8e95ee443",
+    "git_included": true,
+    "role": "Original inverse-analysis activation estimates for the trial number in the filename; not a measured EMG recording."
+  },
+  {
+    "file": "Data/Original_Study_Data/hindlimb/optimized/Ted/Activations_21.mat",
+    "bytes": 9257,
+    "sha256": "e0d45bcfdff51f6364af07c1397d4a6163bc5c400d72798317cecc6b0bc5043f",
+    "git_included": true,
+    "role": "Original inverse-analysis activation estimates for the trial number in the filename; not a measured EMG recording."
+  },
+  {
+    "file": "Data/Original_Study_Data/hindlimb/optimized/Ted/Activations_22.mat",
+    "bytes": 9275,
+    "sha256": "2efc9d79514bf358191ebf697fdb7e35dc1b4da41e3de22af39fc4e1d1f3e538",
+    "git_included": true,
+    "role": "Original inverse-analysis activation estimates for the trial number in the filename; not a measured EMG recording."
+  },
+  {
+    "file": "Data/Original_Study_Data/hindlimb/optimized/Ted/Activations_23.mat",
+    "bytes": 9250,
+    "sha256": "3d7dd2e92f9ccaea9df9a24922ceabccb59a5aac97503baceeef421c765dbfbb",
+    "git_included": true,
+    "role": "Original inverse-analysis activation estimates for the trial number in the filename; not a measured EMG recording."
+  },
+  {
+    "file": "Data/Original_Study_Data/hindlimb/optimized/Ted/Activations_24.mat",
+    "bytes": 9259,
+    "sha256": "72decf430953cd722d74435963d74204a1c952e3f7de9bbfe13c059168df9026",
+    "git_included": true,
+    "role": "Original inverse-analysis activation estimates for the trial number in the filename; not a measured EMG recording."
+  },
+  {
+    "file": "Data/Original_Study_Data/hindlimb/optimized/Ted/Activations_25.mat",
+    "bytes": 9243,
+    "sha256": "759367d243fdef9e93cfba1abf18f264dea5ed3d17efbff2523ec16296b820e9",
+    "git_included": true,
+    "role": "Original inverse-analysis activation estimates for the trial number in the filename; not a measured EMG recording."
+  },
+  {
+    "file": "Data/Original_Study_Data/hindlimb/optimized/Ted/Activations_26.mat",
+    "bytes": 9236,
+    "sha256": "38f3e8e96f3d99109c77fc4d37b3c936a2ff72c8f7a85d3595f1866dd58b43b5",
+    "git_included": true,
+    "role": "Original inverse-analysis activation estimates for the trial number in the filename; not a measured EMG recording."
+  },
+  {
+    "file": "Data/Original_Study_Data/hindlimb/optimized/Ted/Activations_27.mat",
+    "bytes": 9241,
+    "sha256": "71196e061c95039275dbb85a00a329200286c83623aae26e2cf124ee46bea9dc",
+    "git_included": true,
+    "role": "Original inverse-analysis activation estimates for the trial number in the filename; not a measured EMG recording."
+  },
+  {
+    "file": "Data/Original_Study_Data/hindlimb/optimized/Ted/Activations_28.mat",
+    "bytes": 9256,
+    "sha256": "d148d20767430d49d494f8d2b2ea44ea3cd751c17ab14bb33c5f35ab2d339027",
+    "git_included": true,
+    "role": "Original inverse-analysis activation estimates for the trial number in the filename; not a measured EMG recording."
+  },
+  {
+    "file": "Data/Original_Study_Data/hindlimb/optimized/Ted/Activations_29.mat",
+    "bytes": 9266,
+    "sha256": "f0a011d2327c27885e6d605569406245ff2ee29e40aa11044979d63a9f1a714c",
+    "git_included": true,
+    "role": "Original inverse-analysis activation estimates for the trial number in the filename; not a measured EMG recording."
+  },
+  {
+    "file": "Data/Original_Study_Data/hindlimb/optimized/Ted/Activations_30.mat",
+    "bytes": 9247,
+    "sha256": "408f79709d4d641a83b364b70fb49e6cf9a4a542b69156f6c0517aa46b9bec00",
+    "git_included": true,
+    "role": "Original inverse-analysis activation estimates for the trial number in the filename; not a measured EMG recording."
+  },
+  {
+    "file": "Data/Original_Study_Data/hindlimb/optimized/Ted/Activations_31.mat",
+    "bytes": 9252,
+    "sha256": "e78895df746007c7426fb02b04b9a59c00fb596b5a8270c0454aeaf5f6cacced",
+    "git_included": true,
+    "role": "Original inverse-analysis activation estimates for the trial number in the filename; not a measured EMG recording."
+  },
+  {
+    "file": "Data/Original_Study_Data/hindlimb/optimized/Ted/Activations_32.mat",
+    "bytes": 9255,
+    "sha256": "722bfdfc5d92527090eac782805774978e12c08c255545d4994d9ee88827d49d",
+    "git_included": true,
+    "role": "Original inverse-analysis activation estimates for the trial number in the filename; not a measured EMG recording."
+  },
+  {
+    "file": "Data/Original_Study_Data/hindlimb/optimized/Ted/Activations_33.mat",
+    "bytes": 9242,
+    "sha256": "3b7680b7d949335ce57bfc63edc42fb4110cfb5b33c89b5eb4f9f9ab9ec8368f",
+    "git_included": true,
+    "role": "Original inverse-analysis activation estimates for the trial number in the filename; not a measured EMG recording."
+  },
+  {
+    "file": "Data/Original_Study_Data/hindlimb/optimized/Ted/Activations_34.mat",
+    "bytes": 9256,
+    "sha256": "dbac88fc4bf3cd1da2f759a7ff24e35aab9cbf140ef61e2c6568c49f078c19c2",
+    "git_included": true,
+    "role": "Original inverse-analysis activation estimates for the trial number in the filename; not a measured EMG recording."
+  },
+  {
+    "file": "Data/Original_Study_Data/hindlimb/optimized/Ted/Activations_35.mat",
+    "bytes": 9261,
+    "sha256": "efa736b1b4fc17a9e764a9017c68163927b9791e7e764d1b72c4af442002eded",
+    "git_included": true,
+    "role": "Original inverse-analysis activation estimates for the trial number in the filename; not a measured EMG recording."
+  },
+  {
+    "file": "Data/Original_Study_Data/hindlimb/optimized/Ted/Activations_36.mat",
+    "bytes": 9253,
+    "sha256": "1bec4cef5975e9306e1c19e5e7b6f82b026bb6fbc9f99b49cd7a16379a153de0",
+    "git_included": true,
+    "role": "Original inverse-analysis activation estimates for the trial number in the filename; not a measured EMG recording."
+  },
+  {
+    "file": "Data/Original_Study_Data/hindlimb/optimized/Ted/Activations_37.mat",
+    "bytes": 9251,
+    "sha256": "d0199ef5b51d47fe1f212e0bc06ff57938a568840544dff160cca771ac275e79",
+    "git_included": true,
+    "role": "Original inverse-analysis activation estimates for the trial number in the filename; not a measured EMG recording."
+  },
+  {
+    "file": "Data/Original_Study_Data/hindlimb/optimized/Ted/Activations_38.mat",
+    "bytes": 9246,
+    "sha256": "3b53b68324fce9c2ddbe2ae5934c708bb579c702fb2e565b8fffacce3f87f8fb",
+    "git_included": true,
+    "role": "Original inverse-analysis activation estimates for the trial number in the filename; not a measured EMG recording."
+  },
+  {
+    "file": "Data/Original_Study_Data/hindlimb/optimized/Ted/Activations_39.mat",
+    "bytes": 9260,
+    "sha256": "1f7c7855874d63129e2ccfd890e28d720bd3e25088529bff843df2a43c13e79a",
+    "git_included": true,
+    "role": "Original inverse-analysis activation estimates for the trial number in the filename; not a measured EMG recording."
+  },
+  {
+    "file": "Data/Original_Study_Data/hindlimb/optimized/Ted/Activations_40.mat",
+    "bytes": 9245,
+    "sha256": "cf0658da42fa6a2c1f592e2aa6c02409faf00d28a95bc815168b9200bde268cc",
+    "git_included": true,
+    "role": "Original inverse-analysis activation estimates for the trial number in the filename; not a measured EMG recording."
+  },
+  {
+    "file": "Data/Original_Study_Data/hindlimb/optimized/Ted/Activations_41.mat",
+    "bytes": 9256,
+    "sha256": "78317e70ef69aa71c93bd0eaafcde47031bf4d76cc0f20ece793631b7b67ef24",
+    "git_included": true,
+    "role": "Original inverse-analysis activation estimates for the trial number in the filename; not a measured EMG recording."
+  },
+  {
+    "file": "Data/Original_Study_Data/hindlimb/optimized/Ted/Activations_42.mat",
+    "bytes": 9267,
+    "sha256": "1b74862b4d51103a39902dc6e020b9104b2d3cda410cf3f672d4a297a90a6234",
+    "git_included": true,
+    "role": "Original inverse-analysis activation estimates for the trial number in the filename; not a measured EMG recording."
+  },
+  {
+    "file": "Data/Original_Study_Data/hindlimb/optimized/Ted/Activations_43.mat",
+    "bytes": 9254,
+    "sha256": "2a157fb3124fa8378125dbaf21a6611b73853e96eed7b340e46ebaf8ff2aa071",
+    "git_included": true,
+    "role": "Original inverse-analysis activation estimates for the trial number in the filename; not a measured EMG recording."
+  },
+  {
+    "file": "Data/Original_Study_Data/hindlimb/optimized/Ted/Activations_44.mat",
+    "bytes": 9267,
+    "sha256": "f04e2c46a1e1f86088aa3a701f21827c68b0ec954f5276c71367b9f7c0d8a280",
+    "git_included": true,
+    "role": "Original inverse-analysis activation estimates for the trial number in the filename; not a measured EMG recording."
+  },
+  {
+    "file": "Data/Original_Study_Data/hindlimb/optimized/Ted/Activations_45.mat",
+    "bytes": 9265,
+    "sha256": "b9f25a1ef8861074ae253e448bb100f3777cd403cce342954bd7c700ab1c1531",
+    "git_included": true,
+    "role": "Original inverse-analysis activation estimates for the trial number in the filename; not a measured EMG recording."
+  },
+  {
+    "file": "Data/Original_Study_Data/hindlimb/optimized/Ted/Activations_46.mat",
+    "bytes": 9257,
+    "sha256": "5c514ead49a7bcdc0bac52b71d2d5bcb91ddfd19863d1fab1bd128a707bd49f9",
+    "git_included": true,
+    "role": "Original inverse-analysis activation estimates for the trial number in the filename; not a measured EMG recording."
+  },
+  {
+    "file": "Data/Original_Study_Data/hindlimb/optimized/Ted/Activations_47.mat",
+    "bytes": 9241,
+    "sha256": "7e787b8382f67cca22112e704644cc05c68c0fe8dd19eeb00326db3e147d3877",
+    "git_included": true,
+    "role": "Original inverse-analysis activation estimates for the trial number in the filename; not a measured EMG recording."
+  },
+  {
+    "file": "Data/Original_Study_Data/hindlimb/optimized/Ted/Activations_48.mat",
+    "bytes": 9260,
+    "sha256": "5f5cc75df110ba59f367768b8bf4593ff6230863ebb9b500ac303ead4750f576",
+    "git_included": true,
+    "role": "Original inverse-analysis activation estimates for the trial number in the filename; not a measured EMG recording."
+  },
+  {
+    "file": "Data/Original_Study_Data/hindlimb/optimized/Ted/Activations_49.mat",
+    "bytes": 9261,
+    "sha256": "4015294e84f4eb1bc2b94cddf73c59293985eb7c66a0b4ebe420601049228288",
+    "git_included": true,
+    "role": "Original inverse-analysis activation estimates for the trial number in the filename; not a measured EMG recording."
+  },
+  {
+    "file": "Data/Original_Study_Data/hindlimb/optimized/Ted/Activations_50.mat",
+    "bytes": 9263,
+    "sha256": "9a98fd5fab92d4d8c07eee4a595e0096b10af9a458e60c7f15e93ab24ab0cd26",
+    "git_included": true,
+    "role": "Original inverse-analysis activation estimates for the trial number in the filename; not a measured EMG recording."
+  },
+  {
+    "file": "Data/Original_Study_Data/hindlimb/optimized/Ted/Activations_51.mat",
+    "bytes": 9261,
+    "sha256": "e135450b1ecd30a5c6ff3314062003310c53e5e59428231f9e43ef4e8d5968a1",
+    "git_included": true,
+    "role": "Original inverse-analysis activation estimates for the trial number in the filename; not a measured EMG recording."
+  },
+  {
+    "file": "Data/Original_Study_Data/hindlimb/optimized/Ted/Activations_52.mat",
+    "bytes": 9262,
+    "sha256": "9d30604c160fc44cdf48ce049d2896e1eb32f08b86d64242aa5be4360c4a2051",
+    "git_included": true,
+    "role": "Original inverse-analysis activation estimates for the trial number in the filename; not a measured EMG recording."
+  },
+  {
+    "file": "Data/Original_Study_Data/hindlimb/optimized/Ted/Activations_53.mat",
+    "bytes": 9246,
+    "sha256": "f3d2ee13610b7deda403dc017ca394af2c89d43d0b7fb1cfbedf9610efef6762",
+    "git_included": true,
+    "role": "Original inverse-analysis activation estimates for the trial number in the filename; not a measured EMG recording."
+  },
+  {
+    "file": "Data/Original_Study_Data/hindlimb/optimized/Ted/Activations_54.mat",
+    "bytes": 9254,
+    "sha256": "ecd75002c095a5f87eacc676f66dd1e09be059d0fbe327eaad77236165471f65",
+    "git_included": true,
+    "role": "Original inverse-analysis activation estimates for the trial number in the filename; not a measured EMG recording."
+  },
+  {
+    "file": "Data/Original_Study_Data/hindlimb/optimized/Ted/Activations_55.mat",
+    "bytes": 9244,
+    "sha256": "171781080519f02324c187a4a2499fb58e145bb4d91d53273b916488d0320ab9",
+    "git_included": true,
+    "role": "Original inverse-analysis activation estimates for the trial number in the filename; not a measured EMG recording."
+  },
+  {
+    "file": "Data/Original_Study_Data/hindlimb/optimized/Ted/Activations_56.mat",
+    "bytes": 9247,
+    "sha256": "7355c234e3a0d8705de1c3a1fe3530a2b44b0aed1d0379b14fb4ed7fdeaaf448",
+    "git_included": true,
+    "role": "Original inverse-analysis activation estimates for the trial number in the filename; not a measured EMG recording."
+  },
+  {
+    "file": "Data/Original_Study_Data/hindlimb/optimized/Ted/Activations_57.mat",
+    "bytes": 9260,
+    "sha256": "92b6d3b92557e8d862b09483952be55a6ea52e1f5cd2e22b614c05e14b77b2f4",
+    "git_included": true,
+    "role": "Original inverse-analysis activation estimates for the trial number in the filename; not a measured EMG recording."
+  },
+  {
+    "file": "Data/Original_Study_Data/hindlimb/optimized/Ted/Activations_58.mat",
+    "bytes": 9262,
+    "sha256": "77122ee894725d718246dd1c8ae18ea965973e9506de1ea6ff2c4cbfa1a24cc6",
+    "git_included": true,
+    "role": "Original inverse-analysis activation estimates for the trial number in the filename; not a measured EMG recording."
+  },
+  {
+    "file": "Data/Original_Study_Data/hindlimb/optimized/Ted/Activations_59.mat",
+    "bytes": 9255,
+    "sha256": "6ccf372b4ec2f7b7c6bf398e3e28507a3cdc0fe6d4e3e948c1a516c93d29212d",
+    "git_included": true,
+    "role": "Original inverse-analysis activation estimates for the trial number in the filename; not a measured EMG recording."
+  },
+  {
+    "file": "Data/Original_Study_Data/hindlimb/optimized/Ted/Activations_60.mat",
+    "bytes": 9243,
+    "sha256": "56e0080a0796b3223cebe62a292bcc1977a39e00df3cf0c35672a7daa6575965",
+    "git_included": true,
+    "role": "Original inverse-analysis activation estimates for the trial number in the filename; not a measured EMG recording."
+  },
+  {
+    "file": "Data/Original_Study_Data/hindlimb/optimized/Ted/Activations_61.mat",
+    "bytes": 9253,
+    "sha256": "aedb1b410d6dba8ad7ec80668ca90ae267938a9418edb293902b09021582fe7a",
+    "git_included": true,
+    "role": "Original inverse-analysis activation estimates for the trial number in the filename; not a measured EMG recording."
+  },
+  {
+    "file": "Data/Original_Study_Data/hindlimb/optimized/Ted/Activations_62.mat",
+    "bytes": 9271,
+    "sha256": "829ad418e1fe25488c32bbb8a21c33ac39cc070e34cf2135fe461a921b635675",
+    "git_included": true,
+    "role": "Original inverse-analysis activation estimates for the trial number in the filename; not a measured EMG recording."
+  },
+  {
+    "file": "Data/Original_Study_Data/hindlimb/optimized/Ted/Activations_63.mat",
+    "bytes": 9260,
+    "sha256": "34efe3c3e6e3db8ee8d72edfeb877b16818acd678678e6b293ca5703da1d2338",
+    "git_included": true,
+    "role": "Original inverse-analysis activation estimates for the trial number in the filename; not a measured EMG recording."
+  },
+  {
+    "file": "Data/Original_Study_Data/hindlimb/optimized/Ted/Activations_64.mat",
+    "bytes": 9256,
+    "sha256": "3b3074fc5b55deed639a8235864bb4754f9ca45509b38be6008726daef52e26d",
+    "git_included": true,
+    "role": "Original inverse-analysis activation estimates for the trial number in the filename; not a measured EMG recording."
+  },
+  {
+    "file": "Data/Original_Study_Data/hindlimb/optimized/Ted/Activations_65.mat",
+    "bytes": 9263,
+    "sha256": "1d263e731966531a099fc3311358929e529cd1fc43bc287d10ef81eadb1b64ea",
+    "git_included": true,
+    "role": "Original inverse-analysis activation estimates for the trial number in the filename; not a measured EMG recording."
+  },
+  {
+    "file": "Data/Original_Study_Data/hindlimb/optimized/Ted/Activations_66.mat",
+    "bytes": 9264,
+    "sha256": "36d143b2424eb5046ea948e12bbdb67d8eb543c78aaf72d0633f9a8e4471f315",
+    "git_included": true,
+    "role": "Original inverse-analysis activation estimates for the trial number in the filename; not a measured EMG recording."
+  },
+  {
+    "file": "Data/Original_Study_Data/hindlimb/optimized/Ted/Activations_67.mat",
+    "bytes": 9251,
+    "sha256": "97cb3dd4c85d3cadb361e52da5e3664ed6f08c55bec62d33aa39f61cae0d580d",
+    "git_included": true,
+    "role": "Original inverse-analysis activation estimates for the trial number in the filename; not a measured EMG recording."
+  },
+  {
+    "file": "Data/Original_Study_Data/hindlimb/optimized/Ted/Activations_68.mat",
+    "bytes": 9264,
+    "sha256": "b651f1c1f88419707d1d8bea343c63bc2f9a08b387836e0cc77c5e3d0565bd7c",
+    "git_included": true,
+    "role": "Original inverse-analysis activation estimates for the trial number in the filename; not a measured EMG recording."
+  },
+  {
+    "file": "Data/Original_Study_Data/hindlimb/optimized/Ted/Optimization.m",
+    "bytes": 1451,
+    "sha256": "f46e602dca11232f0f7d971e42ad9bb2e0878fd277569fac1ce6a7a88c6b3e9d",
+    "git_included": true,
+    "role": "Original MATLAB source for the cited study. Open it to inspect its equations, variable names and source parameter conventions."
+  },
+  {
+    "file": "Data/Original_Study_Data/hindlimb/optimized/Ted/Results_Function.m",
+    "bytes": 30486,
+    "sha256": "b2d633d1d6578cdc36c670d24a6994b5374f7cbd314149d38dc930040f442c69",
+    "git_included": true,
+    "role": "Original MATLAB source for the cited study. Open it to inspect its equations, variable names and source parameter conventions."
+  },
+  {
+    "file": "Data/Original_Study_Data/hindlimb/optimized/Ted/index.html",
+    "bytes": 13448,
+    "sha256": "42aef9e1f8ff7770e42b3d692da6ca112a9d0d8fd9854404faf416535a6e59e2",
+    "git_included": true,
+    "role": "Original study source record documenting its data or anatomical calculations; retained for scientific traceability."
+  },
+  {
+    "file": "Data/Original_Study_Data/hindlimb/optimized/index.html",
+    "bytes": 1228,
+    "sha256": "3667875948262c5ab13a0284389422dacde848dc144c06b5287b5bb1ab02d536",
+    "git_included": true,
+    "role": "Original study source record documenting its data or anatomical calculations; retained for scientific traceability."
+  },
+  {
+    "file": "Data/Original_Study_Data/hindlimb/original_numeric_tables.json",
+    "bytes": 3887,
+    "sha256": "5beeae3b490783bfd892ce190c6f42eec23e28ad97548a7e461d174c4f22a954",
+    "git_included": true,
+    "role": "Original study source record documenting its data or anatomical calculations; retained for scientific traceability."
+  },
+  {
+    "file": "Data/Original_Study_Data/hindlimb/source_inventory.json",
+    "bytes": 95907,
+    "sha256": "d9adafc9f2894607dc1bc984255d3c3f526a18a70354e9585ab1a8a44c256800",
+    "git_included": true,
+    "role": "Original study source record documenting its data or anatomical calculations; retained for scientific traceability."
+  },
+  {
+    "file": "Data/Original_Study_Data/hindlimb/trial_index.json",
+    "bytes": 213983,
+    "sha256": "779807d950c52587d06ced1ec8f1532cf6d997dc1d4433b7abe2c379b3676ed1",
+    "git_included": true,
+    "role": "Original study source record documenting its data or anatomical calculations; retained for scientific traceability."
+  },
+  {
+    "file": "Data/Original_Study_Data/hindlimb/walking_trials_SI.npz",
+    "bytes": 3495336,
+    "sha256": "d9c2543b3f11c0a6c7169ef96d594325e39e4b033b637e993c34671d060fec1a",
+    "git_included": true,
+    "role": "Original study source record documenting its data or anatomical calculations; retained for scientific traceability."
+  },
+  {
+    "file": "Data/Original_Study_Data/index.html",
+    "bytes": 1694,
+    "sha256": "079457742f1b8cc25093d051ae4c526beae08e8efa49f8c418d63ccc0d4c6bca",
+    "git_included": true,
+    "role": "Original study source record documenting its data or anatomical calculations; retained for scientific traceability."
+  },
+  {
+    "file": "Data/Skeletal_Geometry/Model/articulated_girdle/ASSUMPTIONS.json",
+    "bytes": 1628,
+    "sha256": "302c30b4e7148ebc8a008efc781dee5f4955f9e9eb011c71e051e570e50a9808",
+    "git_included": true,
+    "role": "Documented geometric and model-assembly assumptions."
+  },
+  {
+    "file": "Data/Skeletal_Geometry/Model/articulated_girdle/cat.xml",
+    "bytes": 98526,
+    "sha256": "da2d0ac4ff966e0698edd05f7015612560fa1975a63ea02a0e54858800346aa8",
+    "git_included": true,
+    "role": "MuJoCo model topology: connected bodies, joints, geometric objects and muscle paths."
+  },
+  {
+    "file": "Data/Skeletal_Geometry/Model/articulated_girdle/index.html",
+    "bytes": 1553,
+    "sha256": "359389c87d23e7b7a3b32690c0a5b3d1c167ff831c91223e7f592282f01e526d",
+    "git_included": true,
+    "role": "index."
+  },
+  {
+    "file": "Data/Skeletal_Geometry/Model/articulated_girdle/mechanics_exact.npz",
+    "bytes": 16925,
+    "sha256": "97d00cb82a20d615e917e1e40950b31312e09b26e6ad4baa8509c3e3b301a845",
+    "git_included": true,
+    "role": "Numerical body and joint properties used when assembling the skeletal dynamics."
+  },
+  {
+    "file": "Data/Skeletal_Geometry/Model/articulated_girdle/muscle_parameters.npz",
+    "bytes": 640883,
+    "sha256": "bc09f3503536cbd5471b5c3e0af3f0f0154d6176d95ea574efda83eedc31c3bf",
+    "git_included": true,
+    "role": "Numerical muscle architecture and strength arrays associated with the mechanical model."
+  },
+  {
+    "file": "Data/Skeletal_Geometry/Model/articulated_girdle/reference.npz",
+    "bytes": 1349434,
+    "sha256": "12442c5fbeea83df00391c350135851add96153a34cb79214b7f7e2d82532aec",
+    "git_included": true,
+    "role": "reference — named numerical arrays."
+  },
+  {
+    "file": "Data/Skeletal_Geometry/Model/index.html",
+    "bytes": 1275,
+    "sha256": "aed1ad6ce3c66cd0e489f0f326e34d0daf17947aa05cd1a003b50d9abeb15593",
+    "git_included": true,
+    "role": "index."
+  },
+  {
+    "file": "Data/Skeletal_Geometry/index.html",
+    "bytes": 1885,
+    "sha256": "bfd78624d2b0cf64ea039785e14860de1e9499f5f80b1e740108dc2a592a8454",
+    "git_included": true,
+    "role": "index."
+  },
+  {
+    "file": "Data/index.html",
+    "bytes": 2300,
+    "sha256": "80432fbd04ea55159fe1a5d74bbc8952885364cda6b6f97ac4879066d6221d0e",
+    "git_included": true,
+    "role": "index."
+  }
+]

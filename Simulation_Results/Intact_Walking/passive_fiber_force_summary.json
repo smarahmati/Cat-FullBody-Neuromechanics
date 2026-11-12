@@ -1,0 +1,527 @@
+{
+  "law": "Prilutsky 2016 Table 10.3 / Rahmati 2025 Table 3, tension-only adaptation",
+  "enabled_channels": 104,
+  "total_channels": 104,
+  "channels": {
+    "L_IP": {
+      "enabled": true,
+      "maximum_normalized_fiber_length": 0.7169974730852923,
+      "peak_passive_tendon_component_N": 0.0
+    },
+    "L_BFA": {
+      "enabled": true,
+      "maximum_normalized_fiber_length": 0.8762006211125043,
+      "peak_passive_tendon_component_N": 0.0
+    },
+    "L_VL": {
+      "enabled": true,
+      "maximum_normalized_fiber_length": 0.7922111102990534,
+      "peak_passive_tendon_component_N": 0.0
+    },
+    "L_VM": {
+      "enabled": true,
+      "maximum_normalized_fiber_length": 0.7693911860925019,
+      "peak_passive_tendon_component_N": 0.0
+    },
+    "L_TA": {
+      "enabled": true,
+      "maximum_normalized_fiber_length": 0.7665143933215243,
+      "peak_passive_tendon_component_N": 0.0
+    },
+    "L_SO": {
+      "enabled": true,
+      "maximum_normalized_fiber_length": 0.8136083701698728,
+      "peak_passive_tendon_component_N": 0.0
+    },
+    "L_RF": {
+      "enabled": true,
+      "maximum_normalized_fiber_length": 0.6647092794982781,
+      "peak_passive_tendon_component_N": 0.0
+    },
+    "L_BFP": {
+      "enabled": true,
+      "maximum_normalized_fiber_length": 0.9688246462955865,
+      "peak_passive_tendon_component_N": 0.0
+    },
+    "L_SAM": {
+      "enabled": true,
+      "maximum_normalized_fiber_length": 0.7511029288160899,
+      "peak_passive_tendon_component_N": 0.0
+    },
+    "L_LG": {
+      "enabled": true,
+      "maximum_normalized_fiber_length": 0.8095309352197044,
+      "peak_passive_tendon_component_N": 0.0
+    },
+    "L_MG": {
+      "enabled": true,
+      "maximum_normalized_fiber_length": 0.7649844620530205,
+      "peak_passive_tendon_component_N": 0.0
+    },
+    "R_IP": {
+      "enabled": true,
+      "maximum_normalized_fiber_length": 0.6901494251622318,
+      "peak_passive_tendon_component_N": 0.0
+    },
+    "R_BFA": {
+      "enabled": true,
+      "maximum_normalized_fiber_length": 0.8539520858139752,
+      "peak_passive_tendon_component_N": 0.0
+    },
+    "R_VL": {
+      "enabled": true,
+      "maximum_normalized_fiber_length": 0.7953579523365082,
+      "peak_passive_tendon_component_N": 0.0
+    },
+    "R_VM": {
+      "enabled": true,
+      "maximum_normalized_fiber_length": 0.7707672581170777,
+      "peak_passive_tendon_component_N": 0.0
+    },
+    "R_TA": {
+      "enabled": true,
+      "maximum_normalized_fiber_length": 0.7637406791885296,
+      "peak_passive_tendon_component_N": 0.0
+    },
+    "R_SO": {
+      "enabled": true,
+      "maximum_normalized_fiber_length": 0.8471655255642302,
+      "peak_passive_tendon_component_N": 0.0
+    },
+    "R_RF": {
+      "enabled": true,
+      "maximum_normalized_fiber_length": 0.6866232983697337,
+      "peak_passive_tendon_component_N": 0.0
+    },
+    "R_BFP": {
+      "enabled": true,
+      "maximum_normalized_fiber_length": 0.9449716207304164,
+      "peak_passive_tendon_component_N": 0.0
+    },
+    "R_SAM": {
+      "enabled": true,
+      "maximum_normalized_fiber_length": 0.7314177061695997,
+      "peak_passive_tendon_component_N": 0.0
+    },
+    "R_LG": {
+      "enabled": true,
+      "maximum_normalized_fiber_length": 0.8417259284927361,
+      "peak_passive_tendon_component_N": 0.0
+    },
+    "R_MG": {
+      "enabled": true,
+      "maximum_normalized_fiber_length": 0.8134106912449662,
+      "peak_passive_tendon_component_N": 0.0
+    },
+    "L_EDL": {
+      "enabled": true,
+      "maximum_normalized_fiber_length": 0.9632745790488783,
+      "peak_passive_tendon_component_N": 0.0
+    },
+    "R_EDL": {
+      "enabled": true,
+      "maximum_normalized_fiber_length": 0.9193839666821293,
+      "peak_passive_tendon_component_N": 0.0
+    },
+    "L_FDL": {
+      "enabled": true,
+      "maximum_normalized_fiber_length": 0.8976095697422285,
+      "peak_passive_tendon_component_N": 0.0
+    },
+    "R_FDL": {
+      "enabled": true,
+      "maximum_normalized_fiber_length": 0.8265659110597441,
+      "peak_passive_tendon_component_N": 0.0
+    },
+    "L_FHL": {
+      "enabled": true,
+      "maximum_normalized_fiber_length": 0.8236549984085101,
+      "peak_passive_tendon_component_N": 0.0
+    },
+    "R_FHL": {
+      "enabled": true,
+      "maximum_normalized_fiber_length": 0.7916669804864587,
+      "peak_passive_tendon_component_N": 0.0
+    },
+    "FL_ShoulderExtensor": {
+      "enabled": true,
+      "maximum_normalized_fiber_length": 0.9536589800539412,
+      "peak_passive_tendon_component_N": 0.0
+    },
+    "FL_ElbowExtensor": {
+      "enabled": true,
+      "maximum_normalized_fiber_length": 0.9806802177377744,
+      "peak_passive_tendon_component_N": 0.0
+    },
+    "FL_BicepsBrachii": {
+      "enabled": true,
+      "maximum_normalized_fiber_length": 0.9054821954806165,
+      "peak_passive_tendon_component_N": 0.0
+    },
+    "FL_ElbowFlexor": {
+      "enabled": true,
+      "maximum_normalized_fiber_length": 0.9617103273147263,
+      "peak_passive_tendon_component_N": 0.0
+    },
+    "FL_ElbowFlexorWristFlexor": {
+      "enabled": true,
+      "maximum_normalized_fiber_length": 0.9147481734015787,
+      "peak_passive_tendon_component_N": 0.0
+    },
+    "FL_WristFlexor": {
+      "enabled": true,
+      "maximum_normalized_fiber_length": 0.8918114724992645,
+      "peak_passive_tendon_component_N": 0.0
+    },
+    "FL_WristExtensor": {
+      "enabled": true,
+      "maximum_normalized_fiber_length": 0.815558267841919,
+      "peak_passive_tendon_component_N": 0.0
+    },
+    "FL_ShoulderFlexor": {
+      "enabled": true,
+      "maximum_normalized_fiber_length": 0.9773922982844669,
+      "peak_passive_tendon_component_N": 0.0
+    },
+    "FL_TricepsBrachiiLong": {
+      "enabled": true,
+      "maximum_normalized_fiber_length": 1.011977667607963,
+      "peak_passive_tendon_component_N": 0.018224724584214164
+    },
+    "FR_ShoulderExtensor": {
+      "enabled": true,
+      "maximum_normalized_fiber_length": 0.8765781462881838,
+      "peak_passive_tendon_component_N": 0.0
+    },
+    "FR_ElbowExtensor": {
+      "enabled": true,
+      "maximum_normalized_fiber_length": 0.9480312644902578,
+      "peak_passive_tendon_component_N": 0.0
+    },
+    "FR_BicepsBrachii": {
+      "enabled": true,
+      "maximum_normalized_fiber_length": 0.9022946532039651,
+      "peak_passive_tendon_component_N": 0.0
+    },
+    "FR_ElbowFlexor": {
+      "enabled": true,
+      "maximum_normalized_fiber_length": 0.9772084971555846,
+      "peak_passive_tendon_component_N": 0.0
+    },
+    "FR_ElbowFlexorWristFlexor": {
+      "enabled": true,
+      "maximum_normalized_fiber_length": 1.0094037662590358,
+      "peak_passive_tendon_component_N": 0.0015915458611325294
+    },
+    "FR_WristFlexor": {
+      "enabled": true,
+      "maximum_normalized_fiber_length": 0.91829084367321,
+      "peak_passive_tendon_component_N": 0.0
+    },
+    "FR_WristExtensor": {
+      "enabled": true,
+      "maximum_normalized_fiber_length": 0.7903028230226098,
+      "peak_passive_tendon_component_N": 0.0
+    },
+    "FR_ShoulderFlexor": {
+      "enabled": true,
+      "maximum_normalized_fiber_length": 0.980132734517657,
+      "peak_passive_tendon_component_N": 0.0
+    },
+    "FR_TricepsBrachiiLong": {
+      "enabled": true,
+      "maximum_normalized_fiber_length": 0.8904169042790255,
+      "peak_passive_tendon_component_N": 0.0
+    },
+    "FL_S_C3": {
+      "enabled": true,
+      "maximum_normalized_fiber_length": 0.9504394339705458,
+      "peak_passive_tendon_component_N": 0.0
+    },
+    "FR_S_C3": {
+      "enabled": true,
+      "maximum_normalized_fiber_length": 0.9516700287982695,
+      "peak_passive_tendon_component_N": 0.0
+    },
+    "FL_S_C4": {
+      "enabled": true,
+      "maximum_normalized_fiber_length": 0.9453468672798699,
+      "peak_passive_tendon_component_N": 0.0
+    },
+    "FR_S_C4": {
+      "enabled": true,
+      "maximum_normalized_fiber_length": 0.9465573158488719,
+      "peak_passive_tendon_component_N": 0.0
+    },
+    "FL_S_C5": {
+      "enabled": true,
+      "maximum_normalized_fiber_length": 0.9388937796999413,
+      "peak_passive_tendon_component_N": 0.0
+    },
+    "FR_S_C5": {
+      "enabled": true,
+      "maximum_normalized_fiber_length": 0.9400039777406632,
+      "peak_passive_tendon_component_N": 0.0
+    },
+    "FL_S_C6": {
+      "enabled": true,
+      "maximum_normalized_fiber_length": 0.9471791184137027,
+      "peak_passive_tendon_component_N": 0.0
+    },
+    "FR_S_C6": {
+      "enabled": true,
+      "maximum_normalized_fiber_length": 0.9482484267290219,
+      "peak_passive_tendon_component_N": 0.0
+    },
+    "FL_S_C7": {
+      "enabled": true,
+      "maximum_normalized_fiber_length": 0.964911542181528,
+      "peak_passive_tendon_component_N": 0.0
+    },
+    "FR_S_C7": {
+      "enabled": true,
+      "maximum_normalized_fiber_length": 0.9671681117572964,
+      "peak_passive_tendon_component_N": 0.0
+    },
+    "FL_S_T1": {
+      "enabled": true,
+      "maximum_normalized_fiber_length": 1.028534691326907,
+      "peak_passive_tendon_component_N": 0.0016767637343433341
+    },
+    "FR_S_T1": {
+      "enabled": true,
+      "maximum_normalized_fiber_length": 1.0362118928971673,
+      "peak_passive_tendon_component_N": 0.002230979369626747
+    },
+    "FL_S_T2": {
+      "enabled": true,
+      "maximum_normalized_fiber_length": 1.0620851752080076,
+      "peak_passive_tendon_component_N": 0.002117191379627135
+    },
+    "FR_S_T2": {
+      "enabled": true,
+      "maximum_normalized_fiber_length": 1.073153033605497,
+      "peak_passive_tendon_component_N": 0.0026821990845510625
+    },
+    "FL_S_T3": {
+      "enabled": true,
+      "maximum_normalized_fiber_length": 1.126584868623241,
+      "peak_passive_tendon_component_N": 0.0035046131626018814
+    },
+    "FR_S_T3": {
+      "enabled": true,
+      "maximum_normalized_fiber_length": 1.1442631491642696,
+      "peak_passive_tendon_component_N": 0.004540961417797095
+    },
+    "FL_S_T4": {
+      "enabled": true,
+      "maximum_normalized_fiber_length": 1.1589638678457757,
+      "peak_passive_tendon_component_N": 0.009360052480909986
+    },
+    "FR_S_T4": {
+      "enabled": true,
+      "maximum_normalized_fiber_length": 1.1820063464658792,
+      "peak_passive_tendon_component_N": 0.012767141790732045
+    },
+    "FL_S_T5": {
+      "enabled": true,
+      "maximum_normalized_fiber_length": 1.0746600423684145,
+      "peak_passive_tendon_component_N": 0.002462378950487705
+    },
+    "FR_S_T5": {
+      "enabled": true,
+      "maximum_normalized_fiber_length": 1.093024723841695,
+      "peak_passive_tendon_component_N": 0.0034714060812478234
+    },
+    "FL_S_T6": {
+      "enabled": true,
+      "maximum_normalized_fiber_length": 0.9966895649891442,
+      "peak_passive_tendon_component_N": 0.0
+    },
+    "FR_S_T6": {
+      "enabled": true,
+      "maximum_normalized_fiber_length": 1.0087596409826587,
+      "peak_passive_tendon_component_N": 0.00043230883308432137
+    },
+    "FL_S_T7": {
+      "enabled": true,
+      "maximum_normalized_fiber_length": 0.9738494082685387,
+      "peak_passive_tendon_component_N": 0.0
+    },
+    "FR_S_T7": {
+      "enabled": true,
+      "maximum_normalized_fiber_length": 0.9727442486289954,
+      "peak_passive_tendon_component_N": 0.0
+    },
+    "FL_S_T8": {
+      "enabled": true,
+      "maximum_normalized_fiber_length": 1.0113733936319904,
+      "peak_passive_tendon_component_N": 0.00038142567817258684
+    },
+    "FR_S_T8": {
+      "enabled": true,
+      "maximum_normalized_fiber_length": 1.0102862319669628,
+      "peak_passive_tendon_component_N": 0.0003427523086850788
+    },
+    "FL_S_T9": {
+      "enabled": true,
+      "maximum_normalized_fiber_length": 1.055516253103719,
+      "peak_passive_tendon_component_N": 0.0012574263470930573
+    },
+    "FR_S_T9": {
+      "enabled": true,
+      "maximum_normalized_fiber_length": 1.054473536132037,
+      "peak_passive_tendon_component_N": 0.0012255868308953014
+    },
+    "FL_R_C2": {
+      "enabled": true,
+      "maximum_normalized_fiber_length": 0.9574213785787689,
+      "peak_passive_tendon_component_N": 0.0
+    },
+    "FR_R_C2": {
+      "enabled": true,
+      "maximum_normalized_fiber_length": 0.9571388166708222,
+      "peak_passive_tendon_component_N": 0.0
+    },
+    "FL_R_C3-7": {
+      "enabled": true,
+      "maximum_normalized_fiber_length": 0.968951994007775,
+      "peak_passive_tendon_component_N": 0.0
+    },
+    "FR_R_C3-7": {
+      "enabled": true,
+      "maximum_normalized_fiber_length": 0.9686752860011155,
+      "peak_passive_tendon_component_N": 0.0
+    },
+    "FL_R_T1": {
+      "enabled": true,
+      "maximum_normalized_fiber_length": 0.9721269934132336,
+      "peak_passive_tendon_component_N": 0.0
+    },
+    "FR_R_T1": {
+      "enabled": true,
+      "maximum_normalized_fiber_length": 0.9729630335665796,
+      "peak_passive_tendon_component_N": 0.0
+    },
+    "FL_R_T2": {
+      "enabled": true,
+      "maximum_normalized_fiber_length": 0.9808826057047957,
+      "peak_passive_tendon_component_N": 0.0
+    },
+    "FR_R_T2": {
+      "enabled": true,
+      "maximum_normalized_fiber_length": 0.9817316927438123,
+      "peak_passive_tendon_component_N": 0.0
+    },
+    "FL_R_T3": {
+      "enabled": true,
+      "maximum_normalized_fiber_length": 0.9947077128233772,
+      "peak_passive_tendon_component_N": 0.0
+    },
+    "FR_R_T3": {
+      "enabled": true,
+      "maximum_normalized_fiber_length": 0.9955896545451228,
+      "peak_passive_tendon_component_N": 0.0
+    },
+    "FL_R_T4": {
+      "enabled": true,
+      "maximum_normalized_fiber_length": 1.024891747152257,
+      "peak_passive_tendon_component_N": 0.000541810311059852
+    },
+    "FR_R_T4": {
+      "enabled": true,
+      "maximum_normalized_fiber_length": 1.0257835969174514,
+      "peak_passive_tendon_component_N": 0.0005642762404669467
+    },
+    "FL_R_T5": {
+      "enabled": true,
+      "maximum_normalized_fiber_length": 1.0447562119427165,
+      "peak_passive_tendon_component_N": 0.00084212136539031
+    },
+    "FR_R_T5": {
+      "enabled": true,
+      "maximum_normalized_fiber_length": 1.0456484148096754,
+      "peak_passive_tendon_component_N": 0.0008637537552257511
+    },
+    "FL_DigitalExtensors": {
+      "enabled": true,
+      "maximum_normalized_fiber_length": 0.9001937193561054,
+      "peak_passive_tendon_component_N": 0.0
+    },
+    "FR_DigitalExtensors": {
+      "enabled": true,
+      "maximum_normalized_fiber_length": 0.9559620198373938,
+      "peak_passive_tendon_component_N": 0.0
+    },
+    "FL_DigitalFlexors": {
+      "enabled": true,
+      "maximum_normalized_fiber_length": 0.899117773360138,
+      "peak_passive_tendon_component_N": 0.0
+    },
+    "FR_DigitalFlexors": {
+      "enabled": true,
+      "maximum_normalized_fiber_length": 0.8609608552643371,
+      "peak_passive_tendon_component_N": 0.0
+    },
+    "FL_TrapeziusCervical": {
+      "enabled": true,
+      "maximum_normalized_fiber_length": 1.0290986110342566,
+      "peak_passive_tendon_component_N": 0.0019490336084847
+    },
+    "FR_TrapeziusCervical": {
+      "enabled": true,
+      "maximum_normalized_fiber_length": 1.0379828504862993,
+      "peak_passive_tendon_component_N": 0.002687575301893541
+    },
+    "FL_TrapeziusThoracic": {
+      "enabled": true,
+      "maximum_normalized_fiber_length": 0.9979793646722993,
+      "peak_passive_tendon_component_N": 0.0
+    },
+    "FR_TrapeziusThoracic": {
+      "enabled": true,
+      "maximum_normalized_fiber_length": 0.998910356141877,
+      "peak_passive_tendon_component_N": 0.0
+    },
+    "FL_LatissimusDorsi": {
+      "enabled": true,
+      "maximum_normalized_fiber_length": 1.0615440283781807,
+      "peak_passive_tendon_component_N": 0.011125620114601626
+    },
+    "FR_LatissimusDorsi": {
+      "enabled": true,
+      "maximum_normalized_fiber_length": 1.0593212541803003,
+      "peak_passive_tendon_component_N": 0.010570628318399425
+    },
+    "FL_PectoralisProfundus": {
+      "enabled": true,
+      "maximum_normalized_fiber_length": 1.3131151850793255,
+      "peak_passive_tendon_component_N": 0.7753263603621511
+    },
+    "FR_PectoralisProfundus": {
+      "enabled": true,
+      "maximum_normalized_fiber_length": 1.3040892574125893,
+      "peak_passive_tendon_component_N": 0.6961595259705061
+    },
+    "FL_PectoralisSuperficialis": {
+      "enabled": true,
+      "maximum_normalized_fiber_length": 1.2157463870632426,
+      "peak_passive_tendon_component_N": 0.048027533408304436
+    },
+    "FR_PectoralisSuperficialis": {
+      "enabled": true,
+      "maximum_normalized_fiber_length": 1.2455439349165895,
+      "peak_passive_tendon_component_N": 0.06962686703542555
+    },
+    "FL_Clavobrachialis": {
+      "enabled": true,
+      "maximum_normalized_fiber_length": 1.1222965932208298,
+      "peak_passive_tendon_component_N": 0.018334805931187092
+    },
+    "FR_Clavobrachialis": {
+      "enabled": true,
+      "maximum_normalized_fiber_length": 1.137529685544513,
+      "peak_passive_tendon_component_N": 0.02301014769092586
+    }
+  }
+}

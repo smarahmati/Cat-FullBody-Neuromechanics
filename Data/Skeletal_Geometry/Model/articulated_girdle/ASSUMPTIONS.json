@@ -1,0 +1,46 @@
+{
+  "scope": "Alternative internal scapular articulation; forward walking not established.",
+  "removed_unmeasured_slides": [
+    "FL_scapula_x",
+    "FL_scapula_z",
+    "FR_scapula_x",
+    "FR_scapula_z"
+  ],
+  "fixed_symmetric_slide_coordinates_m": [
+    -0.00769567467172811,
+    0.0032525911268736457
+  ],
+  "DOF": 21,
+  "muscle_paths": 104,
+  "ground_constraint": false,
+  "equality_constraints": 0,
+  "rotation_and_all_limb_joints_dynamic": true,
+  "max_baking_position_error_m": 4.440892098500626e-16,
+  "offline_IK_max_paw_position_error_m": 0.01700528009913233,
+  "offline_IK_angle_RMSE_deg": [
+    2.879073370197722e-16,
+    1.0468487039011155e-15,
+    7.689087861612349e-16,
+    1.7311881160141345e-14,
+    8.11509037610702e-15,
+    8.49868969335307e-15,
+    9.760639013622367e-15,
+    9.813441564433e-15,
+    8.018951480078013e-15,
+    7.710248852053432e-15,
+    9.391319121325492e-15,
+    1.8135571752871036,
+    4.251352745659553,
+    6.23612289093256,
+    1.6842420900676447,
+    2.8792536428124618,
+    2.3603272599826504,
+    8.681874862414793,
+    9.628991093380911,
+    3.890940868475928,
+    3.8881904627197748
+  ],
+  "offline_IK_max_angle_adjustment_deg": 17.79432247710438,
+  "reference_comparison": "Raw experimental targets unchanged. Adjusted reference is only initialization/inverse seeding.",
+  "anatomical_scope": "Fixed effective scapular articulation center is our sagittal simplification; not a measured bony scapulothoracic joint. Forces transmitted by this internal ideal joint must not be interpreted as separately resolved thoracic sling forces."
+}

@@ -1,0 +1,54 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Compiled activation/elastic prehistory, evaluated only before time zero.</title><link rel="stylesheet" href="../style.css"></head><body><!-- generated folder guide --><header><div class="tag">Cat · Full-body neuromechanics</div><h1>Compiled activation/elastic prehistory, evaluated only before time zero.</h1><nav><a href="../../START_HERE.html">Start here</a> · <a href="../project_structure.html">Find a file</a></nav></header><main><p><a href="../../Code/neuromechanics/periodic_muscle_history_kernel.py">Code/neuromechanics/periodic_muscle_history_kernel.py</a></p><pre style="overflow:auto;white-space:pre"><span id="L1">   1</span> &quot;&quot;&quot;Compiled activation/elastic prehistory, evaluated only before time zero.&quot;&quot;&quot;
+<span id="L2">   2</span> 
+<span id="L3">   3</span> import numpy as np
+<span id="L4">   4</span> 
+<span id="L5">   5</span> from numba import njit
+<span id="L6">   6</span> 
+<span id="L7">   7</span> from .solve_elastic_muscle_equilibrium import solve_elastic_muscle_equilibrium
+<span id="L8">   8</span> 
+<span id="L9">   9</span> 
+<span id="L10">  10</span> # Compile this numerical function for repeated evaluations; its equations stay unchanged.
+<span id="L11">  11</span> @njit(cache=False)
+<span id="L12">  12</span> def periodic_muscle_history_kernel(
+<span id="L13">  13</span>     mtu,
+<span id="L14">  14</span>     table,
+<span id="L15">  15</span>     lopt,
+<span id="L16">  16</span>     slack,
+<span id="L17">  17</span>     params,
+<span id="L18">  18</span>     e0,
+<span id="L19">  19</span>     beta,
+<span id="L20">  20</span>     time_constants,
+<span id="L21">  21</span>     period,
+<span id="L22">  22</span>     cycles,
+<span id="L23">  23</span> ):
+<span id="L24">  24</span>     n, nm = mtu.shape
+<span id="L25">  25</span>     dt = period / n
+<span id="L26">  26</span>     a = np.zeros(nm)
+<span id="L27">  27</span>     lf = np.maximum(0.21 * lopt, (mtu[0] - slack) / params[:, 9])
+<span id="L28">  28</span>     before_a = a.copy()
+<span id="L29">  29</span>     before_lf = lf.copy()
+<span id="L30">  30</span>     for k in range(cycles * n):
+<span id="L31">  31</span>         frame = k % n
+<span id="L32">  32</span>         pos = frame / n * (len(table) - 1)
+<span id="L33">  33</span>         left = int(pos)
+<span id="L34">  34</span>         w = pos - left
+<span id="L35">  35</span>         u = table[left] * (1 - w) + table[left + 1] * w
+<span id="L36">  36</span>         factor = 0.5 + 1.5 * a
+<span id="L37">  37</span>         tau = np.where(u &gt; a, time_constants[:, 0] * factor, time_constants[:, 1] / factor)
+<span id="L38">  38</span>         a = np.clip(a + dt * (u - a) / tau, 0.0, 1.0)
+<span id="L39">  39</span>         lf, v, f, r, b = solve_elastic_muscle_equilibrium(
+<span id="L40">  40</span>             mtu[(frame + 1) % n],
+<span id="L41">  41</span>             lf,
+<span id="L42">  42</span>             a,
+<span id="L43">  43</span>             lopt,
+<span id="L44">  44</span>             slack,
+<span id="L45">  45</span>             params,
+<span id="L46">  46</span>             e0,
+<span id="L47">  47</span>             beta,
+<span id="L48">  48</span>             dt,
+<span id="L49">  49</span>         )
+<span id="L50">  50</span>         if k == (cycles - 1) * n - 1:
+<span id="L51">  51</span>             before_a = a.copy()
+<span id="L52">  52</span>             before_lf = lf.copy()
+<span id="L53">  53</span>     return a, lf, v, f, r, b, a - before_a, lf - before_lf
+</pre></main></body></html>

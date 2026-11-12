@@ -1,0 +1,54 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Check website publication rules and dual local/online navigation.</title><link rel="stylesheet" href="../style.css"></head><body><!-- generated folder guide --><header><div class="tag">Cat · Full-body neuromechanics</div><h1>Check website publication rules and dual local/online navigation.</h1><nav><a href="../../START_HERE.html">Start here</a> · <a href="../project_structure.html">Find a file</a></nav></header><main><p><a href="../../Verification/test_documentation_website.py">Verification/test_documentation_website.py</a></p><pre style="overflow:auto;white-space:pre"><span id="L1">   1</span> &quot;&quot;&quot;Check website publication rules and dual local/online navigation.
+<span id="L2">   2</span> 
+<span id="L3">   3</span> These tests use only the standard library. They do not run the simulation.
+<span id="L4">   4</span> &quot;&quot;&quot;
+<span id="L5">   5</span> from pathlib import Path
+<span id="L6">   6</span> import importlib.util
+<span id="L7">   7</span> import unittest
+<span id="L8">   8</span> 
+<span id="L9">   9</span> ROOT = Path(__file__).resolve().parents[1]
+<span id="L10">  10</span> spec = importlib.util.spec_from_file_location(&#x27;website&#x27;, ROOT / &#x27;Code/simulation_tools/build_documentation_website.py&#x27;)
+<span id="L11">  11</span> website = importlib.util.module_from_spec(spec)
+<span id="L12">  12</span> spec.loader.exec_module(website)
+<span id="L13">  13</span> 
+<span id="L14">  14</span> 
+<span id="L15">  15</span> class WebsitePublicationVerification(unittest.TestCase):
+<span id="L16">  16</span>     def test_private_files_never_enter_artifact(self):
+<span id="L17">  17</span>         for name in [&#x27;.git/config&#x27;, &#x27;.venv/pyvenv.cfg&#x27;,
+<span id="L18">  18</span>                      &#x27;Documentation/References/Local_Papers/private.pdf&#x27;,
+<span id="L19">  19</span>                      &#x27;Data/Skeletal_Geometry/Model/meshes/bone.obj&#x27;]:
+<span id="L20">  20</span>             self.assertFalse(website.belongs_in_website(name))
+<span id="L21">  21</span> 
+<span id="L22">  22</span>     def test_raw_results_stay_available_without_website_duplication(self):
+<span id="L23">  23</span>         raw = &#x27;Simulation_Results/Intact_Walking/forward_simulation_timeseries.npz&#x27;
+<span id="L24">  24</span>         self.assertFalse(website.belongs_in_website(raw))
+<span id="L25">  25</span>         self.assertTrue(website.belongs_in_website(&#x27;Simulation_Results/Intact_Walking/simulation_report.html&#x27;))
+<span id="L26">  26</span>         link = website.resolve_link(&#x27;Simulation_Results/index.html&#x27;, &#x27;Intact_Walking/forward_simulation_timeseries.npz&#x27;,
+<span id="L27">  27</span>                                     set(), {raw}, &#x27;owner/repo&#x27;, &#x27;commit123&#x27;)
+<span id="L28">  28</span>         self.assertEqual(link, &#x27;https://github.com/owner/repo/blob/commit123/&#x27; + raw)
+<span id="L29">  29</span> 
+<span id="L30">  30</span>     def test_relative_navigation_keeps_project_prefix(self):
+<span id="L31">  31</span>         link = website.resolve_link(&#x27;Documentation/model_methods.html&#x27;, &#x27;../START_HERE.html&#x27;,
+<span id="L32">  32</span>                                     {&#x27;START_HERE.html&#x27;}, {&#x27;START_HERE.html&#x27;}, &#x27;owner/repo&#x27;, &#x27;main&#x27;)
+<span id="L33">  33</span>         self.assertEqual(link, &#x27;../START_HERE.html&#x27;)
+<span id="L34">  34</span>         with self.assertRaises(ValueError):
+<span id="L35">  35</span>             website.local_target(&#x27;Documentation/model_methods.html&#x27;, &#x27;/START_HERE.html&#x27;)
+<span id="L36">  36</span> 
+<span id="L37">  37</span>     def test_missing_or_ignored_download_fails_instead_of_publishing(self):
+<span id="L38">  38</span>         with self.assertRaises(ValueError):
+<span id="L39">  39</span>             website.resolve_link(&#x27;Documentation/index.html&#x27;, &#x27;secret.pdf&#x27;, set(), set(), &#x27;owner/repo&#x27;, &#x27;main&#x27;)
+<span id="L40">  40</span> 
+<span id="L41">  41</span>     def test_inline_script_and_code_listing_are_preserved(self):
+<span id="L42">  42</span>         source = &#x27;&lt;script&gt;const x=&quot;&lt;a href=\&quot;not-a-link\&quot;&gt;&quot;;&lt;/script&gt;&lt;pre&gt;&amp;lt;a href=&quot;also-not-a-link&quot;&amp;gt;&lt;/pre&gt;&lt;a href=&quot;../START_HERE.html&quot;&gt;Home&lt;/a&gt;&#x27;
+<span id="L43">  43</span>         output = website.prepare_html(&#x27;Documentation/index.html&#x27;, source,
+<span id="L44">  44</span>                                       {&#x27;START_HERE.html&#x27;}, {&#x27;START_HERE.html&#x27;}, &#x27;owner/repo&#x27;, &#x27;main&#x27;)
+<span id="L45">  45</span>         self.assertEqual(source, output)
+<span id="L46">  46</span> 
+<span id="L47">  47</span>     def test_directory_link_is_portable(self):
+<span id="L48">  48</span>         self.assertEqual(website.resolve_link(&#x27;Documentation/index.html&#x27;, &#x27;../Data/&#x27;,
+<span id="L49">  49</span>                          {&#x27;Data/index.html&#x27;}, {&#x27;Data/index.html&#x27;}, &#x27;owner/repo&#x27;, &#x27;main&#x27;), &#x27;../Data/index.html&#x27;)
+<span id="L50">  50</span> 
+<span id="L51">  51</span> 
+<span id="L52">  52</span> if __name__ == &#x27;__main__&#x27;:
+<span id="L53">  53</span>     unittest.main()
+</pre></main></body></html>

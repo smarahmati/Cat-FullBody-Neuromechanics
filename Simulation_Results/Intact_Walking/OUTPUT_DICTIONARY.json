@@ -1,0 +1,12 @@
+{
+  "time": "s; absolute simulation clock",
+  "muscle_input": "excitation; prescribed in advance; no sensory feedback",
+  "force": "positive tensile force, N",
+  "passive_fiber_tendon_component": "F0 * fP(l_f/l_opt), N; evaluated at saved fiber state; included inside muscle equilibrium, not added again to tendon tension; zero below stretch threshold even when enabled",
+  "generalized_units": "hinges: rad, rad/s, rad/s^2 and N m; sliders: m, m/s, m/s^2 and N",
+  "moments": "muscle-only generalized contributions; no claim of inverse-dynamics or reaction moments",
+  "axes": "world +x progression, +z upward; anterior\u2013posterior (AP) Fx can be braking (<0) or propulsive (>0)",
+  "moment_arm": "-dL_MT/dq from the actual engine transmission; same moving route geometry as simulation",
+  "accelerations": "finite differences of saved velocities, not exact step acceleration",
+  "reference_scope": "RH measured; LH assumed mirror; forelimbs separate study, EMG pooled"
+}

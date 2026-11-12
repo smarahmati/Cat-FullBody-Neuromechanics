@@ -1,0 +1,24 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Read signed muscle moment arms from MuJoCo&#x27;s current transmission Jacobian.</title><link rel="stylesheet" href="../style.css"></head><body><!-- generated folder guide --><header><div class="tag">Cat · Full-body neuromechanics</div><h1>Read signed muscle moment arms from MuJoCo&#x27;s current transmission Jacobian.</h1><nav><a href="../../START_HERE.html">Start here</a> · <a href="../project_structure.html">Find a file</a></nav></header><main><p><a href="../../Code/neuromechanics/muscle_moment_arms.py">Code/neuromechanics/muscle_moment_arms.py</a></p><pre style="overflow:auto;white-space:pre"><span id="L1">   1</span> &quot;&quot;&quot;Read signed muscle moment arms from MuJoCo&#x27;s current transmission Jacobian.
+<span id="L2">   2</span> 
+<span id="L3">   3</span> Input: the model and data after muscle paths and positions have been updated.
+<span id="L4">   4</span> Output: an (muscle, generalized-coordinate) array equal to -dL_MT/dq.
+<span id="L5">   5</span> Rotational columns are metres; translational columns are dimensionless.
+<span id="L6">   6</span> Positive tension times this array gives the applied generalized muscle force.
+<span id="L7">   7</span> &quot;&quot;&quot;
+<span id="L8">   8</span> import numpy as np
+<span id="L9">   9</span> 
+<span id="L10">  10</span> 
+<span id="L11">  11</span> def muscle_moment_arms(model, data):
+<span id="L12">  12</span>     &quot;&quot;&quot;Convert the engine&#x27;s sparse transmission representation to a named matrix.&quot;&quot;&quot;
+<span id="L13">  13</span>     jacobian = np.zeros((model.nu, model.nv))
+<span id="L14">  14</span>     if data.actuator_moment.ndim == 2:
+<span id="L15">  15</span>         jacobian[:] = data.actuator_moment
+<span id="L16">  16</span>     else:
+<span id="L17">  17</span>         for muscle in range(model.nu):
+<span id="L18">  18</span>             first = int(data.moment_rowadr[muscle])
+<span id="L19">  19</span>             last = first + int(data.moment_rownnz[muscle])
+<span id="L20">  20</span>             columns = data.moment_colind[first:last]
+<span id="L21">  21</span>             jacobian[muscle, columns] = data.actuator_moment[first:last]
+<span id="L22">  22</span>     # A tensile actuator pulls towards decreasing muscle-tendon length.
+<span id="L23">  23</span>     return -jacobian
+</pre></main></body></html>

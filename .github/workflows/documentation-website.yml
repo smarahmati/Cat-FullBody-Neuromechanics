@@ -1,0 +1,67 @@
+name: Documentation website
+
+# Publish after a GitHub Desktop push to the repository's default branch.
+# One-time GitHub setting: Settings > Pages > Source > GitHub Actions.
+on:
+  push:
+    branches: [main, master]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: documentation-pages
+  cancel-in-progress: false
+
+jobs:
+  build:
+    if: github.ref == format('refs/heads/{0}', github.event.repository.default_branch)
+    runs-on: ubuntu-latest
+    steps:
+      - name: Read the committed project
+        uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - name: Prepare Python for documentation only
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Test publication rules
+        run: python -m unittest discover -s Verification -p test_documentation_website.py -v
+      - name: Build website and check its links
+        run: python Code/simulation_tools/build_documentation_website.py --output _site
+        env:
+          WEBSITE_REPOSITORY: ${{ github.repository }}
+          WEBSITE_REVISION: ${{ github.sha }}
+      - name: Upload formatted documentation
+        uses: actions/upload-pages-artifact@v4
+        with:
+          path: _site
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Check GitHub Pages setup
+        id: pages
+        uses: actions/configure-pages@v5
+      - name: Explain first-time setup if needed
+        if: failure() && steps.pages.outcome == 'failure'
+        run: |
+          echo '::error::Enable Pages once: repository Settings > Pages > Build and deployment > Source > GitHub Actions. Then rerun this workflow.'
+          echo '## One-time setup' >> "$GITHUB_STEP_SUMMARY"
+          echo 'Select **Settings → Pages → Source → GitHub Actions**, then rerun **Documentation website**. Future default-branch pushes publish automatically.' >> "$GITHUB_STEP_SUMMARY"
+      - name: Publish website
+        id: deployment
+        uses: actions/deploy-pages@v4
+      - name: Show website address
+        env:
+          PAGE_URL: ${{ steps.deployment.outputs.page_url }}
+        run: echo "Documentation website — $PAGE_URL" >> "$GITHUB_STEP_SUMMARY"

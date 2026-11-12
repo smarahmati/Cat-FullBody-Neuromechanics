@@ -1,0 +1,13 @@
+{
+  "source": "D:\\Cat-Neuromechnaics\\Cat-FullBody-Neuromechanics\\Simulation_Results\\Intact_Walking\\forward_simulation_timeseries.npz",
+  "start_s": 56.0,
+  "end_s": 59.9,
+  "frame_count": 311,
+  "frames_per_second": 40,
+  "playback_speed": 0.5,
+  "species": "cat",
+  "arrows": "saved Ground_Reaction_Forces at projected paw sites; archived center of pressure unavailable",
+  "source_sha256": "2dbc8fdce52accfdf974eea4f8abb6d1fca2c4525d0895fe7be29cc69d54f9f6",
+  "passive_fiber_enabled_channels": 104,
+  "no_fine_tuning": true
+}

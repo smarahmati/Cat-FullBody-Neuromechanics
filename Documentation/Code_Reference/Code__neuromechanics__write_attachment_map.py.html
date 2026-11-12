@@ -1,0 +1,226 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Write an inspectable, per-muscle map from actual engine geometry.</title><link rel="stylesheet" href="../style.css"></head><body><!-- generated folder guide --><header><div class="tag">Cat · Full-body neuromechanics</div><h1>Write an inspectable, per-muscle map from actual engine geometry.</h1><nav><a href="../../START_HERE.html">Start here</a> · <a href="../project_structure.html">Find a file</a></nav></header><main><p><a href="../../Code/neuromechanics/write_attachment_map.py">Code/neuromechanics/write_attachment_map.py</a></p><pre style="overflow:auto;white-space:pre"><span id="L1">   1</span> &quot;&quot;&quot;Write an inspectable, per-muscle map from actual engine geometry.&quot;&quot;&quot;
+<span id="L2">   2</span> 
+<span id="L3">   3</span> import html
+<span id="L4">   4</span> 
+<span id="L5">   5</span> import json
+<span id="L6">   6</span> 
+<span id="L7">   7</span> import re
+<span id="L8">   8</span> 
+<span id="L9">   9</span> from pathlib import Path
+<span id="L10">  10</span> 
+<span id="L11">  11</span> import numpy as np
+<span id="L12">  12</span> 
+<span id="L13">  13</span> from .describe_muscle_paths import describe_muscle_paths
+<span id="L14">  14</span> 
+<span id="L15">  15</span> from .attachment_equations import EQUATIONS
+<span id="L16">  16</span> 
+<span id="L17">  17</span> 
+<span id="L18">  18</span> def write_attachment_map(state, output):
+<span id="L19">  19</span>     &quot;&quot;&quot;Save connections/frames at the current pose; does not alter the model.
+<span id="L20">  20</span> 
+<span id="L21">  21</span>     Coordinates are in metres in the named body frame. The world-coordinate
+<span id="L22">  22</span>     columns and frame axes are only a snapshot, not fixed points in space.
+<span id="L23">  23</span>     &quot;&quot;&quot;
+<span id="L24">  24</span>     out = Path(output)
+<span id="L25">  25</span>     out.mkdir(parents=True, exist_ok=True)
+<span id="L26">  26</span>     m = state[&quot;model&quot;]
+<span id="L27">  27</span>     d = state[&quot;data&quot;]
+<span id="L28">  28</span>     paths = describe_muscle_paths(state)
+<span id="L29">  29</span>     frames = []
+<span id="L30">  30</span>     for i in range(1, m.nbody):
+<span id="L31">  31</span>         frames.append(
+<span id="L32">  32</span>             dict(
+<span id="L33">  33</span>                 body=m.body(i).name,
+<span id="L34">  34</span>                 parent=m.body(int(m.body_parentid[i])).name,
+<span id="L35">  35</span>                 origin_in_parent_m=m.body_pos[i].tolist(),
+<span id="L36">  36</span>                 quaternion_in_parent_wxyz=m.body_quat[i].tolist(),
+<span id="L37">  37</span>                 world_origin_m=d.xpos[i].tolist(),
+<span id="L38">  38</span>                 local_axes_in_world_columns=d.xmat[i].reshape(3, 3).tolist(),
+<span id="L39">  39</span>             )
+<span id="L40">  40</span>         )
+<span id="L41">  41</span>     record = dict(
+<span id="L42">  42</span>         configuration=state[&quot;settings&quot;].get(&quot;parameter_bundle_dir&quot;, &quot;legacy settings&quot;),
+<span id="L43">  43</span>         time_s=float(d.time),
+<span id="L44">  44</span>         units=&quot;metres; xyz in each named body frame&quot;,
+<span id="L45">  45</span>         scope=&quot;Actual model connections, not an independent anatomical validation. Model-space registration and some attachment regions are estimated.&quot;,
+<span id="L46">  46</span>         muscles=paths,
+<span id="L47">  47</span>         body_frames=frames,
+<span id="L48">  48</span>     )
+<span id="L49">  49</span>     # Save the computed values or figure for inspection and reproducibility.
+<span id="L50">  50</span>     (out / &quot;ATTACHMENT_MAP.json&quot;).write_text(json.dumps(record, indent=2), encoding=&quot;utf-8&quot;)
+<span id="L51">  51</span>     esc = lambda x: html.escape(str(x))
+<span id="L52">  52</span>     vec = lambda x: &quot;[&quot; + &quot;, &quot;.join(f&quot;{v:.8g}&quot; for v in x) + &quot;]&quot;
+<span id="L53">  53</span>     rows = []
+<span id="L54">  54</span>     for muscle in paths:
+<span id="L55">  55</span>         body_rows = []
+<span id="L56">  56</span>         order = 0
+<span id="L57">  57</span>         for bindex, branch in enumerate(muscle[&quot;branches&quot;]):
+<span id="L58">  58</span>             for e in branch[&quot;elements&quot;]:
+<span id="L59">  59</span>                 order += 1
+<span id="L60">  60</span>                 if e[&quot;kind&quot;] == &quot;site&quot;:
+<span id="L61">  61</span>                     description = e[&quot;role&quot;] + (
+<span id="L62">  62</span>                         &quot; — computed moving point&quot;
+<span id="L63">  63</span>                         if e[&quot;moving&quot;]
+<span id="L64">  64</span>                         else &quot; — body-fixed&quot;
+<span id="L65">  65</span>                     )
+<span id="L66">  66</span>                     local = vec(e[&quot;local_position_m&quot;])
+<span id="L67">  67</span>                     world = vec(e[&quot;world_position_m&quot;])
+<span id="L68">  68</span>                 else:
+<span id="L69">  69</span>                     description = (
+<span id="L70">  70</span>                         e[&quot;shape&quot;]
+<span id="L71">  71</span>                         + &quot; wrap, radius &quot;
+<span id="L72">  72</span>                         + f&quot;{e[&#x27;radius_m&#x27;]*1000:.5g}&quot;
+<span id="L73">  73</span>                         + &quot; mm&quot;
+<span id="L74">  74</span>                     )
+<span id="L75">  75</span>                     local = vec(e[&quot;local_position_m&quot;])
+<span id="L76">  76</span>                     world = &quot;wrap surface, not an attachment&quot;
+<span id="L77">  77</span>                 vals = [
+<span id="L78">  78</span>                     order,
+<span id="L79">  79</span>                     bindex + 1,
+<span id="L80">  80</span>                     e[&quot;name&quot;],
+<span id="L81">  81</span>                     description,
+<span id="L82">  82</span>                     e[&quot;body&quot;],
+<span id="L83">  83</span>                     local,
+<span id="L84">  84</span>                     world,
+<span id="L85">  85</span>                     e[&quot;editable_file&quot;],
+<span id="L86">  86</span>                 ]
+<span id="L87">  87</span>                 body_rows.append(
+<span id="L88">  88</span>                     &quot;&lt;tr&gt;&quot;
+<span id="L89">  89</span>                     + &quot;&quot;.join(&quot;&lt;td&gt;&quot; + esc(v) + &quot;&lt;/td&gt;&quot; for v in vals)
+<span id="L90">  90</span>                     + &quot;&lt;/tr&gt;&quot;
+<span id="L91">  91</span>                 )
+<span id="L92">  92</span>                 if e[&quot;kind&quot;] == &quot;wrap&quot; and e[&quot;side_site&quot;]:
+<span id="L93">  93</span>                     side = e[&quot;side_site&quot;]
+<span id="L94">  94</span>                     role = &quot;side selector (NOT a point the path passes through)&quot;
+<span id="L95">  95</span>                     if side[&quot;moving&quot;]:
+<span id="L96">  96</span>                         role += &quot;; computed&quot;
+<span id="L97">  97</span>                     vals = [
+<span id="L98">  98</span>                         &quot;—&quot;,
+<span id="L99">  99</span>                         bindex + 1,
+<span id="L100"> 100</span>                         side[&quot;name&quot;],
+<span id="L101"> 101</span>                         role,
+<span id="L102"> 102</span>                         side[&quot;body&quot;],
+<span id="L103"> 103</span>                         vec(side[&quot;local_position_m&quot;]),
+<span id="L104"> 104</span>                         &quot;—&quot;,
+<span id="L105"> 105</span>                         side[&quot;editable_file&quot;],
+<span id="L106"> 106</span>                     ]
+<span id="L107"> 107</span>                     body_rows.append(
+<span id="L108"> 108</span>                         &#x27;&lt;tr class=&quot;side&quot;&gt;&#x27;
+<span id="L109"> 109</span>                         + &quot;&quot;.join(&quot;&lt;td&gt;&quot; + esc(v) + &quot;&lt;/td&gt;&quot; for v in vals)
+<span id="L110"> 110</span>                         + &quot;&lt;/tr&gt;&quot;
+<span id="L111"> 111</span>                     )
+<span id="L112"> 112</span>         rows.append(
+<span id="L113"> 113</span>             &#x27;&lt;details class=&quot;muscle&quot;&gt;&lt;summary&gt;&#x27;
+<span id="L114"> 114</span>             + esc(muscle[&quot;muscle&quot;])
+<span id="L115"> 115</span>             + &quot;&lt;/summary&gt;&lt;p&gt;Native path = &quot;
+<span id="L116"> 116</span>             + f&quot;{muscle[&#x27;path_length_m&#x27;]*1000:.6f}&quot;
+<span id="L117"> 117</span>             + &quot; mm; constant offset = &quot;
+<span id="L118"> 118</span>             + f&quot;{muscle[&#x27;length_offset_m&#x27;]*1000:.6f}&quot;
+<span id="L119"> 119</span>             + &quot; mm; MT length = &quot;
+<span id="L120"> 120</span>             + f&quot;{muscle[&#x27;MT_length_m&#x27;]*1000:.6f}&quot;
+<span id="L121"> 121</span>             + &quot; mm. Branch divisors: &quot;
+<span id="L122"> 122</span>             + esc([b[&quot;divisor&quot;] for b in muscle[&quot;branches&quot;]])
+<span id="L123"> 123</span>             + &quot;.&lt;/p&gt;&lt;table&gt;&lt;thead&gt;&lt;tr&gt;&quot;
+<span id="L124"> 124</span>             + &quot;&quot;.join(
+<span id="L125"> 125</span>                 &quot;&lt;th&gt;&quot; + h + &quot;&lt;/th&gt;&quot;
+<span id="L126"> 126</span>                 for h in [
+<span id="L127"> 127</span>                     &quot;Order&quot;,
+<span id="L128"> 128</span>                     &quot;Branch&quot;,
+<span id="L129"> 129</span>                     &quot;Point / object&quot;,
+<span id="L130"> 130</span>                     &quot;Role&quot;,
+<span id="L131"> 131</span>                     &quot;Connected body&quot;,
+<span id="L132"> 132</span>                     &quot;Local xyz (m)&quot;,
+<span id="L133"> 133</span>                     &quot;World xyz at this pose (m)&quot;,
+<span id="L134"> 134</span>                     &quot;Editable file&quot;,
+<span id="L135"> 135</span>                 ]
+<span id="L136"> 136</span>             )
+<span id="L137"> 137</span>             + &quot;&lt;/tr&gt;&lt;/thead&gt;&lt;tbody&gt;&quot;
+<span id="L138"> 138</span>             + &quot;&quot;.join(body_rows)
+<span id="L139"> 139</span>             + &quot;&lt;/tbody&gt;&lt;/table&gt;&lt;/details&gt;&quot;
+<span id="L140"> 140</span>         )
+<span id="L141"> 141</span>     frames_html = &quot;&quot;.join(
+<span id="L142"> 142</span>         &quot;&lt;tr&gt;&quot;
+<span id="L143"> 143</span>         + &quot;&quot;.join(
+<span id="L144"> 144</span>             &quot;&lt;td&gt;&quot; + esc(v) + &quot;&lt;/td&gt;&quot;
+<span id="L145"> 145</span>             for v in [
+<span id="L146"> 146</span>                 f[&quot;body&quot;],
+<span id="L147"> 147</span>                 f[&quot;parent&quot;],
+<span id="L148"> 148</span>                 vec(f[&quot;origin_in_parent_m&quot;]),
+<span id="L149"> 149</span>                 vec(f[&quot;quaternion_in_parent_wxyz&quot;]),
+<span id="L150"> 150</span>                 &quot;; &quot;.join(
+<span id="L151"> 151</span>                     &quot;xyz&quot;[k] + &quot;: &quot; + vec(np.array(f[&quot;local_axes_in_world_columns&quot;])[:, k])
+<span id="L152"> 152</span>                     for k in range(3)
+<span id="L153"> 153</span>                 ),
+<span id="L154"> 154</span>             ]
+<span id="L155"> 155</span>         )
+<span id="L156"> 156</span>         + &quot;&lt;/tr&gt;&quot;
+<span id="L157"> 157</span>         for f in frames
+<span id="L158"> 158</span>     )
+<span id="L159"> 159</span>     document = (
+<span id="L160"> 160</span>         &quot;&quot;&quot;&lt;!doctype html&gt;&lt;html lang=&quot;en&quot;&gt;&lt;meta charset=&quot;utf-8&quot;&gt;&lt;title&gt;Muscle attachments and wrapping&lt;/title&gt;
+<span id="L161"> 161</span> &lt;style&gt;body{margin:35px auto;max-width:1450px;padding:0 24px;font:17px/1.6 Arial;color:#18333d}h1{font-size:32px}table{border-collapse:collapse;width:100%;font-size:13px}td,th{border:1px solid #c1cdd2;padding:8px;text-align:left}th{background:#e9f1f4}summary{font-size:20px;cursor:pointer;padding:8px;background:#edf4f6}details{margin:14px 0;overflow:auto}.note{background:#fff2db;padding:18px}input{width:95%;padding:12px;font:16px Arial}code,pre{font:14px Consolas,monospace}pre{background:#edf4f6;padding:16px;white-space:pre-wrap}.equation{text-align:center;font:22px/2 Georgia;margin:22px 0}.side{color:#5b6670}a{color:#007b90}li{margin-bottom:7px}@media print{details{display:block}input{display:none}body{font-size:11pt}tr{break-inside:avoid}}&lt;/style&gt;
+<span id="L162"> 162</span> &lt;h1&gt;Origins, insertions, via points and wrapping&lt;/h1&gt;
+<span id="L163"> 163</span> &lt;p class=&quot;note&quot;&gt;This is a map of the geometry actually used in the forward simulation. It distinguishes fixed bone/body attachments, moving routing points and wrap surfaces. The visible bone mesh does not automatically determine a muscle path. Some coordinates are registered or estimated model geometry, not measured feline attachment coordinates.&lt;/p&gt;
+<span id="L164"> 164</span> &lt;h2&gt;Which file do I edit?&lt;/h2&gt;&lt;ul&gt;
+<span id="L165"> 165</span> &lt;li&gt;&lt;code&gt;attachments.py&lt;/code&gt;: body-fixed origin/insertion/via coordinates. The named body and role appear immediately above each entry. Metres: &lt;b&gt;0.001 m = 1 mm&lt;/b&gt;. Changing a point site&#x27;s orientation alone does not move its centre or alter MT length.&lt;/li&gt;
+<span id="L166"> 166</span> &lt;li&gt;&lt;code&gt;routing.py&lt;/code&gt;: geometry parameters of computed moving via points and preferred wrap-side selectors. Their positions are recalculated from joint angles at each step; a static site-coordinate edit would be overwritten.&lt;/li&gt;
+<span id="L167"> 167</span> &lt;li&gt;&lt;code&gt;wrapping.py&lt;/code&gt;: centres, orientations and radii of the actual sphere/cylinder wrap objects. These are separate from the visible bone surfaces.&lt;/li&gt;
+<span id="L168"> 168</span> &lt;li&gt;&lt;code&gt;muscle_tendon.py&lt;/code&gt;: constant MT path offset, optimal fibre length and slack tendon length. Changing an attachment does not automatically change these parameters.&lt;/li&gt;&lt;/ul&gt;
+<span id="L169"> 169</span> &lt;p&gt;Run &lt;code&gt;.\\run_model.ps1 --parameters config/user_model --seconds 3 --output my_attachment_trial&lt;/code&gt; from the project folder. A new run rereads the files, applies the values before time zero, and writes an &lt;code&gt;ATTACHMENT_MAP.html&lt;/code&gt; and &lt;code&gt;APPLIED_PARAMETERS.json&lt;/code&gt;. Edits are not silently refitted. Use a new output name for each trial.&lt;/p&gt;
+<span id="L170"> 170</span> &lt;h2&gt;Where are these coordinates?&lt;/h2&gt;
+<span id="L171"> 171</span> &lt;p&gt;A local coordinate belongs to the named rigid body, not the world and not the bone mesh file. In a hindlimb thigh frame, zero is the hip centre and +x runs along the segment towards the knee. In shank and foot frames, zero is their proximal joint and +x points along that segment. Forelimb upper-arm and forearm frames follow the same proximal-to-distal construction. Pelvis, scapula and trunk have their own assembly frames; consult the frame table below. Local y is an in-plane transverse direction and local z is normal to the limb plane for the limb segment frames. They are &lt;em&gt;not&lt;/em&gt; universally world-up or world-left.&lt;/p&gt;
+<span id="L172"> 172</span> &lt;div class=&quot;equation&quot;&gt;p&lt;sub&gt;W,k&lt;/sub&gt;(q) = x&lt;sub&gt;B&lt;/sub&gt;(q) + R&lt;sub&gt;B&lt;/sub&gt;(q) p&lt;sub&gt;B,k&lt;/sub&gt; &amp;nbsp; (1)&lt;/div&gt;
+<span id="L173"> 173</span> &lt;p&gt;&lt;b&gt;Terms:&lt;/b&gt; p&lt;sub&gt;B,k&lt;/sub&gt; is the configured xyz coordinate of point k in body B (m); p&lt;sub&gt;W,k&lt;/sub&gt; is its world coordinate (m); x&lt;sub&gt;B&lt;/sub&gt; is the world position of that body&#x27;s origin (m); R&lt;sub&gt;B&lt;/sub&gt; is its dimensionless 3×3 rotation matrix; q is the current generalized configuration (translations in m, rotations in rad). The point is constant in its body frame, while x&lt;sub&gt;B&lt;/sub&gt; and R&lt;sub&gt;B&lt;/sub&gt; change during motion. The axes table gives the actual initial orientation for every body.&lt;/p&gt;
+<span id="L174"> 174</span> &lt;h2&gt;How does a coordinate edit change MT length?&lt;/h2&gt;
+<span id="L175"> 175</span> &lt;div class=&quot;equation&quot;&gt;L&lt;sub&gt;MT,i&lt;/sub&gt;(q) = c&lt;sub&gt;i&lt;/sub&gt; + ∑&lt;sub&gt;b&lt;/sub&gt; L&lt;sub&gt;path,ib&lt;/sub&gt;(q) / d&lt;sub&gt;ib&lt;/sub&gt; &amp;nbsp; (2)&lt;/div&gt;
+<span id="L176"> 176</span> &lt;p&gt;&lt;b&gt;Terms:&lt;/b&gt; L&lt;sub&gt;MT,i&lt;/sub&gt; is whole muscle–tendon length for muscle path i (m); c&lt;sub&gt;i&lt;/sub&gt; is its configured constant &lt;code&gt;MT_path_length_offset_m&lt;/code&gt; (m); b indexes an engine path branch; L&lt;sub&gt;path,ib&lt;/sub&gt; is that branch&#x27;s routed length (m), including straight spans and any surface wrap arcs; d&lt;sub&gt;ib&lt;/sub&gt; is the dimensionless branch divisor. All current muscle tendon gears are one. A branch seam is a computational construction, not necessarily a separate biological attachment.&lt;/p&gt;
+<span id="L177"> 177</span> &lt;div class=&quot;equation&quot;&gt;L&lt;sub&gt;straight&lt;/sub&gt; = ∑&lt;sub&gt;k&lt;/sub&gt; ‖p&lt;sub&gt;W,k+1&lt;/sub&gt; − p&lt;sub&gt;W,k&lt;/sub&gt;‖ &amp;nbsp; (3)&lt;/div&gt;
+<span id="L178"> 178</span> &lt;p&gt;&lt;b&gt;Terms:&lt;/b&gt; L&lt;sub&gt;straight&lt;/sub&gt; is the length (m) of a branch with only straight spans; k indexes successive ordered points and ‖·‖ is Euclidean distance. This formula alone is insufficient when the path wraps: the engine also includes tangent spans and cylinder/sphere surface arcs. A side selector chooses the wrap side and is not included as a mandatory path vertex. Moving it can change the selected path discontinuously.&lt;/p&gt;
+<span id="L179"> 179</span> &lt;div class=&quot;equation&quot;&gt;ΔL ≈ [(p&lt;sub&gt;O&lt;/sub&gt; − p&lt;sub&gt;I&lt;/sub&gt;)/‖p&lt;sub&gt;O&lt;/sub&gt; − p&lt;sub&gt;I&lt;/sub&gt;‖] · R&lt;sub&gt;B&lt;/sub&gt; Δp&lt;sub&gt;B,O&lt;/sub&gt; &amp;nbsp; (4)&lt;/div&gt;
+<span id="L180"> 180</span> &lt;p&gt;&lt;b&gt;Terms:&lt;/b&gt; ΔL is the first-order length change (m) for a single straight origin-to-insertion span with insertion held fixed; p&lt;sub&gt;O&lt;/sub&gt; and p&lt;sub&gt;I&lt;/sub&gt; are its world origin and insertion (m); Δp&lt;sub&gt;B,O&lt;/sub&gt; is the local origin edit (m). Moving directly away from the next path point lengthens a straight span; moving towards it shortens it. A 1 mm edit perpendicular to the span may barely change its length. For a wrapped path or via point use the numerical inspection tool; there is no universal rule that increasing x increases length.&lt;/p&gt;
+<span id="L181"> 181</span> &lt;div class=&quot;equation&quot;&gt;L&lt;sub&gt;T&lt;/sub&gt; = L&lt;sub&gt;MT&lt;/sub&gt; − L&lt;sub&gt;F&lt;/sub&gt; cos α, &amp;nbsp; ε&lt;sub&gt;T&lt;/sub&gt; = (L&lt;sub&gt;T&lt;/sub&gt; − L&lt;sub&gt;T0&lt;/sub&gt;)/L&lt;sub&gt;T0&lt;/sub&gt; &amp;nbsp; (5)&lt;/div&gt;
+<span id="L182"> 182</span> &lt;p&gt;&lt;b&gt;Terms:&lt;/b&gt; L&lt;sub&gt;T&lt;/sub&gt; is elastic tendon length (m); L&lt;sub&gt;F&lt;/sub&gt; is fibre length (m); α is the fixed pennation angle (rad); L&lt;sub&gt;T0&lt;/sub&gt; is slack tendon length (m); ε&lt;sub&gt;T&lt;/sub&gt; is dimensionless tendon strain. MT length is &lt;b&gt;not&lt;/b&gt; fibre length. At the same initial fibre state, a longer MT path stretches the tendon more; subsequent fibre motion and tendon force are solved by the elastic mechanics. The code does not automatically rescale fibre or slack lengths to hide your edit.&lt;/p&gt;
+<span id="L183"> 183</span> &lt;p&gt;Changing the path can also change its angle-dependent length and force moment arms. The native force transmission uses the engine path Jacobian. With computed moving via points, verify it against a finite difference that updates the routing at both perturbed joint positions; geometry edits can spoil virtual-work consistency. A successful coordinate edit is not anatomical or gait validation.&lt;/p&gt;
+<span id="L184"> 184</span> &lt;h2&gt;Important editing distinctions&lt;/h2&gt;&lt;ul&gt;&lt;li&gt;&lt;b&gt;Body ownership:&lt;/b&gt; editing xyz moves a point within its current body. Attaching it to another bone requires changing model topology, not just its coordinates.&lt;/li&gt;&lt;li&gt;&lt;b&gt;Paired seams:&lt;/b&gt; some forelimb groups contain multiple computational branches. Keep coincident internal branch endpoints consistent when changing their geometry.&lt;/li&gt;&lt;li&gt;&lt;b&gt;Routed muscles:&lt;/b&gt; changing an endpoint does not automatically update polar radii/angles in &lt;code&gt;routing.py&lt;/code&gt; or wrap surfaces in &lt;code&gt;wrapping.py&lt;/code&gt;. Review all three when changing the anatomical routing construction; otherwise you have deliberately created a different approximation.&lt;/li&gt;&lt;li&gt;&lt;b&gt;Left/right:&lt;/b&gt; configuration entries are independent. Editing R_VL does not silently mirror the change to L_VL. Local-frame signs are not universally the same as world left/right signs.&lt;/li&gt;&lt;li&gt;&lt;b&gt;Origins and insertions:&lt;/b&gt; names below identify endpoints in the current computational path. Simplified group endpoints are not claims of anatomically exact broad attachment surfaces.&lt;/li&gt;&lt;/ul&gt;
+<span id="L185"> 185</span> &lt;h2&gt;All muscle paths&lt;/h2&gt;&lt;p&gt;Search by muscle, body or point name. L/R = left/right hindlimb; FL/FR = left/right forelimb. SAM is the existing medial sartorius/SRTm model-channel label. Coordinates shown here are read back from the engine at the listed pose.&lt;/p&gt;
+<span id="L186"> 186</span> &lt;input id=&quot;search&quot; placeholder=&quot;e.g. R_VL, SRTm (use SAM), thigh, DigitalFlexors&quot; oninput=&quot;filterPaths(this.value)&quot;&gt;
+<span id="L187"> 187</span> &quot;&quot;&quot;
+<span id="L188"> 188</span>         + &quot;&quot;.join(rows)
+<span id="L189"> 189</span>         + &quot;&quot;&quot;&lt;h2&gt;Body coordinate frames at this pose&lt;/h2&gt;&lt;p&gt;Parent-frame xyz and wxyz are the base assembly transforms before joint motion. The final column lists each local unit axis expressed in world coordinates at the inspected pose. For a new pose, use the updated world rotation; do not reuse this snapshot as a constant transform.&lt;/p&gt;&lt;table&gt;&lt;thead&gt;&lt;tr&gt;&lt;th&gt;Body&lt;/th&gt;&lt;th&gt;Parent&lt;/th&gt;&lt;th&gt;Origin in parent (m)&lt;/th&gt;&lt;th&gt;Base orientation wxyz&lt;/th&gt;&lt;th&gt;Local x/y/z directions in world&lt;/th&gt;&lt;/tr&gt;&lt;/thead&gt;&lt;tbody&gt;&quot;&quot;&quot;
+<span id="L190"> 190</span>         + frames_html
+<span id="L191"> 191</span>         + &quot;&quot;&quot;&lt;/tbody&gt;&lt;/table&gt;
+<span id="L192"> 192</span> &lt;h2&gt;Provenance and implementation&lt;/h2&gt;&lt;p&gt;Original verified values and imported prepared values remain in the configuration comments and &lt;code&gt;PARAMETER_PROVENANCE.json&lt;/code&gt;. “Not independently established” means no exact raw literature coordinate has been verified. The 11 original hindlimb groups use the project&#x27;s Model 3 routing construction; the forelimb group model, added digit paths and registered shoulder/trunk paths have separate source histories. Some added extrinsic anchors are estimated anatomical-region coordinates. Neither this inspection map nor its colours upgrades them to measured anatomy.&lt;/p&gt;
+<span id="L193"> 193</span> &lt;p&gt;The path, wrapping and branch definitions follow the &lt;a href=&quot;https://mujoco.readthedocs.io/en/stable/XMLreference.html#tendon-spatial&quot;&gt;MuJoCo spatial-tendon reference&lt;/a&gt;. The body&#x27;s local transform is evaluated by the dynamics engine. Inspect &lt;code&gt;describe_muscle_paths.py&lt;/code&gt;, &lt;code&gt;apply_neuromechanical_parameters.py&lt;/code&gt;, &lt;code&gt;apply_wrapping_parameters.py&lt;/code&gt;, &lt;code&gt;update_muscle_paths.py&lt;/code&gt;, and &lt;code&gt;calculate_muscle_route_points.py&lt;/code&gt; for the implemented mapping. Data: &lt;a href=&quot;ATTACHMENT_MAP.json&quot;&gt;complete machine-readable connection and frame table&lt;/a&gt;.&lt;/p&gt;
+<span id="L194"> 194</span> &lt;h2&gt;Symbol table&lt;/h2&gt;&lt;table&gt;&lt;tr&gt;&lt;th&gt;Symbol&lt;/th&gt;&lt;th&gt;Meaning&lt;/th&gt;&lt;th&gt;Units&lt;/th&gt;&lt;/tr&gt;&quot;&quot;&quot;
+<span id="L195"> 195</span>         + &quot;&quot;.join(
+<span id="L196"> 196</span>             &quot;&lt;tr&gt;&lt;td&gt;&quot; + a + &quot;&lt;/td&gt;&lt;td&gt;&quot; + b + &quot;&lt;/td&gt;&lt;td&gt;&quot; + c + &quot;&lt;/td&gt;&lt;/tr&gt;&quot;
+<span id="L197"> 197</span>             for a, b, c in [
+<span id="L198"> 198</span>                 (&quot;i, k, b&quot;, &quot;Muscle-path, point and branch indices&quot;, &quot;1&quot;),
+<span id="L199"> 199</span>                 (&quot;q&quot;, &quot;Generalized configuration&quot;, &quot;m or rad&quot;),
+<span id="L200"> 200</span>                 (&quot;pB, pW&quot;, &quot;Point in body/world coordinates&quot;, &quot;m&quot;),
+<span id="L201"> 201</span>                 (&quot;xB, RB&quot;, &quot;Body origin and body-to-world rotation&quot;, &quot;m; 1&quot;),
+<span id="L202"> 202</span>                 (
+<span id="L203"> 203</span>                     &quot;LMT, Lpath, Lstraight&quot;,
+<span id="L204"> 204</span>                     &quot;MT, routed-branch and straight-span lengths&quot;,
+<span id="L205"> 205</span>                     &quot;m&quot;,
+<span id="L206"> 206</span>                 ),
+<span id="L207"> 207</span>                 (&quot;ci, dib&quot;, &quot;Constant path offset; branch divisor&quot;, &quot;m; 1&quot;),
+<span id="L208"> 208</span>                 (&quot;Δp, ΔL&quot;, &quot;Coordinate edit and resulting length change&quot;, &quot;m&quot;),
+<span id="L209"> 209</span>                 (&quot;LF, LT, LT0&quot;, &quot;Fibre, elastic tendon and slack tendon lengths&quot;, &quot;m&quot;),
+<span id="L210"> 210</span>                 (&quot;α, εT&quot;, &quot;Fixed pennation and tendon strain&quot;, &quot;rad; 1&quot;),
+<span id="L211"> 211</span>             ]
+<span id="L212"> 212</span>         )
+<span id="L213"> 213</span>         + &quot;&quot;&quot;&lt;/table&gt;
+<span id="L214"> 214</span> &lt;script&gt;function filterPaths(q){q=q.toLowerCase().replaceAll(&#x27;srtm&#x27;,&#x27;sam&#x27;);document.querySelectorAll(&#x27;details.muscle&#x27;).forEach(d=&gt;{d.hidden=!d.textContent.toLowerCase().includes(q);d.open=!!q&amp;&amp;!d.hidden;});}&lt;/script&gt;&lt;/html&gt;&quot;&quot;&quot;
+<span id="L215"> 215</span>     )
+<span id="L216"> 216</span>     equation_index = iter(enumerate(EQUATIONS, 1))
+<span id="L217"> 217</span> 
+<span id="L218"> 218</span>     def typeset(match):
+<span id="L219"> 219</span>         index, math = next(equation_index)
+<span id="L220"> 220</span>         return &#x27;&lt;div class=&quot;equation&quot;&gt;&#x27; + math + &quot; &amp;nbsp; (&quot; + str(index) + &quot;)&lt;/div&gt;&quot;
+<span id="L221"> 221</span> 
+<span id="L222"> 222</span>     document = re.sub(r&#x27;&lt;div class=&quot;equation&quot;&gt;.*?&lt;/div&gt;&#x27;, typeset, document)
+<span id="L223"> 223</span>     # Save the computed values or figure for inspection and reproducibility.
+<span id="L224"> 224</span>     (out / &quot;ATTACHMENT_MAP.html&quot;).write_text(document, encoding=&quot;utf-8&quot;)
+<span id="L225"> 225</span>     return record
+</pre></main></body></html>

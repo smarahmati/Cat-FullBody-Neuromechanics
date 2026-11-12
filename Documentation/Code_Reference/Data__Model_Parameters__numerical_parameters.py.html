@@ -1,0 +1,22 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Integration and sampling settings, including time steps and numerical tolerances.</title><link rel="stylesheet" href="../style.css"></head><body><!-- generated folder guide --><header><div class="tag">Cat · Full-body neuromechanics</div><h1>Integration and sampling settings, including time steps and numerical tolerances.</h1><nav><a href="../../START_HERE.html">Start here</a> · <a href="../project_structure.html">Find a file</a></nav></header><main><p><a href="../../Data/Model_Parameters/numerical_parameters.py">Data/Model_Parameters/numerical_parameters.py</a></p><pre style="overflow:auto;white-space:pre"><span id="L1">   1</span> &quot;&quot;&quot;Elastic-solver settings; these numerical values are not tissue properties.
+<span id="L2">   2</span> 
+<span id="L3">   3</span> Original values are shown above each setting. A new run reads any changes.
+<span id="L4">   4</span> &quot;&quot;&quot;
+<span id="L5">   5</span> 
+<span id="L6">   6</span> # Minimum fiber length / optimal fiber length; original 0.2.
+<span id="L7">   7</span> MINIMUM_FIBER_LENGTH_RATIO = 0.2
+<span id="L8">   8</span> # Positive fiber bracket gap in metres; original 1e-9.
+<span id="L9">   9</span> MINIMUM_LENGTH_GAP_M = 1e-9
+<span id="L10">  10</span> # Maximum Newton iterations per muscle per step; original 48.
+<span id="L11">  11</span> MAXIMUM_FIBER_ITERATIONS = 48
+<span id="L12">  12</span> # Dimensionless force-equilibrium tolerance; original 1e-10.
+<span id="L13">  13</span> FIBER_FORCE_TOLERANCE = 1e-10
+<span id="L14">  14</span> # Fiber bracket-width tolerance in metres; original 1e-12.
+<span id="L15">  15</span> FIBER_LENGTH_TOLERANCE_M = 1e-12
+<span id="L16">  16</span> # Switch to bisection after this Newton iteration; original 20.
+<span id="L17">  17</span> NEWTON_FALLBACK_ITERATION = 20
+<span id="L18">  18</span> # Iterations in the historical bisection solver; original 38.
+<span id="L19">  19</span> BISECTION_ITERATIONS = 38
+<span id="L20">  20</span> # Maximum generalized speed before declaring instability; original 500.
+<span id="L21">  21</span> MAXIMUM_GENERALIZED_SPEED = 500.0
+</pre></main></body></html>

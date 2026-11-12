@@ -1,0 +1,65 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Install editable muscle wrap geometry before forward integration.</title><link rel="stylesheet" href="../style.css"></head><body><!-- generated folder guide --><header><div class="tag">Cat · Full-body neuromechanics</div><h1>Install editable muscle wrap geometry before forward integration.</h1><nav><a href="../../START_HERE.html">Start here</a> · <a href="../project_structure.html">Find a file</a></nav></header><main><p><a href="../../Code/neuromechanics/apply_wrapping_parameters.py">Code/neuromechanics/apply_wrapping_parameters.py</a></p><pre style="overflow:auto;white-space:pre"><span id="L1">   1</span> &quot;&quot;&quot;Install editable muscle wrap geometry before forward integration.&quot;&quot;&quot;
+<span id="L2">   2</span> 
+<span id="L3">   3</span> import numpy as np
+<span id="L4">   4</span> 
+<span id="L5">   5</span> import mujoco as mj
+<span id="L6">   6</span> 
+<span id="L7">   7</span> from .load_parameter_file import load_parameter_file
+<span id="L8">   8</span> 
+<span id="L9">   9</span> 
+<span id="L10">  10</span> def apply_wrapping_parameters(state, path):
+<span id="L11">  11</span>     &quot;&quot;&quot;Only tendon wrap objects may be edited here; bones/contact are separate.
+<span id="L12">  12</span> 
+<span id="L13">  13</span>     Historical bundles without this file retain their original wrap geometry.
+<span id="L14">  14</span>     Topology and body ownership are deliberately kept in the anatomical model.
+<span id="L15">  15</span>     &quot;&quot;&quot;
+<span id="L16">  16</span>     if not path.exists():
+<span id="L17">  17</span>         return
+<span id="L18">  18</span>     m = state[&quot;model&quot;]
+<span id="L19">  19</span>     ids = sorted(
+<span id="L20">  20</span>         {
+<span id="L21">  21</span>             int(m.wrap_objid[k])
+<span id="L22">  22</span>             for k in range(m.nwrap)
+<span id="L23">  23</span>             if int(m.wrap_type[k])
+<span id="L24">  24</span>             in (int(mj.mjtWrap.mjWRAP_CYLINDER), int(mj.mjtWrap.mjWRAP_SPHERE))
+<span id="L25">  25</span>         }
+<span id="L26">  26</span>     )
+<span id="L27">  27</span>     entries = load_parameter_file(path)
+<span id="L28">  28</span>     if set(entries) != {m.geom(i).name for i in ids}:
+<span id="L29">  29</span>         # Stop and explain the invalid model setting or failed calculation.
+<span id="L30">  30</span>         raise ValueError(&quot;wrapping.py: wrap object names differ from the model&quot;)
+<span id="L31">  31</span>     for i in ids:
+<span id="L32">  32</span>         name = m.geom(i).name
+<span id="L33">  33</span>         row = entries[name]
+<span id="L34">  34</span>         if set(row) != {&quot;position_in_body_m&quot;, &quot;orientation_in_body_wxyz&quot;, &quot;radius_m&quot;}:
+<span id="L35">  35</span>             # Stop and explain the invalid model setting or failed calculation.
+<span id="L36">  36</span>             raise ValueError(f&quot;wrapping.py/{name}: unknown or missing field&quot;)
+<span id="L37">  37</span>         position = np.asarray(row[&quot;position_in_body_m&quot;], float)
+<span id="L38">  38</span>         quaternion = np.asarray(row[&quot;orientation_in_body_wxyz&quot;], float)
+<span id="L39">  39</span>         radius = float(row[&quot;radius_m&quot;])
+<span id="L40">  40</span>         if (
+<span id="L41">  41</span>             position.shape != (3,)
+<span id="L42">  42</span>             or quaternion.shape != (4,)
+<span id="L43">  43</span>             or not np.isfinite(position).all()
+<span id="L44">  44</span>             or not np.isfinite(quaternion).all()
+<span id="L45">  45</span>         ):
+<span id="L46">  46</span>             # Stop and explain the invalid model setting or failed calculation.
+<span id="L47">  47</span>             raise ValueError(f&quot;wrapping.py/{name}: expected finite xyz and wxyz vectors&quot;)
+<span id="L48">  48</span>         if (
+<span id="L49">  49</span>             not np.isfinite(radius)
+<span id="L50">  50</span>             or radius &lt;= 0
+<span id="L51">  51</span>             or not np.isclose(np.linalg.norm(quaternion), 1.0, atol=1e-7)
+<span id="L52">  52</span>         ):
+<span id="L53">  53</span>             # Stop and explain the invalid model setting or failed calculation.
+<span id="L54">  54</span>             raise ValueError(
+<span id="L55">  55</span>                 f&quot;wrapping.py/{name}: radius must be positive and quaternion unit length&quot;
+<span id="L56">  56</span>             )
+<span id="L57">  57</span>         if not np.array_equal(m.geom_pos[i], position) or not np.array_equal(
+<span id="L58">  58</span>             m.geom_quat[i],
+<span id="L59">  59</span>             quaternion,
+<span id="L60">  60</span>         ):
+<span id="L61">  61</span>             m.geom_sameframe[i] = 0  # Invalidate the compiled coincident-frame shortcut.
+<span id="L62">  62</span>         m.geom_pos[i] = position
+<span id="L63">  63</span>         m.geom_quat[i] = quaternion
+<span id="L64">  64</span>         m.geom_size[i, 0] = radius
+</pre></main></body></html>

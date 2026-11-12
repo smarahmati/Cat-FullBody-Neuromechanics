@@ -1,0 +1,124 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Mechanics and numerical regression tests; no fitting or GUI is performed.</title><link rel="stylesheet" href="../style.css"></head><body><!-- generated folder guide --><header><div class="tag">Cat · Full-body neuromechanics</div><h1>Mechanics and numerical regression tests; no fitting or GUI is performed.</h1><nav><a href="../../START_HERE.html">Start here</a> · <a href="../project_structure.html">Find a file</a></nav></header><main><p><a href="../../Verification/test_forward_model.py">Verification/test_forward_model.py</a></p><pre style="overflow:auto;white-space:pre"><span id="L1">   1</span> &quot;&quot;&quot;Mechanics and numerical regression tests; no fitting or GUI is performed.
+<span id="L2">   2</span> 
+<span id="L3">   3</span> Run from the repository root: python -m unittest discover -s Verification -v
+<span id="L4">   4</span> The reference test compares a fresh short trajectory with the released baseline.
+<span id="L5">   5</span> &quot;&quot;&quot;
+<span id="L6">   6</span> from pathlib import Path
+<span id="L7">   7</span> import json, shutil, sys, tempfile, unittest
+<span id="L8">   8</span> import numpy as np
+<span id="L9">   9</span> 
+<span id="L10">  10</span> ROOT=Path(__file__).resolve().parents[1]
+<span id="L11">  11</span> sys.path.insert(0,str(ROOT/&#x27;Code&#x27;))
+<span id="L12">  12</span> from neuromechanics.load_model_configuration import load_model_configuration
+<span id="L13">  13</span> from neuromechanics.initialize_neuromechanical_model import initialize_neuromechanical_model
+<span id="L14">  14</span> from neuromechanics.simulate_forward_dynamics import simulate_forward_dynamics
+<span id="L15">  15</span> from neuromechanics.elastic_tendon_force import elastic_tendon_force
+<span id="L16">  16</span> from neuromechanics.elastic_tendon_transition import elastic_tendon_transition
+<span id="L17">  17</span> from neuromechanics.muscle_excitation import muscle_excitation
+<span id="L18">  18</span> from neuromechanics.load_parameter_file import load_parameter_file
+<span id="L19">  19</span> from neuromechanics.viscoelastic_paw_pad import viscoelastic_paw_pad
+<span id="L20">  20</span> from neuromechanics.muscle_force_length_velocity import muscle_force_length_velocity
+<span id="L21">  21</span> from neuromechanics.muscle_force_curve_derivatives import muscle_force_curve_derivatives
+<span id="L22">  22</span> from neuromechanics.solve_elastic_muscle_equilibrium import solve_elastic_muscle_equilibrium
+<span id="L23">  23</span> 
+<span id="L24">  24</span> 
+<span id="L25">  25</span> class ForwardModelVerification(unittest.TestCase):
+<span id="L26">  26</span>     @classmethod
+<span id="L27">  27</span>     def setUpClass(cls):
+<span id="L28">  28</span>         cls.cfg=load_model_configuration(ROOT/&#x27;Data/Model_Parameters&#x27;)
+<span id="L29">  29</span>         cls.state=initialize_neuromechanical_model(cls.cfg)
+<span id="L30">  30</span> 
+<span id="L31">  31</span>     def test_passive_fiber_is_enabled_for_every_limb(self):
+<span id="L32">  32</span>         self.assertEqual(len(self.state[&#x27;names&#x27;]),104)
+<span id="L33">  33</span>         np.testing.assert_array_equal(self.state[&#x27;muscle_params&#x27;][:,13],np.ones(104))
+<span id="L34">  34</span> 
+<span id="L35">  35</span>     def test_published_passive_curve_and_derivative(self):
+<span id="L36">  36</span>         # Independent formula: Prilutsky 2016 Table 10.3, tension-only adaptation.
+<span id="L37">  37</span>         p=self.state[&#x27;muscle_params&#x27;][list(self.state[&#x27;names&#x27;]).index(&#x27;R_VL&#x27;)]
+<span id="L38">  38</span>         for length in [0.6,1.0,1.1,1.2,1.5]:
+<span id="L39">  39</span>             expected=max(0.,0.0075/11.6*np.expm1(11.6*(length-1)))
+<span id="L40">  40</span>             self.assertAlmostEqual(muscle_force_length_velocity(length,0.,p)[2],expected,places=13)
+<span id="L41">  41</span>         length=1.2
+<span id="L42">  42</span>         h=1e-6
+<span id="L43">  43</span>         numerical=(muscle_force_length_velocity(length+h,0,p)[2]-muscle_force_length_velocity(length-h,0,p)[2])/(2*h)
+<span id="L44">  44</span>         self.assertAlmostEqual(muscle_force_curve_derivatives(length,0,p)[5],numerical,places=9)
+<span id="L45">  45</span> 
+<span id="L46">  46</span>     def test_unactivated_stretched_fiber_transmits_passive_tendon_force(self):
+<span id="L47">  47</span>         # Construct a static series equilibrium: a=0, fiber velocity=0.
+<span id="L48">  48</span>         # Tendon and parallel elastic tissue must carry the same positive force.
+<span id="L49">  49</span>         s=self.state
+<span id="L50">  50</span>         i=list(s[&#x27;names&#x27;]).index(&#x27;R_VL&#x27;)
+<span id="L51">  51</span>         p=s[&#x27;muscle_params&#x27;][i:i+1]
+<span id="L52">  52</span>         length=1.2*s[&#x27;lopt&#x27;][i]
+<span id="L53">  53</span>         passive=0.0075/11.6*np.expm1(11.6*0.2)
+<span id="L54">  54</span>         low,high=0.,float(s[&#x27;e0&#x27;][i])
+<span id="L55">  55</span>         for _ in range(70):
+<span id="L56">  56</span>             middle=(low+high)/2
+<span id="L57">  57</span>             if elastic_tendon_force(middle,s[&#x27;e0&#x27;][i])&lt;passive:low=middle
+<span id="L58">  58</span>             else:high=middle
+<span id="L59">  59</span>         total=length*p[0,9]+s[&#x27;slack&#x27;][i]*(1+(low+high)/2)
+<span id="L60">  60</span>         lf,v,force,residual,bound=solve_elastic_muscle_equilibrium(
+<span id="L61">  61</span>             np.array([total]),np.array([length]),np.zeros(1),s[&#x27;lopt&#x27;][i:i+1],
+<span id="L62">  62</span>             s[&#x27;slack&#x27;][i:i+1],p,s[&#x27;e0&#x27;][i:i+1],np.array([0.05]),0.000125)
+<span id="L63">  63</span>         self.assertGreater(force[0],0.)
+<span id="L64">  64</span>         self.assertAlmostEqual(force[0],p[0,2]*passive,places=8)
+<span id="L65">  65</span>         self.assertAlmostEqual(v[0],0.,places=8)
+<span id="L66">  66</span>         self.assertLess(abs(residual[0]),1e-7)
+<span id="L67">  67</span>         self.assertEqual(bound[0],0)
+<span id="L68">  68</span> 
+<span id="L69">  69</span>     def test_tendon_calibration_and_continuity(self):
+<span id="L70">  70</span>         e0=0.04
+<span id="L71">  71</span>         toe=elastic_tendon_transition(e0)
+<span id="L72">  72</span>         self.assertEqual(elastic_tendon_force(-0.01,e0),0)
+<span id="L73">  73</span>         self.assertAlmostEqual(elastic_tendon_force(e0,e0),1,places=12)
+<span id="L74">  74</span>         self.assertAlmostEqual(elastic_tendon_force(toe,e0),0.33,places=12)
+<span id="L75">  75</span>         h=1e-7
+<span id="L76">  76</span>         left=(elastic_tendon_force(toe,e0)-elastic_tendon_force(toe-h,e0))/h
+<span id="L77">  77</span>         right=(elastic_tendon_force(toe+h,e0)-elastic_tendon_force(toe,e0))/h
+<span id="L78">  78</span>         self.assertAlmostEqual(left,right,delta=0.001)
+<span id="L79">  79</span> 
+<span id="L80">  80</span>     def test_input_repeats_without_mechanical_feedback(self):
+<span id="L81">  81</span>         state = self.state
+<span id="L82">  82</span>         period = state[&#x27;settings&#x27;][&#x27;period_s&#x27;]
+<span id="L83">  83</span>         initial_input = muscle_excitation(state, 0.17)
+<span id="L84">  84</span>         np.testing.assert_allclose(initial_input, muscle_excitation(state, 0.17 + period), atol=1e-12)
+<span id="L85">  85</span>         # Changing a recorded force must not change this prescribed motor input.
+<span id="L86">  86</span>         old_force = state[&#x27;grf&#x27;].copy()
+<span id="L87">  87</span>         state[&#x27;grf&#x27;][:] = 100.0
+<span id="L88">  88</span>         np.testing.assert_array_equal(initial_input, muscle_excitation(state, 0.17))
+<span id="L89">  89</span>         state[&#x27;grf&#x27;][:] = old_force
+<span id="L90">  90</span> 
+<span id="L91">  91</span>     def test_contact_cannot_pull_and_obeys_friction_limit(self):
+<span id="L92">  92</span>         p=self.state[&#x27;contact_parameters&#x27;][0]
+<span id="L93">  93</span>         f,_,_=viscoelastic_paw_pad(0,np.array([1.,0.,0.]),np.zeros(2),0.000125,p)
+<span id="L94">  94</span>         np.testing.assert_array_equal(f,np.zeros(3))
+<span id="L95">  95</span>         f,_,_=viscoelastic_paw_pad(0.002,np.array([1.,0.,-0.1]),np.zeros(2),0.000125,p)
+<span id="L96">  96</span>         self.assertGreaterEqual(f[2],0)
+<span id="L97">  97</span>         self.assertLessEqual(np.linalg.norm(f[:2]),p[4]*f[2]+1e-12)
+<span id="L98">  98</span>         self.assertLess(f[0],0)
+<span id="L99">  99</span> 
+<span id="L100"> 100</span>     def test_edited_mass_is_actually_applied(self):
+<span id="L101"> 101</span>         with tempfile.TemporaryDirectory(prefix=&#x27;cat_parameter_test_&#x27;) as temp:
+<span id="L102"> 102</span>             folder=Path(temp)/&#x27;parameters&#x27;
+<span id="L103"> 103</span>             shutil.copytree(ROOT/&#x27;Data/Model_Parameters&#x27;,folder,ignore=shutil.ignore_patterns(&#x27;*.html&#x27;))
+<span id="L104"> 104</span>             data=load_parameter_file(folder/&#x27;bodies.py&#x27;)
+<span id="L105"> 105</span>             key=next(iter(data))
+<span id="L106"> 106</span>             old=float(data[key][&#x27;mass_kg&#x27;])
+<span id="L107"> 107</span>             data[key][&#x27;mass_kg&#x27;]=old*1.01
+<span id="L108"> 108</span>             (folder/&#x27;bodies.py&#x27;).write_text(&#x27;PARAMETERS = &#x27;+repr(data),encoding=&#x27;utf-8&#x27;)
+<span id="L109"> 109</span>             s=initialize_neuromechanical_model(load_model_configuration(folder))
+<span id="L110"> 110</span>             self.assertAlmostEqual(s[&#x27;model&#x27;].body(key).mass[0],old*1.01,places=12)
+<span id="L111"> 111</span> 
+<span id="L112"> 112</span>     def test_short_forward_reproduces_release(self):
+<span id="L113"> 113</span>         s=initialize_neuromechanical_model(self.cfg)
+<span id="L114"> 114</span>         result,_=simulate_forward_dynamics({&#x27;seconds&#x27;:0.05},state=s)
+<span id="L115"> 115</span>         with np.load(ROOT/&#x27;Simulation_Results/Intact_Walking/forward_simulation_timeseries.npz&#x27;) as baseline:
+<span id="L116"> 116</span>             n=len(result[&#x27;time&#x27;])
+<span id="L117"> 117</span>             for key in [&#x27;qpos&#x27;,&#x27;qvel&#x27;,&#x27;activation&#x27;,&#x27;excitation&#x27;,&#x27;force&#x27;,&#x27;fiber_length&#x27;,&#x27;grf&#x27;]:
+<span id="L118"> 118</span>                 np.testing.assert_allclose(result[key],baseline[key][:n],rtol=1e-7,atol=1e-8,err_msg=key)
+<span id="L119"> 119</span>         self.assertEqual(str(result[&#x27;failure&#x27;]),&#x27;&#x27;)
+<span id="L120"> 120</span> 
+<span id="L121"> 121</span> 
+<span id="L122"> 122</span> if __name__==&#x27;__main__&#x27;:
+<span id="L123"> 123</span>     unittest.main()
+</pre></main></body></html>

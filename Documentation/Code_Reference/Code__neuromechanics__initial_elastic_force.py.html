@@ -1,0 +1,48 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Tendon tension and compatible fiber velocity at a specified initial state.</title><link rel="stylesheet" href="../style.css"></head><body><!-- generated folder guide --><header><div class="tag">Cat · Full-body neuromechanics</div><h1>Tendon tension and compatible fiber velocity at a specified initial state.</h1><nav><a href="../../START_HERE.html">Start here</a> · <a href="../project_structure.html">Find a file</a></nav></header><main><p><a href="../../Code/neuromechanics/initial_elastic_force.py">Code/neuromechanics/initial_elastic_force.py</a></p><pre style="overflow:auto;white-space:pre"><span id="L1">   1</span> &quot;&quot;&quot;Tendon tension and compatible fiber velocity at a specified initial state.&quot;&quot;&quot;
+<span id="L2">   2</span> 
+<span id="L3">   3</span> import numpy as np
+<span id="L4">   4</span> 
+<span id="L5">   5</span> from numba import njit
+<span id="L6">   6</span> 
+<span id="L7">   7</span> from .elastic_tendon_force import elastic_tendon_force
+<span id="L8">   8</span> 
+<span id="L9">   9</span> from .muscle_force_length_velocity import muscle_force_length_velocity
+<span id="L10">  10</span> 
+<span id="L11">  11</span> 
+<span id="L12">  12</span> # Compile this numerical function for repeated evaluations; its equations stay unchanged.
+<span id="L13">  13</span> @njit(cache=False)
+<span id="L14">  14</span> def initial_elastic_force(mtu, fiber, activation, lopt, slack, parameters, e0, beta):
+<span id="L15">  15</span>     &quot;&quot;&quot;Evaluate tension, then invert the monotone fiber force/velocity law.
+<span id="L16">  16</span> 
+<span id="L17">  17</span>     This initializes a state once. It is never an added motor command. The
+<span id="L18">  18</span>     wide velocity bracket permits diagnostics to expose out-of-domain seeds;
+<span id="L19">  19</span>     independent validation still checks the published force-velocity domain.
+<span id="L20">  20</span>     &quot;&quot;&quot;
+<span id="L21">  21</span>     n = len(mtu)
+<span id="L22">  22</span>     force = np.empty(n)
+<span id="L23">  23</span>     velocity = np.empty(n)
+<span id="L24">  24</span>     residual = np.empty(n)
+<span id="L25">  25</span>     for i in range(n):
+<span id="L26">  26</span>         ft = elastic_tendon_force(
+<span id="L27">  27</span>             (mtu[i] - fiber[i] * parameters[i, 9]) / slack[i] - 1,
+<span id="L28">  28</span>             e0[i],
+<span id="L29">  29</span>         )
+<span id="L30">  30</span>         low = -20.0
+<span id="L31">  31</span>         high = 20.0
+<span id="L32">  32</span>         x = 0.0
+<span id="L33">  33</span>         for _ in range(60):
+<span id="L34">  34</span>             x = (low + high) / 2
+<span id="L35">  35</span>             fl, fv, fp = muscle_force_length_velocity(fiber[i] / lopt[i], x, parameters[i])
+<span id="L36">  36</span>             error = ft - activation[i] * fl * fv - fp - beta[i] * x
+<span id="L37">  37</span>             if abs(error) &lt; 1e-12:
+<span id="L38">  38</span>                 # Leave this loop because the convergence or stopping condition was met.
+<span id="L39">  39</span>                 break
+<span id="L40">  40</span>             if error &gt; 0:
+<span id="L41">  41</span>                 low = x
+<span id="L42">  42</span>             else:
+<span id="L43">  43</span>                 high = x
+<span id="L44">  44</span>         force[i] = ft * parameters[i, 2]
+<span id="L45">  45</span>         velocity[i] = x * lopt[i] * parameters[i, 6]
+<span id="L46">  46</span>         residual[i] = parameters[i, 2] * error
+<span id="L47">  47</span>     return force, velocity, residual
+</pre></main></body></html>

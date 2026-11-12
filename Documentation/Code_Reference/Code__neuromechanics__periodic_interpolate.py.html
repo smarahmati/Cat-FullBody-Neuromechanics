@@ -1,0 +1,18 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Periodic interpolate.</title><link rel="stylesheet" href="../style.css"></head><body><!-- generated folder guide --><header><div class="tag">Cat · Full-body neuromechanics</div><h1>Periodic interpolate.</h1><nav><a href="../../START_HERE.html">Start here</a> · <a href="../project_structure.html">Find a file</a></nav></header><main><p><a href="../../Code/neuromechanics/periodic_interpolate.py">Code/neuromechanics/periodic_interpolate.py</a></p><pre style="overflow:auto;white-space:pre"><span id="L1">   1</span> &quot;&quot;&quot;Periodic interpolate.
+<span id="L2">   2</span> 
+<span id="L3">   3</span> Inputs/outputs: see the named function arguments and returned values.
+<span id="L4">   4</span> Lengths use metres, time seconds, force newtons, and angles radians unless stated.
+<span id="L5">   5</span> See Documentation/model_methods.html for equations and parameter definitions.
+<span id="L6">   6</span> &quot;&quot;&quot;
+<span id="L7">   7</span> 
+<span id="L8">   8</span> import numpy as np
+<span id="L9">   9</span> 
+<span id="L10">  10</span> 
+<span id="L11">  11</span> def periodic_interpolate(values, phase):
+<span id="L12">  12</span>     &quot;&quot;&quot;Linear interpolation of endpoint-inclusive cycle samples; never extrapolate.&quot;&quot;&quot;
+<span id="L13">  13</span>     values = np.asarray(values)
+<span id="L14">  14</span>     x = (phase % 1.0) * (len(values) - 1)
+<span id="L15">  15</span>     i = int(x)
+<span id="L16">  16</span>     f = x - i
+<span id="L17">  17</span>     return values[i] * (1 - f) + values[i + 1] * f
+</pre></main></body></html>

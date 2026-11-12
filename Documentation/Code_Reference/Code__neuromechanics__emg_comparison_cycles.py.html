@@ -1,0 +1,107 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Complete-cycle muscle_excitation/EMG pairs, with unchanged source clocks.</title><link rel="stylesheet" href="../style.css"></head><body><!-- generated folder guide --><header><div class="tag">Cat · Full-body neuromechanics</div><h1>Complete-cycle muscle_excitation/EMG pairs, with unchanged source clocks.</h1><nav><a href="../../START_HERE.html">Start here</a> · <a href="../project_structure.html">Find a file</a></nav></header><main><p><a href="../../Code/neuromechanics/emg_comparison_cycles.py">Code/neuromechanics/emg_comparison_cycles.py</a></p><pre style="overflow:auto;white-space:pre"><span id="L1">   1</span> &quot;&quot;&quot;Complete-cycle muscle_excitation/EMG pairs, with unchanged source clocks.&quot;&quot;&quot;
+<span id="L2">   2</span> 
+<span id="L3">   3</span> import json
+<span id="L4">   4</span> 
+<span id="L5">   5</span> import numpy as np
+<span id="L6">   6</span> 
+<span id="L7">   7</span> from model_configuration.paths import ROOT
+<span id="L8">   8</span> 
+<span id="L9">   9</span> from .experimental_comparison_targets import experimental_comparison_targets
+<span id="L10">  10</span> 
+<span id="L11">  11</span> from .load_reference_tables import load_reference_tables
+<span id="L12">  12</span> 
+<span id="L13">  13</span> from .periodic_interpolate import periodic_interpolate
+<span id="L14">  14</span> 
+<span id="L15">  15</span> 
+<span id="L16">  16</span> def emg_comparison_cycles(names, settings, samples=2048):
+<span id="L17">  17</span>     &quot;&quot;&quot;Return measured/pooled/assumed channels only; no inferred EMG targets.&quot;&quot;&quot;
+<span id="L18">  18</span>     names = list(names)
+<span id="L19">  19</span>     phase = np.arange(samples) / samples
+<span id="L20">  20</span>     T = settings[&quot;period_s&quot;]
+<span id="L21">  21</span>     target = experimental_comparison_targets(
+<span id="L22">  22</span>         phase * T,
+<span id="L23">  23</span>         T,
+<span id="L24">  24</span>         settings.get(&quot;reference_table_dir&quot;),
+<span id="L25">  25</span>     )[&quot;excitation&quot;]
+<span id="L26">  26</span>     if settings.get(&quot;excitation_table_file&quot;):
+<span id="L27">  27</span>         from .read_time_series import read_time_series
+<span id="L28">  28</span> 
+<span id="L29">  29</span>         table = read_time_series(ROOT / settings[&quot;excitation_table_file&quot;], names)[2]
+<span id="L30">  30</span>     elif &quot;excitation_control_points&quot; in settings:
+<span id="L31">  31</span>         table = np.asarray(settings[&quot;excitation_control_points&quot;])
+<span id="L32">  32</span>     elif settings.get(&quot;excitation_file&quot;):
+<span id="L33">  33</span>         table = np.load(ROOT / settings[&quot;excitation_file&quot;])[&quot;excitation_table&quot;]
+<span id="L34">  34</span>     else:
+<span id="L35">  35</span>         folder = (
+<span id="L36">  36</span>             ROOT / &quot;Data/Skeletal_Geometry/Model&quot;
+<span id="L37">  37</span>             if settings.get(&quot;model_variant&quot;, &quot;base&quot;) == &quot;base&quot;
+<span id="L38">  38</span>             else ROOT / &quot;Data/Skeletal_Geometry/Model&quot; / settings[&quot;model_variant&quot;]
+<span id="L39">  39</span>         )
+<span id="L40">  40</span>         table = np.load(folder / &quot;muscle_parameters.npz&quot;)[&quot;excitation_table&quot;]
+<span id="L41">  41</span>     provenance = json.loads((ROOT / &quot;Data/Experimental_Reference_Data/INPUT_PROVENANCE.json&quot;).read_text())[
+<span id="L42">  42</span>         &quot;channels&quot;
+<span id="L43">  43</span>     ]
+<span id="L44">  44</span>     pairs = []
+<span id="L45">  45</span>     for side, prefix in enumerate([&quot;L&quot;, &quot;R&quot;, &quot;FL&quot;, &quot;FR&quot;]):
+<span id="L46">  46</span>         for item in provenance:
+<span id="L47">  47</span>             if &quot;EMG&quot; not in item[&quot;kind&quot;]:
+<span id="L48">  48</span>                 # Skip the remaining work for this item.
+<span id="L49">  49</span>                 continue
+<span id="L50">  50</span>             fore = item[&quot;kind&quot;].startswith(&quot;pooled_fore&quot;)
+<span id="L51">  51</span>             if fore != (side &gt;= 2):
+<span id="L52">  52</span>                 # Skip the remaining work for this item.
+<span id="L53">  53</span>                 continue
+<span id="L54">  54</span>             name = prefix + &quot;_&quot; + item[&quot;channel&quot;]
+<span id="L55">  55</span>             if name not in names:
+<span id="L56">  56</span>                 # Skip the remaining work for this item.
+<span id="L57">  57</span>                 continue
+<span id="L58">  58</span>             column = (
+<span id="L59">  59</span>                 (
+<span id="L60">  60</span>                     (22 if side == 2 else 31)
+<span id="L61">  61</span>                     + [c[&quot;channel&quot;] for c in provenance[11:]].index(item[&quot;channel&quot;])
+<span id="L62">  62</span>                 )
+<span id="L63">  63</span>                 if fore
+<span id="L64">  64</span>                 else (
+<span id="L65">  65</span>                     (0 if side == 0 else 11)
+<span id="L66">  66</span>                     + [c[&quot;channel&quot;] for c in provenance[:11]].index(item[&quot;channel&quot;])
+<span id="L67">  67</span>                 )
+<span id="L68">  68</span>             )
+<span id="L69">  69</span>             i = names.index(name)
+<span id="L70">  70</span>             pred = np.interp(phase, np.linspace(0, 1, len(table)), table[:, i]) / max(
+<span id="L71">  71</span>                 0.02,
+<span id="L72">  72</span>                 float(table[:, i].max()),
+<span id="L73">  73</span>             )
+<span id="L74">  74</span>             ref = target[:, column] / max(1e-12, float(target[:, column].max()))
+<span id="L75">  75</span>             pairs.append(
+<span id="L76">  76</span>                 dict(
+<span id="L77">  77</span>                     channel=name,
+<span id="L78">  78</span>                     limb=prefix,
+<span id="L79">  79</span>                     kind=item[&quot;kind&quot;] if side else &quot;assumed_LH_from_recorded_RH&quot;,
+<span id="L80">  80</span>                     excitation=pred,
+<span id="L81">  81</span>                     reference=ref,
+<span id="L82">  82</span>                 )
+<span id="L83">  83</span>             )
+<span id="L84">  84</span>     fhl = load_reference_tables(settings.get(&quot;reference_table_dir&quot;))[2]
+<span id="L85">  85</span>     for side, prefix in enumerate([&quot;L&quot;, &quot;R&quot;]):
+<span id="L86">  86</span>         name = prefix + &quot;_FHL&quot;
+<span id="L87">  87</span>         if name not in names:
+<span id="L88">  88</span>             # Skip the remaining work for this item.
+<span id="L89">  89</span>             continue
+<span id="L90">  90</span>         i = names.index(name)
+<span id="L91">  91</span>         pred = np.interp(phase, np.linspace(0, 1, len(table)), table[:, i]) / max(
+<span id="L92">  92</span>             0.02,
+<span id="L93">  93</span>             float(table[:, i].max()),
+<span id="L94">  94</span>         )
+<span id="L95">  95</span>         ref = np.array([periodic_interpolate(fhl, p + 0.5 + [0.5, 0][side]) for p in phase])
+<span id="L96">  96</span>         ref /= max(1e-12, float(ref.max()))
+<span id="L97">  97</span>         pairs.append(
+<span id="L98">  98</span>             dict(
+<span id="L99">  99</span>                 channel=name,
+<span id="L100"> 100</span>                 limb=prefix,
+<span id="L101"> 101</span>                 kind=&quot;recorded_RH_EMG&quot; if side else &quot;assumed_LH_from_recorded_RH&quot;,
+<span id="L102"> 102</span>                 excitation=pred,
+<span id="L103"> 103</span>                 reference=ref,
+<span id="L104"> 104</span>             )
+<span id="L105"> 105</span>         )
+<span id="L106"> 106</span>     return pairs
+</pre></main></body></html>

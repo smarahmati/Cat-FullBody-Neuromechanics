@@ -1,0 +1,90 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Apply an explicitly saved state once at t=0, then resume native dynamics.</title><link rel="stylesheet" href="../style.css"></head><body><!-- generated folder guide --><header><div class="tag">Cat · Full-body neuromechanics</div><h1>Apply an explicitly saved state once at t=0, then resume native dynamics.</h1><nav><a href="../../START_HERE.html">Start here</a> · <a href="../project_structure.html">Find a file</a></nav></header><main><p><a href="../../Code/neuromechanics/apply_forward_initial_state.py">Code/neuromechanics/apply_forward_initial_state.py</a></p><pre style="overflow:auto;white-space:pre"><span id="L1">   1</span> &quot;&quot;&quot;Apply an explicitly saved state once at t=0, then resume native dynamics.&quot;&quot;&quot;
+<span id="L2">   2</span> 
+<span id="L3">   3</span> import numpy as np
+<span id="L4">   4</span> 
+<span id="L5">   5</span> import mujoco as mj
+<span id="L6">   6</span> 
+<span id="L7">   7</span> from .update_muscle_paths import update_muscle_paths
+<span id="L8">   8</span> 
+<span id="L9">   9</span> from .compute_paw_contact_forces import compute_paw_contact_forces
+<span id="L10">  10</span> 
+<span id="L11">  11</span> from .muscle_excitation import muscle_excitation
+<span id="L12">  12</span> 
+<span id="L13">  13</span> from .initial_elastic_force import initial_elastic_force
+<span id="L14">  14</span> 
+<span id="L15">  15</span> 
+<span id="L16">  16</span> def apply_forward_initial_state(state, values):
+<span id="L17">  17</span>     &quot;&quot;&quot;Input keys: qpos, qvel, activation, fiber_length, bristle (SI units).
+<span id="L18">  18</span> 
+<span id="L19">  19</span>     Used only by initial setup or by restarting independent offline shooting
+<span id="L20">  20</span>     trials. Calling it during a continuing simulation is not supported.
+<span id="L21">  21</span>     &quot;&quot;&quot;
+<span id="L22">  22</span>     m, d = state[&quot;model&quot;], state[&quot;data&quot;]
+<span id="L23">  23</span>     if d.time != 0:
+<span id="L24">  24</span>         # Stop and explain the invalid model setting or failed calculation.
+<span id="L25">  25</span>         raise ValueError(&quot;Initial state may only be applied at time zero&quot;)
+<span id="L26">  26</span>     for key, size in [
+<span id="L27">  27</span>         (&quot;qpos&quot;, m.nq),
+<span id="L28">  28</span>         (&quot;qvel&quot;, m.nv),
+<span id="L29">  29</span>         (&quot;activation&quot;, m.na),
+<span id="L30">  30</span>         (&quot;fiber_length&quot;, m.nu),
+<span id="L31">  31</span>     ]:
+<span id="L32">  32</span>         if np.asarray(values[key]).shape != (size,) or not np.isfinite(values[key]).all():
+<span id="L33">  33</span>             # Stop and explain the invalid model setting or failed calculation.
+<span id="L34">  34</span>             raise ValueError(&quot;Invalid initial &quot; + key)
+<span id="L35">  35</span>     if (
+<span id="L36">  36</span>         np.asarray(values[&quot;bristle&quot;]).shape != state[&quot;bristle&quot;].shape
+<span id="L37">  37</span>         or not np.isfinite(values[&quot;bristle&quot;]).all()
+<span id="L38">  38</span>     ):
+<span id="L39">  39</span>         # Stop and explain the invalid model setting or failed calculation.
+<span id="L40">  40</span>         raise ValueError(&quot;Invalid initial contact memory&quot;)
+<span id="L41">  41</span>     if np.any(np.asarray(values[&quot;activation&quot;]) &lt; 0) or np.any(
+<span id="L42">  42</span>         np.asarray(values[&quot;activation&quot;])
+<span id="L43">  43</span>         &gt; 1
+<span id="L44">  44</span>     ):
+<span id="L45">  45</span>         # Stop and explain the invalid model setting or failed calculation.
+<span id="L46">  46</span>         raise ValueError(&quot;Initial activation must lie in [0,1]&quot;)
+<span id="L47">  47</span>     if np.any(np.asarray(values[&quot;fiber_length&quot;]) &lt; 0.2 * state[&quot;lopt&quot;]):
+<span id="L48">  48</span>         # Stop and explain the invalid model setting or failed calculation.
+<span id="L49">  49</span>         raise ValueError(&quot;Initial fiber length violates the muscle model lower bound&quot;)
+<span id="L50">  50</span>     d.qpos[:] = values[&quot;qpos&quot;]
+<span id="L51">  51</span>     d.qvel[:] = values[&quot;qvel&quot;]
+<span id="L52">  52</span>     d.act[:] = values[&quot;activation&quot;]
+<span id="L53">  53</span>     state[&quot;fiber_length&quot;] = np.array(values[&quot;fiber_length&quot;], copy=True)
+<span id="L54">  54</span>     state[&quot;bristle&quot;] = np.array(values[&quot;bristle&quot;], copy=True)
+<span id="L55">  55</span>     update_muscle_paths(state)
+<span id="L56">  56</span>     # Recalculate positions and routed muscle lengths at the new pose.
+<span id="L57">  57</span>     mj.mj_fwdPosition(m, d)
+<span id="L58">  58</span>     # Recalculate velocities at the new pose and generalized speed.
+<span id="L59">  59</span>     mj.mj_fwdVelocity(m, d)
+<span id="L60">  60</span>     mtu = d.actuator_length + state[&quot;mtu_length_offset&quot;]
+<span id="L61">  61</span>     force, velocity, residual = initial_elastic_force(
+<span id="L62">  62</span>         mtu,
+<span id="L63">  63</span>         state[&quot;fiber_length&quot;],
+<span id="L64">  64</span>         d.act,
+<span id="L65">  65</span>         state[&quot;lopt&quot;],
+<span id="L66">  66</span>         state[&quot;slack&quot;],
+<span id="L67">  67</span>         state[&quot;muscle_params&quot;],
+<span id="L68">  68</span>         state[&quot;e0&quot;],
+<span id="L69">  69</span>         state[&quot;fiber_damping_coefficients&quot;],
+<span id="L70">  70</span>     )
+<span id="L71">  71</span>     if not np.isfinite(force).all() or not np.isfinite(velocity).all():
+<span id="L72">  72</span>         # Stop and explain the invalid model setting or failed calculation.
+<span id="L73">  73</span>         raise ValueError(&quot;Initial muscle equilibrium is nonfinite&quot;)
+<span id="L74">  74</span>     bounds = (
+<span id="L75">  75</span>         (state[&quot;fiber_length&quot;] &lt;= 0.200001 * state[&quot;lopt&quot;])
+<span id="L76">  76</span>         | (mtu - state[&quot;fiber_length&quot;] * state[&quot;cosine&quot;] &lt;= 1e-9)
+<span id="L77">  77</span>     ).astype(np.int64)
+<span id="L78">  78</span>     state.update(
+<span id="L79">  79</span>         force=force,
+<span id="L80">  80</span>         fiber_velocity=velocity,
+<span id="L81">  81</span>         residual=residual,
+<span id="L82">  82</span>         fiber_bound=bounds,
+<span id="L83">  83</span>     )
+<span id="L84">  84</span>     m.actuator_biasprm[:, 0] = -force
+<span id="L85">  85</span>     d.ctrl[:] = muscle_excitation(state, 0.0)
+<span id="L86">  86</span>     d.qfrc_applied[:] = 0.0
+<span id="L87">  87</span>     d.xfrc_applied[:] = 0.0
+<span id="L88">  88</span>     mj.mj_forward(m, d)
+<span id="L89">  89</span>     compute_paw_contact_forces(state)
+</pre></main></body></html>

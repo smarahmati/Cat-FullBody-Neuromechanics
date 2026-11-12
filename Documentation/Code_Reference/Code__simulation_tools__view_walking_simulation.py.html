@@ -1,0 +1,436 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Inspect an already computed forward run; never solve or alter its motion.</title><link rel="stylesheet" href="../style.css"></head><body><!-- generated folder guide --><header><div class="tag">Cat · Full-body neuromechanics</div><h1>Inspect an already computed forward run; never solve or alter its motion.</h1><nav><a href="../../START_HERE.html">Start here</a> · <a href="../project_structure.html">Find a file</a></nav></header><main><p><a href="../../Code/simulation_tools/view_walking_simulation.py">Code/simulation_tools/view_walking_simulation.py</a></p><pre style="overflow:auto;white-space:pre"><span id="L1">   1</span> &quot;&quot;&quot;Inspect an already computed forward run; never solve or alter its motion.
+<span id="L2">   2</span> 
+<span id="L3">   3</span> The MuJoCo window displays saved mechanical states. The companion window
+<span id="L4">   4</span> shows corresponding saved excitations, activations and raw contact forces.
+<span id="L5">   5</span> Changing playback speed, time or plot selection does not change the model.
+<span id="L6">   6</span> &quot;&quot;&quot;
+<span id="L7">   7</span> 
+<span id="L8">   8</span> import argparse
+<span id="L9">   9</span> 
+<span id="L10">  10</span> import json
+<span id="L11">  11</span> 
+<span id="L12">  12</span> import os
+<span id="L13">  13</span> 
+<span id="L14">  14</span> from pathlib import Path
+<span id="L15">  15</span> 
+<span id="L16">  16</span> import sys
+<span id="L17">  17</span> 
+<span id="L18">  18</span> import time
+<span id="L19">  19</span> 
+<span id="L20">  20</span> os.environ.setdefault(&quot;OPENBLAS_NUM_THREADS&quot;, &quot;1&quot;)
+<span id="L21">  21</span> os.environ.setdefault(&quot;OMP_NUM_THREADS&quot;, &quot;1&quot;)
+<span id="L22">  22</span> ROOT = Path(__file__).resolve().parents[2]
+<span id="L23">  23</span> sys.path.insert(0, str(ROOT / &quot;Code&quot;))
+<span id="L24">  24</span> # Read the saved bundle before importing numerical helpers. This keeps a viewer
+<span id="L25">  25</span> # consistent even if the editable default constants changed after the trial.
+<span id="L26">  26</span> _selected_run = &quot;Intact_Walking&quot;
+<span id="L27">  27</span> if &quot;--run&quot; in sys.argv:
+<span id="L28">  28</span>     _selected_run = sys.argv[sys.argv.index(&quot;--run&quot;) + 1]
+<span id="L29">  29</span> _saved_folder = Path(_selected_run)
+<span id="L30">  30</span> if not _saved_folder.is_absolute():
+<span id="L31">  31</span>     _saved_folder = ROOT / _saved_folder if (ROOT / _saved_folder).is_dir() else ROOT / &quot;Simulation_Results&quot; / _saved_folder
+<span id="L32">  32</span> if (_saved_folder / &quot;settings.json&quot;).exists():
+<span id="L33">  33</span>     _saved_settings = json.loads((_saved_folder / &quot;settings.json&quot;).read_text())
+<span id="L34">  34</span>     os.environ[&quot;CAT_PARAMETER_FOLDER&quot;] = str(ROOT / _saved_settings.get(&quot;parameter_bundle_dir&quot;, &quot;Data/Model_Parameters&quot;))
+<span id="L35">  35</span> import numpy as np
+<span id="L36">  36</span> 
+<span id="L37">  37</span> import mujoco as mj
+<span id="L38">  38</span> 
+<span id="L39">  39</span> import mujoco.viewer
+<span id="L40">  40</span> 
+<span id="L41">  41</span> import tkinter as tk
+<span id="L42">  42</span> 
+<span id="L43">  43</span> from tkinter import ttk
+<span id="L44">  44</span> 
+<span id="L45">  45</span> from neuromechanics.initialize_neuromechanical_model import initialize_neuromechanical_model
+<span id="L46">  46</span> 
+<span id="L47">  47</span> from neuromechanics.experimental_comparison_targets import experimental_comparison_targets
+<span id="L48">  48</span> 
+<span id="L49">  49</span> from neuromechanics.emg_comparison_cycles import emg_comparison_cycles
+<span id="L50">  50</span> 
+<span id="L51">  51</span> from neuromechanics.configured_excitation_samples import configured_excitation_samples
+<span id="L52">  52</span> 
+<span id="L53">  53</span> from neuromechanics.simulation_comparison_plots import ReplayPlotPanel
+<span id="L54">  54</span> 
+<span id="L55">  55</span> from neuromechanics.simulation_playback_worker import SavedReplayWorker
+<span id="L56">  56</span> 
+<span id="L57">  57</span> 
+<span id="L58">  58</span> def main():
+<span id="L59">  59</span>     parser = argparse.ArgumentParser(description=__doc__)
+<span id="L60">  60</span>     parser.add_argument(&quot;--run&quot;, default=&quot;Intact_Walking&quot;)
+<span id="L61">  61</span>     parser.add_argument(
+<span id="L62">  62</span>         &quot;--autoplay&quot;,
+<span id="L63">  63</span>         action=&quot;store_true&quot;,
+<span id="L64">  64</span>         help=&quot;Start playback immediately&quot;,
+<span id="L65">  65</span>     )
+<span id="L66">  66</span>     parser.add_argument(&quot;--start-time&quot;, type=float, default=0.0)
+<span id="L67">  67</span>     parser.add_argument(&quot;--fps&quot;, type=int, choices=[30, 60, 90], default=60)
+<span id="L68">  68</span>     parser.add_argument(&quot;--profile-seconds&quot;, type=float, default=12.0)
+<span id="L69">  69</span>     args = parser.parse_args()
+<span id="L70">  70</span>     folder = Path(args.run)
+<span id="L71">  71</span>     if not folder.is_absolute():
+<span id="L72">  72</span>         folder = (ROOT / folder) if (ROOT / folder).is_dir() else (ROOT / &quot;Simulation_Results&quot; / folder)
+<span id="L73">  73</span>     result = dict(np.load(folder / &quot;forward_simulation_timeseries.npz&quot;))
+<span id="L74">  74</span>     cfg = json.loads((folder / &quot;settings.json&quot;).read_text())
+<span id="L75">  75</span>     times = result[&quot;time&quot;]
+<span id="L76">  76</span>     names = list(result[&quot;names&quot;])
+<span id="L77">  77</span>     print(&quot;Loading saved forward model and visual meshes...&quot;, flush=True)
+<span id="L78">  78</span>     state = initialize_neuromechanical_model(cfg, graphics=True)
+<span id="L79">  79</span>     model, data = state[&quot;model&quot;], state[&quot;data&quot;]
+<span id="L80">  80</span>     target = experimental_comparison_targets(
+<span id="L81">  81</span>         times,
+<span id="L82">  82</span>         cfg[&quot;period_s&quot;],
+<span id="L83">  83</span>         cfg.get(&quot;reference_table_dir&quot;),
+<span id="L84">  84</span>     )
+<span id="L85">  85</span>     pairs = {p[&quot;channel&quot;]: p for p in emg_comparison_cycles(names, cfg)}
+<span id="L86">  86</span>     peaks = np.maximum(0.02, configured_excitation_samples(cfg).max(axis=0))
+<span id="L87">  87</span>     root = tk.Tk()
+<span id="L88">  88</span>     # Identify the four-second plot window and the selected computed trial.
+<span id="L89">  89</span>     root.title(&quot;Cat forward simulation (4-second window) - &quot; + folder.name)
+<span id="L90">  90</span>     root.geometry(&quot;920x850+30+60&quot;)
+<span id="L91">  91</span>     root.minsize(760, 680)
+<span id="L92">  92</span>     paused = tk.BooleanVar(value=not args.autoplay)
+<span id="L93">  93</span>     speed = tk.StringVar(value=&quot;0.5&quot;)
+<span id="L94">  94</span>     limb = tk.StringVar(value=&quot;RH&quot;)
+<span id="L95">  95</span>     muscle = tk.StringVar(value=&quot;R_VL&quot;)
+<span id="L96">  96</span>     joint = tk.StringVar(value=&quot;Ankle&quot;)
+<span id="L97">  97</span>     norm = tk.BooleanVar(value=True)
+<span id="L98">  98</span>     emg = tk.BooleanVar(value=True)
+<span id="L99">  99</span>     position = tk.DoubleVar(value=args.start_time)
+<span id="L100"> 100</span>     fps = tk.StringVar(value=str(args.fps))
+<span id="L101"> 101</span>     forces = tk.BooleanVar(value=True)
+<span id="L102"> 102</span>     rich = tk.BooleanVar(value=False)
+<span id="L103"> 103</span>     follow = tk.BooleanVar(value=True)
+<span id="L104"> 104</span>     worker = None
+<span id="L105"> 105</span>     updating_slider = False
+<span id="L106"> 106</span>     # Do not move the timeline thumb automatically while the user is dragging it.
+<span id="L107"> 107</span>     dragging_slider = False
+<span id="L108"> 108</span> 
+<span id="L109"> 109</span>     def set_time(value):
+<span id="L110"> 110</span>         &quot;&quot;&quot;Pause at any recorded time; this works before or after the trial ends.&quot;&quot;&quot;
+<span id="L111"> 111</span>         # Convert text or button input into seconds.
+<span id="L112"> 112</span>         requested_time = float(value)
+<span id="L113"> 113</span>         # Reject invalid numbers before they can reach the playback worker.
+<span id="L114"> 114</span>         if not np.isfinite(requested_time):
+<span id="L115"> 115</span>             # Explain how to correct an invalid Go-to-time entry.
+<span id="L116"> 116</span>             raise ValueError(&quot;Enter a finite time in seconds.&quot;)
+<span id="L117"> 117</span>         # Keep the requested position within the saved trial.
+<span id="L118"> 118</span>         requested_time = float(np.clip(requested_time, 0.0, times[-1]))
+<span id="L119"> 119</span>         # Hold the chosen frame so the user can inspect its curves and pose.
+<span id="L120"> 120</span>         paused.set(True)
+<span id="L121"> 121</span>         # Move the full-trial timeline to the same recorded instant.
+<span id="L122"> 122</span>         position.set(requested_time)
+<span id="L123"> 123</span>         if worker is not None:
+<span id="L124"> 124</span>             # Seeking changes playback only; it does not calculate a new trial.
+<span id="L125"> 125</span>             worker.command(paused=True, seek=requested_time)
+<span id="L126"> 126</span> 
+<span id="L127"> 127</span>     def slider_seek(value):
+<span id="L128"> 128</span>         if not updating_slider and worker is not None:
+<span id="L129"> 129</span>             # Pause and inspect the frame selected anywhere on the full timeline.
+<span id="L130"> 130</span>             set_time(value)
+<span id="L131"> 131</span> 
+<span id="L132"> 132</span>     # Mark the beginning of mouse dragging on the full-trial timeline.
+<span id="L133"> 133</span>     def start_timeline_drag(event):
+<span id="L134"> 134</span>         # Update the flag shared with the periodic refresh callback.
+<span id="L135"> 135</span>         nonlocal dragging_slider
+<span id="L136"> 136</span>         # Keep automatic playback updates from moving the thumb under the mouse.
+<span id="L137"> 137</span>         dragging_slider = True
+<span id="L138"> 138</span>         # Hold motion while browsing the recording.
+<span id="L139"> 139</span>         paused.set(True)
+<span id="L140"> 140</span> 
+<span id="L141"> 141</span>     # Finish a timeline drag without losing the author&#x27;s selected time.
+<span id="L142"> 142</span>     def finish_timeline_drag(event):
+<span id="L143"> 143</span>         # Update the flag shared with the periodic refresh callback.
+<span id="L144"> 144</span>         nonlocal dragging_slider
+<span id="L145"> 145</span>         # Send the final thumb position to the 3D viewer and plots.
+<span id="L146"> 146</span>         set_time(position.get())
+<span id="L147"> 147</span>         # Allow subsequent programmatic timeline updates again.
+<span id="L148"> 148</span>         dragging_slider = False
+<span id="L149"> 149</span> 
+<span id="L150"> 150</span>     def reset_playback():
+<span id="L151"> 151</span>         &quot;&quot;&quot;Return to the archived initial state without changing model parameters.&quot;&quot;&quot;
+<span id="L152"> 152</span>         paused.set(True)
+<span id="L153"> 153</span>         if worker is not None:
+<span id="L154"> 154</span>             worker.command(paused=True, seek=float(times[0]))
+<span id="L155"> 155</span>         position.set(float(times[0]))
+<span id="L156"> 156</span> 
+<span id="L157"> 157</span>     status = tk.StringVar(
+<span id="L158"> 158</span>         value=&quot;Ready - press Play. Recorded forward result, not live reintegration.&quot;
+<span id="L159"> 159</span>     )
+<span id="L160"> 160</span>     ttk.Label(
+<span id="L161"> 161</span>         root,
+<span id="L162"> 162</span>         text=&quot;Forward result | prescribed excitation | elastic muscle–tendon mechanics | raw Ground_Reaction_Forces&quot;,
+<span id="L163"> 163</span>         font=(&quot;Segoe UI&quot;, 11, &quot;bold&quot;),
+<span id="L164"> 164</span>     ).pack(padx=10, pady=(10, 3))
+<span id="L165"> 165</span>     # Read this trial&#x27;s actual outcome; an altered-input trial may have fallen.
+<span id="L166"> 166</span>     summary = json.loads((folder / &quot;simulation_summary.json&quot;).read_text())
+<span id="L167"> 167</span>     # Report a detected fall or limit the survival claim to the saved duration.
+<span id="L168"> 168</span>     outcome = summary.get(&quot;failure&quot;) or f&quot;No detected fall during {times[-1]:.2f} seconds.&quot;
+<span id="L169"> 169</span>     # Display the outcome beside a short reminder of the model&#x27;s validation limits.
+<span id="L170"> 170</span>     ttk.Label(
+<span id="L171"> 171</span>         root,
+<span id="L172"> 172</span>         text=outcome + &quot; EMG timing and forepaw fit remain imperfect.&quot;,
+<span id="L173"> 173</span>     ).pack()
+<span id="L174"> 174</span>     controls = ttk.Frame(root)
+<span id="L175"> 175</span>     controls.pack(fill=&quot;x&quot;, padx=10, pady=7)
+<span id="L176"> 176</span>     ttk.Checkbutton(controls, text=&quot;Paused&quot;, variable=paused).pack(side=&quot;left&quot;)
+<span id="L177"> 177</span>     ttk.Button(
+<span id="L178"> 178</span>         controls,
+<span id="L179"> 179</span>         text=&quot;Play / Pause&quot;,
+<span id="L180"> 180</span>         command=lambda: paused.set(not paused.get()),
+<span id="L181"> 181</span>     ).pack(side=&quot;left&quot;)
+<span id="L182"> 182</span>     ttk.Label(controls, text=&quot;  Speed &quot;).pack(side=&quot;left&quot;)
+<span id="L183"> 183</span>     ttk.Combobox(
+<span id="L184"> 184</span>         controls,
+<span id="L185"> 185</span>         textvariable=speed,
+<span id="L186"> 186</span>         values=[&quot;0.1&quot;, &quot;0.25&quot;, &quot;0.5&quot;, &quot;1&quot;, &quot;2&quot;],
+<span id="L187"> 187</span>         state=&quot;readonly&quot;,
+<span id="L188"> 188</span>         width=5,
+<span id="L189"> 189</span>     ).pack(side=&quot;left&quot;)
+<span id="L190"> 190</span>     ttk.Button(controls, text=&quot;Reset&quot;, command=reset_playback).pack(side=&quot;left&quot;, padx=8)
+<span id="L191"> 191</span>     ttk.Button(
+<span id="L192"> 192</span>         controls,
+<span id="L193"> 193</span>         text=&quot;Last 4 seconds&quot;,
+<span id="L194"> 194</span>         command=lambda: set_time(max(0.0, float(times[-1]) - 2.0)),
+<span id="L195"> 195</span>     ).pack(side=&quot;left&quot;)
+<span id="L196"> 196</span>     ttk.Label(controls, text=&quot;  3D target Hz &quot;).pack(side=&quot;left&quot;)
+<span id="L197"> 197</span>     ttk.Combobox(
+<span id="L198"> 198</span>         controls,
+<span id="L199"> 199</span>         textvariable=fps,
+<span id="L200"> 200</span>         values=[&quot;30&quot;, &quot;60&quot;, &quot;90&quot;],
+<span id="L201"> 201</span>         state=&quot;readonly&quot;,
+<span id="L202"> 202</span>         width=4,
+<span id="L203"> 203</span>     ).pack(side=&quot;left&quot;)
+<span id="L204"> 204</span>     selectors = ttk.Frame(root)
+<span id="L205"> 205</span>     selectors.pack(fill=&quot;x&quot;, padx=10)
+<span id="L206"> 206</span>     limb_box = ttk.Combobox(
+<span id="L207"> 207</span>         selectors,
+<span id="L208"> 208</span>         textvariable=limb,
+<span id="L209"> 209</span>         values=[&quot;LH&quot;, &quot;RH&quot;, &quot;LF&quot;, &quot;RF&quot;],
+<span id="L210"> 210</span>         state=&quot;readonly&quot;,
+<span id="L211"> 211</span>         width=5,
+<span id="L212"> 212</span>     )
+<span id="L213"> 213</span>     limb_box.pack(side=&quot;left&quot;)
+<span id="L214"> 214</span>     muscle_box = ttk.Combobox(selectors, textvariable=muscle, state=&quot;readonly&quot;, width=32)
+<span id="L215"> 215</span>     muscle_box.pack(side=&quot;left&quot;, padx=6)
+<span id="L216"> 216</span>     joint_box = ttk.Combobox(selectors, textvariable=joint, state=&quot;readonly&quot;, width=12)
+<span id="L217"> 217</span>     joint_box.pack(side=&quot;left&quot;)
+<span id="L218"> 218</span>     prefixes = [&quot;L&quot;, &quot;R&quot;, &quot;FL&quot;, &quot;FR&quot;]
+<span id="L219"> 219</span> 
+<span id="L220"> 220</span>     def select_limb(event=None):
+<span id="L221"> 221</span>         side = [&quot;LH&quot;, &quot;RH&quot;, &quot;LF&quot;, &quot;RF&quot;].index(limb.get())
+<span id="L222"> 222</span>         choices = [n for n in names if n.startswith(prefixes[side] + &quot;_&quot;)]
+<span id="L223"> 223</span>         muscle_box[&quot;values&quot;] = choices
+<span id="L224"> 224</span>         if muscle.get() not in choices:
+<span id="L225"> 225</span>             muscle.set(choices[0])
+<span id="L226"> 226</span>         joints = (
+<span id="L227"> 227</span>             [&quot;Hip&quot;, &quot;Knee&quot;, &quot;Ankle&quot;, &quot;MTP&quot;]
+<span id="L228"> 228</span>             if side &lt; 2
+<span id="L229"> 229</span>             else [&quot;Shoulder&quot;, &quot;Elbow&quot;, &quot;Wrist&quot;, &quot;MCP&quot;]
+<span id="L230"> 230</span>         )
+<span id="L231"> 231</span>         joint_box[&quot;values&quot;] = joints
+<span id="L232"> 232</span>         if joint.get() not in joints:
+<span id="L233"> 233</span>             joint.set(joints[0])
+<span id="L234"> 234</span> 
+<span id="L235"> 235</span>     limb_box.bind(&quot;&lt;&lt;ComboboxSelected&gt;&gt;&quot;, select_limb)
+<span id="L236"> 236</span>     select_limb()
+<span id="L237"> 237</span>     options = ttk.Frame(root)
+<span id="L238"> 238</span>     options.pack(fill=&quot;x&quot;, padx=10, pady=5)
+<span id="L239"> 239</span>     ttk.Checkbutton(
+<span id="L240"> 240</span>         options,
+<span id="L241"> 241</span>         text=&quot;Normalize activation/muscle_excitation to fixed input peak&quot;,
+<span id="L242"> 242</span>         variable=norm,
+<span id="L243"> 243</span>     ).pack(side=&quot;left&quot;)
+<span id="L244"> 244</span>     ttk.Checkbutton(options, text=&quot;Show available EMG&quot;, variable=emg).pack(
+<span id="L245"> 245</span>         side=&quot;left&quot;,
+<span id="L246"> 246</span>         padx=10,
+<span id="L247"> 247</span>     )
+<span id="L248"> 248</span>     display = ttk.Frame(root)
+<span id="L249"> 249</span>     display.pack(fill=&quot;x&quot;, padx=10)
+<span id="L250"> 250</span>     ttk.Checkbutton(display, text=&quot;Paw GRF vectors&quot;, variable=forces).pack(side=&quot;left&quot;)
+<span id="L251"> 251</span>     ttk.Checkbutton(display, text=&quot;Shadows / reflections (slower)&quot;, variable=rich).pack(
+<span id="L252"> 252</span>         side=&quot;left&quot;,
+<span id="L253"> 253</span>         padx=10,
+<span id="L254"> 254</span>     )
+<span id="L255"> 255</span>     ttk.Checkbutton(display, text=&quot;Follow body&quot;, variable=follow).pack(side=&quot;left&quot;)
+<span id="L256"> 256</span>     # Put explicit time-navigation controls above the full-trial slider.
+<span id="L257"> 257</span>     navigation = ttk.Frame(root)
+<span id="L258"> 258</span>     # Give the navigation row the available window width.
+<span id="L259"> 259</span>     navigation.pack(fill=&quot;x&quot;, padx=10, pady=5)
+<span id="L260"> 260</span>     # Identify the editable time as actual elapsed simulation seconds.
+<span id="L261"> 261</span>     ttk.Label(navigation, text=&quot;Go to time (s): &quot;).pack(side=&quot;left&quot;)
+<span id="L262"> 262</span>     # Keep typed text independent of the moving playback thumb.
+<span id="L263"> 263</span>     requested_time_text = tk.StringVar(value=&quot;0.0&quot;)
+<span id="L264"> 264</span>     # Allow the user to type any time within the recorded trial.
+<span id="L265"> 265</span>     time_entry = ttk.Entry(navigation, textvariable=requested_time_text, width=9)
+<span id="L266"> 266</span>     # Place the entry beside its label.
+<span id="L267"> 267</span>     time_entry.pack(side=&quot;left&quot;)
+<span id="L268"> 268</span> 
+<span id="L269"> 269</span>     # Apply the time typed in the entry box.
+<span id="L270"> 270</span>     def jump_to_time():
+<span id="L271"> 271</span>         # Validate text before sending it to the playback worker.
+<span id="L272"> 272</span>         try:
+<span id="L273"> 273</span>             # Pause both motion and plots at the requested instant.
+<span id="L274"> 274</span>             set_time(requested_time_text.get())
+<span id="L275"> 275</span>         # Report invalid text without closing the simulation viewer.
+<span id="L276"> 276</span>         except ValueError:
+<span id="L277"> 277</span>             # Explain the allowed time range in the existing status area.
+<span id="L278"> 278</span>             status.set(f&quot;Enter a time between 0 and {times[-1]:.2f} seconds.&quot;)
+<span id="L279"> 279</span>             # Draw attention to the entry without opening another dialog.
+<span id="L280"> 280</span>             root.bell()
+<span id="L281"> 281</span> 
+<span id="L282"> 282</span>     # Apply a typed time either with Enter or with the Go button.
+<span id="L283"> 283</span>     time_entry.bind(&quot;&lt;Return&gt;&quot;, lambda event: jump_to_time())
+<span id="L284"> 284</span>     # Provide an explicit action for the typed time.
+<span id="L285"> 285</span>     ttk.Button(navigation, text=&quot;Go&quot;, command=jump_to_time).pack(side=&quot;left&quot;, padx=5)
+<span id="L286"> 286</span>     ttk.Button(navigation, text=&quot;Start&quot;, command=lambda: set_time(0.0)).pack(side=&quot;left&quot;)
+<span id="L287"> 287</span>     # Inspect the middle of the complete recording.
+<span id="L288"> 288</span>     ttk.Button(navigation, text=&quot;Middle&quot;, command=lambda: set_time(float(times[-1]) / 2.0)).pack(side=&quot;left&quot;)
+<span id="L289"> 289</span>     # Inspect the final recorded frame while keeping browsing controls enabled.
+<span id="L290"> 290</span>     ttk.Button(navigation, text=&quot;End&quot;, command=lambda: set_time(float(times[-1]))).pack(side=&quot;left&quot;)
+<span id="L291"> 291</span>     # Move backward by one visible plot window.
+<span id="L292"> 292</span>     ttk.Button(navigation, text=&quot;-4 s&quot;, command=lambda: set_time(position.get() - 4.0)).pack(side=&quot;left&quot;, padx=(8, 0))
+<span id="L293"> 293</span>     # Move forward by one visible plot window.
+<span id="L294"> 294</span>     ttk.Button(navigation, text=&quot;+4 s&quot;, command=lambda: set_time(position.get() + 4.0)).pack(side=&quot;left&quot;)
+<span id="L295"> 295</span>     # Explain that the slider browses the entire saved trial, not just four seconds.
+<span id="L296"> 296</span>     ttk.Label(root, text=f&quot;Browse full trial: 0 to {times[-1]:.2f} s. Drag the slider; plots show a 4-second window.&quot;).pack()
+<span id="L297"> 297</span>     # Keep the timeline available throughout playback and after reaching the end.
+<span id="L298"> 298</span>     timeline = ttk.Scale(
+<span id="L299"> 299</span>         root,
+<span id="L300"> 300</span>         variable=position,
+<span id="L301"> 301</span>         command=slider_seek,
+<span id="L302"> 302</span>         from_=0.0,
+<span id="L303"> 303</span>         to=float(times[-1]),
+<span id="L304"> 304</span>     )
+<span id="L305"> 305</span>     # Stretch the timeline across the control window.
+<span id="L306"> 306</span>     timeline.pack(fill=&quot;x&quot;, padx=15)
+<span id="L307"> 307</span>     # Protect the selected time from refresh updates during mouse dragging.
+<span id="L308"> 308</span>     timeline.bind(&quot;&lt;ButtonPress-1&gt;&quot;, start_timeline_drag)
+<span id="L309"> 309</span>     # Apply the final selected position when the mouse is released.
+<span id="L310"> 310</span>     timeline.bind(&quot;&lt;ButtonRelease-1&gt;&quot;, finish_timeline_drag)
+<span id="L311"> 311</span>     ttk.Label(root, textvariable=status, wraplength=870).pack(padx=10, pady=4)
+<span id="L312"> 312</span>     force_text = tk.StringVar(value=&quot;Paw vectors: LH cyan | RH pink | LF gold | RF purple&quot;)
+<span id="L313"> 313</span>     ttk.Label(root, textvariable=force_text).pack(pady=2)
+<span id="L314"> 314</span>     panel = ReplayPlotPanel(root, result, target, pairs, peaks, cfg[&quot;period_s&quot;])
+<span id="L315"> 315</span> 
+<span id="L316"> 316</span>     # A click on any visible plot can select the matching time and 3D pose.
+<span id="L317"> 317</span>     def select_plot_time(event):
+<span id="L318"> 318</span>         # Only a left click within a plotted time axis should seek playback.
+<span id="L319"> 319</span>         if event.button == 1 and event.inaxes is not None and event.xdata is not None:
+<span id="L320"> 320</span>             # All plots use actual simulation seconds, so no time conversion is needed.
+<span id="L321"> 321</span>             set_time(event.xdata)
+<span id="L322"> 322</span> 
+<span id="L323"> 323</span>     # Connect plot clicks to the same time-selection logic as the timeline.
+<span id="L324"> 324</span>     panel.canvas.mpl_connect(&quot;button_press_event&quot;, select_plot_time)
+<span id="L325"> 325</span>     ttk.Label(
+<span id="L326"> 326</span>         root,
+<span id="L327"> 327</span>         text=&quot;Muscle colors are fixed identifiers: blue = SAM/SRTm; orange = VL; purple = added toe/girdle paths; red = others.&quot;,
+<span id="L328"> 328</span>     ).pack(pady=(4, 0))
+<span id="L329"> 329</span>     ttk.Label(
+<span id="L330"> 330</span>         root,
+<span id="L331"> 331</span>         text=&quot;Dashed black: reference. Blue: prediction. RH recorded; LH mirrored; fore references from a separate study.&quot;,
+<span id="L332"> 332</span>     ).pack(pady=(0, 4))
+<span id="L333"> 333</span>     viewer = mj.viewer.launch_passive(model, data, show_left_ui=False, show_right_ui=False)
+<span id="L334"> 334</span>     # Keep this file or shared state safely scoped to the following operations.
+<span id="L335"> 335</span>     with viewer.lock():
+<span id="L336"> 336</span>         viewer.cam.distance = 0.95
+<span id="L337"> 337</span>         viewer.cam.azimuth = 90
+<span id="L338"> 338</span>         viewer.cam.elevation = -18
+<span id="L339"> 339</span>         viewer.cam.lookat[:] = data.xpos[model.body(&quot;pelvis&quot;).id]
+<span id="L340"> 340</span>         viewer.cam.lookat[0] += 0.12
+<span id="L341"> 341</span>         viewer.cam.lookat[2] *= 0.72
+<span id="L342"> 342</span>     profile = folder / &quot;gui&quot; / (&quot;PERFORMANCE_&quot; + time.strftime(&quot;%Y%m%d_%H%M%S&quot;) + &quot;.json&quot;)
+<span id="L343"> 343</span>     worker = SavedReplayWorker(viewer, state, result, profile, args.profile_seconds)
+<span id="L344"> 344</span>     worker.command(paused=paused.get(), fps=float(fps.get()), seek=args.start_time)
+<span id="L345"> 345</span>     worker.start()
+<span id="L346"> 346</span>     last_status = 0.0
+<span id="L347"> 347</span>     closed = False
+<span id="L348"> 348</span> 
+<span id="L349"> 349</span>     def close():
+<span id="L350"> 350</span>         # Use the surrounding GUI or module state rather than creating a new local variable.
+<span id="L351"> 351</span>         nonlocal closed
+<span id="L352"> 352</span>         closed = True
+<span id="L353"> 353</span>         worker.stop()
+<span id="L354"> 354</span>         viewer.close()
+<span id="L355"> 355</span>         root.destroy()
+<span id="L356"> 356</span> 
+<span id="L357"> 357</span>     def refresh():
+<span id="L358"> 358</span>         # Use the surrounding GUI or module state rather than creating a new local variable.
+<span id="L359"> 359</span>         nonlocal last_status, updating_slider
+<span id="L360"> 360</span>         if closed:
+<span id="L361"> 361</span>             return
+<span id="L362"> 362</span>         if not viewer.is_running():
+<span id="L363"> 363</span>             close()
+<span id="L364"> 364</span>             return
+<span id="L365"> 365</span>         started = time.perf_counter()
+<span id="L366"> 366</span>         snapshot = worker.snapshot()
+<span id="L367"> 367</span>         current = snapshot[&quot;time&quot;]
+<span id="L368"> 368</span>         if snapshot[&quot;error&quot;]:
+<span id="L369"> 369</span>             paused.set(True)
+<span id="L370"> 370</span>             status.set(&quot;Viewer error: &quot; + snapshot[&quot;error&quot;])
+<span id="L371"> 371</span>             return
+<span id="L372"> 372</span>         if current &gt;= times[-1]:
+<span id="L373"> 373</span>             paused.set(True)
+<span id="L374"> 374</span>         worker.command(
+<span id="L375"> 375</span>             paused=paused.get(),
+<span id="L376"> 376</span>             speed=float(speed.get()),
+<span id="L377"> 377</span>             fps=float(fps.get()),
+<span id="L378"> 378</span>             forces=forces.get(),
+<span id="L379"> 379</span>             rich=rich.get(),
+<span id="L380"> 380</span>             follow=follow.get(),
+<span id="L381"> 381</span>         )
+<span id="L382"> 382</span>         side = [&quot;LH&quot;, &quot;RH&quot;, &quot;LF&quot;, &quot;RF&quot;].index(limb.get())
+<span id="L383"> 383</span>         joints = (
+<span id="L384"> 384</span>             [&quot;Hip&quot;, &quot;Knee&quot;, &quot;Ankle&quot;, &quot;MTP&quot;]
+<span id="L385"> 385</span>             if side &lt; 2
+<span id="L386"> 386</span>             else [&quot;Shoulder&quot;, &quot;Elbow&quot;, &quot;Wrist&quot;, &quot;MCP&quot;]
+<span id="L387"> 387</span>         )
+<span id="L388"> 388</span>         panel.update(
+<span id="L389"> 389</span>             current,
+<span id="L390"> 390</span>             side,
+<span id="L391"> 391</span>             muscle.get(),
+<span id="L392"> 392</span>             joints.index(joint.get()),
+<span id="L393"> 393</span>             norm.get(),
+<span id="L394"> 394</span>             emg.get(),
+<span id="L395"> 395</span>         )
+<span id="L396"> 396</span>         if started - last_status &gt; 0.2:
+<span id="L397"> 397</span>             last_status = started
+<span id="L398"> 398</span>             updating_slider = True
+<span id="L399"> 399</span>             # Preserve the thumb position while the user drags to another time.
+<span id="L400"> 400</span>             if not dragging_slider:
+<span id="L401"> 401</span>                 # Keep the timeline synchronized with ordinary playback.
+<span id="L402"> 402</span>                 position.set(current)
+<span id="L403"> 403</span>             updating_slider = False
+<span id="L404"> 404</span>             status.set(
+<span id="L405"> 405</span>                 f&#x27;{&quot;PAUSED&quot; if paused.get() else &quot;PLAYING&quot;} | {current:.2f} / {times[-1]:.2f} s | {speed.get()}x | 3D updates: {snapshot[&quot;update_hz&quot;]:.1f}/s (target {fps.get()}) | plots: {panel.measured_hz:.1f}/s&#x27;
+<span id="L406"> 406</span>             )
+<span id="L407"> 407</span>             force_text.set(
+<span id="L408"> 408</span>                 &quot;Paw Ground_Reaction_Forces | &quot;
+<span id="L409"> 409</span>                 + &quot;   &quot;.join(
+<span id="L410"> 410</span>                     f&quot;{label}: Fx {force[0]:+.1f}, Fz {force[2]:.1f} N&quot;
+<span id="L411"> 411</span>                     for label, force in zip(
+<span id="L412"> 412</span>                         [&quot;LH cyan&quot;, &quot;RH pink&quot;, &quot;LF gold&quot;, &quot;RF purple&quot;],
+<span id="L413"> 413</span>                         snapshot[&quot;forces&quot;],
+<span id="L414"> 414</span>                     )
+<span id="L415"> 415</span>                 )
+<span id="L416"> 416</span>             )
+<span id="L417"> 417</span>         # Compensate for plot-update work instead of adding a fixed delay to it.
+<span id="L418"> 418</span>         # 20 plot updates/s are sufficient for the traces and leave more CPU
+<span id="L419"> 419</span>         # time for the independent 60-Hz 3D visualization and window rendering.
+<span id="L420"> 420</span>         root.after(
+<span id="L421"> 421</span>             max(1, int(1000 * (1 / 20.0 - (time.perf_counter() - started)))),
+<span id="L422"> 422</span>             refresh,
+<span id="L423"> 423</span>         )
+<span id="L424"> 424</span> 
+<span id="L425"> 425</span>     root.protocol(&quot;WM_DELETE_WINDOW&quot;, close)
+<span id="L426"> 426</span>     root.after(100, refresh)
+<span id="L427"> 427</span>     print(
+<span id="L428"> 428</span>         &quot;GUI_READY: independent 60-Hz-target playback, paw-force arrows and blitted comparison plots open&quot;,
+<span id="L429"> 429</span>         flush=True,
+<span id="L430"> 430</span>     )
+<span id="L431"> 431</span>     root.mainloop()
+<span id="L432"> 432</span> 
+<span id="L433"> 433</span> 
+<span id="L434"> 434</span> if __name__ == &quot;__main__&quot;:
+<span id="L435"> 435</span>     main()
+</pre></main></body></html>

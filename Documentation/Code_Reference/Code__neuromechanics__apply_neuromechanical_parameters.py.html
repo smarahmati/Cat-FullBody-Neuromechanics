@@ -1,0 +1,258 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Apply one explicit, versioned physical parameter set before initialization.</title><link rel="stylesheet" href="../style.css"></head><body><!-- generated folder guide --><header><div class="tag">Cat · Full-body neuromechanics</div><h1>Apply one explicit, versioned physical parameter set before initialization.</h1><nav><a href="../../START_HERE.html">Start here</a> · <a href="../project_structure.html">Find a file</a></nav></header><main><p><a href="../../Code/neuromechanics/apply_neuromechanical_parameters.py">Code/neuromechanics/apply_neuromechanical_parameters.py</a></p><pre style="overflow:auto;white-space:pre"><span id="L1">   1</span> &quot;&quot;&quot;Apply one explicit, versioned physical parameter set before initialization.&quot;&quot;&quot;
+<span id="L2">   2</span> 
+<span id="L3">   3</span> from pathlib import Path
+<span id="L4">   4</span> 
+<span id="L5">   5</span> import numpy as np
+<span id="L6">   6</span> 
+<span id="L7">   7</span> from model_configuration.paths import ROOT
+<span id="L8">   8</span> 
+<span id="L9">   9</span> from model_configuration.parameter_schema import MUSCLE_FIELDS, BODY_FIELDS, JOINT_FIELDS, CONTACT_FIELDS
+<span id="L10">  10</span> 
+<span id="L11">  11</span> from .load_parameter_file import load_parameter_file
+<span id="L12">  12</span> 
+<span id="L13">  13</span> 
+<span id="L14">  14</span> def apply_neuromechanical_parameters(state, folder):
+<span id="L15">  15</span>     &quot;&quot;&quot;All assignments happen before forward integration, never during walking.
+<span id="L16">  16</span> 
+<span id="L17">  17</span>     Values are absolute applied values, not multipliers applied repeatedly.
+<span id="L18">  18</span>     Existing settings without a bundle preserve the historical model exactly.
+<span id="L19">  19</span>     Names and topology must match the selected anatomical model.
+<span id="L20">  20</span>     &quot;&quot;&quot;
+<span id="L21">  21</span>     folder = ROOT / Path(folder)
+<span id="L22">  22</span>     s = state
+<span id="L23">  23</span>     m = s[&quot;model&quot;]
+<span id="L24">  24</span>     names = list(s[&quot;names&quot;])
+<span id="L25">  25</span> 
+<span id="L26">  26</span>     # Reject misspelled/unknown entries rather than silently ignore an edit.
+<span id="L27">  27</span>     def checked(filename, fields=None, record_names=None):
+<span id="L28">  28</span>         values = load_parameter_file(folder / filename)
+<span id="L29">  29</span>         if record_names is not None and set(values) != set(record_names):
+<span id="L30">  30</span>             # Stop and explain the invalid model setting or failed calculation.
+<span id="L31">  31</span>             raise ValueError(f&quot;{filename}: model record names differ&quot;)
+<span id="L32">  32</span>         for name, record in values.items():
+<span id="L33">  33</span>             if fields is not None and set(record) != set(fields):
+<span id="L34">  34</span>                 # Stop and explain the invalid model setting or failed calculation.
+<span id="L35">  35</span>                 raise ValueError(f&quot;{filename}/{name}: unknown or missing field&quot;)
+<span id="L36">  36</span>             numbers = list(record.values()) if isinstance(record, dict) else [record]
+<span id="L37">  37</span>             if any(not np.isfinite(np.asarray(v, float)).all() for v in numbers):
+<span id="L38">  38</span>                 # Stop and explain the invalid model setting or failed calculation.
+<span id="L39">  39</span>                 raise ValueError(f&quot;{filename}/{name}: nonfinite value&quot;)
+<span id="L40">  40</span>         return values
+<span id="L41">  41</span> 
+<span id="L42">  42</span>     muscles = checked(&quot;muscle_tendon.py&quot;, MUSCLE_FIELDS, names)
+<span id="L43">  43</span>     if set(muscles) != set(names):
+<span id="L44">  44</span>         # Stop and explain the invalid model setting or failed calculation.
+<span id="L45">  45</span>         raise ValueError(&quot;Muscle configuration does not match model channels&quot;)
+<span id="L46">  46</span>     if s[&quot;muscle_params&quot;].shape[1] &lt; 15:
+<span id="L47">  47</span>         s[&quot;muscle_params&quot;] = np.pad(
+<span id="L48">  48</span>             s[&quot;muscle_params&quot;],
+<span id="L49">  49</span>             ((0, 0), (0, 15 - s[&quot;muscle_params&quot;].shape[1])),
+<span id="L50">  50</span>         )
+<span id="L51">  51</span>     for name, values in muscles.items():
+<span id="L52">  52</span>         i = names.index(name)
+<span id="L53">  53</span>         for field, (array, column, unit, meaning) in MUSCLE_FIELDS.items():
+<span id="L54">  54</span>             value = float(values[field])
+<span id="L55">  55</span>             if not np.isfinite(value):
+<span id="L56">  56</span>                 # Stop and explain the invalid model setting or failed calculation.
+<span id="L57">  57</span>                 raise ValueError(f&quot;Nonfinite {name}.{field}&quot;)
+<span id="L58">  58</span>             if column is None:
+<span id="L59">  59</span>                 s[array][i] = value
+<span id="L60">  60</span>             else:
+<span id="L61">  61</span>                 s[array][i, column] = value
+<span id="L62">  62</span>         if (
+<span id="L63">  63</span>             min(
+<span id="L64">  64</span>                 s[&quot;lopt&quot;][i],
+<span id="L65">  65</span>                 s[&quot;slack&quot;][i],
+<span id="L66">  66</span>                 s[&quot;e0&quot;][i],
+<span id="L67">  67</span>                 s[&quot;muscle_params&quot;][i, 2],
+<span id="L68">  68</span>                 s[&quot;muscle_params&quot;][i, 6],
+<span id="L69">  69</span>             )
+<span id="L70">  70</span>             &lt;= 0
+<span id="L71">  71</span>         ):
+<span id="L72">  72</span>             # Stop and explain the invalid model setting or failed calculation.
+<span id="L73">  73</span>             raise ValueError(f&quot;Nonpositive muscle scale: {name}&quot;)
+<span id="L74">  74</span>         if not 0 &lt; s[&quot;cosine&quot;][i] &lt;= 1 or s[&quot;fiber_damping_coefficients&quot;][i] &lt; 0:
+<span id="L75">  75</span>             # Stop and explain the invalid model setting or failed calculation.
+<span id="L76">  76</span>             raise ValueError(f&quot;Invalid pennation or damping: {name}&quot;)
+<span id="L77">  77</span>         if (
+<span id="L78">  78</span>             values[&quot;active_force_length_exponent&quot;] &lt; 1
+<span id="L79">  79</span>             or min(
+<span id="L80">  80</span>                 values[&quot;source_shortening_curvature&quot;],
+<span id="L81">  81</span>                 values[&quot;source_lengthening_curvature&quot;],
+<span id="L82">  82</span>             )
+<span id="L83">  83</span>             &lt;= 0
+<span id="L84">  84</span>         ):
+<span id="L85">  85</span>             # Stop and explain the invalid model setting or failed calculation.
+<span id="L86">  86</span>             raise ValueError(f&quot;Invalid fiber curve coefficients: {name}&quot;)
+<span id="L87">  87</span>         if any(
+<span id="L88">  88</span>             values[key] not in (0, 1)
+<span id="L89">  89</span>             for key in [&quot;passive_fiber_enabled&quot;, &quot;degroote_force_velocity_enabled&quot;]
+<span id="L90">  90</span>         ):
+<span id="L91">  91</span>             # Stop and explain the invalid model setting or failed calculation.
+<span id="L92">  92</span>             raise ValueError(f&quot;Muscle switches must be 0 or 1: {name}&quot;)
+<span id="L93">  93</span>         s[&quot;muscle_params&quot;][i, 9] = s[&quot;cosine&quot;][i]
+<span id="L94">  94</span>     for name, values in checked(
+<span id="L95">  95</span>         &quot;activation.py&quot;,
+<span id="L96">  96</span>         [
+<span id="L97">  97</span>             &quot;activation_time_constant_s&quot;,
+<span id="L98">  98</span>             &quot;deactivation_time_constant_s&quot;,
+<span id="L99">  99</span>             &quot;switch_smoothing_width&quot;,
+<span id="L100"> 100</span>         ],
+<span id="L101"> 101</span>         names,
+<span id="L102"> 102</span>     ).items():
+<span id="L103"> 103</span>         i = names.index(name)
+<span id="L104"> 104</span>         tau = [values[&quot;activation_time_constant_s&quot;], values[&quot;deactivation_time_constant_s&quot;]]
+<span id="L105"> 105</span>         if min(tau) &lt;= 0 or values[&quot;switch_smoothing_width&quot;] &lt; 0:
+<span id="L106"> 106</span>             # Stop and explain the invalid model setting or failed calculation.
+<span id="L107"> 107</span>             raise ValueError(&quot;Invalid activation time constants/smoothing&quot;)
+<span id="L108"> 108</span>         s[&quot;time_constants&quot;][i] = tau
+<span id="L109"> 109</span>         m.actuator_dynprm[i, :3] = tau + [values[&quot;switch_smoothing_width&quot;]]
+<span id="L110"> 110</span>     for name, values in checked(
+<span id="L111"> 111</span>         &quot;bodies.py&quot;,
+<span id="L112"> 112</span>         BODY_FIELDS,
+<span id="L113"> 113</span>         [m.body(i).name for i in range(1, m.nbody)],
+<span id="L114"> 114</span>     ).items():
+<span id="L115"> 115</span>         i = m.body(name).id
+<span id="L116"> 116</span>         for field, (array, unit, meaning) in BODY_FIELDS.items():
+<span id="L117"> 117</span>             getattr(m, array)[i] = values[field]
+<span id="L118"> 118</span>         if m.body_mass[i] &lt; 0 or np.any(m.body_inertia[i] &lt; 0):
+<span id="L119"> 119</span>             # Stop and explain the invalid model setting or failed calculation.
+<span id="L120"> 120</span>             raise ValueError(f&quot;Negative mass or inertia: {name}&quot;)
+<span id="L121"> 121</span>         if np.max(m.body_inertia[i]) &gt; np.sum(m.body_inertia[i]) / 2 + 1e-12:
+<span id="L122"> 122</span>             # Stop and explain the invalid model setting or failed calculation.
+<span id="L123"> 123</span>             raise ValueError(f&quot;Inertia triangle inequality: {name}&quot;)
+<span id="L124"> 124</span>         for quat in [m.body_iquat[i], m.body_quat[i]]:
+<span id="L125"> 125</span>             if not np.isclose(np.linalg.norm(quat), 1.0, atol=1e-7):
+<span id="L126"> 126</span>                 # Stop and explain the invalid model setting or failed calculation.
+<span id="L127"> 127</span>                 raise ValueError(f&quot;Quaternion must be unit length: {name}&quot;)
+<span id="L128"> 128</span>     for name, values in checked(
+<span id="L129"> 129</span>         &quot;joints.py&quot;,
+<span id="L130"> 130</span>         JOINT_FIELDS,
+<span id="L131"> 131</span>         [m.joint(i).name for i in range(m.njnt)],
+<span id="L132"> 132</span>     ).items():
+<span id="L133"> 133</span>         i = m.joint(name).id
+<span id="L134"> 134</span>         for field, (array, unit, meaning) in JOINT_FIELDS.items():
+<span id="L135"> 135</span>             index = (
+<span id="L136"> 136</span>                 int(m.jnt_dofadr[i])
+<span id="L137"> 137</span>                 if array.startswith(&quot;dof_&quot;)
+<span id="L138"> 138</span>                 else int(m.jnt_qposadr[i]) if array == &quot;qpos_spring&quot; else i
+<span id="L139"> 139</span>             )
+<span id="L140"> 140</span>             getattr(m, array)[index] = values[field]
+<span id="L141"> 141</span>         if values[&quot;passive_stiffness&quot;] &lt; 0 or values[&quot;passive_damping&quot;] &lt; 0:
+<span id="L142"> 142</span>             # Stop and explain the invalid model setting or failed calculation.
+<span id="L143"> 143</span>             raise ValueError(&quot;Passive coefficients must be nonnegative&quot;)
+<span id="L144"> 144</span>         if not np.isclose(np.linalg.norm(m.jnt_axis[i]), 1.0, atol=1e-7):
+<span id="L145"> 145</span>             # Stop and explain the invalid model setting or failed calculation.
+<span id="L146"> 146</span>             raise ValueError(f&quot;Joint axis must be unit length: {name}&quot;)
+<span id="L147"> 147</span>         if values[&quot;armature&quot;] &lt; 0 or values[&quot;range&quot;][0] &gt; values[&quot;range&quot;][1]:
+<span id="L148"> 148</span>             # Stop and explain the invalid model setting or failed calculation.
+<span id="L149"> 149</span>             raise ValueError(f&quot;Invalid armature/limits: {name}&quot;)
+<span id="L150"> 150</span>     pads = checked(
+<span id="L151"> 151</span>         &quot;contact.py&quot;,
+<span id="L152"> 152</span>         list(CONTACT_FIELDS) + [&quot;radius_m&quot;, &quot;position_in_body_m&quot;],
+<span id="L153"> 153</span>         [m.geom(int(i)).name for i in s[&quot;pad_ids&quot;]],
+<span id="L154"> 154</span>     )
+<span id="L155"> 155</span>     for row, geom in enumerate(s[&quot;pad_ids&quot;]):
+<span id="L156"> 156</span>         values = pads[m.geom(int(geom)).name]
+<span id="L157"> 157</span>         m.geom_size[geom, 0] = values[&quot;radius_m&quot;]
+<span id="L158"> 158</span>         m.geom_pos[geom] = values[&quot;position_in_body_m&quot;]
+<span id="L159"> 159</span>         for field, (column, unit, meaning) in CONTACT_FIELDS.items():
+<span id="L160"> 160</span>             s[&quot;contact_parameters&quot;][row, column] = values[field]
+<span id="L161"> 161</span>         if (
+<span id="L162"> 162</span>             m.geom_size[geom, 0] &lt;= 0
+<span id="L163"> 163</span>             or np.any(s[&quot;contact_parameters&quot;][row] &lt; 0)
+<span id="L164"> 164</span>             or min(s[&quot;contact_parameters&quot;][row, [0, 2]]) &lt;= 0
+<span id="L165"> 165</span>         ):
+<span id="L166"> 166</span>             # Stop and explain the invalid model setting or failed calculation.
+<span id="L167"> 167</span>             raise ValueError(&quot;Invalid pad geometry/material value&quot;)
+<span id="L168"> 168</span>     dynamic = {int(meta[5]) for meta in s[&quot;routing_meta&quot;]}
+<span id="L169"> 169</span>     for name, values in checked(
+<span id="L170"> 170</span>         &quot;attachments.py&quot;,
+<span id="L171"> 171</span>         [&quot;position_in_body_m&quot;, &quot;orientation_in_body_wxyz&quot;],
+<span id="L172"> 172</span>         [m.site(i).name for i in range(m.nsite) if i not in dynamic],
+<span id="L173"> 173</span>     ).items():
+<span id="L174"> 174</span>         if np.shape(values[&quot;position_in_body_m&quot;]) != (3,) or np.shape(
+<span id="L175"> 175</span>             values[&quot;orientation_in_body_wxyz&quot;]
+<span id="L176"> 176</span>         ) != (4,):
+<span id="L177"> 177</span>             # Stop and explain the invalid model setting or failed calculation.
+<span id="L178"> 178</span>             raise ValueError(f&quot;attachments.py/{name}: expected xyz and wxyz vectors&quot;)
+<span id="L179"> 179</span>         i = m.site(name).id
+<span id="L180"> 180</span>         if not np.array_equal(
+<span id="L181"> 181</span>             m.site_pos[i],
+<span id="L182"> 182</span>             values[&quot;position_in_body_m&quot;],
+<span id="L183"> 183</span>         ) or not np.array_equal(m.site_quat[i], values[&quot;orientation_in_body_wxyz&quot;]):
+<span id="L184"> 184</span>             # The compiled XML can mark a site as coincident with its body.
+<span id="L185"> 185</span>             # After an edit, that shortcut would ignore the new coordinates.
+<span id="L186"> 186</span>             m.site_sameframe[i] = 0
+<span id="L187"> 187</span>         m.site_pos[i] = values[&quot;position_in_body_m&quot;]
+<span id="L188"> 188</span>         m.site_quat[i] = values[&quot;orientation_in_body_wxyz&quot;]
+<span id="L189"> 189</span>         if not np.isclose(np.linalg.norm(m.site_quat[i]), 1.0, atol=1e-7):
+<span id="L190"> 190</span>             # Stop and explain the invalid model setting or failed calculation.
+<span id="L191"> 191</span>             raise ValueError(f&quot;Invalid site quaternion: {name}&quot;)
+<span id="L192"> 192</span>     from .apply_wrapping_parameters import apply_wrapping_parameters
+<span id="L193"> 193</span> 
+<span id="L194"> 194</span>     apply_wrapping_parameters(s, folder / &quot;wrapping.py&quot;)
+<span id="L195"> 195</span>     route_fields = [
+<span id="L196"> 196</span>         &quot;origin_radius_m&quot;,
+<span id="L197"> 197</span>         &quot;insertion_radius_m&quot;,
+<span id="L198"> 198</span>         &quot;origin_angle_rad&quot;,
+<span id="L199"> 199</span>         &quot;insertion_angle_rad&quot;,
+<span id="L200"> 200</span>         &quot;proximal_wrap_radius_m&quot;,
+<span id="L201"> 201</span>         &quot;proximal_wrap_sign&quot;,
+<span id="L202"> 202</span>         &quot;proximal_joint_sign&quot;,
+<span id="L203"> 203</span>         &quot;distal_wrap_radius_m&quot;,
+<span id="L204"> 204</span>         &quot;distal_wrap_sign&quot;,
+<span id="L205"> 205</span>         &quot;distal_joint_sign&quot;,
+<span id="L206"> 206</span>         &quot;joint_spacing_m&quot;,
+<span id="L207"> 207</span>     ]
+<span id="L208"> 208</span>     routes = checked(
+<span id="L209"> 209</span>         &quot;routing.py&quot;,
+<span id="L210"> 210</span>         route_fields,
+<span id="L211"> 211</span>         [m.site(int(meta[5])).name for meta in s[&quot;routing_meta&quot;]],
+<span id="L212"> 212</span>     )
+<span id="L213"> 213</span>     for row, meta in enumerate(s[&quot;routing_meta&quot;]):
+<span id="L214"> 214</span>         name = m.site(int(meta[5])).name
+<span id="L215"> 215</span>         values = routes[name]
+<span id="L216"> 216</span>         s[&quot;routing_geom&quot;][row] = [
+<span id="L217"> 217</span>             values[key]
+<span id="L218"> 218</span>             for key in [
+<span id="L219"> 219</span>                 &quot;origin_radius_m&quot;,
+<span id="L220"> 220</span>                 &quot;insertion_radius_m&quot;,
+<span id="L221"> 221</span>                 &quot;origin_angle_rad&quot;,
+<span id="L222"> 222</span>                 &quot;insertion_angle_rad&quot;,
+<span id="L223"> 223</span>                 &quot;proximal_wrap_radius_m&quot;,
+<span id="L224"> 224</span>                 &quot;proximal_wrap_sign&quot;,
+<span id="L225"> 225</span>                 &quot;proximal_joint_sign&quot;,
+<span id="L226"> 226</span>                 &quot;distal_wrap_radius_m&quot;,
+<span id="L227"> 227</span>                 &quot;distal_wrap_sign&quot;,
+<span id="L228"> 228</span>                 &quot;distal_joint_sign&quot;,
+<span id="L229"> 229</span>                 &quot;joint_spacing_m&quot;,
+<span id="L230"> 230</span>             ]
+<span id="L231"> 231</span>         ]
+<span id="L232"> 232</span>     environment = checked(&quot;environment.py&quot;)
+<span id="L233"> 233</span>     if set(environment) - {
+<span id="L234"> 234</span>         &quot;gravity_m_s2&quot;,
+<span id="L235"> 235</span>         &quot;solver_iterations&quot;,
+<span id="L236"> 236</span>         &quot;solver_tolerance&quot;,
+<span id="L237"> 237</span>         &quot;integrator&quot;,
+<span id="L238"> 238</span>     }:
+<span id="L239"> 239</span>         # Stop and explain the invalid model setting or failed calculation.
+<span id="L240"> 240</span>         raise ValueError(&quot;Unknown environment parameter&quot;)
+<span id="L241"> 241</span>     m.opt.gravity[:] = environment[&quot;gravity_m_s2&quot;]
+<span id="L242"> 242</span>     m.opt.iterations = int(environment[&quot;solver_iterations&quot;])
+<span id="L243"> 243</span>     m.opt.tolerance = float(environment[&quot;solver_tolerance&quot;])
+<span id="L244"> 244</span>     # Read the configured native integration scheme; old parameter snapshots may omit it.
+<span id="L245"> 245</span>     integrator = environment.get(&quot;integrator&quot;, int(m.opt.integrator))
+<span id="L246"> 246</span>     # Accept only the four named engine schemes listed in environment.py.
+<span id="L247"> 247</span>     if integrator not in (0, 1, 2, 3):
+<span id="L248"> 248</span>         # Stop and explain the invalid model setting or failed calculation.
+<span id="L249"> 249</span>         raise ValueError(&quot;Invalid MuJoCo integration scheme&quot;)
+<span id="L250"> 250</span>     # Apply the choice before any dynamics steps are calculated.
+<span id="L251"> 251</span>     m.opt.integrator = int(integrator)
+<span id="L252"> 252</span>     if m.opt.iterations &lt; 1 or m.opt.tolerance &lt; 0:
+<span id="L253"> 253</span>         # Stop and explain the invalid model setting or failed calculation.
+<span id="L254"> 254</span>         raise ValueError(&quot;Invalid dynamics solver parameters&quot;)
+<span id="L255"> 255</span>     # MuJoCo recomputes all derived inertial constants immediately after this
+<span id="L256"> 256</span>     # function returns. Initial states and negative-time preparation follow.
+<span id="L257"> 257</span>     s[&quot;parameter_bundle_applied&quot;] = str(folder)
+</pre></main></body></html>

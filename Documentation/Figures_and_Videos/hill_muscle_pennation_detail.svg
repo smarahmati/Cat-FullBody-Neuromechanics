@@ -1,0 +1,145 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1320" height="810" viewBox="40 340 1320 810" role="img" aria-labelledby="title desc">
+<title id="title">From excitation to force: the implemented elastic Hill-type muscle</title>
+<desc id="desc">Excitation drives activation dynamics. Active contractile force, passive fiber tension included in all four limbs and viscous fiber damping act in parallel, with an elastic tendon in series. Current skeletal geometry determines total muscle-tendon length. The parallel fiber elements are drawn inclined to the tendon axis, with their constant pennation angle alpha marked at the junction. Pennation projects fiber length. All force contributions use tendon-projected maximum isometric force. This is a schematic of the project implementation, not an anatomical scale drawing.</desc>
+<defs>
+ <marker id="arrow" markerWidth="9" markerHeight="9" refX="8" refY="4.5" orient="auto-start-reverse"><path d="M0 0 L9 4.5 L0 9Z" fill="#315260"/></marker>
+ <marker id="redArrow" markerWidth="9" markerHeight="9" refX="8" refY="4.5" orient="auto"><path d="M0 0 L9 4.5 L0 9Z" fill="#bc4054"/></marker>
+ <marker id="tealArrow" markerWidth="9" markerHeight="9" refX="8" refY="4.5" orient="auto"><path d="M0 0 L9 4.5 L0 9Z" fill="#078793"/></marker>
+ <style>
+  text{font-family:Arial,Helvetica,sans-serif;fill:#153847} .title{font-size:32px;font-weight:700} .sub{font-size:18px;fill:#4d6874}
+  .head{font-size:22px;font-weight:700}.label{font-size:19px}.small{font-size:17px}.tiny{font-size:15px}.math{font-size:23px;font-family:Georgia,'Times New Roman',serif}
+  .wire{stroke:#315260;stroke-width:4;fill:none}.dim{stroke:#647d88;stroke-width:1.6;fill:none;marker-start:url(#arrow);marker-end:url(#arrow)}
+ </style>
+</defs>
+<rect width="1400" height="1880" rx="18" fill="#f4f8fa"/>
+<text x="60" y="60" class="title">Muscle: excitation to tendon force</text>
+<text x="60" y="95" class="sub">Applied four-limb model · passive fiber force included · elastic tendon · constant pennation</text>
+
+<!-- Neural input and activation are separate from the mechanical state. -->
+<rect x="60" y="130" width="355" height="165" rx="14" fill="#e9f2fb" stroke="#87a9c8"/>
+<text x="85" y="166" class="head">1  Prescribed excitation</text>
+<text x="85" y="204" class="math">u(t) ∈ [0, 1]</text>
+<text x="85" y="238" class="small">Fixed, fitted motor-input waveform</text>
+<text x="85" y="266" class="small">Not muscle force or activation</text>
+<path d="M420 211H478" class="wire" marker-end="url(#arrow)"/>
+<rect x="490" y="130" width="430" height="165" rx="14" fill="#fff1f1" stroke="#d5a1a8"/>
+<text x="515" y="166" class="head">2  Activation dynamics</text>
+<text x="515" y="204" class="math">da/dt = [u − a] / τ(a, u)</text>
+<text x="515" y="238" class="small">τ<tspan baseline-shift="sub" font-size="72%">act</tspan>: activation time constant</text>
+<text x="515" y="266" class="small">τ<tspan baseline-shift="sub" font-size="72%">deact</tspan>: deactivation time constant</text>
+<rect x="980" y="130" width="360" height="165" rx="14" fill="#e5f5f5" stroke="#82b6bc"/>
+<text x="1005" y="166" class="head">Current skeletal geometry</text>
+<text x="1005" y="204" class="math">L<tspan baseline-shift="sub" font-size="72%">MT</tspan>(q) = L<tspan baseline-shift="sub" font-size="72%">path</tspan>(q) + ΔL</text>
+<text x="1005" y="238" class="small">Origin, insertion, via/wrap paths</text>
+<text x="1005" y="266" class="small">Mechanical state; no reflex controller</text>
+
+<!-- Mechanical equivalent: three parallel contributions in series with tendon. -->
+<rect x="60" y="350" width="1280" height="790" rx="16" fill="white" stroke="#c7dbe3"/>
+<text x="85" y="390" class="head">3  Muscle–tendon mechanics: all limbs</text>
+<text x="85" y="420" class="small">Parallel fiber contributions inclined to the tendon axis</text>
+<path d="M700 297V446L645 504" stroke="#bc4054" stroke-width="3" fill="none" stroke-dasharray="7 6" marker-end="url(#redArrow)"/>
+<rect x="703" y="312" width="170" height="28" fill="#f4f8fa"/>
+<text x="710" y="332" class="small" style="fill:#a93145">activation a(t)</text>
+<path d="M1160 298V343" stroke="#078793" stroke-width="3" marker-end="url(#tealArrow)"/>
+
+<!-- Inclined equivalent fiber network: all parallel elements share the fiber direction. -->
+<g id="inclined-fiber-elements" transform="translate(0 120) rotate(18 820 620)">
+<rect x="100" y="575" width="28" height="90" rx="9" fill="#c9d5da" stroke="#647d88"/>
+<path d="M128 620H300M300 495V750M820 495V750" class="wire"/>
+<text x="86" y="704" class="small">Origin</text>
+<text x="86" y="728" class="tiny">moves with bone</text>
+
+<path d="M300 495H415M715 495H820" class="wire"/>
+<rect x="415" y="455" width="300" height="80" rx="35" fill="#fce9ed" stroke="#bc4054" stroke-width="3"/>
+<text x="565" y="485" text-anchor="middle" class="label" style="font-weight:700;fill:#a52c42">CE · active contractile element</text>
+<text x="565" y="516" text-anchor="middle" class="math">F<tspan baseline-shift="sub" font-size="72%">0</tspan> a f<tspan baseline-shift="sub" font-size="72%">L</tspan>(λ) f<tspan baseline-shift="sub" font-size="72%">V</tspan>(ν)</text>
+
+<text x="350" y="578" class="label" style="font-weight:700;fill:#26744f">PE · passive fiber tissue</text>
+<path d="M300 620H402L416 604L438 636L460 604L482 636L504 604L526 636L540 620H820" stroke="#34815d" stroke-width="4" fill="none"/>
+<rect x="570" y="601" width="200" height="38" fill="white"/>
+<text x="588" y="628" class="math" style="fill:#26744f">F<tspan baseline-shift="sub" font-size="72%">0</tspan> f<tspan baseline-shift="sub" font-size="72%">P</tspan>(λ)</text>
+
+<text x="350" y="713" class="label" style="font-weight:700;fill:#6d54a1">D · viscous fiber damping</text>
+<path d="M300 750H473M473 730V770M448 723H522V777H448M522 750H820" stroke="#795ca9" stroke-width="4" fill="none"/>
+<rect x="570" y="733" width="200" height="37" fill="white"/>
+<text x="588" y="759" class="math" style="fill:#6d54a1">F<tspan baseline-shift="sub" font-size="72%">0</tspan> β ν</text>
+
+</g>
+<path d="M820 740H920" class="wire"/>
+
+<g id="main-series-tendon" transform="translate(0 120)">
+<text x="1120" y="507" text-anchor="middle" class="label" style="font-weight:700;fill:#087f8a">SE · elastic tendon</text>
+<text x="1120" y="540" text-anchor="middle" class="small">stores and releases elastic energy</text>
+<path d="M920 620H956L970 596L995 644L1020 596L1045 644L1070 596L1095 644L1120 596L1134 620H1248" stroke="#078793" stroke-width="4" fill="none"/>
+<rect x="1248" y="575" width="28" height="90" rx="9" fill="#c9d5da" stroke="#647d88"/>
+<path d="M1278 620H1320" stroke="#078793" stroke-width="4" marker-end="url(#tealArrow)"/>
+<text x="1285" y="570" text-anchor="middle" class="math">F<tspan baseline-shift="sub" font-size="72%">T</tspan></text>
+<text x="1230" y="704" class="small">Insertion</text>
+<text x="1120" y="671" text-anchor="middle" class="math">F<tspan baseline-shift="sub" font-size="72%">T</tspan> = F<tspan baseline-shift="sub" font-size="72%">0</tspan> f<tspan baseline-shift="sub" font-size="72%">T</tspan>(ε<tspan baseline-shift="sub" font-size="72%">T</tspan>)</text>
+<text x="1070" y="719" text-anchor="middle" class="small">l<tspan baseline-shift="sub" font-size="72%">s</tspan>: slack length  ·  ε<tspan baseline-shift="sub" font-size="72%">0</tspan>: strain at F<tspan baseline-shift="sub" font-size="72%">0</tspan></text>
+<text x="1070" y="748" text-anchor="middle" class="small">k<tspan baseline-shift="sub" font-size="72%">toe</tspan>: nonlinear toe-region curvature</text>
+
+</g>
+<!-- Alpha is measured between the fiber direction and the horizontal tendon axis. -->
+<g id="main-pennation">
+ <path d="M820 740H630" stroke="#8b9da6" stroke-width="2" stroke-dasharray="7 6"/>
+ <path d="M710.628 704.463L772.447 724.549" stroke="#bc4054" stroke-width="2" stroke-dasharray="5 4" fill="none"/>
+ <path d="M705 740A115 115 0 0 1 710.628 704.463" stroke="#c58b22" stroke-width="4" fill="none"/>
+ <text x="672" y="728" class="math" style="font-size:30px;fill:#a76f09">α</text>
+ <circle cx="820" cy="740" r="5" fill="#315260"/>
+ <text x="840" y="780" class="tiny" style="fill:#657b87">tendon axis →</text>
+ <text x="350" y="943" class="label" style="font-weight:700;fill:#a76f09">α: pennation angle between the fiber direction and tendon axis</text>
+ <text x="350" y="975" class="small">Constant per muscle in this model; drawing angle is illustrative.</text>
+ <text x="350" y="1005" class="small">Passive fiber tissue is included in all 104 muscle channels.</text>
+</g>
+
+<g transform="translate(0 220)">
+<path d="M140 810H1240" class="dim"/>
+<rect x="500" y="793" width="380" height="34" fill="white"/>
+<text x="690" y="818" text-anchor="middle" class="math">Total length: L<tspan baseline-shift="sub" font-size="72%">MT</tspan> = l<tspan baseline-shift="sub" font-size="72%">f</tspan> cos α + l<tspan baseline-shift="sub" font-size="72%">T</tspan></text>
+<text x="85" y="865" class="math">Equilibrium: F<tspan baseline-shift="sub" font-size="72%">T</tspan> = F<tspan baseline-shift="sub" font-size="72%">0</tspan> [a f<tspan baseline-shift="sub" font-size="72%">L</tspan>(λ) f<tspan baseline-shift="sub" font-size="72%">V</tspan>(ν) + f<tspan baseline-shift="sub" font-size="72%">P</tspan>(λ) + βν] = F<tspan baseline-shift="sub" font-size="72%">0</tspan> f<tspan baseline-shift="sub" font-size="72%">T</tspan>(ε<tspan baseline-shift="sub" font-size="72%">T</tspan>)</text>
+<text x="85" y="898" class="small">F<tspan baseline-shift="sub" font-size="72%">0</tspan> is already tendon-projected maximum isometric force in this code. Do not multiply force by cos α again.</text>
+
+</g>
+<!-- Expanded explanation complements the angle shown directly in the main network. -->
+<g id="lower-explanations" transform="translate(0 220)">
+<rect x="60" y="955" width="620" height="405" rx="14" fill="white" stroke="#c7dbe3"/>
+<text x="85" y="996" class="head">Pennation and length partition</text>
+<path d="M135 1190L480 1052" stroke="#bc4054" stroke-width="7"/>
+<path d="M135 1190H575" stroke="#078793" stroke-width="3"/>
+<path d="M480 1052V1190" stroke="#9aaeb6" stroke-width="2" stroke-dasharray="6 6"/>
+<path d="M211 1190A76 76 0 0 0 205.5 1161.8" stroke="#c58b22" stroke-width="3" fill="none"/>
+<text x="228" y="1174" class="math" style="fill:#a76f09">α</text>
+<text x="296" y="1092" class="math" transform="rotate(-21.8 296 1092)">fiber length l<tspan baseline-shift="sub" font-size="72%">f</tspan></text>
+<text x="485" y="1225" class="small">tendon axis</text>
+<path d="M140 1238H475" class="dim"/>
+<text x="294" y="1270" text-anchor="middle" class="math">projected fiber length = l<tspan baseline-shift="sub" font-size="72%">f</tspan> cos α</text>
+<text x="85" y="1310" class="small">α is held constant in this implementation.</text>
+<text x="85" y="1338" class="small">The config stores cos α, not the angle in degrees.</text>
+
+<rect x="710" y="955" width="630" height="405" rx="14" fill="#eef5f8" stroke="#c7dbe3"/>
+<text x="735" y="996" class="head">Parameters that control the response</text>
+<text x="735" y="1041" class="label">Activation: τ<tspan baseline-shift="sub" font-size="72%">act</tspan>, τ<tspan baseline-shift="sub" font-size="72%">deact</tspan>; optional switch smoothing</text>
+<text x="735" y="1085" class="label">Active CE: F<tspan baseline-shift="sub" font-size="72%">0</tspan>, l<tspan baseline-shift="sub" font-size="72%">opt</tspan>, v<tspan baseline-shift="sub" font-size="72%">max</tspan>; f<tspan baseline-shift="sub" font-size="72%">L</tspan> and f<tspan baseline-shift="sub" font-size="72%">V</tspan> curve parameters</text>
+<text x="735" y="1129" class="label">Passive PE: exponential scale and exponent (included)</text>
+<text x="735" y="1173" class="label">Damping: β  ·  Series tendon: l<tspan baseline-shift="sub" font-size="72%">s</tspan>, ε<tspan baseline-shift="sub" font-size="72%">0</tspan>, k<tspan baseline-shift="sub" font-size="72%">toe</tspan></text>
+<text x="735" y="1217" class="label">Geometry: α, attachments, path routing and ΔL</text>
+<text x="735" y="1261" class="label">States: a(t), l<tspan baseline-shift="sub" font-size="72%">f</tspan>(t); initial values a(0), l<tspan baseline-shift="sub" font-size="72%">f</tspan>(0)</text>
+<text x="735" y="1305" class="small">λ = l<tspan baseline-shift="sub" font-size="72%">f</tspan> / l<tspan baseline-shift="sub" font-size="72%">opt</tspan>  ·  ν = (dlf/dt) / (l<tspan baseline-shift="sub" font-size="72%">opt</tspan> v<tspan baseline-shift="sub" font-size="72%">max</tspan>)</text>
+<text x="735" y="1333" class="small">ε<tspan baseline-shift="sub" font-size="72%">T</tspan> = (l<tspan baseline-shift="sub" font-size="72%">T</tspan> − l<tspan baseline-shift="sub" font-size="72%">s</tspan>) / l<tspan baseline-shift="sub" font-size="72%">s</tspan>  ·  F<tspan baseline-shift="sub" font-size="72%">T</tspan> is the computed tension (N).</text>
+
+<rect x="60" y="1380" width="1280" height="180" rx="14" fill="white" stroke="#c7dbe3"/>
+<text x="85" y="1411" class="head">Read the symbols</text>
+<text x="85" y="1444" class="small">l<tspan baseline-shift="sub" font-size="72%">opt</tspan>: optimal fiber length (m)</text>
+<text x="85" y="1474" class="small">v<tspan baseline-shift="sub" font-size="72%">max</tspan>: maximum shortening speed (optimal fiber lengths/s)</text>
+<text x="85" y="1504" class="small">l<tspan baseline-shift="sub" font-size="72%">f</tspan>, l<tspan baseline-shift="sub" font-size="72%">T</tspan>: fiber and tendon length (m); L<tspan baseline-shift="sub" font-size="72%">MT</tspan>: total MT length (m)</text>
+<text x="85" y="1534" class="small">q: skeletal configuration; ΔL: fixed path-length offset (m)</text>
+<text x="735" y="1444" class="small">f<tspan baseline-shift="sub" font-size="72%">L</tspan>, f<tspan baseline-shift="sub" font-size="72%">V</tspan>: normalized active force–length / velocity factors</text>
+<text x="735" y="1474" class="small">Passive fiber force is included; tendon elasticity is separate.</text>
+<text x="735" y="1504" class="small">β: normalized damping coefficient; α: pennation angle</text>
+<text x="735" y="1534" class="small">t: time (s); a: activation (0–1); u: excitation (0–1)</text>
+
+<text x="60" y="1600" class="small">All limbs include passive fiber force: Prilutsky (2016), Table 10.3; Rahmati et al. (2025), Table 3.</text>
+<text x="60" y="1629" class="small">Exact per-muscle values, units, complete equations, references and configuration links are in the accompanying muscle guide.</text>
+</g>
+</svg>

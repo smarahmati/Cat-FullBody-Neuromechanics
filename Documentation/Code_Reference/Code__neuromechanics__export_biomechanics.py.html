@@ -1,0 +1,123 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Export readable time series and mechanics derived from SAVED forward states.</title><link rel="stylesheet" href="../style.css"></head><body><!-- generated folder guide --><header><div class="tag">Cat · Full-body neuromechanics</div><h1>Export readable time series and mechanics derived from SAVED forward states.</h1><nav><a href="../../START_HERE.html">Start here</a> · <a href="../project_structure.html">Find a file</a></nav></header><main><p><a href="../../Code/neuromechanics/export_biomechanics.py">Code/neuromechanics/export_biomechanics.py</a></p><pre style="overflow:auto;white-space:pre"><span id="L1">   1</span> &quot;&quot;&quot;Export readable time series and mechanics derived from SAVED forward states.
+<span id="L2">   2</span> 
+<span id="L3">   3</span> This postprocessing does not change the simulated trajectory. CSV files use
+<span id="L4">   4</span> seconds and SI units; anatomical joint angles are also exported in degrees.
+<span id="L5">   5</span> Dense muscle-by-coordinate arrays are compressed in NPZ to keep files small.
+<span id="L6">   6</span> &quot;&quot;&quot;
+<span id="L7">   7</span> import json
+<span id="L8">   8</span> from pathlib import Path
+<span id="L9">   9</span> import numpy as np
+<span id="L10">  10</span> import mujoco as mj
+<span id="L11">  11</span> from .update_muscle_paths import update_muscle_paths
+<span id="L12">  12</span> from .muscle_moment_arms import muscle_moment_arms
+<span id="L13">  13</span> from .muscle_joint_moments import muscle_joint_moments
+<span id="L14">  14</span> from .muscle_force_length_velocity import muscle_force_length_velocity
+<span id="L15">  15</span> 
+<span id="L16">  16</span> 
+<span id="L17">  17</span> def save_table(path, times, values, columns):
+<span id="L18">  18</span>     &quot;&quot;&quot;Write a CSV with explicit column names and a time_s first column.&quot;&quot;&quot;
+<span id="L19">  19</span>     path = Path(path)
+<span id="L20">  20</span>     path.parent.mkdir(parents=True, exist_ok=True)
+<span id="L21">  21</span>     matrix = np.asarray(values).reshape(len(times), -1)
+<span id="L22">  22</span>     np.savetxt(path, np.column_stack((times, matrix)), delimiter=&#x27;,&#x27;,
+<span id="L23">  23</span>                header=&#x27;,&#x27;.join([&#x27;time_s&#x27;] + list(columns)), comments=&#x27;&#x27;, fmt=&#x27;%.10g&#x27;)
+<span id="L24">  24</span> 
+<span id="L25">  25</span> 
+<span id="L26">  26</span> def export_biomechanics(result, state, folder):
+<span id="L27">  27</span>     &quot;&quot;&quot;Export input, activation, fiber/tendon, motion, force and moment folders.&quot;&quot;&quot;
+<span id="L28">  28</span>     folder = Path(folder)
+<span id="L29">  29</span>     times = result[&#x27;time&#x27;]
+<span id="L30">  30</span>     muscles = [str(n) for n in result[&#x27;names&#x27;]]
+<span id="L31">  31</span>     coordinates = [str(n) for n in result[&#x27;coordinate_names&#x27;]]
+<span id="L32">  32</span>     paths = {
+<span id="L33">  33</span>         &#x27;excitation&#x27;: (&#x27;Muscle_Excitation/excitation_0_to_1.csv&#x27;, &#x27;&#x27;),
+<span id="L34">  34</span>         &#x27;activation&#x27;: (&#x27;Muscle_Activation/activation_0_to_1.csv&#x27;, &#x27;&#x27;),
+<span id="L35">  35</span>         &#x27;force&#x27;: (&#x27;Muscle_Forces/tendon_tension_N.csv&#x27;, &#x27;_N&#x27;),
+<span id="L36">  36</span>         &#x27;fiber_length&#x27;: (&#x27;Muscle_Tendon_States/fiber_length_m.csv&#x27;, &#x27;_m&#x27;),
+<span id="L37">  37</span>         &#x27;fiber_velocity&#x27;: (&#x27;Muscle_Tendon_States/fiber_velocity_m_s.csv&#x27;, &#x27;_m_s&#x27;),
+<span id="L38">  38</span>         &#x27;mtu_length&#x27;: (&#x27;Muscle_Tendon_States/whole_MTU_length_m.csv&#x27;, &#x27;_m&#x27;),
+<span id="L39">  39</span>         &#x27;tendon_length&#x27;: (&#x27;Muscle_Tendon_States/elastic_tendon_length_m.csv&#x27;, &#x27;_m&#x27;),
+<span id="L40">  40</span>     }
+<span id="L41">  41</span>     for key, (name, unit) in paths.items():
+<span id="L42">  42</span>         save_table(folder/name, times, result[key], [m+unit for m in muscles])
+<span id="L43">  43</span>     # Evaluate the parallel elastic contribution at each saved fiber length.
+<span id="L44">  44</span>     # F0 is already tendon-projected in this model: no extra cos(alpha) factor.
+<span id="L45">  45</span>     # This component is included in the fiber/tendon equilibrium during solving;
+<span id="L46">  46</span>     # it is NOT an additional external force applied a second time afterwards.
+<span id="L47">  47</span>     parameters = state[&#x27;muscle_params&#x27;]
+<span id="L48">  48</span>     normalized_length = result[&#x27;fiber_length&#x27;] / result[&#x27;optimal_fiber_length_m&#x27;]
+<span id="L49">  49</span>     passive_force = np.zeros_like(normalized_length)
+<span id="L50">  50</span>     for channel in range(len(muscles)):
+<span id="L51">  51</span>         for sample in range(len(times)):
+<span id="L52">  52</span>             passive_factor = muscle_force_length_velocity(
+<span id="L53">  53</span>                 normalized_length[sample, channel], 0.0, parameters[channel]
+<span id="L54">  54</span>             )[2]
+<span id="L55">  55</span>             passive_force[sample, channel] = parameters[channel, 2] * passive_factor
+<span id="L56">  56</span>     save_table(folder/&#x27;Muscle_Forces/passive_fiber_tendon_component_N.csv&#x27;,
+<span id="L57">  57</span>                times, passive_force, [m+&#x27;_N&#x27; for m in muscles])
+<span id="L58">  58</span>     save_table(folder/&#x27;Muscle_Tendon_States/normalized_fiber_length.csv&#x27;,
+<span id="L59">  59</span>                times, normalized_length, muscles)
+<span id="L60">  60</span>     passive_audit = {
+<span id="L61">  61</span>         &#x27;law&#x27;: &#x27;Prilutsky 2016 Table 10.3 / Rahmati 2025 Table 3, tension-only adaptation&#x27;,
+<span id="L62">  62</span>         &#x27;enabled_channels&#x27;: int(np.count_nonzero(parameters[:, 13] &gt; 0)),
+<span id="L63">  63</span>         &#x27;total_channels&#x27;: len(muscles),
+<span id="L64">  64</span>         &#x27;channels&#x27;: {name: {
+<span id="L65">  65</span>             &#x27;enabled&#x27;: bool(parameters[i, 13] &gt; 0),
+<span id="L66">  66</span>             &#x27;maximum_normalized_fiber_length&#x27;: float(normalized_length[:, i].max()),
+<span id="L67">  67</span>             &#x27;peak_passive_tendon_component_N&#x27;: float(passive_force[:, i].max()),
+<span id="L68">  68</span>         } for i, name in enumerate(muscles)},
+<span id="L69">  69</span>     }
+<span id="L70">  70</span>     (folder/&#x27;passive_fiber_force_summary.json&#x27;).write_text(json.dumps(passive_audit, indent=2))
+<span id="L71">  71</span>     strain = result[&#x27;tendon_length&#x27;]/state[&#x27;slack&#x27;] - 1
+<span id="L72">  72</span>     save_table(folder/&#x27;Muscle_Tendon_States/tendon_strain.csv&#x27;, times, strain, muscles)
+<span id="L73">  73</span>     save_table(folder/&#x27;Joint_Kinematics/generalized_positions.csv&#x27;, times, result[&#x27;qpos&#x27;], coordinates)
+<span id="L74">  74</span>     save_table(folder/&#x27;Joint_Kinematics/generalized_velocities.csv&#x27;, times, result[&#x27;qvel&#x27;], coordinates)
+<span id="L75">  75</span>     # Finite differences of saved velocities are clearly labelled; they are not
+<span id="L76">  76</span>     # presented as exact integration-step accelerations.
+<span id="L77">  77</span>     acceleration = np.gradient(result[&#x27;qvel&#x27;], times, axis=0) if len(times)&gt;1 else np.zeros_like(result[&#x27;qvel&#x27;])
+<span id="L78">  78</span>     save_table(folder/&#x27;Joint_Kinematics/acceleration_from_saved_velocities.csv&#x27;, times, acceleration, coordinates)
+<span id="L79">  79</span>     joint_names = [side+&#x27;_&#x27;+j for side, joints in [(&#x27;LH&#x27;,[&#x27;hip&#x27;,&#x27;knee&#x27;,&#x27;ankle&#x27;,&#x27;MTP&#x27;]),(&#x27;RH&#x27;,[&#x27;hip&#x27;,&#x27;knee&#x27;,&#x27;ankle&#x27;,&#x27;MTP&#x27;]),(&#x27;LF&#x27;,[&#x27;shoulder&#x27;,&#x27;elbow&#x27;,&#x27;wrist&#x27;,&#x27;MCP&#x27;]),(&#x27;RF&#x27;,[&#x27;shoulder&#x27;,&#x27;elbow&#x27;,&#x27;wrist&#x27;,&#x27;MCP&#x27;])] for j in joints]
+<span id="L80">  80</span>     anatomical = np.empty_like(result[&#x27;joint_q&#x27;])
+<span id="L81">  81</span>     for side in range(4):
+<span id="L82">  82</span>         signs = np.array([-1,1,-1,-1]) if side&lt;2 else np.array([1,-1,-1,-1])
+<span id="L83">  83</span>         offset = np.array([0,np.pi,np.pi,np.pi]) if side&lt;2 else np.full(4,np.pi)
+<span id="L84">  84</span>         anatomical[:,side] = np.rad2deg(offset+signs*result[&#x27;joint_q&#x27;][:,side])
+<span id="L85">  85</span>     save_table(folder/&#x27;Joint_Kinematics/anatomical_joint_angles_deg.csv&#x27;,times,anatomical,joint_names)
+<span id="L86">  86</span>     save_table(folder/&#x27;Ground_Reaction_Forces/raw_paw_forces_N.csv&#x27;,times,result[&#x27;grf&#x27;],[s+&#x27;_&#x27;+axis+&#x27;_N&#x27; for s in [&#x27;LH&#x27;,&#x27;RH&#x27;,&#x27;LF&#x27;,&#x27;RF&#x27;] for axis in [&#x27;Fx&#x27;,&#x27;Fy&#x27;,&#x27;Fz&#x27;]])
+<span id="L87">  87</span> 
+<span id="L88">  88</span>     # Reconstruct geometry on the completed state workspace. No stepping,
+<span id="L89">  89</span>     # contact force recalculation or motor adaptation occurs here.
+<span id="L90">  90</span>     model, data = state[&#x27;model&#x27;], state[&#x27;data&#x27;]
+<span id="L91">  91</span>     arms = np.empty((len(times),model.nu,model.nv))
+<span id="L92">  92</span>     moments = np.empty_like(arms)
+<span id="L93">  93</span>     paw_positions = np.empty((len(times),4,3))
+<span id="L94">  94</span>     body_positions = np.empty((len(times),model.nbody,3))
+<span id="L95">  95</span>     for row in range(len(times)):
+<span id="L96">  96</span>         data.qpos[:] = result[&#x27;qpos&#x27;][row]
+<span id="L97">  97</span>         data.qvel[:] = result[&#x27;qvel&#x27;][row]
+<span id="L98">  98</span>         update_muscle_paths(state)
+<span id="L99">  99</span>         mj.mj_fwdPosition(model,data)
+<span id="L100"> 100</span>         arms[row] = muscle_moment_arms(model,data)
+<span id="L101"> 101</span>         moments[row], _ = muscle_joint_moments(arms[row],result[&#x27;force&#x27;][row])
+<span id="L102"> 102</span>         paw_positions[row] = data.site_xpos[state[&#x27;paw_ids&#x27;]]
+<span id="L103"> 103</span>         body_positions[row] = data.xipos
+<span id="L104"> 104</span>     for directory in [&#x27;Moment_Arms&#x27;,&#x27;Muscle_Joint_Moments&#x27;,&#x27;Body_Motion&#x27;]:
+<span id="L105"> 105</span>         (folder/directory).mkdir(exist_ok=True)
+<span id="L106"> 106</span>     np.savez_compressed(folder/&#x27;Moment_Arms/signed_transmission_moment_arms.npz&#x27;,time=times,values=arms,muscle_names=muscles,coordinate_names=coordinates)
+<span id="L107"> 107</span>     np.savez_compressed(folder/&#x27;Muscle_Joint_Moments/individual_contributions.npz&#x27;,time=times,values=moments,muscle_names=muscles,coordinate_names=coordinates)
+<span id="L108"> 108</span>     save_table(folder/&#x27;Muscle_Joint_Moments/summed_muscle_generalized_forces.csv&#x27;,times,moments.sum(axis=1),coordinates)
+<span id="L109"> 109</span>     np.savez_compressed(folder/&#x27;Body_Motion/body_and_paw_positions.npz&#x27;,time=times,paw_positions=paw_positions,body_com_positions=body_positions,body_names=[model.body(i).name for i in range(model.nbody)])
+<span id="L110"> 110</span>     metadata = {
+<span id="L111"> 111</span>         &#x27;time&#x27;:&#x27;s; absolute simulation clock&#x27;,
+<span id="L112"> 112</span>         &#x27;muscle_input&#x27;:&#x27;excitation; prescribed in advance; no sensory feedback&#x27;,
+<span id="L113"> 113</span>         &#x27;force&#x27;:&#x27;positive tensile force, N&#x27;,
+<span id="L114"> 114</span>         &#x27;passive_fiber_tendon_component&#x27;:&#x27;F0 * fP(l_f/l_opt), N; evaluated at saved fiber state; included inside muscle equilibrium, not added again to tendon tension; zero below stretch threshold even when enabled&#x27;,
+<span id="L115"> 115</span>         &#x27;generalized_units&#x27;:&#x27;hinges: rad, rad/s, rad/s^2 and N m; sliders: m, m/s, m/s^2 and N&#x27;,
+<span id="L116"> 116</span>         &#x27;moments&#x27;:&#x27;muscle-only generalized contributions; no claim of inverse-dynamics or reaction moments&#x27;,
+<span id="L117"> 117</span>         &#x27;axes&#x27;:&#x27;world +x progression, +z upward; anterior–posterior (AP) Fx can be braking (&lt;0) or propulsive (&gt;0)&#x27;,
+<span id="L118"> 118</span>         &#x27;moment_arm&#x27;:&#x27;-dL_MT/dq from the actual engine transmission; same moving route geometry as simulation&#x27;,
+<span id="L119"> 119</span>         &#x27;accelerations&#x27;:&#x27;finite differences of saved velocities, not exact step acceleration&#x27;,
+<span id="L120"> 120</span>         &#x27;reference_scope&#x27;:&#x27;RH measured; LH assumed mirror; forelimbs separate study, EMG pooled&#x27;,
+<span id="L121"> 121</span>     }
+<span id="L122"> 122</span>     (folder/&#x27;OUTPUT_DICTIONARY.json&#x27;).write_text(json.dumps(metadata,indent=2),encoding=&#x27;utf-8&#x27;)
+</pre></main></body></html>

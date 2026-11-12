@@ -1,0 +1,98 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Source fiber curves; see Documentation/model_methods.html and SOURCE_AND_FIT_REVISION.html.</title><link rel="stylesheet" href="../style.css"></head><body><!-- generated folder guide --><header><div class="tag">Cat · Full-body neuromechanics</div><h1>Source fiber curves; see Documentation/model_methods.html and SOURCE_AND_FIT_REVISION.html.</h1><nav><a href="../../START_HERE.html">Start here</a> · <a href="../project_structure.html">Find a file</a></nav></header><main><p><a href="../../Code/neuromechanics/muscle_force_length_velocity.py">Code/neuromechanics/muscle_force_length_velocity.py</a></p><pre style="overflow:auto;white-space:pre"><span id="L1">   1</span> &quot;&quot;&quot;Source fiber curves; see Documentation/model_methods.html and SOURCE_AND_FIT_REVISION.html.&quot;&quot;&quot;
+<span id="L2">   2</span> 
+<span id="L3">   3</span> import numpy as np
+<span id="L4">   4</span> 
+<span id="L5">   5</span> from numba import njit
+<span id="L6">   6</span> 
+<span id="L7">   7</span> from .muscle_force_velocity_degroote import muscle_force_velocity_degroote
+<span id="L8">   8</span> 
+<span id="L9">   9</span> from model_configuration.formulation_constants import (
+<span id="L10">  10</span>     ACTIVE_LENGTH_POWER,
+<span id="L11">  11</span>     ACTIVE_LENGTH_WIDTH,
+<span id="L12">  12</span>     PASSIVE_LENGTH_SCALE,
+<span id="L13">  13</span>     PASSIVE_LENGTH_EXPONENT,
+<span id="L14">  14</span>     PASSIVE_EXPONENT_CAP,
+<span id="L15">  15</span> )
+<span id="L16">  16</span> 
+<span id="L17">  17</span> 
+<span id="L18">  18</span> # Compile this numerical function for repeated evaluations; its equations stay unchanged.
+<span id="L19">  19</span> @njit(cache=False)
+<span id="L20">  20</span> def muscle_force_length_velocity(normalized_length, normalized_velocity, muscle_parameters):
+<span id="L21">  21</span>     if len(muscle_parameters) &gt; 9:
+<span id="L22">  22</span>         # Algebraic form of the original MATLAB equations with shortening Vmax&lt;0.
+<span id="L23">  23</span>         # c=aV/Fmax=0.00915*SO-0.00467; e=0.8/(aV+1).
+<span id="L24">  24</span>         active_length_factor = np.exp(
+<span id="L25">  25</span>             -abs(
+<span id="L26">  26</span>                 (max(normalized_length, 0.0) ** ACTIVE_LENGTH_POWER - 1)
+<span id="L27">  27</span>                 / ACTIVE_LENGTH_WIDTH
+<span id="L28">  28</span>             )
+<span id="L29">  29</span>             ** muscle_parameters[10]
+<span id="L30">  30</span>         )
+<span id="L31">  31</span>         c = muscle_parameters[11]
+<span id="L32">  32</span>         e = muscle_parameters[12]
+<span id="L33">  33</span>         velocity_factor = (
+<span id="L34">  34</span>             max(0.0, c * (1 + normalized_velocity) / (c - normalized_velocity))
+<span id="L35">  35</span>             if normalized_velocity &lt; 0
+<span id="L36">  36</span>             else (e + (1.8 + 0.8 * e) * normalized_velocity) / (e + normalized_velocity)
+<span id="L37">  37</span>         )
+<span id="L38">  38</span>         if len(muscle_parameters) &gt; 14 and muscle_parameters[14] &gt; 0:
+<span id="L39">  39</span>             velocity_factor = muscle_force_velocity_degroote(normalized_velocity)[0]
+<span id="L40">  40</span>         # Parallel elastic fiber force: Prilutsky et al. (2016), Table 10.3,
+<span id="L41">  41</span>         # DOI 10.1007/978-1-4939-3267-2_10; Rahmati et al. (2025), Table 3,
+<span id="L42">  42</span>         # DOI 10.1113/JP287448. Published coefficients: 0.0075 and 11.6.
+<span id="L43">  43</span>         # The released configuration enables this term in ALL 104 channels.
+<span id="L44">  44</span>         # Our tension-only adaptation sets force to zero at length &lt;= l_opt;
+<span id="L45">  45</span>         # the exponential cap is a numerical overflow guard. Neither choice
+<span id="L46">  46</span>         # is a separately measured passive curve for each added muscle.
+<span id="L47">  47</span>         # Archived MATLAB copies zeroed FPE; we follow the published law here.
+<span id="L48">  48</span>         passive_length_factor = (
+<span id="L49">  49</span>             (PASSIVE_LENGTH_SCALE / PASSIVE_LENGTH_EXPONENT)
+<span id="L50">  50</span>             * np.expm1(
+<span id="L51">  51</span>                 min(PASSIVE_EXPONENT_CAP, PASSIVE_LENGTH_EXPONENT * (normalized_length - 1))
+<span id="L52">  52</span>             )
+<span id="L53">  53</span>             if len(muscle_parameters) &gt; 13
+<span id="L54">  54</span>             and muscle_parameters[13] &gt; 0
+<span id="L55">  55</span>             and normalized_length &gt; 1
+<span id="L56">  56</span>             else 0.0
+<span id="L57">  57</span>         )
+<span id="L58">  58</span>         return active_length_factor, velocity_factor, passive_length_factor
+<span id="L59">  59</span>     low, high = muscle_parameters[4], muscle_parameters[5]
+<span id="L60">  60</span>     a = (low + 1) / 2
+<span id="L61">  61</span>     b = (1 + high) / 2
+<span id="L62">  62</span>     if normalized_length &lt; low or normalized_length &gt; high:
+<span id="L63">  63</span>         active_length_factor = 0.0
+<span id="L64">  64</span>     elif normalized_length &lt;= a:
+<span id="L65">  65</span>         active_length_factor = 0.5 * ((normalized_length - low) / (a - low)) ** 2
+<span id="L66">  66</span>     elif normalized_length &lt;= 1:
+<span id="L67">  67</span>         active_length_factor = 1 - 0.5 * ((1 - normalized_length) / (1 - a)) ** 2
+<span id="L68">  68</span>     elif normalized_length &lt;= b:
+<span id="L69">  69</span>         active_length_factor = 1 - 0.5 * ((normalized_length - 1) / (b - 1)) ** 2
+<span id="L70">  70</span>     else:
+<span id="L71">  71</span>         active_length_factor = 0.5 * ((high - normalized_length) / (high - b)) ** 2
+<span id="L72">  72</span>     if normalized_velocity &lt;= -1:
+<span id="L73">  73</span>         velocity_factor = 0.0
+<span id="L74">  74</span>     elif normalized_velocity &lt;= 0:
+<span id="L75">  75</span>         velocity_factor = (normalized_velocity + 1) ** 2
+<span id="L76">  76</span>     elif normalized_velocity &lt;= muscle_parameters[8] - 1:
+<span id="L77">  77</span>         velocity_factor = muscle_parameters[8] - (
+<span id="L78">  78</span>             muscle_parameters[8]
+<span id="L79">  79</span>             - 1
+<span id="L80">  80</span>             - normalized_velocity
+<span id="L81">  81</span>         ) ** 2 / (muscle_parameters[8] - 1)
+<span id="L82">  82</span>     else:
+<span id="L83">  83</span>         velocity_factor = muscle_parameters[8]
+<span id="L84">  84</span>     if normalized_length &lt;= 1:
+<span id="L85">  85</span>         passive_length_factor = 0.0
+<span id="L86">  86</span>     elif normalized_length &lt;= b:
+<span id="L87">  87</span>         passive_length_factor = (
+<span id="L88">  88</span>             0.5
+<span id="L89">  89</span>             * muscle_parameters[7]
+<span id="L90">  90</span>             * ((normalized_length - 1) / (b - 1)) ** 2
+<span id="L91">  91</span>         )
+<span id="L92">  92</span>     else:
+<span id="L93">  93</span>         passive_length_factor = muscle_parameters[7] * (
+<span id="L94">  94</span>             0.5
+<span id="L95">  95</span>             + (normalized_length - b) / (b - 1)
+<span id="L96">  96</span>         )
+<span id="L97">  97</span>     return active_length_factor, velocity_factor, passive_length_factor
+</pre></main></body></html>

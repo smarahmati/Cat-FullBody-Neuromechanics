@@ -1,0 +1,52 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>One complete forward step, with named physical subsystems.</title><link rel="stylesheet" href="../style.css"></head><body><!-- generated folder guide --><header><div class="tag">Cat · Full-body neuromechanics</div><h1>One complete forward step, with named physical subsystems.</h1><nav><a href="../../START_HERE.html">Start here</a> · <a href="../project_structure.html">Find a file</a></nav></header><main><p><a href="../../Code/neuromechanics/advance_neuromechanical_timestep.py">Code/neuromechanics/advance_neuromechanical_timestep.py</a></p><pre style="overflow:auto;white-space:pre"><span id="L1">   1</span> &quot;&quot;&quot;One complete forward step, with named physical subsystems.&quot;&quot;&quot;
+<span id="L2">   2</span> 
+<span id="L3">   3</span> import numpy as np
+<span id="L4">   4</span> 
+<span id="L5">   5</span> from model_configuration.numerical_parameters import MAXIMUM_GENERALIZED_SPEED
+<span id="L6">   6</span> 
+<span id="L7">   7</span> import mujoco as mj
+<span id="L8">   8</span> 
+<span id="L9">   9</span> from .muscle_excitation import muscle_excitation
+<span id="L10">  10</span> 
+<span id="L11">  11</span> from .multibody_system_dynamics import multibody_system_dynamics
+<span id="L12">  12</span> 
+<span id="L13">  13</span> from .update_muscle_paths import update_muscle_paths
+<span id="L14">  14</span> 
+<span id="L15">  15</span> from .muscle_tendon_dynamics import muscle_tendon_dynamics
+<span id="L16">  16</span> 
+<span id="L17">  17</span> from .foot_contact_model import foot_contact_model
+<span id="L18">  18</span> 
+<span id="L19">  19</span> 
+<span id="L20">  20</span> def advance_neuromechanical_timestep(state):
+<span id="L21">  21</span>     &quot;&quot;&quot;Fixed muscle_excitation -&gt; activation/motion -&gt; elastic force/contact update.
+<span id="L22">  22</span> 
+<span id="L23">  23</span>     This is the same partitioned numerical scheme as the optimized research
+<span id="L24">  24</span>     step. References are absent from this loop. There is no feedback command,
+<span id="L25">  25</span>     target-angle enforcement, external balance support or stride reset.
+<span id="L26">  26</span>     &quot;&quot;&quot;
+<span id="L27">  27</span>     # Get the common skeleton and its current positions, velocities and activation.
+<span id="L28">  28</span>     model, data = state[&quot;model&quot;], state[&quot;data&quot;]
+<span id="L29">  29</span>     # Read this instant&#x27;s fixed motor inputs, from the prescribed intact input table.
+<span id="L30">  30</span>     motor_input = muscle_excitation(state, data.time)
+<span id="L31">  31</span>     # Advance activation and motion using the muscle/contact forces already computed.
+<span id="L32">  32</span>     multibody_system_dynamics(state, motor_input)
+<span id="L33">  33</span>     # Move the analytical via points with the updated bones and joint angles.
+<span id="L34">  34</span>     update_muscle_paths(state)
+<span id="L35">  35</span>     # Recalculate positions and routed muscle lengths at the new pose.
+<span id="L36">  36</span>     mj.mj_fwdPosition(model, data)
+<span id="L37">  37</span>     # Recalculate velocities at the new pose and generalized speed.
+<span id="L38">  38</span>     mj.mj_fwdVelocity(model, data)
+<span id="L39">  39</span>     # Solve the new elastic tendon-fiber force balance at the updated MT lengths.
+<span id="L40">  40</span>     muscle_tendon_dynamics(state)
+<span id="L41">  41</span>     # Update pad compression, shear memory, Ground_Reaction_Forces and their moments on the skeleton.
+<span id="L42">  42</span>     foot_contact_model(state, model.opt.timestep)
+<span id="L43">  43</span>     # Tell the outer simulation loop whether this step remains numerically usable.
+<span id="L44">  44</span>     return bool(
+<span id="L45">  45</span>         # Every coordinate must be a finite number.
+<span id="L46">  46</span>         np.isfinite(data.qpos).all()
+<span id="L47">  47</span>         # Every tendon force must be a finite number.
+<span id="L48">  48</span>         and np.isfinite(state[&quot;force&quot;]).all()
+<span id="L49">  49</span>         # Reject an extreme speed indicating numerical divergence.
+<span id="L50">  50</span>         and np.max(abs(data.qvel)) &lt; MAXIMUM_GENERALIZED_SPEED
+<span id="L51">  51</span>     )
+</pre></main></body></html>

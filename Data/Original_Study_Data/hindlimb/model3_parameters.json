@@ -1,0 +1,331 @@
+{
+  "selected_version": "model 3 - No AF",
+  "source_model_directory": "E:\\Postdoc (Boris)\\Hindlimb Modeling\\model 3 - No AF\\M1 - Main Model - Applied Adjusted GP & add synergic muscles",
+  "muscles": [
+    {
+      "name": "IP",
+      "geometry": {
+        "a1": 0.0549,
+        "a2": 0.0126,
+        "phi1": 0,
+        "phi2": 0,
+        "R1": 0.005,
+        "R2": null,
+        "f1": -1,
+        "f2": null,
+        "n1": -1,
+        "n2": null
+      },
+      "mechanics": {
+        "Mass_gram": 28.6255,
+        "PCSA_cm2": 4.21956994,
+        "PA_rad": 0,
+        "LF0_mm": 64,
+        "LT0_mm": 16,
+        "SO_percentage": 30,
+        "Vmax_m_per_s": 0.54745,
+        "FM_max_N": 95.1724,
+        "aV": 3.7
+      }
+    },
+    {
+      "name": "BFA",
+      "geometry": {
+        "a1": 0.01,
+        "a2": 0.05,
+        "phi1": 2.46091,
+        "phi2": 0,
+        "R1": 0.005,
+        "R2": null,
+        "f1": 1,
+        "f2": null,
+        "n1": -1,
+        "n2": null
+      },
+      "mechanics": {
+        "Mass_gram": 7.89725,
+        "PCSA_cm2": 2.403292961,
+        "PA_rad": 0.244346,
+        "LF0_mm": 31,
+        "LT0_mm": 31,
+        "SO_percentage": 12,
+        "Vmax_m_per_s": 0.333358,
+        "FM_max_N": 54.20627274,
+        "aV": 9.5
+      }
+    },
+    {
+      "name": "VL",
+      "geometry": {
+        "a1": 0.0973,
+        "a2": 0.01,
+        "phi1": 0,
+        "phi2": 2.53073,
+        "R1": 0.01,
+        "R2": null,
+        "f1": -1,
+        "f2": null,
+        "n1": 1,
+        "n2": null
+      },
+      "mechanics": {
+        "Mass_gram": 26.8506,
+        "PCSA_cm2": 6.198313541438295,
+        "PA_rad": 0.23911,
+        "LF0_mm": 27.461,
+        "LT0_mm": 82.3831,
+        "SO_percentage": 46,
+        "Vmax_m_per_s": 0.181208,
+        "FM_max_N": 208.0524835,
+        "aV": 2.4
+      }
+    },
+    {
+      "name": "VM",
+      "geometry": {
+        "a1": 0.0973,
+        "a2": 0.01,
+        "phi1": 0,
+        "phi2": 2.53073,
+        "R1": 0.01,
+        "R2": null,
+        "f1": -1,
+        "f2": null,
+        "n1": 1,
+        "n2": null
+      },
+      "mechanics": {
+        "Mass_gram": 26.8506,
+        "PCSA_cm2": 3.0259153885617063,
+        "PA_rad": 0.23911,
+        "LF0_mm": 27.461,
+        "LT0_mm": 82.3831,
+        "SO_percentage": 46,
+        "Vmax_m_per_s": 0.181208,
+        "FM_max_N": 208.0524835,
+        "aV": 2.4
+      }
+    },
+    {
+      "name": "TA",
+      "geometry": {
+        "a1": 0.015,
+        "a2": 0.015,
+        "phi1": 0,
+        "phi2": 0,
+        "R1": 0.005,
+        "R2": null,
+        "f1": -1,
+        "f2": null,
+        "n1": -1,
+        "n2": null
+      },
+      "mechanics": {
+        "Mass_gram": 15.5779,
+        "PCSA_cm2": 1.804789671,
+        "PA_rad": 0.122173,
+        "LF0_mm": 81.4286,
+        "LT0_mm": 57,
+        "SO_percentage": 19,
+        "Vmax_m_per_s": 0.805987,
+        "FM_max_N": 40.70703104,
+        "aV": 5.9
+      }
+    },
+    {
+      "name": "SO",
+      "geometry": {
+        "a1": 0.099,
+        "a2": 0.016,
+        "phi1": 0,
+        "phi2": -3.03687,
+        "R1": 0.005,
+        "R2": null,
+        "f1": 1,
+        "f2": null,
+        "n1": -1,
+        "n2": null
+      },
+      "mechanics": {
+        "Mass_gram": 1.69889,
+        "PCSA_cm2": 0.464557925,
+        "PA_rad": 0.122173,
+        "LF0_mm": 34.5,
+        "LT0_mm": 68.9999,
+        "SO_percentage": 98,
+        "Vmax_m_per_s": 0.176,
+        "FM_max_N": 10.478104,
+        "aV": 1.1
+      }
+    },
+    {
+      "name": "RF",
+      "geometry": {
+        "a1": 0.0064,
+        "a2": 0.01,
+        "phi1": 0,
+        "phi2": 2.53073,
+        "R1": 0.005,
+        "R2": 0.01,
+        "f1": -1,
+        "f2": -1,
+        "n1": -1,
+        "n2": 1
+      },
+      "mechanics": {
+        "Mass_gram": 6.49875,
+        "PCSA_cm2": 2.724927046,
+        "PA_rad": 0.122173,
+        "LF0_mm": 22.4993,
+        "LT0_mm": 89.9972,
+        "SO_percentage": 22,
+        "Vmax_m_per_s": 0.214452,
+        "FM_max_N": 61.46072953,
+        "aV": 5
+      }
+    },
+    {
+      "name": "BFP",
+      "geometry": {
+        "a1": 0.01,
+        "a2": 0.03,
+        "phi1": 2.46091,
+        "phi2": 0,
+        "R1": 0.005,
+        "R2": 0.006,
+        "f1": 1,
+        "f2": 1,
+        "n1": -1,
+        "n2": 1
+      },
+      "mechanics": {
+        "Mass_gram": 25.6127,
+        "PCSA_cm2": 4.239104467,
+        "PA_rad": 0.122173,
+        "LF0_mm": 57,
+        "LT0_mm": 57,
+        "SO_percentage": 12,
+        "Vmax_m_per_s": 0.612948,
+        "FM_max_N": 95.61300125,
+        "aV": 9.5
+      }
+    },
+    {
+      "name": "SAM",
+      "geometry": {
+        "a1": 0.016,
+        "a2": 0.01,
+        "phi1": 0,
+        "phi2": 0,
+        "R1": 0.005,
+        "R2": 0.006,
+        "f1": -1,
+        "f2": 1,
+        "n1": -1,
+        "n2": 1
+      },
+      "mechanics": {
+        "Mass_gram": 5.49358,
+        "PCSA_cm2": 0.446776081,
+        "PA_rad": 0.0733038,
+        "LF0_mm": 116,
+        "LT0_mm": 29,
+        "SO_percentage": 30,
+        "Vmax_m_per_s": 0.992253,
+        "FM_max_N": 10.0770345,
+        "aV": 3.7
+      }
+    },
+    {
+      "name": "LG",
+      "geometry": {
+        "a1": 0.006,
+        "a2": 0.016,
+        "phi1": 0,
+        "phi2": -3.03687,
+        "R1": 0.006,
+        "R2": 0.005,
+        "f1": 1,
+        "f2": 1,
+        "n1": 1,
+        "n2": -1
+      },
+      "mechanics": {
+        "Mass_gram": 12.9974,
+        "PCSA_cm2": 2.421356648945285,
+        "PA_rad": 0.331613,
+        "LF0_mm": 27,
+        "LT0_mm": 81,
+        "SO_percentage": 21.5,
+        "Vmax_m_per_s": 0.259,
+        "FM_max_N": 102.430497,
+        "aV": 2.28
+      }
+    },
+    {
+      "name": "MG",
+      "geometry": {
+        "a1": 0.006,
+        "a2": 0.016,
+        "phi1": 0,
+        "phi2": -3.03687,
+        "R1": 0.006,
+        "R2": 0.005,
+        "f1": 1,
+        "f2": 1,
+        "n1": 1,
+        "n2": -1
+      },
+      "mechanics": {
+        "Mass_gram": 12.9974,
+        "PCSA_cm2": 2.120008769054715,
+        "PA_rad": 0.331613,
+        "LF0_mm": 27,
+        "LT0_mm": 81,
+        "SO_percentage": 21.5,
+        "Vmax_m_per_s": 0.259,
+        "FM_max_N": 102.430497,
+        "aV": 2.28
+      }
+    }
+  ],
+  "segments": {
+    "Trunk": {
+      "length_m": 0.245,
+      "com_from_proximal_m": 0.1225,
+      "mass_kg": 1.4487999999999999,
+      "inertia_kg_m2": 0.007249930000000001
+    },
+    "Pelvis": {
+      "length_m": 0.0549,
+      "com_from_proximal_m": 0.0275,
+      "mass_kg": 0.3246,
+      "inertia_kg_m2": 8.1524e-05
+    },
+    "Thigh": {
+      "length_m": 0.0973,
+      "com_from_proximal_m": 0.0431,
+      "mass_kg": 0.1495,
+      "inertia_kg_m2": 0.000140063
+    },
+    "Shank": {
+      "length_m": 0.1025,
+      "com_from_proximal_m": 0.0434,
+      "mass_kg": 0.0635,
+      "inertia_kg_m2": 5.9201000000000005e-05
+    },
+    "Foot": {
+      "length_m": 0.0689,
+      "com_from_proximal_m": 0.0335,
+      "mass_kg": 0.0217,
+      "inertia_kg_m2": 9.147e-06
+    },
+    "Digits": {
+      "length_m": 0.030600000000000002,
+      "com_from_proximal_m": 0.015300000000000001,
+      "mass_kg": 0.0078,
+      "inertia_kg_m2": 6.12e-07
+    }
+  },
+  "inertia_unit_assumption": "Source Segments I row assumed g mm^2; yields kg m^2 after multiplying by 1e-9. Confirm against experiment."
+}
