@@ -32,7 +32,7 @@ def explain_parameter_change(row, actual):
     field = row['field']
     name = row['name']
     # These are explanations of calibration/model choices, not new measurements.
-    if field == 'max_isometric_tendon_force_N':
+    if field == 'max_isometric_muscle_force_along_tendon_N':
         reason = 'Force capacity was calibrated with motor inputs to improve mechanical agreement; the fit does not uniquely identify it.'
     elif field in ['optimal_fiber_length_m', 'max_fiber_speed_optimal_lengths_per_s'] and name.startswith(('FL_', 'FR_')):
         reason = ('Fiber length and shortening speed were calibrated to set the force-length and force-velocity operating ranges. '
@@ -75,6 +75,17 @@ def write_parameter_tables(parameters, provenance, output):
     )
     groups = {}
     for row in provenance["parameters"]:
+        # Accept recorded configurations with the former force-field name.
+        # This changes table terminology only; the archived input stays untouched.
+        row = dict(row)
+        old_force_name = "max_isometric_tendon_force_N"
+        force_name = "max_isometric_muscle_force_along_tendon_N"
+        if row["category"] == "muscle_tendon" and row["field"] == old_force_name:
+            row["field"] = force_name
+            row["meaning"] = (
+                "Maximum isometric muscle force along the tendon direction (F0). "
+                "The pennation projection is already included; do not apply it twice."
+            )
         category = row["category"]
         name = row["name"]
         field = row["field"]
@@ -84,7 +95,11 @@ def write_parameter_tables(parameters, provenance, output):
         actual = (
             parameters[category][name]
             if category == "environment"
-            else parameters[category][name][field]
+            else parameters[category][name][
+                old_force_name
+                if field == force_name and force_name not in parameters[category][name]
+                else field
+            ]
         )
         cells = [
             name,

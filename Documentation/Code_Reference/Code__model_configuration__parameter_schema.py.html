@@ -1,15 +1,15 @@
 <!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Named physical parameters, their storage locations, units and meanings.</title><link rel="stylesheet" href="../style.css"></head><body><!-- generated folder guide --><header><div class="tag">Cat · Full-body neuromechanics</div><h1>Named physical parameters, their storage locations, units and meanings.</h1><nav><a href="../../START_HERE.html">Start here</a> · <a href="../project_structure.html">Find a file</a></nav></header><main><p><a href="../../Code/model_configuration/parameter_schema.py">Code/model_configuration/parameter_schema.py</a></p><pre style="overflow:auto;white-space:pre"><span id="L1">   1</span> &quot;&quot;&quot;Named physical parameters, their storage locations, units and meanings.
-<span id="L2">   2</span> 
-<span id="L3">   3</span> The numeric values live in versioned candidate folders. This schema links
+<span id="L2">   2</span>
+<span id="L3">   3</span> The editable numeric values live in Data/Model_Parameters. This schema links
 <span id="L4">   4</span> those readable names to the exact arrays used by the forward model.
 <span id="L5">   5</span> &quot;&quot;&quot;
-<span id="L6">   6</span> 
+<span id="L6">   6</span>
 <span id="L7">   7</span> MUSCLE_FIELDS = {
-<span id="L8">   8</span>     &quot;max_isometric_tendon_force_N&quot;: (
+<span id="L8">   8</span>     &quot;max_isometric_muscle_force_along_tendon_N&quot;: (
 <span id="L9">   9</span>         &quot;muscle_params&quot;,
 <span id="L10">  10</span>         2,
 <span id="L11">  11</span>         &quot;N&quot;,
-<span id="L12">  12</span>         &quot;Maximum isometric force projected along the tendon; do not multiply by pennation cosine twice.&quot;,
+<span id="L12">  12</span>         &quot;Maximum isometric muscle force along the tendon direction (F0). The pennation projection is already included. This is not tendon failure strength or a force ceiling; do not multiply by cos(alpha) again.&quot;,
 <span id="L13">  13</span>     ),
 <span id="L14">  14</span>     &quot;optimal_fiber_length_m&quot;: (
 <span id="L15">  15</span>         &quot;lopt&quot;,
@@ -28,7 +28,7 @@
 <span id="L28">  28</span>         &quot;e0&quot;,
 <span id="L29">  29</span>         None,
 <span id="L30">  30</span>         &quot;1&quot;,
-<span id="L31">  31</span>         &quot;Tendon extension/slack length at one maximum isometric tendon force.&quot;,
+<span id="L31">  31</span>         &quot;Tendon strain when tension equals F0, the maximum isometric muscle force along the tendon direction.&quot;,
 <span id="L32">  32</span>     ),
 <span id="L33">  33</span>     &quot;max_fiber_speed_optimal_lengths_per_s&quot;: (
 <span id="L34">  34</span>         &quot;muscle_params&quot;,

@@ -1,7 +1,7 @@
 {
   "muscle_tendon": {
     "L_IP": {
-      "max_isometric_tendon_force_N": 95.292768017117,
+      "max_isometric_muscle_force_along_tendon_N": 95.292768017117,
       "optimal_fiber_length_m": 0.05675811510074906,
       "tendon_slack_length_m": 0.014151507084623786,
       "pennation_cosine": 1.0,
@@ -16,7 +16,7 @@
       "degroote_force_velocity_enabled": 1.0
     },
     "L_BFA": {
-      "max_isometric_tendon_force_N": 84.53707607564715,
+      "max_isometric_muscle_force_along_tendon_N": 84.53707607564715,
       "optimal_fiber_length_m": 0.03031805243504585,
       "tendon_slack_length_m": 0.030739896826219897,
       "pennation_cosine": 0.9702957493261182,
@@ -31,7 +31,7 @@
       "degroote_force_velocity_enabled": 1.0
     },
     "L_VL": {
-      "max_isometric_tendon_force_N": 199.7761418599688,
+      "max_isometric_muscle_force_along_tendon_N": 199.7761418599688,
       "optimal_fiber_length_m": 0.02701346679368226,
       "tendon_slack_length_m": 0.07993198717303673,
       "pennation_cosine": 0.9715491454632413,
@@ -46,7 +46,7 @@
       "degroote_force_velocity_enabled": 1.0
     },
     "L_VM": {
-      "max_isometric_tendon_force_N": 229.6315183108968,
+      "max_isometric_muscle_force_along_tendon_N": 229.6315183108968,
       "optimal_fiber_length_m": 0.02706758436218535,
       "tendon_slack_length_m": 0.08040611544069562,
       "pennation_cosine": 0.9715491454632413,
@@ -61,7 +61,7 @@
       "degroote_force_velocity_enabled": 1.0
     },
     "L_TA": {
-      "max_isometric_tendon_force_N": 49.47473013648411,
+      "max_isometric_muscle_force_along_tendon_N": 49.47473013648411,
       "optimal_fiber_length_m": 0.07887595303408174,
       "tendon_slack_length_m": 0.05711557244594003,
       "pennation_cosine": 0.992546157447128,
@@ -76,7 +76,7 @@
       "degroote_force_velocity_enabled": 1.0
     },
     "L_SO": {
-      "max_isometric_tendon_force_N": 9.218608539257296,
+      "max_isometric_muscle_force_along_tendon_N": 9.218608539257296,
       "optimal_fiber_length_m": 0.03910837792874384,
       "tendon_slack_length_m": 0.0708209700521574,
       "pennation_cosine": 0.992546157447128,
@@ -91,7 +91,7 @@
       "degroote_force_velocity_enabled": 1.0
     },
     "L_RF": {
-      "max_isometric_tendon_force_N": 71.08377603814067,
+      "max_isometric_muscle_force_along_tendon_N": 71.08377603814067,
       "optimal_fiber_length_m": 0.020894134661827768,
       "tendon_slack_length_m": 0.08471383959946792,
       "pennation_cosine": 0.992546157447128,
@@ -106,7 +106,7 @@
       "degroote_force_velocity_enabled": 1.0
     },
     "L_BFP": {
-      "max_isometric_tendon_force_N": 102.0324360881335,
+      "max_isometric_muscle_force_along_tendon_N": 102.0324360881335,
       "optimal_fiber_length_m": 0.06067086407795482,
       "tendon_slack_length_m": 0.06152433317234077,
       "pennation_cosine": 0.992546157447128,
@@ -121,7 +121,7 @@
       "degroote_force_velocity_enabled": 1.0
     },
     "L_SAM": {
-      "max_isometric_tendon_force_N": 10.447494734981838,
+      "max_isometric_muscle_force_along_tendon_N": 10.447494734981838,
       "optimal_fiber_length_m": 0.1114918511318332,
       "tendon_slack_length_m": 0.028342443395879737,
       "pennation_cosine": 0.9973144793178809,
@@ -136,7 +136,7 @@
       "degroote_force_velocity_enabled": 1.0
     },
     "L_LG": {
-      "max_isometric_tendon_force_N": 94.6728596983433,
+      "max_isometric_muscle_force_along_tendon_N": 94.6728596983433,
       "optimal_fiber_length_m": 0.0286964829541428,
       "tendon_slack_length_m": 0.08422212118014866,
       "pennation_cosine": 0.9455184316586812,
@@ -151,7 +151,7 @@
       "degroote_force_velocity_enabled": 1.0
     },
     "L_MG": {
-      "max_isometric_tendon_force_N": 87.8981443205283,
+      "max_isometric_muscle_force_along_tendon_N": 87.8981443205283,
       "optimal_fiber_length_m": 0.028902184402524074,
       "tendon_slack_length_m": 0.0849674626289436,
       "pennation_cosine": 0.9455184316586812,
@@ -166,7 +166,7 @@
       "degroote_force_velocity_enabled": 1.0
     },
     "R_IP": {
-      "max_isometric_tendon_force_N": 95.292768017117,
+      "max_isometric_muscle_force_along_tendon_N": 95.292768017117,
       "optimal_fiber_length_m": 0.05675811510074906,
       "tendon_slack_length_m": 0.014151507084623786,
       "pennation_cosine": 1.0,
@@ -181,7 +181,7 @@
       "degroote_force_velocity_enabled": 1.0
     },
     "R_BFA": {
-      "max_isometric_tendon_force_N": 84.53707607564715,
+      "max_isometric_muscle_force_along_tendon_N": 84.53707607564715,
       "optimal_fiber_length_m": 0.03031805243504585,
       "tendon_slack_length_m": 0.030739896826219897,
       "pennation_cosine": 0.9702957493261182,
@@ -196,7 +196,7 @@
       "degroote_force_velocity_enabled": 1.0
     },
     "R_VL": {
-      "max_isometric_tendon_force_N": 199.7761418599688,
+      "max_isometric_muscle_force_along_tendon_N": 199.7761418599688,
       "optimal_fiber_length_m": 0.02701346679368226,
       "tendon_slack_length_m": 0.07993198717303673,
       "pennation_cosine": 0.9715491454632413,
@@ -211,7 +211,7 @@
       "degroote_force_velocity_enabled": 1.0
     },
     "R_VM": {
-      "max_isometric_tendon_force_N": 229.6315183108968,
+      "max_isometric_muscle_force_along_tendon_N": 229.6315183108968,
       "optimal_fiber_length_m": 0.02706758436218535,
       "tendon_slack_length_m": 0.08040611544069562,
       "pennation_cosine": 0.9715491454632413,
@@ -226,7 +226,7 @@
       "degroote_force_velocity_enabled": 1.0
     },
     "R_TA": {
-      "max_isometric_tendon_force_N": 49.47473013648411,
+      "max_isometric_muscle_force_along_tendon_N": 49.47473013648411,
       "optimal_fiber_length_m": 0.07887595303408174,
       "tendon_slack_length_m": 0.05711557244594003,
       "pennation_cosine": 0.992546157447128,
@@ -241,7 +241,7 @@
       "degroote_force_velocity_enabled": 1.0
     },
     "R_SO": {
-      "max_isometric_tendon_force_N": 9.218608539257296,
+      "max_isometric_muscle_force_along_tendon_N": 9.218608539257296,
       "optimal_fiber_length_m": 0.03910837792874384,
       "tendon_slack_length_m": 0.0708209700521574,
       "pennation_cosine": 0.992546157447128,
@@ -256,7 +256,7 @@
       "degroote_force_velocity_enabled": 1.0
     },
     "R_RF": {
-      "max_isometric_tendon_force_N": 71.08377603814067,
+      "max_isometric_muscle_force_along_tendon_N": 71.08377603814067,
       "optimal_fiber_length_m": 0.020894134661827768,
       "tendon_slack_length_m": 0.08471383959946792,
       "pennation_cosine": 0.992546157447128,
@@ -271,7 +271,7 @@
       "degroote_force_velocity_enabled": 1.0
     },
     "R_BFP": {
-      "max_isometric_tendon_force_N": 102.0324360881335,
+      "max_isometric_muscle_force_along_tendon_N": 102.0324360881335,
       "optimal_fiber_length_m": 0.06067086407795482,
       "tendon_slack_length_m": 0.06152433317234077,
       "pennation_cosine": 0.992546157447128,
@@ -286,7 +286,7 @@
       "degroote_force_velocity_enabled": 1.0
     },
     "R_SAM": {
-      "max_isometric_tendon_force_N": 10.447494734981838,
+      "max_isometric_muscle_force_along_tendon_N": 10.447494734981838,
       "optimal_fiber_length_m": 0.1114918511318332,
       "tendon_slack_length_m": 0.028342443395879737,
       "pennation_cosine": 0.9973144793178809,
@@ -301,7 +301,7 @@
       "degroote_force_velocity_enabled": 1.0
     },
     "R_LG": {
-      "max_isometric_tendon_force_N": 94.6728596983433,
+      "max_isometric_muscle_force_along_tendon_N": 94.6728596983433,
       "optimal_fiber_length_m": 0.0286964829541428,
       "tendon_slack_length_m": 0.08422212118014866,
       "pennation_cosine": 0.9455184316586812,
@@ -316,7 +316,7 @@
       "degroote_force_velocity_enabled": 1.0
     },
     "R_MG": {
-      "max_isometric_tendon_force_N": 87.8981443205283,
+      "max_isometric_muscle_force_along_tendon_N": 87.8981443205283,
       "optimal_fiber_length_m": 0.028902184402524074,
       "tendon_slack_length_m": 0.0849674626289436,
       "pennation_cosine": 0.9455184316586812,
@@ -331,7 +331,7 @@
       "degroote_force_velocity_enabled": 1.0
     },
     "L_EDL": {
-      "max_isometric_tendon_force_N": 22.041212324862613,
+      "max_isometric_muscle_force_along_tendon_N": 22.041212324862613,
       "optimal_fiber_length_m": 0.03383522379830449,
       "tendon_slack_length_m": 0.1416173473958588,
       "pennation_cosine": 0.9902681160825719,
@@ -346,7 +346,7 @@
       "degroote_force_velocity_enabled": 1.0
     },
     "R_EDL": {
-      "max_isometric_tendon_force_N": 22.041212324862613,
+      "max_isometric_muscle_force_along_tendon_N": 22.041212324862613,
       "optimal_fiber_length_m": 0.03383522379830449,
       "tendon_slack_length_m": 0.14157981525844787,
       "pennation_cosine": 0.9902681160825719,
@@ -361,7 +361,7 @@
       "degroote_force_velocity_enabled": 1.0
     },
     "L_FDL": {
-      "max_isometric_tendon_force_N": 17.084827927157022,
+      "max_isometric_muscle_force_along_tendon_N": 17.084827927157022,
       "optimal_fiber_length_m": 0.02068649104938358,
       "tendon_slack_length_m": 0.1266556737310344,
       "pennation_cosine": 0.9848079136709821,
@@ -376,7 +376,7 @@
       "degroote_force_velocity_enabled": 1.0
     },
     "R_FDL": {
-      "max_isometric_tendon_force_N": 17.084827927157022,
+      "max_isometric_muscle_force_along_tendon_N": 17.084827927157022,
       "optimal_fiber_length_m": 0.02068649104938358,
       "tendon_slack_length_m": 0.12661522847733533,
       "pennation_cosine": 0.9848079136709821,
@@ -391,7 +391,7 @@
       "degroote_force_velocity_enabled": 1.0
     },
     "L_FHL": {
-      "max_isometric_tendon_force_N": 115.6534446266983,
+      "max_isometric_muscle_force_along_tendon_N": 115.6534446266983,
       "optimal_fiber_length_m": 0.017216742119872043,
       "tendon_slack_length_m": 0.13125598564084434,
       "pennation_cosine": 0.992546157447128,
@@ -406,7 +406,7 @@
       "degroote_force_velocity_enabled": 1.0
     },
     "R_FHL": {
-      "max_isometric_tendon_force_N": 115.6534446266983,
+      "max_isometric_muscle_force_along_tendon_N": 115.6534446266983,
       "optimal_fiber_length_m": 0.017216742119872043,
       "tendon_slack_length_m": 0.13125598564084434,
       "pennation_cosine": 0.992546157447128,
@@ -421,7 +421,7 @@
       "degroote_force_velocity_enabled": 1.0
     },
     "FL_ShoulderExtensor": {
-      "max_isometric_tendon_force_N": 536.9727865899736,
+      "max_isometric_muscle_force_along_tendon_N": 536.9727865899736,
       "optimal_fiber_length_m": 0.016811004569903507,
       "tendon_slack_length_m": 0.04508599379853152,
       "pennation_cosine": 0.965422094265322,
@@ -436,7 +436,7 @@
       "degroote_force_velocity_enabled": 1.0
     },
     "FL_ElbowExtensor": {
-      "max_isometric_tendon_force_N": 125.72991797795375,
+      "max_isometric_muscle_force_along_tendon_N": 125.72991797795375,
       "optimal_fiber_length_m": 0.0308057630625,
       "tendon_slack_length_m": 0.03274769168240452,
       "pennation_cosine": 0.9862856015372314,
@@ -451,7 +451,7 @@
       "degroote_force_velocity_enabled": 1.0
     },
     "FL_BicepsBrachii": {
-      "max_isometric_tendon_force_N": 56.95816789224988,
+      "max_isometric_muscle_force_along_tendon_N": 56.95816789224988,
       "optimal_fiber_length_m": 0.026594491050000002,
       "tendon_slack_length_m": 0.08788347958795098,
       "pennation_cosine": 0.984807753012208,
@@ -466,7 +466,7 @@
       "degroote_force_velocity_enabled": 1.0
     },
     "FL_ElbowFlexor": {
-      "max_isometric_tendon_force_N": 61.029495040345,
+      "max_isometric_muscle_force_along_tendon_N": 61.029495040345,
       "optimal_fiber_length_m": 0.04715316720000001,
       "tendon_slack_length_m": 0.026006176503227986,
       "pennation_cosine": 0.9836064595790646,
@@ -481,7 +481,7 @@
       "degroote_force_velocity_enabled": 1.0
     },
     "FL_ElbowFlexorWristFlexor": {
-      "max_isometric_tendon_force_N": 21.357653856823912,
+      "max_isometric_muscle_force_along_tendon_N": 21.357653856823912,
       "optimal_fiber_length_m": 0.029080524420000003,
       "tendon_slack_length_m": 0.11113157261749292,
       "pennation_cosine": 0.991968197918445,
@@ -496,7 +496,7 @@
       "degroote_force_velocity_enabled": 1.0
     },
     "FL_WristFlexor": {
-      "max_isometric_tendon_force_N": 11.387722858664116,
+      "max_isometric_muscle_force_along_tendon_N": 11.387722858664116,
       "optimal_fiber_length_m": 0.022247184600000004,
       "tendon_slack_length_m": 0.0863975414223568,
       "pennation_cosine": 0.9999323080037622,
@@ -511,7 +511,7 @@
       "degroote_force_velocity_enabled": 1.0
     },
     "FL_WristExtensor": {
-      "max_isometric_tendon_force_N": 93.48427427318677,
+      "max_isometric_muscle_force_along_tendon_N": 93.48427427318677,
       "optimal_fiber_length_m": 0.013987546509374997,
       "tendon_slack_length_m": 0.10741378568145873,
       "pennation_cosine": 0.9898590415514598,
@@ -526,7 +526,7 @@
       "degroote_force_velocity_enabled": 1.0
     },
     "FL_ShoulderFlexor": {
-      "max_isometric_tendon_force_N": 69.41141750222351,
+      "max_isometric_muscle_force_along_tendon_N": 69.41141750222351,
       "optimal_fiber_length_m": 0.04186673122500001,
       "tendon_slack_length_m": 0.024504272450222776,
       "pennation_cosine": 0.9975640502598242,
@@ -541,7 +541,7 @@
       "degroote_force_velocity_enabled": 1.0
     },
     "FL_TricepsBrachiiLong": {
-      "max_isometric_tendon_force_N": 189.10697126523593,
+      "max_isometric_muscle_force_along_tendon_N": 189.10697126523593,
       "optimal_fiber_length_m": 0.02529499995,
       "tendon_slack_length_m": 0.07811749646205521,
       "pennation_cosine": 0.9730448705798238,
@@ -556,7 +556,7 @@
       "degroote_force_velocity_enabled": 1.0
     },
     "FR_ShoulderExtensor": {
-      "max_isometric_tendon_force_N": 536.9727865899736,
+      "max_isometric_muscle_force_along_tendon_N": 536.9727865899736,
       "optimal_fiber_length_m": 0.016811004569903507,
       "tendon_slack_length_m": 0.04508599379853152,
       "pennation_cosine": 0.965422094265322,
@@ -571,7 +571,7 @@
       "degroote_force_velocity_enabled": 1.0
     },
     "FR_ElbowExtensor": {
-      "max_isometric_tendon_force_N": 125.72991797795375,
+      "max_isometric_muscle_force_along_tendon_N": 125.72991797795375,
       "optimal_fiber_length_m": 0.0308057630625,
       "tendon_slack_length_m": 0.03274769168240452,
       "pennation_cosine": 0.9862856015372314,
@@ -586,7 +586,7 @@
       "degroote_force_velocity_enabled": 1.0
     },
     "FR_BicepsBrachii": {
-      "max_isometric_tendon_force_N": 56.95816789224988,
+      "max_isometric_muscle_force_along_tendon_N": 56.95816789224988,
       "optimal_fiber_length_m": 0.026594491050000002,
       "tendon_slack_length_m": 0.08788347958795098,
       "pennation_cosine": 0.984807753012208,
@@ -601,7 +601,7 @@
       "degroote_force_velocity_enabled": 1.0
     },
     "FR_ElbowFlexor": {
-      "max_isometric_tendon_force_N": 61.029495040345,
+      "max_isometric_muscle_force_along_tendon_N": 61.029495040345,
       "optimal_fiber_length_m": 0.04715316720000001,
       "tendon_slack_length_m": 0.026006176503227986,
       "pennation_cosine": 0.9836064595790646,
@@ -616,7 +616,7 @@
       "degroote_force_velocity_enabled": 1.0
     },
     "FR_ElbowFlexorWristFlexor": {
-      "max_isometric_tendon_force_N": 21.357653856823912,
+      "max_isometric_muscle_force_along_tendon_N": 21.357653856823912,
       "optimal_fiber_length_m": 0.029080524420000003,
       "tendon_slack_length_m": 0.11113157261749292,
       "pennation_cosine": 0.991968197918445,
@@ -631,7 +631,7 @@
       "degroote_force_velocity_enabled": 1.0
     },
     "FR_WristFlexor": {
-      "max_isometric_tendon_force_N": 11.387722858664116,
+      "max_isometric_muscle_force_along_tendon_N": 11.387722858664116,
       "optimal_fiber_length_m": 0.022247184600000004,
       "tendon_slack_length_m": 0.0863975414223568,
       "pennation_cosine": 0.9999323080037622,
@@ -646,7 +646,7 @@
       "degroote_force_velocity_enabled": 1.0
     },
     "FR_WristExtensor": {
-      "max_isometric_tendon_force_N": 93.48427427318677,
+      "max_isometric_muscle_force_along_tendon_N": 93.48427427318677,
       "optimal_fiber_length_m": 0.013987546509374997,
       "tendon_slack_length_m": 0.10741378568145873,
       "pennation_cosine": 0.9898590415514598,
@@ -661,7 +661,7 @@
       "degroote_force_velocity_enabled": 1.0
     },
     "FR_ShoulderFlexor": {
-      "max_isometric_tendon_force_N": 69.41141750222351,
+      "max_isometric_muscle_force_along_tendon_N": 69.41141750222351,
       "optimal_fiber_length_m": 0.04186673122500001,
       "tendon_slack_length_m": 0.024504272450222776,
       "pennation_cosine": 0.9975640502598242,
@@ -676,7 +676,7 @@
       "degroote_force_velocity_enabled": 1.0
     },
     "FR_TricepsBrachiiLong": {
-      "max_isometric_tendon_force_N": 189.10697126523593,
+      "max_isometric_muscle_force_along_tendon_N": 189.10697126523593,
       "optimal_fiber_length_m": 0.02529499995,
       "tendon_slack_length_m": 0.07811749646205521,
       "pennation_cosine": 0.9730448705798238,
@@ -691,7 +691,7 @@
       "degroote_force_velocity_enabled": 1.0
     },
     "FL_S_C3": {
-      "max_isometric_tendon_force_N": 3.8436555841564193,
+      "max_isometric_muscle_force_along_tendon_N": 3.8436555841564193,
       "optimal_fiber_length_m": 0.0515698819177377,
       "tendon_slack_length_m": 0.012162707999466435,
       "pennation_cosine": 1.0,
@@ -706,7 +706,7 @@
       "degroote_force_velocity_enabled": 1.0
     },
     "FR_S_C3": {
-      "max_isometric_tendon_force_N": 3.8436555841564193,
+      "max_isometric_muscle_force_along_tendon_N": 3.8436555841564193,
       "optimal_fiber_length_m": 0.0515698819177377,
       "tendon_slack_length_m": 0.012162707999466435,
       "pennation_cosine": 1.0,
@@ -721,7 +721,7 @@
       "degroote_force_velocity_enabled": 1.0
     },
     "FL_S_C4": {
-      "max_isometric_tendon_force_N": 4.105006139702811,
+      "max_isometric_muscle_force_along_tendon_N": 4.105006139702811,
       "optimal_fiber_length_m": 0.046113183168969264,
       "tendon_slack_length_m": 0.010875750747398407,
       "pennation_cosine": 1.0,
@@ -736,7 +736,7 @@
       "degroote_force_velocity_enabled": 1.0
     },
     "FR_S_C4": {
-      "max_isometric_tendon_force_N": 4.105006139702811,
+      "max_isometric_muscle_force_along_tendon_N": 4.105006139702811,
       "optimal_fiber_length_m": 0.046113183168969264,
       "tendon_slack_length_m": 0.010875750747398407,
       "pennation_cosine": 1.0,
@@ -751,7 +751,7 @@
       "degroote_force_velocity_enabled": 1.0
     },
     "FL_S_C5": {
-      "max_isometric_tendon_force_N": 5.83682907386942,
+      "max_isometric_muscle_force_along_tendon_N": 5.83682907386942,
       "optimal_fiber_length_m": 0.04455250844620901,
       "tendon_slack_length_m": 0.010507667086370047,
       "pennation_cosine": 1.0,
@@ -766,7 +766,7 @@
       "degroote_force_velocity_enabled": 1.0
     },
     "FR_S_C5": {
-      "max_isometric_tendon_force_N": 5.83682907386942,
+      "max_isometric_muscle_force_along_tendon_N": 5.83682907386942,
       "optimal_fiber_length_m": 0.04455250844620901,
       "tendon_slack_length_m": 0.010507667086370047,
       "pennation_cosine": 1.0,
@@ -781,7 +781,7 @@
       "degroote_force_velocity_enabled": 1.0
     },
     "FL_S_C6": {
-      "max_isometric_tendon_force_N": 5.733190060463092,
+      "max_isometric_muscle_force_along_tendon_N": 5.733190060463092,
       "optimal_fiber_length_m": 0.04235386866826828,
       "tendon_slack_length_m": 0.009989119968931193,
       "pennation_cosine": 1.0,
@@ -796,7 +796,7 @@
       "degroote_force_velocity_enabled": 1.0
     },
     "FR_S_C6": {
-      "max_isometric_tendon_force_N": 5.733190060463092,
+      "max_isometric_muscle_force_along_tendon_N": 5.733190060463092,
       "optimal_fiber_length_m": 0.04235386866826828,
       "tendon_slack_length_m": 0.009989119968931193,
       "pennation_cosine": 1.0,
@@ -811,7 +811,7 @@
       "degroote_force_velocity_enabled": 1.0
     },
     "FL_S_C7": {
-      "max_isometric_tendon_force_N": 5.199974846560971,
+      "max_isometric_muscle_force_along_tendon_N": 5.199974846560971,
       "optimal_fiber_length_m": 0.03863493082892434,
       "tendon_slack_length_m": 0.00911201198795385,
       "pennation_cosine": 1.0,
@@ -826,7 +826,7 @@
       "degroote_force_velocity_enabled": 1.0
     },
     "FR_S_C7": {
-      "max_isometric_tendon_force_N": 5.199974846560971,
+      "max_isometric_muscle_force_along_tendon_N": 5.199974846560971,
       "optimal_fiber_length_m": 0.03863493082892434,
       "tendon_slack_length_m": 0.00911201198795385,
       "pennation_cosine": 1.0,
@@ -841,7 +841,7 @@
       "degroote_force_velocity_enabled": 1.0
     },
     "FL_S_T1": {
-      "max_isometric_tendon_force_N": 6.609679077234169,
+      "max_isometric_muscle_force_along_tendon_N": 6.609679077234169,
       "optimal_fiber_length_m": 0.03171576027567279,
       "tendon_slack_length_m": 0.007480132140488864,
       "pennation_cosine": 1.0,
@@ -856,7 +856,7 @@
       "degroote_force_velocity_enabled": 1.0
     },
     "FR_S_T1": {
-      "max_isometric_tendon_force_N": 6.609679077234169,
+      "max_isometric_muscle_force_along_tendon_N": 6.609679077234169,
       "optimal_fiber_length_m": 0.03171576027567279,
       "tendon_slack_length_m": 0.007480132140488864,
       "pennation_cosine": 1.0,
@@ -871,7 +871,7 @@
       "degroote_force_velocity_enabled": 1.0
     },
     "FL_S_T2": {
-      "max_isometric_tendon_force_N": 3.1044071406731777,
+      "max_isometric_muscle_force_along_tendon_N": 3.1044071406731777,
       "optimal_fiber_length_m": 0.029131789832959498,
       "tendon_slack_length_m": 0.006870705149282897,
       "pennation_cosine": 1.0,
@@ -886,7 +886,7 @@
       "degroote_force_velocity_enabled": 1.0
     },
     "FR_S_T2": {
-      "max_isometric_tendon_force_N": 3.1044071406731777,
+      "max_isometric_muscle_force_along_tendon_N": 3.1044071406731777,
       "optimal_fiber_length_m": 0.029131789832959498,
       "tendon_slack_length_m": 0.006870705149282897,
       "pennation_cosine": 1.0,
@@ -901,7 +901,7 @@
       "degroote_force_velocity_enabled": 1.0
     },
     "FL_S_T3": {
-      "max_isometric_tendon_force_N": 1.621819403210236,
+      "max_isometric_muscle_force_along_tendon_N": 1.621819403210236,
       "optimal_fiber_length_m": 0.02279021298466275,
       "tendon_slack_length_m": 0.005375050232231779,
       "pennation_cosine": 1.0,
@@ -916,7 +916,7 @@
       "degroote_force_velocity_enabled": 1.0
     },
     "FR_S_T3": {
-      "max_isometric_tendon_force_N": 1.621819403210236,
+      "max_isometric_muscle_force_along_tendon_N": 1.621819403210236,
       "optimal_fiber_length_m": 0.02279021298466275,
       "tendon_slack_length_m": 0.005375050232231779,
       "pennation_cosine": 1.0,
@@ -931,7 +931,7 @@
       "degroote_force_velocity_enabled": 1.0
     },
     "FL_S_T4": {
-      "max_isometric_tendon_force_N": 2.720372546139433,
+      "max_isometric_muscle_force_along_tendon_N": 2.720372546139433,
       "optimal_fiber_length_m": 0.019811479484401692,
       "tendon_slack_length_m": 0.004672518746321153,
       "pennation_cosine": 1.0,
@@ -946,7 +946,7 @@
       "degroote_force_velocity_enabled": 1.0
     },
     "FR_S_T4": {
-      "max_isometric_tendon_force_N": 2.720372546139433,
+      "max_isometric_muscle_force_along_tendon_N": 2.720372546139433,
       "optimal_fiber_length_m": 0.019811479484401692,
       "tendon_slack_length_m": 0.004672518746321153,
       "pennation_cosine": 1.0,
@@ -961,7 +961,7 @@
       "degroote_force_velocity_enabled": 1.0
     },
     "FL_S_T5": {
-      "max_isometric_tendon_force_N": 2.7647430769819774,
+      "max_isometric_muscle_force_along_tendon_N": 2.7647430769819774,
       "optimal_fiber_length_m": 0.022436955535609628,
       "tendon_slack_length_m": 0.005291734796134344,
       "pennation_cosine": 1.0,
@@ -976,7 +976,7 @@
       "degroote_force_velocity_enabled": 1.0
     },
     "FR_S_T5": {
-      "max_isometric_tendon_force_N": 2.7647430769819774,
+      "max_isometric_muscle_force_along_tendon_N": 2.7647430769819774,
       "optimal_fiber_length_m": 0.022436955535609628,
       "tendon_slack_length_m": 0.005291734796134344,
       "pennation_cosine": 1.0,
@@ -991,7 +991,7 @@
       "degroote_force_velocity_enabled": 1.0
     },
     "FL_S_T6": {
-      "max_isometric_tendon_force_N": 6.2516547938839855,
+      "max_isometric_muscle_force_along_tendon_N": 6.2516547938839855,
       "optimal_fiber_length_m": 0.026485696641832118,
       "tendon_slack_length_m": 0.006246626566469837,
       "pennation_cosine": 1.0,
@@ -1006,7 +1006,7 @@
       "degroote_force_velocity_enabled": 1.0
     },
     "FR_S_T6": {
-      "max_isometric_tendon_force_N": 6.2516547938839855,
+      "max_isometric_muscle_force_along_tendon_N": 6.2516547938839855,
       "optimal_fiber_length_m": 0.026485696641832118,
       "tendon_slack_length_m": 0.006246626566469837,
       "pennation_cosine": 1.0,
@@ -1021,7 +1021,7 @@
       "degroote_force_velocity_enabled": 1.0
     },
     "FL_S_T7": {
-      "max_isometric_tendon_force_N": 5.40708468957073,
+      "max_isometric_muscle_force_along_tendon_N": 5.40708468957073,
       "optimal_fiber_length_m": 0.030003901070628915,
       "tendon_slack_length_m": 0.00707639176194078,
       "pennation_cosine": 1.0,
@@ -1036,7 +1036,7 @@
       "degroote_force_velocity_enabled": 1.0
     },
     "FR_S_T7": {
-      "max_isometric_tendon_force_N": 5.40708468957073,
+      "max_isometric_muscle_force_along_tendon_N": 5.40708468957073,
       "optimal_fiber_length_m": 0.030003901070628915,
       "tendon_slack_length_m": 0.00707639176194078,
       "pennation_cosine": 1.0,
@@ -1051,7 +1051,7 @@
       "degroote_force_velocity_enabled": 1.0
     },
     "FL_S_T8": {
-      "max_isometric_tendon_force_N": 4.183070045638476,
+      "max_isometric_muscle_force_along_tendon_N": 4.183070045638476,
       "optimal_fiber_length_m": 0.03486565150314857,
       "tendon_slack_length_m": 0.008223031014893528,
       "pennation_cosine": 1.0,
@@ -1066,7 +1066,7 @@
       "degroote_force_velocity_enabled": 1.0
     },
     "FR_S_T8": {
-      "max_isometric_tendon_force_N": 4.183070045638476,
+      "max_isometric_muscle_force_along_tendon_N": 4.183070045638476,
       "optimal_fiber_length_m": 0.03486565150314857,
       "tendon_slack_length_m": 0.008223031014893528,
       "pennation_cosine": 1.0,
@@ -1081,7 +1081,7 @@
       "degroote_force_velocity_enabled": 1.0
     },
     "FL_S_T9": {
-      "max_isometric_tendon_force_N": 2.1512057367109354,
+      "max_isometric_muscle_force_along_tendon_N": 2.1512057367109354,
       "optimal_fiber_length_m": 0.03781542048130531,
       "tendon_slack_length_m": 0.008918731245590873,
       "pennation_cosine": 1.0,
@@ -1096,7 +1096,7 @@
       "degroote_force_velocity_enabled": 1.0
     },
     "FR_S_T9": {
-      "max_isometric_tendon_force_N": 2.1512057367109354,
+      "max_isometric_muscle_force_along_tendon_N": 2.1512057367109354,
       "optimal_fiber_length_m": 0.03781542048130531,
       "tendon_slack_length_m": 0.008918731245590873,
       "pennation_cosine": 1.0,
@@ -1111,7 +1111,7 @@
       "degroote_force_velocity_enabled": 1.0
     },
     "FL_R_C2": {
-      "max_isometric_tendon_force_N": 1.207746371684156,
+      "max_isometric_muscle_force_along_tendon_N": 1.207746371684156,
       "optimal_fiber_length_m": 0.0420690827480221,
       "tendon_slack_length_m": 0.009921953478307098,
       "pennation_cosine": 1.0,
@@ -1126,7 +1126,7 @@
       "degroote_force_velocity_enabled": 1.0
     },
     "FR_R_C2": {
-      "max_isometric_tendon_force_N": 1.207746371684156,
+      "max_isometric_muscle_force_along_tendon_N": 1.207746371684156,
       "optimal_fiber_length_m": 0.0420690827480221,
       "tendon_slack_length_m": 0.009921953478307098,
       "pennation_cosine": 1.0,
@@ -1141,7 +1141,7 @@
       "degroote_force_velocity_enabled": 1.0
     },
     "FL_R_C3-7": {
-      "max_isometric_tendon_force_N": 10.498798983816204,
+      "max_isometric_muscle_force_along_tendon_N": 10.498798983816204,
       "optimal_fiber_length_m": 0.028879174771119894,
       "tendon_slack_length_m": 0.0068111261252641235,
       "pennation_cosine": 1.0,
@@ -1156,7 +1156,7 @@
       "degroote_force_velocity_enabled": 1.0
     },
     "FR_R_C3-7": {
-      "max_isometric_tendon_force_N": 10.498798983816204,
+      "max_isometric_muscle_force_along_tendon_N": 10.498798983816204,
       "optimal_fiber_length_m": 0.028879174771119894,
       "tendon_slack_length_m": 0.0068111261252641235,
       "pennation_cosine": 1.0,
@@ -1171,7 +1171,7 @@
       "degroote_force_velocity_enabled": 1.0
     },
     "FL_R_T1": {
-      "max_isometric_tendon_force_N": 5.84768778140187,
+      "max_isometric_muscle_force_along_tendon_N": 5.84768778140187,
       "optimal_fiber_length_m": 0.03332122254160439,
       "tendon_slack_length_m": 0.007858778901321787,
       "pennation_cosine": 1.0,
@@ -1186,7 +1186,7 @@
       "degroote_force_velocity_enabled": 1.0
     },
     "FR_R_T1": {
-      "max_isometric_tendon_force_N": 5.84768778140187,
+      "max_isometric_muscle_force_along_tendon_N": 5.84768778140187,
       "optimal_fiber_length_m": 0.03332122254160439,
       "tendon_slack_length_m": 0.007858778901321787,
       "pennation_cosine": 1.0,
@@ -1201,7 +1201,7 @@
       "degroote_force_velocity_enabled": 1.0
     },
     "FL_R_T2": {
-      "max_isometric_tendon_force_N": 6.0086609207406925,
+      "max_isometric_muscle_force_along_tendon_N": 6.0086609207406925,
       "optimal_fiber_length_m": 0.037296332257772756,
       "tendon_slack_length_m": 0.008796304777776591,
       "pennation_cosine": 1.0,
@@ -1216,7 +1216,7 @@
       "degroote_force_velocity_enabled": 1.0
     },
     "FR_R_T2": {
-      "max_isometric_tendon_force_N": 6.0086609207406925,
+      "max_isometric_muscle_force_along_tendon_N": 6.0086609207406925,
       "optimal_fiber_length_m": 0.037296332257772756,
       "tendon_slack_length_m": 0.008796304777776591,
       "pennation_cosine": 1.0,
@@ -1231,7 +1231,7 @@
       "degroote_force_velocity_enabled": 1.0
     },
     "FL_R_T3": {
-      "max_isometric_tendon_force_N": 3.6331787990958366,
+      "max_isometric_muscle_force_along_tendon_N": 3.6331787990958366,
       "optimal_fiber_length_m": 0.04181479478513411,
       "tendon_slack_length_m": 0.009861979902154268,
       "pennation_cosine": 1.0,
@@ -1246,7 +1246,7 @@
       "degroote_force_velocity_enabled": 1.0
     },
     "FR_R_T3": {
-      "max_isometric_tendon_force_N": 3.6331787990958366,
+      "max_isometric_muscle_force_along_tendon_N": 3.6331787990958366,
       "optimal_fiber_length_m": 0.04181479478513411,
       "tendon_slack_length_m": 0.009861979902154268,
       "pennation_cosine": 1.0,
@@ -1261,7 +1261,7 @@
       "degroote_force_velocity_enabled": 1.0
     },
     "FL_R_T4": {
-      "max_isometric_tendon_force_N": 2.503357979998125,
+      "max_isometric_muscle_force_along_tendon_N": 2.503357979998125,
       "optimal_fiber_length_m": 0.03930745364074445,
       "tendon_slack_length_m": 0.009270625858666141,
       "pennation_cosine": 1.0,
@@ -1276,7 +1276,7 @@
       "degroote_force_velocity_enabled": 1.0
     },
     "FR_R_T4": {
-      "max_isometric_tendon_force_N": 2.503357979998125,
+      "max_isometric_muscle_force_along_tendon_N": 2.503357979998125,
       "optimal_fiber_length_m": 0.03930745364074445,
       "tendon_slack_length_m": 0.009270625858666141,
       "pennation_cosine": 1.0,
@@ -1291,7 +1291,7 @@
       "degroote_force_velocity_enabled": 1.0
     },
     "FL_R_T5": {
-      "max_isometric_tendon_force_N": 1.9136246097101053,
+      "max_isometric_muscle_force_along_tendon_N": 1.9136246097101053,
       "optimal_fiber_length_m": 0.03908248876020548,
       "tendon_slack_length_m": 0.009217568103822044,
       "pennation_cosine": 1.0,
@@ -1306,7 +1306,7 @@
       "degroote_force_velocity_enabled": 1.0
     },
     "FR_R_T5": {
-      "max_isometric_tendon_force_N": 1.9136246097101053,
+      "max_isometric_muscle_force_along_tendon_N": 1.9136246097101053,
       "optimal_fiber_length_m": 0.03908248876020548,
       "tendon_slack_length_m": 0.009217568103822044,
       "pennation_cosine": 1.0,
@@ -1321,7 +1321,7 @@
       "degroote_force_velocity_enabled": 1.0
     },
     "FL_DigitalExtensors": {
-      "max_isometric_tendon_force_N": 78.49590850824231,
+      "max_isometric_muscle_force_along_tendon_N": 78.49590850824231,
       "optimal_fiber_length_m": 0.023820354450000004,
       "tendon_slack_length_m": 0.11371409759625146,
       "pennation_cosine": 0.9956707906498045,
@@ -1336,7 +1336,7 @@
       "degroote_force_velocity_enabled": 1.0
     },
     "FR_DigitalExtensors": {
-      "max_isometric_tendon_force_N": 78.49590850824231,
+      "max_isometric_muscle_force_along_tendon_N": 78.49590850824231,
       "optimal_fiber_length_m": 0.023820354450000004,
       "tendon_slack_length_m": 0.1134368569001827,
       "pennation_cosine": 0.9956707906498045,
@@ -1351,7 +1351,7 @@
       "degroote_force_velocity_enabled": 1.0
     },
     "FL_DigitalFlexors": {
-      "max_isometric_tendon_force_N": 601.1227378347684,
+      "max_isometric_muscle_force_along_tendon_N": 601.1227378347684,
       "optimal_fiber_length_m": 0.018199603563295,
       "tendon_slack_length_m": 0.10709708984572286,
       "pennation_cosine": 0.9872429102593628,
@@ -1366,7 +1366,7 @@
       "degroote_force_velocity_enabled": 1.0
     },
     "FR_DigitalFlexors": {
-      "max_isometric_tendon_force_N": 601.1227378347684,
+      "max_isometric_muscle_force_along_tendon_N": 601.1227378347684,
       "optimal_fiber_length_m": 0.018199603563295,
       "tendon_slack_length_m": 0.1075947779598452,
       "pennation_cosine": 0.9872429102593628,
@@ -1381,7 +1381,7 @@
       "degroote_force_velocity_enabled": 1.0
     },
     "FL_TrapeziusCervical": {
-      "max_isometric_tendon_force_N": 7.508087010046516,
+      "max_isometric_muscle_force_along_tendon_N": 7.508087010046516,
       "optimal_fiber_length_m": 0.06585075335513,
       "tendon_slack_length_m": 0.010962944509733077,
       "pennation_cosine": 1.0,
@@ -1396,7 +1396,7 @@
       "degroote_force_velocity_enabled": 1.0
     },
     "FR_TrapeziusCervical": {
-      "max_isometric_tendon_force_N": 7.508087010046516,
+      "max_isometric_muscle_force_along_tendon_N": 7.508087010046516,
       "optimal_fiber_length_m": 0.06585075335513,
       "tendon_slack_length_m": 0.010962944509733077,
       "pennation_cosine": 1.0,
@@ -1411,7 +1411,7 @@
       "degroote_force_velocity_enabled": 1.0
     },
     "FL_TrapeziusThoracic": {
-      "max_isometric_tendon_force_N": 6.977343336771235,
+      "max_isometric_muscle_force_along_tendon_N": 6.977343336771235,
       "optimal_fiber_length_m": 0.05769514721607932,
       "tendon_slack_length_m": 0.00960518544107869,
       "pennation_cosine": 1.0,
@@ -1426,7 +1426,7 @@
       "degroote_force_velocity_enabled": 1.0
     },
     "FR_TrapeziusThoracic": {
-      "max_isometric_tendon_force_N": 6.977343336771235,
+      "max_isometric_muscle_force_along_tendon_N": 6.977343336771235,
       "optimal_fiber_length_m": 0.05769514721607932,
       "tendon_slack_length_m": 0.00960518544107869,
       "pennation_cosine": 1.0,
@@ -1441,7 +1441,7 @@
       "degroote_force_velocity_enabled": 1.0
     },
     "FL_LatissimusDorsi": {
-      "max_isometric_tendon_force_N": 16.51465085230317,
+      "max_isometric_muscle_force_along_tendon_N": 16.51465085230317,
       "optimal_fiber_length_m": 0.13217194030539167,
       "tendon_slack_length_m": 0.022004207598011936,
       "pennation_cosine": 1.0,
@@ -1456,7 +1456,7 @@
       "degroote_force_velocity_enabled": 1.0
     },
     "FR_LatissimusDorsi": {
-      "max_isometric_tendon_force_N": 16.51465085230317,
+      "max_isometric_muscle_force_along_tendon_N": 16.51465085230317,
       "optimal_fiber_length_m": 0.13217194030539167,
       "tendon_slack_length_m": 0.022004207598011936,
       "pennation_cosine": 1.0,
@@ -1471,7 +1471,7 @@
       "degroote_force_velocity_enabled": 1.0
     },
     "FL_PectoralisProfundus": {
-      "max_isometric_tendon_force_N": 32.59197000797395,
+      "max_isometric_muscle_force_along_tendon_N": 32.59197000797395,
       "optimal_fiber_length_m": 0.05300374241662422,
       "tendon_slack_length_m": 0.008824152455597818,
       "pennation_cosine": 1.0,
@@ -1486,7 +1486,7 @@
       "degroote_force_velocity_enabled": 1.0
     },
     "FR_PectoralisProfundus": {
-      "max_isometric_tendon_force_N": 32.59197000797395,
+      "max_isometric_muscle_force_along_tendon_N": 32.59197000797395,
       "optimal_fiber_length_m": 0.05300374241662422,
       "tendon_slack_length_m": 0.008824152455597818,
       "pennation_cosine": 1.0,
@@ -1501,7 +1501,7 @@
       "degroote_force_velocity_enabled": 1.0
     },
     "FL_PectoralisSuperficialis": {
-      "max_isometric_tendon_force_N": 6.623550618152982,
+      "max_isometric_muscle_force_along_tendon_N": 6.623550618152982,
       "optimal_fiber_length_m": 0.039991450508966776,
       "tendon_slack_length_m": 0.006657844146886811,
       "pennation_cosine": 1.0,
@@ -1516,7 +1516,7 @@
       "degroote_force_velocity_enabled": 1.0
     },
     "FR_PectoralisSuperficialis": {
-      "max_isometric_tendon_force_N": 6.623550618152982,
+      "max_isometric_muscle_force_along_tendon_N": 6.623550618152982,
       "optimal_fiber_length_m": 0.039991450508966776,
       "tendon_slack_length_m": 0.006657844146886811,
       "pennation_cosine": 1.0,
@@ -1531,7 +1531,7 @@
       "degroote_force_velocity_enabled": 1.0
     },
     "FL_Clavobrachialis": {
-      "max_isometric_tendon_force_N": 9.05567148687485,
+      "max_isometric_muscle_force_along_tendon_N": 9.05567148687485,
       "optimal_fiber_length_m": 0.08587737673134448,
       "tendon_slack_length_m": 0.014297010554607852,
       "pennation_cosine": 1.0,
@@ -1546,7 +1546,7 @@
       "degroote_force_velocity_enabled": 1.0
     },
     "FR_Clavobrachialis": {
-      "max_isometric_tendon_force_N": 9.05567148687485,
+      "max_isometric_muscle_force_along_tendon_N": 9.05567148687485,
       "optimal_fiber_length_m": 0.08587737673134448,
       "tendon_slack_length_m": 0.014297010554607852,
       "pennation_cosine": 1.0,

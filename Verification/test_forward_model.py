@@ -32,6 +32,16 @@ class ForwardModelVerification(unittest.TestCase):
         self.assertEqual(len(self.state['names']),104)
         np.testing.assert_array_equal(self.state['muscle_params'][:,13],np.ones(104))
 
+    def test_muscle_force_name_preserves_recorded_parameter_values(self):
+        # The explicit muscle-force name must preserve every recorded numeric value.
+        current = load_parameter_file(ROOT/'Data/Model_Parameters/muscle_tendon.py')
+        recorded = load_parameter_file(ROOT/'Simulation_Results/Intact_Walking/Model_Parameters_Used/muscle_tendon.py')
+        self.assertEqual(current, recorded)
+        field = 'max_isometric_muscle_force_along_tendon_N'
+        # Check the force capacity actually used by the solver, without a second cosine.
+        expected = [current[name][field] for name in self.state['names']]
+        np.testing.assert_array_equal(self.state['muscle_params'][:,2], expected)
+
     def test_published_passive_curve_and_derivative(self):
         # Independent formula: Prilutsky 2016 Table 10.3, tension-only adaptation.
         p=self.state['muscle_params'][list(self.state['names']).index('R_VL')]

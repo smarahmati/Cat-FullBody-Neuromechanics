@@ -14,7 +14,7 @@ Edit a value, save the file and run `run.py` again. Nothing is automatically fit
 
 | File in Data/Model_Parameters | Controls |
 | --- | --- |
-| muscle_tendon.py | Maximum isometric tendon force, optimal fiber/slack tendon lengths, pennation, tendon strain, force curves and damping. |
+| muscle_tendon.py | Maximum isometric muscle force along the tendon direction, optimal fiber/slack tendon lengths, pennation, tendon strain, force curves and damping. |
 | activation.py | Activation/deactivation constants and switching smoothness. |
 | bodies.py / joints.py | Mass, center of mass, inertia, segment placement, axes, limits, stiffness and damping. |
 | attachments.py / routing.py / wrapping.py | Origins, insertions, via sites, source pulley geometry and wrap surfaces. Positions are in the named local bone frame. |
@@ -22,6 +22,10 @@ Edit a value, save the file and run `run.py` again. Nothing is automatically fit
 | initial_state.py | Only t=0: posture, velocity, activation, fiber length and pad shear state. |
 | environment.py / simulation_settings.py | Gravity, solver, integration step, sample interval, duration and comparison scales. |
 | formulation_constants.py / numerical_parameters.py | Shared curve-law constants, length/force tolerances, Newton safeguards and fall criteria. |
+
+## Maximum isometric muscle force
+
+F0 is the **maximum isometric muscle force along the tendon direction** (N): the active reference force at full activation, optimal fiber length and zero fiber velocity, including the constant pennation projection. It is not tendon failure strength or a ceiling on total tendon tension. The tendon transmits force through elastic stretch. The parameter `max_isometric_muscle_force_along_tendon_N` stores this value; do not apply the pennation cosine again.
 
 ## How to read the parameter tables
 

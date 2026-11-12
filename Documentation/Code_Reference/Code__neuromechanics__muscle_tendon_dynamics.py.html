@@ -1,11 +1,11 @@
 <!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Elastic muscle-tendon dynamics; fiber length is an evolving state.</title><link rel="stylesheet" href="../style.css"></head><body><!-- generated folder guide --><header><div class="tag">Cat · Full-body neuromechanics</div><h1>Elastic muscle-tendon dynamics; fiber length is an evolving state.</h1><nav><a href="../../START_HERE.html">Start here</a> · <a href="../project_structure.html">Find a file</a></nav></header><main><p><a href="../../Code/neuromechanics/muscle_tendon_dynamics.py">Code/neuromechanics/muscle_tendon_dynamics.py</a></p><pre style="overflow:auto;white-space:pre"><span id="L1">   1</span> &quot;&quot;&quot;Elastic muscle-tendon dynamics; fiber length is an evolving state.&quot;&quot;&quot;
-<span id="L2">   2</span> 
+<span id="L2">   2</span>
 <span id="L3">   3</span> from .solve_elastic_muscle_equilibrium import solve_elastic_muscle_equilibrium
-<span id="L4">   4</span> 
-<span id="L5">   5</span> 
+<span id="L4">   4</span>
+<span id="L5">   5</span>
 <span id="L6">   6</span> def muscle_tendon_dynamics(state):
 <span id="L7">   7</span>     &quot;&quot;&quot;Solve fiber/tendon equilibrium with backward-Euler fiber velocity.
-<span id="L8">   8</span> 
+<span id="L8">   8</span>
 <span id="L9">   9</span>     Whole MT path length comes from current bones and attachment sites.
 <span id="L10">  10</span>     Fiber length differs from MT length because the tendon can stretch.
 <span id="L11">  11</span>     Forces returned here, in N, act on the skeleton on the next time step.
@@ -25,7 +25,7 @@
 <span id="L25">  25</span>         state[&quot;slack&quot;],
 <span id="L26">  26</span>         # Muscle strengths, pennation and force-curve parameters from configuration.
 <span id="L27">  27</span>         state[&quot;muscle_params&quot;],
-<span id="L28">  28</span>         # Tendon strain when tension equals maximum isometric tendon force.
+<span id="L28">  28</span>         # Tendon strain when tension equals maximum isometric muscle force along the tendon direction.
 <span id="L29">  29</span>         state[&quot;e0&quot;],
 <span id="L30">  30</span>         # Dimensionless damping of fiber motion.
 <span id="L31">  31</span>         state[&quot;fiber_damping_coefficients&quot;],

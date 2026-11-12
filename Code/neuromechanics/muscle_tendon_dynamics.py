@@ -25,7 +25,7 @@ def muscle_tendon_dynamics(state):
         state["slack"],
         # Muscle strengths, pennation and force-curve parameters from configuration.
         state["muscle_params"],
-        # Tendon strain when tension equals maximum isometric tendon force.
+        # Tendon strain when tension equals maximum isometric muscle force along the tendon direction.
         state["e0"],
         # Dimensionless damping of fiber motion.
         state["fiber_damping_coefficients"],

@@ -1,15 +1,15 @@
 """Named physical parameters, their storage locations, units and meanings.
 
-The numeric values live in versioned candidate folders. This schema links
+The editable numeric values live in Data/Model_Parameters. This schema links
 those readable names to the exact arrays used by the forward model.
 """
 
 MUSCLE_FIELDS = {
-    "max_isometric_tendon_force_N": (
+    "max_isometric_muscle_force_along_tendon_N": (
         "muscle_params",
         2,
         "N",
-        "Maximum isometric force projected along the tendon; do not multiply by pennation cosine twice.",
+        "Maximum isometric muscle force along the tendon direction (F0). The pennation projection is already included. This is not tendon failure strength or a force ceiling; do not multiply by cos(alpha) again.",
     ),
     "optimal_fiber_length_m": (
         "lopt",
@@ -28,7 +28,7 @@ MUSCLE_FIELDS = {
         "e0",
         None,
         "1",
-        "Tendon extension/slack length at one maximum isometric tendon force.",
+        "Tendon strain when tension equals F0, the maximum isometric muscle force along the tendon direction.",
     ),
     "max_fiber_speed_optimal_lengths_per_s": (
         "muscle_params",

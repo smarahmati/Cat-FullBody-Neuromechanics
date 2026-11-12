@@ -1,22 +1,22 @@
 <!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Explain source and model values without requiring project history.</title><link rel="stylesheet" href="../style.css"></head><body><!-- generated folder guide --><header><div class="tag">Cat · Full-body neuromechanics</div><h1>Explain source and model values without requiring project history.</h1><nav><a href="../../START_HERE.html">Start here</a> · <a href="../project_structure.html">Find a file</a></nav></header><main><p><a href="../../Code/neuromechanics/write_parameter_tables.py">Code/neuromechanics/write_parameter_tables.py</a></p><pre style="overflow:auto;white-space:pre"><span id="L1">   1</span> &quot;&quot;&quot;Explain source and model values without requiring project history.
-<span id="L2">   2</span> 
+<span id="L2">   2</span>
 <span id="L3">   3</span> Inputs: parameters is the engine read-back; provenance supplies verified source
 <span id="L4">   4</span> values and descriptions; output is the HTML report path. The main table compares
 <span id="L5">   5</span> source values with values used in this model. This function changes no model parameter.
 <span id="L6">   6</span> &quot;&quot;&quot;
-<span id="L7">   7</span> 
+<span id="L7">   7</span>
 <span id="L8">   8</span> import json, html, math
-<span id="L9">   9</span> 
+<span id="L9">   9</span>
 <span id="L10">  10</span> from pathlib import Path
-<span id="L11">  11</span> 
-<span id="L12">  12</span> 
+<span id="L11">  11</span>
+<span id="L12">  12</span>
 <span id="L13">  13</span> def same_parameter_value(first, second):
 <span id="L14">  14</span>     &quot;&quot;&quot;Compare values without counting negligible round-off as a change.&quot;&quot;&quot;
 <span id="L15">  15</span>     if isinstance(first, (float, int)) and isinstance(second, (float, int)):
 <span id="L16">  16</span>         return math.isclose(first, second, rel_tol=1e-10, abs_tol=1e-12)
 <span id="L17">  17</span>     return first == second
-<span id="L18">  18</span> 
-<span id="L19">  19</span> 
+<span id="L18">  18</span>
+<span id="L19">  19</span>
 <span id="L20">  20</span> def explain_parameter_change(row, actual):
 <span id="L21">  21</span>     &quot;&quot;&quot;Explain documented choices; explicitly identify missing rationale.&quot;&quot;&quot;
 <span id="L22">  22</span>     original = row[&#x27;original&#x27;]
@@ -32,7 +32,7 @@
 <span id="L32">  32</span>     field = row[&#x27;field&#x27;]
 <span id="L33">  33</span>     name = row[&#x27;name&#x27;]
 <span id="L34">  34</span>     # These are explanations of calibration/model choices, not new measurements.
-<span id="L35">  35</span>     if field == &#x27;max_isometric_tendon_force_N&#x27;:
+<span id="L35">  35</span>     if field == &#x27;max_isometric_muscle_force_along_tendon_N&#x27;:
 <span id="L36">  36</span>         reason = &#x27;Force capacity was calibrated with motor inputs to improve mechanical agreement; the fit does not uniquely identify it.&#x27;
 <span id="L37">  37</span>     elif field in [&#x27;optimal_fiber_length_m&#x27;, &#x27;max_fiber_speed_optimal_lengths_per_s&#x27;] and name.startswith((&#x27;FL_&#x27;, &#x27;FR_&#x27;)):
 <span id="L38">  38</span>         reason = (&#x27;Fiber length and shortening speed were calibrated to set the force-length and force-velocity operating ranges. &#x27;
@@ -59,13 +59,13 @@
 <span id="L59">  59</span>     else:
 <span id="L60">  60</span>         reason = &#x27;The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed.&#x27;
 <span id="L61">  61</span>     return status + reason
-<span id="L62">  62</span> 
-<span id="L63">  63</span> 
+<span id="L62">  62</span>
+<span id="L63">  63</span>
 <span id="L64">  64</span> def parameter_source_description(row):
 <span id="L65">  65</span>     &quot;&quot;&quot;Return the scientific source statement supplied with a parameter.&quot;&quot;&quot;
 <span id="L66">  66</span>     return row.get(&#x27;source&#x27;, &#x27;No verified source is established for this value.&#x27;)
-<span id="L67">  67</span> 
-<span id="L68">  68</span> 
+<span id="L67">  67</span>
+<span id="L68">  68</span>
 <span id="L69">  69</span> def write_parameter_tables(parameters, provenance, output):
 <span id="L70">  70</span>     &quot;&quot;&quot;Compare the verified scientific source directly with actual simulator values.&quot;&quot;&quot;
 <span id="L71">  71</span>     escape = lambda x: html.escape(
@@ -75,86 +75,101 @@
 <span id="L75">  75</span>     )
 <span id="L76">  76</span>     groups = {}
 <span id="L77">  77</span>     for row in provenance[&quot;parameters&quot;]:
-<span id="L78">  78</span>         category = row[&quot;category&quot;]
-<span id="L79">  79</span>         name = row[&quot;name&quot;]
-<span id="L80">  80</span>         field = row[&quot;field&quot;]
-<span id="L81">  81</span>         if category == &quot;initial_state&quot;:
-<span id="L82">  82</span>             # Skip the remaining work for this item.
-<span id="L83">  83</span>             continue
-<span id="L84">  84</span>         actual = (
-<span id="L85">  85</span>             parameters[category][name]
-<span id="L86">  86</span>             if category == &quot;environment&quot;
-<span id="L87">  87</span>             else parameters[category][name][field]
-<span id="L88">  88</span>         )
-<span id="L89">  89</span>         cells = [
-<span id="L90">  90</span>             name,
-<span id="L91">  91</span>             field,
-<span id="L92">  92</span>             row[&quot;unit&quot;],
-<span id="L93">  93</span>             row[&quot;meaning&quot;],
-<span id="L94">  94</span>             row[&quot;original&quot;] if row[&quot;original&quot;] is not None else &quot;Not established&quot;,
-<span id="L95">  95</span>             actual,
-<span id="L96">  96</span>             explain_parameter_change(row, actual),
-<span id="L97">  97</span>             parameter_source_description(row),
-<span id="L98">  98</span>         ]
-<span id="L99">  99</span>         groups.setdefault(category, []).append(
-<span id="L100"> 100</span>             &quot;&lt;tr&gt;&quot;
-<span id="L101"> 101</span>             + &quot;&quot;.join(&quot;&lt;td&gt;&quot; + escape(v) + &quot;&lt;/td&gt;&quot; for v in cells)
-<span id="L102"> 102</span>             + &quot;&lt;/tr&gt;&quot;
+<span id="L78">  78</span>         # Accept recorded configurations with the former force-field name.
+<span id="L79">  79</span>         # This changes table terminology only; the archived input stays untouched.
+<span id="L80">  80</span>         row = dict(row)
+<span id="L81">  81</span>         old_force_name = &quot;max_isometric_tendon_force_N&quot;
+<span id="L82">  82</span>         force_name = &quot;max_isometric_muscle_force_along_tendon_N&quot;
+<span id="L83">  83</span>         if row[&quot;category&quot;] == &quot;muscle_tendon&quot; and row[&quot;field&quot;] == old_force_name:
+<span id="L84">  84</span>             row[&quot;field&quot;] = force_name
+<span id="L85">  85</span>             row[&quot;meaning&quot;] = (
+<span id="L86">  86</span>                 &quot;Maximum isometric muscle force along the tendon direction (F0). &quot;
+<span id="L87">  87</span>                 &quot;The pennation projection is already included; do not apply it twice.&quot;
+<span id="L88">  88</span>             )
+<span id="L89">  89</span>         category = row[&quot;category&quot;]
+<span id="L90">  90</span>         name = row[&quot;name&quot;]
+<span id="L91">  91</span>         field = row[&quot;field&quot;]
+<span id="L92">  92</span>         if category == &quot;initial_state&quot;:
+<span id="L93">  93</span>             # Skip the remaining work for this item.
+<span id="L94">  94</span>             continue
+<span id="L95">  95</span>         actual = (
+<span id="L96">  96</span>             parameters[category][name]
+<span id="L97">  97</span>             if category == &quot;environment&quot;
+<span id="L98">  98</span>             else parameters[category][name][
+<span id="L99">  99</span>                 old_force_name
+<span id="L100"> 100</span>                 if field == force_name and force_name not in parameters[category][name]
+<span id="L101"> 101</span>                 else field
+<span id="L102"> 102</span>             ]
 <span id="L103"> 103</span>         )
-<span id="L104"> 104</span>     parts = [
-<span id="L105"> 105</span>         &#x27;&lt;!doctype html&gt;&lt;meta charset=&quot;utf-8&quot;&gt;&lt;title&gt;Actual model parameter tables&lt;/title&gt;&lt;style&gt;body{margin:30px;font:16px/1.5 Arial;color:#19313e}table{border-collapse:collapse;font-size:13px;width:100%}th,td{border:1px solid #ccd5dc;padding:7px;text-align:left;overflow-wrap:anywhere}th{background:#e9f1f5;position:sticky;top:0}td{max-width:330px}th:nth-child(3),td:nth-child(3){min-width:52px}summary{font-size:20px;margin:25px 0;cursor:pointer}.note{background:#fff1d6;padding:16px}input{padding:9px;width:450px}&lt;/style&gt;&#x27;,
-<span id="L106"> 106</span>         &#x27;&lt;h1&gt;Source values and values used in this model&lt;/h1&gt;&lt;p class=&quot;note&quot;&gt;&lt;strong&gt;Source value:&lt;/strong&gt; a verified value from the author’s original work or cited literature, in the listed units. &#x27;
-<span id="L107"> 107</span>         &#x27;&lt;strong&gt;Value used in this model:&lt;/strong&gt; the actual value read back from the assembled simulation. &#x27;
-<span id="L108"> 108</span>         &#x27;&lt;strong&gt;What changed and why:&lt;/strong&gt; the source-to-model difference and documented rationale. &#x27;
-<span id="L109"> 109</span>         &#x27;“Not established” means no verified numerical source value is available; the model value is an assumption, estimate or fitted value. &#x27;
-<span id="L110"> 110</span>         &#x27;Successful fitting does not prove that a fitted value is the animal’s true parameter.&lt;/p&gt;&#x27;,
-<span id="L111"> 111</span>         &#x27;&lt;p&gt;Positions use their specified local body frame. Initial conditions appear separately below. &#x27;
-<span id="L112"> 112</span>         &#x27;Displayed scalars use up to eight significant digits; saved JSON/CSV values retain full precision. &#x27;
-<span id="L113"> 113</span>         &#x27;Editing a parameter requires a new simulation and does not automatically retune excitation.&lt;/p&gt;&#x27;
-<span id="L114"> 114</span>         &#x27;&lt;input id=&quot;search&quot; placeholder=&quot;Filter: e.g. R_VL, mass_kg, tendon, damping&quot; oninput=&quot;filterRows(this.value)&quot;&gt;&#x27;,
-<span id="L115"> 115</span>     ]
-<span id="L116"> 116</span>     for category, rows in groups.items():
-<span id="L117"> 117</span>         parts.append(
-<span id="L118"> 118</span>             &quot;&lt;details &quot;
-<span id="L119"> 119</span>             + (&quot;open&quot; if category == &quot;muscle_tendon&quot; else &quot;&quot;)
-<span id="L120"> 120</span>             + &quot;&gt;&lt;summary&gt;&quot;
-<span id="L121"> 121</span>             + escape(category)
-<span id="L122"> 122</span>             + &quot; (&quot;
-<span id="L123"> 123</span>             + str(len(rows))
-<span id="L124"> 124</span>             + &quot; entries)&lt;/summary&gt;&lt;table&gt;&lt;thead&gt;&lt;tr&gt;&quot;
-<span id="L125"> 125</span>             + &quot;&quot;.join(
-<span id="L126"> 126</span>                 &quot;&lt;th&gt;&quot; + x + &quot;&lt;/th&gt;&quot;
-<span id="L127"> 127</span>                 for x in [
-<span id="L128"> 128</span>                     &quot;Object&quot;,
-<span id="L129"> 129</span>                     &quot;Parameter&quot;,
-<span id="L130"> 130</span>                     &quot;Unit&quot;,
-<span id="L131"> 131</span>                     &quot;Meaning&quot;,
-<span id="L132"> 132</span>                     &quot;Source value&quot;,
-<span id="L133"> 133</span>                     &quot;Value used in this model&quot;,
-<span id="L134"> 134</span>                     &quot;What changed and why&quot;,
-<span id="L135"> 135</span>                     &quot;Source / evidence&quot;,
-<span id="L136"> 136</span>                 ]
-<span id="L137"> 137</span>             )
-<span id="L138"> 138</span>             + &quot;&lt;/tr&gt;&lt;/thead&gt;&lt;tbody&gt;&quot;
-<span id="L139"> 139</span>             + &quot;&quot;.join(rows)
-<span id="L140"> 140</span>             + &quot;&lt;/tbody&gt;&lt;/table&gt;&lt;/details&gt;&quot;
-<span id="L141"> 141</span>         )
-<span id="L142"> 142</span>     parts.append(
-<span id="L143"> 143</span>         &quot;&lt;h2&gt;Initial conditions (only at t = 0)&lt;/h2&gt;&lt;p&gt;These are fitted simulation states, not a claim of measured fiber lengths or contact shear. They are never restored each cycle.&lt;/p&gt;&quot;
-<span id="L144"> 144</span>     )
-<span id="L145"> 145</span>     for kind, rows in parameters[&quot;initial_state&quot;].items():
-<span id="L146"> 146</span>         parts.append(
-<span id="L147"> 147</span>             &quot;&lt;details&gt;&lt;summary&gt;&quot;
-<span id="L148"> 148</span>             + escape(kind)
-<span id="L149"> 149</span>             + &quot;&lt;/summary&gt;&lt;table&gt;&lt;tr&gt;&lt;th&gt;Object&lt;/th&gt;&lt;th&gt;Applied initial value&lt;/th&gt;&lt;/tr&gt;&quot;
-<span id="L150"> 150</span>             + &quot;&quot;.join(
-<span id="L151"> 151</span>                 &quot;&lt;tr&gt;&lt;td&gt;&quot; + escape(k) + &quot;&lt;/td&gt;&lt;td&gt;&quot; + escape(v) + &quot;&lt;/td&gt;&lt;/tr&gt;&quot;
-<span id="L152"> 152</span>                 for k, v in rows.items()
-<span id="L153"> 153</span>             )
-<span id="L154"> 154</span>             + &quot;&lt;/table&gt;&lt;/details&gt;&quot;
-<span id="L155"> 155</span>         )
-<span id="L156"> 156</span>     parts.append(&#x27;&lt;script&gt;function filterRows(q){q=q.toLowerCase();document.querySelectorAll(&quot;tbody tr&quot;).forEach(r=&gt;r.hidden=!r.textContent.toLowerCase().includes(q));&#x27;
-<span id="L157"> 157</span>                  &#x27;if(q)document.querySelectorAll(&quot;details:not([data-history])&quot;).forEach(d=&gt;d.open=true)}&lt;/script&gt;&#x27;)
-<span id="L158"> 158</span>     # Save the computed values or figure for inspection and reproducibility.
-<span id="L159"> 159</span>     Path(output).write_text(&quot;&quot;.join(parts), encoding=&quot;utf-8&quot;)
+<span id="L104"> 104</span>         cells = [
+<span id="L105"> 105</span>             name,
+<span id="L106"> 106</span>             field,
+<span id="L107"> 107</span>             row[&quot;unit&quot;],
+<span id="L108"> 108</span>             row[&quot;meaning&quot;],
+<span id="L109"> 109</span>             row[&quot;original&quot;] if row[&quot;original&quot;] is not None else &quot;Not established&quot;,
+<span id="L110"> 110</span>             actual,
+<span id="L111"> 111</span>             explain_parameter_change(row, actual),
+<span id="L112"> 112</span>             parameter_source_description(row),
+<span id="L113"> 113</span>         ]
+<span id="L114"> 114</span>         groups.setdefault(category, []).append(
+<span id="L115"> 115</span>             &quot;&lt;tr&gt;&quot;
+<span id="L116"> 116</span>             + &quot;&quot;.join(&quot;&lt;td&gt;&quot; + escape(v) + &quot;&lt;/td&gt;&quot; for v in cells)
+<span id="L117"> 117</span>             + &quot;&lt;/tr&gt;&quot;
+<span id="L118"> 118</span>         )
+<span id="L119"> 119</span>     parts = [
+<span id="L120"> 120</span>         &#x27;&lt;!doctype html&gt;&lt;meta charset=&quot;utf-8&quot;&gt;&lt;title&gt;Actual model parameter tables&lt;/title&gt;&lt;style&gt;body{margin:30px;font:16px/1.5 Arial;color:#19313e}table{border-collapse:collapse;font-size:13px;width:100%}th,td{border:1px solid #ccd5dc;padding:7px;text-align:left;overflow-wrap:anywhere}th{background:#e9f1f5;position:sticky;top:0}td{max-width:330px}th:nth-child(3),td:nth-child(3){min-width:52px}summary{font-size:20px;margin:25px 0;cursor:pointer}.note{background:#fff1d6;padding:16px}input{padding:9px;width:450px}&lt;/style&gt;&#x27;,
+<span id="L121"> 121</span>         &#x27;&lt;h1&gt;Source values and values used in this model&lt;/h1&gt;&lt;p class=&quot;note&quot;&gt;&lt;strong&gt;Source value:&lt;/strong&gt; a verified value from the author’s original work or cited literature, in the listed units. &#x27;
+<span id="L122"> 122</span>         &#x27;&lt;strong&gt;Value used in this model:&lt;/strong&gt; the actual value read back from the assembled simulation. &#x27;
+<span id="L123"> 123</span>         &#x27;&lt;strong&gt;What changed and why:&lt;/strong&gt; the source-to-model difference and documented rationale. &#x27;
+<span id="L124"> 124</span>         &#x27;“Not established” means no verified numerical source value is available; the model value is an assumption, estimate or fitted value. &#x27;
+<span id="L125"> 125</span>         &#x27;Successful fitting does not prove that a fitted value is the animal’s true parameter.&lt;/p&gt;&#x27;,
+<span id="L126"> 126</span>         &#x27;&lt;p&gt;Positions use their specified local body frame. Initial conditions appear separately below. &#x27;
+<span id="L127"> 127</span>         &#x27;Displayed scalars use up to eight significant digits; saved JSON/CSV values retain full precision. &#x27;
+<span id="L128"> 128</span>         &#x27;Editing a parameter requires a new simulation and does not automatically retune excitation.&lt;/p&gt;&#x27;
+<span id="L129"> 129</span>         &#x27;&lt;input id=&quot;search&quot; placeholder=&quot;Filter: e.g. R_VL, mass_kg, tendon, damping&quot; oninput=&quot;filterRows(this.value)&quot;&gt;&#x27;,
+<span id="L130"> 130</span>     ]
+<span id="L131"> 131</span>     for category, rows in groups.items():
+<span id="L132"> 132</span>         parts.append(
+<span id="L133"> 133</span>             &quot;&lt;details &quot;
+<span id="L134"> 134</span>             + (&quot;open&quot; if category == &quot;muscle_tendon&quot; else &quot;&quot;)
+<span id="L135"> 135</span>             + &quot;&gt;&lt;summary&gt;&quot;
+<span id="L136"> 136</span>             + escape(category)
+<span id="L137"> 137</span>             + &quot; (&quot;
+<span id="L138"> 138</span>             + str(len(rows))
+<span id="L139"> 139</span>             + &quot; entries)&lt;/summary&gt;&lt;table&gt;&lt;thead&gt;&lt;tr&gt;&quot;
+<span id="L140"> 140</span>             + &quot;&quot;.join(
+<span id="L141"> 141</span>                 &quot;&lt;th&gt;&quot; + x + &quot;&lt;/th&gt;&quot;
+<span id="L142"> 142</span>                 for x in [
+<span id="L143"> 143</span>                     &quot;Object&quot;,
+<span id="L144"> 144</span>                     &quot;Parameter&quot;,
+<span id="L145"> 145</span>                     &quot;Unit&quot;,
+<span id="L146"> 146</span>                     &quot;Meaning&quot;,
+<span id="L147"> 147</span>                     &quot;Source value&quot;,
+<span id="L148"> 148</span>                     &quot;Value used in this model&quot;,
+<span id="L149"> 149</span>                     &quot;What changed and why&quot;,
+<span id="L150"> 150</span>                     &quot;Source / evidence&quot;,
+<span id="L151"> 151</span>                 ]
+<span id="L152"> 152</span>             )
+<span id="L153"> 153</span>             + &quot;&lt;/tr&gt;&lt;/thead&gt;&lt;tbody&gt;&quot;
+<span id="L154"> 154</span>             + &quot;&quot;.join(rows)
+<span id="L155"> 155</span>             + &quot;&lt;/tbody&gt;&lt;/table&gt;&lt;/details&gt;&quot;
+<span id="L156"> 156</span>         )
+<span id="L157"> 157</span>     parts.append(
+<span id="L158"> 158</span>         &quot;&lt;h2&gt;Initial conditions (only at t = 0)&lt;/h2&gt;&lt;p&gt;These are fitted simulation states, not a claim of measured fiber lengths or contact shear. They are never restored each cycle.&lt;/p&gt;&quot;
+<span id="L159"> 159</span>     )
+<span id="L160"> 160</span>     for kind, rows in parameters[&quot;initial_state&quot;].items():
+<span id="L161"> 161</span>         parts.append(
+<span id="L162"> 162</span>             &quot;&lt;details&gt;&lt;summary&gt;&quot;
+<span id="L163"> 163</span>             + escape(kind)
+<span id="L164"> 164</span>             + &quot;&lt;/summary&gt;&lt;table&gt;&lt;tr&gt;&lt;th&gt;Object&lt;/th&gt;&lt;th&gt;Applied initial value&lt;/th&gt;&lt;/tr&gt;&quot;
+<span id="L165"> 165</span>             + &quot;&quot;.join(
+<span id="L166"> 166</span>                 &quot;&lt;tr&gt;&lt;td&gt;&quot; + escape(k) + &quot;&lt;/td&gt;&lt;td&gt;&quot; + escape(v) + &quot;&lt;/td&gt;&lt;/tr&gt;&quot;
+<span id="L167"> 167</span>                 for k, v in rows.items()
+<span id="L168"> 168</span>             )
+<span id="L169"> 169</span>             + &quot;&lt;/table&gt;&lt;/details&gt;&quot;
+<span id="L170"> 170</span>         )
+<span id="L171"> 171</span>     parts.append(&#x27;&lt;script&gt;function filterRows(q){q=q.toLowerCase();document.querySelectorAll(&quot;tbody tr&quot;).forEach(r=&gt;r.hidden=!r.textContent.toLowerCase().includes(q));&#x27;
+<span id="L172"> 172</span>                  &#x27;if(q)document.querySelectorAll(&quot;details:not([data-history])&quot;).forEach(d=&gt;d.open=true)}&lt;/script&gt;&#x27;)
+<span id="L173"> 173</span>     # Save the computed values or figure for inspection and reproducibility.
+<span id="L174"> 174</span>     Path(output).write_text(&quot;&quot;.join(parts), encoding=&quot;utf-8&quot;)
 </pre></main></body></html>

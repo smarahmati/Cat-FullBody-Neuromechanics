@@ -1,13 +1,13 @@
 <!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Read a commented, editable Python dictionary without executing code.</title><link rel="stylesheet" href="../style.css"></head><body><!-- generated folder guide --><header><div class="tag">Cat · Full-body neuromechanics</div><h1>Read a commented, editable Python dictionary without executing code.</h1><nav><a href="../../START_HERE.html">Start here</a> · <a href="../project_structure.html">Find a file</a></nav></header><main><p><a href="../../Code/neuromechanics/load_parameter_file.py">Code/neuromechanics/load_parameter_file.py</a></p><pre style="overflow:auto;white-space:pre"><span id="L1">   1</span> &quot;&quot;&quot;Read a commented, editable Python dictionary without executing code.&quot;&quot;&quot;
-<span id="L2">   2</span> 
+<span id="L2">   2</span>
 <span id="L3">   3</span> import ast
-<span id="L4">   4</span> 
+<span id="L4">   4</span>
 <span id="L5">   5</span> from pathlib import Path
-<span id="L6">   6</span> 
-<span id="L7">   7</span> 
+<span id="L6">   6</span>
+<span id="L7">   7</span>
 <span id="L8">   8</span> def load_parameter_file(path):
 <span id="L9">   9</span>     &quot;&quot;&quot;The file contains comments/docstrings and one PARAMETERS assignment.
-<span id="L10">  10</span> 
+<span id="L10">  10</span>
 <span id="L11">  11</span>     Using literal dictionaries keeps configuration approachable while avoiding
 <span id="L12">  12</span>     hidden computations. Every applied number is visible in the file.
 <span id="L13">  13</span>     &quot;&quot;&quot;
@@ -27,5 +27,16 @@
 <span id="L27">  27</span>     if not isinstance(values, dict):
 <span id="L28">  28</span>         # Stop and explain the invalid model setting or failed calculation.
 <span id="L29">  29</span>         raise ValueError(&quot;PARAMETERS must be a dictionary&quot;)
-<span id="L30">  30</span>     return values
+<span id="L30">  30</span>     # Saved configurations may use the former name for this same force scale.
+<span id="L31">  31</span>     # Normalize the name only: retain the value and its existing pennation projection.
+<span id="L32">  32</span>     if Path(path).name == &quot;muscle_tendon.py&quot;:
+<span id="L33">  33</span>         old_name = &quot;max_isometric_tendon_force_N&quot;
+<span id="L34">  34</span>         force_name = &quot;max_isometric_muscle_force_along_tendon_N&quot;
+<span id="L35">  35</span>         for muscle, parameters in values.items():
+<span id="L36">  36</span>             if old_name in parameters:
+<span id="L37">  37</span>                 # Two names would make it unclear which user-edited value to apply.
+<span id="L38">  38</span>                 if force_name in parameters:
+<span id="L39">  39</span>                     raise ValueError(f&quot;{path}/{muscle}: duplicate isometric force fields&quot;)
+<span id="L40">  40</span>                 parameters[force_name] = parameters.pop(old_name)
+<span id="L41">  41</span>     return values
 </pre></main></body></html>

@@ -4,9 +4,9 @@
     {
       "category": "muscle_tendon",
       "name": "L_IP",
-      "field": "max_isometric_tendon_force_N",
+      "field": "max_isometric_muscle_force_along_tendon_N",
       "unit": "N",
-      "meaning": "Maximum isometric force projected along the tendon; do not multiply by pennation cosine twice.",
+      "meaning": "Maximum isometric muscle force along the tendon direction (F0). The pennation projection is already included. This is not tendon failure strength or a force ceiling; do not multiply by cos(alpha) again.",
       "original": 95.1724,
       "applied": 95.292768017117,
       "source": "Generic hindlimb parameters from the author’s MATLAB Model 3 dataset. The source column reports the generic table; the applied column reports the calibrated simulation value. Data/Original_Study_Data/hindlimb/model3_parameters.json"
@@ -46,7 +46,7 @@
       "name": "L_IP",
       "field": "tendon_strain_at_max_force",
       "unit": "1",
-      "meaning": "Tendon extension/slack length at one maximum isometric tendon force.",
+      "meaning": "Tendon strain when tension equals F0, the maximum isometric muscle force along the tendon direction.",
       "original": null,
       "applied": 0.04,
       "source": "Generic hindlimb parameters from the author’s MATLAB Model 3 dataset. The source column reports the generic table; the applied column reports the calibrated simulation value. Data/Original_Study_Data/hindlimb/model3_parameters.json"
@@ -134,9 +134,9 @@
     {
       "category": "muscle_tendon",
       "name": "L_BFA",
-      "field": "max_isometric_tendon_force_N",
+      "field": "max_isometric_muscle_force_along_tendon_N",
       "unit": "N",
-      "meaning": "Maximum isometric force projected along the tendon; do not multiply by pennation cosine twice.",
+      "meaning": "Maximum isometric muscle force along the tendon direction (F0). The pennation projection is already included. This is not tendon failure strength or a force ceiling; do not multiply by cos(alpha) again.",
       "original": 52.59611602643424,
       "applied": 84.53707607564715,
       "source": "Generic hindlimb parameters from the author’s MATLAB Model 3 dataset. The source column reports the generic table; the applied column reports the calibrated simulation value. Data/Original_Study_Data/hindlimb/model3_parameters.json"
@@ -176,7 +176,7 @@
       "name": "L_BFA",
       "field": "tendon_strain_at_max_force",
       "unit": "1",
-      "meaning": "Tendon extension/slack length at one maximum isometric tendon force.",
+      "meaning": "Tendon strain when tension equals F0, the maximum isometric muscle force along the tendon direction.",
       "original": null,
       "applied": 0.04,
       "source": "Generic hindlimb parameters from the author’s MATLAB Model 3 dataset. The source column reports the generic table; the applied column reports the calibrated simulation value. Data/Original_Study_Data/hindlimb/model3_parameters.json"
@@ -264,9 +264,9 @@
     {
       "category": "muscle_tendon",
       "name": "L_VL",
-      "field": "max_isometric_tendon_force_N",
+      "field": "max_isometric_muscle_force_along_tendon_N",
       "unit": "N",
-      "meaning": "Maximum isometric force projected along the tendon; do not multiply by pennation cosine twice.",
+      "meaning": "Maximum isometric muscle force along the tendon direction (F0). The pennation projection is already included. This is not tendon failure strength or a force ceiling; do not multiply by cos(alpha) again.",
       "original": 202.1332125559301,
       "applied": 199.7761418599688,
       "source": "Generic hindlimb parameters from the author’s MATLAB Model 3 dataset. The source column reports the generic table; the applied column reports the calibrated simulation value. Data/Original_Study_Data/hindlimb/model3_parameters.json"
@@ -306,7 +306,7 @@
       "name": "L_VL",
       "field": "tendon_strain_at_max_force",
       "unit": "1",
-      "meaning": "Tendon extension/slack length at one maximum isometric tendon force.",
+      "meaning": "Tendon strain when tension equals F0, the maximum isometric muscle force along the tendon direction.",
       "original": null,
       "applied": 0.04,
       "source": "Generic hindlimb parameters from the author’s MATLAB Model 3 dataset. The source column reports the generic table; the applied column reports the calibrated simulation value. Data/Original_Study_Data/hindlimb/model3_parameters.json"
@@ -394,9 +394,9 @@
     {
       "category": "muscle_tendon",
       "name": "L_VM",
-      "field": "max_isometric_tendon_force_N",
+      "field": "max_isometric_muscle_force_along_tendon_N",
       "unit": "N",
-      "meaning": "Maximum isometric force projected along the tendon; do not multiply by pennation cosine twice.",
+      "meaning": "Maximum isometric muscle force along the tendon direction (F0). The pennation projection is already included. This is not tendon failure strength or a force ceiling; do not multiply by cos(alpha) again.",
       "original": 202.1332125559301,
       "applied": 229.6315183108968,
       "source": "Generic hindlimb parameters from the author’s MATLAB Model 3 dataset. The source column reports the generic table; the applied column reports the calibrated simulation value. Data/Original_Study_Data/hindlimb/model3_parameters.json"
@@ -436,7 +436,7 @@
       "name": "L_VM",
       "field": "tendon_strain_at_max_force",
       "unit": "1",
-      "meaning": "Tendon extension/slack length at one maximum isometric tendon force.",
+      "meaning": "Tendon strain when tension equals F0, the maximum isometric muscle force along the tendon direction.",
       "original": null,
       "applied": 0.04,
       "source": "Generic hindlimb parameters from the author’s MATLAB Model 3 dataset. The source column reports the generic table; the applied column reports the calibrated simulation value. Data/Original_Study_Data/hindlimb/model3_parameters.json"
@@ -524,9 +524,9 @@
     {
       "category": "muscle_tendon",
       "name": "L_TA",
-      "field": "max_isometric_tendon_force_N",
+      "field": "max_isometric_muscle_force_along_tendon_N",
       "unit": "N",
-      "meaning": "Maximum isometric force projected along the tendon; do not multiply by pennation cosine twice.",
+      "meaning": "Maximum isometric muscle force along the tendon direction (F0). The pennation projection is already included. This is not tendon failure strength or a force ceiling; do not multiply by cos(alpha) again.",
       "original": 40.403607239832965,
       "applied": 49.47473013648411,
       "source": "Generic hindlimb parameters from the author’s MATLAB Model 3 dataset. The source column reports the generic table; the applied column reports the calibrated simulation value. Data/Original_Study_Data/hindlimb/model3_parameters.json"
@@ -566,7 +566,7 @@
       "name": "L_TA",
       "field": "tendon_strain_at_max_force",
       "unit": "1",
-      "meaning": "Tendon extension/slack length at one maximum isometric tendon force.",
+      "meaning": "Tendon strain when tension equals F0, the maximum isometric muscle force along the tendon direction.",
       "original": null,
       "applied": 0.04,
       "source": "Generic hindlimb parameters from the author’s MATLAB Model 3 dataset. The source column reports the generic table; the applied column reports the calibrated simulation value. Data/Original_Study_Data/hindlimb/model3_parameters.json"
@@ -654,9 +654,9 @@
     {
       "category": "muscle_tendon",
       "name": "L_SO",
-      "field": "max_isometric_tendon_force_N",
+      "field": "max_isometric_muscle_force_along_tendon_N",
       "unit": "N",
-      "meaning": "Maximum isometric force projected along the tendon; do not multiply by pennation cosine twice.",
+      "meaning": "Maximum isometric muscle force along the tendon direction (F0). The pennation projection is already included. This is not tendon failure strength or a force ceiling; do not multiply by cos(alpha) again.",
       "original": 10.400001862531383,
       "applied": 9.218608539257296,
       "source": "Generic hindlimb parameters from the author’s MATLAB Model 3 dataset. The source column reports the generic table; the applied column reports the calibrated simulation value. Data/Original_Study_Data/hindlimb/model3_parameters.json"
@@ -696,7 +696,7 @@
       "name": "L_SO",
       "field": "tendon_strain_at_max_force",
       "unit": "1",
-      "meaning": "Tendon extension/slack length at one maximum isometric tendon force.",
+      "meaning": "Tendon strain when tension equals F0, the maximum isometric muscle force along the tendon direction.",
       "original": null,
       "applied": 0.04,
       "source": "Generic hindlimb parameters from the author’s MATLAB Model 3 dataset. The source column reports the generic table; the applied column reports the calibrated simulation value. Data/Original_Study_Data/hindlimb/model3_parameters.json"
@@ -784,9 +784,9 @@
     {
       "category": "muscle_tendon",
       "name": "L_RF",
-      "field": "max_isometric_tendon_force_N",
+      "field": "max_isometric_muscle_force_along_tendon_N",
       "unit": "N",
-      "meaning": "Maximum isometric force projected along the tendon; do not multiply by pennation cosine twice.",
+      "meaning": "Maximum isometric muscle force along the tendon direction (F0). The pennation projection is already included. This is not tendon failure strength or a force ceiling; do not multiply by cos(alpha) again.",
       "original": 61.00261092889873,
       "applied": 71.08377603814067,
       "source": "Generic hindlimb parameters from the author’s MATLAB Model 3 dataset. The source column reports the generic table; the applied column reports the calibrated simulation value. Data/Original_Study_Data/hindlimb/model3_parameters.json"
@@ -826,7 +826,7 @@
       "name": "L_RF",
       "field": "tendon_strain_at_max_force",
       "unit": "1",
-      "meaning": "Tendon extension/slack length at one maximum isometric tendon force.",
+      "meaning": "Tendon strain when tension equals F0, the maximum isometric muscle force along the tendon direction.",
       "original": null,
       "applied": 0.04,
       "source": "Generic hindlimb parameters from the author’s MATLAB Model 3 dataset. The source column reports the generic table; the applied column reports the calibrated simulation value. Data/Original_Study_Data/hindlimb/model3_parameters.json"
@@ -914,9 +914,9 @@
     {
       "category": "muscle_tendon",
       "name": "L_BFP",
-      "field": "max_isometric_tendon_force_N",
+      "field": "max_isometric_muscle_force_along_tendon_N",
       "unit": "N",
-      "meaning": "Maximum isometric force projected along the tendon; do not multiply by pennation cosine twice.",
+      "meaning": "Maximum isometric muscle force along the tendon direction (F0). The pennation projection is already included. This is not tendon failure strength or a force ceiling; do not multiply by cos(alpha) again.",
       "original": 94.90031699267495,
       "applied": 102.0324360881335,
       "source": "Generic hindlimb parameters from the author’s MATLAB Model 3 dataset. The source column reports the generic table; the applied column reports the calibrated simulation value. Data/Original_Study_Data/hindlimb/model3_parameters.json"
@@ -956,7 +956,7 @@
       "name": "L_BFP",
       "field": "tendon_strain_at_max_force",
       "unit": "1",
-      "meaning": "Tendon extension/slack length at one maximum isometric tendon force.",
+      "meaning": "Tendon strain when tension equals F0, the maximum isometric muscle force along the tendon direction.",
       "original": null,
       "applied": 0.04,
       "source": "Generic hindlimb parameters from the author’s MATLAB Model 3 dataset. The source column reports the generic table; the applied column reports the calibrated simulation value. Data/Original_Study_Data/hindlimb/model3_parameters.json"
@@ -1044,9 +1044,9 @@
     {
       "category": "muscle_tendon",
       "name": "L_SAM",
-      "field": "max_isometric_tendon_force_N",
+      "field": "max_isometric_muscle_force_along_tendon_N",
       "unit": "N",
-      "meaning": "Maximum isometric force projected along the tendon; do not multiply by pennation cosine twice.",
+      "meaning": "Maximum isometric muscle force along the tendon direction (F0). The pennation projection is already included. This is not tendon failure strength or a force ceiling; do not multiply by cos(alpha) again.",
       "original": 10.049972415435821,
       "applied": 10.447494734981838,
       "source": "Generic hindlimb parameters from the author’s MATLAB Model 3 dataset. The source column reports the generic table; the applied column reports the calibrated simulation value. Data/Original_Study_Data/hindlimb/model3_parameters.json"
@@ -1086,7 +1086,7 @@
       "name": "L_SAM",
       "field": "tendon_strain_at_max_force",
       "unit": "1",
-      "meaning": "Tendon extension/slack length at one maximum isometric tendon force.",
+      "meaning": "Tendon strain when tension equals F0, the maximum isometric muscle force along the tendon direction.",
       "original": null,
       "applied": 0.04,
       "source": "Generic hindlimb parameters from the author’s MATLAB Model 3 dataset. The source column reports the generic table; the applied column reports the calibrated simulation value. Data/Original_Study_Data/hindlimb/model3_parameters.json"
@@ -1174,9 +1174,9 @@
     {
       "category": "muscle_tendon",
       "name": "L_LG",
-      "field": "max_isometric_tendon_force_N",
+      "field": "max_isometric_muscle_force_along_tendon_N",
       "unit": "N",
-      "meaning": "Maximum isometric force projected along the tendon; do not multiply by pennation cosine twice.",
+      "meaning": "Maximum isometric muscle force along the tendon direction (F0). The pennation projection is already included. This is not tendon failure strength or a force ceiling; do not multiply by cos(alpha) again.",
       "original": 96.84992287745925,
       "applied": 94.6728596983433,
       "source": "Generic hindlimb parameters from the author’s MATLAB Model 3 dataset. The source column reports the generic table; the applied column reports the calibrated simulation value. Data/Original_Study_Data/hindlimb/model3_parameters.json"
@@ -1216,7 +1216,7 @@
       "name": "L_LG",
       "field": "tendon_strain_at_max_force",
       "unit": "1",
-      "meaning": "Tendon extension/slack length at one maximum isometric tendon force.",
+      "meaning": "Tendon strain when tension equals F0, the maximum isometric muscle force along the tendon direction.",
       "original": null,
       "applied": 0.04,
       "source": "Generic hindlimb parameters from the author’s MATLAB Model 3 dataset. The source column reports the generic table; the applied column reports the calibrated simulation value. Data/Original_Study_Data/hindlimb/model3_parameters.json"
@@ -1304,9 +1304,9 @@
     {
       "category": "muscle_tendon",
       "name": "L_MG",
-      "field": "max_isometric_tendon_force_N",
+      "field": "max_isometric_muscle_force_along_tendon_N",
       "unit": "N",
-      "meaning": "Maximum isometric force projected along the tendon; do not multiply by pennation cosine twice.",
+      "meaning": "Maximum isometric muscle force along the tendon direction (F0). The pennation projection is already included. This is not tendon failure strength or a force ceiling; do not multiply by cos(alpha) again.",
       "original": 96.84992287745925,
       "applied": 87.8981443205283,
       "source": "Generic hindlimb parameters from the author’s MATLAB Model 3 dataset. The source column reports the generic table; the applied column reports the calibrated simulation value. Data/Original_Study_Data/hindlimb/model3_parameters.json"
@@ -1346,7 +1346,7 @@
       "name": "L_MG",
       "field": "tendon_strain_at_max_force",
       "unit": "1",
-      "meaning": "Tendon extension/slack length at one maximum isometric tendon force.",
+      "meaning": "Tendon strain when tension equals F0, the maximum isometric muscle force along the tendon direction.",
       "original": null,
       "applied": 0.04,
       "source": "Generic hindlimb parameters from the author’s MATLAB Model 3 dataset. The source column reports the generic table; the applied column reports the calibrated simulation value. Data/Original_Study_Data/hindlimb/model3_parameters.json"
@@ -1434,9 +1434,9 @@
     {
       "category": "muscle_tendon",
       "name": "R_IP",
-      "field": "max_isometric_tendon_force_N",
+      "field": "max_isometric_muscle_force_along_tendon_N",
       "unit": "N",
-      "meaning": "Maximum isometric force projected along the tendon; do not multiply by pennation cosine twice.",
+      "meaning": "Maximum isometric muscle force along the tendon direction (F0). The pennation projection is already included. This is not tendon failure strength or a force ceiling; do not multiply by cos(alpha) again.",
       "original": 95.1724,
       "applied": 95.292768017117,
       "source": "Generic hindlimb parameters from the author’s MATLAB Model 3 dataset. The source column reports the generic table; the applied column reports the calibrated simulation value. Data/Original_Study_Data/hindlimb/model3_parameters.json"
@@ -1476,7 +1476,7 @@
       "name": "R_IP",
       "field": "tendon_strain_at_max_force",
       "unit": "1",
-      "meaning": "Tendon extension/slack length at one maximum isometric tendon force.",
+      "meaning": "Tendon strain when tension equals F0, the maximum isometric muscle force along the tendon direction.",
       "original": null,
       "applied": 0.04,
       "source": "Generic hindlimb parameters from the author’s MATLAB Model 3 dataset. The source column reports the generic table; the applied column reports the calibrated simulation value. Data/Original_Study_Data/hindlimb/model3_parameters.json"
@@ -1564,9 +1564,9 @@
     {
       "category": "muscle_tendon",
       "name": "R_BFA",
-      "field": "max_isometric_tendon_force_N",
+      "field": "max_isometric_muscle_force_along_tendon_N",
       "unit": "N",
-      "meaning": "Maximum isometric force projected along the tendon; do not multiply by pennation cosine twice.",
+      "meaning": "Maximum isometric muscle force along the tendon direction (F0). The pennation projection is already included. This is not tendon failure strength or a force ceiling; do not multiply by cos(alpha) again.",
       "original": 52.59611602643424,
       "applied": 84.53707607564715,
       "source": "Generic hindlimb parameters from the author’s MATLAB Model 3 dataset. The source column reports the generic table; the applied column reports the calibrated simulation value. Data/Original_Study_Data/hindlimb/model3_parameters.json"
@@ -1606,7 +1606,7 @@
       "name": "R_BFA",
       "field": "tendon_strain_at_max_force",
       "unit": "1",
-      "meaning": "Tendon extension/slack length at one maximum isometric tendon force.",
+      "meaning": "Tendon strain when tension equals F0, the maximum isometric muscle force along the tendon direction.",
       "original": null,
       "applied": 0.04,
       "source": "Generic hindlimb parameters from the author’s MATLAB Model 3 dataset. The source column reports the generic table; the applied column reports the calibrated simulation value. Data/Original_Study_Data/hindlimb/model3_parameters.json"
@@ -1694,9 +1694,9 @@
     {
       "category": "muscle_tendon",
       "name": "R_VL",
-      "field": "max_isometric_tendon_force_N",
+      "field": "max_isometric_muscle_force_along_tendon_N",
       "unit": "N",
-      "meaning": "Maximum isometric force projected along the tendon; do not multiply by pennation cosine twice.",
+      "meaning": "Maximum isometric muscle force along the tendon direction (F0). The pennation projection is already included. This is not tendon failure strength or a force ceiling; do not multiply by cos(alpha) again.",
       "original": 202.1332125559301,
       "applied": 199.7761418599688,
       "source": "Generic hindlimb parameters from the author’s MATLAB Model 3 dataset. The source column reports the generic table; the applied column reports the calibrated simulation value. Data/Original_Study_Data/hindlimb/model3_parameters.json"
@@ -1736,7 +1736,7 @@
       "name": "R_VL",
       "field": "tendon_strain_at_max_force",
       "unit": "1",
-      "meaning": "Tendon extension/slack length at one maximum isometric tendon force.",
+      "meaning": "Tendon strain when tension equals F0, the maximum isometric muscle force along the tendon direction.",
       "original": null,
       "applied": 0.04,
       "source": "Generic hindlimb parameters from the author’s MATLAB Model 3 dataset. The source column reports the generic table; the applied column reports the calibrated simulation value. Data/Original_Study_Data/hindlimb/model3_parameters.json"
@@ -1824,9 +1824,9 @@
     {
       "category": "muscle_tendon",
       "name": "R_VM",
-      "field": "max_isometric_tendon_force_N",
+      "field": "max_isometric_muscle_force_along_tendon_N",
       "unit": "N",
-      "meaning": "Maximum isometric force projected along the tendon; do not multiply by pennation cosine twice.",
+      "meaning": "Maximum isometric muscle force along the tendon direction (F0). The pennation projection is already included. This is not tendon failure strength or a force ceiling; do not multiply by cos(alpha) again.",
       "original": 202.1332125559301,
       "applied": 229.6315183108968,
       "source": "Generic hindlimb parameters from the author’s MATLAB Model 3 dataset. The source column reports the generic table; the applied column reports the calibrated simulation value. Data/Original_Study_Data/hindlimb/model3_parameters.json"
@@ -1866,7 +1866,7 @@
       "name": "R_VM",
       "field": "tendon_strain_at_max_force",
       "unit": "1",
-      "meaning": "Tendon extension/slack length at one maximum isometric tendon force.",
+      "meaning": "Tendon strain when tension equals F0, the maximum isometric muscle force along the tendon direction.",
       "original": null,
       "applied": 0.04,
       "source": "Generic hindlimb parameters from the author’s MATLAB Model 3 dataset. The source column reports the generic table; the applied column reports the calibrated simulation value. Data/Original_Study_Data/hindlimb/model3_parameters.json"
@@ -1954,9 +1954,9 @@
     {
       "category": "muscle_tendon",
       "name": "R_TA",
-      "field": "max_isometric_tendon_force_N",
+      "field": "max_isometric_muscle_force_along_tendon_N",
       "unit": "N",
-      "meaning": "Maximum isometric force projected along the tendon; do not multiply by pennation cosine twice.",
+      "meaning": "Maximum isometric muscle force along the tendon direction (F0). The pennation projection is already included. This is not tendon failure strength or a force ceiling; do not multiply by cos(alpha) again.",
       "original": 40.403607239832965,
       "applied": 49.47473013648411,
       "source": "Generic hindlimb parameters from the author’s MATLAB Model 3 dataset. The source column reports the generic table; the applied column reports the calibrated simulation value. Data/Original_Study_Data/hindlimb/model3_parameters.json"
@@ -1996,7 +1996,7 @@
       "name": "R_TA",
       "field": "tendon_strain_at_max_force",
       "unit": "1",
-      "meaning": "Tendon extension/slack length at one maximum isometric tendon force.",
+      "meaning": "Tendon strain when tension equals F0, the maximum isometric muscle force along the tendon direction.",
       "original": null,
       "applied": 0.04,
       "source": "Generic hindlimb parameters from the author’s MATLAB Model 3 dataset. The source column reports the generic table; the applied column reports the calibrated simulation value. Data/Original_Study_Data/hindlimb/model3_parameters.json"
@@ -2084,9 +2084,9 @@
     {
       "category": "muscle_tendon",
       "name": "R_SO",
-      "field": "max_isometric_tendon_force_N",
+      "field": "max_isometric_muscle_force_along_tendon_N",
       "unit": "N",
-      "meaning": "Maximum isometric force projected along the tendon; do not multiply by pennation cosine twice.",
+      "meaning": "Maximum isometric muscle force along the tendon direction (F0). The pennation projection is already included. This is not tendon failure strength or a force ceiling; do not multiply by cos(alpha) again.",
       "original": 10.400001862531383,
       "applied": 9.218608539257296,
       "source": "Generic hindlimb parameters from the author’s MATLAB Model 3 dataset. The source column reports the generic table; the applied column reports the calibrated simulation value. Data/Original_Study_Data/hindlimb/model3_parameters.json"
@@ -2126,7 +2126,7 @@
       "name": "R_SO",
       "field": "tendon_strain_at_max_force",
       "unit": "1",
-      "meaning": "Tendon extension/slack length at one maximum isometric tendon force.",
+      "meaning": "Tendon strain when tension equals F0, the maximum isometric muscle force along the tendon direction.",
       "original": null,
       "applied": 0.04,
       "source": "Generic hindlimb parameters from the author’s MATLAB Model 3 dataset. The source column reports the generic table; the applied column reports the calibrated simulation value. Data/Original_Study_Data/hindlimb/model3_parameters.json"
@@ -2214,9 +2214,9 @@
     {
       "category": "muscle_tendon",
       "name": "R_RF",
-      "field": "max_isometric_tendon_force_N",
+      "field": "max_isometric_muscle_force_along_tendon_N",
       "unit": "N",
-      "meaning": "Maximum isometric force projected along the tendon; do not multiply by pennation cosine twice.",
+      "meaning": "Maximum isometric muscle force along the tendon direction (F0). The pennation projection is already included. This is not tendon failure strength or a force ceiling; do not multiply by cos(alpha) again.",
       "original": 61.00261092889873,
       "applied": 71.08377603814067,
       "source": "Generic hindlimb parameters from the author’s MATLAB Model 3 dataset. The source column reports the generic table; the applied column reports the calibrated simulation value. Data/Original_Study_Data/hindlimb/model3_parameters.json"
@@ -2256,7 +2256,7 @@
       "name": "R_RF",
       "field": "tendon_strain_at_max_force",
       "unit": "1",
-      "meaning": "Tendon extension/slack length at one maximum isometric tendon force.",
+      "meaning": "Tendon strain when tension equals F0, the maximum isometric muscle force along the tendon direction.",
       "original": null,
       "applied": 0.04,
       "source": "Generic hindlimb parameters from the author’s MATLAB Model 3 dataset. The source column reports the generic table; the applied column reports the calibrated simulation value. Data/Original_Study_Data/hindlimb/model3_parameters.json"
@@ -2344,9 +2344,9 @@
     {
       "category": "muscle_tendon",
       "name": "R_BFP",
-      "field": "max_isometric_tendon_force_N",
+      "field": "max_isometric_muscle_force_along_tendon_N",
       "unit": "N",
-      "meaning": "Maximum isometric force projected along the tendon; do not multiply by pennation cosine twice.",
+      "meaning": "Maximum isometric muscle force along the tendon direction (F0). The pennation projection is already included. This is not tendon failure strength or a force ceiling; do not multiply by cos(alpha) again.",
       "original": 94.90031699267495,
       "applied": 102.0324360881335,
       "source": "Generic hindlimb parameters from the author’s MATLAB Model 3 dataset. The source column reports the generic table; the applied column reports the calibrated simulation value. Data/Original_Study_Data/hindlimb/model3_parameters.json"
@@ -2386,7 +2386,7 @@
       "name": "R_BFP",
       "field": "tendon_strain_at_max_force",
       "unit": "1",
-      "meaning": "Tendon extension/slack length at one maximum isometric tendon force.",
+      "meaning": "Tendon strain when tension equals F0, the maximum isometric muscle force along the tendon direction.",
       "original": null,
       "applied": 0.04,
       "source": "Generic hindlimb parameters from the author’s MATLAB Model 3 dataset. The source column reports the generic table; the applied column reports the calibrated simulation value. Data/Original_Study_Data/hindlimb/model3_parameters.json"
@@ -2474,9 +2474,9 @@
     {
       "category": "muscle_tendon",
       "name": "R_SAM",
-      "field": "max_isometric_tendon_force_N",
+      "field": "max_isometric_muscle_force_along_tendon_N",
       "unit": "N",
-      "meaning": "Maximum isometric force projected along the tendon; do not multiply by pennation cosine twice.",
+      "meaning": "Maximum isometric muscle force along the tendon direction (F0). The pennation projection is already included. This is not tendon failure strength or a force ceiling; do not multiply by cos(alpha) again.",
       "original": 10.049972415435821,
       "applied": 10.447494734981838,
       "source": "Generic hindlimb parameters from the author’s MATLAB Model 3 dataset. The source column reports the generic table; the applied column reports the calibrated simulation value. Data/Original_Study_Data/hindlimb/model3_parameters.json"
@@ -2516,7 +2516,7 @@
       "name": "R_SAM",
       "field": "tendon_strain_at_max_force",
       "unit": "1",
-      "meaning": "Tendon extension/slack length at one maximum isometric tendon force.",
+      "meaning": "Tendon strain when tension equals F0, the maximum isometric muscle force along the tendon direction.",
       "original": null,
       "applied": 0.04,
       "source": "Generic hindlimb parameters from the author’s MATLAB Model 3 dataset. The source column reports the generic table; the applied column reports the calibrated simulation value. Data/Original_Study_Data/hindlimb/model3_parameters.json"
@@ -2604,9 +2604,9 @@
     {
       "category": "muscle_tendon",
       "name": "R_LG",
-      "field": "max_isometric_tendon_force_N",
+      "field": "max_isometric_muscle_force_along_tendon_N",
       "unit": "N",
-      "meaning": "Maximum isometric force projected along the tendon; do not multiply by pennation cosine twice.",
+      "meaning": "Maximum isometric muscle force along the tendon direction (F0). The pennation projection is already included. This is not tendon failure strength or a force ceiling; do not multiply by cos(alpha) again.",
       "original": 96.84992287745925,
       "applied": 94.6728596983433,
       "source": "Generic hindlimb parameters from the author’s MATLAB Model 3 dataset. The source column reports the generic table; the applied column reports the calibrated simulation value. Data/Original_Study_Data/hindlimb/model3_parameters.json"
@@ -2646,7 +2646,7 @@
       "name": "R_LG",
       "field": "tendon_strain_at_max_force",
       "unit": "1",
-      "meaning": "Tendon extension/slack length at one maximum isometric tendon force.",
+      "meaning": "Tendon strain when tension equals F0, the maximum isometric muscle force along the tendon direction.",
       "original": null,
       "applied": 0.04,
       "source": "Generic hindlimb parameters from the author’s MATLAB Model 3 dataset. The source column reports the generic table; the applied column reports the calibrated simulation value. Data/Original_Study_Data/hindlimb/model3_parameters.json"
@@ -2734,9 +2734,9 @@
     {
       "category": "muscle_tendon",
       "name": "R_MG",
-      "field": "max_isometric_tendon_force_N",
+      "field": "max_isometric_muscle_force_along_tendon_N",
       "unit": "N",
-      "meaning": "Maximum isometric force projected along the tendon; do not multiply by pennation cosine twice.",
+      "meaning": "Maximum isometric muscle force along the tendon direction (F0). The pennation projection is already included. This is not tendon failure strength or a force ceiling; do not multiply by cos(alpha) again.",
       "original": 96.84992287745925,
       "applied": 87.8981443205283,
       "source": "Generic hindlimb parameters from the author’s MATLAB Model 3 dataset. The source column reports the generic table; the applied column reports the calibrated simulation value. Data/Original_Study_Data/hindlimb/model3_parameters.json"
@@ -2776,7 +2776,7 @@
       "name": "R_MG",
       "field": "tendon_strain_at_max_force",
       "unit": "1",
-      "meaning": "Tendon extension/slack length at one maximum isometric tendon force.",
+      "meaning": "Tendon strain when tension equals F0, the maximum isometric muscle force along the tendon direction.",
       "original": null,
       "applied": 0.04,
       "source": "Generic hindlimb parameters from the author’s MATLAB Model 3 dataset. The source column reports the generic table; the applied column reports the calibrated simulation value. Data/Original_Study_Data/hindlimb/model3_parameters.json"
@@ -2864,9 +2864,9 @@
     {
       "category": "muscle_tendon",
       "name": "L_EDL",
-      "field": "max_isometric_tendon_force_N",
+      "field": "max_isometric_muscle_force_along_tendon_N",
       "unit": "N",
-      "meaning": "Maximum isometric force projected along the tendon; do not multiply by pennation cosine twice.",
+      "meaning": "Maximum isometric muscle force along the tendon direction (F0). The pennation projection is already included. This is not tendon failure strength or a force ceiling; do not multiply by cos(alpha) again.",
       "original": null,
       "applied": 22.041212324862613,
       "source": "No verified one-to-one numerical source is established for this added channel. Applied estimates are in Data/Model_Parameters/muscle_tendon.py; anatomical source records are in Data/Original_Study_Data/additional_muscles/."
@@ -2906,7 +2906,7 @@
       "name": "L_EDL",
       "field": "tendon_strain_at_max_force",
       "unit": "1",
-      "meaning": "Tendon extension/slack length at one maximum isometric tendon force.",
+      "meaning": "Tendon strain when tension equals F0, the maximum isometric muscle force along the tendon direction.",
       "original": null,
       "applied": 0.033,
       "source": "No verified one-to-one numerical source is established for this added channel. Applied estimates are in Data/Model_Parameters/muscle_tendon.py; anatomical source records are in Data/Original_Study_Data/additional_muscles/."
@@ -2994,9 +2994,9 @@
     {
       "category": "muscle_tendon",
       "name": "R_EDL",
-      "field": "max_isometric_tendon_force_N",
+      "field": "max_isometric_muscle_force_along_tendon_N",
       "unit": "N",
-      "meaning": "Maximum isometric force projected along the tendon; do not multiply by pennation cosine twice.",
+      "meaning": "Maximum isometric muscle force along the tendon direction (F0). The pennation projection is already included. This is not tendon failure strength or a force ceiling; do not multiply by cos(alpha) again.",
       "original": null,
       "applied": 22.041212324862613,
       "source": "No verified one-to-one numerical source is established for this added channel. Applied estimates are in Data/Model_Parameters/muscle_tendon.py; anatomical source records are in Data/Original_Study_Data/additional_muscles/."
@@ -3036,7 +3036,7 @@
       "name": "R_EDL",
       "field": "tendon_strain_at_max_force",
       "unit": "1",
-      "meaning": "Tendon extension/slack length at one maximum isometric tendon force.",
+      "meaning": "Tendon strain when tension equals F0, the maximum isometric muscle force along the tendon direction.",
       "original": null,
       "applied": 0.033,
       "source": "No verified one-to-one numerical source is established for this added channel. Applied estimates are in Data/Model_Parameters/muscle_tendon.py; anatomical source records are in Data/Original_Study_Data/additional_muscles/."
@@ -3124,9 +3124,9 @@
     {
       "category": "muscle_tendon",
       "name": "L_FDL",
-      "field": "max_isometric_tendon_force_N",
+      "field": "max_isometric_muscle_force_along_tendon_N",
       "unit": "N",
-      "meaning": "Maximum isometric force projected along the tendon; do not multiply by pennation cosine twice.",
+      "meaning": "Maximum isometric muscle force along the tendon direction (F0). The pennation projection is already included. This is not tendon failure strength or a force ceiling; do not multiply by cos(alpha) again.",
       "original": null,
       "applied": 17.084827927157022,
       "source": "No verified one-to-one numerical source is established for this added channel. Applied estimates are in Data/Model_Parameters/muscle_tendon.py; anatomical source records are in Data/Original_Study_Data/additional_muscles/."
@@ -3166,7 +3166,7 @@
       "name": "L_FDL",
       "field": "tendon_strain_at_max_force",
       "unit": "1",
-      "meaning": "Tendon extension/slack length at one maximum isometric tendon force.",
+      "meaning": "Tendon strain when tension equals F0, the maximum isometric muscle force along the tendon direction.",
       "original": null,
       "applied": 0.033,
       "source": "No verified one-to-one numerical source is established for this added channel. Applied estimates are in Data/Model_Parameters/muscle_tendon.py; anatomical source records are in Data/Original_Study_Data/additional_muscles/."
@@ -3254,9 +3254,9 @@
     {
       "category": "muscle_tendon",
       "name": "R_FDL",
-      "field": "max_isometric_tendon_force_N",
+      "field": "max_isometric_muscle_force_along_tendon_N",
       "unit": "N",
-      "meaning": "Maximum isometric force projected along the tendon; do not multiply by pennation cosine twice.",
+      "meaning": "Maximum isometric muscle force along the tendon direction (F0). The pennation projection is already included. This is not tendon failure strength or a force ceiling; do not multiply by cos(alpha) again.",
       "original": null,
       "applied": 17.084827927157022,
       "source": "No verified one-to-one numerical source is established for this added channel. Applied estimates are in Data/Model_Parameters/muscle_tendon.py; anatomical source records are in Data/Original_Study_Data/additional_muscles/."
@@ -3296,7 +3296,7 @@
       "name": "R_FDL",
       "field": "tendon_strain_at_max_force",
       "unit": "1",
-      "meaning": "Tendon extension/slack length at one maximum isometric tendon force.",
+      "meaning": "Tendon strain when tension equals F0, the maximum isometric muscle force along the tendon direction.",
       "original": null,
       "applied": 0.033,
       "source": "No verified one-to-one numerical source is established for this added channel. Applied estimates are in Data/Model_Parameters/muscle_tendon.py; anatomical source records are in Data/Original_Study_Data/additional_muscles/."
@@ -3384,9 +3384,9 @@
     {
       "category": "muscle_tendon",
       "name": "L_FHL",
-      "field": "max_isometric_tendon_force_N",
+      "field": "max_isometric_muscle_force_along_tendon_N",
       "unit": "N",
-      "meaning": "Maximum isometric force projected along the tendon; do not multiply by pennation cosine twice.",
+      "meaning": "Maximum isometric muscle force along the tendon direction (F0). The pennation projection is already included. This is not tendon failure strength or a force ceiling; do not multiply by cos(alpha) again.",
       "original": null,
       "applied": 115.6534446266983,
       "source": "No verified one-to-one numerical source is established for this added channel. Applied estimates are in Data/Model_Parameters/muscle_tendon.py; anatomical source records are in Data/Original_Study_Data/additional_muscles/."
@@ -3426,7 +3426,7 @@
       "name": "L_FHL",
       "field": "tendon_strain_at_max_force",
       "unit": "1",
-      "meaning": "Tendon extension/slack length at one maximum isometric tendon force.",
+      "meaning": "Tendon strain when tension equals F0, the maximum isometric muscle force along the tendon direction.",
       "original": null,
       "applied": 0.04,
       "source": "No verified one-to-one numerical source is established for this added channel. Applied estimates are in Data/Model_Parameters/muscle_tendon.py; anatomical source records are in Data/Original_Study_Data/additional_muscles/."
@@ -3514,9 +3514,9 @@
     {
       "category": "muscle_tendon",
       "name": "R_FHL",
-      "field": "max_isometric_tendon_force_N",
+      "field": "max_isometric_muscle_force_along_tendon_N",
       "unit": "N",
-      "meaning": "Maximum isometric force projected along the tendon; do not multiply by pennation cosine twice.",
+      "meaning": "Maximum isometric muscle force along the tendon direction (F0). The pennation projection is already included. This is not tendon failure strength or a force ceiling; do not multiply by cos(alpha) again.",
       "original": null,
       "applied": 115.6534446266983,
       "source": "No verified one-to-one numerical source is established for this added channel. Applied estimates are in Data/Model_Parameters/muscle_tendon.py; anatomical source records are in Data/Original_Study_Data/additional_muscles/."
@@ -3556,7 +3556,7 @@
       "name": "R_FHL",
       "field": "tendon_strain_at_max_force",
       "unit": "1",
-      "meaning": "Tendon extension/slack length at one maximum isometric tendon force.",
+      "meaning": "Tendon strain when tension equals F0, the maximum isometric muscle force along the tendon direction.",
       "original": null,
       "applied": 0.04,
       "source": "No verified one-to-one numerical source is established for this added channel. Applied estimates are in Data/Model_Parameters/muscle_tendon.py; anatomical source records are in Data/Original_Study_Data/additional_muscles/."
@@ -3644,9 +3644,9 @@
     {
       "category": "muscle_tendon",
       "name": "FL_ShoulderExtensor",
-      "field": "max_isometric_tendon_force_N",
+      "field": "max_isometric_muscle_force_along_tendon_N",
       "unit": "N",
-      "meaning": "Maximum isometric force projected along the tendon; do not multiply by pennation cosine twice.",
+      "meaning": "Maximum isometric muscle force along the tendon direction (F0). The pennation projection is already included. This is not tendon failure strength or a force ceiling; do not multiply by cos(alpha) again.",
       "original": 563.2917457828182,
       "applied": 536.9727865899736,
       "source": "Author’s nine-group forelimb parameter table. In Results_Function.m, tendon-projected force F0 = 2.3 × 9.806 × PCSA × cos(PA), with PCSA in cm², PA the pennation angle and F0 in N. Tendon slack length is taken from the source table. Data/Original_Study_Data/forelimb/forelimb_9groups_parameters.json"
@@ -3688,7 +3688,7 @@
       "name": "FL_ShoulderExtensor",
       "field": "tendon_strain_at_max_force",
       "unit": "1",
-      "meaning": "Tendon extension/slack length at one maximum isometric tendon force.",
+      "meaning": "Tendon strain when tension equals F0, the maximum isometric muscle force along the tendon direction.",
       "original": null,
       "applied": 0.04,
       "source": "Author’s nine-group forelimb parameter table. In Results_Function.m, tendon-projected force F0 = 2.3 × 9.806 × PCSA × cos(PA), with PCSA in cm², PA the pennation angle and F0 in N. Tendon slack length is taken from the source table. Data/Original_Study_Data/forelimb/forelimb_9groups_parameters.json"
@@ -3778,9 +3778,9 @@
     {
       "category": "muscle_tendon",
       "name": "FL_ElbowExtensor",
-      "field": "max_isometric_tendon_force_N",
+      "field": "max_isometric_muscle_force_along_tendon_N",
       "unit": "N",
-      "meaning": "Maximum isometric force projected along the tendon; do not multiply by pennation cosine twice.",
+      "meaning": "Maximum isometric muscle force along the tendon direction (F0). The pennation projection is already included. This is not tendon failure strength or a force ceiling; do not multiply by cos(alpha) again.",
       "original": 124.06863293522338,
       "applied": 125.72991797795375,
       "source": "Author’s nine-group forelimb parameter table. In Results_Function.m, tendon-projected force F0 = 2.3 × 9.806 × PCSA × cos(PA), with PCSA in cm², PA the pennation angle and F0 in N. Tendon slack length is taken from the source table. Data/Original_Study_Data/forelimb/forelimb_9groups_parameters.json"
@@ -3822,7 +3822,7 @@
       "name": "FL_ElbowExtensor",
       "field": "tendon_strain_at_max_force",
       "unit": "1",
-      "meaning": "Tendon extension/slack length at one maximum isometric tendon force.",
+      "meaning": "Tendon strain when tension equals F0, the maximum isometric muscle force along the tendon direction.",
       "original": null,
       "applied": 0.04,
       "source": "Author’s nine-group forelimb parameter table. In Results_Function.m, tendon-projected force F0 = 2.3 × 9.806 × PCSA × cos(PA), with PCSA in cm², PA the pennation angle and F0 in N. Tendon slack length is taken from the source table. Data/Original_Study_Data/forelimb/forelimb_9groups_parameters.json"
@@ -3912,9 +3912,9 @@
     {
       "category": "muscle_tendon",
       "name": "FL_BicepsBrachii",
-      "field": "max_isometric_tendon_force_N",
+      "field": "max_isometric_muscle_force_along_tendon_N",
       "unit": "N",
-      "meaning": "Maximum isometric force projected along the tendon; do not multiply by pennation cosine twice.",
+      "meaning": "Maximum isometric muscle force along the tendon direction (F0). The pennation projection is already included. This is not tendon failure strength or a force ceiling; do not multiply by cos(alpha) again.",
       "original": 50.419326616742886,
       "applied": 56.95816789224988,
       "source": "Author’s nine-group forelimb parameter table. In Results_Function.m, tendon-projected force F0 = 2.3 × 9.806 × PCSA × cos(PA), with PCSA in cm², PA the pennation angle and F0 in N. Tendon slack length is taken from the source table. Data/Original_Study_Data/forelimb/forelimb_9groups_parameters.json"
@@ -3956,7 +3956,7 @@
       "name": "FL_BicepsBrachii",
       "field": "tendon_strain_at_max_force",
       "unit": "1",
-      "meaning": "Tendon extension/slack length at one maximum isometric tendon force.",
+      "meaning": "Tendon strain when tension equals F0, the maximum isometric muscle force along the tendon direction.",
       "original": null,
       "applied": 0.04,
       "source": "Author’s nine-group forelimb parameter table. In Results_Function.m, tendon-projected force F0 = 2.3 × 9.806 × PCSA × cos(PA), with PCSA in cm², PA the pennation angle and F0 in N. Tendon slack length is taken from the source table. Data/Original_Study_Data/forelimb/forelimb_9groups_parameters.json"
@@ -4046,9 +4046,9 @@
     {
       "category": "muscle_tendon",
       "name": "FL_ElbowFlexor",
-      "field": "max_isometric_tendon_force_N",
+      "field": "max_isometric_muscle_force_along_tendon_N",
       "unit": "N",
-      "meaning": "Maximum isometric force projected along the tendon; do not multiply by pennation cosine twice.",
+      "meaning": "Maximum isometric muscle force along the tendon direction (F0). The pennation projection is already included. This is not tendon failure strength or a force ceiling; do not multiply by cos(alpha) again.",
       "original": 55.534105298029274,
       "applied": 61.029495040345,
       "source": "Author’s nine-group forelimb parameter table. In Results_Function.m, tendon-projected force F0 = 2.3 × 9.806 × PCSA × cos(PA), with PCSA in cm², PA the pennation angle and F0 in N. Tendon slack length is taken from the source table. Data/Original_Study_Data/forelimb/forelimb_9groups_parameters.json"
@@ -4090,7 +4090,7 @@
       "name": "FL_ElbowFlexor",
       "field": "tendon_strain_at_max_force",
       "unit": "1",
-      "meaning": "Tendon extension/slack length at one maximum isometric tendon force.",
+      "meaning": "Tendon strain when tension equals F0, the maximum isometric muscle force along the tendon direction.",
       "original": null,
       "applied": 0.04,
       "source": "Author’s nine-group forelimb parameter table. In Results_Function.m, tendon-projected force F0 = 2.3 × 9.806 × PCSA × cos(PA), with PCSA in cm², PA the pennation angle and F0 in N. Tendon slack length is taken from the source table. Data/Original_Study_Data/forelimb/forelimb_9groups_parameters.json"
@@ -4180,9 +4180,9 @@
     {
       "category": "muscle_tendon",
       "name": "FL_ElbowFlexorWristFlexor",
-      "field": "max_isometric_tendon_force_N",
+      "field": "max_isometric_muscle_force_along_tendon_N",
       "unit": "N",
-      "meaning": "Maximum isometric force projected along the tendon; do not multiply by pennation cosine twice.",
+      "meaning": "Maximum isometric muscle force along the tendon direction (F0). The pennation projection is already included. This is not tendon failure strength or a force ceiling; do not multiply by cos(alpha) again.",
       "original": 97.32103768862663,
       "applied": 21.357653856823912,
       "source": "Author’s nine-group forelimb parameter table. In Results_Function.m, tendon-projected force F0 = 2.3 × 9.806 × PCSA × cos(PA), with PCSA in cm², PA the pennation angle and F0 in N. Tendon slack length is taken from the source table. Data/Original_Study_Data/forelimb/forelimb_9groups_parameters.json"
@@ -4224,7 +4224,7 @@
       "name": "FL_ElbowFlexorWristFlexor",
       "field": "tendon_strain_at_max_force",
       "unit": "1",
-      "meaning": "Tendon extension/slack length at one maximum isometric tendon force.",
+      "meaning": "Tendon strain when tension equals F0, the maximum isometric muscle force along the tendon direction.",
       "original": null,
       "applied": 0.04,
       "source": "Author’s nine-group forelimb parameter table. In Results_Function.m, tendon-projected force F0 = 2.3 × 9.806 × PCSA × cos(PA), with PCSA in cm², PA the pennation angle and F0 in N. Tendon slack length is taken from the source table. Data/Original_Study_Data/forelimb/forelimb_9groups_parameters.json"
@@ -4314,9 +4314,9 @@
     {
       "category": "muscle_tendon",
       "name": "FL_WristFlexor",
-      "field": "max_isometric_tendon_force_N",
+      "field": "max_isometric_muscle_force_along_tendon_N",
       "unit": "N",
-      "meaning": "Maximum isometric force projected along the tendon; do not multiply by pennation cosine twice.",
+      "meaning": "Maximum isometric muscle force along the tendon direction (F0). The pennation projection is already included. This is not tendon failure strength or a force ceiling; do not multiply by cos(alpha) again.",
       "original": 11.3888980105689,
       "applied": 11.387722858664116,
       "source": "Author’s nine-group forelimb parameter table. In Results_Function.m, tendon-projected force F0 = 2.3 × 9.806 × PCSA × cos(PA), with PCSA in cm², PA the pennation angle and F0 in N. Tendon slack length is taken from the source table. Data/Original_Study_Data/forelimb/forelimb_9groups_parameters.json"
@@ -4358,7 +4358,7 @@
       "name": "FL_WristFlexor",
       "field": "tendon_strain_at_max_force",
       "unit": "1",
-      "meaning": "Tendon extension/slack length at one maximum isometric tendon force.",
+      "meaning": "Tendon strain when tension equals F0, the maximum isometric muscle force along the tendon direction.",
       "original": null,
       "applied": 0.04,
       "source": "Author’s nine-group forelimb parameter table. In Results_Function.m, tendon-projected force F0 = 2.3 × 9.806 × PCSA × cos(PA), with PCSA in cm², PA the pennation angle and F0 in N. Tendon slack length is taken from the source table. Data/Original_Study_Data/forelimb/forelimb_9groups_parameters.json"
@@ -4448,9 +4448,9 @@
     {
       "category": "muscle_tendon",
       "name": "FL_WristExtensor",
-      "field": "max_isometric_tendon_force_N",
+      "field": "max_isometric_muscle_force_along_tendon_N",
       "unit": "N",
-      "meaning": "Maximum isometric force projected along the tendon; do not multiply by pennation cosine twice.",
+      "meaning": "Maximum isometric muscle force along the tendon direction (F0). The pennation projection is already included. This is not tendon failure strength or a force ceiling; do not multiply by cos(alpha) again.",
       "original": 825.3025003070337,
       "applied": 93.48427427318677,
       "source": "Author’s nine-group forelimb parameter table. In Results_Function.m, tendon-projected force F0 = 2.3 × 9.806 × PCSA × cos(PA), with PCSA in cm², PA the pennation angle and F0 in N. Tendon slack length is taken from the source table. Data/Original_Study_Data/forelimb/forelimb_9groups_parameters.json"
@@ -4492,7 +4492,7 @@
       "name": "FL_WristExtensor",
       "field": "tendon_strain_at_max_force",
       "unit": "1",
-      "meaning": "Tendon extension/slack length at one maximum isometric tendon force.",
+      "meaning": "Tendon strain when tension equals F0, the maximum isometric muscle force along the tendon direction.",
       "original": null,
       "applied": 0.04,
       "source": "Author’s nine-group forelimb parameter table. In Results_Function.m, tendon-projected force F0 = 2.3 × 9.806 × PCSA × cos(PA), with PCSA in cm², PA the pennation angle and F0 in N. Tendon slack length is taken from the source table. Data/Original_Study_Data/forelimb/forelimb_9groups_parameters.json"
@@ -4582,9 +4582,9 @@
     {
       "category": "muscle_tendon",
       "name": "FL_ShoulderFlexor",
-      "field": "max_isometric_tendon_force_N",
+      "field": "max_isometric_muscle_force_along_tendon_N",
       "unit": "N",
-      "meaning": "Maximum isometric force projected along the tendon; do not multiply by pennation cosine twice.",
+      "meaning": "Maximum isometric muscle force along the tendon direction (F0). The pennation projection is already included. This is not tendon failure strength or a force ceiling; do not multiply by cos(alpha) again.",
       "original": 60.74692220722504,
       "applied": 69.41141750222351,
       "source": "Author’s nine-group forelimb parameter table. In Results_Function.m, tendon-projected force F0 = 2.3 × 9.806 × PCSA × cos(PA), with PCSA in cm², PA the pennation angle and F0 in N. Tendon slack length is taken from the source table. Data/Original_Study_Data/forelimb/forelimb_9groups_parameters.json"
@@ -4626,7 +4626,7 @@
       "name": "FL_ShoulderFlexor",
       "field": "tendon_strain_at_max_force",
       "unit": "1",
-      "meaning": "Tendon extension/slack length at one maximum isometric tendon force.",
+      "meaning": "Tendon strain when tension equals F0, the maximum isometric muscle force along the tendon direction.",
       "original": null,
       "applied": 0.04,
       "source": "Author’s nine-group forelimb parameter table. In Results_Function.m, tendon-projected force F0 = 2.3 × 9.806 × PCSA × cos(PA), with PCSA in cm², PA the pennation angle and F0 in N. Tendon slack length is taken from the source table. Data/Original_Study_Data/forelimb/forelimb_9groups_parameters.json"
@@ -4716,9 +4716,9 @@
     {
       "category": "muscle_tendon",
       "name": "FL_TricepsBrachiiLong",
-      "field": "max_isometric_tendon_force_N",
+      "field": "max_isometric_muscle_force_along_tendon_N",
       "unit": "N",
-      "meaning": "Maximum isometric force projected along the tendon; do not multiply by pennation cosine twice.",
+      "meaning": "Maximum isometric muscle force along the tendon direction (F0). The pennation projection is already included. This is not tendon failure strength or a force ceiling; do not multiply by cos(alpha) again.",
       "original": 201.9567711476709,
       "applied": 189.10697126523593,
       "source": "Author’s nine-group forelimb parameter table. In Results_Function.m, tendon-projected force F0 = 2.3 × 9.806 × PCSA × cos(PA), with PCSA in cm², PA the pennation angle and F0 in N. Tendon slack length is taken from the source table. Data/Original_Study_Data/forelimb/forelimb_9groups_parameters.json"
@@ -4760,7 +4760,7 @@
       "name": "FL_TricepsBrachiiLong",
       "field": "tendon_strain_at_max_force",
       "unit": "1",
-      "meaning": "Tendon extension/slack length at one maximum isometric tendon force.",
+      "meaning": "Tendon strain when tension equals F0, the maximum isometric muscle force along the tendon direction.",
       "original": null,
       "applied": 0.04,
       "source": "Author’s nine-group forelimb parameter table. In Results_Function.m, tendon-projected force F0 = 2.3 × 9.806 × PCSA × cos(PA), with PCSA in cm², PA the pennation angle and F0 in N. Tendon slack length is taken from the source table. Data/Original_Study_Data/forelimb/forelimb_9groups_parameters.json"
@@ -4850,9 +4850,9 @@
     {
       "category": "muscle_tendon",
       "name": "FR_ShoulderExtensor",
-      "field": "max_isometric_tendon_force_N",
+      "field": "max_isometric_muscle_force_along_tendon_N",
       "unit": "N",
-      "meaning": "Maximum isometric force projected along the tendon; do not multiply by pennation cosine twice.",
+      "meaning": "Maximum isometric muscle force along the tendon direction (F0). The pennation projection is already included. This is not tendon failure strength or a force ceiling; do not multiply by cos(alpha) again.",
       "original": 563.2917457828182,
       "applied": 536.9727865899736,
       "source": "Author’s nine-group forelimb parameter table. In Results_Function.m, tendon-projected force F0 = 2.3 × 9.806 × PCSA × cos(PA), with PCSA in cm², PA the pennation angle and F0 in N. Tendon slack length is taken from the source table. Data/Original_Study_Data/forelimb/forelimb_9groups_parameters.json"
@@ -4894,7 +4894,7 @@
       "name": "FR_ShoulderExtensor",
       "field": "tendon_strain_at_max_force",
       "unit": "1",
-      "meaning": "Tendon extension/slack length at one maximum isometric tendon force.",
+      "meaning": "Tendon strain when tension equals F0, the maximum isometric muscle force along the tendon direction.",
       "original": null,
       "applied": 0.04,
       "source": "Author’s nine-group forelimb parameter table. In Results_Function.m, tendon-projected force F0 = 2.3 × 9.806 × PCSA × cos(PA), with PCSA in cm², PA the pennation angle and F0 in N. Tendon slack length is taken from the source table. Data/Original_Study_Data/forelimb/forelimb_9groups_parameters.json"
@@ -4984,9 +4984,9 @@
     {
       "category": "muscle_tendon",
       "name": "FR_ElbowExtensor",
-      "field": "max_isometric_tendon_force_N",
+      "field": "max_isometric_muscle_force_along_tendon_N",
       "unit": "N",
-      "meaning": "Maximum isometric force projected along the tendon; do not multiply by pennation cosine twice.",
+      "meaning": "Maximum isometric muscle force along the tendon direction (F0). The pennation projection is already included. This is not tendon failure strength or a force ceiling; do not multiply by cos(alpha) again.",
       "original": 124.06863293522338,
       "applied": 125.72991797795375,
       "source": "Author’s nine-group forelimb parameter table. In Results_Function.m, tendon-projected force F0 = 2.3 × 9.806 × PCSA × cos(PA), with PCSA in cm², PA the pennation angle and F0 in N. Tendon slack length is taken from the source table. Data/Original_Study_Data/forelimb/forelimb_9groups_parameters.json"
@@ -5028,7 +5028,7 @@
       "name": "FR_ElbowExtensor",
       "field": "tendon_strain_at_max_force",
       "unit": "1",
-      "meaning": "Tendon extension/slack length at one maximum isometric tendon force.",
+      "meaning": "Tendon strain when tension equals F0, the maximum isometric muscle force along the tendon direction.",
       "original": null,
       "applied": 0.04,
       "source": "Author’s nine-group forelimb parameter table. In Results_Function.m, tendon-projected force F0 = 2.3 × 9.806 × PCSA × cos(PA), with PCSA in cm², PA the pennation angle and F0 in N. Tendon slack length is taken from the source table. Data/Original_Study_Data/forelimb/forelimb_9groups_parameters.json"
@@ -5118,9 +5118,9 @@
     {
       "category": "muscle_tendon",
       "name": "FR_BicepsBrachii",
-      "field": "max_isometric_tendon_force_N",
+      "field": "max_isometric_muscle_force_along_tendon_N",
       "unit": "N",
-      "meaning": "Maximum isometric force projected along the tendon; do not multiply by pennation cosine twice.",
+      "meaning": "Maximum isometric muscle force along the tendon direction (F0). The pennation projection is already included. This is not tendon failure strength or a force ceiling; do not multiply by cos(alpha) again.",
       "original": 50.419326616742886,
       "applied": 56.95816789224988,
       "source": "Author’s nine-group forelimb parameter table. In Results_Function.m, tendon-projected force F0 = 2.3 × 9.806 × PCSA × cos(PA), with PCSA in cm², PA the pennation angle and F0 in N. Tendon slack length is taken from the source table. Data/Original_Study_Data/forelimb/forelimb_9groups_parameters.json"
@@ -5162,7 +5162,7 @@
       "name": "FR_BicepsBrachii",
       "field": "tendon_strain_at_max_force",
       "unit": "1",
-      "meaning": "Tendon extension/slack length at one maximum isometric tendon force.",
+      "meaning": "Tendon strain when tension equals F0, the maximum isometric muscle force along the tendon direction.",
       "original": null,
       "applied": 0.04,
       "source": "Author’s nine-group forelimb parameter table. In Results_Function.m, tendon-projected force F0 = 2.3 × 9.806 × PCSA × cos(PA), with PCSA in cm², PA the pennation angle and F0 in N. Tendon slack length is taken from the source table. Data/Original_Study_Data/forelimb/forelimb_9groups_parameters.json"
@@ -5252,9 +5252,9 @@
     {
       "category": "muscle_tendon",
       "name": "FR_ElbowFlexor",
-      "field": "max_isometric_tendon_force_N",
+      "field": "max_isometric_muscle_force_along_tendon_N",
       "unit": "N",
-      "meaning": "Maximum isometric force projected along the tendon; do not multiply by pennation cosine twice.",
+      "meaning": "Maximum isometric muscle force along the tendon direction (F0). The pennation projection is already included. This is not tendon failure strength or a force ceiling; do not multiply by cos(alpha) again.",
       "original": 55.534105298029274,
       "applied": 61.029495040345,
       "source": "Author’s nine-group forelimb parameter table. In Results_Function.m, tendon-projected force F0 = 2.3 × 9.806 × PCSA × cos(PA), with PCSA in cm², PA the pennation angle and F0 in N. Tendon slack length is taken from the source table. Data/Original_Study_Data/forelimb/forelimb_9groups_parameters.json"
@@ -5296,7 +5296,7 @@
       "name": "FR_ElbowFlexor",
       "field": "tendon_strain_at_max_force",
       "unit": "1",
-      "meaning": "Tendon extension/slack length at one maximum isometric tendon force.",
+      "meaning": "Tendon strain when tension equals F0, the maximum isometric muscle force along the tendon direction.",
       "original": null,
       "applied": 0.04,
       "source": "Author’s nine-group forelimb parameter table. In Results_Function.m, tendon-projected force F0 = 2.3 × 9.806 × PCSA × cos(PA), with PCSA in cm², PA the pennation angle and F0 in N. Tendon slack length is taken from the source table. Data/Original_Study_Data/forelimb/forelimb_9groups_parameters.json"
@@ -5386,9 +5386,9 @@
     {
       "category": "muscle_tendon",
       "name": "FR_ElbowFlexorWristFlexor",
-      "field": "max_isometric_tendon_force_N",
+      "field": "max_isometric_muscle_force_along_tendon_N",
       "unit": "N",
-      "meaning": "Maximum isometric force projected along the tendon; do not multiply by pennation cosine twice.",
+      "meaning": "Maximum isometric muscle force along the tendon direction (F0). The pennation projection is already included. This is not tendon failure strength or a force ceiling; do not multiply by cos(alpha) again.",
       "original": 97.32103768862663,
       "applied": 21.357653856823912,
       "source": "Author’s nine-group forelimb parameter table. In Results_Function.m, tendon-projected force F0 = 2.3 × 9.806 × PCSA × cos(PA), with PCSA in cm², PA the pennation angle and F0 in N. Tendon slack length is taken from the source table. Data/Original_Study_Data/forelimb/forelimb_9groups_parameters.json"
@@ -5430,7 +5430,7 @@
       "name": "FR_ElbowFlexorWristFlexor",
       "field": "tendon_strain_at_max_force",
       "unit": "1",
-      "meaning": "Tendon extension/slack length at one maximum isometric tendon force.",
+      "meaning": "Tendon strain when tension equals F0, the maximum isometric muscle force along the tendon direction.",
       "original": null,
       "applied": 0.04,
       "source": "Author’s nine-group forelimb parameter table. In Results_Function.m, tendon-projected force F0 = 2.3 × 9.806 × PCSA × cos(PA), with PCSA in cm², PA the pennation angle and F0 in N. Tendon slack length is taken from the source table. Data/Original_Study_Data/forelimb/forelimb_9groups_parameters.json"
@@ -5520,9 +5520,9 @@
     {
       "category": "muscle_tendon",
       "name": "FR_WristFlexor",
-      "field": "max_isometric_tendon_force_N",
+      "field": "max_isometric_muscle_force_along_tendon_N",
       "unit": "N",
-      "meaning": "Maximum isometric force projected along the tendon; do not multiply by pennation cosine twice.",
+      "meaning": "Maximum isometric muscle force along the tendon direction (F0). The pennation projection is already included. This is not tendon failure strength or a force ceiling; do not multiply by cos(alpha) again.",
       "original": 11.3888980105689,
       "applied": 11.387722858664116,
       "source": "Author’s nine-group forelimb parameter table. In Results_Function.m, tendon-projected force F0 = 2.3 × 9.806 × PCSA × cos(PA), with PCSA in cm², PA the pennation angle and F0 in N. Tendon slack length is taken from the source table. Data/Original_Study_Data/forelimb/forelimb_9groups_parameters.json"
@@ -5564,7 +5564,7 @@
       "name": "FR_WristFlexor",
       "field": "tendon_strain_at_max_force",
       "unit": "1",
-      "meaning": "Tendon extension/slack length at one maximum isometric tendon force.",
+      "meaning": "Tendon strain when tension equals F0, the maximum isometric muscle force along the tendon direction.",
       "original": null,
       "applied": 0.04,
       "source": "Author’s nine-group forelimb parameter table. In Results_Function.m, tendon-projected force F0 = 2.3 × 9.806 × PCSA × cos(PA), with PCSA in cm², PA the pennation angle and F0 in N. Tendon slack length is taken from the source table. Data/Original_Study_Data/forelimb/forelimb_9groups_parameters.json"
@@ -5654,9 +5654,9 @@
     {
       "category": "muscle_tendon",
       "name": "FR_WristExtensor",
-      "field": "max_isometric_tendon_force_N",
+      "field": "max_isometric_muscle_force_along_tendon_N",
       "unit": "N",
-      "meaning": "Maximum isometric force projected along the tendon; do not multiply by pennation cosine twice.",
+      "meaning": "Maximum isometric muscle force along the tendon direction (F0). The pennation projection is already included. This is not tendon failure strength or a force ceiling; do not multiply by cos(alpha) again.",
       "original": 825.3025003070337,
       "applied": 93.48427427318677,
       "source": "Author’s nine-group forelimb parameter table. In Results_Function.m, tendon-projected force F0 = 2.3 × 9.806 × PCSA × cos(PA), with PCSA in cm², PA the pennation angle and F0 in N. Tendon slack length is taken from the source table. Data/Original_Study_Data/forelimb/forelimb_9groups_parameters.json"
@@ -5698,7 +5698,7 @@
       "name": "FR_WristExtensor",
       "field": "tendon_strain_at_max_force",
       "unit": "1",
-      "meaning": "Tendon extension/slack length at one maximum isometric tendon force.",
+      "meaning": "Tendon strain when tension equals F0, the maximum isometric muscle force along the tendon direction.",
       "original": null,
       "applied": 0.04,
       "source": "Author’s nine-group forelimb parameter table. In Results_Function.m, tendon-projected force F0 = 2.3 × 9.806 × PCSA × cos(PA), with PCSA in cm², PA the pennation angle and F0 in N. Tendon slack length is taken from the source table. Data/Original_Study_Data/forelimb/forelimb_9groups_parameters.json"
@@ -5788,9 +5788,9 @@
     {
       "category": "muscle_tendon",
       "name": "FR_ShoulderFlexor",
-      "field": "max_isometric_tendon_force_N",
+      "field": "max_isometric_muscle_force_along_tendon_N",
       "unit": "N",
-      "meaning": "Maximum isometric force projected along the tendon; do not multiply by pennation cosine twice.",
+      "meaning": "Maximum isometric muscle force along the tendon direction (F0). The pennation projection is already included. This is not tendon failure strength or a force ceiling; do not multiply by cos(alpha) again.",
       "original": 60.74692220722504,
       "applied": 69.41141750222351,
       "source": "Author’s nine-group forelimb parameter table. In Results_Function.m, tendon-projected force F0 = 2.3 × 9.806 × PCSA × cos(PA), with PCSA in cm², PA the pennation angle and F0 in N. Tendon slack length is taken from the source table. Data/Original_Study_Data/forelimb/forelimb_9groups_parameters.json"
@@ -5832,7 +5832,7 @@
       "name": "FR_ShoulderFlexor",
       "field": "tendon_strain_at_max_force",
       "unit": "1",
-      "meaning": "Tendon extension/slack length at one maximum isometric tendon force.",
+      "meaning": "Tendon strain when tension equals F0, the maximum isometric muscle force along the tendon direction.",
       "original": null,
       "applied": 0.04,
       "source": "Author’s nine-group forelimb parameter table. In Results_Function.m, tendon-projected force F0 = 2.3 × 9.806 × PCSA × cos(PA), with PCSA in cm², PA the pennation angle and F0 in N. Tendon slack length is taken from the source table. Data/Original_Study_Data/forelimb/forelimb_9groups_parameters.json"
@@ -5922,9 +5922,9 @@
     {
       "category": "muscle_tendon",
       "name": "FR_TricepsBrachiiLong",
-      "field": "max_isometric_tendon_force_N",
+      "field": "max_isometric_muscle_force_along_tendon_N",
       "unit": "N",
-      "meaning": "Maximum isometric force projected along the tendon; do not multiply by pennation cosine twice.",
+      "meaning": "Maximum isometric muscle force along the tendon direction (F0). The pennation projection is already included. This is not tendon failure strength or a force ceiling; do not multiply by cos(alpha) again.",
       "original": 201.9567711476709,
       "applied": 189.10697126523593,
       "source": "Author’s nine-group forelimb parameter table. In Results_Function.m, tendon-projected force F0 = 2.3 × 9.806 × PCSA × cos(PA), with PCSA in cm², PA the pennation angle and F0 in N. Tendon slack length is taken from the source table. Data/Original_Study_Data/forelimb/forelimb_9groups_parameters.json"
@@ -5966,7 +5966,7 @@
       "name": "FR_TricepsBrachiiLong",
       "field": "tendon_strain_at_max_force",
       "unit": "1",
-      "meaning": "Tendon extension/slack length at one maximum isometric tendon force.",
+      "meaning": "Tendon strain when tension equals F0, the maximum isometric muscle force along the tendon direction.",
       "original": null,
       "applied": 0.04,
       "source": "Author’s nine-group forelimb parameter table. In Results_Function.m, tendon-projected force F0 = 2.3 × 9.806 × PCSA × cos(PA), with PCSA in cm², PA the pennation angle and F0 in N. Tendon slack length is taken from the source table. Data/Original_Study_Data/forelimb/forelimb_9groups_parameters.json"
@@ -6056,9 +6056,9 @@
     {
       "category": "muscle_tendon",
       "name": "FL_S_C3",
-      "field": "max_isometric_tendon_force_N",
+      "field": "max_isometric_muscle_force_along_tendon_N",
       "unit": "N",
-      "meaning": "Maximum isometric force projected along the tendon; do not multiply by pennation cosine twice.",
+      "meaning": "Maximum isometric muscle force along the tendon direction (F0). The pennation projection is already included. This is not tendon failure strength or a force ceiling; do not multiply by cos(alpha) again.",
       "original": null,
       "applied": 3.8436555841564193,
       "source": "No verified one-to-one numerical source is established for this added channel. Applied estimates are in Data/Model_Parameters/muscle_tendon.py; anatomical source records are in Data/Original_Study_Data/additional_muscles/."
@@ -6100,7 +6100,7 @@
       "name": "FL_S_C3",
       "field": "tendon_strain_at_max_force",
       "unit": "1",
-      "meaning": "Tendon extension/slack length at one maximum isometric tendon force.",
+      "meaning": "Tendon strain when tension equals F0, the maximum isometric muscle force along the tendon direction.",
       "original": null,
       "applied": 0.04,
       "source": "No verified one-to-one numerical source is established for this added channel. Applied estimates are in Data/Model_Parameters/muscle_tendon.py; anatomical source records are in Data/Original_Study_Data/additional_muscles/."
@@ -6190,9 +6190,9 @@
     {
       "category": "muscle_tendon",
       "name": "FR_S_C3",
-      "field": "max_isometric_tendon_force_N",
+      "field": "max_isometric_muscle_force_along_tendon_N",
       "unit": "N",
-      "meaning": "Maximum isometric force projected along the tendon; do not multiply by pennation cosine twice.",
+      "meaning": "Maximum isometric muscle force along the tendon direction (F0). The pennation projection is already included. This is not tendon failure strength or a force ceiling; do not multiply by cos(alpha) again.",
       "original": null,
       "applied": 3.8436555841564193,
       "source": "No verified one-to-one numerical source is established for this added channel. Applied estimates are in Data/Model_Parameters/muscle_tendon.py; anatomical source records are in Data/Original_Study_Data/additional_muscles/."
@@ -6234,7 +6234,7 @@
       "name": "FR_S_C3",
       "field": "tendon_strain_at_max_force",
       "unit": "1",
-      "meaning": "Tendon extension/slack length at one maximum isometric tendon force.",
+      "meaning": "Tendon strain when tension equals F0, the maximum isometric muscle force along the tendon direction.",
       "original": null,
       "applied": 0.04,
       "source": "No verified one-to-one numerical source is established for this added channel. Applied estimates are in Data/Model_Parameters/muscle_tendon.py; anatomical source records are in Data/Original_Study_Data/additional_muscles/."
@@ -6324,9 +6324,9 @@
     {
       "category": "muscle_tendon",
       "name": "FL_S_C4",
-      "field": "max_isometric_tendon_force_N",
+      "field": "max_isometric_muscle_force_along_tendon_N",
       "unit": "N",
-      "meaning": "Maximum isometric force projected along the tendon; do not multiply by pennation cosine twice.",
+      "meaning": "Maximum isometric muscle force along the tendon direction (F0). The pennation projection is already included. This is not tendon failure strength or a force ceiling; do not multiply by cos(alpha) again.",
       "original": null,
       "applied": 4.105006139702811,
       "source": "No verified one-to-one numerical source is established for this added channel. Applied estimates are in Data/Model_Parameters/muscle_tendon.py; anatomical source records are in Data/Original_Study_Data/additional_muscles/."
@@ -6368,7 +6368,7 @@
       "name": "FL_S_C4",
       "field": "tendon_strain_at_max_force",
       "unit": "1",
-      "meaning": "Tendon extension/slack length at one maximum isometric tendon force.",
+      "meaning": "Tendon strain when tension equals F0, the maximum isometric muscle force along the tendon direction.",
       "original": null,
       "applied": 0.04,
       "source": "No verified one-to-one numerical source is established for this added channel. Applied estimates are in Data/Model_Parameters/muscle_tendon.py; anatomical source records are in Data/Original_Study_Data/additional_muscles/."
@@ -6458,9 +6458,9 @@
     {
       "category": "muscle_tendon",
       "name": "FR_S_C4",
-      "field": "max_isometric_tendon_force_N",
+      "field": "max_isometric_muscle_force_along_tendon_N",
       "unit": "N",
-      "meaning": "Maximum isometric force projected along the tendon; do not multiply by pennation cosine twice.",
+      "meaning": "Maximum isometric muscle force along the tendon direction (F0). The pennation projection is already included. This is not tendon failure strength or a force ceiling; do not multiply by cos(alpha) again.",
       "original": null,
       "applied": 4.105006139702811,
       "source": "No verified one-to-one numerical source is established for this added channel. Applied estimates are in Data/Model_Parameters/muscle_tendon.py; anatomical source records are in Data/Original_Study_Data/additional_muscles/."
@@ -6502,7 +6502,7 @@
       "name": "FR_S_C4",
       "field": "tendon_strain_at_max_force",
       "unit": "1",
-      "meaning": "Tendon extension/slack length at one maximum isometric tendon force.",
+      "meaning": "Tendon strain when tension equals F0, the maximum isometric muscle force along the tendon direction.",
       "original": null,
       "applied": 0.04,
       "source": "No verified one-to-one numerical source is established for this added channel. Applied estimates are in Data/Model_Parameters/muscle_tendon.py; anatomical source records are in Data/Original_Study_Data/additional_muscles/."
@@ -6592,9 +6592,9 @@
     {
       "category": "muscle_tendon",
       "name": "FL_S_C5",
-      "field": "max_isometric_tendon_force_N",
+      "field": "max_isometric_muscle_force_along_tendon_N",
       "unit": "N",
-      "meaning": "Maximum isometric force projected along the tendon; do not multiply by pennation cosine twice.",
+      "meaning": "Maximum isometric muscle force along the tendon direction (F0). The pennation projection is already included. This is not tendon failure strength or a force ceiling; do not multiply by cos(alpha) again.",
       "original": null,
       "applied": 5.83682907386942,
       "source": "No verified one-to-one numerical source is established for this added channel. Applied estimates are in Data/Model_Parameters/muscle_tendon.py; anatomical source records are in Data/Original_Study_Data/additional_muscles/."
@@ -6636,7 +6636,7 @@
       "name": "FL_S_C5",
       "field": "tendon_strain_at_max_force",
       "unit": "1",
-      "meaning": "Tendon extension/slack length at one maximum isometric tendon force.",
+      "meaning": "Tendon strain when tension equals F0, the maximum isometric muscle force along the tendon direction.",
       "original": null,
       "applied": 0.04,
       "source": "No verified one-to-one numerical source is established for this added channel. Applied estimates are in Data/Model_Parameters/muscle_tendon.py; anatomical source records are in Data/Original_Study_Data/additional_muscles/."
@@ -6726,9 +6726,9 @@
     {
       "category": "muscle_tendon",
       "name": "FR_S_C5",
-      "field": "max_isometric_tendon_force_N",
+      "field": "max_isometric_muscle_force_along_tendon_N",
       "unit": "N",
-      "meaning": "Maximum isometric force projected along the tendon; do not multiply by pennation cosine twice.",
+      "meaning": "Maximum isometric muscle force along the tendon direction (F0). The pennation projection is already included. This is not tendon failure strength or a force ceiling; do not multiply by cos(alpha) again.",
       "original": null,
       "applied": 5.83682907386942,
       "source": "No verified one-to-one numerical source is established for this added channel. Applied estimates are in Data/Model_Parameters/muscle_tendon.py; anatomical source records are in Data/Original_Study_Data/additional_muscles/."
@@ -6770,7 +6770,7 @@
       "name": "FR_S_C5",
       "field": "tendon_strain_at_max_force",
       "unit": "1",
-      "meaning": "Tendon extension/slack length at one maximum isometric tendon force.",
+      "meaning": "Tendon strain when tension equals F0, the maximum isometric muscle force along the tendon direction.",
       "original": null,
       "applied": 0.04,
       "source": "No verified one-to-one numerical source is established for this added channel. Applied estimates are in Data/Model_Parameters/muscle_tendon.py; anatomical source records are in Data/Original_Study_Data/additional_muscles/."
@@ -6860,9 +6860,9 @@
     {
       "category": "muscle_tendon",
       "name": "FL_S_C6",
-      "field": "max_isometric_tendon_force_N",
+      "field": "max_isometric_muscle_force_along_tendon_N",
       "unit": "N",
-      "meaning": "Maximum isometric force projected along the tendon; do not multiply by pennation cosine twice.",
+      "meaning": "Maximum isometric muscle force along the tendon direction (F0). The pennation projection is already included. This is not tendon failure strength or a force ceiling; do not multiply by cos(alpha) again.",
       "original": null,
       "applied": 5.733190060463092,
       "source": "No verified one-to-one numerical source is established for this added channel. Applied estimates are in Data/Model_Parameters/muscle_tendon.py; anatomical source records are in Data/Original_Study_Data/additional_muscles/."
@@ -6904,7 +6904,7 @@
       "name": "FL_S_C6",
       "field": "tendon_strain_at_max_force",
       "unit": "1",
-      "meaning": "Tendon extension/slack length at one maximum isometric tendon force.",
+      "meaning": "Tendon strain when tension equals F0, the maximum isometric muscle force along the tendon direction.",
       "original": null,
       "applied": 0.04,
       "source": "No verified one-to-one numerical source is established for this added channel. Applied estimates are in Data/Model_Parameters/muscle_tendon.py; anatomical source records are in Data/Original_Study_Data/additional_muscles/."
@@ -6994,9 +6994,9 @@
     {
       "category": "muscle_tendon",
       "name": "FR_S_C6",
-      "field": "max_isometric_tendon_force_N",
+      "field": "max_isometric_muscle_force_along_tendon_N",
       "unit": "N",
-      "meaning": "Maximum isometric force projected along the tendon; do not multiply by pennation cosine twice.",
+      "meaning": "Maximum isometric muscle force along the tendon direction (F0). The pennation projection is already included. This is not tendon failure strength or a force ceiling; do not multiply by cos(alpha) again.",
       "original": null,
       "applied": 5.733190060463092,
       "source": "No verified one-to-one numerical source is established for this added channel. Applied estimates are in Data/Model_Parameters/muscle_tendon.py; anatomical source records are in Data/Original_Study_Data/additional_muscles/."
@@ -7038,7 +7038,7 @@
       "name": "FR_S_C6",
       "field": "tendon_strain_at_max_force",
       "unit": "1",
-      "meaning": "Tendon extension/slack length at one maximum isometric tendon force.",
+      "meaning": "Tendon strain when tension equals F0, the maximum isometric muscle force along the tendon direction.",
       "original": null,
       "applied": 0.04,
       "source": "No verified one-to-one numerical source is established for this added channel. Applied estimates are in Data/Model_Parameters/muscle_tendon.py; anatomical source records are in Data/Original_Study_Data/additional_muscles/."
@@ -7128,9 +7128,9 @@
     {
       "category": "muscle_tendon",
       "name": "FL_S_C7",
-      "field": "max_isometric_tendon_force_N",
+      "field": "max_isometric_muscle_force_along_tendon_N",
       "unit": "N",
-      "meaning": "Maximum isometric force projected along the tendon; do not multiply by pennation cosine twice.",
+      "meaning": "Maximum isometric muscle force along the tendon direction (F0). The pennation projection is already included. This is not tendon failure strength or a force ceiling; do not multiply by cos(alpha) again.",
       "original": null,
       "applied": 5.199974846560971,
       "source": "No verified one-to-one numerical source is established for this added channel. Applied estimates are in Data/Model_Parameters/muscle_tendon.py; anatomical source records are in Data/Original_Study_Data/additional_muscles/."
@@ -7172,7 +7172,7 @@
       "name": "FL_S_C7",
       "field": "tendon_strain_at_max_force",
       "unit": "1",
-      "meaning": "Tendon extension/slack length at one maximum isometric tendon force.",
+      "meaning": "Tendon strain when tension equals F0, the maximum isometric muscle force along the tendon direction.",
       "original": null,
       "applied": 0.04,
       "source": "No verified one-to-one numerical source is established for this added channel. Applied estimates are in Data/Model_Parameters/muscle_tendon.py; anatomical source records are in Data/Original_Study_Data/additional_muscles/."
@@ -7262,9 +7262,9 @@
     {
       "category": "muscle_tendon",
       "name": "FR_S_C7",
-      "field": "max_isometric_tendon_force_N",
+      "field": "max_isometric_muscle_force_along_tendon_N",
       "unit": "N",
-      "meaning": "Maximum isometric force projected along the tendon; do not multiply by pennation cosine twice.",
+      "meaning": "Maximum isometric muscle force along the tendon direction (F0). The pennation projection is already included. This is not tendon failure strength or a force ceiling; do not multiply by cos(alpha) again.",
       "original": null,
       "applied": 5.199974846560971,
       "source": "No verified one-to-one numerical source is established for this added channel. Applied estimates are in Data/Model_Parameters/muscle_tendon.py; anatomical source records are in Data/Original_Study_Data/additional_muscles/."
@@ -7306,7 +7306,7 @@
       "name": "FR_S_C7",
       "field": "tendon_strain_at_max_force",
       "unit": "1",
-      "meaning": "Tendon extension/slack length at one maximum isometric tendon force.",
+      "meaning": "Tendon strain when tension equals F0, the maximum isometric muscle force along the tendon direction.",
       "original": null,
       "applied": 0.04,
       "source": "No verified one-to-one numerical source is established for this added channel. Applied estimates are in Data/Model_Parameters/muscle_tendon.py; anatomical source records are in Data/Original_Study_Data/additional_muscles/."
@@ -7396,9 +7396,9 @@
     {
       "category": "muscle_tendon",
       "name": "FL_S_T1",
-      "field": "max_isometric_tendon_force_N",
+      "field": "max_isometric_muscle_force_along_tendon_N",
       "unit": "N",
-      "meaning": "Maximum isometric force projected along the tendon; do not multiply by pennation cosine twice.",
+      "meaning": "Maximum isometric muscle force along the tendon direction (F0). The pennation projection is already included. This is not tendon failure strength or a force ceiling; do not multiply by cos(alpha) again.",
       "original": null,
       "applied": 6.609679077234169,
       "source": "No verified one-to-one numerical source is established for this added channel. Applied estimates are in Data/Model_Parameters/muscle_tendon.py; anatomical source records are in Data/Original_Study_Data/additional_muscles/."
@@ -7440,7 +7440,7 @@
       "name": "FL_S_T1",
       "field": "tendon_strain_at_max_force",
       "unit": "1",
-      "meaning": "Tendon extension/slack length at one maximum isometric tendon force.",
+      "meaning": "Tendon strain when tension equals F0, the maximum isometric muscle force along the tendon direction.",
       "original": null,
       "applied": 0.04,
       "source": "No verified one-to-one numerical source is established for this added channel. Applied estimates are in Data/Model_Parameters/muscle_tendon.py; anatomical source records are in Data/Original_Study_Data/additional_muscles/."
@@ -7530,9 +7530,9 @@
     {
       "category": "muscle_tendon",
       "name": "FR_S_T1",
-      "field": "max_isometric_tendon_force_N",
+      "field": "max_isometric_muscle_force_along_tendon_N",
       "unit": "N",
-      "meaning": "Maximum isometric force projected along the tendon; do not multiply by pennation cosine twice.",
+      "meaning": "Maximum isometric muscle force along the tendon direction (F0). The pennation projection is already included. This is not tendon failure strength or a force ceiling; do not multiply by cos(alpha) again.",
       "original": null,
       "applied": 6.609679077234169,
       "source": "No verified one-to-one numerical source is established for this added channel. Applied estimates are in Data/Model_Parameters/muscle_tendon.py; anatomical source records are in Data/Original_Study_Data/additional_muscles/."
@@ -7574,7 +7574,7 @@
       "name": "FR_S_T1",
       "field": "tendon_strain_at_max_force",
       "unit": "1",
-      "meaning": "Tendon extension/slack length at one maximum isometric tendon force.",
+      "meaning": "Tendon strain when tension equals F0, the maximum isometric muscle force along the tendon direction.",
       "original": null,
       "applied": 0.04,
       "source": "No verified one-to-one numerical source is established for this added channel. Applied estimates are in Data/Model_Parameters/muscle_tendon.py; anatomical source records are in Data/Original_Study_Data/additional_muscles/."
@@ -7664,9 +7664,9 @@
     {
       "category": "muscle_tendon",
       "name": "FL_S_T2",
-      "field": "max_isometric_tendon_force_N",
+      "field": "max_isometric_muscle_force_along_tendon_N",
       "unit": "N",
-      "meaning": "Maximum isometric force projected along the tendon; do not multiply by pennation cosine twice.",
+      "meaning": "Maximum isometric muscle force along the tendon direction (F0). The pennation projection is already included. This is not tendon failure strength or a force ceiling; do not multiply by cos(alpha) again.",
       "original": null,
       "applied": 3.1044071406731777,
       "source": "No verified one-to-one numerical source is established for this added channel. Applied estimates are in Data/Model_Parameters/muscle_tendon.py; anatomical source records are in Data/Original_Study_Data/additional_muscles/."
@@ -7708,7 +7708,7 @@
       "name": "FL_S_T2",
       "field": "tendon_strain_at_max_force",
       "unit": "1",
-      "meaning": "Tendon extension/slack length at one maximum isometric tendon force.",
+      "meaning": "Tendon strain when tension equals F0, the maximum isometric muscle force along the tendon direction.",
       "original": null,
       "applied": 0.04,
       "source": "No verified one-to-one numerical source is established for this added channel. Applied estimates are in Data/Model_Parameters/muscle_tendon.py; anatomical source records are in Data/Original_Study_Data/additional_muscles/."
@@ -7798,9 +7798,9 @@
     {
       "category": "muscle_tendon",
       "name": "FR_S_T2",
-      "field": "max_isometric_tendon_force_N",
+      "field": "max_isometric_muscle_force_along_tendon_N",
       "unit": "N",
-      "meaning": "Maximum isometric force projected along the tendon; do not multiply by pennation cosine twice.",
+      "meaning": "Maximum isometric muscle force along the tendon direction (F0). The pennation projection is already included. This is not tendon failure strength or a force ceiling; do not multiply by cos(alpha) again.",
       "original": null,
       "applied": 3.1044071406731777,
       "source": "No verified one-to-one numerical source is established for this added channel. Applied estimates are in Data/Model_Parameters/muscle_tendon.py; anatomical source records are in Data/Original_Study_Data/additional_muscles/."
@@ -7842,7 +7842,7 @@
       "name": "FR_S_T2",
       "field": "tendon_strain_at_max_force",
       "unit": "1",
-      "meaning": "Tendon extension/slack length at one maximum isometric tendon force.",
+      "meaning": "Tendon strain when tension equals F0, the maximum isometric muscle force along the tendon direction.",
       "original": null,
       "applied": 0.04,
       "source": "No verified one-to-one numerical source is established for this added channel. Applied estimates are in Data/Model_Parameters/muscle_tendon.py; anatomical source records are in Data/Original_Study_Data/additional_muscles/."
@@ -7932,9 +7932,9 @@
     {
       "category": "muscle_tendon",
       "name": "FL_S_T3",
-      "field": "max_isometric_tendon_force_N",
+      "field": "max_isometric_muscle_force_along_tendon_N",
       "unit": "N",
-      "meaning": "Maximum isometric force projected along the tendon; do not multiply by pennation cosine twice.",
+      "meaning": "Maximum isometric muscle force along the tendon direction (F0). The pennation projection is already included. This is not tendon failure strength or a force ceiling; do not multiply by cos(alpha) again.",
       "original": null,
       "applied": 1.621819403210236,
       "source": "No verified one-to-one numerical source is established for this added channel. Applied estimates are in Data/Model_Parameters/muscle_tendon.py; anatomical source records are in Data/Original_Study_Data/additional_muscles/."
@@ -7976,7 +7976,7 @@
       "name": "FL_S_T3",
       "field": "tendon_strain_at_max_force",
       "unit": "1",
-      "meaning": "Tendon extension/slack length at one maximum isometric tendon force.",
+      "meaning": "Tendon strain when tension equals F0, the maximum isometric muscle force along the tendon direction.",
       "original": null,
       "applied": 0.04,
       "source": "No verified one-to-one numerical source is established for this added channel. Applied estimates are in Data/Model_Parameters/muscle_tendon.py; anatomical source records are in Data/Original_Study_Data/additional_muscles/."
@@ -8066,9 +8066,9 @@
     {
       "category": "muscle_tendon",
       "name": "FR_S_T3",
-      "field": "max_isometric_tendon_force_N",
+      "field": "max_isometric_muscle_force_along_tendon_N",
       "unit": "N",
-      "meaning": "Maximum isometric force projected along the tendon; do not multiply by pennation cosine twice.",
+      "meaning": "Maximum isometric muscle force along the tendon direction (F0). The pennation projection is already included. This is not tendon failure strength or a force ceiling; do not multiply by cos(alpha) again.",
       "original": null,
       "applied": 1.621819403210236,
       "source": "No verified one-to-one numerical source is established for this added channel. Applied estimates are in Data/Model_Parameters/muscle_tendon.py; anatomical source records are in Data/Original_Study_Data/additional_muscles/."
@@ -8110,7 +8110,7 @@
       "name": "FR_S_T3",
       "field": "tendon_strain_at_max_force",
       "unit": "1",
-      "meaning": "Tendon extension/slack length at one maximum isometric tendon force.",
+      "meaning": "Tendon strain when tension equals F0, the maximum isometric muscle force along the tendon direction.",
       "original": null,
       "applied": 0.04,
       "source": "No verified one-to-one numerical source is established for this added channel. Applied estimates are in Data/Model_Parameters/muscle_tendon.py; anatomical source records are in Data/Original_Study_Data/additional_muscles/."
@@ -8200,9 +8200,9 @@
     {
       "category": "muscle_tendon",
       "name": "FL_S_T4",
-      "field": "max_isometric_tendon_force_N",
+      "field": "max_isometric_muscle_force_along_tendon_N",
       "unit": "N",
-      "meaning": "Maximum isometric force projected along the tendon; do not multiply by pennation cosine twice.",
+      "meaning": "Maximum isometric muscle force along the tendon direction (F0). The pennation projection is already included. This is not tendon failure strength or a force ceiling; do not multiply by cos(alpha) again.",
       "original": null,
       "applied": 2.720372546139433,
       "source": "No verified one-to-one numerical source is established for this added channel. Applied estimates are in Data/Model_Parameters/muscle_tendon.py; anatomical source records are in Data/Original_Study_Data/additional_muscles/."
@@ -8244,7 +8244,7 @@
       "name": "FL_S_T4",
       "field": "tendon_strain_at_max_force",
       "unit": "1",
-      "meaning": "Tendon extension/slack length at one maximum isometric tendon force.",
+      "meaning": "Tendon strain when tension equals F0, the maximum isometric muscle force along the tendon direction.",
       "original": null,
       "applied": 0.04,
       "source": "No verified one-to-one numerical source is established for this added channel. Applied estimates are in Data/Model_Parameters/muscle_tendon.py; anatomical source records are in Data/Original_Study_Data/additional_muscles/."
@@ -8334,9 +8334,9 @@
     {
       "category": "muscle_tendon",
       "name": "FR_S_T4",
-      "field": "max_isometric_tendon_force_N",
+      "field": "max_isometric_muscle_force_along_tendon_N",
       "unit": "N",
-      "meaning": "Maximum isometric force projected along the tendon; do not multiply by pennation cosine twice.",
+      "meaning": "Maximum isometric muscle force along the tendon direction (F0). The pennation projection is already included. This is not tendon failure strength or a force ceiling; do not multiply by cos(alpha) again.",
       "original": null,
       "applied": 2.720372546139433,
       "source": "No verified one-to-one numerical source is established for this added channel. Applied estimates are in Data/Model_Parameters/muscle_tendon.py; anatomical source records are in Data/Original_Study_Data/additional_muscles/."
@@ -8378,7 +8378,7 @@
       "name": "FR_S_T4",
       "field": "tendon_strain_at_max_force",
       "unit": "1",
-      "meaning": "Tendon extension/slack length at one maximum isometric tendon force.",
+      "meaning": "Tendon strain when tension equals F0, the maximum isometric muscle force along the tendon direction.",
       "original": null,
       "applied": 0.04,
       "source": "No verified one-to-one numerical source is established for this added channel. Applied estimates are in Data/Model_Parameters/muscle_tendon.py; anatomical source records are in Data/Original_Study_Data/additional_muscles/."
@@ -8468,9 +8468,9 @@
     {
       "category": "muscle_tendon",
       "name": "FL_S_T5",
-      "field": "max_isometric_tendon_force_N",
+      "field": "max_isometric_muscle_force_along_tendon_N",
       "unit": "N",
-      "meaning": "Maximum isometric force projected along the tendon; do not multiply by pennation cosine twice.",
+      "meaning": "Maximum isometric muscle force along the tendon direction (F0). The pennation projection is already included. This is not tendon failure strength or a force ceiling; do not multiply by cos(alpha) again.",
       "original": null,
       "applied": 2.7647430769819774,
       "source": "No verified one-to-one numerical source is established for this added channel. Applied estimates are in Data/Model_Parameters/muscle_tendon.py; anatomical source records are in Data/Original_Study_Data/additional_muscles/."
@@ -8512,7 +8512,7 @@
       "name": "FL_S_T5",
       "field": "tendon_strain_at_max_force",
       "unit": "1",
-      "meaning": "Tendon extension/slack length at one maximum isometric tendon force.",
+      "meaning": "Tendon strain when tension equals F0, the maximum isometric muscle force along the tendon direction.",
       "original": null,
       "applied": 0.04,
       "source": "No verified one-to-one numerical source is established for this added channel. Applied estimates are in Data/Model_Parameters/muscle_tendon.py; anatomical source records are in Data/Original_Study_Data/additional_muscles/."
@@ -8602,9 +8602,9 @@
     {
       "category": "muscle_tendon",
       "name": "FR_S_T5",
-      "field": "max_isometric_tendon_force_N",
+      "field": "max_isometric_muscle_force_along_tendon_N",
       "unit": "N",
-      "meaning": "Maximum isometric force projected along the tendon; do not multiply by pennation cosine twice.",
+      "meaning": "Maximum isometric muscle force along the tendon direction (F0). The pennation projection is already included. This is not tendon failure strength or a force ceiling; do not multiply by cos(alpha) again.",
       "original": null,
       "applied": 2.7647430769819774,
       "source": "No verified one-to-one numerical source is established for this added channel. Applied estimates are in Data/Model_Parameters/muscle_tendon.py; anatomical source records are in Data/Original_Study_Data/additional_muscles/."
@@ -8646,7 +8646,7 @@
       "name": "FR_S_T5",
       "field": "tendon_strain_at_max_force",
       "unit": "1",
-      "meaning": "Tendon extension/slack length at one maximum isometric tendon force.",
+      "meaning": "Tendon strain when tension equals F0, the maximum isometric muscle force along the tendon direction.",
       "original": null,
       "applied": 0.04,
       "source": "No verified one-to-one numerical source is established for this added channel. Applied estimates are in Data/Model_Parameters/muscle_tendon.py; anatomical source records are in Data/Original_Study_Data/additional_muscles/."
@@ -8736,9 +8736,9 @@
     {
       "category": "muscle_tendon",
       "name": "FL_S_T6",
-      "field": "max_isometric_tendon_force_N",
+      "field": "max_isometric_muscle_force_along_tendon_N",
       "unit": "N",
-      "meaning": "Maximum isometric force projected along the tendon; do not multiply by pennation cosine twice.",
+      "meaning": "Maximum isometric muscle force along the tendon direction (F0). The pennation projection is already included. This is not tendon failure strength or a force ceiling; do not multiply by cos(alpha) again.",
       "original": null,
       "applied": 6.2516547938839855,
       "source": "No verified one-to-one numerical source is established for this added channel. Applied estimates are in Data/Model_Parameters/muscle_tendon.py; anatomical source records are in Data/Original_Study_Data/additional_muscles/."
@@ -8780,7 +8780,7 @@
       "name": "FL_S_T6",
       "field": "tendon_strain_at_max_force",
       "unit": "1",
-      "meaning": "Tendon extension/slack length at one maximum isometric tendon force.",
+      "meaning": "Tendon strain when tension equals F0, the maximum isometric muscle force along the tendon direction.",
       "original": null,
       "applied": 0.04,
       "source": "No verified one-to-one numerical source is established for this added channel. Applied estimates are in Data/Model_Parameters/muscle_tendon.py; anatomical source records are in Data/Original_Study_Data/additional_muscles/."
@@ -8870,9 +8870,9 @@
     {
       "category": "muscle_tendon",
       "name": "FR_S_T6",
-      "field": "max_isometric_tendon_force_N",
+      "field": "max_isometric_muscle_force_along_tendon_N",
       "unit": "N",
-      "meaning": "Maximum isometric force projected along the tendon; do not multiply by pennation cosine twice.",
+      "meaning": "Maximum isometric muscle force along the tendon direction (F0). The pennation projection is already included. This is not tendon failure strength or a force ceiling; do not multiply by cos(alpha) again.",
       "original": null,
       "applied": 6.2516547938839855,
       "source": "No verified one-to-one numerical source is established for this added channel. Applied estimates are in Data/Model_Parameters/muscle_tendon.py; anatomical source records are in Data/Original_Study_Data/additional_muscles/."
@@ -8914,7 +8914,7 @@
       "name": "FR_S_T6",
       "field": "tendon_strain_at_max_force",
       "unit": "1",
-      "meaning": "Tendon extension/slack length at one maximum isometric tendon force.",
+      "meaning": "Tendon strain when tension equals F0, the maximum isometric muscle force along the tendon direction.",
       "original": null,
       "applied": 0.04,
       "source": "No verified one-to-one numerical source is established for this added channel. Applied estimates are in Data/Model_Parameters/muscle_tendon.py; anatomical source records are in Data/Original_Study_Data/additional_muscles/."
@@ -9004,9 +9004,9 @@
     {
       "category": "muscle_tendon",
       "name": "FL_S_T7",
-      "field": "max_isometric_tendon_force_N",
+      "field": "max_isometric_muscle_force_along_tendon_N",
       "unit": "N",
-      "meaning": "Maximum isometric force projected along the tendon; do not multiply by pennation cosine twice.",
+      "meaning": "Maximum isometric muscle force along the tendon direction (F0). The pennation projection is already included. This is not tendon failure strength or a force ceiling; do not multiply by cos(alpha) again.",
       "original": null,
       "applied": 5.40708468957073,
       "source": "No verified one-to-one numerical source is established for this added channel. Applied estimates are in Data/Model_Parameters/muscle_tendon.py; anatomical source records are in Data/Original_Study_Data/additional_muscles/."
@@ -9048,7 +9048,7 @@
       "name": "FL_S_T7",
       "field": "tendon_strain_at_max_force",
       "unit": "1",
-      "meaning": "Tendon extension/slack length at one maximum isometric tendon force.",
+      "meaning": "Tendon strain when tension equals F0, the maximum isometric muscle force along the tendon direction.",
       "original": null,
       "applied": 0.04,
       "source": "No verified one-to-one numerical source is established for this added channel. Applied estimates are in Data/Model_Parameters/muscle_tendon.py; anatomical source records are in Data/Original_Study_Data/additional_muscles/."
@@ -9138,9 +9138,9 @@
     {
       "category": "muscle_tendon",
       "name": "FR_S_T7",
-      "field": "max_isometric_tendon_force_N",
+      "field": "max_isometric_muscle_force_along_tendon_N",
       "unit": "N",
-      "meaning": "Maximum isometric force projected along the tendon; do not multiply by pennation cosine twice.",
+      "meaning": "Maximum isometric muscle force along the tendon direction (F0). The pennation projection is already included. This is not tendon failure strength or a force ceiling; do not multiply by cos(alpha) again.",
       "original": null,
       "applied": 5.40708468957073,
       "source": "No verified one-to-one numerical source is established for this added channel. Applied estimates are in Data/Model_Parameters/muscle_tendon.py; anatomical source records are in Data/Original_Study_Data/additional_muscles/."
@@ -9182,7 +9182,7 @@
       "name": "FR_S_T7",
       "field": "tendon_strain_at_max_force",
       "unit": "1",
-      "meaning": "Tendon extension/slack length at one maximum isometric tendon force.",
+      "meaning": "Tendon strain when tension equals F0, the maximum isometric muscle force along the tendon direction.",
       "original": null,
       "applied": 0.04,
       "source": "No verified one-to-one numerical source is established for this added channel. Applied estimates are in Data/Model_Parameters/muscle_tendon.py; anatomical source records are in Data/Original_Study_Data/additional_muscles/."
@@ -9272,9 +9272,9 @@
     {
       "category": "muscle_tendon",
       "name": "FL_S_T8",
-      "field": "max_isometric_tendon_force_N",
+      "field": "max_isometric_muscle_force_along_tendon_N",
       "unit": "N",
-      "meaning": "Maximum isometric force projected along the tendon; do not multiply by pennation cosine twice.",
+      "meaning": "Maximum isometric muscle force along the tendon direction (F0). The pennation projection is already included. This is not tendon failure strength or a force ceiling; do not multiply by cos(alpha) again.",
       "original": null,
       "applied": 4.183070045638476,
       "source": "No verified one-to-one numerical source is established for this added channel. Applied estimates are in Data/Model_Parameters/muscle_tendon.py; anatomical source records are in Data/Original_Study_Data/additional_muscles/."
@@ -9316,7 +9316,7 @@
       "name": "FL_S_T8",
       "field": "tendon_strain_at_max_force",
       "unit": "1",
-      "meaning": "Tendon extension/slack length at one maximum isometric tendon force.",
+      "meaning": "Tendon strain when tension equals F0, the maximum isometric muscle force along the tendon direction.",
       "original": null,
       "applied": 0.04,
       "source": "No verified one-to-one numerical source is established for this added channel. Applied estimates are in Data/Model_Parameters/muscle_tendon.py; anatomical source records are in Data/Original_Study_Data/additional_muscles/."
@@ -9406,9 +9406,9 @@
     {
       "category": "muscle_tendon",
       "name": "FR_S_T8",
-      "field": "max_isometric_tendon_force_N",
+      "field": "max_isometric_muscle_force_along_tendon_N",
       "unit": "N",
-      "meaning": "Maximum isometric force projected along the tendon; do not multiply by pennation cosine twice.",
+      "meaning": "Maximum isometric muscle force along the tendon direction (F0). The pennation projection is already included. This is not tendon failure strength or a force ceiling; do not multiply by cos(alpha) again.",
       "original": null,
       "applied": 4.183070045638476,
       "source": "No verified one-to-one numerical source is established for this added channel. Applied estimates are in Data/Model_Parameters/muscle_tendon.py; anatomical source records are in Data/Original_Study_Data/additional_muscles/."
@@ -9450,7 +9450,7 @@
       "name": "FR_S_T8",
       "field": "tendon_strain_at_max_force",
       "unit": "1",
-      "meaning": "Tendon extension/slack length at one maximum isometric tendon force.",
+      "meaning": "Tendon strain when tension equals F0, the maximum isometric muscle force along the tendon direction.",
       "original": null,
       "applied": 0.04,
       "source": "No verified one-to-one numerical source is established for this added channel. Applied estimates are in Data/Model_Parameters/muscle_tendon.py; anatomical source records are in Data/Original_Study_Data/additional_muscles/."
@@ -9540,9 +9540,9 @@
     {
       "category": "muscle_tendon",
       "name": "FL_S_T9",
-      "field": "max_isometric_tendon_force_N",
+      "field": "max_isometric_muscle_force_along_tendon_N",
       "unit": "N",
-      "meaning": "Maximum isometric force projected along the tendon; do not multiply by pennation cosine twice.",
+      "meaning": "Maximum isometric muscle force along the tendon direction (F0). The pennation projection is already included. This is not tendon failure strength or a force ceiling; do not multiply by cos(alpha) again.",
       "original": null,
       "applied": 2.1512057367109354,
       "source": "No verified one-to-one numerical source is established for this added channel. Applied estimates are in Data/Model_Parameters/muscle_tendon.py; anatomical source records are in Data/Original_Study_Data/additional_muscles/."
@@ -9584,7 +9584,7 @@
       "name": "FL_S_T9",
       "field": "tendon_strain_at_max_force",
       "unit": "1",
-      "meaning": "Tendon extension/slack length at one maximum isometric tendon force.",
+      "meaning": "Tendon strain when tension equals F0, the maximum isometric muscle force along the tendon direction.",
       "original": null,
       "applied": 0.04,
       "source": "No verified one-to-one numerical source is established for this added channel. Applied estimates are in Data/Model_Parameters/muscle_tendon.py; anatomical source records are in Data/Original_Study_Data/additional_muscles/."
@@ -9674,9 +9674,9 @@
     {
       "category": "muscle_tendon",
       "name": "FR_S_T9",
-      "field": "max_isometric_tendon_force_N",
+      "field": "max_isometric_muscle_force_along_tendon_N",
       "unit": "N",
-      "meaning": "Maximum isometric force projected along the tendon; do not multiply by pennation cosine twice.",
+      "meaning": "Maximum isometric muscle force along the tendon direction (F0). The pennation projection is already included. This is not tendon failure strength or a force ceiling; do not multiply by cos(alpha) again.",
       "original": null,
       "applied": 2.1512057367109354,
       "source": "No verified one-to-one numerical source is established for this added channel. Applied estimates are in Data/Model_Parameters/muscle_tendon.py; anatomical source records are in Data/Original_Study_Data/additional_muscles/."
@@ -9718,7 +9718,7 @@
       "name": "FR_S_T9",
       "field": "tendon_strain_at_max_force",
       "unit": "1",
-      "meaning": "Tendon extension/slack length at one maximum isometric tendon force.",
+      "meaning": "Tendon strain when tension equals F0, the maximum isometric muscle force along the tendon direction.",
       "original": null,
       "applied": 0.04,
       "source": "No verified one-to-one numerical source is established for this added channel. Applied estimates are in Data/Model_Parameters/muscle_tendon.py; anatomical source records are in Data/Original_Study_Data/additional_muscles/."
@@ -9808,9 +9808,9 @@
     {
       "category": "muscle_tendon",
       "name": "FL_R_C2",
-      "field": "max_isometric_tendon_force_N",
+      "field": "max_isometric_muscle_force_along_tendon_N",
       "unit": "N",
-      "meaning": "Maximum isometric force projected along the tendon; do not multiply by pennation cosine twice.",
+      "meaning": "Maximum isometric muscle force along the tendon direction (F0). The pennation projection is already included. This is not tendon failure strength or a force ceiling; do not multiply by cos(alpha) again.",
       "original": null,
       "applied": 1.207746371684156,
       "source": "No verified one-to-one numerical source is established for this added channel. Applied estimates are in Data/Model_Parameters/muscle_tendon.py; anatomical source records are in Data/Original_Study_Data/additional_muscles/."
@@ -9852,7 +9852,7 @@
       "name": "FL_R_C2",
       "field": "tendon_strain_at_max_force",
       "unit": "1",
-      "meaning": "Tendon extension/slack length at one maximum isometric tendon force.",
+      "meaning": "Tendon strain when tension equals F0, the maximum isometric muscle force along the tendon direction.",
       "original": null,
       "applied": 0.04,
       "source": "No verified one-to-one numerical source is established for this added channel. Applied estimates are in Data/Model_Parameters/muscle_tendon.py; anatomical source records are in Data/Original_Study_Data/additional_muscles/."
@@ -9942,9 +9942,9 @@
     {
       "category": "muscle_tendon",
       "name": "FR_R_C2",
-      "field": "max_isometric_tendon_force_N",
+      "field": "max_isometric_muscle_force_along_tendon_N",
       "unit": "N",
-      "meaning": "Maximum isometric force projected along the tendon; do not multiply by pennation cosine twice.",
+      "meaning": "Maximum isometric muscle force along the tendon direction (F0). The pennation projection is already included. This is not tendon failure strength or a force ceiling; do not multiply by cos(alpha) again.",
       "original": null,
       "applied": 1.207746371684156,
       "source": "No verified one-to-one numerical source is established for this added channel. Applied estimates are in Data/Model_Parameters/muscle_tendon.py; anatomical source records are in Data/Original_Study_Data/additional_muscles/."
@@ -9986,7 +9986,7 @@
       "name": "FR_R_C2",
       "field": "tendon_strain_at_max_force",
       "unit": "1",
-      "meaning": "Tendon extension/slack length at one maximum isometric tendon force.",
+      "meaning": "Tendon strain when tension equals F0, the maximum isometric muscle force along the tendon direction.",
       "original": null,
       "applied": 0.04,
       "source": "No verified one-to-one numerical source is established for this added channel. Applied estimates are in Data/Model_Parameters/muscle_tendon.py; anatomical source records are in Data/Original_Study_Data/additional_muscles/."
@@ -10076,9 +10076,9 @@
     {
       "category": "muscle_tendon",
       "name": "FL_R_C3-7",
-      "field": "max_isometric_tendon_force_N",
+      "field": "max_isometric_muscle_force_along_tendon_N",
       "unit": "N",
-      "meaning": "Maximum isometric force projected along the tendon; do not multiply by pennation cosine twice.",
+      "meaning": "Maximum isometric muscle force along the tendon direction (F0). The pennation projection is already included. This is not tendon failure strength or a force ceiling; do not multiply by cos(alpha) again.",
       "original": null,
       "applied": 10.498798983816204,
       "source": "No verified one-to-one numerical source is established for this added channel. Applied estimates are in Data/Model_Parameters/muscle_tendon.py; anatomical source records are in Data/Original_Study_Data/additional_muscles/."
@@ -10120,7 +10120,7 @@
       "name": "FL_R_C3-7",
       "field": "tendon_strain_at_max_force",
       "unit": "1",
-      "meaning": "Tendon extension/slack length at one maximum isometric tendon force.",
+      "meaning": "Tendon strain when tension equals F0, the maximum isometric muscle force along the tendon direction.",
       "original": null,
       "applied": 0.04,
       "source": "No verified one-to-one numerical source is established for this added channel. Applied estimates are in Data/Model_Parameters/muscle_tendon.py; anatomical source records are in Data/Original_Study_Data/additional_muscles/."
@@ -10210,9 +10210,9 @@
     {
       "category": "muscle_tendon",
       "name": "FR_R_C3-7",
-      "field": "max_isometric_tendon_force_N",
+      "field": "max_isometric_muscle_force_along_tendon_N",
       "unit": "N",
-      "meaning": "Maximum isometric force projected along the tendon; do not multiply by pennation cosine twice.",
+      "meaning": "Maximum isometric muscle force along the tendon direction (F0). The pennation projection is already included. This is not tendon failure strength or a force ceiling; do not multiply by cos(alpha) again.",
       "original": null,
       "applied": 10.498798983816204,
       "source": "No verified one-to-one numerical source is established for this added channel. Applied estimates are in Data/Model_Parameters/muscle_tendon.py; anatomical source records are in Data/Original_Study_Data/additional_muscles/."
@@ -10254,7 +10254,7 @@
       "name": "FR_R_C3-7",
       "field": "tendon_strain_at_max_force",
       "unit": "1",
-      "meaning": "Tendon extension/slack length at one maximum isometric tendon force.",
+      "meaning": "Tendon strain when tension equals F0, the maximum isometric muscle force along the tendon direction.",
       "original": null,
       "applied": 0.04,
       "source": "No verified one-to-one numerical source is established for this added channel. Applied estimates are in Data/Model_Parameters/muscle_tendon.py; anatomical source records are in Data/Original_Study_Data/additional_muscles/."
@@ -10344,9 +10344,9 @@
     {
       "category": "muscle_tendon",
       "name": "FL_R_T1",
-      "field": "max_isometric_tendon_force_N",
+      "field": "max_isometric_muscle_force_along_tendon_N",
       "unit": "N",
-      "meaning": "Maximum isometric force projected along the tendon; do not multiply by pennation cosine twice.",
+      "meaning": "Maximum isometric muscle force along the tendon direction (F0). The pennation projection is already included. This is not tendon failure strength or a force ceiling; do not multiply by cos(alpha) again.",
       "original": null,
       "applied": 5.84768778140187,
       "source": "No verified one-to-one numerical source is established for this added channel. Applied estimates are in Data/Model_Parameters/muscle_tendon.py; anatomical source records are in Data/Original_Study_Data/additional_muscles/."
@@ -10388,7 +10388,7 @@
       "name": "FL_R_T1",
       "field": "tendon_strain_at_max_force",
       "unit": "1",
-      "meaning": "Tendon extension/slack length at one maximum isometric tendon force.",
+      "meaning": "Tendon strain when tension equals F0, the maximum isometric muscle force along the tendon direction.",
       "original": null,
       "applied": 0.04,
       "source": "No verified one-to-one numerical source is established for this added channel. Applied estimates are in Data/Model_Parameters/muscle_tendon.py; anatomical source records are in Data/Original_Study_Data/additional_muscles/."
@@ -10478,9 +10478,9 @@
     {
       "category": "muscle_tendon",
       "name": "FR_R_T1",
-      "field": "max_isometric_tendon_force_N",
+      "field": "max_isometric_muscle_force_along_tendon_N",
       "unit": "N",
-      "meaning": "Maximum isometric force projected along the tendon; do not multiply by pennation cosine twice.",
+      "meaning": "Maximum isometric muscle force along the tendon direction (F0). The pennation projection is already included. This is not tendon failure strength or a force ceiling; do not multiply by cos(alpha) again.",
       "original": null,
       "applied": 5.84768778140187,
       "source": "No verified one-to-one numerical source is established for this added channel. Applied estimates are in Data/Model_Parameters/muscle_tendon.py; anatomical source records are in Data/Original_Study_Data/additional_muscles/."
@@ -10522,7 +10522,7 @@
       "name": "FR_R_T1",
       "field": "tendon_strain_at_max_force",
       "unit": "1",
-      "meaning": "Tendon extension/slack length at one maximum isometric tendon force.",
+      "meaning": "Tendon strain when tension equals F0, the maximum isometric muscle force along the tendon direction.",
       "original": null,
       "applied": 0.04,
       "source": "No verified one-to-one numerical source is established for this added channel. Applied estimates are in Data/Model_Parameters/muscle_tendon.py; anatomical source records are in Data/Original_Study_Data/additional_muscles/."
@@ -10612,9 +10612,9 @@
     {
       "category": "muscle_tendon",
       "name": "FL_R_T2",
-      "field": "max_isometric_tendon_force_N",
+      "field": "max_isometric_muscle_force_along_tendon_N",
       "unit": "N",
-      "meaning": "Maximum isometric force projected along the tendon; do not multiply by pennation cosine twice.",
+      "meaning": "Maximum isometric muscle force along the tendon direction (F0). The pennation projection is already included. This is not tendon failure strength or a force ceiling; do not multiply by cos(alpha) again.",
       "original": null,
       "applied": 6.0086609207406925,
       "source": "No verified one-to-one numerical source is established for this added channel. Applied estimates are in Data/Model_Parameters/muscle_tendon.py; anatomical source records are in Data/Original_Study_Data/additional_muscles/."
@@ -10656,7 +10656,7 @@
       "name": "FL_R_T2",
       "field": "tendon_strain_at_max_force",
       "unit": "1",
-      "meaning": "Tendon extension/slack length at one maximum isometric tendon force.",
+      "meaning": "Tendon strain when tension equals F0, the maximum isometric muscle force along the tendon direction.",
       "original": null,
       "applied": 0.04,
       "source": "No verified one-to-one numerical source is established for this added channel. Applied estimates are in Data/Model_Parameters/muscle_tendon.py; anatomical source records are in Data/Original_Study_Data/additional_muscles/."
@@ -10746,9 +10746,9 @@
     {
       "category": "muscle_tendon",
       "name": "FR_R_T2",
-      "field": "max_isometric_tendon_force_N",
+      "field": "max_isometric_muscle_force_along_tendon_N",
       "unit": "N",
-      "meaning": "Maximum isometric force projected along the tendon; do not multiply by pennation cosine twice.",
+      "meaning": "Maximum isometric muscle force along the tendon direction (F0). The pennation projection is already included. This is not tendon failure strength or a force ceiling; do not multiply by cos(alpha) again.",
       "original": null,
       "applied": 6.0086609207406925,
       "source": "No verified one-to-one numerical source is established for this added channel. Applied estimates are in Data/Model_Parameters/muscle_tendon.py; anatomical source records are in Data/Original_Study_Data/additional_muscles/."
@@ -10790,7 +10790,7 @@
       "name": "FR_R_T2",
       "field": "tendon_strain_at_max_force",
       "unit": "1",
-      "meaning": "Tendon extension/slack length at one maximum isometric tendon force.",
+      "meaning": "Tendon strain when tension equals F0, the maximum isometric muscle force along the tendon direction.",
       "original": null,
       "applied": 0.04,
       "source": "No verified one-to-one numerical source is established for this added channel. Applied estimates are in Data/Model_Parameters/muscle_tendon.py; anatomical source records are in Data/Original_Study_Data/additional_muscles/."
@@ -10880,9 +10880,9 @@
     {
       "category": "muscle_tendon",
       "name": "FL_R_T3",
-      "field": "max_isometric_tendon_force_N",
+      "field": "max_isometric_muscle_force_along_tendon_N",
       "unit": "N",
-      "meaning": "Maximum isometric force projected along the tendon; do not multiply by pennation cosine twice.",
+      "meaning": "Maximum isometric muscle force along the tendon direction (F0). The pennation projection is already included. This is not tendon failure strength or a force ceiling; do not multiply by cos(alpha) again.",
       "original": null,
       "applied": 3.6331787990958366,
       "source": "No verified one-to-one numerical source is established for this added channel. Applied estimates are in Data/Model_Parameters/muscle_tendon.py; anatomical source records are in Data/Original_Study_Data/additional_muscles/."
@@ -10924,7 +10924,7 @@
       "name": "FL_R_T3",
       "field": "tendon_strain_at_max_force",
       "unit": "1",
-      "meaning": "Tendon extension/slack length at one maximum isometric tendon force.",
+      "meaning": "Tendon strain when tension equals F0, the maximum isometric muscle force along the tendon direction.",
       "original": null,
       "applied": 0.04,
       "source": "No verified one-to-one numerical source is established for this added channel. Applied estimates are in Data/Model_Parameters/muscle_tendon.py; anatomical source records are in Data/Original_Study_Data/additional_muscles/."
@@ -11014,9 +11014,9 @@
     {
       "category": "muscle_tendon",
       "name": "FR_R_T3",
-      "field": "max_isometric_tendon_force_N",
+      "field": "max_isometric_muscle_force_along_tendon_N",
       "unit": "N",
-      "meaning": "Maximum isometric force projected along the tendon; do not multiply by pennation cosine twice.",
+      "meaning": "Maximum isometric muscle force along the tendon direction (F0). The pennation projection is already included. This is not tendon failure strength or a force ceiling; do not multiply by cos(alpha) again.",
       "original": null,
       "applied": 3.6331787990958366,
       "source": "No verified one-to-one numerical source is established for this added channel. Applied estimates are in Data/Model_Parameters/muscle_tendon.py; anatomical source records are in Data/Original_Study_Data/additional_muscles/."
@@ -11058,7 +11058,7 @@
       "name": "FR_R_T3",
       "field": "tendon_strain_at_max_force",
       "unit": "1",
-      "meaning": "Tendon extension/slack length at one maximum isometric tendon force.",
+      "meaning": "Tendon strain when tension equals F0, the maximum isometric muscle force along the tendon direction.",
       "original": null,
       "applied": 0.04,
       "source": "No verified one-to-one numerical source is established for this added channel. Applied estimates are in Data/Model_Parameters/muscle_tendon.py; anatomical source records are in Data/Original_Study_Data/additional_muscles/."
@@ -11148,9 +11148,9 @@
     {
       "category": "muscle_tendon",
       "name": "FL_R_T4",
-      "field": "max_isometric_tendon_force_N",
+      "field": "max_isometric_muscle_force_along_tendon_N",
       "unit": "N",
-      "meaning": "Maximum isometric force projected along the tendon; do not multiply by pennation cosine twice.",
+      "meaning": "Maximum isometric muscle force along the tendon direction (F0). The pennation projection is already included. This is not tendon failure strength or a force ceiling; do not multiply by cos(alpha) again.",
       "original": null,
       "applied": 2.503357979998125,
       "source": "No verified one-to-one numerical source is established for this added channel. Applied estimates are in Data/Model_Parameters/muscle_tendon.py; anatomical source records are in Data/Original_Study_Data/additional_muscles/."
@@ -11192,7 +11192,7 @@
       "name": "FL_R_T4",
       "field": "tendon_strain_at_max_force",
       "unit": "1",
-      "meaning": "Tendon extension/slack length at one maximum isometric tendon force.",
+      "meaning": "Tendon strain when tension equals F0, the maximum isometric muscle force along the tendon direction.",
       "original": null,
       "applied": 0.04,
       "source": "No verified one-to-one numerical source is established for this added channel. Applied estimates are in Data/Model_Parameters/muscle_tendon.py; anatomical source records are in Data/Original_Study_Data/additional_muscles/."
@@ -11282,9 +11282,9 @@
     {
       "category": "muscle_tendon",
       "name": "FR_R_T4",
-      "field": "max_isometric_tendon_force_N",
+      "field": "max_isometric_muscle_force_along_tendon_N",
       "unit": "N",
-      "meaning": "Maximum isometric force projected along the tendon; do not multiply by pennation cosine twice.",
+      "meaning": "Maximum isometric muscle force along the tendon direction (F0). The pennation projection is already included. This is not tendon failure strength or a force ceiling; do not multiply by cos(alpha) again.",
       "original": null,
       "applied": 2.503357979998125,
       "source": "No verified one-to-one numerical source is established for this added channel. Applied estimates are in Data/Model_Parameters/muscle_tendon.py; anatomical source records are in Data/Original_Study_Data/additional_muscles/."
@@ -11326,7 +11326,7 @@
       "name": "FR_R_T4",
       "field": "tendon_strain_at_max_force",
       "unit": "1",
-      "meaning": "Tendon extension/slack length at one maximum isometric tendon force.",
+      "meaning": "Tendon strain when tension equals F0, the maximum isometric muscle force along the tendon direction.",
       "original": null,
       "applied": 0.04,
       "source": "No verified one-to-one numerical source is established for this added channel. Applied estimates are in Data/Model_Parameters/muscle_tendon.py; anatomical source records are in Data/Original_Study_Data/additional_muscles/."
@@ -11416,9 +11416,9 @@
     {
       "category": "muscle_tendon",
       "name": "FL_R_T5",
-      "field": "max_isometric_tendon_force_N",
+      "field": "max_isometric_muscle_force_along_tendon_N",
       "unit": "N",
-      "meaning": "Maximum isometric force projected along the tendon; do not multiply by pennation cosine twice.",
+      "meaning": "Maximum isometric muscle force along the tendon direction (F0). The pennation projection is already included. This is not tendon failure strength or a force ceiling; do not multiply by cos(alpha) again.",
       "original": null,
       "applied": 1.9136246097101053,
       "source": "No verified one-to-one numerical source is established for this added channel. Applied estimates are in Data/Model_Parameters/muscle_tendon.py; anatomical source records are in Data/Original_Study_Data/additional_muscles/."
@@ -11460,7 +11460,7 @@
       "name": "FL_R_T5",
       "field": "tendon_strain_at_max_force",
       "unit": "1",
-      "meaning": "Tendon extension/slack length at one maximum isometric tendon force.",
+      "meaning": "Tendon strain when tension equals F0, the maximum isometric muscle force along the tendon direction.",
       "original": null,
       "applied": 0.04,
       "source": "No verified one-to-one numerical source is established for this added channel. Applied estimates are in Data/Model_Parameters/muscle_tendon.py; anatomical source records are in Data/Original_Study_Data/additional_muscles/."
@@ -11550,9 +11550,9 @@
     {
       "category": "muscle_tendon",
       "name": "FR_R_T5",
-      "field": "max_isometric_tendon_force_N",
+      "field": "max_isometric_muscle_force_along_tendon_N",
       "unit": "N",
-      "meaning": "Maximum isometric force projected along the tendon; do not multiply by pennation cosine twice.",
+      "meaning": "Maximum isometric muscle force along the tendon direction (F0). The pennation projection is already included. This is not tendon failure strength or a force ceiling; do not multiply by cos(alpha) again.",
       "original": null,
       "applied": 1.9136246097101053,
       "source": "No verified one-to-one numerical source is established for this added channel. Applied estimates are in Data/Model_Parameters/muscle_tendon.py; anatomical source records are in Data/Original_Study_Data/additional_muscles/."
@@ -11594,7 +11594,7 @@
       "name": "FR_R_T5",
       "field": "tendon_strain_at_max_force",
       "unit": "1",
-      "meaning": "Tendon extension/slack length at one maximum isometric tendon force.",
+      "meaning": "Tendon strain when tension equals F0, the maximum isometric muscle force along the tendon direction.",
       "original": null,
       "applied": 0.04,
       "source": "No verified one-to-one numerical source is established for this added channel. Applied estimates are in Data/Model_Parameters/muscle_tendon.py; anatomical source records are in Data/Original_Study_Data/additional_muscles/."
@@ -11684,9 +11684,9 @@
     {
       "category": "muscle_tendon",
       "name": "FL_DigitalExtensors",
-      "field": "max_isometric_tendon_force_N",
+      "field": "max_isometric_muscle_force_along_tendon_N",
       "unit": "N",
-      "meaning": "Maximum isometric force projected along the tendon; do not multiply by pennation cosine twice.",
+      "meaning": "Maximum isometric muscle force along the tendon direction (F0). The pennation projection is already included. This is not tendon failure strength or a force ceiling; do not multiply by cos(alpha) again.",
       "original": null,
       "applied": 78.49590850824231,
       "source": "No verified one-to-one numerical source is established for this added channel. Applied estimates are in Data/Model_Parameters/muscle_tendon.py; anatomical source records are in Data/Original_Study_Data/additional_muscles/."
@@ -11728,7 +11728,7 @@
       "name": "FL_DigitalExtensors",
       "field": "tendon_strain_at_max_force",
       "unit": "1",
-      "meaning": "Tendon extension/slack length at one maximum isometric tendon force.",
+      "meaning": "Tendon strain when tension equals F0, the maximum isometric muscle force along the tendon direction.",
       "original": null,
       "applied": 0.04,
       "source": "No verified one-to-one numerical source is established for this added channel. Applied estimates are in Data/Model_Parameters/muscle_tendon.py; anatomical source records are in Data/Original_Study_Data/additional_muscles/."
@@ -11818,9 +11818,9 @@
     {
       "category": "muscle_tendon",
       "name": "FR_DigitalExtensors",
-      "field": "max_isometric_tendon_force_N",
+      "field": "max_isometric_muscle_force_along_tendon_N",
       "unit": "N",
-      "meaning": "Maximum isometric force projected along the tendon; do not multiply by pennation cosine twice.",
+      "meaning": "Maximum isometric muscle force along the tendon direction (F0). The pennation projection is already included. This is not tendon failure strength or a force ceiling; do not multiply by cos(alpha) again.",
       "original": null,
       "applied": 78.49590850824231,
       "source": "No verified one-to-one numerical source is established for this added channel. Applied estimates are in Data/Model_Parameters/muscle_tendon.py; anatomical source records are in Data/Original_Study_Data/additional_muscles/."
@@ -11862,7 +11862,7 @@
       "name": "FR_DigitalExtensors",
       "field": "tendon_strain_at_max_force",
       "unit": "1",
-      "meaning": "Tendon extension/slack length at one maximum isometric tendon force.",
+      "meaning": "Tendon strain when tension equals F0, the maximum isometric muscle force along the tendon direction.",
       "original": null,
       "applied": 0.04,
       "source": "No verified one-to-one numerical source is established for this added channel. Applied estimates are in Data/Model_Parameters/muscle_tendon.py; anatomical source records are in Data/Original_Study_Data/additional_muscles/."
@@ -11952,9 +11952,9 @@
     {
       "category": "muscle_tendon",
       "name": "FL_DigitalFlexors",
-      "field": "max_isometric_tendon_force_N",
+      "field": "max_isometric_muscle_force_along_tendon_N",
       "unit": "N",
-      "meaning": "Maximum isometric force projected along the tendon; do not multiply by pennation cosine twice.",
+      "meaning": "Maximum isometric muscle force along the tendon direction (F0). The pennation projection is already included. This is not tendon failure strength or a force ceiling; do not multiply by cos(alpha) again.",
       "original": null,
       "applied": 601.1227378347684,
       "source": "No verified one-to-one numerical source is established for this added channel. Applied estimates are in Data/Model_Parameters/muscle_tendon.py; anatomical source records are in Data/Original_Study_Data/additional_muscles/."
@@ -11996,7 +11996,7 @@
       "name": "FL_DigitalFlexors",
       "field": "tendon_strain_at_max_force",
       "unit": "1",
-      "meaning": "Tendon extension/slack length at one maximum isometric tendon force.",
+      "meaning": "Tendon strain when tension equals F0, the maximum isometric muscle force along the tendon direction.",
       "original": null,
       "applied": 0.04,
       "source": "No verified one-to-one numerical source is established for this added channel. Applied estimates are in Data/Model_Parameters/muscle_tendon.py; anatomical source records are in Data/Original_Study_Data/additional_muscles/."
@@ -12086,9 +12086,9 @@
     {
       "category": "muscle_tendon",
       "name": "FR_DigitalFlexors",
-      "field": "max_isometric_tendon_force_N",
+      "field": "max_isometric_muscle_force_along_tendon_N",
       "unit": "N",
-      "meaning": "Maximum isometric force projected along the tendon; do not multiply by pennation cosine twice.",
+      "meaning": "Maximum isometric muscle force along the tendon direction (F0). The pennation projection is already included. This is not tendon failure strength or a force ceiling; do not multiply by cos(alpha) again.",
       "original": null,
       "applied": 601.1227378347684,
       "source": "No verified one-to-one numerical source is established for this added channel. Applied estimates are in Data/Model_Parameters/muscle_tendon.py; anatomical source records are in Data/Original_Study_Data/additional_muscles/."
@@ -12130,7 +12130,7 @@
       "name": "FR_DigitalFlexors",
       "field": "tendon_strain_at_max_force",
       "unit": "1",
-      "meaning": "Tendon extension/slack length at one maximum isometric tendon force.",
+      "meaning": "Tendon strain when tension equals F0, the maximum isometric muscle force along the tendon direction.",
       "original": null,
       "applied": 0.04,
       "source": "No verified one-to-one numerical source is established for this added channel. Applied estimates are in Data/Model_Parameters/muscle_tendon.py; anatomical source records are in Data/Original_Study_Data/additional_muscles/."
@@ -12220,9 +12220,9 @@
     {
       "category": "muscle_tendon",
       "name": "FL_TrapeziusCervical",
-      "field": "max_isometric_tendon_force_N",
+      "field": "max_isometric_muscle_force_along_tendon_N",
       "unit": "N",
-      "meaning": "Maximum isometric force projected along the tendon; do not multiply by pennation cosine twice.",
+      "meaning": "Maximum isometric muscle force along the tendon direction (F0). The pennation projection is already included. This is not tendon failure strength or a force ceiling; do not multiply by cos(alpha) again.",
       "original": null,
       "applied": 7.508087010046516,
       "source": "No verified one-to-one numerical source is established for this added channel. Applied estimates are in Data/Model_Parameters/muscle_tendon.py; anatomical source records are in Data/Original_Study_Data/additional_muscles/."
@@ -12264,7 +12264,7 @@
       "name": "FL_TrapeziusCervical",
       "field": "tendon_strain_at_max_force",
       "unit": "1",
-      "meaning": "Tendon extension/slack length at one maximum isometric tendon force.",
+      "meaning": "Tendon strain when tension equals F0, the maximum isometric muscle force along the tendon direction.",
       "original": null,
       "applied": 0.04,
       "source": "No verified one-to-one numerical source is established for this added channel. Applied estimates are in Data/Model_Parameters/muscle_tendon.py; anatomical source records are in Data/Original_Study_Data/additional_muscles/."
@@ -12354,9 +12354,9 @@
     {
       "category": "muscle_tendon",
       "name": "FR_TrapeziusCervical",
-      "field": "max_isometric_tendon_force_N",
+      "field": "max_isometric_muscle_force_along_tendon_N",
       "unit": "N",
-      "meaning": "Maximum isometric force projected along the tendon; do not multiply by pennation cosine twice.",
+      "meaning": "Maximum isometric muscle force along the tendon direction (F0). The pennation projection is already included. This is not tendon failure strength or a force ceiling; do not multiply by cos(alpha) again.",
       "original": null,
       "applied": 7.508087010046516,
       "source": "No verified one-to-one numerical source is established for this added channel. Applied estimates are in Data/Model_Parameters/muscle_tendon.py; anatomical source records are in Data/Original_Study_Data/additional_muscles/."
@@ -12398,7 +12398,7 @@
       "name": "FR_TrapeziusCervical",
       "field": "tendon_strain_at_max_force",
       "unit": "1",
-      "meaning": "Tendon extension/slack length at one maximum isometric tendon force.",
+      "meaning": "Tendon strain when tension equals F0, the maximum isometric muscle force along the tendon direction.",
       "original": null,
       "applied": 0.04,
       "source": "No verified one-to-one numerical source is established for this added channel. Applied estimates are in Data/Model_Parameters/muscle_tendon.py; anatomical source records are in Data/Original_Study_Data/additional_muscles/."
@@ -12488,9 +12488,9 @@
     {
       "category": "muscle_tendon",
       "name": "FL_TrapeziusThoracic",
-      "field": "max_isometric_tendon_force_N",
+      "field": "max_isometric_muscle_force_along_tendon_N",
       "unit": "N",
-      "meaning": "Maximum isometric force projected along the tendon; do not multiply by pennation cosine twice.",
+      "meaning": "Maximum isometric muscle force along the tendon direction (F0). The pennation projection is already included. This is not tendon failure strength or a force ceiling; do not multiply by cos(alpha) again.",
       "original": null,
       "applied": 6.977343336771235,
       "source": "No verified one-to-one numerical source is established for this added channel. Applied estimates are in Data/Model_Parameters/muscle_tendon.py; anatomical source records are in Data/Original_Study_Data/additional_muscles/."
@@ -12532,7 +12532,7 @@
       "name": "FL_TrapeziusThoracic",
       "field": "tendon_strain_at_max_force",
       "unit": "1",
-      "meaning": "Tendon extension/slack length at one maximum isometric tendon force.",
+      "meaning": "Tendon strain when tension equals F0, the maximum isometric muscle force along the tendon direction.",
       "original": null,
       "applied": 0.04,
       "source": "No verified one-to-one numerical source is established for this added channel. Applied estimates are in Data/Model_Parameters/muscle_tendon.py; anatomical source records are in Data/Original_Study_Data/additional_muscles/."
@@ -12622,9 +12622,9 @@
     {
       "category": "muscle_tendon",
       "name": "FR_TrapeziusThoracic",
-      "field": "max_isometric_tendon_force_N",
+      "field": "max_isometric_muscle_force_along_tendon_N",
       "unit": "N",
-      "meaning": "Maximum isometric force projected along the tendon; do not multiply by pennation cosine twice.",
+      "meaning": "Maximum isometric muscle force along the tendon direction (F0). The pennation projection is already included. This is not tendon failure strength or a force ceiling; do not multiply by cos(alpha) again.",
       "original": null,
       "applied": 6.977343336771235,
       "source": "No verified one-to-one numerical source is established for this added channel. Applied estimates are in Data/Model_Parameters/muscle_tendon.py; anatomical source records are in Data/Original_Study_Data/additional_muscles/."
@@ -12666,7 +12666,7 @@
       "name": "FR_TrapeziusThoracic",
       "field": "tendon_strain_at_max_force",
       "unit": "1",
-      "meaning": "Tendon extension/slack length at one maximum isometric tendon force.",
+      "meaning": "Tendon strain when tension equals F0, the maximum isometric muscle force along the tendon direction.",
       "original": null,
       "applied": 0.04,
       "source": "No verified one-to-one numerical source is established for this added channel. Applied estimates are in Data/Model_Parameters/muscle_tendon.py; anatomical source records are in Data/Original_Study_Data/additional_muscles/."
@@ -12756,9 +12756,9 @@
     {
       "category": "muscle_tendon",
       "name": "FL_LatissimusDorsi",
-      "field": "max_isometric_tendon_force_N",
+      "field": "max_isometric_muscle_force_along_tendon_N",
       "unit": "N",
-      "meaning": "Maximum isometric force projected along the tendon; do not multiply by pennation cosine twice.",
+      "meaning": "Maximum isometric muscle force along the tendon direction (F0). The pennation projection is already included. This is not tendon failure strength or a force ceiling; do not multiply by cos(alpha) again.",
       "original": null,
       "applied": 16.51465085230317,
       "source": "No verified one-to-one numerical source is established for this added channel. Applied estimates are in Data/Model_Parameters/muscle_tendon.py; anatomical source records are in Data/Original_Study_Data/additional_muscles/."
@@ -12800,7 +12800,7 @@
       "name": "FL_LatissimusDorsi",
       "field": "tendon_strain_at_max_force",
       "unit": "1",
-      "meaning": "Tendon extension/slack length at one maximum isometric tendon force.",
+      "meaning": "Tendon strain when tension equals F0, the maximum isometric muscle force along the tendon direction.",
       "original": null,
       "applied": 0.04,
       "source": "No verified one-to-one numerical source is established for this added channel. Applied estimates are in Data/Model_Parameters/muscle_tendon.py; anatomical source records are in Data/Original_Study_Data/additional_muscles/."
@@ -12890,9 +12890,9 @@
     {
       "category": "muscle_tendon",
       "name": "FR_LatissimusDorsi",
-      "field": "max_isometric_tendon_force_N",
+      "field": "max_isometric_muscle_force_along_tendon_N",
       "unit": "N",
-      "meaning": "Maximum isometric force projected along the tendon; do not multiply by pennation cosine twice.",
+      "meaning": "Maximum isometric muscle force along the tendon direction (F0). The pennation projection is already included. This is not tendon failure strength or a force ceiling; do not multiply by cos(alpha) again.",
       "original": null,
       "applied": 16.51465085230317,
       "source": "No verified one-to-one numerical source is established for this added channel. Applied estimates are in Data/Model_Parameters/muscle_tendon.py; anatomical source records are in Data/Original_Study_Data/additional_muscles/."
@@ -12934,7 +12934,7 @@
       "name": "FR_LatissimusDorsi",
       "field": "tendon_strain_at_max_force",
       "unit": "1",
-      "meaning": "Tendon extension/slack length at one maximum isometric tendon force.",
+      "meaning": "Tendon strain when tension equals F0, the maximum isometric muscle force along the tendon direction.",
       "original": null,
       "applied": 0.04,
       "source": "No verified one-to-one numerical source is established for this added channel. Applied estimates are in Data/Model_Parameters/muscle_tendon.py; anatomical source records are in Data/Original_Study_Data/additional_muscles/."
@@ -13024,9 +13024,9 @@
     {
       "category": "muscle_tendon",
       "name": "FL_PectoralisProfundus",
-      "field": "max_isometric_tendon_force_N",
+      "field": "max_isometric_muscle_force_along_tendon_N",
       "unit": "N",
-      "meaning": "Maximum isometric force projected along the tendon; do not multiply by pennation cosine twice.",
+      "meaning": "Maximum isometric muscle force along the tendon direction (F0). The pennation projection is already included. This is not tendon failure strength or a force ceiling; do not multiply by cos(alpha) again.",
       "original": null,
       "applied": 32.59197000797395,
       "source": "No verified one-to-one numerical source is established for this added channel. Applied estimates are in Data/Model_Parameters/muscle_tendon.py; anatomical source records are in Data/Original_Study_Data/additional_muscles/."
@@ -13068,7 +13068,7 @@
       "name": "FL_PectoralisProfundus",
       "field": "tendon_strain_at_max_force",
       "unit": "1",
-      "meaning": "Tendon extension/slack length at one maximum isometric tendon force.",
+      "meaning": "Tendon strain when tension equals F0, the maximum isometric muscle force along the tendon direction.",
       "original": null,
       "applied": 0.04,
       "source": "No verified one-to-one numerical source is established for this added channel. Applied estimates are in Data/Model_Parameters/muscle_tendon.py; anatomical source records are in Data/Original_Study_Data/additional_muscles/."
@@ -13158,9 +13158,9 @@
     {
       "category": "muscle_tendon",
       "name": "FR_PectoralisProfundus",
-      "field": "max_isometric_tendon_force_N",
+      "field": "max_isometric_muscle_force_along_tendon_N",
       "unit": "N",
-      "meaning": "Maximum isometric force projected along the tendon; do not multiply by pennation cosine twice.",
+      "meaning": "Maximum isometric muscle force along the tendon direction (F0). The pennation projection is already included. This is not tendon failure strength or a force ceiling; do not multiply by cos(alpha) again.",
       "original": null,
       "applied": 32.59197000797395,
       "source": "No verified one-to-one numerical source is established for this added channel. Applied estimates are in Data/Model_Parameters/muscle_tendon.py; anatomical source records are in Data/Original_Study_Data/additional_muscles/."
@@ -13202,7 +13202,7 @@
       "name": "FR_PectoralisProfundus",
       "field": "tendon_strain_at_max_force",
       "unit": "1",
-      "meaning": "Tendon extension/slack length at one maximum isometric tendon force.",
+      "meaning": "Tendon strain when tension equals F0, the maximum isometric muscle force along the tendon direction.",
       "original": null,
       "applied": 0.04,
       "source": "No verified one-to-one numerical source is established for this added channel. Applied estimates are in Data/Model_Parameters/muscle_tendon.py; anatomical source records are in Data/Original_Study_Data/additional_muscles/."
@@ -13292,9 +13292,9 @@
     {
       "category": "muscle_tendon",
       "name": "FL_PectoralisSuperficialis",
-      "field": "max_isometric_tendon_force_N",
+      "field": "max_isometric_muscle_force_along_tendon_N",
       "unit": "N",
-      "meaning": "Maximum isometric force projected along the tendon; do not multiply by pennation cosine twice.",
+      "meaning": "Maximum isometric muscle force along the tendon direction (F0). The pennation projection is already included. This is not tendon failure strength or a force ceiling; do not multiply by cos(alpha) again.",
       "original": null,
       "applied": 6.623550618152982,
       "source": "No verified one-to-one numerical source is established for this added channel. Applied estimates are in Data/Model_Parameters/muscle_tendon.py; anatomical source records are in Data/Original_Study_Data/additional_muscles/."
@@ -13336,7 +13336,7 @@
       "name": "FL_PectoralisSuperficialis",
       "field": "tendon_strain_at_max_force",
       "unit": "1",
-      "meaning": "Tendon extension/slack length at one maximum isometric tendon force.",
+      "meaning": "Tendon strain when tension equals F0, the maximum isometric muscle force along the tendon direction.",
       "original": null,
       "applied": 0.04,
       "source": "No verified one-to-one numerical source is established for this added channel. Applied estimates are in Data/Model_Parameters/muscle_tendon.py; anatomical source records are in Data/Original_Study_Data/additional_muscles/."
@@ -13426,9 +13426,9 @@
     {
       "category": "muscle_tendon",
       "name": "FR_PectoralisSuperficialis",
-      "field": "max_isometric_tendon_force_N",
+      "field": "max_isometric_muscle_force_along_tendon_N",
       "unit": "N",
-      "meaning": "Maximum isometric force projected along the tendon; do not multiply by pennation cosine twice.",
+      "meaning": "Maximum isometric muscle force along the tendon direction (F0). The pennation projection is already included. This is not tendon failure strength or a force ceiling; do not multiply by cos(alpha) again.",
       "original": null,
       "applied": 6.623550618152982,
       "source": "No verified one-to-one numerical source is established for this added channel. Applied estimates are in Data/Model_Parameters/muscle_tendon.py; anatomical source records are in Data/Original_Study_Data/additional_muscles/."
@@ -13470,7 +13470,7 @@
       "name": "FR_PectoralisSuperficialis",
       "field": "tendon_strain_at_max_force",
       "unit": "1",
-      "meaning": "Tendon extension/slack length at one maximum isometric tendon force.",
+      "meaning": "Tendon strain when tension equals F0, the maximum isometric muscle force along the tendon direction.",
       "original": null,
       "applied": 0.04,
       "source": "No verified one-to-one numerical source is established for this added channel. Applied estimates are in Data/Model_Parameters/muscle_tendon.py; anatomical source records are in Data/Original_Study_Data/additional_muscles/."
@@ -13560,9 +13560,9 @@
     {
       "category": "muscle_tendon",
       "name": "FL_Clavobrachialis",
-      "field": "max_isometric_tendon_force_N",
+      "field": "max_isometric_muscle_force_along_tendon_N",
       "unit": "N",
-      "meaning": "Maximum isometric force projected along the tendon; do not multiply by pennation cosine twice.",
+      "meaning": "Maximum isometric muscle force along the tendon direction (F0). The pennation projection is already included. This is not tendon failure strength or a force ceiling; do not multiply by cos(alpha) again.",
       "original": null,
       "applied": 9.05567148687485,
       "source": "No verified one-to-one numerical source is established for this added channel. Applied estimates are in Data/Model_Parameters/muscle_tendon.py; anatomical source records are in Data/Original_Study_Data/additional_muscles/."
@@ -13604,7 +13604,7 @@
       "name": "FL_Clavobrachialis",
       "field": "tendon_strain_at_max_force",
       "unit": "1",
-      "meaning": "Tendon extension/slack length at one maximum isometric tendon force.",
+      "meaning": "Tendon strain when tension equals F0, the maximum isometric muscle force along the tendon direction.",
       "original": null,
       "applied": 0.04,
       "source": "No verified one-to-one numerical source is established for this added channel. Applied estimates are in Data/Model_Parameters/muscle_tendon.py; anatomical source records are in Data/Original_Study_Data/additional_muscles/."
@@ -13694,9 +13694,9 @@
     {
       "category": "muscle_tendon",
       "name": "FR_Clavobrachialis",
-      "field": "max_isometric_tendon_force_N",
+      "field": "max_isometric_muscle_force_along_tendon_N",
       "unit": "N",
-      "meaning": "Maximum isometric force projected along the tendon; do not multiply by pennation cosine twice.",
+      "meaning": "Maximum isometric muscle force along the tendon direction (F0). The pennation projection is already included. This is not tendon failure strength or a force ceiling; do not multiply by cos(alpha) again.",
       "original": null,
       "applied": 9.05567148687485,
       "source": "No verified one-to-one numerical source is established for this added channel. Applied estimates are in Data/Model_Parameters/muscle_tendon.py; anatomical source records are in Data/Original_Study_Data/additional_muscles/."
@@ -13738,7 +13738,7 @@
       "name": "FR_Clavobrachialis",
       "field": "tendon_strain_at_max_force",
       "unit": "1",
-      "meaning": "Tendon extension/slack length at one maximum isometric tendon force.",
+      "meaning": "Tendon strain when tension equals F0, the maximum isometric muscle force along the tendon direction.",
       "original": null,
       "applied": 0.04,
       "source": "No verified one-to-one numerical source is established for this added channel. Applied estimates are in Data/Model_Parameters/muscle_tendon.py; anatomical source records are in Data/Original_Study_Data/additional_muscles/."

@@ -65,7 +65,7 @@ The repository reproduces forward simulations from the supplied excitation, para
 | **Value used in this model** | Actual number applied by the simulator. This may be retained from the source, assumed or calibrated. |
 | **What changed and why** | Difference from the source and its documented rationale. Missing individual explanations are stated explicitly. |
 
-For example, right VL maximum isometric tendon force is **202.13 N in the source** and **199.78 N in this model**. See the [full tables](Documentation/parameter_tables.md) or [CSV](Data/Model_Parameters/model_parameter_values.csv).
+For example, right VL maximum isometric muscle force along the tendon direction is **202.13 N in the source** and **199.78 N in this model**. See the [full tables](Documentation/parameter_tables.md) or [CSV](Data/Model_Parameters/model_parameter_values.csv).
 
 ## Run a fresh simulation
 
@@ -89,13 +89,15 @@ You can also edit `SIMULATION_SECONDS` and `SHOW_GUI` near the top of [run.py](r
 
 ![Coupled multibody dynamics](Documentation/Figures_and_Videos/Equations/readme_03.svg)
 
-Here u is excitation, a activation, τ an activation time constant, L<sub>MT</sub> whole muscle–tendon length, l<sub>f</sub> fiber length, l<sub>T</sub> tendon length, l<sub>s</sub> tendon slack length, α pennation, F<sub>0</sub> tendon-projected maximum isometric force, q generalized position, M mass matrix, b inertial/gravitational terms, Q generalized forces and J<sub>c</sub><sup>T</sup>F<sub>c</sub> contact loading. [The methods guide](Documentation/model_methods.md) defines **every term immediately after each full equation** and includes a final glossary.
+Here u is excitation, a activation, τ an activation time constant, L<sub>MT</sub> whole muscle–tendon length, l<sub>f</sub> fiber length, l<sub>T</sub> tendon length, l<sub>s</sub> tendon slack length, α pennation, F<sub>0</sub> maximum isometric muscle force along the tendon direction, q generalized position, M mass matrix, b inertial/gravitational terms, Q generalized forces and J<sub>c</sub><sup>T</sup>F<sub>c</sub> contact loading. [The methods guide](Documentation/model_methods.md) defines **every term immediately after each full equation** and includes a final glossary.
+
+F<sub>0</sub> includes the constant pennation projection of active muscle-fiber force at full activation, optimal fiber length and zero fiber velocity. It is not tendon failure strength or a force limit. The editable parameter is `max_isometric_muscle_force_along_tendon_N`; do not apply the pennation cosine again.
 
 ## From excitation to muscle force: the Hill-type model
 
 ![Implemented Hill-type muscle with activation dynamics, active and passive fiber elements, damping, elastic tendon and pennation](Documentation/Figures_and_Videos/hill_muscle_model.svg)
 
-**CE** is activation-dependent contractile force; **PE** is passive fiber tension included in all 104 muscle channels; **D** is fiber damping; **SE** is the elastic tendon in series. Tendon stretch and fiber length are solved mechanically. Pennation is constant, and maximum isometric force is already projected along the tendon. The passive contribution is zero below its stretch threshold even though the element is included; tendons remain elastic in all limbs.
+**CE** is activation-dependent contractile force; **PE** is passive fiber tension included in all 104 muscle channels; **D** is fiber damping; **SE** is the elastic tendon in series. Tendon stretch and fiber length are solved mechanically. Pennation is constant, and F<sub>0</sub> is the maximum isometric muscle force along the tendon direction. The passive contribution is zero below its stretch threshold even though the element is included; tendons remain elastic in all limbs.
 
 **The passive fiber law is included in all limbs.** The curve uses Prilutsky et al. (2016), Table 10.3, and Rahmati et al. (2025), Table 3, with published coefficients 0.0075 and 11.6. Tension-only rectification, exponent capping and application to added channels are disclosed adaptations. The curve coefficients are taken from the publications, not fitted to this trial. [Passive-force equation and verification](Documentation/passive_fiber_mechanics.md).
 

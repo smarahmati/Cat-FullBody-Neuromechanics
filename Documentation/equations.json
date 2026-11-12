@@ -67,7 +67,7 @@
     "number": 9,
     "label": "Passive fiber force",
     "latex": "f_{PE}(\\lambda)=\\begin{cases}\\dfrac{0.0075}{11.6}\\left[\\exp(11.6(\\lambda-1))-1\\right]&\\lambda>1\\ \\text{and enabled}\\\\0&\\text{otherwise}\\end{cases}",
-    "definitions": "f_PE: passive tension normalized by tendon-projected maximum isometric force F0; lambda = l_f/l_opt is normalized fiber length, dimensionless. All 104 current channels (28 hindlimb and 76 forelimb) have passive_fiber_enabled = 1. The branch contributes zero when lambda <= 1 and positive tension when lambda > 1. Published coefficients 0.0075 and 11.6 are from Prilutsky et al. (2016), Table 10.3, and Rahmati et al. (2025), Table 3. Rectification to prevent compression and the exponent cap of 50 are implementation adaptations. The same normalized law is extended to added toe/girdle channels; this is not a measurement of each channel's passive force curve. F_PE = F0 f_PE is included inside fiber/tendon equilibrium.",
+    "definitions": "f_PE: passive tension normalized by maximum isometric muscle force along the tendon direction F0; lambda = l_f/l_opt is normalized fiber length, dimensionless. All 104 current channels (28 hindlimb and 76 forelimb) have passive_fiber_enabled = 1. The branch contributes zero when lambda <= 1 and positive tension when lambda > 1. Published coefficients 0.0075 and 11.6 are from Prilutsky et al. (2016), Table 10.3, and Rahmati et al. (2025), Table 3. Rectification to prevent compression and the exponent cap of 50 are implementation adaptations. The same normalized law is extended to added toe/girdle channels; this is not a measurement of each channel's passive force curve. F_PE = F0 f_PE is included inside fiber/tendon equilibrium.",
     "implementation": "muscle_force_length_velocity",
     "reference": "Prilutsky2016; Rahmati2025"
   },
@@ -75,7 +75,7 @@
     "number": 10,
     "label": "Elastic tendon law",
     "latex": "\\epsilon_i=\\frac{l_{T,i}-l_{s,i}}{l_{s,i}},\\quad f_T(\\epsilon)=\\begin{cases}0&\\epsilon\\leq0\\\\0.33\\dfrac{e^{k\\epsilon/\\epsilon_{toe}}-1}{e^k-1}&0<\\epsilon\\leq\\epsilon_{toe}\\\\0.33+\\dfrac{0.67(\\epsilon-\\epsilon_{toe})}{\\epsilon_0-\\epsilon_{toe}}&\\epsilon>\\epsilon_{toe}\\end{cases}",
-    "definitions": "ε: tendon strain; l_T: tendon length (m); l_s: slack tendon length (m); f_T: normalized tension; ε₀: strain at maximum isometric tendon force; ε_toe: toe-region transition strain; k = 3: exponential toe curvature. This custom exponential-to-linear tendon law is an implementation assumption, not an identified tendon law for every cat muscle.",
+    "definitions": "ε: tendon strain; l_T: tendon length (m); l_s: slack tendon length (m); f_T: normalized tension; ε₀: strain at maximum isometric muscle force along the tendon direction; ε_toe: toe-region transition strain; k = 3: exponential toe curvature. This custom exponential-to-linear tendon law is an implementation assumption, not an identified tendon law for every cat muscle.",
     "implementation": "elastic_tendon_force",
     "reference": ""
   },
@@ -83,7 +83,7 @@
     "number": 11,
     "label": "Continuous tendon transition",
     "latex": "\\epsilon_{toe}=\\epsilon_0\\frac{0.33ke^k}{0.33ke^k+0.67(e^k-1)},\\qquad F_{T,i}=F_{0,i}f_T(\\epsilon_i)",
-    "definitions": "ε_toe and ε₀: dimensionless strains; k: toe curvature; F_T: tendon tension (N); F₀: maximum isometric force already projected along the tendon (N). This choice makes force and slope continuous at the transition and gives f_T(ε₀)=1. Do not multiply F₀ by cos α again.",
+    "definitions": "ε_toe and ε₀: dimensionless strains; k: toe curvature; F_T: tendon tension (N); F₀: maximum isometric muscle force along the tendon direction (N). This choice makes force and slope continuous at the transition and gives f_T(ε₀)=1. Do not multiply F₀ by cos α again.",
     "implementation": "elastic_tendon_transition",
     "reference": ""
   },

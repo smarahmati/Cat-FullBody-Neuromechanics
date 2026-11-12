@@ -38,8 +38,8 @@ The [parameter tables](parameter_tables.md) compare **Source value** directly wi
 
 | Channel and parameter | Source value | Applied value | Interpretation |
 | --- | --- | --- | --- |
-| R_VL maximum isometric tendon force | 202.133 N | 199.776 N | Calibrated force capacity, approximately 1.17% below the source. |
-| R_RF maximum isometric tendon force | 61.003 N | 71.084 N | Calibrated force capacity, approximately 16.5% above the source. |
+| R_VL maximum isometric muscle force along the tendon direction | 202.133 N | 199.776 N | Calibrated force capacity, approximately 1.17% below the source. |
+| R_RF maximum isometric muscle force along the tendon direction | 61.003 N | 71.084 N | Calibrated force capacity, approximately 16.5% above the source. |
 | FR_ShoulderExtensor optimal fiber length | 0.0158594 m | 0.0168110 m | The applied length is 6% above this channel’s source value. |
 | FR_ShoulderExtensor maximum speed | 11 optimal lengths/s | 10.3774 optimal lengths/s | Multiplying by optimal fiber length gives the same physical maximum speed, approximately 0.174454 m/s, for these two parameter pairs. |
 
@@ -61,7 +61,7 @@ The forelimb input estimation also used an offline force-balance adjustment: act
 
 ![Offline force-balance adjustment](Figures_and_Videos/Equations/calibration_summary_02.svg)
 
-A and B denote two explicitly chosen muscle-parameter sets evaluated along the same nominal cycle during estimation. aA is activation for set A, and aB is the estimated activation for set B. fL and fV are active force–length and force–velocity factors; fPE is passive fiber force divided by the tendon-projected maximum isometric force; β is normalized fiber damping; ν is fiber lengthening velocity divided by the physical maximum fiber speed. All terms are dimensionless. clip[0,1] bounds activation to [0,1]; the denominator floor 10⁻⁵ prevents division by near-zero active force capacity.
+A and B denote two explicitly chosen muscle-parameter sets evaluated along the same nominal cycle during estimation. aA is activation for set A, and aB is the estimated activation for set B. fL and fV are active force–length and force–velocity factors; fPE is passive fiber force divided by the maximum isometric muscle force along the tendon direction; β is normalized fiber damping; ν is fiber lengthening velocity divided by the physical maximum fiber speed. All terms are dimensionless. clip[0,1] bounds activation to [0,1]; the denominator floor 10⁻⁵ prevents division by near-zero active force capacity.
 
 The formula preserves normalized fiber force for the chosen cycle when the same maximum isometric force is used. It is an offline estimate, not a guarantee of unchanged free motion after integration. The saved excitation table contains the result of input estimation; no A-to-B adjustment is evaluated during a normal forward run.
 

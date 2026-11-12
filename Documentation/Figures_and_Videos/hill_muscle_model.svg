@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1400" height="1880" viewBox="0 0 1400 1880" role="img" aria-labelledby="title desc">
 <title id="title">From excitation to force: the implemented elastic Hill-type muscle</title>
-<desc id="desc">Excitation drives activation dynamics. Active contractile force, passive fiber tension included in all four limbs and viscous fiber damping act in parallel, with an elastic tendon in series. Current skeletal geometry determines total muscle-tendon length. The parallel fiber elements are drawn inclined to the tendon axis, with their constant pennation angle alpha marked at the junction. Pennation projects fiber length. All force contributions use tendon-projected maximum isometric force. This is a schematic of the project implementation, not an anatomical scale drawing.</desc>
+<desc id="desc">Excitation drives activation dynamics. Active contractile force, passive fiber tension included in all four limbs and viscous fiber damping act in parallel, with an elastic tendon in series. Current skeletal geometry determines total muscle-tendon length. The parallel fiber elements are drawn inclined to the tendon axis, with their constant pennation angle alpha marked at the junction. Pennation projects fiber length. All force contributions use maximum isometric muscle force along the tendon direction. This is a schematic of the project implementation, not an anatomical scale drawing.</desc>
 <defs>
  <marker id="arrow" markerWidth="9" markerHeight="9" refX="8" refY="4.5" orient="auto-start-reverse"><path d="M0 0 L9 4.5 L0 9Z" fill="#315260"/></marker>
  <marker id="redArrow" markerWidth="9" markerHeight="9" refX="8" refY="4.5" orient="auto"><path d="M0 0 L9 4.5 L0 9Z" fill="#bc4054"/></marker>
@@ -98,7 +98,7 @@
 <rect x="500" y="793" width="380" height="34" fill="white"/>
 <text x="690" y="818" text-anchor="middle" class="math">Total length: L<tspan baseline-shift="sub" font-size="72%">MT</tspan> = l<tspan baseline-shift="sub" font-size="72%">f</tspan> cos α + l<tspan baseline-shift="sub" font-size="72%">T</tspan></text>
 <text x="85" y="865" class="math">Equilibrium: F<tspan baseline-shift="sub" font-size="72%">T</tspan> = F<tspan baseline-shift="sub" font-size="72%">0</tspan> [a f<tspan baseline-shift="sub" font-size="72%">L</tspan>(λ) f<tspan baseline-shift="sub" font-size="72%">V</tspan>(ν) + f<tspan baseline-shift="sub" font-size="72%">P</tspan>(λ) + βν] = F<tspan baseline-shift="sub" font-size="72%">0</tspan> f<tspan baseline-shift="sub" font-size="72%">T</tspan>(ε<tspan baseline-shift="sub" font-size="72%">T</tspan>)</text>
-<text x="85" y="898" class="small">F<tspan baseline-shift="sub" font-size="72%">0</tspan> is already tendon-projected maximum isometric force in this code. Do not multiply force by cos α again.</text>
+<text x="85" y="898" class="small">F<tspan baseline-shift="sub" font-size="72%">0</tspan> is the maximum isometric muscle force along the tendon direction. Do not multiply by cos α again.</text>
 
 </g>
 <!-- Expanded explanation complements the angle shown directly in the main network. -->
