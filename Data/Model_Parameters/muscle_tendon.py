@@ -1,4 +1,4 @@
-# F0 is maximum isometric MUSCLE force along the tendon direction, in newtons.
+# F0 is maximum isometric muscle force, in newtons.
 # At full activation, optimal fiber length and zero fiber velocity, this is
 # the active reference force transmitted along the tendon. The pennation
 # projection is already included: F0 = maximum isometric fiber force * cos(alpha).
@@ -171,7 +171,7 @@ Missing raw originals are stated honestly. SI units unless noted. Experimental a
 PARAMETERS = {
     # Specify L IP.
     "L_IP": {
-        # Maximum isometric muscle force along the tendon direction (F0). The pennation projection is already included. This is not tendon failure strength or a force ceiling; do not multiply by cos(alpha) again. Unit: N.
+        # Maximum isometric muscle force (F0). The pennation projection is already included. This is not tendon failure strength or a force ceiling; do not multiply by cos(alpha) again. Unit: N.
         # Original work: 95.1724
         "max_isometric_muscle_force_along_tendon_N": 95.292768017117,
         # Optimal fascicle/fiber length, not whole muscle-tendon length. Unit: m.
@@ -183,7 +183,7 @@ PARAMETERS = {
         # Cosine of the constant fiber-to-tendon pennation angle. Unit: 1.
         # Original work: 1.0
         "pennation_cosine": 1.0,
-        # Tendon strain when tension equals F0, the maximum isometric muscle force along the tendon direction. Unit: 1.
+        # Tendon strain when tension equals F0, the maximum isometric muscle force. Unit: 1.
         # Source value (original work or literature): not independently established for this entry.
         "tendon_strain_at_max_force": 0.04,
         # Positive maximum-shortening speed magnitude, measured in optimal fiber lengths per second. Unit: 1/s.
@@ -213,7 +213,7 @@ PARAMETERS = {
     },
     # Specify L BFA.
     "L_BFA": {
-        # Maximum isometric muscle force along the tendon direction (F0). The pennation projection is already included. This is not tendon failure strength or a force ceiling; do not multiply by cos(alpha) again. Unit: N.
+        # Maximum isometric muscle force (F0). The pennation projection is already included. This is not tendon failure strength or a force ceiling; do not multiply by cos(alpha) again. Unit: N.
         # Original work: 52.59611602643424
         "max_isometric_muscle_force_along_tendon_N": 84.53707607564715,
         # Optimal fascicle/fiber length, not whole muscle-tendon length. Unit: m.
@@ -225,7 +225,7 @@ PARAMETERS = {
         # Cosine of the constant fiber-to-tendon pennation angle. Unit: 1.
         # Original work: 0.9702957493261182
         "pennation_cosine": 0.9702957493261182,
-        # Tendon strain when tension equals F0, the maximum isometric muscle force along the tendon direction. Unit: 1.
+        # Tendon strain when tension equals F0, the maximum isometric muscle force. Unit: 1.
         # Source value (original work or literature): not independently established for this entry.
         "tendon_strain_at_max_force": 0.04,
         # Positive maximum-shortening speed magnitude, measured in optimal fiber lengths per second. Unit: 1/s.
@@ -255,7 +255,7 @@ PARAMETERS = {
     },
     # Specify L VL.
     "L_VL": {
-        # Maximum isometric muscle force along the tendon direction (F0). The pennation projection is already included. This is not tendon failure strength or a force ceiling; do not multiply by cos(alpha) again. Unit: N.
+        # Maximum isometric muscle force (F0). The pennation projection is already included. This is not tendon failure strength or a force ceiling; do not multiply by cos(alpha) again. Unit: N.
         # Original work: 202.1332125559301
         "max_isometric_muscle_force_along_tendon_N": 199.7761418599688,
         # Optimal fascicle/fiber length, not whole muscle-tendon length. Unit: m.
@@ -267,7 +267,7 @@ PARAMETERS = {
         # Cosine of the constant fiber-to-tendon pennation angle. Unit: 1.
         # Original work: 0.9715491454632413
         "pennation_cosine": 0.9715491454632413,
-        # Tendon strain when tension equals F0, the maximum isometric muscle force along the tendon direction. Unit: 1.
+        # Tendon strain when tension equals F0, the maximum isometric muscle force. Unit: 1.
         # Source value (original work or literature): not independently established for this entry.
         "tendon_strain_at_max_force": 0.04,
         # Positive maximum-shortening speed magnitude, measured in optimal fiber lengths per second. Unit: 1/s.
@@ -297,7 +297,7 @@ PARAMETERS = {
     },
     # Specify L VM.
     "L_VM": {
-        # Maximum isometric muscle force along the tendon direction (F0). The pennation projection is already included. This is not tendon failure strength or a force ceiling; do not multiply by cos(alpha) again. Unit: N.
+        # Maximum isometric muscle force (F0). The pennation projection is already included. This is not tendon failure strength or a force ceiling; do not multiply by cos(alpha) again. Unit: N.
         # Original work: 202.1332125559301
         "max_isometric_muscle_force_along_tendon_N": 229.6315183108968,
         # Optimal fascicle/fiber length, not whole muscle-tendon length. Unit: m.
@@ -309,7 +309,7 @@ PARAMETERS = {
         # Cosine of the constant fiber-to-tendon pennation angle. Unit: 1.
         # Original work: 0.9715491454632413
         "pennation_cosine": 0.9715491454632413,
-        # Tendon strain when tension equals F0, the maximum isometric muscle force along the tendon direction. Unit: 1.
+        # Tendon strain when tension equals F0, the maximum isometric muscle force. Unit: 1.
         # Source value (original work or literature): not independently established for this entry.
         "tendon_strain_at_max_force": 0.04,
         # Positive maximum-shortening speed magnitude, measured in optimal fiber lengths per second. Unit: 1/s.
@@ -339,7 +339,7 @@ PARAMETERS = {
     },
     # Specify L TA.
     "L_TA": {
-        # Maximum isometric muscle force along the tendon direction (F0). The pennation projection is already included. This is not tendon failure strength or a force ceiling; do not multiply by cos(alpha) again. Unit: N.
+        # Maximum isometric muscle force (F0). The pennation projection is already included. This is not tendon failure strength or a force ceiling; do not multiply by cos(alpha) again. Unit: N.
         # Original work: 40.403607239832965
         "max_isometric_muscle_force_along_tendon_N": 49.47473013648411,
         # Optimal fascicle/fiber length, not whole muscle-tendon length. Unit: m.
@@ -351,7 +351,7 @@ PARAMETERS = {
         # Cosine of the constant fiber-to-tendon pennation angle. Unit: 1.
         # Original work: 0.992546157447128
         "pennation_cosine": 0.992546157447128,
-        # Tendon strain when tension equals F0, the maximum isometric muscle force along the tendon direction. Unit: 1.
+        # Tendon strain when tension equals F0, the maximum isometric muscle force. Unit: 1.
         # Source value (original work or literature): not independently established for this entry.
         "tendon_strain_at_max_force": 0.04,
         # Positive maximum-shortening speed magnitude, measured in optimal fiber lengths per second. Unit: 1/s.
@@ -381,7 +381,7 @@ PARAMETERS = {
     },
     # Specify L SO.
     "L_SO": {
-        # Maximum isometric muscle force along the tendon direction (F0). The pennation projection is already included. This is not tendon failure strength or a force ceiling; do not multiply by cos(alpha) again. Unit: N.
+        # Maximum isometric muscle force (F0). The pennation projection is already included. This is not tendon failure strength or a force ceiling; do not multiply by cos(alpha) again. Unit: N.
         # Original work: 10.400001862531383
         "max_isometric_muscle_force_along_tendon_N": 9.218608539257296,
         # Optimal fascicle/fiber length, not whole muscle-tendon length. Unit: m.
@@ -393,7 +393,7 @@ PARAMETERS = {
         # Cosine of the constant fiber-to-tendon pennation angle. Unit: 1.
         # Original work: 0.992546157447128
         "pennation_cosine": 0.992546157447128,
-        # Tendon strain when tension equals F0, the maximum isometric muscle force along the tendon direction. Unit: 1.
+        # Tendon strain when tension equals F0, the maximum isometric muscle force. Unit: 1.
         # Source value (original work or literature): not independently established for this entry.
         "tendon_strain_at_max_force": 0.04,
         # Positive maximum-shortening speed magnitude, measured in optimal fiber lengths per second. Unit: 1/s.
@@ -423,7 +423,7 @@ PARAMETERS = {
     },
     # Specify L RF.
     "L_RF": {
-        # Maximum isometric muscle force along the tendon direction (F0). The pennation projection is already included. This is not tendon failure strength or a force ceiling; do not multiply by cos(alpha) again. Unit: N.
+        # Maximum isometric muscle force (F0). The pennation projection is already included. This is not tendon failure strength or a force ceiling; do not multiply by cos(alpha) again. Unit: N.
         # Original work: 61.00261092889873
         "max_isometric_muscle_force_along_tendon_N": 71.08377603814067,
         # Optimal fascicle/fiber length, not whole muscle-tendon length. Unit: m.
@@ -435,7 +435,7 @@ PARAMETERS = {
         # Cosine of the constant fiber-to-tendon pennation angle. Unit: 1.
         # Original work: 0.992546157447128
         "pennation_cosine": 0.992546157447128,
-        # Tendon strain when tension equals F0, the maximum isometric muscle force along the tendon direction. Unit: 1.
+        # Tendon strain when tension equals F0, the maximum isometric muscle force. Unit: 1.
         # Source value (original work or literature): not independently established for this entry.
         "tendon_strain_at_max_force": 0.04,
         # Positive maximum-shortening speed magnitude, measured in optimal fiber lengths per second. Unit: 1/s.
@@ -465,7 +465,7 @@ PARAMETERS = {
     },
     # Specify L BFP.
     "L_BFP": {
-        # Maximum isometric muscle force along the tendon direction (F0). The pennation projection is already included. This is not tendon failure strength or a force ceiling; do not multiply by cos(alpha) again. Unit: N.
+        # Maximum isometric muscle force (F0). The pennation projection is already included. This is not tendon failure strength or a force ceiling; do not multiply by cos(alpha) again. Unit: N.
         # Original work: 94.90031699267495
         "max_isometric_muscle_force_along_tendon_N": 102.0324360881335,
         # Optimal fascicle/fiber length, not whole muscle-tendon length. Unit: m.
@@ -477,7 +477,7 @@ PARAMETERS = {
         # Cosine of the constant fiber-to-tendon pennation angle. Unit: 1.
         # Original work: 0.992546157447128
         "pennation_cosine": 0.992546157447128,
-        # Tendon strain when tension equals F0, the maximum isometric muscle force along the tendon direction. Unit: 1.
+        # Tendon strain when tension equals F0, the maximum isometric muscle force. Unit: 1.
         # Source value (original work or literature): not independently established for this entry.
         "tendon_strain_at_max_force": 0.04,
         # Positive maximum-shortening speed magnitude, measured in optimal fiber lengths per second. Unit: 1/s.
@@ -507,7 +507,7 @@ PARAMETERS = {
     },
     # Specify L SAM.
     "L_SAM": {
-        # Maximum isometric muscle force along the tendon direction (F0). The pennation projection is already included. This is not tendon failure strength or a force ceiling; do not multiply by cos(alpha) again. Unit: N.
+        # Maximum isometric muscle force (F0). The pennation projection is already included. This is not tendon failure strength or a force ceiling; do not multiply by cos(alpha) again. Unit: N.
         # Original work: 10.049972415435821
         "max_isometric_muscle_force_along_tendon_N": 10.447494734981838,
         # Optimal fascicle/fiber length, not whole muscle-tendon length. Unit: m.
@@ -519,7 +519,7 @@ PARAMETERS = {
         # Cosine of the constant fiber-to-tendon pennation angle. Unit: 1.
         # Original work: 0.9973144793178809
         "pennation_cosine": 0.9973144793178809,
-        # Tendon strain when tension equals F0, the maximum isometric muscle force along the tendon direction. Unit: 1.
+        # Tendon strain when tension equals F0, the maximum isometric muscle force. Unit: 1.
         # Source value (original work or literature): not independently established for this entry.
         "tendon_strain_at_max_force": 0.04,
         # Positive maximum-shortening speed magnitude, measured in optimal fiber lengths per second. Unit: 1/s.
@@ -549,7 +549,7 @@ PARAMETERS = {
     },
     # Specify L LG.
     "L_LG": {
-        # Maximum isometric muscle force along the tendon direction (F0). The pennation projection is already included. This is not tendon failure strength or a force ceiling; do not multiply by cos(alpha) again. Unit: N.
+        # Maximum isometric muscle force (F0). The pennation projection is already included. This is not tendon failure strength or a force ceiling; do not multiply by cos(alpha) again. Unit: N.
         # Original work: 96.84992287745925
         "max_isometric_muscle_force_along_tendon_N": 94.6728596983433,
         # Optimal fascicle/fiber length, not whole muscle-tendon length. Unit: m.
@@ -561,7 +561,7 @@ PARAMETERS = {
         # Cosine of the constant fiber-to-tendon pennation angle. Unit: 1.
         # Original work: 0.9455184316586812
         "pennation_cosine": 0.9455184316586812,
-        # Tendon strain when tension equals F0, the maximum isometric muscle force along the tendon direction. Unit: 1.
+        # Tendon strain when tension equals F0, the maximum isometric muscle force. Unit: 1.
         # Source value (original work or literature): not independently established for this entry.
         "tendon_strain_at_max_force": 0.04,
         # Positive maximum-shortening speed magnitude, measured in optimal fiber lengths per second. Unit: 1/s.
@@ -591,7 +591,7 @@ PARAMETERS = {
     },
     # Specify L MG.
     "L_MG": {
-        # Maximum isometric muscle force along the tendon direction (F0). The pennation projection is already included. This is not tendon failure strength or a force ceiling; do not multiply by cos(alpha) again. Unit: N.
+        # Maximum isometric muscle force (F0). The pennation projection is already included. This is not tendon failure strength or a force ceiling; do not multiply by cos(alpha) again. Unit: N.
         # Original work: 96.84992287745925
         "max_isometric_muscle_force_along_tendon_N": 87.8981443205283,
         # Optimal fascicle/fiber length, not whole muscle-tendon length. Unit: m.
@@ -603,7 +603,7 @@ PARAMETERS = {
         # Cosine of the constant fiber-to-tendon pennation angle. Unit: 1.
         # Original work: 0.9455184316586812
         "pennation_cosine": 0.9455184316586812,
-        # Tendon strain when tension equals F0, the maximum isometric muscle force along the tendon direction. Unit: 1.
+        # Tendon strain when tension equals F0, the maximum isometric muscle force. Unit: 1.
         # Source value (original work or literature): not independently established for this entry.
         "tendon_strain_at_max_force": 0.04,
         # Positive maximum-shortening speed magnitude, measured in optimal fiber lengths per second. Unit: 1/s.
@@ -633,7 +633,7 @@ PARAMETERS = {
     },
     # Specify R IP.
     "R_IP": {
-        # Maximum isometric muscle force along the tendon direction (F0). The pennation projection is already included. This is not tendon failure strength or a force ceiling; do not multiply by cos(alpha) again. Unit: N.
+        # Maximum isometric muscle force (F0). The pennation projection is already included. This is not tendon failure strength or a force ceiling; do not multiply by cos(alpha) again. Unit: N.
         # Original work: 95.1724
         "max_isometric_muscle_force_along_tendon_N": 95.292768017117,
         # Optimal fascicle/fiber length, not whole muscle-tendon length. Unit: m.
@@ -645,7 +645,7 @@ PARAMETERS = {
         # Cosine of the constant fiber-to-tendon pennation angle. Unit: 1.
         # Original work: 1.0
         "pennation_cosine": 1.0,
-        # Tendon strain when tension equals F0, the maximum isometric muscle force along the tendon direction. Unit: 1.
+        # Tendon strain when tension equals F0, the maximum isometric muscle force. Unit: 1.
         # Source value (original work or literature): not independently established for this entry.
         "tendon_strain_at_max_force": 0.04,
         # Positive maximum-shortening speed magnitude, measured in optimal fiber lengths per second. Unit: 1/s.
@@ -675,7 +675,7 @@ PARAMETERS = {
     },
     # Specify R BFA.
     "R_BFA": {
-        # Maximum isometric muscle force along the tendon direction (F0). The pennation projection is already included. This is not tendon failure strength or a force ceiling; do not multiply by cos(alpha) again. Unit: N.
+        # Maximum isometric muscle force (F0). The pennation projection is already included. This is not tendon failure strength or a force ceiling; do not multiply by cos(alpha) again. Unit: N.
         # Original work: 52.59611602643424
         "max_isometric_muscle_force_along_tendon_N": 84.53707607564715,
         # Optimal fascicle/fiber length, not whole muscle-tendon length. Unit: m.
@@ -687,7 +687,7 @@ PARAMETERS = {
         # Cosine of the constant fiber-to-tendon pennation angle. Unit: 1.
         # Original work: 0.9702957493261182
         "pennation_cosine": 0.9702957493261182,
-        # Tendon strain when tension equals F0, the maximum isometric muscle force along the tendon direction. Unit: 1.
+        # Tendon strain when tension equals F0, the maximum isometric muscle force. Unit: 1.
         # Source value (original work or literature): not independently established for this entry.
         "tendon_strain_at_max_force": 0.04,
         # Positive maximum-shortening speed magnitude, measured in optimal fiber lengths per second. Unit: 1/s.
@@ -717,7 +717,7 @@ PARAMETERS = {
     },
     # Specify R VL.
     "R_VL": {
-        # Maximum isometric muscle force along the tendon direction (F0). The pennation projection is already included. This is not tendon failure strength or a force ceiling; do not multiply by cos(alpha) again. Unit: N.
+        # Maximum isometric muscle force (F0). The pennation projection is already included. This is not tendon failure strength or a force ceiling; do not multiply by cos(alpha) again. Unit: N.
         # Original work: 202.1332125559301
         "max_isometric_muscle_force_along_tendon_N": 199.7761418599688,
         # Optimal fascicle/fiber length, not whole muscle-tendon length. Unit: m.
@@ -729,7 +729,7 @@ PARAMETERS = {
         # Cosine of the constant fiber-to-tendon pennation angle. Unit: 1.
         # Original work: 0.9715491454632413
         "pennation_cosine": 0.9715491454632413,
-        # Tendon strain when tension equals F0, the maximum isometric muscle force along the tendon direction. Unit: 1.
+        # Tendon strain when tension equals F0, the maximum isometric muscle force. Unit: 1.
         # Source value (original work or literature): not independently established for this entry.
         "tendon_strain_at_max_force": 0.04,
         # Positive maximum-shortening speed magnitude, measured in optimal fiber lengths per second. Unit: 1/s.
@@ -759,7 +759,7 @@ PARAMETERS = {
     },
     # Specify R VM.
     "R_VM": {
-        # Maximum isometric muscle force along the tendon direction (F0). The pennation projection is already included. This is not tendon failure strength or a force ceiling; do not multiply by cos(alpha) again. Unit: N.
+        # Maximum isometric muscle force (F0). The pennation projection is already included. This is not tendon failure strength or a force ceiling; do not multiply by cos(alpha) again. Unit: N.
         # Original work: 202.1332125559301
         "max_isometric_muscle_force_along_tendon_N": 229.6315183108968,
         # Optimal fascicle/fiber length, not whole muscle-tendon length. Unit: m.
@@ -771,7 +771,7 @@ PARAMETERS = {
         # Cosine of the constant fiber-to-tendon pennation angle. Unit: 1.
         # Original work: 0.9715491454632413
         "pennation_cosine": 0.9715491454632413,
-        # Tendon strain when tension equals F0, the maximum isometric muscle force along the tendon direction. Unit: 1.
+        # Tendon strain when tension equals F0, the maximum isometric muscle force. Unit: 1.
         # Source value (original work or literature): not independently established for this entry.
         "tendon_strain_at_max_force": 0.04,
         # Positive maximum-shortening speed magnitude, measured in optimal fiber lengths per second. Unit: 1/s.
@@ -801,7 +801,7 @@ PARAMETERS = {
     },
     # Specify R TA.
     "R_TA": {
-        # Maximum isometric muscle force along the tendon direction (F0). The pennation projection is already included. This is not tendon failure strength or a force ceiling; do not multiply by cos(alpha) again. Unit: N.
+        # Maximum isometric muscle force (F0). The pennation projection is already included. This is not tendon failure strength or a force ceiling; do not multiply by cos(alpha) again. Unit: N.
         # Original work: 40.403607239832965
         "max_isometric_muscle_force_along_tendon_N": 49.47473013648411,
         # Optimal fascicle/fiber length, not whole muscle-tendon length. Unit: m.
@@ -813,7 +813,7 @@ PARAMETERS = {
         # Cosine of the constant fiber-to-tendon pennation angle. Unit: 1.
         # Original work: 0.992546157447128
         "pennation_cosine": 0.992546157447128,
-        # Tendon strain when tension equals F0, the maximum isometric muscle force along the tendon direction. Unit: 1.
+        # Tendon strain when tension equals F0, the maximum isometric muscle force. Unit: 1.
         # Source value (original work or literature): not independently established for this entry.
         "tendon_strain_at_max_force": 0.04,
         # Positive maximum-shortening speed magnitude, measured in optimal fiber lengths per second. Unit: 1/s.
@@ -843,7 +843,7 @@ PARAMETERS = {
     },
     # Specify R SO.
     "R_SO": {
-        # Maximum isometric muscle force along the tendon direction (F0). The pennation projection is already included. This is not tendon failure strength or a force ceiling; do not multiply by cos(alpha) again. Unit: N.
+        # Maximum isometric muscle force (F0). The pennation projection is already included. This is not tendon failure strength or a force ceiling; do not multiply by cos(alpha) again. Unit: N.
         # Original work: 10.400001862531383
         "max_isometric_muscle_force_along_tendon_N": 9.218608539257296,
         # Optimal fascicle/fiber length, not whole muscle-tendon length. Unit: m.
@@ -855,7 +855,7 @@ PARAMETERS = {
         # Cosine of the constant fiber-to-tendon pennation angle. Unit: 1.
         # Original work: 0.992546157447128
         "pennation_cosine": 0.992546157447128,
-        # Tendon strain when tension equals F0, the maximum isometric muscle force along the tendon direction. Unit: 1.
+        # Tendon strain when tension equals F0, the maximum isometric muscle force. Unit: 1.
         # Source value (original work or literature): not independently established for this entry.
         "tendon_strain_at_max_force": 0.04,
         # Positive maximum-shortening speed magnitude, measured in optimal fiber lengths per second. Unit: 1/s.
@@ -885,7 +885,7 @@ PARAMETERS = {
     },
     # Specify R RF.
     "R_RF": {
-        # Maximum isometric muscle force along the tendon direction (F0). The pennation projection is already included. This is not tendon failure strength or a force ceiling; do not multiply by cos(alpha) again. Unit: N.
+        # Maximum isometric muscle force (F0). The pennation projection is already included. This is not tendon failure strength or a force ceiling; do not multiply by cos(alpha) again. Unit: N.
         # Original work: 61.00261092889873
         "max_isometric_muscle_force_along_tendon_N": 71.08377603814067,
         # Optimal fascicle/fiber length, not whole muscle-tendon length. Unit: m.
@@ -897,7 +897,7 @@ PARAMETERS = {
         # Cosine of the constant fiber-to-tendon pennation angle. Unit: 1.
         # Original work: 0.992546157447128
         "pennation_cosine": 0.992546157447128,
-        # Tendon strain when tension equals F0, the maximum isometric muscle force along the tendon direction. Unit: 1.
+        # Tendon strain when tension equals F0, the maximum isometric muscle force. Unit: 1.
         # Source value (original work or literature): not independently established for this entry.
         "tendon_strain_at_max_force": 0.04,
         # Positive maximum-shortening speed magnitude, measured in optimal fiber lengths per second. Unit: 1/s.
@@ -927,7 +927,7 @@ PARAMETERS = {
     },
     # Specify R BFP.
     "R_BFP": {
-        # Maximum isometric muscle force along the tendon direction (F0). The pennation projection is already included. This is not tendon failure strength or a force ceiling; do not multiply by cos(alpha) again. Unit: N.
+        # Maximum isometric muscle force (F0). The pennation projection is already included. This is not tendon failure strength or a force ceiling; do not multiply by cos(alpha) again. Unit: N.
         # Original work: 94.90031699267495
         "max_isometric_muscle_force_along_tendon_N": 102.0324360881335,
         # Optimal fascicle/fiber length, not whole muscle-tendon length. Unit: m.
@@ -939,7 +939,7 @@ PARAMETERS = {
         # Cosine of the constant fiber-to-tendon pennation angle. Unit: 1.
         # Original work: 0.992546157447128
         "pennation_cosine": 0.992546157447128,
-        # Tendon strain when tension equals F0, the maximum isometric muscle force along the tendon direction. Unit: 1.
+        # Tendon strain when tension equals F0, the maximum isometric muscle force. Unit: 1.
         # Source value (original work or literature): not independently established for this entry.
         "tendon_strain_at_max_force": 0.04,
         # Positive maximum-shortening speed magnitude, measured in optimal fiber lengths per second. Unit: 1/s.
@@ -969,7 +969,7 @@ PARAMETERS = {
     },
     # Specify R SAM.
     "R_SAM": {
-        # Maximum isometric muscle force along the tendon direction (F0). The pennation projection is already included. This is not tendon failure strength or a force ceiling; do not multiply by cos(alpha) again. Unit: N.
+        # Maximum isometric muscle force (F0). The pennation projection is already included. This is not tendon failure strength or a force ceiling; do not multiply by cos(alpha) again. Unit: N.
         # Original work: 10.049972415435821
         "max_isometric_muscle_force_along_tendon_N": 10.447494734981838,
         # Optimal fascicle/fiber length, not whole muscle-tendon length. Unit: m.
@@ -981,7 +981,7 @@ PARAMETERS = {
         # Cosine of the constant fiber-to-tendon pennation angle. Unit: 1.
         # Original work: 0.9973144793178809
         "pennation_cosine": 0.9973144793178809,
-        # Tendon strain when tension equals F0, the maximum isometric muscle force along the tendon direction. Unit: 1.
+        # Tendon strain when tension equals F0, the maximum isometric muscle force. Unit: 1.
         # Source value (original work or literature): not independently established for this entry.
         "tendon_strain_at_max_force": 0.04,
         # Positive maximum-shortening speed magnitude, measured in optimal fiber lengths per second. Unit: 1/s.
@@ -1011,7 +1011,7 @@ PARAMETERS = {
     },
     # Specify R LG.
     "R_LG": {
-        # Maximum isometric muscle force along the tendon direction (F0). The pennation projection is already included. This is not tendon failure strength or a force ceiling; do not multiply by cos(alpha) again. Unit: N.
+        # Maximum isometric muscle force (F0). The pennation projection is already included. This is not tendon failure strength or a force ceiling; do not multiply by cos(alpha) again. Unit: N.
         # Original work: 96.84992287745925
         "max_isometric_muscle_force_along_tendon_N": 94.6728596983433,
         # Optimal fascicle/fiber length, not whole muscle-tendon length. Unit: m.
@@ -1023,7 +1023,7 @@ PARAMETERS = {
         # Cosine of the constant fiber-to-tendon pennation angle. Unit: 1.
         # Original work: 0.9455184316586812
         "pennation_cosine": 0.9455184316586812,
-        # Tendon strain when tension equals F0, the maximum isometric muscle force along the tendon direction. Unit: 1.
+        # Tendon strain when tension equals F0, the maximum isometric muscle force. Unit: 1.
         # Source value (original work or literature): not independently established for this entry.
         "tendon_strain_at_max_force": 0.04,
         # Positive maximum-shortening speed magnitude, measured in optimal fiber lengths per second. Unit: 1/s.
@@ -1053,7 +1053,7 @@ PARAMETERS = {
     },
     # Specify R MG.
     "R_MG": {
-        # Maximum isometric muscle force along the tendon direction (F0). The pennation projection is already included. This is not tendon failure strength or a force ceiling; do not multiply by cos(alpha) again. Unit: N.
+        # Maximum isometric muscle force (F0). The pennation projection is already included. This is not tendon failure strength or a force ceiling; do not multiply by cos(alpha) again. Unit: N.
         # Original work: 96.84992287745925
         "max_isometric_muscle_force_along_tendon_N": 87.8981443205283,
         # Optimal fascicle/fiber length, not whole muscle-tendon length. Unit: m.
@@ -1065,7 +1065,7 @@ PARAMETERS = {
         # Cosine of the constant fiber-to-tendon pennation angle. Unit: 1.
         # Original work: 0.9455184316586812
         "pennation_cosine": 0.9455184316586812,
-        # Tendon strain when tension equals F0, the maximum isometric muscle force along the tendon direction. Unit: 1.
+        # Tendon strain when tension equals F0, the maximum isometric muscle force. Unit: 1.
         # Source value (original work or literature): not independently established for this entry.
         "tendon_strain_at_max_force": 0.04,
         # Positive maximum-shortening speed magnitude, measured in optimal fiber lengths per second. Unit: 1/s.
@@ -1095,7 +1095,7 @@ PARAMETERS = {
     },
     # Specify L EDL.
     "L_EDL": {
-        # Maximum isometric muscle force along the tendon direction (F0). The pennation projection is already included. This is not tendon failure strength or a force ceiling; do not multiply by cos(alpha) again. Unit: N.
+        # Maximum isometric muscle force (F0). The pennation projection is already included. This is not tendon failure strength or a force ceiling; do not multiply by cos(alpha) again. Unit: N.
         # Source value (original work or literature): not independently established for this entry.
         "max_isometric_muscle_force_along_tendon_N": 22.041212324862613,
         # Optimal fascicle/fiber length, not whole muscle-tendon length. Unit: m.
@@ -1107,7 +1107,7 @@ PARAMETERS = {
         # Cosine of the constant fiber-to-tendon pennation angle. Unit: 1.
         # Source value (original work or literature): not independently established for this entry.
         "pennation_cosine": 0.9902681160825719,
-        # Tendon strain when tension equals F0, the maximum isometric muscle force along the tendon direction. Unit: 1.
+        # Tendon strain when tension equals F0, the maximum isometric muscle force. Unit: 1.
         # Source value (original work or literature): not independently established for this entry.
         "tendon_strain_at_max_force": 0.033,
         # Positive maximum-shortening speed magnitude, measured in optimal fiber lengths per second. Unit: 1/s.
@@ -1137,7 +1137,7 @@ PARAMETERS = {
     },
     # Specify R EDL.
     "R_EDL": {
-        # Maximum isometric muscle force along the tendon direction (F0). The pennation projection is already included. This is not tendon failure strength or a force ceiling; do not multiply by cos(alpha) again. Unit: N.
+        # Maximum isometric muscle force (F0). The pennation projection is already included. This is not tendon failure strength or a force ceiling; do not multiply by cos(alpha) again. Unit: N.
         # Source value (original work or literature): not independently established for this entry.
         "max_isometric_muscle_force_along_tendon_N": 22.041212324862613,
         # Optimal fascicle/fiber length, not whole muscle-tendon length. Unit: m.
@@ -1149,7 +1149,7 @@ PARAMETERS = {
         # Cosine of the constant fiber-to-tendon pennation angle. Unit: 1.
         # Source value (original work or literature): not independently established for this entry.
         "pennation_cosine": 0.9902681160825719,
-        # Tendon strain when tension equals F0, the maximum isometric muscle force along the tendon direction. Unit: 1.
+        # Tendon strain when tension equals F0, the maximum isometric muscle force. Unit: 1.
         # Source value (original work or literature): not independently established for this entry.
         "tendon_strain_at_max_force": 0.033,
         # Positive maximum-shortening speed magnitude, measured in optimal fiber lengths per second. Unit: 1/s.
@@ -1179,7 +1179,7 @@ PARAMETERS = {
     },
     # Specify L FDL.
     "L_FDL": {
-        # Maximum isometric muscle force along the tendon direction (F0). The pennation projection is already included. This is not tendon failure strength or a force ceiling; do not multiply by cos(alpha) again. Unit: N.
+        # Maximum isometric muscle force (F0). The pennation projection is already included. This is not tendon failure strength or a force ceiling; do not multiply by cos(alpha) again. Unit: N.
         # Source value (original work or literature): not independently established for this entry.
         "max_isometric_muscle_force_along_tendon_N": 17.084827927157022,
         # Optimal fascicle/fiber length, not whole muscle-tendon length. Unit: m.
@@ -1191,7 +1191,7 @@ PARAMETERS = {
         # Cosine of the constant fiber-to-tendon pennation angle. Unit: 1.
         # Source value (original work or literature): not independently established for this entry.
         "pennation_cosine": 0.9848079136709821,
-        # Tendon strain when tension equals F0, the maximum isometric muscle force along the tendon direction. Unit: 1.
+        # Tendon strain when tension equals F0, the maximum isometric muscle force. Unit: 1.
         # Source value (original work or literature): not independently established for this entry.
         "tendon_strain_at_max_force": 0.033,
         # Positive maximum-shortening speed magnitude, measured in optimal fiber lengths per second. Unit: 1/s.
@@ -1221,7 +1221,7 @@ PARAMETERS = {
     },
     # Specify R FDL.
     "R_FDL": {
-        # Maximum isometric muscle force along the tendon direction (F0). The pennation projection is already included. This is not tendon failure strength or a force ceiling; do not multiply by cos(alpha) again. Unit: N.
+        # Maximum isometric muscle force (F0). The pennation projection is already included. This is not tendon failure strength or a force ceiling; do not multiply by cos(alpha) again. Unit: N.
         # Source value (original work or literature): not independently established for this entry.
         "max_isometric_muscle_force_along_tendon_N": 17.084827927157022,
         # Optimal fascicle/fiber length, not whole muscle-tendon length. Unit: m.
@@ -1233,7 +1233,7 @@ PARAMETERS = {
         # Cosine of the constant fiber-to-tendon pennation angle. Unit: 1.
         # Source value (original work or literature): not independently established for this entry.
         "pennation_cosine": 0.9848079136709821,
-        # Tendon strain when tension equals F0, the maximum isometric muscle force along the tendon direction. Unit: 1.
+        # Tendon strain when tension equals F0, the maximum isometric muscle force. Unit: 1.
         # Source value (original work or literature): not independently established for this entry.
         "tendon_strain_at_max_force": 0.033,
         # Positive maximum-shortening speed magnitude, measured in optimal fiber lengths per second. Unit: 1/s.
@@ -1263,7 +1263,7 @@ PARAMETERS = {
     },
     # Specify L FHL.
     "L_FHL": {
-        # Maximum isometric muscle force along the tendon direction (F0). The pennation projection is already included. This is not tendon failure strength or a force ceiling; do not multiply by cos(alpha) again. Unit: N.
+        # Maximum isometric muscle force (F0). The pennation projection is already included. This is not tendon failure strength or a force ceiling; do not multiply by cos(alpha) again. Unit: N.
         # Source value (original work or literature): not independently established for this entry.
         "max_isometric_muscle_force_along_tendon_N": 115.6534446266983,
         # Optimal fascicle/fiber length, not whole muscle-tendon length. Unit: m.
@@ -1275,7 +1275,7 @@ PARAMETERS = {
         # Cosine of the constant fiber-to-tendon pennation angle. Unit: 1.
         # Source value (original work or literature): not independently established for this entry.
         "pennation_cosine": 0.992546157447128,
-        # Tendon strain when tension equals F0, the maximum isometric muscle force along the tendon direction. Unit: 1.
+        # Tendon strain when tension equals F0, the maximum isometric muscle force. Unit: 1.
         # Source value (original work or literature): not independently established for this entry.
         "tendon_strain_at_max_force": 0.04,
         # Positive maximum-shortening speed magnitude, measured in optimal fiber lengths per second. Unit: 1/s.
@@ -1305,7 +1305,7 @@ PARAMETERS = {
     },
     # Specify R FHL.
     "R_FHL": {
-        # Maximum isometric muscle force along the tendon direction (F0). The pennation projection is already included. This is not tendon failure strength or a force ceiling; do not multiply by cos(alpha) again. Unit: N.
+        # Maximum isometric muscle force (F0). The pennation projection is already included. This is not tendon failure strength or a force ceiling; do not multiply by cos(alpha) again. Unit: N.
         # Source value (original work or literature): not independently established for this entry.
         "max_isometric_muscle_force_along_tendon_N": 115.6534446266983,
         # Optimal fascicle/fiber length, not whole muscle-tendon length. Unit: m.
@@ -1317,7 +1317,7 @@ PARAMETERS = {
         # Cosine of the constant fiber-to-tendon pennation angle. Unit: 1.
         # Source value (original work or literature): not independently established for this entry.
         "pennation_cosine": 0.992546157447128,
-        # Tendon strain when tension equals F0, the maximum isometric muscle force along the tendon direction. Unit: 1.
+        # Tendon strain when tension equals F0, the maximum isometric muscle force. Unit: 1.
         # Source value (original work or literature): not independently established for this entry.
         "tendon_strain_at_max_force": 0.04,
         # Positive maximum-shortening speed magnitude, measured in optimal fiber lengths per second. Unit: 1/s.
@@ -1347,7 +1347,7 @@ PARAMETERS = {
     },
     # Specify FL ShoulderExtensor.
     "FL_ShoulderExtensor": {
-        # Maximum isometric muscle force along the tendon direction (F0). The pennation projection is already included. This is not tendon failure strength or a force ceiling; do not multiply by cos(alpha) again. Unit: N.
+        # Maximum isometric muscle force (F0). The pennation projection is already included. This is not tendon failure strength or a force ceiling; do not multiply by cos(alpha) again. Unit: N.
         # Original work: 563.2917457828182
         "max_isometric_muscle_force_along_tendon_N": 536.9727865899736,
         # Optimal fascicle/fiber length, not whole muscle-tendon length. Unit: m.
@@ -1359,7 +1359,7 @@ PARAMETERS = {
         # Cosine of the constant fiber-to-tendon pennation angle. Unit: 1.
         # Original work: 0.965422094265322
         "pennation_cosine": 0.965422094265322,
-        # Tendon strain when tension equals F0, the maximum isometric muscle force along the tendon direction. Unit: 1.
+        # Tendon strain when tension equals F0, the maximum isometric muscle force. Unit: 1.
         # Source value (original work or literature): not independently established for this entry.
         "tendon_strain_at_max_force": 0.04,
         # Positive maximum-shortening speed magnitude, measured in optimal fiber lengths per second. Unit: 1/s.
@@ -1389,7 +1389,7 @@ PARAMETERS = {
     },
     # Specify FL ElbowExtensor.
     "FL_ElbowExtensor": {
-        # Maximum isometric muscle force along the tendon direction (F0). The pennation projection is already included. This is not tendon failure strength or a force ceiling; do not multiply by cos(alpha) again. Unit: N.
+        # Maximum isometric muscle force (F0). The pennation projection is already included. This is not tendon failure strength or a force ceiling; do not multiply by cos(alpha) again. Unit: N.
         # Original work: 124.06863293522338
         "max_isometric_muscle_force_along_tendon_N": 125.72991797795375,
         # Optimal fascicle/fiber length, not whole muscle-tendon length. Unit: m.
@@ -1401,7 +1401,7 @@ PARAMETERS = {
         # Cosine of the constant fiber-to-tendon pennation angle. Unit: 1.
         # Original work: 0.9862856015372314
         "pennation_cosine": 0.9862856015372314,
-        # Tendon strain when tension equals F0, the maximum isometric muscle force along the tendon direction. Unit: 1.
+        # Tendon strain when tension equals F0, the maximum isometric muscle force. Unit: 1.
         # Source value (original work or literature): not independently established for this entry.
         "tendon_strain_at_max_force": 0.04,
         # Positive maximum-shortening speed magnitude, measured in optimal fiber lengths per second. Unit: 1/s.
@@ -1431,7 +1431,7 @@ PARAMETERS = {
     },
     # Specify FL BicepsBrachii.
     "FL_BicepsBrachii": {
-        # Maximum isometric muscle force along the tendon direction (F0). The pennation projection is already included. This is not tendon failure strength or a force ceiling; do not multiply by cos(alpha) again. Unit: N.
+        # Maximum isometric muscle force (F0). The pennation projection is already included. This is not tendon failure strength or a force ceiling; do not multiply by cos(alpha) again. Unit: N.
         # Original work: 50.419326616742886
         "max_isometric_muscle_force_along_tendon_N": 56.95816789224988,
         # Optimal fascicle/fiber length, not whole muscle-tendon length. Unit: m.
@@ -1443,7 +1443,7 @@ PARAMETERS = {
         # Cosine of the constant fiber-to-tendon pennation angle. Unit: 1.
         # Original work: 0.984807753012208
         "pennation_cosine": 0.984807753012208,
-        # Tendon strain when tension equals F0, the maximum isometric muscle force along the tendon direction. Unit: 1.
+        # Tendon strain when tension equals F0, the maximum isometric muscle force. Unit: 1.
         # Source value (original work or literature): not independently established for this entry.
         "tendon_strain_at_max_force": 0.04,
         # Positive maximum-shortening speed magnitude, measured in optimal fiber lengths per second. Unit: 1/s.
@@ -1473,7 +1473,7 @@ PARAMETERS = {
     },
     # Specify FL ElbowFlexor.
     "FL_ElbowFlexor": {
-        # Maximum isometric muscle force along the tendon direction (F0). The pennation projection is already included. This is not tendon failure strength or a force ceiling; do not multiply by cos(alpha) again. Unit: N.
+        # Maximum isometric muscle force (F0). The pennation projection is already included. This is not tendon failure strength or a force ceiling; do not multiply by cos(alpha) again. Unit: N.
         # Original work: 55.534105298029274
         "max_isometric_muscle_force_along_tendon_N": 61.029495040345,
         # Optimal fascicle/fiber length, not whole muscle-tendon length. Unit: m.
@@ -1485,7 +1485,7 @@ PARAMETERS = {
         # Cosine of the constant fiber-to-tendon pennation angle. Unit: 1.
         # Original work: 0.9836064595790646
         "pennation_cosine": 0.9836064595790646,
-        # Tendon strain when tension equals F0, the maximum isometric muscle force along the tendon direction. Unit: 1.
+        # Tendon strain when tension equals F0, the maximum isometric muscle force. Unit: 1.
         # Source value (original work or literature): not independently established for this entry.
         "tendon_strain_at_max_force": 0.04,
         # Positive maximum-shortening speed magnitude, measured in optimal fiber lengths per second. Unit: 1/s.
@@ -1515,7 +1515,7 @@ PARAMETERS = {
     },
     # Specify FL ElbowFlexorWristFlexor.
     "FL_ElbowFlexorWristFlexor": {
-        # Maximum isometric muscle force along the tendon direction (F0). The pennation projection is already included. This is not tendon failure strength or a force ceiling; do not multiply by cos(alpha) again. Unit: N.
+        # Maximum isometric muscle force (F0). The pennation projection is already included. This is not tendon failure strength or a force ceiling; do not multiply by cos(alpha) again. Unit: N.
         # Original work: 97.32103768862663
         "max_isometric_muscle_force_along_tendon_N": 21.357653856823912,
         # Optimal fascicle/fiber length, not whole muscle-tendon length. Unit: m.
@@ -1527,7 +1527,7 @@ PARAMETERS = {
         # Cosine of the constant fiber-to-tendon pennation angle. Unit: 1.
         # Original work: 0.991968197918445
         "pennation_cosine": 0.991968197918445,
-        # Tendon strain when tension equals F0, the maximum isometric muscle force along the tendon direction. Unit: 1.
+        # Tendon strain when tension equals F0, the maximum isometric muscle force. Unit: 1.
         # Source value (original work or literature): not independently established for this entry.
         "tendon_strain_at_max_force": 0.04,
         # Positive maximum-shortening speed magnitude, measured in optimal fiber lengths per second. Unit: 1/s.
@@ -1557,7 +1557,7 @@ PARAMETERS = {
     },
     # Specify FL WristFlexor.
     "FL_WristFlexor": {
-        # Maximum isometric muscle force along the tendon direction (F0). The pennation projection is already included. This is not tendon failure strength or a force ceiling; do not multiply by cos(alpha) again. Unit: N.
+        # Maximum isometric muscle force (F0). The pennation projection is already included. This is not tendon failure strength or a force ceiling; do not multiply by cos(alpha) again. Unit: N.
         # Original work: 11.3888980105689
         "max_isometric_muscle_force_along_tendon_N": 11.387722858664116,
         # Optimal fascicle/fiber length, not whole muscle-tendon length. Unit: m.
@@ -1569,7 +1569,7 @@ PARAMETERS = {
         # Cosine of the constant fiber-to-tendon pennation angle. Unit: 1.
         # Original work: 0.9999323080037622
         "pennation_cosine": 0.9999323080037622,
-        # Tendon strain when tension equals F0, the maximum isometric muscle force along the tendon direction. Unit: 1.
+        # Tendon strain when tension equals F0, the maximum isometric muscle force. Unit: 1.
         # Source value (original work or literature): not independently established for this entry.
         "tendon_strain_at_max_force": 0.04,
         # Positive maximum-shortening speed magnitude, measured in optimal fiber lengths per second. Unit: 1/s.
@@ -1599,7 +1599,7 @@ PARAMETERS = {
     },
     # Specify FL WristExtensor.
     "FL_WristExtensor": {
-        # Maximum isometric muscle force along the tendon direction (F0). The pennation projection is already included. This is not tendon failure strength or a force ceiling; do not multiply by cos(alpha) again. Unit: N.
+        # Maximum isometric muscle force (F0). The pennation projection is already included. This is not tendon failure strength or a force ceiling; do not multiply by cos(alpha) again. Unit: N.
         # Original work: 825.3025003070337
         "max_isometric_muscle_force_along_tendon_N": 93.48427427318677,
         # Optimal fascicle/fiber length, not whole muscle-tendon length. Unit: m.
@@ -1611,7 +1611,7 @@ PARAMETERS = {
         # Cosine of the constant fiber-to-tendon pennation angle. Unit: 1.
         # Original work: 0.9898590415514598
         "pennation_cosine": 0.9898590415514598,
-        # Tendon strain when tension equals F0, the maximum isometric muscle force along the tendon direction. Unit: 1.
+        # Tendon strain when tension equals F0, the maximum isometric muscle force. Unit: 1.
         # Source value (original work or literature): not independently established for this entry.
         "tendon_strain_at_max_force": 0.04,
         # Positive maximum-shortening speed magnitude, measured in optimal fiber lengths per second. Unit: 1/s.
@@ -1641,7 +1641,7 @@ PARAMETERS = {
     },
     # Specify FL ShoulderFlexor.
     "FL_ShoulderFlexor": {
-        # Maximum isometric muscle force along the tendon direction (F0). The pennation projection is already included. This is not tendon failure strength or a force ceiling; do not multiply by cos(alpha) again. Unit: N.
+        # Maximum isometric muscle force (F0). The pennation projection is already included. This is not tendon failure strength or a force ceiling; do not multiply by cos(alpha) again. Unit: N.
         # Original work: 60.74692220722504
         "max_isometric_muscle_force_along_tendon_N": 69.41141750222351,
         # Optimal fascicle/fiber length, not whole muscle-tendon length. Unit: m.
@@ -1653,7 +1653,7 @@ PARAMETERS = {
         # Cosine of the constant fiber-to-tendon pennation angle. Unit: 1.
         # Original work: 0.9975640502598242
         "pennation_cosine": 0.9975640502598242,
-        # Tendon strain when tension equals F0, the maximum isometric muscle force along the tendon direction. Unit: 1.
+        # Tendon strain when tension equals F0, the maximum isometric muscle force. Unit: 1.
         # Source value (original work or literature): not independently established for this entry.
         "tendon_strain_at_max_force": 0.04,
         # Positive maximum-shortening speed magnitude, measured in optimal fiber lengths per second. Unit: 1/s.
@@ -1683,7 +1683,7 @@ PARAMETERS = {
     },
     # Specify FL TricepsBrachiiLong.
     "FL_TricepsBrachiiLong": {
-        # Maximum isometric muscle force along the tendon direction (F0). The pennation projection is already included. This is not tendon failure strength or a force ceiling; do not multiply by cos(alpha) again. Unit: N.
+        # Maximum isometric muscle force (F0). The pennation projection is already included. This is not tendon failure strength or a force ceiling; do not multiply by cos(alpha) again. Unit: N.
         # Original work: 201.9567711476709
         "max_isometric_muscle_force_along_tendon_N": 189.10697126523593,
         # Optimal fascicle/fiber length, not whole muscle-tendon length. Unit: m.
@@ -1695,7 +1695,7 @@ PARAMETERS = {
         # Cosine of the constant fiber-to-tendon pennation angle. Unit: 1.
         # Original work: 0.9730448705798238
         "pennation_cosine": 0.9730448705798238,
-        # Tendon strain when tension equals F0, the maximum isometric muscle force along the tendon direction. Unit: 1.
+        # Tendon strain when tension equals F0, the maximum isometric muscle force. Unit: 1.
         # Source value (original work or literature): not independently established for this entry.
         "tendon_strain_at_max_force": 0.04,
         # Positive maximum-shortening speed magnitude, measured in optimal fiber lengths per second. Unit: 1/s.
@@ -1725,7 +1725,7 @@ PARAMETERS = {
     },
     # Specify FR ShoulderExtensor.
     "FR_ShoulderExtensor": {
-        # Maximum isometric muscle force along the tendon direction (F0). The pennation projection is already included. This is not tendon failure strength or a force ceiling; do not multiply by cos(alpha) again. Unit: N.
+        # Maximum isometric muscle force (F0). The pennation projection is already included. This is not tendon failure strength or a force ceiling; do not multiply by cos(alpha) again. Unit: N.
         # Original work: 563.2917457828182
         "max_isometric_muscle_force_along_tendon_N": 536.9727865899736,
         # Optimal fascicle/fiber length, not whole muscle-tendon length. Unit: m.
@@ -1737,7 +1737,7 @@ PARAMETERS = {
         # Cosine of the constant fiber-to-tendon pennation angle. Unit: 1.
         # Original work: 0.965422094265322
         "pennation_cosine": 0.965422094265322,
-        # Tendon strain when tension equals F0, the maximum isometric muscle force along the tendon direction. Unit: 1.
+        # Tendon strain when tension equals F0, the maximum isometric muscle force. Unit: 1.
         # Source value (original work or literature): not independently established for this entry.
         "tendon_strain_at_max_force": 0.04,
         # Positive maximum-shortening speed magnitude, measured in optimal fiber lengths per second. Unit: 1/s.
@@ -1767,7 +1767,7 @@ PARAMETERS = {
     },
     # Specify FR ElbowExtensor.
     "FR_ElbowExtensor": {
-        # Maximum isometric muscle force along the tendon direction (F0). The pennation projection is already included. This is not tendon failure strength or a force ceiling; do not multiply by cos(alpha) again. Unit: N.
+        # Maximum isometric muscle force (F0). The pennation projection is already included. This is not tendon failure strength or a force ceiling; do not multiply by cos(alpha) again. Unit: N.
         # Original work: 124.06863293522338
         "max_isometric_muscle_force_along_tendon_N": 125.72991797795375,
         # Optimal fascicle/fiber length, not whole muscle-tendon length. Unit: m.
@@ -1779,7 +1779,7 @@ PARAMETERS = {
         # Cosine of the constant fiber-to-tendon pennation angle. Unit: 1.
         # Original work: 0.9862856015372314
         "pennation_cosine": 0.9862856015372314,
-        # Tendon strain when tension equals F0, the maximum isometric muscle force along the tendon direction. Unit: 1.
+        # Tendon strain when tension equals F0, the maximum isometric muscle force. Unit: 1.
         # Source value (original work or literature): not independently established for this entry.
         "tendon_strain_at_max_force": 0.04,
         # Positive maximum-shortening speed magnitude, measured in optimal fiber lengths per second. Unit: 1/s.
@@ -1809,7 +1809,7 @@ PARAMETERS = {
     },
     # Specify FR BicepsBrachii.
     "FR_BicepsBrachii": {
-        # Maximum isometric muscle force along the tendon direction (F0). The pennation projection is already included. This is not tendon failure strength or a force ceiling; do not multiply by cos(alpha) again. Unit: N.
+        # Maximum isometric muscle force (F0). The pennation projection is already included. This is not tendon failure strength or a force ceiling; do not multiply by cos(alpha) again. Unit: N.
         # Original work: 50.419326616742886
         "max_isometric_muscle_force_along_tendon_N": 56.95816789224988,
         # Optimal fascicle/fiber length, not whole muscle-tendon length. Unit: m.
@@ -1821,7 +1821,7 @@ PARAMETERS = {
         # Cosine of the constant fiber-to-tendon pennation angle. Unit: 1.
         # Original work: 0.984807753012208
         "pennation_cosine": 0.984807753012208,
-        # Tendon strain when tension equals F0, the maximum isometric muscle force along the tendon direction. Unit: 1.
+        # Tendon strain when tension equals F0, the maximum isometric muscle force. Unit: 1.
         # Source value (original work or literature): not independently established for this entry.
         "tendon_strain_at_max_force": 0.04,
         # Positive maximum-shortening speed magnitude, measured in optimal fiber lengths per second. Unit: 1/s.
@@ -1851,7 +1851,7 @@ PARAMETERS = {
     },
     # Specify FR ElbowFlexor.
     "FR_ElbowFlexor": {
-        # Maximum isometric muscle force along the tendon direction (F0). The pennation projection is already included. This is not tendon failure strength or a force ceiling; do not multiply by cos(alpha) again. Unit: N.
+        # Maximum isometric muscle force (F0). The pennation projection is already included. This is not tendon failure strength or a force ceiling; do not multiply by cos(alpha) again. Unit: N.
         # Original work: 55.534105298029274
         "max_isometric_muscle_force_along_tendon_N": 61.029495040345,
         # Optimal fascicle/fiber length, not whole muscle-tendon length. Unit: m.
@@ -1863,7 +1863,7 @@ PARAMETERS = {
         # Cosine of the constant fiber-to-tendon pennation angle. Unit: 1.
         # Original work: 0.9836064595790646
         "pennation_cosine": 0.9836064595790646,
-        # Tendon strain when tension equals F0, the maximum isometric muscle force along the tendon direction. Unit: 1.
+        # Tendon strain when tension equals F0, the maximum isometric muscle force. Unit: 1.
         # Source value (original work or literature): not independently established for this entry.
         "tendon_strain_at_max_force": 0.04,
         # Positive maximum-shortening speed magnitude, measured in optimal fiber lengths per second. Unit: 1/s.
@@ -1893,7 +1893,7 @@ PARAMETERS = {
     },
     # Specify FR ElbowFlexorWristFlexor.
     "FR_ElbowFlexorWristFlexor": {
-        # Maximum isometric muscle force along the tendon direction (F0). The pennation projection is already included. This is not tendon failure strength or a force ceiling; do not multiply by cos(alpha) again. Unit: N.
+        # Maximum isometric muscle force (F0). The pennation projection is already included. This is not tendon failure strength or a force ceiling; do not multiply by cos(alpha) again. Unit: N.
         # Original work: 97.32103768862663
         "max_isometric_muscle_force_along_tendon_N": 21.357653856823912,
         # Optimal fascicle/fiber length, not whole muscle-tendon length. Unit: m.
@@ -1905,7 +1905,7 @@ PARAMETERS = {
         # Cosine of the constant fiber-to-tendon pennation angle. Unit: 1.
         # Original work: 0.991968197918445
         "pennation_cosine": 0.991968197918445,
-        # Tendon strain when tension equals F0, the maximum isometric muscle force along the tendon direction. Unit: 1.
+        # Tendon strain when tension equals F0, the maximum isometric muscle force. Unit: 1.
         # Source value (original work or literature): not independently established for this entry.
         "tendon_strain_at_max_force": 0.04,
         # Positive maximum-shortening speed magnitude, measured in optimal fiber lengths per second. Unit: 1/s.
@@ -1935,7 +1935,7 @@ PARAMETERS = {
     },
     # Specify FR WristFlexor.
     "FR_WristFlexor": {
-        # Maximum isometric muscle force along the tendon direction (F0). The pennation projection is already included. This is not tendon failure strength or a force ceiling; do not multiply by cos(alpha) again. Unit: N.
+        # Maximum isometric muscle force (F0). The pennation projection is already included. This is not tendon failure strength or a force ceiling; do not multiply by cos(alpha) again. Unit: N.
         # Original work: 11.3888980105689
         "max_isometric_muscle_force_along_tendon_N": 11.387722858664116,
         # Optimal fascicle/fiber length, not whole muscle-tendon length. Unit: m.
@@ -1947,7 +1947,7 @@ PARAMETERS = {
         # Cosine of the constant fiber-to-tendon pennation angle. Unit: 1.
         # Original work: 0.9999323080037622
         "pennation_cosine": 0.9999323080037622,
-        # Tendon strain when tension equals F0, the maximum isometric muscle force along the tendon direction. Unit: 1.
+        # Tendon strain when tension equals F0, the maximum isometric muscle force. Unit: 1.
         # Source value (original work or literature): not independently established for this entry.
         "tendon_strain_at_max_force": 0.04,
         # Positive maximum-shortening speed magnitude, measured in optimal fiber lengths per second. Unit: 1/s.
@@ -1977,7 +1977,7 @@ PARAMETERS = {
     },
     # Specify FR WristExtensor.
     "FR_WristExtensor": {
-        # Maximum isometric muscle force along the tendon direction (F0). The pennation projection is already included. This is not tendon failure strength or a force ceiling; do not multiply by cos(alpha) again. Unit: N.
+        # Maximum isometric muscle force (F0). The pennation projection is already included. This is not tendon failure strength or a force ceiling; do not multiply by cos(alpha) again. Unit: N.
         # Original work: 825.3025003070337
         "max_isometric_muscle_force_along_tendon_N": 93.48427427318677,
         # Optimal fascicle/fiber length, not whole muscle-tendon length. Unit: m.
@@ -1989,7 +1989,7 @@ PARAMETERS = {
         # Cosine of the constant fiber-to-tendon pennation angle. Unit: 1.
         # Original work: 0.9898590415514598
         "pennation_cosine": 0.9898590415514598,
-        # Tendon strain when tension equals F0, the maximum isometric muscle force along the tendon direction. Unit: 1.
+        # Tendon strain when tension equals F0, the maximum isometric muscle force. Unit: 1.
         # Source value (original work or literature): not independently established for this entry.
         "tendon_strain_at_max_force": 0.04,
         # Positive maximum-shortening speed magnitude, measured in optimal fiber lengths per second. Unit: 1/s.
@@ -2019,7 +2019,7 @@ PARAMETERS = {
     },
     # Specify FR ShoulderFlexor.
     "FR_ShoulderFlexor": {
-        # Maximum isometric muscle force along the tendon direction (F0). The pennation projection is already included. This is not tendon failure strength or a force ceiling; do not multiply by cos(alpha) again. Unit: N.
+        # Maximum isometric muscle force (F0). The pennation projection is already included. This is not tendon failure strength or a force ceiling; do not multiply by cos(alpha) again. Unit: N.
         # Original work: 60.74692220722504
         "max_isometric_muscle_force_along_tendon_N": 69.41141750222351,
         # Optimal fascicle/fiber length, not whole muscle-tendon length. Unit: m.
@@ -2031,7 +2031,7 @@ PARAMETERS = {
         # Cosine of the constant fiber-to-tendon pennation angle. Unit: 1.
         # Original work: 0.9975640502598242
         "pennation_cosine": 0.9975640502598242,
-        # Tendon strain when tension equals F0, the maximum isometric muscle force along the tendon direction. Unit: 1.
+        # Tendon strain when tension equals F0, the maximum isometric muscle force. Unit: 1.
         # Source value (original work or literature): not independently established for this entry.
         "tendon_strain_at_max_force": 0.04,
         # Positive maximum-shortening speed magnitude, measured in optimal fiber lengths per second. Unit: 1/s.
@@ -2061,7 +2061,7 @@ PARAMETERS = {
     },
     # Specify FR TricepsBrachiiLong.
     "FR_TricepsBrachiiLong": {
-        # Maximum isometric muscle force along the tendon direction (F0). The pennation projection is already included. This is not tendon failure strength or a force ceiling; do not multiply by cos(alpha) again. Unit: N.
+        # Maximum isometric muscle force (F0). The pennation projection is already included. This is not tendon failure strength or a force ceiling; do not multiply by cos(alpha) again. Unit: N.
         # Original work: 201.9567711476709
         "max_isometric_muscle_force_along_tendon_N": 189.10697126523593,
         # Optimal fascicle/fiber length, not whole muscle-tendon length. Unit: m.
@@ -2073,7 +2073,7 @@ PARAMETERS = {
         # Cosine of the constant fiber-to-tendon pennation angle. Unit: 1.
         # Original work: 0.9730448705798238
         "pennation_cosine": 0.9730448705798238,
-        # Tendon strain when tension equals F0, the maximum isometric muscle force along the tendon direction. Unit: 1.
+        # Tendon strain when tension equals F0, the maximum isometric muscle force. Unit: 1.
         # Source value (original work or literature): not independently established for this entry.
         "tendon_strain_at_max_force": 0.04,
         # Positive maximum-shortening speed magnitude, measured in optimal fiber lengths per second. Unit: 1/s.
@@ -2103,7 +2103,7 @@ PARAMETERS = {
     },
     # Specify FL S C3.
     "FL_S_C3": {
-        # Maximum isometric muscle force along the tendon direction (F0). The pennation projection is already included. This is not tendon failure strength or a force ceiling; do not multiply by cos(alpha) again. Unit: N.
+        # Maximum isometric muscle force (F0). The pennation projection is already included. This is not tendon failure strength or a force ceiling; do not multiply by cos(alpha) again. Unit: N.
         # Source value (original work or literature): not independently established for this entry.
         "max_isometric_muscle_force_along_tendon_N": 3.8436555841564193,
         # Optimal fascicle/fiber length, not whole muscle-tendon length. Unit: m.
@@ -2115,7 +2115,7 @@ PARAMETERS = {
         # Cosine of the constant fiber-to-tendon pennation angle. Unit: 1.
         # Source value (original work or literature): not independently established for this entry.
         "pennation_cosine": 1.0,
-        # Tendon strain when tension equals F0, the maximum isometric muscle force along the tendon direction. Unit: 1.
+        # Tendon strain when tension equals F0, the maximum isometric muscle force. Unit: 1.
         # Source value (original work or literature): not independently established for this entry.
         "tendon_strain_at_max_force": 0.04,
         # Positive maximum-shortening speed magnitude, measured in optimal fiber lengths per second. Unit: 1/s.
@@ -2145,7 +2145,7 @@ PARAMETERS = {
     },
     # Specify FR S C3.
     "FR_S_C3": {
-        # Maximum isometric muscle force along the tendon direction (F0). The pennation projection is already included. This is not tendon failure strength or a force ceiling; do not multiply by cos(alpha) again. Unit: N.
+        # Maximum isometric muscle force (F0). The pennation projection is already included. This is not tendon failure strength or a force ceiling; do not multiply by cos(alpha) again. Unit: N.
         # Source value (original work or literature): not independently established for this entry.
         "max_isometric_muscle_force_along_tendon_N": 3.8436555841564193,
         # Optimal fascicle/fiber length, not whole muscle-tendon length. Unit: m.
@@ -2157,7 +2157,7 @@ PARAMETERS = {
         # Cosine of the constant fiber-to-tendon pennation angle. Unit: 1.
         # Source value (original work or literature): not independently established for this entry.
         "pennation_cosine": 1.0,
-        # Tendon strain when tension equals F0, the maximum isometric muscle force along the tendon direction. Unit: 1.
+        # Tendon strain when tension equals F0, the maximum isometric muscle force. Unit: 1.
         # Source value (original work or literature): not independently established for this entry.
         "tendon_strain_at_max_force": 0.04,
         # Positive maximum-shortening speed magnitude, measured in optimal fiber lengths per second. Unit: 1/s.
@@ -2187,7 +2187,7 @@ PARAMETERS = {
     },
     # Specify FL S C4.
     "FL_S_C4": {
-        # Maximum isometric muscle force along the tendon direction (F0). The pennation projection is already included. This is not tendon failure strength or a force ceiling; do not multiply by cos(alpha) again. Unit: N.
+        # Maximum isometric muscle force (F0). The pennation projection is already included. This is not tendon failure strength or a force ceiling; do not multiply by cos(alpha) again. Unit: N.
         # Source value (original work or literature): not independently established for this entry.
         "max_isometric_muscle_force_along_tendon_N": 4.105006139702811,
         # Optimal fascicle/fiber length, not whole muscle-tendon length. Unit: m.
@@ -2199,7 +2199,7 @@ PARAMETERS = {
         # Cosine of the constant fiber-to-tendon pennation angle. Unit: 1.
         # Source value (original work or literature): not independently established for this entry.
         "pennation_cosine": 1.0,
-        # Tendon strain when tension equals F0, the maximum isometric muscle force along the tendon direction. Unit: 1.
+        # Tendon strain when tension equals F0, the maximum isometric muscle force. Unit: 1.
         # Source value (original work or literature): not independently established for this entry.
         "tendon_strain_at_max_force": 0.04,
         # Positive maximum-shortening speed magnitude, measured in optimal fiber lengths per second. Unit: 1/s.
@@ -2229,7 +2229,7 @@ PARAMETERS = {
     },
     # Specify FR S C4.
     "FR_S_C4": {
-        # Maximum isometric muscle force along the tendon direction (F0). The pennation projection is already included. This is not tendon failure strength or a force ceiling; do not multiply by cos(alpha) again. Unit: N.
+        # Maximum isometric muscle force (F0). The pennation projection is already included. This is not tendon failure strength or a force ceiling; do not multiply by cos(alpha) again. Unit: N.
         # Source value (original work or literature): not independently established for this entry.
         "max_isometric_muscle_force_along_tendon_N": 4.105006139702811,
         # Optimal fascicle/fiber length, not whole muscle-tendon length. Unit: m.
@@ -2241,7 +2241,7 @@ PARAMETERS = {
         # Cosine of the constant fiber-to-tendon pennation angle. Unit: 1.
         # Source value (original work or literature): not independently established for this entry.
         "pennation_cosine": 1.0,
-        # Tendon strain when tension equals F0, the maximum isometric muscle force along the tendon direction. Unit: 1.
+        # Tendon strain when tension equals F0, the maximum isometric muscle force. Unit: 1.
         # Source value (original work or literature): not independently established for this entry.
         "tendon_strain_at_max_force": 0.04,
         # Positive maximum-shortening speed magnitude, measured in optimal fiber lengths per second. Unit: 1/s.
@@ -2271,7 +2271,7 @@ PARAMETERS = {
     },
     # Specify FL S C5.
     "FL_S_C5": {
-        # Maximum isometric muscle force along the tendon direction (F0). The pennation projection is already included. This is not tendon failure strength or a force ceiling; do not multiply by cos(alpha) again. Unit: N.
+        # Maximum isometric muscle force (F0). The pennation projection is already included. This is not tendon failure strength or a force ceiling; do not multiply by cos(alpha) again. Unit: N.
         # Source value (original work or literature): not independently established for this entry.
         "max_isometric_muscle_force_along_tendon_N": 5.83682907386942,
         # Optimal fascicle/fiber length, not whole muscle-tendon length. Unit: m.
@@ -2283,7 +2283,7 @@ PARAMETERS = {
         # Cosine of the constant fiber-to-tendon pennation angle. Unit: 1.
         # Source value (original work or literature): not independently established for this entry.
         "pennation_cosine": 1.0,
-        # Tendon strain when tension equals F0, the maximum isometric muscle force along the tendon direction. Unit: 1.
+        # Tendon strain when tension equals F0, the maximum isometric muscle force. Unit: 1.
         # Source value (original work or literature): not independently established for this entry.
         "tendon_strain_at_max_force": 0.04,
         # Positive maximum-shortening speed magnitude, measured in optimal fiber lengths per second. Unit: 1/s.
@@ -2313,7 +2313,7 @@ PARAMETERS = {
     },
     # Specify FR S C5.
     "FR_S_C5": {
-        # Maximum isometric muscle force along the tendon direction (F0). The pennation projection is already included. This is not tendon failure strength or a force ceiling; do not multiply by cos(alpha) again. Unit: N.
+        # Maximum isometric muscle force (F0). The pennation projection is already included. This is not tendon failure strength or a force ceiling; do not multiply by cos(alpha) again. Unit: N.
         # Source value (original work or literature): not independently established for this entry.
         "max_isometric_muscle_force_along_tendon_N": 5.83682907386942,
         # Optimal fascicle/fiber length, not whole muscle-tendon length. Unit: m.
@@ -2325,7 +2325,7 @@ PARAMETERS = {
         # Cosine of the constant fiber-to-tendon pennation angle. Unit: 1.
         # Source value (original work or literature): not independently established for this entry.
         "pennation_cosine": 1.0,
-        # Tendon strain when tension equals F0, the maximum isometric muscle force along the tendon direction. Unit: 1.
+        # Tendon strain when tension equals F0, the maximum isometric muscle force. Unit: 1.
         # Source value (original work or literature): not independently established for this entry.
         "tendon_strain_at_max_force": 0.04,
         # Positive maximum-shortening speed magnitude, measured in optimal fiber lengths per second. Unit: 1/s.
@@ -2355,7 +2355,7 @@ PARAMETERS = {
     },
     # Specify FL S C6.
     "FL_S_C6": {
-        # Maximum isometric muscle force along the tendon direction (F0). The pennation projection is already included. This is not tendon failure strength or a force ceiling; do not multiply by cos(alpha) again. Unit: N.
+        # Maximum isometric muscle force (F0). The pennation projection is already included. This is not tendon failure strength or a force ceiling; do not multiply by cos(alpha) again. Unit: N.
         # Source value (original work or literature): not independently established for this entry.
         "max_isometric_muscle_force_along_tendon_N": 5.733190060463092,
         # Optimal fascicle/fiber length, not whole muscle-tendon length. Unit: m.
@@ -2367,7 +2367,7 @@ PARAMETERS = {
         # Cosine of the constant fiber-to-tendon pennation angle. Unit: 1.
         # Source value (original work or literature): not independently established for this entry.
         "pennation_cosine": 1.0,
-        # Tendon strain when tension equals F0, the maximum isometric muscle force along the tendon direction. Unit: 1.
+        # Tendon strain when tension equals F0, the maximum isometric muscle force. Unit: 1.
         # Source value (original work or literature): not independently established for this entry.
         "tendon_strain_at_max_force": 0.04,
         # Positive maximum-shortening speed magnitude, measured in optimal fiber lengths per second. Unit: 1/s.
@@ -2397,7 +2397,7 @@ PARAMETERS = {
     },
     # Specify FR S C6.
     "FR_S_C6": {
-        # Maximum isometric muscle force along the tendon direction (F0). The pennation projection is already included. This is not tendon failure strength or a force ceiling; do not multiply by cos(alpha) again. Unit: N.
+        # Maximum isometric muscle force (F0). The pennation projection is already included. This is not tendon failure strength or a force ceiling; do not multiply by cos(alpha) again. Unit: N.
         # Source value (original work or literature): not independently established for this entry.
         "max_isometric_muscle_force_along_tendon_N": 5.733190060463092,
         # Optimal fascicle/fiber length, not whole muscle-tendon length. Unit: m.
@@ -2409,7 +2409,7 @@ PARAMETERS = {
         # Cosine of the constant fiber-to-tendon pennation angle. Unit: 1.
         # Source value (original work or literature): not independently established for this entry.
         "pennation_cosine": 1.0,
-        # Tendon strain when tension equals F0, the maximum isometric muscle force along the tendon direction. Unit: 1.
+        # Tendon strain when tension equals F0, the maximum isometric muscle force. Unit: 1.
         # Source value (original work or literature): not independently established for this entry.
         "tendon_strain_at_max_force": 0.04,
         # Positive maximum-shortening speed magnitude, measured in optimal fiber lengths per second. Unit: 1/s.
@@ -2439,7 +2439,7 @@ PARAMETERS = {
     },
     # Specify FL S C7.
     "FL_S_C7": {
-        # Maximum isometric muscle force along the tendon direction (F0). The pennation projection is already included. This is not tendon failure strength or a force ceiling; do not multiply by cos(alpha) again. Unit: N.
+        # Maximum isometric muscle force (F0). The pennation projection is already included. This is not tendon failure strength or a force ceiling; do not multiply by cos(alpha) again. Unit: N.
         # Source value (original work or literature): not independently established for this entry.
         "max_isometric_muscle_force_along_tendon_N": 5.199974846560971,
         # Optimal fascicle/fiber length, not whole muscle-tendon length. Unit: m.
@@ -2451,7 +2451,7 @@ PARAMETERS = {
         # Cosine of the constant fiber-to-tendon pennation angle. Unit: 1.
         # Source value (original work or literature): not independently established for this entry.
         "pennation_cosine": 1.0,
-        # Tendon strain when tension equals F0, the maximum isometric muscle force along the tendon direction. Unit: 1.
+        # Tendon strain when tension equals F0, the maximum isometric muscle force. Unit: 1.
         # Source value (original work or literature): not independently established for this entry.
         "tendon_strain_at_max_force": 0.04,
         # Positive maximum-shortening speed magnitude, measured in optimal fiber lengths per second. Unit: 1/s.
@@ -2481,7 +2481,7 @@ PARAMETERS = {
     },
     # Specify FR S C7.
     "FR_S_C7": {
-        # Maximum isometric muscle force along the tendon direction (F0). The pennation projection is already included. This is not tendon failure strength or a force ceiling; do not multiply by cos(alpha) again. Unit: N.
+        # Maximum isometric muscle force (F0). The pennation projection is already included. This is not tendon failure strength or a force ceiling; do not multiply by cos(alpha) again. Unit: N.
         # Source value (original work or literature): not independently established for this entry.
         "max_isometric_muscle_force_along_tendon_N": 5.199974846560971,
         # Optimal fascicle/fiber length, not whole muscle-tendon length. Unit: m.
@@ -2493,7 +2493,7 @@ PARAMETERS = {
         # Cosine of the constant fiber-to-tendon pennation angle. Unit: 1.
         # Source value (original work or literature): not independently established for this entry.
         "pennation_cosine": 1.0,
-        # Tendon strain when tension equals F0, the maximum isometric muscle force along the tendon direction. Unit: 1.
+        # Tendon strain when tension equals F0, the maximum isometric muscle force. Unit: 1.
         # Source value (original work or literature): not independently established for this entry.
         "tendon_strain_at_max_force": 0.04,
         # Positive maximum-shortening speed magnitude, measured in optimal fiber lengths per second. Unit: 1/s.
@@ -2523,7 +2523,7 @@ PARAMETERS = {
     },
     # Specify FL S T1.
     "FL_S_T1": {
-        # Maximum isometric muscle force along the tendon direction (F0). The pennation projection is already included. This is not tendon failure strength or a force ceiling; do not multiply by cos(alpha) again. Unit: N.
+        # Maximum isometric muscle force (F0). The pennation projection is already included. This is not tendon failure strength or a force ceiling; do not multiply by cos(alpha) again. Unit: N.
         # Source value (original work or literature): not independently established for this entry.
         "max_isometric_muscle_force_along_tendon_N": 6.609679077234169,
         # Optimal fascicle/fiber length, not whole muscle-tendon length. Unit: m.
@@ -2535,7 +2535,7 @@ PARAMETERS = {
         # Cosine of the constant fiber-to-tendon pennation angle. Unit: 1.
         # Source value (original work or literature): not independently established for this entry.
         "pennation_cosine": 1.0,
-        # Tendon strain when tension equals F0, the maximum isometric muscle force along the tendon direction. Unit: 1.
+        # Tendon strain when tension equals F0, the maximum isometric muscle force. Unit: 1.
         # Source value (original work or literature): not independently established for this entry.
         "tendon_strain_at_max_force": 0.04,
         # Positive maximum-shortening speed magnitude, measured in optimal fiber lengths per second. Unit: 1/s.
@@ -2565,7 +2565,7 @@ PARAMETERS = {
     },
     # Specify FR S T1.
     "FR_S_T1": {
-        # Maximum isometric muscle force along the tendon direction (F0). The pennation projection is already included. This is not tendon failure strength or a force ceiling; do not multiply by cos(alpha) again. Unit: N.
+        # Maximum isometric muscle force (F0). The pennation projection is already included. This is not tendon failure strength or a force ceiling; do not multiply by cos(alpha) again. Unit: N.
         # Source value (original work or literature): not independently established for this entry.
         "max_isometric_muscle_force_along_tendon_N": 6.609679077234169,
         # Optimal fascicle/fiber length, not whole muscle-tendon length. Unit: m.
@@ -2577,7 +2577,7 @@ PARAMETERS = {
         # Cosine of the constant fiber-to-tendon pennation angle. Unit: 1.
         # Source value (original work or literature): not independently established for this entry.
         "pennation_cosine": 1.0,
-        # Tendon strain when tension equals F0, the maximum isometric muscle force along the tendon direction. Unit: 1.
+        # Tendon strain when tension equals F0, the maximum isometric muscle force. Unit: 1.
         # Source value (original work or literature): not independently established for this entry.
         "tendon_strain_at_max_force": 0.04,
         # Positive maximum-shortening speed magnitude, measured in optimal fiber lengths per second. Unit: 1/s.
@@ -2607,7 +2607,7 @@ PARAMETERS = {
     },
     # Specify FL S T2.
     "FL_S_T2": {
-        # Maximum isometric muscle force along the tendon direction (F0). The pennation projection is already included. This is not tendon failure strength or a force ceiling; do not multiply by cos(alpha) again. Unit: N.
+        # Maximum isometric muscle force (F0). The pennation projection is already included. This is not tendon failure strength or a force ceiling; do not multiply by cos(alpha) again. Unit: N.
         # Source value (original work or literature): not independently established for this entry.
         "max_isometric_muscle_force_along_tendon_N": 3.1044071406731777,
         # Optimal fascicle/fiber length, not whole muscle-tendon length. Unit: m.
@@ -2619,7 +2619,7 @@ PARAMETERS = {
         # Cosine of the constant fiber-to-tendon pennation angle. Unit: 1.
         # Source value (original work or literature): not independently established for this entry.
         "pennation_cosine": 1.0,
-        # Tendon strain when tension equals F0, the maximum isometric muscle force along the tendon direction. Unit: 1.
+        # Tendon strain when tension equals F0, the maximum isometric muscle force. Unit: 1.
         # Source value (original work or literature): not independently established for this entry.
         "tendon_strain_at_max_force": 0.04,
         # Positive maximum-shortening speed magnitude, measured in optimal fiber lengths per second. Unit: 1/s.
@@ -2649,7 +2649,7 @@ PARAMETERS = {
     },
     # Specify FR S T2.
     "FR_S_T2": {
-        # Maximum isometric muscle force along the tendon direction (F0). The pennation projection is already included. This is not tendon failure strength or a force ceiling; do not multiply by cos(alpha) again. Unit: N.
+        # Maximum isometric muscle force (F0). The pennation projection is already included. This is not tendon failure strength or a force ceiling; do not multiply by cos(alpha) again. Unit: N.
         # Source value (original work or literature): not independently established for this entry.
         "max_isometric_muscle_force_along_tendon_N": 3.1044071406731777,
         # Optimal fascicle/fiber length, not whole muscle-tendon length. Unit: m.
@@ -2661,7 +2661,7 @@ PARAMETERS = {
         # Cosine of the constant fiber-to-tendon pennation angle. Unit: 1.
         # Source value (original work or literature): not independently established for this entry.
         "pennation_cosine": 1.0,
-        # Tendon strain when tension equals F0, the maximum isometric muscle force along the tendon direction. Unit: 1.
+        # Tendon strain when tension equals F0, the maximum isometric muscle force. Unit: 1.
         # Source value (original work or literature): not independently established for this entry.
         "tendon_strain_at_max_force": 0.04,
         # Positive maximum-shortening speed magnitude, measured in optimal fiber lengths per second. Unit: 1/s.
@@ -2691,7 +2691,7 @@ PARAMETERS = {
     },
     # Specify FL S T3.
     "FL_S_T3": {
-        # Maximum isometric muscle force along the tendon direction (F0). The pennation projection is already included. This is not tendon failure strength or a force ceiling; do not multiply by cos(alpha) again. Unit: N.
+        # Maximum isometric muscle force (F0). The pennation projection is already included. This is not tendon failure strength or a force ceiling; do not multiply by cos(alpha) again. Unit: N.
         # Source value (original work or literature): not independently established for this entry.
         "max_isometric_muscle_force_along_tendon_N": 1.621819403210236,
         # Optimal fascicle/fiber length, not whole muscle-tendon length. Unit: m.
@@ -2703,7 +2703,7 @@ PARAMETERS = {
         # Cosine of the constant fiber-to-tendon pennation angle. Unit: 1.
         # Source value (original work or literature): not independently established for this entry.
         "pennation_cosine": 1.0,
-        # Tendon strain when tension equals F0, the maximum isometric muscle force along the tendon direction. Unit: 1.
+        # Tendon strain when tension equals F0, the maximum isometric muscle force. Unit: 1.
         # Source value (original work or literature): not independently established for this entry.
         "tendon_strain_at_max_force": 0.04,
         # Positive maximum-shortening speed magnitude, measured in optimal fiber lengths per second. Unit: 1/s.
@@ -2733,7 +2733,7 @@ PARAMETERS = {
     },
     # Specify FR S T3.
     "FR_S_T3": {
-        # Maximum isometric muscle force along the tendon direction (F0). The pennation projection is already included. This is not tendon failure strength or a force ceiling; do not multiply by cos(alpha) again. Unit: N.
+        # Maximum isometric muscle force (F0). The pennation projection is already included. This is not tendon failure strength or a force ceiling; do not multiply by cos(alpha) again. Unit: N.
         # Source value (original work or literature): not independently established for this entry.
         "max_isometric_muscle_force_along_tendon_N": 1.621819403210236,
         # Optimal fascicle/fiber length, not whole muscle-tendon length. Unit: m.
@@ -2745,7 +2745,7 @@ PARAMETERS = {
         # Cosine of the constant fiber-to-tendon pennation angle. Unit: 1.
         # Source value (original work or literature): not independently established for this entry.
         "pennation_cosine": 1.0,
-        # Tendon strain when tension equals F0, the maximum isometric muscle force along the tendon direction. Unit: 1.
+        # Tendon strain when tension equals F0, the maximum isometric muscle force. Unit: 1.
         # Source value (original work or literature): not independently established for this entry.
         "tendon_strain_at_max_force": 0.04,
         # Positive maximum-shortening speed magnitude, measured in optimal fiber lengths per second. Unit: 1/s.
@@ -2775,7 +2775,7 @@ PARAMETERS = {
     },
     # Specify FL S T4.
     "FL_S_T4": {
-        # Maximum isometric muscle force along the tendon direction (F0). The pennation projection is already included. This is not tendon failure strength or a force ceiling; do not multiply by cos(alpha) again. Unit: N.
+        # Maximum isometric muscle force (F0). The pennation projection is already included. This is not tendon failure strength or a force ceiling; do not multiply by cos(alpha) again. Unit: N.
         # Source value (original work or literature): not independently established for this entry.
         "max_isometric_muscle_force_along_tendon_N": 2.720372546139433,
         # Optimal fascicle/fiber length, not whole muscle-tendon length. Unit: m.
@@ -2787,7 +2787,7 @@ PARAMETERS = {
         # Cosine of the constant fiber-to-tendon pennation angle. Unit: 1.
         # Source value (original work or literature): not independently established for this entry.
         "pennation_cosine": 1.0,
-        # Tendon strain when tension equals F0, the maximum isometric muscle force along the tendon direction. Unit: 1.
+        # Tendon strain when tension equals F0, the maximum isometric muscle force. Unit: 1.
         # Source value (original work or literature): not independently established for this entry.
         "tendon_strain_at_max_force": 0.04,
         # Positive maximum-shortening speed magnitude, measured in optimal fiber lengths per second. Unit: 1/s.
@@ -2817,7 +2817,7 @@ PARAMETERS = {
     },
     # Specify FR S T4.
     "FR_S_T4": {
-        # Maximum isometric muscle force along the tendon direction (F0). The pennation projection is already included. This is not tendon failure strength or a force ceiling; do not multiply by cos(alpha) again. Unit: N.
+        # Maximum isometric muscle force (F0). The pennation projection is already included. This is not tendon failure strength or a force ceiling; do not multiply by cos(alpha) again. Unit: N.
         # Source value (original work or literature): not independently established for this entry.
         "max_isometric_muscle_force_along_tendon_N": 2.720372546139433,
         # Optimal fascicle/fiber length, not whole muscle-tendon length. Unit: m.
@@ -2829,7 +2829,7 @@ PARAMETERS = {
         # Cosine of the constant fiber-to-tendon pennation angle. Unit: 1.
         # Source value (original work or literature): not independently established for this entry.
         "pennation_cosine": 1.0,
-        # Tendon strain when tension equals F0, the maximum isometric muscle force along the tendon direction. Unit: 1.
+        # Tendon strain when tension equals F0, the maximum isometric muscle force. Unit: 1.
         # Source value (original work or literature): not independently established for this entry.
         "tendon_strain_at_max_force": 0.04,
         # Positive maximum-shortening speed magnitude, measured in optimal fiber lengths per second. Unit: 1/s.
@@ -2859,7 +2859,7 @@ PARAMETERS = {
     },
     # Specify FL S T5.
     "FL_S_T5": {
-        # Maximum isometric muscle force along the tendon direction (F0). The pennation projection is already included. This is not tendon failure strength or a force ceiling; do not multiply by cos(alpha) again. Unit: N.
+        # Maximum isometric muscle force (F0). The pennation projection is already included. This is not tendon failure strength or a force ceiling; do not multiply by cos(alpha) again. Unit: N.
         # Source value (original work or literature): not independently established for this entry.
         "max_isometric_muscle_force_along_tendon_N": 2.7647430769819774,
         # Optimal fascicle/fiber length, not whole muscle-tendon length. Unit: m.
@@ -2871,7 +2871,7 @@ PARAMETERS = {
         # Cosine of the constant fiber-to-tendon pennation angle. Unit: 1.
         # Source value (original work or literature): not independently established for this entry.
         "pennation_cosine": 1.0,
-        # Tendon strain when tension equals F0, the maximum isometric muscle force along the tendon direction. Unit: 1.
+        # Tendon strain when tension equals F0, the maximum isometric muscle force. Unit: 1.
         # Source value (original work or literature): not independently established for this entry.
         "tendon_strain_at_max_force": 0.04,
         # Positive maximum-shortening speed magnitude, measured in optimal fiber lengths per second. Unit: 1/s.
@@ -2901,7 +2901,7 @@ PARAMETERS = {
     },
     # Specify FR S T5.
     "FR_S_T5": {
-        # Maximum isometric muscle force along the tendon direction (F0). The pennation projection is already included. This is not tendon failure strength or a force ceiling; do not multiply by cos(alpha) again. Unit: N.
+        # Maximum isometric muscle force (F0). The pennation projection is already included. This is not tendon failure strength or a force ceiling; do not multiply by cos(alpha) again. Unit: N.
         # Source value (original work or literature): not independently established for this entry.
         "max_isometric_muscle_force_along_tendon_N": 2.7647430769819774,
         # Optimal fascicle/fiber length, not whole muscle-tendon length. Unit: m.
@@ -2913,7 +2913,7 @@ PARAMETERS = {
         # Cosine of the constant fiber-to-tendon pennation angle. Unit: 1.
         # Source value (original work or literature): not independently established for this entry.
         "pennation_cosine": 1.0,
-        # Tendon strain when tension equals F0, the maximum isometric muscle force along the tendon direction. Unit: 1.
+        # Tendon strain when tension equals F0, the maximum isometric muscle force. Unit: 1.
         # Source value (original work or literature): not independently established for this entry.
         "tendon_strain_at_max_force": 0.04,
         # Positive maximum-shortening speed magnitude, measured in optimal fiber lengths per second. Unit: 1/s.
@@ -2943,7 +2943,7 @@ PARAMETERS = {
     },
     # Specify FL S T6.
     "FL_S_T6": {
-        # Maximum isometric muscle force along the tendon direction (F0). The pennation projection is already included. This is not tendon failure strength or a force ceiling; do not multiply by cos(alpha) again. Unit: N.
+        # Maximum isometric muscle force (F0). The pennation projection is already included. This is not tendon failure strength or a force ceiling; do not multiply by cos(alpha) again. Unit: N.
         # Source value (original work or literature): not independently established for this entry.
         "max_isometric_muscle_force_along_tendon_N": 6.2516547938839855,
         # Optimal fascicle/fiber length, not whole muscle-tendon length. Unit: m.
@@ -2955,7 +2955,7 @@ PARAMETERS = {
         # Cosine of the constant fiber-to-tendon pennation angle. Unit: 1.
         # Source value (original work or literature): not independently established for this entry.
         "pennation_cosine": 1.0,
-        # Tendon strain when tension equals F0, the maximum isometric muscle force along the tendon direction. Unit: 1.
+        # Tendon strain when tension equals F0, the maximum isometric muscle force. Unit: 1.
         # Source value (original work or literature): not independently established for this entry.
         "tendon_strain_at_max_force": 0.04,
         # Positive maximum-shortening speed magnitude, measured in optimal fiber lengths per second. Unit: 1/s.
@@ -2985,7 +2985,7 @@ PARAMETERS = {
     },
     # Specify FR S T6.
     "FR_S_T6": {
-        # Maximum isometric muscle force along the tendon direction (F0). The pennation projection is already included. This is not tendon failure strength or a force ceiling; do not multiply by cos(alpha) again. Unit: N.
+        # Maximum isometric muscle force (F0). The pennation projection is already included. This is not tendon failure strength or a force ceiling; do not multiply by cos(alpha) again. Unit: N.
         # Source value (original work or literature): not independently established for this entry.
         "max_isometric_muscle_force_along_tendon_N": 6.2516547938839855,
         # Optimal fascicle/fiber length, not whole muscle-tendon length. Unit: m.
@@ -2997,7 +2997,7 @@ PARAMETERS = {
         # Cosine of the constant fiber-to-tendon pennation angle. Unit: 1.
         # Source value (original work or literature): not independently established for this entry.
         "pennation_cosine": 1.0,
-        # Tendon strain when tension equals F0, the maximum isometric muscle force along the tendon direction. Unit: 1.
+        # Tendon strain when tension equals F0, the maximum isometric muscle force. Unit: 1.
         # Source value (original work or literature): not independently established for this entry.
         "tendon_strain_at_max_force": 0.04,
         # Positive maximum-shortening speed magnitude, measured in optimal fiber lengths per second. Unit: 1/s.
@@ -3027,7 +3027,7 @@ PARAMETERS = {
     },
     # Specify FL S T7.
     "FL_S_T7": {
-        # Maximum isometric muscle force along the tendon direction (F0). The pennation projection is already included. This is not tendon failure strength or a force ceiling; do not multiply by cos(alpha) again. Unit: N.
+        # Maximum isometric muscle force (F0). The pennation projection is already included. This is not tendon failure strength or a force ceiling; do not multiply by cos(alpha) again. Unit: N.
         # Source value (original work or literature): not independently established for this entry.
         "max_isometric_muscle_force_along_tendon_N": 5.40708468957073,
         # Optimal fascicle/fiber length, not whole muscle-tendon length. Unit: m.
@@ -3039,7 +3039,7 @@ PARAMETERS = {
         # Cosine of the constant fiber-to-tendon pennation angle. Unit: 1.
         # Source value (original work or literature): not independently established for this entry.
         "pennation_cosine": 1.0,
-        # Tendon strain when tension equals F0, the maximum isometric muscle force along the tendon direction. Unit: 1.
+        # Tendon strain when tension equals F0, the maximum isometric muscle force. Unit: 1.
         # Source value (original work or literature): not independently established for this entry.
         "tendon_strain_at_max_force": 0.04,
         # Positive maximum-shortening speed magnitude, measured in optimal fiber lengths per second. Unit: 1/s.
@@ -3069,7 +3069,7 @@ PARAMETERS = {
     },
     # Specify FR S T7.
     "FR_S_T7": {
-        # Maximum isometric muscle force along the tendon direction (F0). The pennation projection is already included. This is not tendon failure strength or a force ceiling; do not multiply by cos(alpha) again. Unit: N.
+        # Maximum isometric muscle force (F0). The pennation projection is already included. This is not tendon failure strength or a force ceiling; do not multiply by cos(alpha) again. Unit: N.
         # Source value (original work or literature): not independently established for this entry.
         "max_isometric_muscle_force_along_tendon_N": 5.40708468957073,
         # Optimal fascicle/fiber length, not whole muscle-tendon length. Unit: m.
@@ -3081,7 +3081,7 @@ PARAMETERS = {
         # Cosine of the constant fiber-to-tendon pennation angle. Unit: 1.
         # Source value (original work or literature): not independently established for this entry.
         "pennation_cosine": 1.0,
-        # Tendon strain when tension equals F0, the maximum isometric muscle force along the tendon direction. Unit: 1.
+        # Tendon strain when tension equals F0, the maximum isometric muscle force. Unit: 1.
         # Source value (original work or literature): not independently established for this entry.
         "tendon_strain_at_max_force": 0.04,
         # Positive maximum-shortening speed magnitude, measured in optimal fiber lengths per second. Unit: 1/s.
@@ -3111,7 +3111,7 @@ PARAMETERS = {
     },
     # Specify FL S T8.
     "FL_S_T8": {
-        # Maximum isometric muscle force along the tendon direction (F0). The pennation projection is already included. This is not tendon failure strength or a force ceiling; do not multiply by cos(alpha) again. Unit: N.
+        # Maximum isometric muscle force (F0). The pennation projection is already included. This is not tendon failure strength or a force ceiling; do not multiply by cos(alpha) again. Unit: N.
         # Source value (original work or literature): not independently established for this entry.
         "max_isometric_muscle_force_along_tendon_N": 4.183070045638476,
         # Optimal fascicle/fiber length, not whole muscle-tendon length. Unit: m.
@@ -3123,7 +3123,7 @@ PARAMETERS = {
         # Cosine of the constant fiber-to-tendon pennation angle. Unit: 1.
         # Source value (original work or literature): not independently established for this entry.
         "pennation_cosine": 1.0,
-        # Tendon strain when tension equals F0, the maximum isometric muscle force along the tendon direction. Unit: 1.
+        # Tendon strain when tension equals F0, the maximum isometric muscle force. Unit: 1.
         # Source value (original work or literature): not independently established for this entry.
         "tendon_strain_at_max_force": 0.04,
         # Positive maximum-shortening speed magnitude, measured in optimal fiber lengths per second. Unit: 1/s.
@@ -3153,7 +3153,7 @@ PARAMETERS = {
     },
     # Specify FR S T8.
     "FR_S_T8": {
-        # Maximum isometric muscle force along the tendon direction (F0). The pennation projection is already included. This is not tendon failure strength or a force ceiling; do not multiply by cos(alpha) again. Unit: N.
+        # Maximum isometric muscle force (F0). The pennation projection is already included. This is not tendon failure strength or a force ceiling; do not multiply by cos(alpha) again. Unit: N.
         # Source value (original work or literature): not independently established for this entry.
         "max_isometric_muscle_force_along_tendon_N": 4.183070045638476,
         # Optimal fascicle/fiber length, not whole muscle-tendon length. Unit: m.
@@ -3165,7 +3165,7 @@ PARAMETERS = {
         # Cosine of the constant fiber-to-tendon pennation angle. Unit: 1.
         # Source value (original work or literature): not independently established for this entry.
         "pennation_cosine": 1.0,
-        # Tendon strain when tension equals F0, the maximum isometric muscle force along the tendon direction. Unit: 1.
+        # Tendon strain when tension equals F0, the maximum isometric muscle force. Unit: 1.
         # Source value (original work or literature): not independently established for this entry.
         "tendon_strain_at_max_force": 0.04,
         # Positive maximum-shortening speed magnitude, measured in optimal fiber lengths per second. Unit: 1/s.
@@ -3195,7 +3195,7 @@ PARAMETERS = {
     },
     # Specify FL S T9.
     "FL_S_T9": {
-        # Maximum isometric muscle force along the tendon direction (F0). The pennation projection is already included. This is not tendon failure strength or a force ceiling; do not multiply by cos(alpha) again. Unit: N.
+        # Maximum isometric muscle force (F0). The pennation projection is already included. This is not tendon failure strength or a force ceiling; do not multiply by cos(alpha) again. Unit: N.
         # Source value (original work or literature): not independently established for this entry.
         "max_isometric_muscle_force_along_tendon_N": 2.1512057367109354,
         # Optimal fascicle/fiber length, not whole muscle-tendon length. Unit: m.
@@ -3207,7 +3207,7 @@ PARAMETERS = {
         # Cosine of the constant fiber-to-tendon pennation angle. Unit: 1.
         # Source value (original work or literature): not independently established for this entry.
         "pennation_cosine": 1.0,
-        # Tendon strain when tension equals F0, the maximum isometric muscle force along the tendon direction. Unit: 1.
+        # Tendon strain when tension equals F0, the maximum isometric muscle force. Unit: 1.
         # Source value (original work or literature): not independently established for this entry.
         "tendon_strain_at_max_force": 0.04,
         # Positive maximum-shortening speed magnitude, measured in optimal fiber lengths per second. Unit: 1/s.
@@ -3237,7 +3237,7 @@ PARAMETERS = {
     },
     # Specify FR S T9.
     "FR_S_T9": {
-        # Maximum isometric muscle force along the tendon direction (F0). The pennation projection is already included. This is not tendon failure strength or a force ceiling; do not multiply by cos(alpha) again. Unit: N.
+        # Maximum isometric muscle force (F0). The pennation projection is already included. This is not tendon failure strength or a force ceiling; do not multiply by cos(alpha) again. Unit: N.
         # Source value (original work or literature): not independently established for this entry.
         "max_isometric_muscle_force_along_tendon_N": 2.1512057367109354,
         # Optimal fascicle/fiber length, not whole muscle-tendon length. Unit: m.
@@ -3249,7 +3249,7 @@ PARAMETERS = {
         # Cosine of the constant fiber-to-tendon pennation angle. Unit: 1.
         # Source value (original work or literature): not independently established for this entry.
         "pennation_cosine": 1.0,
-        # Tendon strain when tension equals F0, the maximum isometric muscle force along the tendon direction. Unit: 1.
+        # Tendon strain when tension equals F0, the maximum isometric muscle force. Unit: 1.
         # Source value (original work or literature): not independently established for this entry.
         "tendon_strain_at_max_force": 0.04,
         # Positive maximum-shortening speed magnitude, measured in optimal fiber lengths per second. Unit: 1/s.
@@ -3279,7 +3279,7 @@ PARAMETERS = {
     },
     # Specify FL R C2.
     "FL_R_C2": {
-        # Maximum isometric muscle force along the tendon direction (F0). The pennation projection is already included. This is not tendon failure strength or a force ceiling; do not multiply by cos(alpha) again. Unit: N.
+        # Maximum isometric muscle force (F0). The pennation projection is already included. This is not tendon failure strength or a force ceiling; do not multiply by cos(alpha) again. Unit: N.
         # Source value (original work or literature): not independently established for this entry.
         "max_isometric_muscle_force_along_tendon_N": 1.207746371684156,
         # Optimal fascicle/fiber length, not whole muscle-tendon length. Unit: m.
@@ -3291,7 +3291,7 @@ PARAMETERS = {
         # Cosine of the constant fiber-to-tendon pennation angle. Unit: 1.
         # Source value (original work or literature): not independently established for this entry.
         "pennation_cosine": 1.0,
-        # Tendon strain when tension equals F0, the maximum isometric muscle force along the tendon direction. Unit: 1.
+        # Tendon strain when tension equals F0, the maximum isometric muscle force. Unit: 1.
         # Source value (original work or literature): not independently established for this entry.
         "tendon_strain_at_max_force": 0.04,
         # Positive maximum-shortening speed magnitude, measured in optimal fiber lengths per second. Unit: 1/s.
@@ -3321,7 +3321,7 @@ PARAMETERS = {
     },
     # Specify FR R C2.
     "FR_R_C2": {
-        # Maximum isometric muscle force along the tendon direction (F0). The pennation projection is already included. This is not tendon failure strength or a force ceiling; do not multiply by cos(alpha) again. Unit: N.
+        # Maximum isometric muscle force (F0). The pennation projection is already included. This is not tendon failure strength or a force ceiling; do not multiply by cos(alpha) again. Unit: N.
         # Source value (original work or literature): not independently established for this entry.
         "max_isometric_muscle_force_along_tendon_N": 1.207746371684156,
         # Optimal fascicle/fiber length, not whole muscle-tendon length. Unit: m.
@@ -3333,7 +3333,7 @@ PARAMETERS = {
         # Cosine of the constant fiber-to-tendon pennation angle. Unit: 1.
         # Source value (original work or literature): not independently established for this entry.
         "pennation_cosine": 1.0,
-        # Tendon strain when tension equals F0, the maximum isometric muscle force along the tendon direction. Unit: 1.
+        # Tendon strain when tension equals F0, the maximum isometric muscle force. Unit: 1.
         # Source value (original work or literature): not independently established for this entry.
         "tendon_strain_at_max_force": 0.04,
         # Positive maximum-shortening speed magnitude, measured in optimal fiber lengths per second. Unit: 1/s.
@@ -3363,7 +3363,7 @@ PARAMETERS = {
     },
     # Specify FL R C3-7.
     "FL_R_C3-7": {
-        # Maximum isometric muscle force along the tendon direction (F0). The pennation projection is already included. This is not tendon failure strength or a force ceiling; do not multiply by cos(alpha) again. Unit: N.
+        # Maximum isometric muscle force (F0). The pennation projection is already included. This is not tendon failure strength or a force ceiling; do not multiply by cos(alpha) again. Unit: N.
         # Source value (original work or literature): not independently established for this entry.
         "max_isometric_muscle_force_along_tendon_N": 10.498798983816204,
         # Optimal fascicle/fiber length, not whole muscle-tendon length. Unit: m.
@@ -3375,7 +3375,7 @@ PARAMETERS = {
         # Cosine of the constant fiber-to-tendon pennation angle. Unit: 1.
         # Source value (original work or literature): not independently established for this entry.
         "pennation_cosine": 1.0,
-        # Tendon strain when tension equals F0, the maximum isometric muscle force along the tendon direction. Unit: 1.
+        # Tendon strain when tension equals F0, the maximum isometric muscle force. Unit: 1.
         # Source value (original work or literature): not independently established for this entry.
         "tendon_strain_at_max_force": 0.04,
         # Positive maximum-shortening speed magnitude, measured in optimal fiber lengths per second. Unit: 1/s.
@@ -3405,7 +3405,7 @@ PARAMETERS = {
     },
     # Specify FR R C3-7.
     "FR_R_C3-7": {
-        # Maximum isometric muscle force along the tendon direction (F0). The pennation projection is already included. This is not tendon failure strength or a force ceiling; do not multiply by cos(alpha) again. Unit: N.
+        # Maximum isometric muscle force (F0). The pennation projection is already included. This is not tendon failure strength or a force ceiling; do not multiply by cos(alpha) again. Unit: N.
         # Source value (original work or literature): not independently established for this entry.
         "max_isometric_muscle_force_along_tendon_N": 10.498798983816204,
         # Optimal fascicle/fiber length, not whole muscle-tendon length. Unit: m.
@@ -3417,7 +3417,7 @@ PARAMETERS = {
         # Cosine of the constant fiber-to-tendon pennation angle. Unit: 1.
         # Source value (original work or literature): not independently established for this entry.
         "pennation_cosine": 1.0,
-        # Tendon strain when tension equals F0, the maximum isometric muscle force along the tendon direction. Unit: 1.
+        # Tendon strain when tension equals F0, the maximum isometric muscle force. Unit: 1.
         # Source value (original work or literature): not independently established for this entry.
         "tendon_strain_at_max_force": 0.04,
         # Positive maximum-shortening speed magnitude, measured in optimal fiber lengths per second. Unit: 1/s.
@@ -3447,7 +3447,7 @@ PARAMETERS = {
     },
     # Specify FL R T1.
     "FL_R_T1": {
-        # Maximum isometric muscle force along the tendon direction (F0). The pennation projection is already included. This is not tendon failure strength or a force ceiling; do not multiply by cos(alpha) again. Unit: N.
+        # Maximum isometric muscle force (F0). The pennation projection is already included. This is not tendon failure strength or a force ceiling; do not multiply by cos(alpha) again. Unit: N.
         # Source value (original work or literature): not independently established for this entry.
         "max_isometric_muscle_force_along_tendon_N": 5.84768778140187,
         # Optimal fascicle/fiber length, not whole muscle-tendon length. Unit: m.
@@ -3459,7 +3459,7 @@ PARAMETERS = {
         # Cosine of the constant fiber-to-tendon pennation angle. Unit: 1.
         # Source value (original work or literature): not independently established for this entry.
         "pennation_cosine": 1.0,
-        # Tendon strain when tension equals F0, the maximum isometric muscle force along the tendon direction. Unit: 1.
+        # Tendon strain when tension equals F0, the maximum isometric muscle force. Unit: 1.
         # Source value (original work or literature): not independently established for this entry.
         "tendon_strain_at_max_force": 0.04,
         # Positive maximum-shortening speed magnitude, measured in optimal fiber lengths per second. Unit: 1/s.
@@ -3489,7 +3489,7 @@ PARAMETERS = {
     },
     # Specify FR R T1.
     "FR_R_T1": {
-        # Maximum isometric muscle force along the tendon direction (F0). The pennation projection is already included. This is not tendon failure strength or a force ceiling; do not multiply by cos(alpha) again. Unit: N.
+        # Maximum isometric muscle force (F0). The pennation projection is already included. This is not tendon failure strength or a force ceiling; do not multiply by cos(alpha) again. Unit: N.
         # Source value (original work or literature): not independently established for this entry.
         "max_isometric_muscle_force_along_tendon_N": 5.84768778140187,
         # Optimal fascicle/fiber length, not whole muscle-tendon length. Unit: m.
@@ -3501,7 +3501,7 @@ PARAMETERS = {
         # Cosine of the constant fiber-to-tendon pennation angle. Unit: 1.
         # Source value (original work or literature): not independently established for this entry.
         "pennation_cosine": 1.0,
-        # Tendon strain when tension equals F0, the maximum isometric muscle force along the tendon direction. Unit: 1.
+        # Tendon strain when tension equals F0, the maximum isometric muscle force. Unit: 1.
         # Source value (original work or literature): not independently established for this entry.
         "tendon_strain_at_max_force": 0.04,
         # Positive maximum-shortening speed magnitude, measured in optimal fiber lengths per second. Unit: 1/s.
@@ -3531,7 +3531,7 @@ PARAMETERS = {
     },
     # Specify FL R T2.
     "FL_R_T2": {
-        # Maximum isometric muscle force along the tendon direction (F0). The pennation projection is already included. This is not tendon failure strength or a force ceiling; do not multiply by cos(alpha) again. Unit: N.
+        # Maximum isometric muscle force (F0). The pennation projection is already included. This is not tendon failure strength or a force ceiling; do not multiply by cos(alpha) again. Unit: N.
         # Source value (original work or literature): not independently established for this entry.
         "max_isometric_muscle_force_along_tendon_N": 6.0086609207406925,
         # Optimal fascicle/fiber length, not whole muscle-tendon length. Unit: m.
@@ -3543,7 +3543,7 @@ PARAMETERS = {
         # Cosine of the constant fiber-to-tendon pennation angle. Unit: 1.
         # Source value (original work or literature): not independently established for this entry.
         "pennation_cosine": 1.0,
-        # Tendon strain when tension equals F0, the maximum isometric muscle force along the tendon direction. Unit: 1.
+        # Tendon strain when tension equals F0, the maximum isometric muscle force. Unit: 1.
         # Source value (original work or literature): not independently established for this entry.
         "tendon_strain_at_max_force": 0.04,
         # Positive maximum-shortening speed magnitude, measured in optimal fiber lengths per second. Unit: 1/s.
@@ -3573,7 +3573,7 @@ PARAMETERS = {
     },
     # Specify FR R T2.
     "FR_R_T2": {
-        # Maximum isometric muscle force along the tendon direction (F0). The pennation projection is already included. This is not tendon failure strength or a force ceiling; do not multiply by cos(alpha) again. Unit: N.
+        # Maximum isometric muscle force (F0). The pennation projection is already included. This is not tendon failure strength or a force ceiling; do not multiply by cos(alpha) again. Unit: N.
         # Source value (original work or literature): not independently established for this entry.
         "max_isometric_muscle_force_along_tendon_N": 6.0086609207406925,
         # Optimal fascicle/fiber length, not whole muscle-tendon length. Unit: m.
@@ -3585,7 +3585,7 @@ PARAMETERS = {
         # Cosine of the constant fiber-to-tendon pennation angle. Unit: 1.
         # Source value (original work or literature): not independently established for this entry.
         "pennation_cosine": 1.0,
-        # Tendon strain when tension equals F0, the maximum isometric muscle force along the tendon direction. Unit: 1.
+        # Tendon strain when tension equals F0, the maximum isometric muscle force. Unit: 1.
         # Source value (original work or literature): not independently established for this entry.
         "tendon_strain_at_max_force": 0.04,
         # Positive maximum-shortening speed magnitude, measured in optimal fiber lengths per second. Unit: 1/s.
@@ -3615,7 +3615,7 @@ PARAMETERS = {
     },
     # Specify FL R T3.
     "FL_R_T3": {
-        # Maximum isometric muscle force along the tendon direction (F0). The pennation projection is already included. This is not tendon failure strength or a force ceiling; do not multiply by cos(alpha) again. Unit: N.
+        # Maximum isometric muscle force (F0). The pennation projection is already included. This is not tendon failure strength or a force ceiling; do not multiply by cos(alpha) again. Unit: N.
         # Source value (original work or literature): not independently established for this entry.
         "max_isometric_muscle_force_along_tendon_N": 3.6331787990958366,
         # Optimal fascicle/fiber length, not whole muscle-tendon length. Unit: m.
@@ -3627,7 +3627,7 @@ PARAMETERS = {
         # Cosine of the constant fiber-to-tendon pennation angle. Unit: 1.
         # Source value (original work or literature): not independently established for this entry.
         "pennation_cosine": 1.0,
-        # Tendon strain when tension equals F0, the maximum isometric muscle force along the tendon direction. Unit: 1.
+        # Tendon strain when tension equals F0, the maximum isometric muscle force. Unit: 1.
         # Source value (original work or literature): not independently established for this entry.
         "tendon_strain_at_max_force": 0.04,
         # Positive maximum-shortening speed magnitude, measured in optimal fiber lengths per second. Unit: 1/s.
@@ -3657,7 +3657,7 @@ PARAMETERS = {
     },
     # Specify FR R T3.
     "FR_R_T3": {
-        # Maximum isometric muscle force along the tendon direction (F0). The pennation projection is already included. This is not tendon failure strength or a force ceiling; do not multiply by cos(alpha) again. Unit: N.
+        # Maximum isometric muscle force (F0). The pennation projection is already included. This is not tendon failure strength or a force ceiling; do not multiply by cos(alpha) again. Unit: N.
         # Source value (original work or literature): not independently established for this entry.
         "max_isometric_muscle_force_along_tendon_N": 3.6331787990958366,
         # Optimal fascicle/fiber length, not whole muscle-tendon length. Unit: m.
@@ -3669,7 +3669,7 @@ PARAMETERS = {
         # Cosine of the constant fiber-to-tendon pennation angle. Unit: 1.
         # Source value (original work or literature): not independently established for this entry.
         "pennation_cosine": 1.0,
-        # Tendon strain when tension equals F0, the maximum isometric muscle force along the tendon direction. Unit: 1.
+        # Tendon strain when tension equals F0, the maximum isometric muscle force. Unit: 1.
         # Source value (original work or literature): not independently established for this entry.
         "tendon_strain_at_max_force": 0.04,
         # Positive maximum-shortening speed magnitude, measured in optimal fiber lengths per second. Unit: 1/s.
@@ -3699,7 +3699,7 @@ PARAMETERS = {
     },
     # Specify FL R T4.
     "FL_R_T4": {
-        # Maximum isometric muscle force along the tendon direction (F0). The pennation projection is already included. This is not tendon failure strength or a force ceiling; do not multiply by cos(alpha) again. Unit: N.
+        # Maximum isometric muscle force (F0). The pennation projection is already included. This is not tendon failure strength or a force ceiling; do not multiply by cos(alpha) again. Unit: N.
         # Source value (original work or literature): not independently established for this entry.
         "max_isometric_muscle_force_along_tendon_N": 2.503357979998125,
         # Optimal fascicle/fiber length, not whole muscle-tendon length. Unit: m.
@@ -3711,7 +3711,7 @@ PARAMETERS = {
         # Cosine of the constant fiber-to-tendon pennation angle. Unit: 1.
         # Source value (original work or literature): not independently established for this entry.
         "pennation_cosine": 1.0,
-        # Tendon strain when tension equals F0, the maximum isometric muscle force along the tendon direction. Unit: 1.
+        # Tendon strain when tension equals F0, the maximum isometric muscle force. Unit: 1.
         # Source value (original work or literature): not independently established for this entry.
         "tendon_strain_at_max_force": 0.04,
         # Positive maximum-shortening speed magnitude, measured in optimal fiber lengths per second. Unit: 1/s.
@@ -3741,7 +3741,7 @@ PARAMETERS = {
     },
     # Specify FR R T4.
     "FR_R_T4": {
-        # Maximum isometric muscle force along the tendon direction (F0). The pennation projection is already included. This is not tendon failure strength or a force ceiling; do not multiply by cos(alpha) again. Unit: N.
+        # Maximum isometric muscle force (F0). The pennation projection is already included. This is not tendon failure strength or a force ceiling; do not multiply by cos(alpha) again. Unit: N.
         # Source value (original work or literature): not independently established for this entry.
         "max_isometric_muscle_force_along_tendon_N": 2.503357979998125,
         # Optimal fascicle/fiber length, not whole muscle-tendon length. Unit: m.
@@ -3753,7 +3753,7 @@ PARAMETERS = {
         # Cosine of the constant fiber-to-tendon pennation angle. Unit: 1.
         # Source value (original work or literature): not independently established for this entry.
         "pennation_cosine": 1.0,
-        # Tendon strain when tension equals F0, the maximum isometric muscle force along the tendon direction. Unit: 1.
+        # Tendon strain when tension equals F0, the maximum isometric muscle force. Unit: 1.
         # Source value (original work or literature): not independently established for this entry.
         "tendon_strain_at_max_force": 0.04,
         # Positive maximum-shortening speed magnitude, measured in optimal fiber lengths per second. Unit: 1/s.
@@ -3783,7 +3783,7 @@ PARAMETERS = {
     },
     # Specify FL R T5.
     "FL_R_T5": {
-        # Maximum isometric muscle force along the tendon direction (F0). The pennation projection is already included. This is not tendon failure strength or a force ceiling; do not multiply by cos(alpha) again. Unit: N.
+        # Maximum isometric muscle force (F0). The pennation projection is already included. This is not tendon failure strength or a force ceiling; do not multiply by cos(alpha) again. Unit: N.
         # Source value (original work or literature): not independently established for this entry.
         "max_isometric_muscle_force_along_tendon_N": 1.9136246097101053,
         # Optimal fascicle/fiber length, not whole muscle-tendon length. Unit: m.
@@ -3795,7 +3795,7 @@ PARAMETERS = {
         # Cosine of the constant fiber-to-tendon pennation angle. Unit: 1.
         # Source value (original work or literature): not independently established for this entry.
         "pennation_cosine": 1.0,
-        # Tendon strain when tension equals F0, the maximum isometric muscle force along the tendon direction. Unit: 1.
+        # Tendon strain when tension equals F0, the maximum isometric muscle force. Unit: 1.
         # Source value (original work or literature): not independently established for this entry.
         "tendon_strain_at_max_force": 0.04,
         # Positive maximum-shortening speed magnitude, measured in optimal fiber lengths per second. Unit: 1/s.
@@ -3825,7 +3825,7 @@ PARAMETERS = {
     },
     # Specify FR R T5.
     "FR_R_T5": {
-        # Maximum isometric muscle force along the tendon direction (F0). The pennation projection is already included. This is not tendon failure strength or a force ceiling; do not multiply by cos(alpha) again. Unit: N.
+        # Maximum isometric muscle force (F0). The pennation projection is already included. This is not tendon failure strength or a force ceiling; do not multiply by cos(alpha) again. Unit: N.
         # Source value (original work or literature): not independently established for this entry.
         "max_isometric_muscle_force_along_tendon_N": 1.9136246097101053,
         # Optimal fascicle/fiber length, not whole muscle-tendon length. Unit: m.
@@ -3837,7 +3837,7 @@ PARAMETERS = {
         # Cosine of the constant fiber-to-tendon pennation angle. Unit: 1.
         # Source value (original work or literature): not independently established for this entry.
         "pennation_cosine": 1.0,
-        # Tendon strain when tension equals F0, the maximum isometric muscle force along the tendon direction. Unit: 1.
+        # Tendon strain when tension equals F0, the maximum isometric muscle force. Unit: 1.
         # Source value (original work or literature): not independently established for this entry.
         "tendon_strain_at_max_force": 0.04,
         # Positive maximum-shortening speed magnitude, measured in optimal fiber lengths per second. Unit: 1/s.
@@ -3867,7 +3867,7 @@ PARAMETERS = {
     },
     # Specify FL DigitalExtensors.
     "FL_DigitalExtensors": {
-        # Maximum isometric muscle force along the tendon direction (F0). The pennation projection is already included. This is not tendon failure strength or a force ceiling; do not multiply by cos(alpha) again. Unit: N.
+        # Maximum isometric muscle force (F0). The pennation projection is already included. This is not tendon failure strength or a force ceiling; do not multiply by cos(alpha) again. Unit: N.
         # Source value (original work or literature): not independently established for this entry.
         "max_isometric_muscle_force_along_tendon_N": 78.49590850824231,
         # Optimal fascicle/fiber length, not whole muscle-tendon length. Unit: m.
@@ -3879,7 +3879,7 @@ PARAMETERS = {
         # Cosine of the constant fiber-to-tendon pennation angle. Unit: 1.
         # Source value (original work or literature): not independently established for this entry.
         "pennation_cosine": 0.9956707906498045,
-        # Tendon strain when tension equals F0, the maximum isometric muscle force along the tendon direction. Unit: 1.
+        # Tendon strain when tension equals F0, the maximum isometric muscle force. Unit: 1.
         # Source value (original work or literature): not independently established for this entry.
         "tendon_strain_at_max_force": 0.04,
         # Positive maximum-shortening speed magnitude, measured in optimal fiber lengths per second. Unit: 1/s.
@@ -3909,7 +3909,7 @@ PARAMETERS = {
     },
     # Specify FR DigitalExtensors.
     "FR_DigitalExtensors": {
-        # Maximum isometric muscle force along the tendon direction (F0). The pennation projection is already included. This is not tendon failure strength or a force ceiling; do not multiply by cos(alpha) again. Unit: N.
+        # Maximum isometric muscle force (F0). The pennation projection is already included. This is not tendon failure strength or a force ceiling; do not multiply by cos(alpha) again. Unit: N.
         # Source value (original work or literature): not independently established for this entry.
         "max_isometric_muscle_force_along_tendon_N": 78.49590850824231,
         # Optimal fascicle/fiber length, not whole muscle-tendon length. Unit: m.
@@ -3921,7 +3921,7 @@ PARAMETERS = {
         # Cosine of the constant fiber-to-tendon pennation angle. Unit: 1.
         # Source value (original work or literature): not independently established for this entry.
         "pennation_cosine": 0.9956707906498045,
-        # Tendon strain when tension equals F0, the maximum isometric muscle force along the tendon direction. Unit: 1.
+        # Tendon strain when tension equals F0, the maximum isometric muscle force. Unit: 1.
         # Source value (original work or literature): not independently established for this entry.
         "tendon_strain_at_max_force": 0.04,
         # Positive maximum-shortening speed magnitude, measured in optimal fiber lengths per second. Unit: 1/s.
@@ -3951,7 +3951,7 @@ PARAMETERS = {
     },
     # Specify FL DigitalFlexors.
     "FL_DigitalFlexors": {
-        # Maximum isometric muscle force along the tendon direction (F0). The pennation projection is already included. This is not tendon failure strength or a force ceiling; do not multiply by cos(alpha) again. Unit: N.
+        # Maximum isometric muscle force (F0). The pennation projection is already included. This is not tendon failure strength or a force ceiling; do not multiply by cos(alpha) again. Unit: N.
         # Source value (original work or literature): not independently established for this entry.
         "max_isometric_muscle_force_along_tendon_N": 601.1227378347684,
         # Optimal fascicle/fiber length, not whole muscle-tendon length. Unit: m.
@@ -3963,7 +3963,7 @@ PARAMETERS = {
         # Cosine of the constant fiber-to-tendon pennation angle. Unit: 1.
         # Source value (original work or literature): not independently established for this entry.
         "pennation_cosine": 0.9872429102593628,
-        # Tendon strain when tension equals F0, the maximum isometric muscle force along the tendon direction. Unit: 1.
+        # Tendon strain when tension equals F0, the maximum isometric muscle force. Unit: 1.
         # Source value (original work or literature): not independently established for this entry.
         "tendon_strain_at_max_force": 0.04,
         # Positive maximum-shortening speed magnitude, measured in optimal fiber lengths per second. Unit: 1/s.
@@ -3993,7 +3993,7 @@ PARAMETERS = {
     },
     # Specify FR DigitalFlexors.
     "FR_DigitalFlexors": {
-        # Maximum isometric muscle force along the tendon direction (F0). The pennation projection is already included. This is not tendon failure strength or a force ceiling; do not multiply by cos(alpha) again. Unit: N.
+        # Maximum isometric muscle force (F0). The pennation projection is already included. This is not tendon failure strength or a force ceiling; do not multiply by cos(alpha) again. Unit: N.
         # Source value (original work or literature): not independently established for this entry.
         "max_isometric_muscle_force_along_tendon_N": 601.1227378347684,
         # Optimal fascicle/fiber length, not whole muscle-tendon length. Unit: m.
@@ -4005,7 +4005,7 @@ PARAMETERS = {
         # Cosine of the constant fiber-to-tendon pennation angle. Unit: 1.
         # Source value (original work or literature): not independently established for this entry.
         "pennation_cosine": 0.9872429102593628,
-        # Tendon strain when tension equals F0, the maximum isometric muscle force along the tendon direction. Unit: 1.
+        # Tendon strain when tension equals F0, the maximum isometric muscle force. Unit: 1.
         # Source value (original work or literature): not independently established for this entry.
         "tendon_strain_at_max_force": 0.04,
         # Positive maximum-shortening speed magnitude, measured in optimal fiber lengths per second. Unit: 1/s.
@@ -4035,7 +4035,7 @@ PARAMETERS = {
     },
     # Specify FL TrapeziusCervical.
     "FL_TrapeziusCervical": {
-        # Maximum isometric muscle force along the tendon direction (F0). The pennation projection is already included. This is not tendon failure strength or a force ceiling; do not multiply by cos(alpha) again. Unit: N.
+        # Maximum isometric muscle force (F0). The pennation projection is already included. This is not tendon failure strength or a force ceiling; do not multiply by cos(alpha) again. Unit: N.
         # Source value (original work or literature): not independently established for this entry.
         "max_isometric_muscle_force_along_tendon_N": 7.508087010046516,
         # Optimal fascicle/fiber length, not whole muscle-tendon length. Unit: m.
@@ -4047,7 +4047,7 @@ PARAMETERS = {
         # Cosine of the constant fiber-to-tendon pennation angle. Unit: 1.
         # Source value (original work or literature): not independently established for this entry.
         "pennation_cosine": 1.0,
-        # Tendon strain when tension equals F0, the maximum isometric muscle force along the tendon direction. Unit: 1.
+        # Tendon strain when tension equals F0, the maximum isometric muscle force. Unit: 1.
         # Source value (original work or literature): not independently established for this entry.
         "tendon_strain_at_max_force": 0.04,
         # Positive maximum-shortening speed magnitude, measured in optimal fiber lengths per second. Unit: 1/s.
@@ -4077,7 +4077,7 @@ PARAMETERS = {
     },
     # Specify FR TrapeziusCervical.
     "FR_TrapeziusCervical": {
-        # Maximum isometric muscle force along the tendon direction (F0). The pennation projection is already included. This is not tendon failure strength or a force ceiling; do not multiply by cos(alpha) again. Unit: N.
+        # Maximum isometric muscle force (F0). The pennation projection is already included. This is not tendon failure strength or a force ceiling; do not multiply by cos(alpha) again. Unit: N.
         # Source value (original work or literature): not independently established for this entry.
         "max_isometric_muscle_force_along_tendon_N": 7.508087010046516,
         # Optimal fascicle/fiber length, not whole muscle-tendon length. Unit: m.
@@ -4089,7 +4089,7 @@ PARAMETERS = {
         # Cosine of the constant fiber-to-tendon pennation angle. Unit: 1.
         # Source value (original work or literature): not independently established for this entry.
         "pennation_cosine": 1.0,
-        # Tendon strain when tension equals F0, the maximum isometric muscle force along the tendon direction. Unit: 1.
+        # Tendon strain when tension equals F0, the maximum isometric muscle force. Unit: 1.
         # Source value (original work or literature): not independently established for this entry.
         "tendon_strain_at_max_force": 0.04,
         # Positive maximum-shortening speed magnitude, measured in optimal fiber lengths per second. Unit: 1/s.
@@ -4119,7 +4119,7 @@ PARAMETERS = {
     },
     # Specify FL TrapeziusThoracic.
     "FL_TrapeziusThoracic": {
-        # Maximum isometric muscle force along the tendon direction (F0). The pennation projection is already included. This is not tendon failure strength or a force ceiling; do not multiply by cos(alpha) again. Unit: N.
+        # Maximum isometric muscle force (F0). The pennation projection is already included. This is not tendon failure strength or a force ceiling; do not multiply by cos(alpha) again. Unit: N.
         # Source value (original work or literature): not independently established for this entry.
         "max_isometric_muscle_force_along_tendon_N": 6.977343336771235,
         # Optimal fascicle/fiber length, not whole muscle-tendon length. Unit: m.
@@ -4131,7 +4131,7 @@ PARAMETERS = {
         # Cosine of the constant fiber-to-tendon pennation angle. Unit: 1.
         # Source value (original work or literature): not independently established for this entry.
         "pennation_cosine": 1.0,
-        # Tendon strain when tension equals F0, the maximum isometric muscle force along the tendon direction. Unit: 1.
+        # Tendon strain when tension equals F0, the maximum isometric muscle force. Unit: 1.
         # Source value (original work or literature): not independently established for this entry.
         "tendon_strain_at_max_force": 0.04,
         # Positive maximum-shortening speed magnitude, measured in optimal fiber lengths per second. Unit: 1/s.
@@ -4161,7 +4161,7 @@ PARAMETERS = {
     },
     # Specify FR TrapeziusThoracic.
     "FR_TrapeziusThoracic": {
-        # Maximum isometric muscle force along the tendon direction (F0). The pennation projection is already included. This is not tendon failure strength or a force ceiling; do not multiply by cos(alpha) again. Unit: N.
+        # Maximum isometric muscle force (F0). The pennation projection is already included. This is not tendon failure strength or a force ceiling; do not multiply by cos(alpha) again. Unit: N.
         # Source value (original work or literature): not independently established for this entry.
         "max_isometric_muscle_force_along_tendon_N": 6.977343336771235,
         # Optimal fascicle/fiber length, not whole muscle-tendon length. Unit: m.
@@ -4173,7 +4173,7 @@ PARAMETERS = {
         # Cosine of the constant fiber-to-tendon pennation angle. Unit: 1.
         # Source value (original work or literature): not independently established for this entry.
         "pennation_cosine": 1.0,
-        # Tendon strain when tension equals F0, the maximum isometric muscle force along the tendon direction. Unit: 1.
+        # Tendon strain when tension equals F0, the maximum isometric muscle force. Unit: 1.
         # Source value (original work or literature): not independently established for this entry.
         "tendon_strain_at_max_force": 0.04,
         # Positive maximum-shortening speed magnitude, measured in optimal fiber lengths per second. Unit: 1/s.
@@ -4203,7 +4203,7 @@ PARAMETERS = {
     },
     # Specify FL LatissimusDorsi.
     "FL_LatissimusDorsi": {
-        # Maximum isometric muscle force along the tendon direction (F0). The pennation projection is already included. This is not tendon failure strength or a force ceiling; do not multiply by cos(alpha) again. Unit: N.
+        # Maximum isometric muscle force (F0). The pennation projection is already included. This is not tendon failure strength or a force ceiling; do not multiply by cos(alpha) again. Unit: N.
         # Source value (original work or literature): not independently established for this entry.
         "max_isometric_muscle_force_along_tendon_N": 16.51465085230317,
         # Optimal fascicle/fiber length, not whole muscle-tendon length. Unit: m.
@@ -4215,7 +4215,7 @@ PARAMETERS = {
         # Cosine of the constant fiber-to-tendon pennation angle. Unit: 1.
         # Source value (original work or literature): not independently established for this entry.
         "pennation_cosine": 1.0,
-        # Tendon strain when tension equals F0, the maximum isometric muscle force along the tendon direction. Unit: 1.
+        # Tendon strain when tension equals F0, the maximum isometric muscle force. Unit: 1.
         # Source value (original work or literature): not independently established for this entry.
         "tendon_strain_at_max_force": 0.04,
         # Positive maximum-shortening speed magnitude, measured in optimal fiber lengths per second. Unit: 1/s.
@@ -4245,7 +4245,7 @@ PARAMETERS = {
     },
     # Specify FR LatissimusDorsi.
     "FR_LatissimusDorsi": {
-        # Maximum isometric muscle force along the tendon direction (F0). The pennation projection is already included. This is not tendon failure strength or a force ceiling; do not multiply by cos(alpha) again. Unit: N.
+        # Maximum isometric muscle force (F0). The pennation projection is already included. This is not tendon failure strength or a force ceiling; do not multiply by cos(alpha) again. Unit: N.
         # Source value (original work or literature): not independently established for this entry.
         "max_isometric_muscle_force_along_tendon_N": 16.51465085230317,
         # Optimal fascicle/fiber length, not whole muscle-tendon length. Unit: m.
@@ -4257,7 +4257,7 @@ PARAMETERS = {
         # Cosine of the constant fiber-to-tendon pennation angle. Unit: 1.
         # Source value (original work or literature): not independently established for this entry.
         "pennation_cosine": 1.0,
-        # Tendon strain when tension equals F0, the maximum isometric muscle force along the tendon direction. Unit: 1.
+        # Tendon strain when tension equals F0, the maximum isometric muscle force. Unit: 1.
         # Source value (original work or literature): not independently established for this entry.
         "tendon_strain_at_max_force": 0.04,
         # Positive maximum-shortening speed magnitude, measured in optimal fiber lengths per second. Unit: 1/s.
@@ -4287,7 +4287,7 @@ PARAMETERS = {
     },
     # Specify FL PectoralisProfundus.
     "FL_PectoralisProfundus": {
-        # Maximum isometric muscle force along the tendon direction (F0). The pennation projection is already included. This is not tendon failure strength or a force ceiling; do not multiply by cos(alpha) again. Unit: N.
+        # Maximum isometric muscle force (F0). The pennation projection is already included. This is not tendon failure strength or a force ceiling; do not multiply by cos(alpha) again. Unit: N.
         # Source value (original work or literature): not independently established for this entry.
         "max_isometric_muscle_force_along_tendon_N": 32.59197000797395,
         # Optimal fascicle/fiber length, not whole muscle-tendon length. Unit: m.
@@ -4299,7 +4299,7 @@ PARAMETERS = {
         # Cosine of the constant fiber-to-tendon pennation angle. Unit: 1.
         # Source value (original work or literature): not independently established for this entry.
         "pennation_cosine": 1.0,
-        # Tendon strain when tension equals F0, the maximum isometric muscle force along the tendon direction. Unit: 1.
+        # Tendon strain when tension equals F0, the maximum isometric muscle force. Unit: 1.
         # Source value (original work or literature): not independently established for this entry.
         "tendon_strain_at_max_force": 0.04,
         # Positive maximum-shortening speed magnitude, measured in optimal fiber lengths per second. Unit: 1/s.
@@ -4329,7 +4329,7 @@ PARAMETERS = {
     },
     # Specify FR PectoralisProfundus.
     "FR_PectoralisProfundus": {
-        # Maximum isometric muscle force along the tendon direction (F0). The pennation projection is already included. This is not tendon failure strength or a force ceiling; do not multiply by cos(alpha) again. Unit: N.
+        # Maximum isometric muscle force (F0). The pennation projection is already included. This is not tendon failure strength or a force ceiling; do not multiply by cos(alpha) again. Unit: N.
         # Source value (original work or literature): not independently established for this entry.
         "max_isometric_muscle_force_along_tendon_N": 32.59197000797395,
         # Optimal fascicle/fiber length, not whole muscle-tendon length. Unit: m.
@@ -4341,7 +4341,7 @@ PARAMETERS = {
         # Cosine of the constant fiber-to-tendon pennation angle. Unit: 1.
         # Source value (original work or literature): not independently established for this entry.
         "pennation_cosine": 1.0,
-        # Tendon strain when tension equals F0, the maximum isometric muscle force along the tendon direction. Unit: 1.
+        # Tendon strain when tension equals F0, the maximum isometric muscle force. Unit: 1.
         # Source value (original work or literature): not independently established for this entry.
         "tendon_strain_at_max_force": 0.04,
         # Positive maximum-shortening speed magnitude, measured in optimal fiber lengths per second. Unit: 1/s.
@@ -4371,7 +4371,7 @@ PARAMETERS = {
     },
     # Specify FL PectoralisSuperficialis.
     "FL_PectoralisSuperficialis": {
-        # Maximum isometric muscle force along the tendon direction (F0). The pennation projection is already included. This is not tendon failure strength or a force ceiling; do not multiply by cos(alpha) again. Unit: N.
+        # Maximum isometric muscle force (F0). The pennation projection is already included. This is not tendon failure strength or a force ceiling; do not multiply by cos(alpha) again. Unit: N.
         # Source value (original work or literature): not independently established for this entry.
         "max_isometric_muscle_force_along_tendon_N": 6.623550618152982,
         # Optimal fascicle/fiber length, not whole muscle-tendon length. Unit: m.
@@ -4383,7 +4383,7 @@ PARAMETERS = {
         # Cosine of the constant fiber-to-tendon pennation angle. Unit: 1.
         # Source value (original work or literature): not independently established for this entry.
         "pennation_cosine": 1.0,
-        # Tendon strain when tension equals F0, the maximum isometric muscle force along the tendon direction. Unit: 1.
+        # Tendon strain when tension equals F0, the maximum isometric muscle force. Unit: 1.
         # Source value (original work or literature): not independently established for this entry.
         "tendon_strain_at_max_force": 0.04,
         # Positive maximum-shortening speed magnitude, measured in optimal fiber lengths per second. Unit: 1/s.
@@ -4413,7 +4413,7 @@ PARAMETERS = {
     },
     # Specify FR PectoralisSuperficialis.
     "FR_PectoralisSuperficialis": {
-        # Maximum isometric muscle force along the tendon direction (F0). The pennation projection is already included. This is not tendon failure strength or a force ceiling; do not multiply by cos(alpha) again. Unit: N.
+        # Maximum isometric muscle force (F0). The pennation projection is already included. This is not tendon failure strength or a force ceiling; do not multiply by cos(alpha) again. Unit: N.
         # Source value (original work or literature): not independently established for this entry.
         "max_isometric_muscle_force_along_tendon_N": 6.623550618152982,
         # Optimal fascicle/fiber length, not whole muscle-tendon length. Unit: m.
@@ -4425,7 +4425,7 @@ PARAMETERS = {
         # Cosine of the constant fiber-to-tendon pennation angle. Unit: 1.
         # Source value (original work or literature): not independently established for this entry.
         "pennation_cosine": 1.0,
-        # Tendon strain when tension equals F0, the maximum isometric muscle force along the tendon direction. Unit: 1.
+        # Tendon strain when tension equals F0, the maximum isometric muscle force. Unit: 1.
         # Source value (original work or literature): not independently established for this entry.
         "tendon_strain_at_max_force": 0.04,
         # Positive maximum-shortening speed magnitude, measured in optimal fiber lengths per second. Unit: 1/s.
@@ -4455,7 +4455,7 @@ PARAMETERS = {
     },
     # Specify FL Clavobrachialis.
     "FL_Clavobrachialis": {
-        # Maximum isometric muscle force along the tendon direction (F0). The pennation projection is already included. This is not tendon failure strength or a force ceiling; do not multiply by cos(alpha) again. Unit: N.
+        # Maximum isometric muscle force (F0). The pennation projection is already included. This is not tendon failure strength or a force ceiling; do not multiply by cos(alpha) again. Unit: N.
         # Source value (original work or literature): not independently established for this entry.
         "max_isometric_muscle_force_along_tendon_N": 9.05567148687485,
         # Optimal fascicle/fiber length, not whole muscle-tendon length. Unit: m.
@@ -4467,7 +4467,7 @@ PARAMETERS = {
         # Cosine of the constant fiber-to-tendon pennation angle. Unit: 1.
         # Source value (original work or literature): not independently established for this entry.
         "pennation_cosine": 1.0,
-        # Tendon strain when tension equals F0, the maximum isometric muscle force along the tendon direction. Unit: 1.
+        # Tendon strain when tension equals F0, the maximum isometric muscle force. Unit: 1.
         # Source value (original work or literature): not independently established for this entry.
         "tendon_strain_at_max_force": 0.04,
         # Positive maximum-shortening speed magnitude, measured in optimal fiber lengths per second. Unit: 1/s.
@@ -4497,7 +4497,7 @@ PARAMETERS = {
     },
     # Specify FR Clavobrachialis.
     "FR_Clavobrachialis": {
-        # Maximum isometric muscle force along the tendon direction (F0). The pennation projection is already included. This is not tendon failure strength or a force ceiling; do not multiply by cos(alpha) again. Unit: N.
+        # Maximum isometric muscle force (F0). The pennation projection is already included. This is not tendon failure strength or a force ceiling; do not multiply by cos(alpha) again. Unit: N.
         # Source value (original work or literature): not independently established for this entry.
         "max_isometric_muscle_force_along_tendon_N": 9.05567148687485,
         # Optimal fascicle/fiber length, not whole muscle-tendon length. Unit: m.
@@ -4509,7 +4509,7 @@ PARAMETERS = {
         # Cosine of the constant fiber-to-tendon pennation angle. Unit: 1.
         # Source value (original work or literature): not independently established for this entry.
         "pennation_cosine": 1.0,
-        # Tendon strain when tension equals F0, the maximum isometric muscle force along the tendon direction. Unit: 1.
+        # Tendon strain when tension equals F0, the maximum isometric muscle force. Unit: 1.
         # Source value (original work or literature): not independently established for this entry.
         "tendon_strain_at_max_force": 0.04,
         # Positive maximum-shortening speed magnitude, measured in optimal fiber lengths per second. Unit: 1/s.

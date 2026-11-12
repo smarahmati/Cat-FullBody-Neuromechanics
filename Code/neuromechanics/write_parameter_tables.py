@@ -83,7 +83,7 @@ def write_parameter_tables(parameters, provenance, output):
         if row["category"] == "muscle_tendon" and row["field"] == old_force_name:
             row["field"] = force_name
             row["meaning"] = (
-                "Maximum isometric muscle force along the tendon direction (F0). "
+                "Maximum isometric muscle force (F0). "
                 "The pennation projection is already included; do not apply it twice."
             )
         category = row["category"]

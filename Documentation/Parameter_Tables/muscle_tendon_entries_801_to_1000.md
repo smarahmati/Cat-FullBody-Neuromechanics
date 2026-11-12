@@ -110,7 +110,7 @@ Each entry contains its values, units, meaning and source information. Select an
 | Object | FL_S_T4 |
 | Parameter | max_isometric_muscle_force_along_tendon_N |
 | Unit | N |
-| Meaning | Maximum isometric muscle force along the tendon direction (F0). The pennation projection is already included. This is not tendon failure strength or a force ceiling; do not multiply by cos(alpha) again. |
+| Meaning | Maximum isometric muscle force (F0). The pennation projection is already included. This is not tendon failure strength or a force ceiling; do not multiply by cos(alpha) again. |
 | Source value | Not established |
 | Value used in this model | 2.7203725 |
 | What changed and why | No verified source value is available for direct comparison. Force capacity was calibrated with motor inputs to improve mechanical agreement; the fit does not uniquely identify it. |
@@ -174,7 +174,7 @@ Each entry contains its values, units, meaning and source information. Select an
 | Object | FL_S_T4 |
 | Parameter | tendon_strain_at_max_force |
 | Unit | 1 |
-| Meaning | Tendon strain when tension equals F0, the maximum isometric muscle force along the tendon direction. |
+| Meaning | Tendon strain when tension equals F0, the maximum isometric muscle force. |
 | Source value | Not established |
 | Value used in this model | 0.04 |
 | What changed and why | No verified source value is available for direct comparison. Assumed elastic-tendon compliance; not a measured tendon strain for this animal. |
@@ -318,7 +318,7 @@ Each entry contains its values, units, meaning and source information. Select an
 | Object | FR_S_T4 |
 | Parameter | max_isometric_muscle_force_along_tendon_N |
 | Unit | N |
-| Meaning | Maximum isometric muscle force along the tendon direction (F0). The pennation projection is already included. This is not tendon failure strength or a force ceiling; do not multiply by cos(alpha) again. |
+| Meaning | Maximum isometric muscle force (F0). The pennation projection is already included. This is not tendon failure strength or a force ceiling; do not multiply by cos(alpha) again. |
 | Source value | Not established |
 | Value used in this model | 2.7203725 |
 | What changed and why | No verified source value is available for direct comparison. Force capacity was calibrated with motor inputs to improve mechanical agreement; the fit does not uniquely identify it. |
@@ -382,7 +382,7 @@ Each entry contains its values, units, meaning and source information. Select an
 | Object | FR_S_T4 |
 | Parameter | tendon_strain_at_max_force |
 | Unit | 1 |
-| Meaning | Tendon strain when tension equals F0, the maximum isometric muscle force along the tendon direction. |
+| Meaning | Tendon strain when tension equals F0, the maximum isometric muscle force. |
 | Source value | Not established |
 | Value used in this model | 0.04 |
 | What changed and why | No verified source value is available for direct comparison. Assumed elastic-tendon compliance; not a measured tendon strain for this animal. |
@@ -526,7 +526,7 @@ Each entry contains its values, units, meaning and source information. Select an
 | Object | FL_S_T5 |
 | Parameter | max_isometric_muscle_force_along_tendon_N |
 | Unit | N |
-| Meaning | Maximum isometric muscle force along the tendon direction (F0). The pennation projection is already included. This is not tendon failure strength or a force ceiling; do not multiply by cos(alpha) again. |
+| Meaning | Maximum isometric muscle force (F0). The pennation projection is already included. This is not tendon failure strength or a force ceiling; do not multiply by cos(alpha) again. |
 | Source value | Not established |
 | Value used in this model | 2.7647431 |
 | What changed and why | No verified source value is available for direct comparison. Force capacity was calibrated with motor inputs to improve mechanical agreement; the fit does not uniquely identify it. |
@@ -590,7 +590,7 @@ Each entry contains its values, units, meaning and source information. Select an
 | Object | FL_S_T5 |
 | Parameter | tendon_strain_at_max_force |
 | Unit | 1 |
-| Meaning | Tendon strain when tension equals F0, the maximum isometric muscle force along the tendon direction. |
+| Meaning | Tendon strain when tension equals F0, the maximum isometric muscle force. |
 | Source value | Not established |
 | Value used in this model | 0.04 |
 | What changed and why | No verified source value is available for direct comparison. Assumed elastic-tendon compliance; not a measured tendon strain for this animal. |
@@ -734,7 +734,7 @@ Each entry contains its values, units, meaning and source information. Select an
 | Object | FR_S_T5 |
 | Parameter | max_isometric_muscle_force_along_tendon_N |
 | Unit | N |
-| Meaning | Maximum isometric muscle force along the tendon direction (F0). The pennation projection is already included. This is not tendon failure strength or a force ceiling; do not multiply by cos(alpha) again. |
+| Meaning | Maximum isometric muscle force (F0). The pennation projection is already included. This is not tendon failure strength or a force ceiling; do not multiply by cos(alpha) again. |
 | Source value | Not established |
 | Value used in this model | 2.7647431 |
 | What changed and why | No verified source value is available for direct comparison. Force capacity was calibrated with motor inputs to improve mechanical agreement; the fit does not uniquely identify it. |
@@ -798,7 +798,7 @@ Each entry contains its values, units, meaning and source information. Select an
 | Object | FR_S_T5 |
 | Parameter | tendon_strain_at_max_force |
 | Unit | 1 |
-| Meaning | Tendon strain when tension equals F0, the maximum isometric muscle force along the tendon direction. |
+| Meaning | Tendon strain when tension equals F0, the maximum isometric muscle force. |
 | Source value | Not established |
 | Value used in this model | 0.04 |
 | What changed and why | No verified source value is available for direct comparison. Assumed elastic-tendon compliance; not a measured tendon strain for this animal. |
@@ -942,7 +942,7 @@ Each entry contains its values, units, meaning and source information. Select an
 | Object | FL_S_T6 |
 | Parameter | max_isometric_muscle_force_along_tendon_N |
 | Unit | N |
-| Meaning | Maximum isometric muscle force along the tendon direction (F0). The pennation projection is already included. This is not tendon failure strength or a force ceiling; do not multiply by cos(alpha) again. |
+| Meaning | Maximum isometric muscle force (F0). The pennation projection is already included. This is not tendon failure strength or a force ceiling; do not multiply by cos(alpha) again. |
 | Source value | Not established |
 | Value used in this model | 6.2516548 |
 | What changed and why | No verified source value is available for direct comparison. Force capacity was calibrated with motor inputs to improve mechanical agreement; the fit does not uniquely identify it. |
@@ -1006,7 +1006,7 @@ Each entry contains its values, units, meaning and source information. Select an
 | Object | FL_S_T6 |
 | Parameter | tendon_strain_at_max_force |
 | Unit | 1 |
-| Meaning | Tendon strain when tension equals F0, the maximum isometric muscle force along the tendon direction. |
+| Meaning | Tendon strain when tension equals F0, the maximum isometric muscle force. |
 | Source value | Not established |
 | Value used in this model | 0.04 |
 | What changed and why | No verified source value is available for direct comparison. Assumed elastic-tendon compliance; not a measured tendon strain for this animal. |
@@ -1150,7 +1150,7 @@ Each entry contains its values, units, meaning and source information. Select an
 | Object | FR_S_T6 |
 | Parameter | max_isometric_muscle_force_along_tendon_N |
 | Unit | N |
-| Meaning | Maximum isometric muscle force along the tendon direction (F0). The pennation projection is already included. This is not tendon failure strength or a force ceiling; do not multiply by cos(alpha) again. |
+| Meaning | Maximum isometric muscle force (F0). The pennation projection is already included. This is not tendon failure strength or a force ceiling; do not multiply by cos(alpha) again. |
 | Source value | Not established |
 | Value used in this model | 6.2516548 |
 | What changed and why | No verified source value is available for direct comparison. Force capacity was calibrated with motor inputs to improve mechanical agreement; the fit does not uniquely identify it. |
@@ -1214,7 +1214,7 @@ Each entry contains its values, units, meaning and source information. Select an
 | Object | FR_S_T6 |
 | Parameter | tendon_strain_at_max_force |
 | Unit | 1 |
-| Meaning | Tendon strain when tension equals F0, the maximum isometric muscle force along the tendon direction. |
+| Meaning | Tendon strain when tension equals F0, the maximum isometric muscle force. |
 | Source value | Not established |
 | Value used in this model | 0.04 |
 | What changed and why | No verified source value is available for direct comparison. Assumed elastic-tendon compliance; not a measured tendon strain for this animal. |
@@ -1358,7 +1358,7 @@ Each entry contains its values, units, meaning and source information. Select an
 | Object | FL_S_T7 |
 | Parameter | max_isometric_muscle_force_along_tendon_N |
 | Unit | N |
-| Meaning | Maximum isometric muscle force along the tendon direction (F0). The pennation projection is already included. This is not tendon failure strength or a force ceiling; do not multiply by cos(alpha) again. |
+| Meaning | Maximum isometric muscle force (F0). The pennation projection is already included. This is not tendon failure strength or a force ceiling; do not multiply by cos(alpha) again. |
 | Source value | Not established |
 | Value used in this model | 5.4070847 |
 | What changed and why | No verified source value is available for direct comparison. Force capacity was calibrated with motor inputs to improve mechanical agreement; the fit does not uniquely identify it. |
@@ -1422,7 +1422,7 @@ Each entry contains its values, units, meaning and source information. Select an
 | Object | FL_S_T7 |
 | Parameter | tendon_strain_at_max_force |
 | Unit | 1 |
-| Meaning | Tendon strain when tension equals F0, the maximum isometric muscle force along the tendon direction. |
+| Meaning | Tendon strain when tension equals F0, the maximum isometric muscle force. |
 | Source value | Not established |
 | Value used in this model | 0.04 |
 | What changed and why | No verified source value is available for direct comparison. Assumed elastic-tendon compliance; not a measured tendon strain for this animal. |
@@ -1566,7 +1566,7 @@ Each entry contains its values, units, meaning and source information. Select an
 | Object | FR_S_T7 |
 | Parameter | max_isometric_muscle_force_along_tendon_N |
 | Unit | N |
-| Meaning | Maximum isometric muscle force along the tendon direction (F0). The pennation projection is already included. This is not tendon failure strength or a force ceiling; do not multiply by cos(alpha) again. |
+| Meaning | Maximum isometric muscle force (F0). The pennation projection is already included. This is not tendon failure strength or a force ceiling; do not multiply by cos(alpha) again. |
 | Source value | Not established |
 | Value used in this model | 5.4070847 |
 | What changed and why | No verified source value is available for direct comparison. Force capacity was calibrated with motor inputs to improve mechanical agreement; the fit does not uniquely identify it. |
@@ -1630,7 +1630,7 @@ Each entry contains its values, units, meaning and source information. Select an
 | Object | FR_S_T7 |
 | Parameter | tendon_strain_at_max_force |
 | Unit | 1 |
-| Meaning | Tendon strain when tension equals F0, the maximum isometric muscle force along the tendon direction. |
+| Meaning | Tendon strain when tension equals F0, the maximum isometric muscle force. |
 | Source value | Not established |
 | Value used in this model | 0.04 |
 | What changed and why | No verified source value is available for direct comparison. Assumed elastic-tendon compliance; not a measured tendon strain for this animal. |
@@ -1774,7 +1774,7 @@ Each entry contains its values, units, meaning and source information. Select an
 | Object | FL_S_T8 |
 | Parameter | max_isometric_muscle_force_along_tendon_N |
 | Unit | N |
-| Meaning | Maximum isometric muscle force along the tendon direction (F0). The pennation projection is already included. This is not tendon failure strength or a force ceiling; do not multiply by cos(alpha) again. |
+| Meaning | Maximum isometric muscle force (F0). The pennation projection is already included. This is not tendon failure strength or a force ceiling; do not multiply by cos(alpha) again. |
 | Source value | Not established |
 | Value used in this model | 4.18307 |
 | What changed and why | No verified source value is available for direct comparison. Force capacity was calibrated with motor inputs to improve mechanical agreement; the fit does not uniquely identify it. |
@@ -1838,7 +1838,7 @@ Each entry contains its values, units, meaning and source information. Select an
 | Object | FL_S_T8 |
 | Parameter | tendon_strain_at_max_force |
 | Unit | 1 |
-| Meaning | Tendon strain when tension equals F0, the maximum isometric muscle force along the tendon direction. |
+| Meaning | Tendon strain when tension equals F0, the maximum isometric muscle force. |
 | Source value | Not established |
 | Value used in this model | 0.04 |
 | What changed and why | No verified source value is available for direct comparison. Assumed elastic-tendon compliance; not a measured tendon strain for this animal. |
@@ -1982,7 +1982,7 @@ Each entry contains its values, units, meaning and source information. Select an
 | Object | FR_S_T8 |
 | Parameter | max_isometric_muscle_force_along_tendon_N |
 | Unit | N |
-| Meaning | Maximum isometric muscle force along the tendon direction (F0). The pennation projection is already included. This is not tendon failure strength or a force ceiling; do not multiply by cos(alpha) again. |
+| Meaning | Maximum isometric muscle force (F0). The pennation projection is already included. This is not tendon failure strength or a force ceiling; do not multiply by cos(alpha) again. |
 | Source value | Not established |
 | Value used in this model | 4.18307 |
 | What changed and why | No verified source value is available for direct comparison. Force capacity was calibrated with motor inputs to improve mechanical agreement; the fit does not uniquely identify it. |
@@ -2046,7 +2046,7 @@ Each entry contains its values, units, meaning and source information. Select an
 | Object | FR_S_T8 |
 | Parameter | tendon_strain_at_max_force |
 | Unit | 1 |
-| Meaning | Tendon strain when tension equals F0, the maximum isometric muscle force along the tendon direction. |
+| Meaning | Tendon strain when tension equals F0, the maximum isometric muscle force. |
 | Source value | Not established |
 | Value used in this model | 0.04 |
 | What changed and why | No verified source value is available for direct comparison. Assumed elastic-tendon compliance; not a measured tendon strain for this animal. |
@@ -2190,7 +2190,7 @@ Each entry contains its values, units, meaning and source information. Select an
 | Object | FL_S_T9 |
 | Parameter | max_isometric_muscle_force_along_tendon_N |
 | Unit | N |
-| Meaning | Maximum isometric muscle force along the tendon direction (F0). The pennation projection is already included. This is not tendon failure strength or a force ceiling; do not multiply by cos(alpha) again. |
+| Meaning | Maximum isometric muscle force (F0). The pennation projection is already included. This is not tendon failure strength or a force ceiling; do not multiply by cos(alpha) again. |
 | Source value | Not established |
 | Value used in this model | 2.1512057 |
 | What changed and why | No verified source value is available for direct comparison. Force capacity was calibrated with motor inputs to improve mechanical agreement; the fit does not uniquely identify it. |
@@ -2254,7 +2254,7 @@ Each entry contains its values, units, meaning and source information. Select an
 | Object | FL_S_T9 |
 | Parameter | tendon_strain_at_max_force |
 | Unit | 1 |
-| Meaning | Tendon strain when tension equals F0, the maximum isometric muscle force along the tendon direction. |
+| Meaning | Tendon strain when tension equals F0, the maximum isometric muscle force. |
 | Source value | Not established |
 | Value used in this model | 0.04 |
 | What changed and why | No verified source value is available for direct comparison. Assumed elastic-tendon compliance; not a measured tendon strain for this animal. |
@@ -2398,7 +2398,7 @@ Each entry contains its values, units, meaning and source information. Select an
 | Object | FR_S_T9 |
 | Parameter | max_isometric_muscle_force_along_tendon_N |
 | Unit | N |
-| Meaning | Maximum isometric muscle force along the tendon direction (F0). The pennation projection is already included. This is not tendon failure strength or a force ceiling; do not multiply by cos(alpha) again. |
+| Meaning | Maximum isometric muscle force (F0). The pennation projection is already included. This is not tendon failure strength or a force ceiling; do not multiply by cos(alpha) again. |
 | Source value | Not established |
 | Value used in this model | 2.1512057 |
 | What changed and why | No verified source value is available for direct comparison. Force capacity was calibrated with motor inputs to improve mechanical agreement; the fit does not uniquely identify it. |
@@ -2462,7 +2462,7 @@ Each entry contains its values, units, meaning and source information. Select an
 | Object | FR_S_T9 |
 | Parameter | tendon_strain_at_max_force |
 | Unit | 1 |
-| Meaning | Tendon strain when tension equals F0, the maximum isometric muscle force along the tendon direction. |
+| Meaning | Tendon strain when tension equals F0, the maximum isometric muscle force. |
 | Source value | Not established |
 | Value used in this model | 0.04 |
 | What changed and why | No verified source value is available for direct comparison. Assumed elastic-tendon compliance; not a measured tendon strain for this animal. |
@@ -2606,7 +2606,7 @@ Each entry contains its values, units, meaning and source information. Select an
 | Object | FL_R_C2 |
 | Parameter | max_isometric_muscle_force_along_tendon_N |
 | Unit | N |
-| Meaning | Maximum isometric muscle force along the tendon direction (F0). The pennation projection is already included. This is not tendon failure strength or a force ceiling; do not multiply by cos(alpha) again. |
+| Meaning | Maximum isometric muscle force (F0). The pennation projection is already included. This is not tendon failure strength or a force ceiling; do not multiply by cos(alpha) again. |
 | Source value | Not established |
 | Value used in this model | 1.2077464 |
 | What changed and why | No verified source value is available for direct comparison. Force capacity was calibrated with motor inputs to improve mechanical agreement; the fit does not uniquely identify it. |
@@ -2670,7 +2670,7 @@ Each entry contains its values, units, meaning and source information. Select an
 | Object | FL_R_C2 |
 | Parameter | tendon_strain_at_max_force |
 | Unit | 1 |
-| Meaning | Tendon strain when tension equals F0, the maximum isometric muscle force along the tendon direction. |
+| Meaning | Tendon strain when tension equals F0, the maximum isometric muscle force. |
 | Source value | Not established |
 | Value used in this model | 0.04 |
 | What changed and why | No verified source value is available for direct comparison. Assumed elastic-tendon compliance; not a measured tendon strain for this animal. |
@@ -2814,7 +2814,7 @@ Each entry contains its values, units, meaning and source information. Select an
 | Object | FR_R_C2 |
 | Parameter | max_isometric_muscle_force_along_tendon_N |
 | Unit | N |
-| Meaning | Maximum isometric muscle force along the tendon direction (F0). The pennation projection is already included. This is not tendon failure strength or a force ceiling; do not multiply by cos(alpha) again. |
+| Meaning | Maximum isometric muscle force (F0). The pennation projection is already included. This is not tendon failure strength or a force ceiling; do not multiply by cos(alpha) again. |
 | Source value | Not established |
 | Value used in this model | 1.2077464 |
 | What changed and why | No verified source value is available for direct comparison. Force capacity was calibrated with motor inputs to improve mechanical agreement; the fit does not uniquely identify it. |
@@ -2878,7 +2878,7 @@ Each entry contains its values, units, meaning and source information. Select an
 | Object | FR_R_C2 |
 | Parameter | tendon_strain_at_max_force |
 | Unit | 1 |
-| Meaning | Tendon strain when tension equals F0, the maximum isometric muscle force along the tendon direction. |
+| Meaning | Tendon strain when tension equals F0, the maximum isometric muscle force. |
 | Source value | Not established |
 | Value used in this model | 0.04 |
 | What changed and why | No verified source value is available for direct comparison. Assumed elastic-tendon compliance; not a measured tendon strain for this animal. |
@@ -3022,7 +3022,7 @@ Each entry contains its values, units, meaning and source information. Select an
 | Object | FL_R_C3-7 |
 | Parameter | max_isometric_muscle_force_along_tendon_N |
 | Unit | N |
-| Meaning | Maximum isometric muscle force along the tendon direction (F0). The pennation projection is already included. This is not tendon failure strength or a force ceiling; do not multiply by cos(alpha) again. |
+| Meaning | Maximum isometric muscle force (F0). The pennation projection is already included. This is not tendon failure strength or a force ceiling; do not multiply by cos(alpha) again. |
 | Source value | Not established |
 | Value used in this model | 10.498799 |
 | What changed and why | No verified source value is available for direct comparison. Force capacity was calibrated with motor inputs to improve mechanical agreement; the fit does not uniquely identify it. |
@@ -3086,7 +3086,7 @@ Each entry contains its values, units, meaning and source information. Select an
 | Object | FL_R_C3-7 |
 | Parameter | tendon_strain_at_max_force |
 | Unit | 1 |
-| Meaning | Tendon strain when tension equals F0, the maximum isometric muscle force along the tendon direction. |
+| Meaning | Tendon strain when tension equals F0, the maximum isometric muscle force. |
 | Source value | Not established |
 | Value used in this model | 0.04 |
 | What changed and why | No verified source value is available for direct comparison. Assumed elastic-tendon compliance; not a measured tendon strain for this animal. |

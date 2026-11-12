@@ -2504,7 +2504,7 @@
   "descriptions": {
     "max_isometric_muscle_force_along_tendon_N": {
       "unit": "N",
-      "meaning": "Maximum isometric muscle force along the tendon direction (F0). The pennation projection is already included. This is not tendon failure strength or a force ceiling; do not multiply by cos(alpha) again."
+      "meaning": "Maximum isometric muscle force (F0). The pennation projection is already included. This is not tendon failure strength or a force ceiling; do not multiply by cos(alpha) again."
     },
     "optimal_fiber_length_m": {
       "unit": "m",
@@ -2520,7 +2520,7 @@
     },
     "tendon_strain_at_max_force": {
       "unit": "1",
-      "meaning": "Tendon strain when tension equals F0, the maximum isometric muscle force along the tendon direction."
+      "meaning": "Tendon strain when tension equals F0, the maximum isometric muscle force."
     },
     "max_fiber_speed_optimal_lengths_per_s": {
       "unit": "1/s",

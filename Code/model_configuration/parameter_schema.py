@@ -9,7 +9,7 @@ MUSCLE_FIELDS = {
         "muscle_params",
         2,
         "N",
-        "Maximum isometric muscle force along the tendon direction (F0). The pennation projection is already included. This is not tendon failure strength or a force ceiling; do not multiply by cos(alpha) again.",
+        "Maximum isometric muscle force (F0). The pennation projection is already included. This is not tendon failure strength or a force ceiling; do not multiply by cos(alpha) again.",
     ),
     "optimal_fiber_length_m": (
         "lopt",
@@ -28,7 +28,7 @@ MUSCLE_FIELDS = {
         "e0",
         None,
         "1",
-        "Tendon strain when tension equals F0, the maximum isometric muscle force along the tendon direction.",
+        "Tendon strain when tension equals F0, the maximum isometric muscle force.",
     ),
     "max_fiber_speed_optimal_lengths_per_s": (
         "muscle_params",

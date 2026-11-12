@@ -6,7 +6,7 @@
 
 **Excitation is a command; activation is a dynamic state; tendon force is a mechanical result.** Force depends on activation, fiber length and velocity, tendon stretch, pennation and muscle parameters. The same excitation need not produce the same force when the limb is in a different mechanical state.
 
-F0 is the **maximum isometric muscle force along the tendon direction** (N): the active reference force at full activation, optimal fiber length and zero fiber velocity, including the constant pennation projection. It is not tendon failure strength or a ceiling on total tendon tension. The tendon transmits force through elastic stretch. The parameter `max_isometric_muscle_force_along_tendon_N` stores this value; do not apply the pennation cosine again.
+F0 is the **maximum isometric muscle force** (N): the active reference force at full activation, optimal fiber length and zero fiber velocity, including the constant pennation projection. It is not tendon failure strength or a ceiling on total tendon tension. The tendon transmits force through elastic stretch. The parameter `max_isometric_muscle_force_along_tendon_N` stores this value; do not apply the pennation cosine again.
 
 ## The elements actually used in this analysis
 
@@ -57,7 +57,7 @@ The resulting tendon force acts along the muscle path. Its moment arms convert i
 | Pennation and geometry | The fiber makes a constant angle α with the tendon axis. LMT = lf cos α + lT. Whole MT length comes from origin/insertion, via/wrap paths and a fixed length offset. | cos α, ΔL and attachment/routing geometry; q is the current skeletal configuration. |
 | Initial state and integration | a(0) and lf(0) initialize the muscle once. A backward-Euler fiber-velocity estimate and safeguarded force-equilibrium solve update fiber length. | Initial activation, fiber length, mechanical time step and numerical tolerances. |
 
-**Two implementation details:** Passive fiber force is ON in all channels. It can nevertheless be zero when a fiber is shorter than its passive stretch threshold. The tendon is elastic in all channels. Also, F0 is the maximum isometric muscle force along the tendon direction; applying an additional cos α factor to the force would double-project it. The implementation uses α in the length partition and holds it constant.
+**Two implementation details:** Passive fiber force is ON in all channels. It can nevertheless be zero when a fiber is shorter than its passive stretch threshold. The tendon is elastic in all channels. Also, F0 is the maximum isometric muscle force; applying an additional cos α factor to the force would double-project it. The implementation uses α in the length partition and holds it constant.
 
 ## Passive fiber force and its sources
 
@@ -152,7 +152,7 @@ Code: [muscle_force_length_velocity.py](../Code/neuromechanics/muscle_force_leng
 
 ![Equation 9: Passive fiber force](Figures_and_Videos/Equations/method_09_passive_fiber_force.svg)
 
-f_PE: passive tension normalized by maximum isometric muscle force along the tendon direction F0; lambda = l_f/l_opt is normalized fiber length, dimensionless. All 104 current channels (28 hindlimb and 76 forelimb) have passive_fiber_enabled = 1. The branch contributes zero when lambda <= 1 and positive tension when lambda > 1. Published coefficients 0.0075 and 11.6 are from Prilutsky et al. (2016), Table 10.3, and Rahmati et al. (2025), Table 3. Rectification to prevent compression and the exponent cap of 50 are implementation adaptations. The same normalized law is extended to added toe/girdle channels; this is not a measurement of each channel's passive force curve. F_PE = F0 f_PE is included inside fiber/tendon equilibrium.
+f_PE: passive tension normalized by maximum isometric muscle force F0; lambda = l_f/l_opt is normalized fiber length, dimensionless. All 104 current channels (28 hindlimb and 76 forelimb) have passive_fiber_enabled = 1. The branch contributes zero when lambda <= 1 and positive tension when lambda > 1. Published coefficients 0.0075 and 11.6 are from Prilutsky et al. (2016), Table 10.3, and Rahmati et al. (2025), Table 3. Rectification to prevent compression and the exponent cap of 50 are implementation adaptations. The same normalized law is extended to added toe/girdle channels; this is not a measurement of each channel's passive force curve. F_PE = F0 f_PE is included inside fiber/tendon equilibrium.
 
 Code: [muscle_force_length_velocity.py](../Code/neuromechanics/muscle_force_length_velocity.py).
 
@@ -162,7 +162,7 @@ Code: [muscle_force_length_velocity.py](../Code/neuromechanics/muscle_force_leng
 
 ![Equation 10: Elastic tendon law](Figures_and_Videos/Equations/method_10_elastic_tendon_law.svg)
 
-ε: tendon strain; l_T: tendon length (m); l_s: slack tendon length (m); f_T: normalized tension; ε₀: strain at maximum isometric muscle force along the tendon direction; ε_toe: toe-region transition strain; k = 3: exponential toe curvature. This custom exponential-to-linear tendon law is an implementation assumption, not an identified tendon law for every cat muscle.
+ε: tendon strain; l_T: tendon length (m); l_s: slack tendon length (m); f_T: normalized tension; ε₀: strain at maximum isometric muscle force; ε_toe: toe-region transition strain; k = 3: exponential toe curvature. This custom exponential-to-linear tendon law is an implementation assumption, not an identified tendon law for every cat muscle.
 
 Code: [elastic_tendon_force.py](../Code/neuromechanics/elastic_tendon_force.py).
 
@@ -170,7 +170,7 @@ Code: [elastic_tendon_force.py](../Code/neuromechanics/elastic_tendon_force.py).
 
 ![Equation 11: Continuous tendon transition](Figures_and_Videos/Equations/method_11_continuous_tendon_transition.svg)
 
-ε_toe and ε₀: dimensionless strains; k: toe curvature; F_T: tendon tension (N); F₀: maximum isometric muscle force along the tendon direction (N). This choice makes force and slope continuous at the transition and gives f_T(ε₀)=1. Do not multiply F₀ by cos α again.
+ε_toe and ε₀: dimensionless strains; k: toe curvature; F_T: tendon tension (N); F₀: maximum isometric muscle force (N). This choice makes force and slope continuous at the transition and gives f_T(ε₀)=1. Do not multiply F₀ by cos α again.
 
 Code: [elastic_tendon_transition.py](../Code/neuromechanics/elastic_tendon_transition.py).
 

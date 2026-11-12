@@ -8,7 +8,7 @@
 
 ![Published passive law, included inside the forward solve](Figures_and_Videos/Equations/passive_fiber_mechanics_01.svg)
 
-F_PE,i is the passive fiber contribution projected along the tendon (N); F0,i is the already maximum isometric muscle force along the tendon direction (N); l_f,i is current fiber length (m); l_opt,i is optimal fiber length (m); λ_i is their dimensionless ratio. The operator [x]+ means max(0,x). The constants 0.0075 and 11.6 are dimensionless published curve coefficients. The cap 50 is numerical protection. Rectification to tension only and extension of the common curve to added channels are explicit assumptions.
+F_PE,i is the passive fiber contribution projected along the tendon (N); F0,i is the already maximum isometric muscle force (N); l_f,i is current fiber length (m); l_opt,i is optimal fiber length (m); λ_i is their dimensionless ratio. The operator [x]+ means max(0,x). The constants 0.0075 and 11.6 are dimensionless published curve coefficients. The cap 50 is numerical protection. Rectification to tension only and extension of the common curve to added channels are explicit assumptions.
 
 Sources: [Prilutsky, Klishko, Weber & Lemay (2016), Table 10.3](https://doi.org/10.1007/978-1-4939-3267-2_10); [Rahmati et al. (2025), Table 3](https://doi.org/10.1113/JP287448). The same passive coefficients appear in both. The current elastic-tendon, constant-pennation implementation is an adaptation; it is not an exact reproduction of either complete published model.
 
