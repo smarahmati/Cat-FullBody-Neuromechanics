@@ -4,26 +4,214 @@
 
 [Back to parameter guide](../parameter_tables.md)
 
-| Object | Applied initial value |
+Each entry contains its values, units, meaning and source information. Select an entry to read all fields.
+
+<details>
+<summary>pelvis_x · {&quot;position&quot;: -0.0016605907104320062, &quot;velocity&quot;: 0.5896716440202299}</summary>
+
+| Field | Value |
 | --- | --- |
-| pelvis_x | {"position": -0.0016605907104320062, "velocity": 0.5896716440202299} |
-| pelvis_z | {"position": 0.24034790103064763, "velocity": 0.05644286874902876} |
-| pelvis_pitch | {"position": -0.034333468282376385, "velocity": 0.5858178223551215} |
-| L_hip | {"position": -2.1237244682504213, "velocity": 4.446632657899646} |
-| L_knee | {"position": -1.059531573168122, "velocity": -4.901043556523409} |
-| L_ankle | {"position": 0.7177408308002169, "velocity": 3.356027574501965} |
-| L_mtp | {"position": 0.29178061698209234, "velocity": -13.230841038033809} |
-| R_hip | {"position": -1.426348210546515, "velocity": -2.0305015893898277} |
-| R_knee | {"position": -1.1033795584553152, "velocity": -0.3231637352584178} |
-| R_ankle | {"position": 1.1211556910765406, "velocity": 0.9628708869811939} |
-| R_mtp | {"position": 0.6045106857649141, "velocity": 2.0034207680353138} |
-| FL_scapulothoracic | {"position": -0.17779235701957485, "velocity": -0.9666705305778671} |
-| FL_shoulder | {"position": -1.2990606327736818, "velocity": 0.04538696601418049} |
-| FL_elbow | {"position": 1.067536811716204, "velocity": -2.3162794999980707} |
-| FL_wrist | {"position": 0.21600753283194274, "velocity": 1.4298443021477187} |
-| FL_mcp | {"position": 0.92721934858565, "velocity": 0.7654715641338913} |
-| FR_scapulothoracic | {"position": 0.24696476144589172, "velocity": 2.547182486139318} |
-| FR_shoulder | {"position": -1.028708257103752, "velocity": 3.5366237873234567} |
-| FR_elbow | {"position": 1.3264408126959961, "velocity": -6.63028478727643} |
-| FR_wrist | {"position": -0.3427283209852044, "velocity": 6.783399086600686} |
-| FR_mcp | {"position": 0.16549837029775155, "velocity": 5.667870111285021} |
+| Object | pelvis_x |
+| Applied initial value | {"position": -0.0016605907104320062, "velocity": 0.5896716440202299} |
+
+</details>
+
+<details>
+<summary>pelvis_z · {&quot;position&quot;: 0.24034790103064763, &quot;velocity&quot;: 0.05644286874902876}</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | pelvis_z |
+| Applied initial value | {"position": 0.24034790103064763, "velocity": 0.05644286874902876} |
+
+</details>
+
+<details>
+<summary>pelvis_pitch · {&quot;position&quot;: -0.034333468282376385, &quot;velocity&quot;: 0.5858178223551215}</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | pelvis_pitch |
+| Applied initial value | {"position": -0.034333468282376385, "velocity": 0.5858178223551215} |
+
+</details>
+
+<details>
+<summary>L_hip · {&quot;position&quot;: -2.1237244682504213, &quot;velocity&quot;: 4.446632657899646}</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | L_hip |
+| Applied initial value | {"position": -2.1237244682504213, "velocity": 4.446632657899646} |
+
+</details>
+
+<details>
+<summary>L_knee · {&quot;position&quot;: -1.059531573168122, &quot;velocity&quot;: -4.901043556523409}</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | L_knee |
+| Applied initial value | {"position": -1.059531573168122, "velocity": -4.901043556523409} |
+
+</details>
+
+<details>
+<summary>L_ankle · {&quot;position&quot;: 0.7177408308002169, &quot;velocity&quot;: 3.356027574501965}</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | L_ankle |
+| Applied initial value | {"position": 0.7177408308002169, "velocity": 3.356027574501965} |
+
+</details>
+
+<details>
+<summary>L_mtp · {&quot;position&quot;: 0.29178061698209234, &quot;velocity&quot;: -13.230841038033809}</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | L_mtp |
+| Applied initial value | {"position": 0.29178061698209234, "velocity": -13.230841038033809} |
+
+</details>
+
+<details>
+<summary>R_hip · {&quot;position&quot;: -1.426348210546515, &quot;velocity&quot;: -2.0305015893898277}</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | R_hip |
+| Applied initial value | {"position": -1.426348210546515, "velocity": -2.0305015893898277} |
+
+</details>
+
+<details>
+<summary>R_knee · {&quot;position&quot;: -1.1033795584553152, &quot;velocity&quot;: -0.3231637352584178}</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | R_knee |
+| Applied initial value | {"position": -1.1033795584553152, "velocity": -0.3231637352584178} |
+
+</details>
+
+<details>
+<summary>R_ankle · {&quot;position&quot;: 1.1211556910765406, &quot;velocity&quot;: 0.9628708869811939}</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | R_ankle |
+| Applied initial value | {"position": 1.1211556910765406, "velocity": 0.9628708869811939} |
+
+</details>
+
+<details>
+<summary>R_mtp · {&quot;position&quot;: 0.6045106857649141, &quot;velocity&quot;: 2.0034207680353138}</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | R_mtp |
+| Applied initial value | {"position": 0.6045106857649141, "velocity": 2.0034207680353138} |
+
+</details>
+
+<details>
+<summary>FL_scapulothoracic · {&quot;position&quot;: -0.17779235701957485, &quot;velocity&quot;: -0.9666705305778671}</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_scapulothoracic |
+| Applied initial value | {"position": -0.17779235701957485, "velocity": -0.9666705305778671} |
+
+</details>
+
+<details>
+<summary>FL_shoulder · {&quot;position&quot;: -1.2990606327736818, &quot;velocity&quot;: 0.04538696601418049}</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_shoulder |
+| Applied initial value | {"position": -1.2990606327736818, "velocity": 0.04538696601418049} |
+
+</details>
+
+<details>
+<summary>FL_elbow · {&quot;position&quot;: 1.067536811716204, &quot;velocity&quot;: -2.3162794999980707}</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_elbow |
+| Applied initial value | {"position": 1.067536811716204, "velocity": -2.3162794999980707} |
+
+</details>
+
+<details>
+<summary>FL_wrist · {&quot;position&quot;: 0.21600753283194274, &quot;velocity&quot;: 1.4298443021477187}</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_wrist |
+| Applied initial value | {"position": 0.21600753283194274, "velocity": 1.4298443021477187} |
+
+</details>
+
+<details>
+<summary>FL_mcp · {&quot;position&quot;: 0.92721934858565, &quot;velocity&quot;: 0.7654715641338913}</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_mcp |
+| Applied initial value | {"position": 0.92721934858565, "velocity": 0.7654715641338913} |
+
+</details>
+
+<details>
+<summary>FR_scapulothoracic · {&quot;position&quot;: 0.24696476144589172, &quot;velocity&quot;: 2.547182486139318}</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FR_scapulothoracic |
+| Applied initial value | {"position": 0.24696476144589172, "velocity": 2.547182486139318} |
+
+</details>
+
+<details>
+<summary>FR_shoulder · {&quot;position&quot;: -1.028708257103752, &quot;velocity&quot;: 3.5366237873234567}</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FR_shoulder |
+| Applied initial value | {"position": -1.028708257103752, "velocity": 3.5366237873234567} |
+
+</details>
+
+<details>
+<summary>FR_elbow · {&quot;position&quot;: 1.3264408126959961, &quot;velocity&quot;: -6.63028478727643}</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FR_elbow |
+| Applied initial value | {"position": 1.3264408126959961, "velocity": -6.63028478727643} |
+
+</details>
+
+<details>
+<summary>FR_wrist · {&quot;position&quot;: -0.3427283209852044, &quot;velocity&quot;: 6.783399086600686}</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FR_wrist |
+| Applied initial value | {"position": -0.3427283209852044, "velocity": 6.783399086600686} |
+
+</details>
+
+<details>
+<summary>FR_mcp · {&quot;position&quot;: 0.16549837029775155, &quot;velocity&quot;: 5.667870111285021}</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FR_mcp |
+| Applied initial value | {"position": 0.16549837029775155, "velocity": 5.667870111285021} |
+
+</details>

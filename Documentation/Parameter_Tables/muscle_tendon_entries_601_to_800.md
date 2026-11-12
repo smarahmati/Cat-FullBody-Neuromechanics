@@ -4,205 +4,3204 @@
 
 [Back to parameter guide](../parameter_tables.md)
 
-| Object | Parameter | Unit | Meaning | Source value | Value used in this model | What changed and why | Source / evidence |
-| --- | --- | --- | --- | --- | --- | --- | --- |
-| FL_S_C3 | tendon_slack_length_m | m | Unloaded series tendon length. | Not established | 0.012162708 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | No verified one-to-one numerical source is established for this added channel. Applied estimates are in Data/Model_Parameters/muscle_tendon.py; anatomical source records are in Data/Original_Study_Data/additional_muscles/. |
-| FL_S_C3 | pennation_cosine | 1 | Cosine of the constant fiber-to-tendon pennation angle. | Not established | 1 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | No verified one-to-one numerical source is established for this added channel. Applied estimates are in Data/Model_Parameters/muscle_tendon.py; anatomical source records are in Data/Original_Study_Data/additional_muscles/. |
-| FL_S_C3 | tendon_strain_at_max_force | 1 | Tendon extension/slack length at one maximum isometric tendon force. | Not established | 0.04 | No verified source value is available for direct comparison. Assumed elastic-tendon compliance; not a measured tendon strain for this animal. | No verified one-to-one numerical source is established for this added channel. Applied estimates are in Data/Model_Parameters/muscle_tendon.py; anatomical source records are in Data/Original_Study_Data/additional_muscles/. |
-| FL_S_C3 | max_fiber_speed_optimal_lengths_per_s | 1/s | Positive maximum-shortening speed magnitude, measured in optimal fiber lengths per second. | Not established | 9.4339623 | No verified source value is available for direct comparison. Fiber length and shortening speed were calibrated to set the force-length and force-velocity operating ranges. Physical maximum fiber speed is optimal_fiber_length_m multiplied by max_fiber_speed_optimal_lengths_per_s. The source and applied numbers are given in this row; these are not new tissue measurements. | No verified one-to-one numerical source is established for this added channel. Applied estimates are in Data/Model_Parameters/muscle_tendon.py; anatomical source records are in Data/Original_Study_Data/additional_muscles/. |
-| FL_S_C3 | normalized_fiber_damping | 1 | Coefficient of normalized fiber velocity in the normalized tendon-direction force balance. | Not established | 0.0097301664 | No verified source value is available for direct comparison. Effective muscle force-balance coefficient; source-law conversion and calibration are described in the methods. | No verified one-to-one numerical source is established for this added channel. Applied estimates are in Data/Model_Parameters/muscle_tendon.py; anatomical source records are in Data/Original_Study_Data/additional_muscles/. |
-| FL_S_C3 | MT_path_length_offset_m | m | Constant offset added to the routed path to define muscle-tendon length. | Not established | 0 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | No verified one-to-one numerical source is established for this added channel. Applied estimates are in Data/Model_Parameters/muscle_tendon.py; anatomical source records are in Data/Original_Study_Data/additional_muscles/. |
-| FL_S_C3 | active_force_length_exponent | 1 | Exponent rho in the source active force-length curve. | Not established | 3 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | No verified one-to-one numerical source is established for this added channel. Applied estimates are in Data/Model_Parameters/muscle_tendon.py; anatomical source records are in Data/Original_Study_Data/additional_muscles/. |
-| FL_S_C3 | source_shortening_curvature | 1 | Source shortening-curve coefficient; inactive when De Groote force-velocity mode is selected. | Not established | 0.45283 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | No verified one-to-one numerical source is established for this added channel. Applied estimates are in Data/Model_Parameters/muscle_tendon.py; anatomical source records are in Data/Original_Study_Data/additional_muscles/. |
-| FL_S_C3 | source_lengthening_curvature | 1 | Source lengthening-curve coefficient; inactive when De Groote force-velocity mode is selected. | Not established | 0.37057762 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | No verified one-to-one numerical source is established for this added channel. Applied estimates are in Data/Model_Parameters/muscle_tendon.py; anatomical source records are in Data/Original_Study_Data/additional_muscles/. |
-| FL_S_C3 | passive_fiber_enabled | 0/1 | 1 enables passive fiber tension within the elastic equilibrium; zero force below l_f/l_opt=1 does not mean it is disabled. | Not established | 1 | No verified source value is available for direct comparison. The published passive force-length law is included in every muscle channel. Its coefficients are from Prilutsky et al. (2016), Table 10.3, and Rahmati et al. (2025), Table 3. Applying the same normalized law to added muscle channels is a modeling assumption. | Published parallel elastic architecture: Prilutsky et al. 2016 Table 10.3 (10.1007/978-1-4939-3267-2_10); Rahmati et al. 2025 Table 3 (10.1113/JP287448). Common normalized curve extended to all model channels; no muscle-specific passive calibration is claimed. |
-| FL_S_C3 | degroote_force_velocity_enabled | 0/1 | 1 uses the documented De Groote/OpenSim velocity curve; 0 uses the source curve. | Not established | 1 | No verified source value is available for direct comparison. Model-law choice: 1 enables the smooth De Groote force-velocity relation; 0 selects the alternative implemented law. | No verified one-to-one numerical source is established for this added channel. Applied estimates are in Data/Model_Parameters/muscle_tendon.py; anatomical source records are in Data/Original_Study_Data/additional_muscles/. |
-| FR_S_C3 | max_isometric_tendon_force_N | N | Maximum isometric force projected along the tendon; do not multiply by pennation cosine twice. | Not established | 3.8436556 | No verified source value is available for direct comparison. Force capacity was calibrated with motor inputs to improve mechanical agreement; the fit does not uniquely identify it. | No verified one-to-one numerical source is established for this added channel. Applied estimates are in Data/Model_Parameters/muscle_tendon.py; anatomical source records are in Data/Original_Study_Data/additional_muscles/. |
-| FR_S_C3 | optimal_fiber_length_m | m | Optimal fascicle/fiber length, not whole muscle-tendon length. | Not established | 0.051569882 | No verified source value is available for direct comparison. Fiber length and shortening speed were calibrated to set the force-length and force-velocity operating ranges. Physical maximum fiber speed is optimal_fiber_length_m multiplied by max_fiber_speed_optimal_lengths_per_s. The source and applied numbers are given in this row; these are not new tissue measurements. | No verified one-to-one numerical source is established for this added channel. Applied estimates are in Data/Model_Parameters/muscle_tendon.py; anatomical source records are in Data/Original_Study_Data/additional_muscles/. |
-| FR_S_C3 | tendon_slack_length_m | m | Unloaded series tendon length. | Not established | 0.012162708 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | No verified one-to-one numerical source is established for this added channel. Applied estimates are in Data/Model_Parameters/muscle_tendon.py; anatomical source records are in Data/Original_Study_Data/additional_muscles/. |
-| FR_S_C3 | pennation_cosine | 1 | Cosine of the constant fiber-to-tendon pennation angle. | Not established | 1 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | No verified one-to-one numerical source is established for this added channel. Applied estimates are in Data/Model_Parameters/muscle_tendon.py; anatomical source records are in Data/Original_Study_Data/additional_muscles/. |
-| FR_S_C3 | tendon_strain_at_max_force | 1 | Tendon extension/slack length at one maximum isometric tendon force. | Not established | 0.04 | No verified source value is available for direct comparison. Assumed elastic-tendon compliance; not a measured tendon strain for this animal. | No verified one-to-one numerical source is established for this added channel. Applied estimates are in Data/Model_Parameters/muscle_tendon.py; anatomical source records are in Data/Original_Study_Data/additional_muscles/. |
-| FR_S_C3 | max_fiber_speed_optimal_lengths_per_s | 1/s | Positive maximum-shortening speed magnitude, measured in optimal fiber lengths per second. | Not established | 9.4339623 | No verified source value is available for direct comparison. Fiber length and shortening speed were calibrated to set the force-length and force-velocity operating ranges. Physical maximum fiber speed is optimal_fiber_length_m multiplied by max_fiber_speed_optimal_lengths_per_s. The source and applied numbers are given in this row; these are not new tissue measurements. | No verified one-to-one numerical source is established for this added channel. Applied estimates are in Data/Model_Parameters/muscle_tendon.py; anatomical source records are in Data/Original_Study_Data/additional_muscles/. |
-| FR_S_C3 | normalized_fiber_damping | 1 | Coefficient of normalized fiber velocity in the normalized tendon-direction force balance. | Not established | 0.0097301664 | No verified source value is available for direct comparison. Effective muscle force-balance coefficient; source-law conversion and calibration are described in the methods. | No verified one-to-one numerical source is established for this added channel. Applied estimates are in Data/Model_Parameters/muscle_tendon.py; anatomical source records are in Data/Original_Study_Data/additional_muscles/. |
-| FR_S_C3 | MT_path_length_offset_m | m | Constant offset added to the routed path to define muscle-tendon length. | Not established | 0 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | No verified one-to-one numerical source is established for this added channel. Applied estimates are in Data/Model_Parameters/muscle_tendon.py; anatomical source records are in Data/Original_Study_Data/additional_muscles/. |
-| FR_S_C3 | active_force_length_exponent | 1 | Exponent rho in the source active force-length curve. | Not established | 3 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | No verified one-to-one numerical source is established for this added channel. Applied estimates are in Data/Model_Parameters/muscle_tendon.py; anatomical source records are in Data/Original_Study_Data/additional_muscles/. |
-| FR_S_C3 | source_shortening_curvature | 1 | Source shortening-curve coefficient; inactive when De Groote force-velocity mode is selected. | Not established | 0.45283 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | No verified one-to-one numerical source is established for this added channel. Applied estimates are in Data/Model_Parameters/muscle_tendon.py; anatomical source records are in Data/Original_Study_Data/additional_muscles/. |
-| FR_S_C3 | source_lengthening_curvature | 1 | Source lengthening-curve coefficient; inactive when De Groote force-velocity mode is selected. | Not established | 0.37057762 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | No verified one-to-one numerical source is established for this added channel. Applied estimates are in Data/Model_Parameters/muscle_tendon.py; anatomical source records are in Data/Original_Study_Data/additional_muscles/. |
-| FR_S_C3 | passive_fiber_enabled | 0/1 | 1 enables passive fiber tension within the elastic equilibrium; zero force below l_f/l_opt=1 does not mean it is disabled. | Not established | 1 | No verified source value is available for direct comparison. The published passive force-length law is included in every muscle channel. Its coefficients are from Prilutsky et al. (2016), Table 10.3, and Rahmati et al. (2025), Table 3. Applying the same normalized law to added muscle channels is a modeling assumption. | Published parallel elastic architecture: Prilutsky et al. 2016 Table 10.3 (10.1007/978-1-4939-3267-2_10); Rahmati et al. 2025 Table 3 (10.1113/JP287448). Common normalized curve extended to all model channels; no muscle-specific passive calibration is claimed. |
-| FR_S_C3 | degroote_force_velocity_enabled | 0/1 | 1 uses the documented De Groote/OpenSim velocity curve; 0 uses the source curve. | Not established | 1 | No verified source value is available for direct comparison. Model-law choice: 1 enables the smooth De Groote force-velocity relation; 0 selects the alternative implemented law. | No verified one-to-one numerical source is established for this added channel. Applied estimates are in Data/Model_Parameters/muscle_tendon.py; anatomical source records are in Data/Original_Study_Data/additional_muscles/. |
-| FL_S_C4 | max_isometric_tendon_force_N | N | Maximum isometric force projected along the tendon; do not multiply by pennation cosine twice. | Not established | 4.1050061 | No verified source value is available for direct comparison. Force capacity was calibrated with motor inputs to improve mechanical agreement; the fit does not uniquely identify it. | No verified one-to-one numerical source is established for this added channel. Applied estimates are in Data/Model_Parameters/muscle_tendon.py; anatomical source records are in Data/Original_Study_Data/additional_muscles/. |
-| FL_S_C4 | optimal_fiber_length_m | m | Optimal fascicle/fiber length, not whole muscle-tendon length. | Not established | 0.046113183 | No verified source value is available for direct comparison. Fiber length and shortening speed were calibrated to set the force-length and force-velocity operating ranges. Physical maximum fiber speed is optimal_fiber_length_m multiplied by max_fiber_speed_optimal_lengths_per_s. The source and applied numbers are given in this row; these are not new tissue measurements. | No verified one-to-one numerical source is established for this added channel. Applied estimates are in Data/Model_Parameters/muscle_tendon.py; anatomical source records are in Data/Original_Study_Data/additional_muscles/. |
-| FL_S_C4 | tendon_slack_length_m | m | Unloaded series tendon length. | Not established | 0.010875751 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | No verified one-to-one numerical source is established for this added channel. Applied estimates are in Data/Model_Parameters/muscle_tendon.py; anatomical source records are in Data/Original_Study_Data/additional_muscles/. |
-| FL_S_C4 | pennation_cosine | 1 | Cosine of the constant fiber-to-tendon pennation angle. | Not established | 1 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | No verified one-to-one numerical source is established for this added channel. Applied estimates are in Data/Model_Parameters/muscle_tendon.py; anatomical source records are in Data/Original_Study_Data/additional_muscles/. |
-| FL_S_C4 | tendon_strain_at_max_force | 1 | Tendon extension/slack length at one maximum isometric tendon force. | Not established | 0.04 | No verified source value is available for direct comparison. Assumed elastic-tendon compliance; not a measured tendon strain for this animal. | No verified one-to-one numerical source is established for this added channel. Applied estimates are in Data/Model_Parameters/muscle_tendon.py; anatomical source records are in Data/Original_Study_Data/additional_muscles/. |
-| FL_S_C4 | max_fiber_speed_optimal_lengths_per_s | 1/s | Positive maximum-shortening speed magnitude, measured in optimal fiber lengths per second. | Not established | 9.4339623 | No verified source value is available for direct comparison. Fiber length and shortening speed were calibrated to set the force-length and force-velocity operating ranges. Physical maximum fiber speed is optimal_fiber_length_m multiplied by max_fiber_speed_optimal_lengths_per_s. The source and applied numbers are given in this row; these are not new tissue measurements. | No verified one-to-one numerical source is established for this added channel. Applied estimates are in Data/Model_Parameters/muscle_tendon.py; anatomical source records are in Data/Original_Study_Data/additional_muscles/. |
-| FL_S_C4 | normalized_fiber_damping | 1 | Coefficient of normalized fiber velocity in the normalized tendon-direction force balance. | Not established | 0.0087006006 | No verified source value is available for direct comparison. Effective muscle force-balance coefficient; source-law conversion and calibration are described in the methods. | No verified one-to-one numerical source is established for this added channel. Applied estimates are in Data/Model_Parameters/muscle_tendon.py; anatomical source records are in Data/Original_Study_Data/additional_muscles/. |
-| FL_S_C4 | MT_path_length_offset_m | m | Constant offset added to the routed path to define muscle-tendon length. | Not established | 0 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | No verified one-to-one numerical source is established for this added channel. Applied estimates are in Data/Model_Parameters/muscle_tendon.py; anatomical source records are in Data/Original_Study_Data/additional_muscles/. |
-| FL_S_C4 | active_force_length_exponent | 1 | Exponent rho in the source active force-length curve. | Not established | 3 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | No verified one-to-one numerical source is established for this added channel. Applied estimates are in Data/Model_Parameters/muscle_tendon.py; anatomical source records are in Data/Original_Study_Data/additional_muscles/. |
-| FL_S_C4 | source_shortening_curvature | 1 | Source shortening-curve coefficient; inactive when De Groote force-velocity mode is selected. | Not established | 0.45283 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | No verified one-to-one numerical source is established for this added channel. Applied estimates are in Data/Model_Parameters/muscle_tendon.py; anatomical source records are in Data/Original_Study_Data/additional_muscles/. |
-| FL_S_C4 | source_lengthening_curvature | 1 | Source lengthening-curve coefficient; inactive when De Groote force-velocity mode is selected. | Not established | 0.35752841 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | No verified one-to-one numerical source is established for this added channel. Applied estimates are in Data/Model_Parameters/muscle_tendon.py; anatomical source records are in Data/Original_Study_Data/additional_muscles/. |
-| FL_S_C4 | passive_fiber_enabled | 0/1 | 1 enables passive fiber tension within the elastic equilibrium; zero force below l_f/l_opt=1 does not mean it is disabled. | Not established | 1 | No verified source value is available for direct comparison. The published passive force-length law is included in every muscle channel. Its coefficients are from Prilutsky et al. (2016), Table 10.3, and Rahmati et al. (2025), Table 3. Applying the same normalized law to added muscle channels is a modeling assumption. | Published parallel elastic architecture: Prilutsky et al. 2016 Table 10.3 (10.1007/978-1-4939-3267-2_10); Rahmati et al. 2025 Table 3 (10.1113/JP287448). Common normalized curve extended to all model channels; no muscle-specific passive calibration is claimed. |
-| FL_S_C4 | degroote_force_velocity_enabled | 0/1 | 1 uses the documented De Groote/OpenSim velocity curve; 0 uses the source curve. | Not established | 1 | No verified source value is available for direct comparison. Model-law choice: 1 enables the smooth De Groote force-velocity relation; 0 selects the alternative implemented law. | No verified one-to-one numerical source is established for this added channel. Applied estimates are in Data/Model_Parameters/muscle_tendon.py; anatomical source records are in Data/Original_Study_Data/additional_muscles/. |
-| FR_S_C4 | max_isometric_tendon_force_N | N | Maximum isometric force projected along the tendon; do not multiply by pennation cosine twice. | Not established | 4.1050061 | No verified source value is available for direct comparison. Force capacity was calibrated with motor inputs to improve mechanical agreement; the fit does not uniquely identify it. | No verified one-to-one numerical source is established for this added channel. Applied estimates are in Data/Model_Parameters/muscle_tendon.py; anatomical source records are in Data/Original_Study_Data/additional_muscles/. |
-| FR_S_C4 | optimal_fiber_length_m | m | Optimal fascicle/fiber length, not whole muscle-tendon length. | Not established | 0.046113183 | No verified source value is available for direct comparison. Fiber length and shortening speed were calibrated to set the force-length and force-velocity operating ranges. Physical maximum fiber speed is optimal_fiber_length_m multiplied by max_fiber_speed_optimal_lengths_per_s. The source and applied numbers are given in this row; these are not new tissue measurements. | No verified one-to-one numerical source is established for this added channel. Applied estimates are in Data/Model_Parameters/muscle_tendon.py; anatomical source records are in Data/Original_Study_Data/additional_muscles/. |
-| FR_S_C4 | tendon_slack_length_m | m | Unloaded series tendon length. | Not established | 0.010875751 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | No verified one-to-one numerical source is established for this added channel. Applied estimates are in Data/Model_Parameters/muscle_tendon.py; anatomical source records are in Data/Original_Study_Data/additional_muscles/. |
-| FR_S_C4 | pennation_cosine | 1 | Cosine of the constant fiber-to-tendon pennation angle. | Not established | 1 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | No verified one-to-one numerical source is established for this added channel. Applied estimates are in Data/Model_Parameters/muscle_tendon.py; anatomical source records are in Data/Original_Study_Data/additional_muscles/. |
-| FR_S_C4 | tendon_strain_at_max_force | 1 | Tendon extension/slack length at one maximum isometric tendon force. | Not established | 0.04 | No verified source value is available for direct comparison. Assumed elastic-tendon compliance; not a measured tendon strain for this animal. | No verified one-to-one numerical source is established for this added channel. Applied estimates are in Data/Model_Parameters/muscle_tendon.py; anatomical source records are in Data/Original_Study_Data/additional_muscles/. |
-| FR_S_C4 | max_fiber_speed_optimal_lengths_per_s | 1/s | Positive maximum-shortening speed magnitude, measured in optimal fiber lengths per second. | Not established | 9.4339623 | No verified source value is available for direct comparison. Fiber length and shortening speed were calibrated to set the force-length and force-velocity operating ranges. Physical maximum fiber speed is optimal_fiber_length_m multiplied by max_fiber_speed_optimal_lengths_per_s. The source and applied numbers are given in this row; these are not new tissue measurements. | No verified one-to-one numerical source is established for this added channel. Applied estimates are in Data/Model_Parameters/muscle_tendon.py; anatomical source records are in Data/Original_Study_Data/additional_muscles/. |
-| FR_S_C4 | normalized_fiber_damping | 1 | Coefficient of normalized fiber velocity in the normalized tendon-direction force balance. | Not established | 0.0087006006 | No verified source value is available for direct comparison. Effective muscle force-balance coefficient; source-law conversion and calibration are described in the methods. | No verified one-to-one numerical source is established for this added channel. Applied estimates are in Data/Model_Parameters/muscle_tendon.py; anatomical source records are in Data/Original_Study_Data/additional_muscles/. |
-| FR_S_C4 | MT_path_length_offset_m | m | Constant offset added to the routed path to define muscle-tendon length. | Not established | 0 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | No verified one-to-one numerical source is established for this added channel. Applied estimates are in Data/Model_Parameters/muscle_tendon.py; anatomical source records are in Data/Original_Study_Data/additional_muscles/. |
-| FR_S_C4 | active_force_length_exponent | 1 | Exponent rho in the source active force-length curve. | Not established | 3 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | No verified one-to-one numerical source is established for this added channel. Applied estimates are in Data/Model_Parameters/muscle_tendon.py; anatomical source records are in Data/Original_Study_Data/additional_muscles/. |
-| FR_S_C4 | source_shortening_curvature | 1 | Source shortening-curve coefficient; inactive when De Groote force-velocity mode is selected. | Not established | 0.45283 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | No verified one-to-one numerical source is established for this added channel. Applied estimates are in Data/Model_Parameters/muscle_tendon.py; anatomical source records are in Data/Original_Study_Data/additional_muscles/. |
-| FR_S_C4 | source_lengthening_curvature | 1 | Source lengthening-curve coefficient; inactive when De Groote force-velocity mode is selected. | Not established | 0.35752841 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | No verified one-to-one numerical source is established for this added channel. Applied estimates are in Data/Model_Parameters/muscle_tendon.py; anatomical source records are in Data/Original_Study_Data/additional_muscles/. |
-| FR_S_C4 | passive_fiber_enabled | 0/1 | 1 enables passive fiber tension within the elastic equilibrium; zero force below l_f/l_opt=1 does not mean it is disabled. | Not established | 1 | No verified source value is available for direct comparison. The published passive force-length law is included in every muscle channel. Its coefficients are from Prilutsky et al. (2016), Table 10.3, and Rahmati et al. (2025), Table 3. Applying the same normalized law to added muscle channels is a modeling assumption. | Published parallel elastic architecture: Prilutsky et al. 2016 Table 10.3 (10.1007/978-1-4939-3267-2_10); Rahmati et al. 2025 Table 3 (10.1113/JP287448). Common normalized curve extended to all model channels; no muscle-specific passive calibration is claimed. |
-| FR_S_C4 | degroote_force_velocity_enabled | 0/1 | 1 uses the documented De Groote/OpenSim velocity curve; 0 uses the source curve. | Not established | 1 | No verified source value is available for direct comparison. Model-law choice: 1 enables the smooth De Groote force-velocity relation; 0 selects the alternative implemented law. | No verified one-to-one numerical source is established for this added channel. Applied estimates are in Data/Model_Parameters/muscle_tendon.py; anatomical source records are in Data/Original_Study_Data/additional_muscles/. |
-| FL_S_C5 | max_isometric_tendon_force_N | N | Maximum isometric force projected along the tendon; do not multiply by pennation cosine twice. | Not established | 5.8368291 | No verified source value is available for direct comparison. Force capacity was calibrated with motor inputs to improve mechanical agreement; the fit does not uniquely identify it. | No verified one-to-one numerical source is established for this added channel. Applied estimates are in Data/Model_Parameters/muscle_tendon.py; anatomical source records are in Data/Original_Study_Data/additional_muscles/. |
-| FL_S_C5 | optimal_fiber_length_m | m | Optimal fascicle/fiber length, not whole muscle-tendon length. | Not established | 0.044552508 | No verified source value is available for direct comparison. Fiber length and shortening speed were calibrated to set the force-length and force-velocity operating ranges. Physical maximum fiber speed is optimal_fiber_length_m multiplied by max_fiber_speed_optimal_lengths_per_s. The source and applied numbers are given in this row; these are not new tissue measurements. | No verified one-to-one numerical source is established for this added channel. Applied estimates are in Data/Model_Parameters/muscle_tendon.py; anatomical source records are in Data/Original_Study_Data/additional_muscles/. |
-| FL_S_C5 | tendon_slack_length_m | m | Unloaded series tendon length. | Not established | 0.010507667 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | No verified one-to-one numerical source is established for this added channel. Applied estimates are in Data/Model_Parameters/muscle_tendon.py; anatomical source records are in Data/Original_Study_Data/additional_muscles/. |
-| FL_S_C5 | pennation_cosine | 1 | Cosine of the constant fiber-to-tendon pennation angle. | Not established | 1 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | No verified one-to-one numerical source is established for this added channel. Applied estimates are in Data/Model_Parameters/muscle_tendon.py; anatomical source records are in Data/Original_Study_Data/additional_muscles/. |
-| FL_S_C5 | tendon_strain_at_max_force | 1 | Tendon extension/slack length at one maximum isometric tendon force. | Not established | 0.04 | No verified source value is available for direct comparison. Assumed elastic-tendon compliance; not a measured tendon strain for this animal. | No verified one-to-one numerical source is established for this added channel. Applied estimates are in Data/Model_Parameters/muscle_tendon.py; anatomical source records are in Data/Original_Study_Data/additional_muscles/. |
-| FL_S_C5 | max_fiber_speed_optimal_lengths_per_s | 1/s | Positive maximum-shortening speed magnitude, measured in optimal fiber lengths per second. | Not established | 9.4339623 | No verified source value is available for direct comparison. Fiber length and shortening speed were calibrated to set the force-length and force-velocity operating ranges. Physical maximum fiber speed is optimal_fiber_length_m multiplied by max_fiber_speed_optimal_lengths_per_s. The source and applied numbers are given in this row; these are not new tissue measurements. | No verified one-to-one numerical source is established for this added channel. Applied estimates are in Data/Model_Parameters/muscle_tendon.py; anatomical source records are in Data/Original_Study_Data/additional_muscles/. |
-| FL_S_C5 | normalized_fiber_damping | 1 | Coefficient of normalized fiber velocity in the normalized tendon-direction force balance. | Not established | 0.0084061337 | No verified source value is available for direct comparison. Effective muscle force-balance coefficient; source-law conversion and calibration are described in the methods. | No verified one-to-one numerical source is established for this added channel. Applied estimates are in Data/Model_Parameters/muscle_tendon.py; anatomical source records are in Data/Original_Study_Data/additional_muscles/. |
-| FL_S_C5 | MT_path_length_offset_m | m | Constant offset added to the routed path to define muscle-tendon length. | Not established | 0 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | No verified one-to-one numerical source is established for this added channel. Applied estimates are in Data/Model_Parameters/muscle_tendon.py; anatomical source records are in Data/Original_Study_Data/additional_muscles/. |
-| FL_S_C5 | active_force_length_exponent | 1 | Exponent rho in the source active force-length curve. | Not established | 3 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | No verified one-to-one numerical source is established for this added channel. Applied estimates are in Data/Model_Parameters/muscle_tendon.py; anatomical source records are in Data/Original_Study_Data/additional_muscles/. |
-| FL_S_C5 | source_shortening_curvature | 1 | Source shortening-curve coefficient; inactive when De Groote force-velocity mode is selected. | Not established | 0.45283 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | No verified one-to-one numerical source is established for this added channel. Applied estimates are in Data/Model_Parameters/muscle_tendon.py; anatomical source records are in Data/Original_Study_Data/additional_muscles/. |
-| FL_S_C5 | source_lengthening_curvature | 1 | Source lengthening-curve coefficient; inactive when De Groote force-velocity mode is selected. | Not established | 0.28988686 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | No verified one-to-one numerical source is established for this added channel. Applied estimates are in Data/Model_Parameters/muscle_tendon.py; anatomical source records are in Data/Original_Study_Data/additional_muscles/. |
-| FL_S_C5 | passive_fiber_enabled | 0/1 | 1 enables passive fiber tension within the elastic equilibrium; zero force below l_f/l_opt=1 does not mean it is disabled. | Not established | 1 | No verified source value is available for direct comparison. The published passive force-length law is included in every muscle channel. Its coefficients are from Prilutsky et al. (2016), Table 10.3, and Rahmati et al. (2025), Table 3. Applying the same normalized law to added muscle channels is a modeling assumption. | Published parallel elastic architecture: Prilutsky et al. 2016 Table 10.3 (10.1007/978-1-4939-3267-2_10); Rahmati et al. 2025 Table 3 (10.1113/JP287448). Common normalized curve extended to all model channels; no muscle-specific passive calibration is claimed. |
-| FL_S_C5 | degroote_force_velocity_enabled | 0/1 | 1 uses the documented De Groote/OpenSim velocity curve; 0 uses the source curve. | Not established | 1 | No verified source value is available for direct comparison. Model-law choice: 1 enables the smooth De Groote force-velocity relation; 0 selects the alternative implemented law. | No verified one-to-one numerical source is established for this added channel. Applied estimates are in Data/Model_Parameters/muscle_tendon.py; anatomical source records are in Data/Original_Study_Data/additional_muscles/. |
-| FR_S_C5 | max_isometric_tendon_force_N | N | Maximum isometric force projected along the tendon; do not multiply by pennation cosine twice. | Not established | 5.8368291 | No verified source value is available for direct comparison. Force capacity was calibrated with motor inputs to improve mechanical agreement; the fit does not uniquely identify it. | No verified one-to-one numerical source is established for this added channel. Applied estimates are in Data/Model_Parameters/muscle_tendon.py; anatomical source records are in Data/Original_Study_Data/additional_muscles/. |
-| FR_S_C5 | optimal_fiber_length_m | m | Optimal fascicle/fiber length, not whole muscle-tendon length. | Not established | 0.044552508 | No verified source value is available for direct comparison. Fiber length and shortening speed were calibrated to set the force-length and force-velocity operating ranges. Physical maximum fiber speed is optimal_fiber_length_m multiplied by max_fiber_speed_optimal_lengths_per_s. The source and applied numbers are given in this row; these are not new tissue measurements. | No verified one-to-one numerical source is established for this added channel. Applied estimates are in Data/Model_Parameters/muscle_tendon.py; anatomical source records are in Data/Original_Study_Data/additional_muscles/. |
-| FR_S_C5 | tendon_slack_length_m | m | Unloaded series tendon length. | Not established | 0.010507667 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | No verified one-to-one numerical source is established for this added channel. Applied estimates are in Data/Model_Parameters/muscle_tendon.py; anatomical source records are in Data/Original_Study_Data/additional_muscles/. |
-| FR_S_C5 | pennation_cosine | 1 | Cosine of the constant fiber-to-tendon pennation angle. | Not established | 1 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | No verified one-to-one numerical source is established for this added channel. Applied estimates are in Data/Model_Parameters/muscle_tendon.py; anatomical source records are in Data/Original_Study_Data/additional_muscles/. |
-| FR_S_C5 | tendon_strain_at_max_force | 1 | Tendon extension/slack length at one maximum isometric tendon force. | Not established | 0.04 | No verified source value is available for direct comparison. Assumed elastic-tendon compliance; not a measured tendon strain for this animal. | No verified one-to-one numerical source is established for this added channel. Applied estimates are in Data/Model_Parameters/muscle_tendon.py; anatomical source records are in Data/Original_Study_Data/additional_muscles/. |
-| FR_S_C5 | max_fiber_speed_optimal_lengths_per_s | 1/s | Positive maximum-shortening speed magnitude, measured in optimal fiber lengths per second. | Not established | 9.4339623 | No verified source value is available for direct comparison. Fiber length and shortening speed were calibrated to set the force-length and force-velocity operating ranges. Physical maximum fiber speed is optimal_fiber_length_m multiplied by max_fiber_speed_optimal_lengths_per_s. The source and applied numbers are given in this row; these are not new tissue measurements. | No verified one-to-one numerical source is established for this added channel. Applied estimates are in Data/Model_Parameters/muscle_tendon.py; anatomical source records are in Data/Original_Study_Data/additional_muscles/. |
-| FR_S_C5 | normalized_fiber_damping | 1 | Coefficient of normalized fiber velocity in the normalized tendon-direction force balance. | Not established | 0.0084061337 | No verified source value is available for direct comparison. Effective muscle force-balance coefficient; source-law conversion and calibration are described in the methods. | No verified one-to-one numerical source is established for this added channel. Applied estimates are in Data/Model_Parameters/muscle_tendon.py; anatomical source records are in Data/Original_Study_Data/additional_muscles/. |
-| FR_S_C5 | MT_path_length_offset_m | m | Constant offset added to the routed path to define muscle-tendon length. | Not established | 0 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | No verified one-to-one numerical source is established for this added channel. Applied estimates are in Data/Model_Parameters/muscle_tendon.py; anatomical source records are in Data/Original_Study_Data/additional_muscles/. |
-| FR_S_C5 | active_force_length_exponent | 1 | Exponent rho in the source active force-length curve. | Not established | 3 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | No verified one-to-one numerical source is established for this added channel. Applied estimates are in Data/Model_Parameters/muscle_tendon.py; anatomical source records are in Data/Original_Study_Data/additional_muscles/. |
-| FR_S_C5 | source_shortening_curvature | 1 | Source shortening-curve coefficient; inactive when De Groote force-velocity mode is selected. | Not established | 0.45283 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | No verified one-to-one numerical source is established for this added channel. Applied estimates are in Data/Model_Parameters/muscle_tendon.py; anatomical source records are in Data/Original_Study_Data/additional_muscles/. |
-| FR_S_C5 | source_lengthening_curvature | 1 | Source lengthening-curve coefficient; inactive when De Groote force-velocity mode is selected. | Not established | 0.28988686 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | No verified one-to-one numerical source is established for this added channel. Applied estimates are in Data/Model_Parameters/muscle_tendon.py; anatomical source records are in Data/Original_Study_Data/additional_muscles/. |
-| FR_S_C5 | passive_fiber_enabled | 0/1 | 1 enables passive fiber tension within the elastic equilibrium; zero force below l_f/l_opt=1 does not mean it is disabled. | Not established | 1 | No verified source value is available for direct comparison. The published passive force-length law is included in every muscle channel. Its coefficients are from Prilutsky et al. (2016), Table 10.3, and Rahmati et al. (2025), Table 3. Applying the same normalized law to added muscle channels is a modeling assumption. | Published parallel elastic architecture: Prilutsky et al. 2016 Table 10.3 (10.1007/978-1-4939-3267-2_10); Rahmati et al. 2025 Table 3 (10.1113/JP287448). Common normalized curve extended to all model channels; no muscle-specific passive calibration is claimed. |
-| FR_S_C5 | degroote_force_velocity_enabled | 0/1 | 1 uses the documented De Groote/OpenSim velocity curve; 0 uses the source curve. | Not established | 1 | No verified source value is available for direct comparison. Model-law choice: 1 enables the smooth De Groote force-velocity relation; 0 selects the alternative implemented law. | No verified one-to-one numerical source is established for this added channel. Applied estimates are in Data/Model_Parameters/muscle_tendon.py; anatomical source records are in Data/Original_Study_Data/additional_muscles/. |
-| FL_S_C6 | max_isometric_tendon_force_N | N | Maximum isometric force projected along the tendon; do not multiply by pennation cosine twice. | Not established | 5.7331901 | No verified source value is available for direct comparison. Force capacity was calibrated with motor inputs to improve mechanical agreement; the fit does not uniquely identify it. | No verified one-to-one numerical source is established for this added channel. Applied estimates are in Data/Model_Parameters/muscle_tendon.py; anatomical source records are in Data/Original_Study_Data/additional_muscles/. |
-| FL_S_C6 | optimal_fiber_length_m | m | Optimal fascicle/fiber length, not whole muscle-tendon length. | Not established | 0.042353869 | No verified source value is available for direct comparison. Fiber length and shortening speed were calibrated to set the force-length and force-velocity operating ranges. Physical maximum fiber speed is optimal_fiber_length_m multiplied by max_fiber_speed_optimal_lengths_per_s. The source and applied numbers are given in this row; these are not new tissue measurements. | No verified one-to-one numerical source is established for this added channel. Applied estimates are in Data/Model_Parameters/muscle_tendon.py; anatomical source records are in Data/Original_Study_Data/additional_muscles/. |
-| FL_S_C6 | tendon_slack_length_m | m | Unloaded series tendon length. | Not established | 0.00998912 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | No verified one-to-one numerical source is established for this added channel. Applied estimates are in Data/Model_Parameters/muscle_tendon.py; anatomical source records are in Data/Original_Study_Data/additional_muscles/. |
-| FL_S_C6 | pennation_cosine | 1 | Cosine of the constant fiber-to-tendon pennation angle. | Not established | 1 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | No verified one-to-one numerical source is established for this added channel. Applied estimates are in Data/Model_Parameters/muscle_tendon.py; anatomical source records are in Data/Original_Study_Data/additional_muscles/. |
-| FL_S_C6 | tendon_strain_at_max_force | 1 | Tendon extension/slack length at one maximum isometric tendon force. | Not established | 0.04 | No verified source value is available for direct comparison. Assumed elastic-tendon compliance; not a measured tendon strain for this animal. | No verified one-to-one numerical source is established for this added channel. Applied estimates are in Data/Model_Parameters/muscle_tendon.py; anatomical source records are in Data/Original_Study_Data/additional_muscles/. |
-| FL_S_C6 | max_fiber_speed_optimal_lengths_per_s | 1/s | Positive maximum-shortening speed magnitude, measured in optimal fiber lengths per second. | Not established | 9.4339623 | No verified source value is available for direct comparison. Fiber length and shortening speed were calibrated to set the force-length and force-velocity operating ranges. Physical maximum fiber speed is optimal_fiber_length_m multiplied by max_fiber_speed_optimal_lengths_per_s. The source and applied numbers are given in this row; these are not new tissue measurements. | No verified one-to-one numerical source is established for this added channel. Applied estimates are in Data/Model_Parameters/muscle_tendon.py; anatomical source records are in Data/Original_Study_Data/additional_muscles/. |
-| FL_S_C6 | normalized_fiber_damping | 1 | Coefficient of normalized fiber velocity in the normalized tendon-direction force balance. | Not established | 0.007991296 | No verified source value is available for direct comparison. Effective muscle force-balance coefficient; source-law conversion and calibration are described in the methods. | No verified one-to-one numerical source is established for this added channel. Applied estimates are in Data/Model_Parameters/muscle_tendon.py; anatomical source records are in Data/Original_Study_Data/additional_muscles/. |
-| FL_S_C6 | MT_path_length_offset_m | m | Constant offset added to the routed path to define muscle-tendon length. | Not established | 0 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | No verified one-to-one numerical source is established for this added channel. Applied estimates are in Data/Model_Parameters/muscle_tendon.py; anatomical source records are in Data/Original_Study_Data/additional_muscles/. |
-| FL_S_C6 | active_force_length_exponent | 1 | Exponent rho in the source active force-length curve. | Not established | 3 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | No verified one-to-one numerical source is established for this added channel. Applied estimates are in Data/Model_Parameters/muscle_tendon.py; anatomical source records are in Data/Original_Study_Data/additional_muscles/. |
-| FL_S_C6 | source_shortening_curvature | 1 | Source shortening-curve coefficient; inactive when De Groote force-velocity mode is selected. | Not established | 0.45283 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | No verified one-to-one numerical source is established for this added channel. Applied estimates are in Data/Model_Parameters/muscle_tendon.py; anatomical source records are in Data/Original_Study_Data/additional_muscles/. |
-| FL_S_C6 | source_lengthening_curvature | 1 | Source lengthening-curve coefficient; inactive when De Groote force-velocity mode is selected. | Not established | 0.29320654 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | No verified one-to-one numerical source is established for this added channel. Applied estimates are in Data/Model_Parameters/muscle_tendon.py; anatomical source records are in Data/Original_Study_Data/additional_muscles/. |
-| FL_S_C6 | passive_fiber_enabled | 0/1 | 1 enables passive fiber tension within the elastic equilibrium; zero force below l_f/l_opt=1 does not mean it is disabled. | Not established | 1 | No verified source value is available for direct comparison. The published passive force-length law is included in every muscle channel. Its coefficients are from Prilutsky et al. (2016), Table 10.3, and Rahmati et al. (2025), Table 3. Applying the same normalized law to added muscle channels is a modeling assumption. | Published parallel elastic architecture: Prilutsky et al. 2016 Table 10.3 (10.1007/978-1-4939-3267-2_10); Rahmati et al. 2025 Table 3 (10.1113/JP287448). Common normalized curve extended to all model channels; no muscle-specific passive calibration is claimed. |
-| FL_S_C6 | degroote_force_velocity_enabled | 0/1 | 1 uses the documented De Groote/OpenSim velocity curve; 0 uses the source curve. | Not established | 1 | No verified source value is available for direct comparison. Model-law choice: 1 enables the smooth De Groote force-velocity relation; 0 selects the alternative implemented law. | No verified one-to-one numerical source is established for this added channel. Applied estimates are in Data/Model_Parameters/muscle_tendon.py; anatomical source records are in Data/Original_Study_Data/additional_muscles/. |
-| FR_S_C6 | max_isometric_tendon_force_N | N | Maximum isometric force projected along the tendon; do not multiply by pennation cosine twice. | Not established | 5.7331901 | No verified source value is available for direct comparison. Force capacity was calibrated with motor inputs to improve mechanical agreement; the fit does not uniquely identify it. | No verified one-to-one numerical source is established for this added channel. Applied estimates are in Data/Model_Parameters/muscle_tendon.py; anatomical source records are in Data/Original_Study_Data/additional_muscles/. |
-| FR_S_C6 | optimal_fiber_length_m | m | Optimal fascicle/fiber length, not whole muscle-tendon length. | Not established | 0.042353869 | No verified source value is available for direct comparison. Fiber length and shortening speed were calibrated to set the force-length and force-velocity operating ranges. Physical maximum fiber speed is optimal_fiber_length_m multiplied by max_fiber_speed_optimal_lengths_per_s. The source and applied numbers are given in this row; these are not new tissue measurements. | No verified one-to-one numerical source is established for this added channel. Applied estimates are in Data/Model_Parameters/muscle_tendon.py; anatomical source records are in Data/Original_Study_Data/additional_muscles/. |
-| FR_S_C6 | tendon_slack_length_m | m | Unloaded series tendon length. | Not established | 0.00998912 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | No verified one-to-one numerical source is established for this added channel. Applied estimates are in Data/Model_Parameters/muscle_tendon.py; anatomical source records are in Data/Original_Study_Data/additional_muscles/. |
-| FR_S_C6 | pennation_cosine | 1 | Cosine of the constant fiber-to-tendon pennation angle. | Not established | 1 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | No verified one-to-one numerical source is established for this added channel. Applied estimates are in Data/Model_Parameters/muscle_tendon.py; anatomical source records are in Data/Original_Study_Data/additional_muscles/. |
-| FR_S_C6 | tendon_strain_at_max_force | 1 | Tendon extension/slack length at one maximum isometric tendon force. | Not established | 0.04 | No verified source value is available for direct comparison. Assumed elastic-tendon compliance; not a measured tendon strain for this animal. | No verified one-to-one numerical source is established for this added channel. Applied estimates are in Data/Model_Parameters/muscle_tendon.py; anatomical source records are in Data/Original_Study_Data/additional_muscles/. |
-| FR_S_C6 | max_fiber_speed_optimal_lengths_per_s | 1/s | Positive maximum-shortening speed magnitude, measured in optimal fiber lengths per second. | Not established | 9.4339623 | No verified source value is available for direct comparison. Fiber length and shortening speed were calibrated to set the force-length and force-velocity operating ranges. Physical maximum fiber speed is optimal_fiber_length_m multiplied by max_fiber_speed_optimal_lengths_per_s. The source and applied numbers are given in this row; these are not new tissue measurements. | No verified one-to-one numerical source is established for this added channel. Applied estimates are in Data/Model_Parameters/muscle_tendon.py; anatomical source records are in Data/Original_Study_Data/additional_muscles/. |
-| FR_S_C6 | normalized_fiber_damping | 1 | Coefficient of normalized fiber velocity in the normalized tendon-direction force balance. | Not established | 0.007991296 | No verified source value is available for direct comparison. Effective muscle force-balance coefficient; source-law conversion and calibration are described in the methods. | No verified one-to-one numerical source is established for this added channel. Applied estimates are in Data/Model_Parameters/muscle_tendon.py; anatomical source records are in Data/Original_Study_Data/additional_muscles/. |
-| FR_S_C6 | MT_path_length_offset_m | m | Constant offset added to the routed path to define muscle-tendon length. | Not established | 0 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | No verified one-to-one numerical source is established for this added channel. Applied estimates are in Data/Model_Parameters/muscle_tendon.py; anatomical source records are in Data/Original_Study_Data/additional_muscles/. |
-| FR_S_C6 | active_force_length_exponent | 1 | Exponent rho in the source active force-length curve. | Not established | 3 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | No verified one-to-one numerical source is established for this added channel. Applied estimates are in Data/Model_Parameters/muscle_tendon.py; anatomical source records are in Data/Original_Study_Data/additional_muscles/. |
-| FR_S_C6 | source_shortening_curvature | 1 | Source shortening-curve coefficient; inactive when De Groote force-velocity mode is selected. | Not established | 0.45283 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | No verified one-to-one numerical source is established for this added channel. Applied estimates are in Data/Model_Parameters/muscle_tendon.py; anatomical source records are in Data/Original_Study_Data/additional_muscles/. |
-| FR_S_C6 | source_lengthening_curvature | 1 | Source lengthening-curve coefficient; inactive when De Groote force-velocity mode is selected. | Not established | 0.29320654 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | No verified one-to-one numerical source is established for this added channel. Applied estimates are in Data/Model_Parameters/muscle_tendon.py; anatomical source records are in Data/Original_Study_Data/additional_muscles/. |
-| FR_S_C6 | passive_fiber_enabled | 0/1 | 1 enables passive fiber tension within the elastic equilibrium; zero force below l_f/l_opt=1 does not mean it is disabled. | Not established | 1 | No verified source value is available for direct comparison. The published passive force-length law is included in every muscle channel. Its coefficients are from Prilutsky et al. (2016), Table 10.3, and Rahmati et al. (2025), Table 3. Applying the same normalized law to added muscle channels is a modeling assumption. | Published parallel elastic architecture: Prilutsky et al. 2016 Table 10.3 (10.1007/978-1-4939-3267-2_10); Rahmati et al. 2025 Table 3 (10.1113/JP287448). Common normalized curve extended to all model channels; no muscle-specific passive calibration is claimed. |
-| FR_S_C6 | degroote_force_velocity_enabled | 0/1 | 1 uses the documented De Groote/OpenSim velocity curve; 0 uses the source curve. | Not established | 1 | No verified source value is available for direct comparison. Model-law choice: 1 enables the smooth De Groote force-velocity relation; 0 selects the alternative implemented law. | No verified one-to-one numerical source is established for this added channel. Applied estimates are in Data/Model_Parameters/muscle_tendon.py; anatomical source records are in Data/Original_Study_Data/additional_muscles/. |
-| FL_S_C7 | max_isometric_tendon_force_N | N | Maximum isometric force projected along the tendon; do not multiply by pennation cosine twice. | Not established | 5.1999748 | No verified source value is available for direct comparison. Force capacity was calibrated with motor inputs to improve mechanical agreement; the fit does not uniquely identify it. | No verified one-to-one numerical source is established for this added channel. Applied estimates are in Data/Model_Parameters/muscle_tendon.py; anatomical source records are in Data/Original_Study_Data/additional_muscles/. |
-| FL_S_C7 | optimal_fiber_length_m | m | Optimal fascicle/fiber length, not whole muscle-tendon length. | Not established | 0.038634931 | No verified source value is available for direct comparison. Fiber length and shortening speed were calibrated to set the force-length and force-velocity operating ranges. Physical maximum fiber speed is optimal_fiber_length_m multiplied by max_fiber_speed_optimal_lengths_per_s. The source and applied numbers are given in this row; these are not new tissue measurements. | No verified one-to-one numerical source is established for this added channel. Applied estimates are in Data/Model_Parameters/muscle_tendon.py; anatomical source records are in Data/Original_Study_Data/additional_muscles/. |
-| FL_S_C7 | tendon_slack_length_m | m | Unloaded series tendon length. | Not established | 0.009112012 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | No verified one-to-one numerical source is established for this added channel. Applied estimates are in Data/Model_Parameters/muscle_tendon.py; anatomical source records are in Data/Original_Study_Data/additional_muscles/. |
-| FL_S_C7 | pennation_cosine | 1 | Cosine of the constant fiber-to-tendon pennation angle. | Not established | 1 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | No verified one-to-one numerical source is established for this added channel. Applied estimates are in Data/Model_Parameters/muscle_tendon.py; anatomical source records are in Data/Original_Study_Data/additional_muscles/. |
-| FL_S_C7 | tendon_strain_at_max_force | 1 | Tendon extension/slack length at one maximum isometric tendon force. | Not established | 0.04 | No verified source value is available for direct comparison. Assumed elastic-tendon compliance; not a measured tendon strain for this animal. | No verified one-to-one numerical source is established for this added channel. Applied estimates are in Data/Model_Parameters/muscle_tendon.py; anatomical source records are in Data/Original_Study_Data/additional_muscles/. |
-| FL_S_C7 | max_fiber_speed_optimal_lengths_per_s | 1/s | Positive maximum-shortening speed magnitude, measured in optimal fiber lengths per second. | Not established | 9.4339623 | No verified source value is available for direct comparison. Fiber length and shortening speed were calibrated to set the force-length and force-velocity operating ranges. Physical maximum fiber speed is optimal_fiber_length_m multiplied by max_fiber_speed_optimal_lengths_per_s. The source and applied numbers are given in this row; these are not new tissue measurements. | No verified one-to-one numerical source is established for this added channel. Applied estimates are in Data/Model_Parameters/muscle_tendon.py; anatomical source records are in Data/Original_Study_Data/additional_muscles/. |
-| FL_S_C7 | normalized_fiber_damping | 1 | Coefficient of normalized fiber velocity in the normalized tendon-direction force balance. | Not established | 0.0072896096 | No verified source value is available for direct comparison. Effective muscle force-balance coefficient; source-law conversion and calibration are described in the methods. | No verified one-to-one numerical source is established for this added channel. Applied estimates are in Data/Model_Parameters/muscle_tendon.py; anatomical source records are in Data/Original_Study_Data/additional_muscles/. |
-| FL_S_C7 | MT_path_length_offset_m | m | Constant offset added to the routed path to define muscle-tendon length. | Not established | 0 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | No verified one-to-one numerical source is established for this added channel. Applied estimates are in Data/Model_Parameters/muscle_tendon.py; anatomical source records are in Data/Original_Study_Data/additional_muscles/. |
-| FL_S_C7 | active_force_length_exponent | 1 | Exponent rho in the source active force-length curve. | Not established | 3 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | No verified one-to-one numerical source is established for this added channel. Applied estimates are in Data/Model_Parameters/muscle_tendon.py; anatomical source records are in Data/Original_Study_Data/additional_muscles/. |
-| FL_S_C7 | source_shortening_curvature | 1 | Source shortening-curve coefficient; inactive when De Groote force-velocity mode is selected. | Not established | 0.45283 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | No verified one-to-one numerical source is established for this added channel. Applied estimates are in Data/Model_Parameters/muscle_tendon.py; anatomical source records are in Data/Original_Study_Data/additional_muscles/. |
-| FL_S_C7 | source_lengthening_curvature | 1 | Source lengthening-curve coefficient; inactive when De Groote force-velocity mode is selected. | Not established | 0.31156319 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | No verified one-to-one numerical source is established for this added channel. Applied estimates are in Data/Model_Parameters/muscle_tendon.py; anatomical source records are in Data/Original_Study_Data/additional_muscles/. |
-| FL_S_C7 | passive_fiber_enabled | 0/1 | 1 enables passive fiber tension within the elastic equilibrium; zero force below l_f/l_opt=1 does not mean it is disabled. | Not established | 1 | No verified source value is available for direct comparison. The published passive force-length law is included in every muscle channel. Its coefficients are from Prilutsky et al. (2016), Table 10.3, and Rahmati et al. (2025), Table 3. Applying the same normalized law to added muscle channels is a modeling assumption. | Published parallel elastic architecture: Prilutsky et al. 2016 Table 10.3 (10.1007/978-1-4939-3267-2_10); Rahmati et al. 2025 Table 3 (10.1113/JP287448). Common normalized curve extended to all model channels; no muscle-specific passive calibration is claimed. |
-| FL_S_C7 | degroote_force_velocity_enabled | 0/1 | 1 uses the documented De Groote/OpenSim velocity curve; 0 uses the source curve. | Not established | 1 | No verified source value is available for direct comparison. Model-law choice: 1 enables the smooth De Groote force-velocity relation; 0 selects the alternative implemented law. | No verified one-to-one numerical source is established for this added channel. Applied estimates are in Data/Model_Parameters/muscle_tendon.py; anatomical source records are in Data/Original_Study_Data/additional_muscles/. |
-| FR_S_C7 | max_isometric_tendon_force_N | N | Maximum isometric force projected along the tendon; do not multiply by pennation cosine twice. | Not established | 5.1999748 | No verified source value is available for direct comparison. Force capacity was calibrated with motor inputs to improve mechanical agreement; the fit does not uniquely identify it. | No verified one-to-one numerical source is established for this added channel. Applied estimates are in Data/Model_Parameters/muscle_tendon.py; anatomical source records are in Data/Original_Study_Data/additional_muscles/. |
-| FR_S_C7 | optimal_fiber_length_m | m | Optimal fascicle/fiber length, not whole muscle-tendon length. | Not established | 0.038634931 | No verified source value is available for direct comparison. Fiber length and shortening speed were calibrated to set the force-length and force-velocity operating ranges. Physical maximum fiber speed is optimal_fiber_length_m multiplied by max_fiber_speed_optimal_lengths_per_s. The source and applied numbers are given in this row; these are not new tissue measurements. | No verified one-to-one numerical source is established for this added channel. Applied estimates are in Data/Model_Parameters/muscle_tendon.py; anatomical source records are in Data/Original_Study_Data/additional_muscles/. |
-| FR_S_C7 | tendon_slack_length_m | m | Unloaded series tendon length. | Not established | 0.009112012 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | No verified one-to-one numerical source is established for this added channel. Applied estimates are in Data/Model_Parameters/muscle_tendon.py; anatomical source records are in Data/Original_Study_Data/additional_muscles/. |
-| FR_S_C7 | pennation_cosine | 1 | Cosine of the constant fiber-to-tendon pennation angle. | Not established | 1 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | No verified one-to-one numerical source is established for this added channel. Applied estimates are in Data/Model_Parameters/muscle_tendon.py; anatomical source records are in Data/Original_Study_Data/additional_muscles/. |
-| FR_S_C7 | tendon_strain_at_max_force | 1 | Tendon extension/slack length at one maximum isometric tendon force. | Not established | 0.04 | No verified source value is available for direct comparison. Assumed elastic-tendon compliance; not a measured tendon strain for this animal. | No verified one-to-one numerical source is established for this added channel. Applied estimates are in Data/Model_Parameters/muscle_tendon.py; anatomical source records are in Data/Original_Study_Data/additional_muscles/. |
-| FR_S_C7 | max_fiber_speed_optimal_lengths_per_s | 1/s | Positive maximum-shortening speed magnitude, measured in optimal fiber lengths per second. | Not established | 9.4339623 | No verified source value is available for direct comparison. Fiber length and shortening speed were calibrated to set the force-length and force-velocity operating ranges. Physical maximum fiber speed is optimal_fiber_length_m multiplied by max_fiber_speed_optimal_lengths_per_s. The source and applied numbers are given in this row; these are not new tissue measurements. | No verified one-to-one numerical source is established for this added channel. Applied estimates are in Data/Model_Parameters/muscle_tendon.py; anatomical source records are in Data/Original_Study_Data/additional_muscles/. |
-| FR_S_C7 | normalized_fiber_damping | 1 | Coefficient of normalized fiber velocity in the normalized tendon-direction force balance. | Not established | 0.0072896096 | No verified source value is available for direct comparison. Effective muscle force-balance coefficient; source-law conversion and calibration are described in the methods. | No verified one-to-one numerical source is established for this added channel. Applied estimates are in Data/Model_Parameters/muscle_tendon.py; anatomical source records are in Data/Original_Study_Data/additional_muscles/. |
-| FR_S_C7 | MT_path_length_offset_m | m | Constant offset added to the routed path to define muscle-tendon length. | Not established | 0 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | No verified one-to-one numerical source is established for this added channel. Applied estimates are in Data/Model_Parameters/muscle_tendon.py; anatomical source records are in Data/Original_Study_Data/additional_muscles/. |
-| FR_S_C7 | active_force_length_exponent | 1 | Exponent rho in the source active force-length curve. | Not established | 3 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | No verified one-to-one numerical source is established for this added channel. Applied estimates are in Data/Model_Parameters/muscle_tendon.py; anatomical source records are in Data/Original_Study_Data/additional_muscles/. |
-| FR_S_C7 | source_shortening_curvature | 1 | Source shortening-curve coefficient; inactive when De Groote force-velocity mode is selected. | Not established | 0.45283 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | No verified one-to-one numerical source is established for this added channel. Applied estimates are in Data/Model_Parameters/muscle_tendon.py; anatomical source records are in Data/Original_Study_Data/additional_muscles/. |
-| FR_S_C7 | source_lengthening_curvature | 1 | Source lengthening-curve coefficient; inactive when De Groote force-velocity mode is selected. | Not established | 0.31156319 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | No verified one-to-one numerical source is established for this added channel. Applied estimates are in Data/Model_Parameters/muscle_tendon.py; anatomical source records are in Data/Original_Study_Data/additional_muscles/. |
-| FR_S_C7 | passive_fiber_enabled | 0/1 | 1 enables passive fiber tension within the elastic equilibrium; zero force below l_f/l_opt=1 does not mean it is disabled. | Not established | 1 | No verified source value is available for direct comparison. The published passive force-length law is included in every muscle channel. Its coefficients are from Prilutsky et al. (2016), Table 10.3, and Rahmati et al. (2025), Table 3. Applying the same normalized law to added muscle channels is a modeling assumption. | Published parallel elastic architecture: Prilutsky et al. 2016 Table 10.3 (10.1007/978-1-4939-3267-2_10); Rahmati et al. 2025 Table 3 (10.1113/JP287448). Common normalized curve extended to all model channels; no muscle-specific passive calibration is claimed. |
-| FR_S_C7 | degroote_force_velocity_enabled | 0/1 | 1 uses the documented De Groote/OpenSim velocity curve; 0 uses the source curve. | Not established | 1 | No verified source value is available for direct comparison. Model-law choice: 1 enables the smooth De Groote force-velocity relation; 0 selects the alternative implemented law. | No verified one-to-one numerical source is established for this added channel. Applied estimates are in Data/Model_Parameters/muscle_tendon.py; anatomical source records are in Data/Original_Study_Data/additional_muscles/. |
-| FL_S_T1 | max_isometric_tendon_force_N | N | Maximum isometric force projected along the tendon; do not multiply by pennation cosine twice. | Not established | 6.6096791 | No verified source value is available for direct comparison. Force capacity was calibrated with motor inputs to improve mechanical agreement; the fit does not uniquely identify it. | No verified one-to-one numerical source is established for this added channel. Applied estimates are in Data/Model_Parameters/muscle_tendon.py; anatomical source records are in Data/Original_Study_Data/additional_muscles/. |
-| FL_S_T1 | optimal_fiber_length_m | m | Optimal fascicle/fiber length, not whole muscle-tendon length. | Not established | 0.03171576 | No verified source value is available for direct comparison. Fiber length and shortening speed were calibrated to set the force-length and force-velocity operating ranges. Physical maximum fiber speed is optimal_fiber_length_m multiplied by max_fiber_speed_optimal_lengths_per_s. The source and applied numbers are given in this row; these are not new tissue measurements. | No verified one-to-one numerical source is established for this added channel. Applied estimates are in Data/Model_Parameters/muscle_tendon.py; anatomical source records are in Data/Original_Study_Data/additional_muscles/. |
-| FL_S_T1 | tendon_slack_length_m | m | Unloaded series tendon length. | Not established | 0.0074801321 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | No verified one-to-one numerical source is established for this added channel. Applied estimates are in Data/Model_Parameters/muscle_tendon.py; anatomical source records are in Data/Original_Study_Data/additional_muscles/. |
-| FL_S_T1 | pennation_cosine | 1 | Cosine of the constant fiber-to-tendon pennation angle. | Not established | 1 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | No verified one-to-one numerical source is established for this added channel. Applied estimates are in Data/Model_Parameters/muscle_tendon.py; anatomical source records are in Data/Original_Study_Data/additional_muscles/. |
-| FL_S_T1 | tendon_strain_at_max_force | 1 | Tendon extension/slack length at one maximum isometric tendon force. | Not established | 0.04 | No verified source value is available for direct comparison. Assumed elastic-tendon compliance; not a measured tendon strain for this animal. | No verified one-to-one numerical source is established for this added channel. Applied estimates are in Data/Model_Parameters/muscle_tendon.py; anatomical source records are in Data/Original_Study_Data/additional_muscles/. |
-| FL_S_T1 | max_fiber_speed_optimal_lengths_per_s | 1/s | Positive maximum-shortening speed magnitude, measured in optimal fiber lengths per second. | Not established | 9.4339623 | No verified source value is available for direct comparison. Fiber length and shortening speed were calibrated to set the force-length and force-velocity operating ranges. Physical maximum fiber speed is optimal_fiber_length_m multiplied by max_fiber_speed_optimal_lengths_per_s. The source and applied numbers are given in this row; these are not new tissue measurements. | No verified one-to-one numerical source is established for this added channel. Applied estimates are in Data/Model_Parameters/muscle_tendon.py; anatomical source records are in Data/Original_Study_Data/additional_muscles/. |
-| FL_S_T1 | normalized_fiber_damping | 1 | Coefficient of normalized fiber velocity in the normalized tendon-direction force balance. | Not established | 0.0059841057 | No verified source value is available for direct comparison. Effective muscle force-balance coefficient; source-law conversion and calibration are described in the methods. | No verified one-to-one numerical source is established for this added channel. Applied estimates are in Data/Model_Parameters/muscle_tendon.py; anatomical source records are in Data/Original_Study_Data/additional_muscles/. |
-| FL_S_T1 | MT_path_length_offset_m | m | Constant offset added to the routed path to define muscle-tendon length. | Not established | 0 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | No verified one-to-one numerical source is established for this added channel. Applied estimates are in Data/Model_Parameters/muscle_tendon.py; anatomical source records are in Data/Original_Study_Data/additional_muscles/. |
-| FL_S_T1 | active_force_length_exponent | 1 | Exponent rho in the source active force-length curve. | Not established | 3 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | No verified one-to-one numerical source is established for this added channel. Applied estimates are in Data/Model_Parameters/muscle_tendon.py; anatomical source records are in Data/Original_Study_Data/additional_muscles/. |
-| FL_S_T1 | source_shortening_curvature | 1 | Source shortening-curve coefficient; inactive when De Groote force-velocity mode is selected. | Not established | 0.45283 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | No verified one-to-one numerical source is established for this added channel. Applied estimates are in Data/Model_Parameters/muscle_tendon.py; anatomical source records are in Data/Original_Study_Data/additional_muscles/. |
-| FL_S_T1 | source_lengthening_curvature | 1 | Source lengthening-curve coefficient; inactive when De Groote force-velocity mode is selected. | Not established | 0.27061534 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | No verified one-to-one numerical source is established for this added channel. Applied estimates are in Data/Model_Parameters/muscle_tendon.py; anatomical source records are in Data/Original_Study_Data/additional_muscles/. |
-| FL_S_T1 | passive_fiber_enabled | 0/1 | 1 enables passive fiber tension within the elastic equilibrium; zero force below l_f/l_opt=1 does not mean it is disabled. | Not established | 1 | No verified source value is available for direct comparison. The published passive force-length law is included in every muscle channel. Its coefficients are from Prilutsky et al. (2016), Table 10.3, and Rahmati et al. (2025), Table 3. Applying the same normalized law to added muscle channels is a modeling assumption. | Published parallel elastic architecture: Prilutsky et al. 2016 Table 10.3 (10.1007/978-1-4939-3267-2_10); Rahmati et al. 2025 Table 3 (10.1113/JP287448). Common normalized curve extended to all model channels; no muscle-specific passive calibration is claimed. |
-| FL_S_T1 | degroote_force_velocity_enabled | 0/1 | 1 uses the documented De Groote/OpenSim velocity curve; 0 uses the source curve. | Not established | 1 | No verified source value is available for direct comparison. Model-law choice: 1 enables the smooth De Groote force-velocity relation; 0 selects the alternative implemented law. | No verified one-to-one numerical source is established for this added channel. Applied estimates are in Data/Model_Parameters/muscle_tendon.py; anatomical source records are in Data/Original_Study_Data/additional_muscles/. |
-| FR_S_T1 | max_isometric_tendon_force_N | N | Maximum isometric force projected along the tendon; do not multiply by pennation cosine twice. | Not established | 6.6096791 | No verified source value is available for direct comparison. Force capacity was calibrated with motor inputs to improve mechanical agreement; the fit does not uniquely identify it. | No verified one-to-one numerical source is established for this added channel. Applied estimates are in Data/Model_Parameters/muscle_tendon.py; anatomical source records are in Data/Original_Study_Data/additional_muscles/. |
-| FR_S_T1 | optimal_fiber_length_m | m | Optimal fascicle/fiber length, not whole muscle-tendon length. | Not established | 0.03171576 | No verified source value is available for direct comparison. Fiber length and shortening speed were calibrated to set the force-length and force-velocity operating ranges. Physical maximum fiber speed is optimal_fiber_length_m multiplied by max_fiber_speed_optimal_lengths_per_s. The source and applied numbers are given in this row; these are not new tissue measurements. | No verified one-to-one numerical source is established for this added channel. Applied estimates are in Data/Model_Parameters/muscle_tendon.py; anatomical source records are in Data/Original_Study_Data/additional_muscles/. |
-| FR_S_T1 | tendon_slack_length_m | m | Unloaded series tendon length. | Not established | 0.0074801321 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | No verified one-to-one numerical source is established for this added channel. Applied estimates are in Data/Model_Parameters/muscle_tendon.py; anatomical source records are in Data/Original_Study_Data/additional_muscles/. |
-| FR_S_T1 | pennation_cosine | 1 | Cosine of the constant fiber-to-tendon pennation angle. | Not established | 1 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | No verified one-to-one numerical source is established for this added channel. Applied estimates are in Data/Model_Parameters/muscle_tendon.py; anatomical source records are in Data/Original_Study_Data/additional_muscles/. |
-| FR_S_T1 | tendon_strain_at_max_force | 1 | Tendon extension/slack length at one maximum isometric tendon force. | Not established | 0.04 | No verified source value is available for direct comparison. Assumed elastic-tendon compliance; not a measured tendon strain for this animal. | No verified one-to-one numerical source is established for this added channel. Applied estimates are in Data/Model_Parameters/muscle_tendon.py; anatomical source records are in Data/Original_Study_Data/additional_muscles/. |
-| FR_S_T1 | max_fiber_speed_optimal_lengths_per_s | 1/s | Positive maximum-shortening speed magnitude, measured in optimal fiber lengths per second. | Not established | 9.4339623 | No verified source value is available for direct comparison. Fiber length and shortening speed were calibrated to set the force-length and force-velocity operating ranges. Physical maximum fiber speed is optimal_fiber_length_m multiplied by max_fiber_speed_optimal_lengths_per_s. The source and applied numbers are given in this row; these are not new tissue measurements. | No verified one-to-one numerical source is established for this added channel. Applied estimates are in Data/Model_Parameters/muscle_tendon.py; anatomical source records are in Data/Original_Study_Data/additional_muscles/. |
-| FR_S_T1 | normalized_fiber_damping | 1 | Coefficient of normalized fiber velocity in the normalized tendon-direction force balance. | Not established | 0.0059841057 | No verified source value is available for direct comparison. Effective muscle force-balance coefficient; source-law conversion and calibration are described in the methods. | No verified one-to-one numerical source is established for this added channel. Applied estimates are in Data/Model_Parameters/muscle_tendon.py; anatomical source records are in Data/Original_Study_Data/additional_muscles/. |
-| FR_S_T1 | MT_path_length_offset_m | m | Constant offset added to the routed path to define muscle-tendon length. | Not established | 0 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | No verified one-to-one numerical source is established for this added channel. Applied estimates are in Data/Model_Parameters/muscle_tendon.py; anatomical source records are in Data/Original_Study_Data/additional_muscles/. |
-| FR_S_T1 | active_force_length_exponent | 1 | Exponent rho in the source active force-length curve. | Not established | 3 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | No verified one-to-one numerical source is established for this added channel. Applied estimates are in Data/Model_Parameters/muscle_tendon.py; anatomical source records are in Data/Original_Study_Data/additional_muscles/. |
-| FR_S_T1 | source_shortening_curvature | 1 | Source shortening-curve coefficient; inactive when De Groote force-velocity mode is selected. | Not established | 0.45283 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | No verified one-to-one numerical source is established for this added channel. Applied estimates are in Data/Model_Parameters/muscle_tendon.py; anatomical source records are in Data/Original_Study_Data/additional_muscles/. |
-| FR_S_T1 | source_lengthening_curvature | 1 | Source lengthening-curve coefficient; inactive when De Groote force-velocity mode is selected. | Not established | 0.27061534 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | No verified one-to-one numerical source is established for this added channel. Applied estimates are in Data/Model_Parameters/muscle_tendon.py; anatomical source records are in Data/Original_Study_Data/additional_muscles/. |
-| FR_S_T1 | passive_fiber_enabled | 0/1 | 1 enables passive fiber tension within the elastic equilibrium; zero force below l_f/l_opt=1 does not mean it is disabled. | Not established | 1 | No verified source value is available for direct comparison. The published passive force-length law is included in every muscle channel. Its coefficients are from Prilutsky et al. (2016), Table 10.3, and Rahmati et al. (2025), Table 3. Applying the same normalized law to added muscle channels is a modeling assumption. | Published parallel elastic architecture: Prilutsky et al. 2016 Table 10.3 (10.1007/978-1-4939-3267-2_10); Rahmati et al. 2025 Table 3 (10.1113/JP287448). Common normalized curve extended to all model channels; no muscle-specific passive calibration is claimed. |
-| FR_S_T1 | degroote_force_velocity_enabled | 0/1 | 1 uses the documented De Groote/OpenSim velocity curve; 0 uses the source curve. | Not established | 1 | No verified source value is available for direct comparison. Model-law choice: 1 enables the smooth De Groote force-velocity relation; 0 selects the alternative implemented law. | No verified one-to-one numerical source is established for this added channel. Applied estimates are in Data/Model_Parameters/muscle_tendon.py; anatomical source records are in Data/Original_Study_Data/additional_muscles/. |
-| FL_S_T2 | max_isometric_tendon_force_N | N | Maximum isometric force projected along the tendon; do not multiply by pennation cosine twice. | Not established | 3.1044071 | No verified source value is available for direct comparison. Force capacity was calibrated with motor inputs to improve mechanical agreement; the fit does not uniquely identify it. | No verified one-to-one numerical source is established for this added channel. Applied estimates are in Data/Model_Parameters/muscle_tendon.py; anatomical source records are in Data/Original_Study_Data/additional_muscles/. |
-| FL_S_T2 | optimal_fiber_length_m | m | Optimal fascicle/fiber length, not whole muscle-tendon length. | Not established | 0.02913179 | No verified source value is available for direct comparison. Fiber length and shortening speed were calibrated to set the force-length and force-velocity operating ranges. Physical maximum fiber speed is optimal_fiber_length_m multiplied by max_fiber_speed_optimal_lengths_per_s. The source and applied numbers are given in this row; these are not new tissue measurements. | No verified one-to-one numerical source is established for this added channel. Applied estimates are in Data/Model_Parameters/muscle_tendon.py; anatomical source records are in Data/Original_Study_Data/additional_muscles/. |
-| FL_S_T2 | tendon_slack_length_m | m | Unloaded series tendon length. | Not established | 0.0068707051 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | No verified one-to-one numerical source is established for this added channel. Applied estimates are in Data/Model_Parameters/muscle_tendon.py; anatomical source records are in Data/Original_Study_Data/additional_muscles/. |
-| FL_S_T2 | pennation_cosine | 1 | Cosine of the constant fiber-to-tendon pennation angle. | Not established | 1 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | No verified one-to-one numerical source is established for this added channel. Applied estimates are in Data/Model_Parameters/muscle_tendon.py; anatomical source records are in Data/Original_Study_Data/additional_muscles/. |
-| FL_S_T2 | tendon_strain_at_max_force | 1 | Tendon extension/slack length at one maximum isometric tendon force. | Not established | 0.04 | No verified source value is available for direct comparison. Assumed elastic-tendon compliance; not a measured tendon strain for this animal. | No verified one-to-one numerical source is established for this added channel. Applied estimates are in Data/Model_Parameters/muscle_tendon.py; anatomical source records are in Data/Original_Study_Data/additional_muscles/. |
-| FL_S_T2 | max_fiber_speed_optimal_lengths_per_s | 1/s | Positive maximum-shortening speed magnitude, measured in optimal fiber lengths per second. | Not established | 9.4339623 | No verified source value is available for direct comparison. Fiber length and shortening speed were calibrated to set the force-length and force-velocity operating ranges. Physical maximum fiber speed is optimal_fiber_length_m multiplied by max_fiber_speed_optimal_lengths_per_s. The source and applied numbers are given in this row; these are not new tissue measurements. | No verified one-to-one numerical source is established for this added channel. Applied estimates are in Data/Model_Parameters/muscle_tendon.py; anatomical source records are in Data/Original_Study_Data/additional_muscles/. |
-| FL_S_T2 | normalized_fiber_damping | 1 | Coefficient of normalized fiber velocity in the normalized tendon-direction force balance. | Not established | 0.0054965641 | No verified source value is available for direct comparison. Effective muscle force-balance coefficient; source-law conversion and calibration are described in the methods. | No verified one-to-one numerical source is established for this added channel. Applied estimates are in Data/Model_Parameters/muscle_tendon.py; anatomical source records are in Data/Original_Study_Data/additional_muscles/. |
-| FL_S_T2 | MT_path_length_offset_m | m | Constant offset added to the routed path to define muscle-tendon length. | Not established | 0 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | No verified one-to-one numerical source is established for this added channel. Applied estimates are in Data/Model_Parameters/muscle_tendon.py; anatomical source records are in Data/Original_Study_Data/additional_muscles/. |
-| FL_S_T2 | active_force_length_exponent | 1 | Exponent rho in the source active force-length curve. | Not established | 3 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | No verified one-to-one numerical source is established for this added channel. Applied estimates are in Data/Model_Parameters/muscle_tendon.py; anatomical source records are in Data/Original_Study_Data/additional_muscles/. |
-| FL_S_T2 | source_shortening_curvature | 1 | Source shortening-curve coefficient; inactive when De Groote force-velocity mode is selected. | Not established | 0.45283 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | No verified one-to-one numerical source is established for this added channel. Applied estimates are in Data/Model_Parameters/muscle_tendon.py; anatomical source records are in Data/Original_Study_Data/additional_muscles/. |
-| FL_S_T2 | source_lengthening_curvature | 1 | Source lengthening-curve coefficient; inactive when De Groote force-velocity mode is selected. | Not established | 0.41692897 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | No verified one-to-one numerical source is established for this added channel. Applied estimates are in Data/Model_Parameters/muscle_tendon.py; anatomical source records are in Data/Original_Study_Data/additional_muscles/. |
-| FL_S_T2 | passive_fiber_enabled | 0/1 | 1 enables passive fiber tension within the elastic equilibrium; zero force below l_f/l_opt=1 does not mean it is disabled. | Not established | 1 | No verified source value is available for direct comparison. The published passive force-length law is included in every muscle channel. Its coefficients are from Prilutsky et al. (2016), Table 10.3, and Rahmati et al. (2025), Table 3. Applying the same normalized law to added muscle channels is a modeling assumption. | Published parallel elastic architecture: Prilutsky et al. 2016 Table 10.3 (10.1007/978-1-4939-3267-2_10); Rahmati et al. 2025 Table 3 (10.1113/JP287448). Common normalized curve extended to all model channels; no muscle-specific passive calibration is claimed. |
-| FL_S_T2 | degroote_force_velocity_enabled | 0/1 | 1 uses the documented De Groote/OpenSim velocity curve; 0 uses the source curve. | Not established | 1 | No verified source value is available for direct comparison. Model-law choice: 1 enables the smooth De Groote force-velocity relation; 0 selects the alternative implemented law. | No verified one-to-one numerical source is established for this added channel. Applied estimates are in Data/Model_Parameters/muscle_tendon.py; anatomical source records are in Data/Original_Study_Data/additional_muscles/. |
-| FR_S_T2 | max_isometric_tendon_force_N | N | Maximum isometric force projected along the tendon; do not multiply by pennation cosine twice. | Not established | 3.1044071 | No verified source value is available for direct comparison. Force capacity was calibrated with motor inputs to improve mechanical agreement; the fit does not uniquely identify it. | No verified one-to-one numerical source is established for this added channel. Applied estimates are in Data/Model_Parameters/muscle_tendon.py; anatomical source records are in Data/Original_Study_Data/additional_muscles/. |
-| FR_S_T2 | optimal_fiber_length_m | m | Optimal fascicle/fiber length, not whole muscle-tendon length. | Not established | 0.02913179 | No verified source value is available for direct comparison. Fiber length and shortening speed were calibrated to set the force-length and force-velocity operating ranges. Physical maximum fiber speed is optimal_fiber_length_m multiplied by max_fiber_speed_optimal_lengths_per_s. The source and applied numbers are given in this row; these are not new tissue measurements. | No verified one-to-one numerical source is established for this added channel. Applied estimates are in Data/Model_Parameters/muscle_tendon.py; anatomical source records are in Data/Original_Study_Data/additional_muscles/. |
-| FR_S_T2 | tendon_slack_length_m | m | Unloaded series tendon length. | Not established | 0.0068707051 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | No verified one-to-one numerical source is established for this added channel. Applied estimates are in Data/Model_Parameters/muscle_tendon.py; anatomical source records are in Data/Original_Study_Data/additional_muscles/. |
-| FR_S_T2 | pennation_cosine | 1 | Cosine of the constant fiber-to-tendon pennation angle. | Not established | 1 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | No verified one-to-one numerical source is established for this added channel. Applied estimates are in Data/Model_Parameters/muscle_tendon.py; anatomical source records are in Data/Original_Study_Data/additional_muscles/. |
-| FR_S_T2 | tendon_strain_at_max_force | 1 | Tendon extension/slack length at one maximum isometric tendon force. | Not established | 0.04 | No verified source value is available for direct comparison. Assumed elastic-tendon compliance; not a measured tendon strain for this animal. | No verified one-to-one numerical source is established for this added channel. Applied estimates are in Data/Model_Parameters/muscle_tendon.py; anatomical source records are in Data/Original_Study_Data/additional_muscles/. |
-| FR_S_T2 | max_fiber_speed_optimal_lengths_per_s | 1/s | Positive maximum-shortening speed magnitude, measured in optimal fiber lengths per second. | Not established | 9.4339623 | No verified source value is available for direct comparison. Fiber length and shortening speed were calibrated to set the force-length and force-velocity operating ranges. Physical maximum fiber speed is optimal_fiber_length_m multiplied by max_fiber_speed_optimal_lengths_per_s. The source and applied numbers are given in this row; these are not new tissue measurements. | No verified one-to-one numerical source is established for this added channel. Applied estimates are in Data/Model_Parameters/muscle_tendon.py; anatomical source records are in Data/Original_Study_Data/additional_muscles/. |
-| FR_S_T2 | normalized_fiber_damping | 1 | Coefficient of normalized fiber velocity in the normalized tendon-direction force balance. | Not established | 0.0054965641 | No verified source value is available for direct comparison. Effective muscle force-balance coefficient; source-law conversion and calibration are described in the methods. | No verified one-to-one numerical source is established for this added channel. Applied estimates are in Data/Model_Parameters/muscle_tendon.py; anatomical source records are in Data/Original_Study_Data/additional_muscles/. |
-| FR_S_T2 | MT_path_length_offset_m | m | Constant offset added to the routed path to define muscle-tendon length. | Not established | 0 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | No verified one-to-one numerical source is established for this added channel. Applied estimates are in Data/Model_Parameters/muscle_tendon.py; anatomical source records are in Data/Original_Study_Data/additional_muscles/. |
-| FR_S_T2 | active_force_length_exponent | 1 | Exponent rho in the source active force-length curve. | Not established | 3 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | No verified one-to-one numerical source is established for this added channel. Applied estimates are in Data/Model_Parameters/muscle_tendon.py; anatomical source records are in Data/Original_Study_Data/additional_muscles/. |
-| FR_S_T2 | source_shortening_curvature | 1 | Source shortening-curve coefficient; inactive when De Groote force-velocity mode is selected. | Not established | 0.45283 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | No verified one-to-one numerical source is established for this added channel. Applied estimates are in Data/Model_Parameters/muscle_tendon.py; anatomical source records are in Data/Original_Study_Data/additional_muscles/. |
-| FR_S_T2 | source_lengthening_curvature | 1 | Source lengthening-curve coefficient; inactive when De Groote force-velocity mode is selected. | Not established | 0.41692897 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | No verified one-to-one numerical source is established for this added channel. Applied estimates are in Data/Model_Parameters/muscle_tendon.py; anatomical source records are in Data/Original_Study_Data/additional_muscles/. |
-| FR_S_T2 | passive_fiber_enabled | 0/1 | 1 enables passive fiber tension within the elastic equilibrium; zero force below l_f/l_opt=1 does not mean it is disabled. | Not established | 1 | No verified source value is available for direct comparison. The published passive force-length law is included in every muscle channel. Its coefficients are from Prilutsky et al. (2016), Table 10.3, and Rahmati et al. (2025), Table 3. Applying the same normalized law to added muscle channels is a modeling assumption. | Published parallel elastic architecture: Prilutsky et al. 2016 Table 10.3 (10.1007/978-1-4939-3267-2_10); Rahmati et al. 2025 Table 3 (10.1113/JP287448). Common normalized curve extended to all model channels; no muscle-specific passive calibration is claimed. |
-| FR_S_T2 | degroote_force_velocity_enabled | 0/1 | 1 uses the documented De Groote/OpenSim velocity curve; 0 uses the source curve. | Not established | 1 | No verified source value is available for direct comparison. Model-law choice: 1 enables the smooth De Groote force-velocity relation; 0 selects the alternative implemented law. | No verified one-to-one numerical source is established for this added channel. Applied estimates are in Data/Model_Parameters/muscle_tendon.py; anatomical source records are in Data/Original_Study_Data/additional_muscles/. |
-| FL_S_T3 | max_isometric_tendon_force_N | N | Maximum isometric force projected along the tendon; do not multiply by pennation cosine twice. | Not established | 1.6218194 | No verified source value is available for direct comparison. Force capacity was calibrated with motor inputs to improve mechanical agreement; the fit does not uniquely identify it. | No verified one-to-one numerical source is established for this added channel. Applied estimates are in Data/Model_Parameters/muscle_tendon.py; anatomical source records are in Data/Original_Study_Data/additional_muscles/. |
-| FL_S_T3 | optimal_fiber_length_m | m | Optimal fascicle/fiber length, not whole muscle-tendon length. | Not established | 0.022790213 | No verified source value is available for direct comparison. Fiber length and shortening speed were calibrated to set the force-length and force-velocity operating ranges. Physical maximum fiber speed is optimal_fiber_length_m multiplied by max_fiber_speed_optimal_lengths_per_s. The source and applied numbers are given in this row; these are not new tissue measurements. | No verified one-to-one numerical source is established for this added channel. Applied estimates are in Data/Model_Parameters/muscle_tendon.py; anatomical source records are in Data/Original_Study_Data/additional_muscles/. |
-| FL_S_T3 | tendon_slack_length_m | m | Unloaded series tendon length. | Not established | 0.0053750502 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | No verified one-to-one numerical source is established for this added channel. Applied estimates are in Data/Model_Parameters/muscle_tendon.py; anatomical source records are in Data/Original_Study_Data/additional_muscles/. |
-| FL_S_T3 | pennation_cosine | 1 | Cosine of the constant fiber-to-tendon pennation angle. | Not established | 1 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | No verified one-to-one numerical source is established for this added channel. Applied estimates are in Data/Model_Parameters/muscle_tendon.py; anatomical source records are in Data/Original_Study_Data/additional_muscles/. |
-| FL_S_T3 | tendon_strain_at_max_force | 1 | Tendon extension/slack length at one maximum isometric tendon force. | Not established | 0.04 | No verified source value is available for direct comparison. Assumed elastic-tendon compliance; not a measured tendon strain for this animal. | No verified one-to-one numerical source is established for this added channel. Applied estimates are in Data/Model_Parameters/muscle_tendon.py; anatomical source records are in Data/Original_Study_Data/additional_muscles/. |
-| FL_S_T3 | max_fiber_speed_optimal_lengths_per_s | 1/s | Positive maximum-shortening speed magnitude, measured in optimal fiber lengths per second. | Not established | 9.4339623 | No verified source value is available for direct comparison. Fiber length and shortening speed were calibrated to set the force-length and force-velocity operating ranges. Physical maximum fiber speed is optimal_fiber_length_m multiplied by max_fiber_speed_optimal_lengths_per_s. The source and applied numbers are given in this row; these are not new tissue measurements. | No verified one-to-one numerical source is established for this added channel. Applied estimates are in Data/Model_Parameters/muscle_tendon.py; anatomical source records are in Data/Original_Study_Data/additional_muscles/. |
-| FL_S_T3 | normalized_fiber_damping | 1 | Coefficient of normalized fiber velocity in the normalized tendon-direction force balance. | Not established | 0.0043000402 | No verified source value is available for direct comparison. Effective muscle force-balance coefficient; source-law conversion and calibration are described in the methods. | No verified one-to-one numerical source is established for this added channel. Applied estimates are in Data/Model_Parameters/muscle_tendon.py; anatomical source records are in Data/Original_Study_Data/additional_muscles/. |
-| FL_S_T3 | MT_path_length_offset_m | m | Constant offset added to the routed path to define muscle-tendon length. | Not established | 0 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | No verified one-to-one numerical source is established for this added channel. Applied estimates are in Data/Model_Parameters/muscle_tendon.py; anatomical source records are in Data/Original_Study_Data/additional_muscles/. |
-| FL_S_T3 | active_force_length_exponent | 1 | Exponent rho in the source active force-length curve. | Not established | 3 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | No verified one-to-one numerical source is established for this added channel. Applied estimates are in Data/Model_Parameters/muscle_tendon.py; anatomical source records are in Data/Original_Study_Data/additional_muscles/. |
-| FL_S_T3 | source_shortening_curvature | 1 | Source shortening-curve coefficient; inactive when De Groote force-velocity mode is selected. | Not established | 0.45283 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | No verified one-to-one numerical source is established for this added channel. Applied estimates are in Data/Model_Parameters/muscle_tendon.py; anatomical source records are in Data/Original_Study_Data/additional_muscles/. |
-| FL_S_T3 | source_lengthening_curvature | 1 | Source lengthening-curve coefficient; inactive when De Groote force-velocity mode is selected. | Not established | 0.54054061 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | No verified one-to-one numerical source is established for this added channel. Applied estimates are in Data/Model_Parameters/muscle_tendon.py; anatomical source records are in Data/Original_Study_Data/additional_muscles/. |
-| FL_S_T3 | passive_fiber_enabled | 0/1 | 1 enables passive fiber tension within the elastic equilibrium; zero force below l_f/l_opt=1 does not mean it is disabled. | Not established | 1 | No verified source value is available for direct comparison. The published passive force-length law is included in every muscle channel. Its coefficients are from Prilutsky et al. (2016), Table 10.3, and Rahmati et al. (2025), Table 3. Applying the same normalized law to added muscle channels is a modeling assumption. | Published parallel elastic architecture: Prilutsky et al. 2016 Table 10.3 (10.1007/978-1-4939-3267-2_10); Rahmati et al. 2025 Table 3 (10.1113/JP287448). Common normalized curve extended to all model channels; no muscle-specific passive calibration is claimed. |
-| FL_S_T3 | degroote_force_velocity_enabled | 0/1 | 1 uses the documented De Groote/OpenSim velocity curve; 0 uses the source curve. | Not established | 1 | No verified source value is available for direct comparison. Model-law choice: 1 enables the smooth De Groote force-velocity relation; 0 selects the alternative implemented law. | No verified one-to-one numerical source is established for this added channel. Applied estimates are in Data/Model_Parameters/muscle_tendon.py; anatomical source records are in Data/Original_Study_Data/additional_muscles/. |
-| FR_S_T3 | max_isometric_tendon_force_N | N | Maximum isometric force projected along the tendon; do not multiply by pennation cosine twice. | Not established | 1.6218194 | No verified source value is available for direct comparison. Force capacity was calibrated with motor inputs to improve mechanical agreement; the fit does not uniquely identify it. | No verified one-to-one numerical source is established for this added channel. Applied estimates are in Data/Model_Parameters/muscle_tendon.py; anatomical source records are in Data/Original_Study_Data/additional_muscles/. |
-| FR_S_T3 | optimal_fiber_length_m | m | Optimal fascicle/fiber length, not whole muscle-tendon length. | Not established | 0.022790213 | No verified source value is available for direct comparison. Fiber length and shortening speed were calibrated to set the force-length and force-velocity operating ranges. Physical maximum fiber speed is optimal_fiber_length_m multiplied by max_fiber_speed_optimal_lengths_per_s. The source and applied numbers are given in this row; these are not new tissue measurements. | No verified one-to-one numerical source is established for this added channel. Applied estimates are in Data/Model_Parameters/muscle_tendon.py; anatomical source records are in Data/Original_Study_Data/additional_muscles/. |
-| FR_S_T3 | tendon_slack_length_m | m | Unloaded series tendon length. | Not established | 0.0053750502 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | No verified one-to-one numerical source is established for this added channel. Applied estimates are in Data/Model_Parameters/muscle_tendon.py; anatomical source records are in Data/Original_Study_Data/additional_muscles/. |
-| FR_S_T3 | pennation_cosine | 1 | Cosine of the constant fiber-to-tendon pennation angle. | Not established | 1 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | No verified one-to-one numerical source is established for this added channel. Applied estimates are in Data/Model_Parameters/muscle_tendon.py; anatomical source records are in Data/Original_Study_Data/additional_muscles/. |
-| FR_S_T3 | tendon_strain_at_max_force | 1 | Tendon extension/slack length at one maximum isometric tendon force. | Not established | 0.04 | No verified source value is available for direct comparison. Assumed elastic-tendon compliance; not a measured tendon strain for this animal. | No verified one-to-one numerical source is established for this added channel. Applied estimates are in Data/Model_Parameters/muscle_tendon.py; anatomical source records are in Data/Original_Study_Data/additional_muscles/. |
-| FR_S_T3 | max_fiber_speed_optimal_lengths_per_s | 1/s | Positive maximum-shortening speed magnitude, measured in optimal fiber lengths per second. | Not established | 9.4339623 | No verified source value is available for direct comparison. Fiber length and shortening speed were calibrated to set the force-length and force-velocity operating ranges. Physical maximum fiber speed is optimal_fiber_length_m multiplied by max_fiber_speed_optimal_lengths_per_s. The source and applied numbers are given in this row; these are not new tissue measurements. | No verified one-to-one numerical source is established for this added channel. Applied estimates are in Data/Model_Parameters/muscle_tendon.py; anatomical source records are in Data/Original_Study_Data/additional_muscles/. |
-| FR_S_T3 | normalized_fiber_damping | 1 | Coefficient of normalized fiber velocity in the normalized tendon-direction force balance. | Not established | 0.0043000402 | No verified source value is available for direct comparison. Effective muscle force-balance coefficient; source-law conversion and calibration are described in the methods. | No verified one-to-one numerical source is established for this added channel. Applied estimates are in Data/Model_Parameters/muscle_tendon.py; anatomical source records are in Data/Original_Study_Data/additional_muscles/. |
+Each entry contains its values, units, meaning and source information. Select an entry to read all fields.
+
+<details>
+<summary>FL_S_C3 · tendon_slack_length_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_S_C3 |
+| Parameter | tendon_slack_length_m |
+| Unit | m |
+| Meaning | Unloaded series tendon length. |
+| Source value | Not established |
+| Value used in this model | 0.012162708 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | No verified one-to-one numerical source is established for this added channel. Applied estimates are in Data/Model_Parameters/muscle_tendon.py; anatomical source records are in Data/Original_Study_Data/additional_muscles/. |
+
+</details>
+
+<details>
+<summary>FL_S_C3 · pennation_cosine</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_S_C3 |
+| Parameter | pennation_cosine |
+| Unit | 1 |
+| Meaning | Cosine of the constant fiber-to-tendon pennation angle. |
+| Source value | Not established |
+| Value used in this model | 1 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | No verified one-to-one numerical source is established for this added channel. Applied estimates are in Data/Model_Parameters/muscle_tendon.py; anatomical source records are in Data/Original_Study_Data/additional_muscles/. |
+
+</details>
+
+<details>
+<summary>FL_S_C3 · tendon_strain_at_max_force</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_S_C3 |
+| Parameter | tendon_strain_at_max_force |
+| Unit | 1 |
+| Meaning | Tendon extension/slack length at one maximum isometric tendon force. |
+| Source value | Not established |
+| Value used in this model | 0.04 |
+| What changed and why | No verified source value is available for direct comparison. Assumed elastic-tendon compliance; not a measured tendon strain for this animal. |
+| Source / evidence | No verified one-to-one numerical source is established for this added channel. Applied estimates are in Data/Model_Parameters/muscle_tendon.py; anatomical source records are in Data/Original_Study_Data/additional_muscles/. |
+
+</details>
+
+<details>
+<summary>FL_S_C3 · max_fiber_speed_optimal_lengths_per_s</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_S_C3 |
+| Parameter | max_fiber_speed_optimal_lengths_per_s |
+| Unit | 1/s |
+| Meaning | Positive maximum-shortening speed magnitude, measured in optimal fiber lengths per second. |
+| Source value | Not established |
+| Value used in this model | 9.4339623 |
+| What changed and why | No verified source value is available for direct comparison. Fiber length and shortening speed were calibrated to set the force-length and force-velocity operating ranges. Physical maximum fiber speed is optimal_fiber_length_m multiplied by max_fiber_speed_optimal_lengths_per_s. The source and applied numbers are given in this row; these are not new tissue measurements. |
+| Source / evidence | No verified one-to-one numerical source is established for this added channel. Applied estimates are in Data/Model_Parameters/muscle_tendon.py; anatomical source records are in Data/Original_Study_Data/additional_muscles/. |
+
+</details>
+
+<details>
+<summary>FL_S_C3 · normalized_fiber_damping</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_S_C3 |
+| Parameter | normalized_fiber_damping |
+| Unit | 1 |
+| Meaning | Coefficient of normalized fiber velocity in the normalized tendon-direction force balance. |
+| Source value | Not established |
+| Value used in this model | 0.0097301664 |
+| What changed and why | No verified source value is available for direct comparison. Effective muscle force-balance coefficient; source-law conversion and calibration are described in the methods. |
+| Source / evidence | No verified one-to-one numerical source is established for this added channel. Applied estimates are in Data/Model_Parameters/muscle_tendon.py; anatomical source records are in Data/Original_Study_Data/additional_muscles/. |
+
+</details>
+
+<details>
+<summary>FL_S_C3 · MT_path_length_offset_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_S_C3 |
+| Parameter | MT_path_length_offset_m |
+| Unit | m |
+| Meaning | Constant offset added to the routed path to define muscle-tendon length. |
+| Source value | Not established |
+| Value used in this model | 0 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | No verified one-to-one numerical source is established for this added channel. Applied estimates are in Data/Model_Parameters/muscle_tendon.py; anatomical source records are in Data/Original_Study_Data/additional_muscles/. |
+
+</details>
+
+<details>
+<summary>FL_S_C3 · active_force_length_exponent</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_S_C3 |
+| Parameter | active_force_length_exponent |
+| Unit | 1 |
+| Meaning | Exponent rho in the source active force-length curve. |
+| Source value | Not established |
+| Value used in this model | 3 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | No verified one-to-one numerical source is established for this added channel. Applied estimates are in Data/Model_Parameters/muscle_tendon.py; anatomical source records are in Data/Original_Study_Data/additional_muscles/. |
+
+</details>
+
+<details>
+<summary>FL_S_C3 · source_shortening_curvature</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_S_C3 |
+| Parameter | source_shortening_curvature |
+| Unit | 1 |
+| Meaning | Source shortening-curve coefficient; inactive when De Groote force-velocity mode is selected. |
+| Source value | Not established |
+| Value used in this model | 0.45283 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | No verified one-to-one numerical source is established for this added channel. Applied estimates are in Data/Model_Parameters/muscle_tendon.py; anatomical source records are in Data/Original_Study_Data/additional_muscles/. |
+
+</details>
+
+<details>
+<summary>FL_S_C3 · source_lengthening_curvature</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_S_C3 |
+| Parameter | source_lengthening_curvature |
+| Unit | 1 |
+| Meaning | Source lengthening-curve coefficient; inactive when De Groote force-velocity mode is selected. |
+| Source value | Not established |
+| Value used in this model | 0.37057762 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | No verified one-to-one numerical source is established for this added channel. Applied estimates are in Data/Model_Parameters/muscle_tendon.py; anatomical source records are in Data/Original_Study_Data/additional_muscles/. |
+
+</details>
+
+<details>
+<summary>FL_S_C3 · passive_fiber_enabled</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_S_C3 |
+| Parameter | passive_fiber_enabled |
+| Unit | 0/1 |
+| Meaning | 1 enables passive fiber tension within the elastic equilibrium; zero force below l_f/l_opt=1 does not mean it is disabled. |
+| Source value | Not established |
+| Value used in this model | 1 |
+| What changed and why | No verified source value is available for direct comparison. The published passive force-length law is included in every muscle channel. Its coefficients are from Prilutsky et al. (2016), Table 10.3, and Rahmati et al. (2025), Table 3. Applying the same normalized law to added muscle channels is a modeling assumption. |
+| Source / evidence | Published parallel elastic architecture: Prilutsky et al. 2016 Table 10.3 (10.1007/978-1-4939-3267-2_10); Rahmati et al. 2025 Table 3 (10.1113/JP287448). Common normalized curve extended to all model channels; no muscle-specific passive calibration is claimed. |
+
+</details>
+
+<details>
+<summary>FL_S_C3 · degroote_force_velocity_enabled</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_S_C3 |
+| Parameter | degroote_force_velocity_enabled |
+| Unit | 0/1 |
+| Meaning | 1 uses the documented De Groote/OpenSim velocity curve; 0 uses the source curve. |
+| Source value | Not established |
+| Value used in this model | 1 |
+| What changed and why | No verified source value is available for direct comparison. Model-law choice: 1 enables the smooth De Groote force-velocity relation; 0 selects the alternative implemented law. |
+| Source / evidence | No verified one-to-one numerical source is established for this added channel. Applied estimates are in Data/Model_Parameters/muscle_tendon.py; anatomical source records are in Data/Original_Study_Data/additional_muscles/. |
+
+</details>
+
+<details>
+<summary>FR_S_C3 · max_isometric_tendon_force_N</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FR_S_C3 |
+| Parameter | max_isometric_tendon_force_N |
+| Unit | N |
+| Meaning | Maximum isometric force projected along the tendon; do not multiply by pennation cosine twice. |
+| Source value | Not established |
+| Value used in this model | 3.8436556 |
+| What changed and why | No verified source value is available for direct comparison. Force capacity was calibrated with motor inputs to improve mechanical agreement; the fit does not uniquely identify it. |
+| Source / evidence | No verified one-to-one numerical source is established for this added channel. Applied estimates are in Data/Model_Parameters/muscle_tendon.py; anatomical source records are in Data/Original_Study_Data/additional_muscles/. |
+
+</details>
+
+<details>
+<summary>FR_S_C3 · optimal_fiber_length_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FR_S_C3 |
+| Parameter | optimal_fiber_length_m |
+| Unit | m |
+| Meaning | Optimal fascicle/fiber length, not whole muscle-tendon length. |
+| Source value | Not established |
+| Value used in this model | 0.051569882 |
+| What changed and why | No verified source value is available for direct comparison. Fiber length and shortening speed were calibrated to set the force-length and force-velocity operating ranges. Physical maximum fiber speed is optimal_fiber_length_m multiplied by max_fiber_speed_optimal_lengths_per_s. The source and applied numbers are given in this row; these are not new tissue measurements. |
+| Source / evidence | No verified one-to-one numerical source is established for this added channel. Applied estimates are in Data/Model_Parameters/muscle_tendon.py; anatomical source records are in Data/Original_Study_Data/additional_muscles/. |
+
+</details>
+
+<details>
+<summary>FR_S_C3 · tendon_slack_length_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FR_S_C3 |
+| Parameter | tendon_slack_length_m |
+| Unit | m |
+| Meaning | Unloaded series tendon length. |
+| Source value | Not established |
+| Value used in this model | 0.012162708 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | No verified one-to-one numerical source is established for this added channel. Applied estimates are in Data/Model_Parameters/muscle_tendon.py; anatomical source records are in Data/Original_Study_Data/additional_muscles/. |
+
+</details>
+
+<details>
+<summary>FR_S_C3 · pennation_cosine</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FR_S_C3 |
+| Parameter | pennation_cosine |
+| Unit | 1 |
+| Meaning | Cosine of the constant fiber-to-tendon pennation angle. |
+| Source value | Not established |
+| Value used in this model | 1 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | No verified one-to-one numerical source is established for this added channel. Applied estimates are in Data/Model_Parameters/muscle_tendon.py; anatomical source records are in Data/Original_Study_Data/additional_muscles/. |
+
+</details>
+
+<details>
+<summary>FR_S_C3 · tendon_strain_at_max_force</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FR_S_C3 |
+| Parameter | tendon_strain_at_max_force |
+| Unit | 1 |
+| Meaning | Tendon extension/slack length at one maximum isometric tendon force. |
+| Source value | Not established |
+| Value used in this model | 0.04 |
+| What changed and why | No verified source value is available for direct comparison. Assumed elastic-tendon compliance; not a measured tendon strain for this animal. |
+| Source / evidence | No verified one-to-one numerical source is established for this added channel. Applied estimates are in Data/Model_Parameters/muscle_tendon.py; anatomical source records are in Data/Original_Study_Data/additional_muscles/. |
+
+</details>
+
+<details>
+<summary>FR_S_C3 · max_fiber_speed_optimal_lengths_per_s</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FR_S_C3 |
+| Parameter | max_fiber_speed_optimal_lengths_per_s |
+| Unit | 1/s |
+| Meaning | Positive maximum-shortening speed magnitude, measured in optimal fiber lengths per second. |
+| Source value | Not established |
+| Value used in this model | 9.4339623 |
+| What changed and why | No verified source value is available for direct comparison. Fiber length and shortening speed were calibrated to set the force-length and force-velocity operating ranges. Physical maximum fiber speed is optimal_fiber_length_m multiplied by max_fiber_speed_optimal_lengths_per_s. The source and applied numbers are given in this row; these are not new tissue measurements. |
+| Source / evidence | No verified one-to-one numerical source is established for this added channel. Applied estimates are in Data/Model_Parameters/muscle_tendon.py; anatomical source records are in Data/Original_Study_Data/additional_muscles/. |
+
+</details>
+
+<details>
+<summary>FR_S_C3 · normalized_fiber_damping</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FR_S_C3 |
+| Parameter | normalized_fiber_damping |
+| Unit | 1 |
+| Meaning | Coefficient of normalized fiber velocity in the normalized tendon-direction force balance. |
+| Source value | Not established |
+| Value used in this model | 0.0097301664 |
+| What changed and why | No verified source value is available for direct comparison. Effective muscle force-balance coefficient; source-law conversion and calibration are described in the methods. |
+| Source / evidence | No verified one-to-one numerical source is established for this added channel. Applied estimates are in Data/Model_Parameters/muscle_tendon.py; anatomical source records are in Data/Original_Study_Data/additional_muscles/. |
+
+</details>
+
+<details>
+<summary>FR_S_C3 · MT_path_length_offset_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FR_S_C3 |
+| Parameter | MT_path_length_offset_m |
+| Unit | m |
+| Meaning | Constant offset added to the routed path to define muscle-tendon length. |
+| Source value | Not established |
+| Value used in this model | 0 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | No verified one-to-one numerical source is established for this added channel. Applied estimates are in Data/Model_Parameters/muscle_tendon.py; anatomical source records are in Data/Original_Study_Data/additional_muscles/. |
+
+</details>
+
+<details>
+<summary>FR_S_C3 · active_force_length_exponent</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FR_S_C3 |
+| Parameter | active_force_length_exponent |
+| Unit | 1 |
+| Meaning | Exponent rho in the source active force-length curve. |
+| Source value | Not established |
+| Value used in this model | 3 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | No verified one-to-one numerical source is established for this added channel. Applied estimates are in Data/Model_Parameters/muscle_tendon.py; anatomical source records are in Data/Original_Study_Data/additional_muscles/. |
+
+</details>
+
+<details>
+<summary>FR_S_C3 · source_shortening_curvature</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FR_S_C3 |
+| Parameter | source_shortening_curvature |
+| Unit | 1 |
+| Meaning | Source shortening-curve coefficient; inactive when De Groote force-velocity mode is selected. |
+| Source value | Not established |
+| Value used in this model | 0.45283 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | No verified one-to-one numerical source is established for this added channel. Applied estimates are in Data/Model_Parameters/muscle_tendon.py; anatomical source records are in Data/Original_Study_Data/additional_muscles/. |
+
+</details>
+
+<details>
+<summary>FR_S_C3 · source_lengthening_curvature</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FR_S_C3 |
+| Parameter | source_lengthening_curvature |
+| Unit | 1 |
+| Meaning | Source lengthening-curve coefficient; inactive when De Groote force-velocity mode is selected. |
+| Source value | Not established |
+| Value used in this model | 0.37057762 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | No verified one-to-one numerical source is established for this added channel. Applied estimates are in Data/Model_Parameters/muscle_tendon.py; anatomical source records are in Data/Original_Study_Data/additional_muscles/. |
+
+</details>
+
+<details>
+<summary>FR_S_C3 · passive_fiber_enabled</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FR_S_C3 |
+| Parameter | passive_fiber_enabled |
+| Unit | 0/1 |
+| Meaning | 1 enables passive fiber tension within the elastic equilibrium; zero force below l_f/l_opt=1 does not mean it is disabled. |
+| Source value | Not established |
+| Value used in this model | 1 |
+| What changed and why | No verified source value is available for direct comparison. The published passive force-length law is included in every muscle channel. Its coefficients are from Prilutsky et al. (2016), Table 10.3, and Rahmati et al. (2025), Table 3. Applying the same normalized law to added muscle channels is a modeling assumption. |
+| Source / evidence | Published parallel elastic architecture: Prilutsky et al. 2016 Table 10.3 (10.1007/978-1-4939-3267-2_10); Rahmati et al. 2025 Table 3 (10.1113/JP287448). Common normalized curve extended to all model channels; no muscle-specific passive calibration is claimed. |
+
+</details>
+
+<details>
+<summary>FR_S_C3 · degroote_force_velocity_enabled</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FR_S_C3 |
+| Parameter | degroote_force_velocity_enabled |
+| Unit | 0/1 |
+| Meaning | 1 uses the documented De Groote/OpenSim velocity curve; 0 uses the source curve. |
+| Source value | Not established |
+| Value used in this model | 1 |
+| What changed and why | No verified source value is available for direct comparison. Model-law choice: 1 enables the smooth De Groote force-velocity relation; 0 selects the alternative implemented law. |
+| Source / evidence | No verified one-to-one numerical source is established for this added channel. Applied estimates are in Data/Model_Parameters/muscle_tendon.py; anatomical source records are in Data/Original_Study_Data/additional_muscles/. |
+
+</details>
+
+<details>
+<summary>FL_S_C4 · max_isometric_tendon_force_N</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_S_C4 |
+| Parameter | max_isometric_tendon_force_N |
+| Unit | N |
+| Meaning | Maximum isometric force projected along the tendon; do not multiply by pennation cosine twice. |
+| Source value | Not established |
+| Value used in this model | 4.1050061 |
+| What changed and why | No verified source value is available for direct comparison. Force capacity was calibrated with motor inputs to improve mechanical agreement; the fit does not uniquely identify it. |
+| Source / evidence | No verified one-to-one numerical source is established for this added channel. Applied estimates are in Data/Model_Parameters/muscle_tendon.py; anatomical source records are in Data/Original_Study_Data/additional_muscles/. |
+
+</details>
+
+<details>
+<summary>FL_S_C4 · optimal_fiber_length_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_S_C4 |
+| Parameter | optimal_fiber_length_m |
+| Unit | m |
+| Meaning | Optimal fascicle/fiber length, not whole muscle-tendon length. |
+| Source value | Not established |
+| Value used in this model | 0.046113183 |
+| What changed and why | No verified source value is available for direct comparison. Fiber length and shortening speed were calibrated to set the force-length and force-velocity operating ranges. Physical maximum fiber speed is optimal_fiber_length_m multiplied by max_fiber_speed_optimal_lengths_per_s. The source and applied numbers are given in this row; these are not new tissue measurements. |
+| Source / evidence | No verified one-to-one numerical source is established for this added channel. Applied estimates are in Data/Model_Parameters/muscle_tendon.py; anatomical source records are in Data/Original_Study_Data/additional_muscles/. |
+
+</details>
+
+<details>
+<summary>FL_S_C4 · tendon_slack_length_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_S_C4 |
+| Parameter | tendon_slack_length_m |
+| Unit | m |
+| Meaning | Unloaded series tendon length. |
+| Source value | Not established |
+| Value used in this model | 0.010875751 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | No verified one-to-one numerical source is established for this added channel. Applied estimates are in Data/Model_Parameters/muscle_tendon.py; anatomical source records are in Data/Original_Study_Data/additional_muscles/. |
+
+</details>
+
+<details>
+<summary>FL_S_C4 · pennation_cosine</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_S_C4 |
+| Parameter | pennation_cosine |
+| Unit | 1 |
+| Meaning | Cosine of the constant fiber-to-tendon pennation angle. |
+| Source value | Not established |
+| Value used in this model | 1 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | No verified one-to-one numerical source is established for this added channel. Applied estimates are in Data/Model_Parameters/muscle_tendon.py; anatomical source records are in Data/Original_Study_Data/additional_muscles/. |
+
+</details>
+
+<details>
+<summary>FL_S_C4 · tendon_strain_at_max_force</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_S_C4 |
+| Parameter | tendon_strain_at_max_force |
+| Unit | 1 |
+| Meaning | Tendon extension/slack length at one maximum isometric tendon force. |
+| Source value | Not established |
+| Value used in this model | 0.04 |
+| What changed and why | No verified source value is available for direct comparison. Assumed elastic-tendon compliance; not a measured tendon strain for this animal. |
+| Source / evidence | No verified one-to-one numerical source is established for this added channel. Applied estimates are in Data/Model_Parameters/muscle_tendon.py; anatomical source records are in Data/Original_Study_Data/additional_muscles/. |
+
+</details>
+
+<details>
+<summary>FL_S_C4 · max_fiber_speed_optimal_lengths_per_s</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_S_C4 |
+| Parameter | max_fiber_speed_optimal_lengths_per_s |
+| Unit | 1/s |
+| Meaning | Positive maximum-shortening speed magnitude, measured in optimal fiber lengths per second. |
+| Source value | Not established |
+| Value used in this model | 9.4339623 |
+| What changed and why | No verified source value is available for direct comparison. Fiber length and shortening speed were calibrated to set the force-length and force-velocity operating ranges. Physical maximum fiber speed is optimal_fiber_length_m multiplied by max_fiber_speed_optimal_lengths_per_s. The source and applied numbers are given in this row; these are not new tissue measurements. |
+| Source / evidence | No verified one-to-one numerical source is established for this added channel. Applied estimates are in Data/Model_Parameters/muscle_tendon.py; anatomical source records are in Data/Original_Study_Data/additional_muscles/. |
+
+</details>
+
+<details>
+<summary>FL_S_C4 · normalized_fiber_damping</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_S_C4 |
+| Parameter | normalized_fiber_damping |
+| Unit | 1 |
+| Meaning | Coefficient of normalized fiber velocity in the normalized tendon-direction force balance. |
+| Source value | Not established |
+| Value used in this model | 0.0087006006 |
+| What changed and why | No verified source value is available for direct comparison. Effective muscle force-balance coefficient; source-law conversion and calibration are described in the methods. |
+| Source / evidence | No verified one-to-one numerical source is established for this added channel. Applied estimates are in Data/Model_Parameters/muscle_tendon.py; anatomical source records are in Data/Original_Study_Data/additional_muscles/. |
+
+</details>
+
+<details>
+<summary>FL_S_C4 · MT_path_length_offset_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_S_C4 |
+| Parameter | MT_path_length_offset_m |
+| Unit | m |
+| Meaning | Constant offset added to the routed path to define muscle-tendon length. |
+| Source value | Not established |
+| Value used in this model | 0 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | No verified one-to-one numerical source is established for this added channel. Applied estimates are in Data/Model_Parameters/muscle_tendon.py; anatomical source records are in Data/Original_Study_Data/additional_muscles/. |
+
+</details>
+
+<details>
+<summary>FL_S_C4 · active_force_length_exponent</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_S_C4 |
+| Parameter | active_force_length_exponent |
+| Unit | 1 |
+| Meaning | Exponent rho in the source active force-length curve. |
+| Source value | Not established |
+| Value used in this model | 3 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | No verified one-to-one numerical source is established for this added channel. Applied estimates are in Data/Model_Parameters/muscle_tendon.py; anatomical source records are in Data/Original_Study_Data/additional_muscles/. |
+
+</details>
+
+<details>
+<summary>FL_S_C4 · source_shortening_curvature</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_S_C4 |
+| Parameter | source_shortening_curvature |
+| Unit | 1 |
+| Meaning | Source shortening-curve coefficient; inactive when De Groote force-velocity mode is selected. |
+| Source value | Not established |
+| Value used in this model | 0.45283 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | No verified one-to-one numerical source is established for this added channel. Applied estimates are in Data/Model_Parameters/muscle_tendon.py; anatomical source records are in Data/Original_Study_Data/additional_muscles/. |
+
+</details>
+
+<details>
+<summary>FL_S_C4 · source_lengthening_curvature</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_S_C4 |
+| Parameter | source_lengthening_curvature |
+| Unit | 1 |
+| Meaning | Source lengthening-curve coefficient; inactive when De Groote force-velocity mode is selected. |
+| Source value | Not established |
+| Value used in this model | 0.35752841 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | No verified one-to-one numerical source is established for this added channel. Applied estimates are in Data/Model_Parameters/muscle_tendon.py; anatomical source records are in Data/Original_Study_Data/additional_muscles/. |
+
+</details>
+
+<details>
+<summary>FL_S_C4 · passive_fiber_enabled</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_S_C4 |
+| Parameter | passive_fiber_enabled |
+| Unit | 0/1 |
+| Meaning | 1 enables passive fiber tension within the elastic equilibrium; zero force below l_f/l_opt=1 does not mean it is disabled. |
+| Source value | Not established |
+| Value used in this model | 1 |
+| What changed and why | No verified source value is available for direct comparison. The published passive force-length law is included in every muscle channel. Its coefficients are from Prilutsky et al. (2016), Table 10.3, and Rahmati et al. (2025), Table 3. Applying the same normalized law to added muscle channels is a modeling assumption. |
+| Source / evidence | Published parallel elastic architecture: Prilutsky et al. 2016 Table 10.3 (10.1007/978-1-4939-3267-2_10); Rahmati et al. 2025 Table 3 (10.1113/JP287448). Common normalized curve extended to all model channels; no muscle-specific passive calibration is claimed. |
+
+</details>
+
+<details>
+<summary>FL_S_C4 · degroote_force_velocity_enabled</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_S_C4 |
+| Parameter | degroote_force_velocity_enabled |
+| Unit | 0/1 |
+| Meaning | 1 uses the documented De Groote/OpenSim velocity curve; 0 uses the source curve. |
+| Source value | Not established |
+| Value used in this model | 1 |
+| What changed and why | No verified source value is available for direct comparison. Model-law choice: 1 enables the smooth De Groote force-velocity relation; 0 selects the alternative implemented law. |
+| Source / evidence | No verified one-to-one numerical source is established for this added channel. Applied estimates are in Data/Model_Parameters/muscle_tendon.py; anatomical source records are in Data/Original_Study_Data/additional_muscles/. |
+
+</details>
+
+<details>
+<summary>FR_S_C4 · max_isometric_tendon_force_N</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FR_S_C4 |
+| Parameter | max_isometric_tendon_force_N |
+| Unit | N |
+| Meaning | Maximum isometric force projected along the tendon; do not multiply by pennation cosine twice. |
+| Source value | Not established |
+| Value used in this model | 4.1050061 |
+| What changed and why | No verified source value is available for direct comparison. Force capacity was calibrated with motor inputs to improve mechanical agreement; the fit does not uniquely identify it. |
+| Source / evidence | No verified one-to-one numerical source is established for this added channel. Applied estimates are in Data/Model_Parameters/muscle_tendon.py; anatomical source records are in Data/Original_Study_Data/additional_muscles/. |
+
+</details>
+
+<details>
+<summary>FR_S_C4 · optimal_fiber_length_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FR_S_C4 |
+| Parameter | optimal_fiber_length_m |
+| Unit | m |
+| Meaning | Optimal fascicle/fiber length, not whole muscle-tendon length. |
+| Source value | Not established |
+| Value used in this model | 0.046113183 |
+| What changed and why | No verified source value is available for direct comparison. Fiber length and shortening speed were calibrated to set the force-length and force-velocity operating ranges. Physical maximum fiber speed is optimal_fiber_length_m multiplied by max_fiber_speed_optimal_lengths_per_s. The source and applied numbers are given in this row; these are not new tissue measurements. |
+| Source / evidence | No verified one-to-one numerical source is established for this added channel. Applied estimates are in Data/Model_Parameters/muscle_tendon.py; anatomical source records are in Data/Original_Study_Data/additional_muscles/. |
+
+</details>
+
+<details>
+<summary>FR_S_C4 · tendon_slack_length_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FR_S_C4 |
+| Parameter | tendon_slack_length_m |
+| Unit | m |
+| Meaning | Unloaded series tendon length. |
+| Source value | Not established |
+| Value used in this model | 0.010875751 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | No verified one-to-one numerical source is established for this added channel. Applied estimates are in Data/Model_Parameters/muscle_tendon.py; anatomical source records are in Data/Original_Study_Data/additional_muscles/. |
+
+</details>
+
+<details>
+<summary>FR_S_C4 · pennation_cosine</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FR_S_C4 |
+| Parameter | pennation_cosine |
+| Unit | 1 |
+| Meaning | Cosine of the constant fiber-to-tendon pennation angle. |
+| Source value | Not established |
+| Value used in this model | 1 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | No verified one-to-one numerical source is established for this added channel. Applied estimates are in Data/Model_Parameters/muscle_tendon.py; anatomical source records are in Data/Original_Study_Data/additional_muscles/. |
+
+</details>
+
+<details>
+<summary>FR_S_C4 · tendon_strain_at_max_force</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FR_S_C4 |
+| Parameter | tendon_strain_at_max_force |
+| Unit | 1 |
+| Meaning | Tendon extension/slack length at one maximum isometric tendon force. |
+| Source value | Not established |
+| Value used in this model | 0.04 |
+| What changed and why | No verified source value is available for direct comparison. Assumed elastic-tendon compliance; not a measured tendon strain for this animal. |
+| Source / evidence | No verified one-to-one numerical source is established for this added channel. Applied estimates are in Data/Model_Parameters/muscle_tendon.py; anatomical source records are in Data/Original_Study_Data/additional_muscles/. |
+
+</details>
+
+<details>
+<summary>FR_S_C4 · max_fiber_speed_optimal_lengths_per_s</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FR_S_C4 |
+| Parameter | max_fiber_speed_optimal_lengths_per_s |
+| Unit | 1/s |
+| Meaning | Positive maximum-shortening speed magnitude, measured in optimal fiber lengths per second. |
+| Source value | Not established |
+| Value used in this model | 9.4339623 |
+| What changed and why | No verified source value is available for direct comparison. Fiber length and shortening speed were calibrated to set the force-length and force-velocity operating ranges. Physical maximum fiber speed is optimal_fiber_length_m multiplied by max_fiber_speed_optimal_lengths_per_s. The source and applied numbers are given in this row; these are not new tissue measurements. |
+| Source / evidence | No verified one-to-one numerical source is established for this added channel. Applied estimates are in Data/Model_Parameters/muscle_tendon.py; anatomical source records are in Data/Original_Study_Data/additional_muscles/. |
+
+</details>
+
+<details>
+<summary>FR_S_C4 · normalized_fiber_damping</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FR_S_C4 |
+| Parameter | normalized_fiber_damping |
+| Unit | 1 |
+| Meaning | Coefficient of normalized fiber velocity in the normalized tendon-direction force balance. |
+| Source value | Not established |
+| Value used in this model | 0.0087006006 |
+| What changed and why | No verified source value is available for direct comparison. Effective muscle force-balance coefficient; source-law conversion and calibration are described in the methods. |
+| Source / evidence | No verified one-to-one numerical source is established for this added channel. Applied estimates are in Data/Model_Parameters/muscle_tendon.py; anatomical source records are in Data/Original_Study_Data/additional_muscles/. |
+
+</details>
+
+<details>
+<summary>FR_S_C4 · MT_path_length_offset_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FR_S_C4 |
+| Parameter | MT_path_length_offset_m |
+| Unit | m |
+| Meaning | Constant offset added to the routed path to define muscle-tendon length. |
+| Source value | Not established |
+| Value used in this model | 0 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | No verified one-to-one numerical source is established for this added channel. Applied estimates are in Data/Model_Parameters/muscle_tendon.py; anatomical source records are in Data/Original_Study_Data/additional_muscles/. |
+
+</details>
+
+<details>
+<summary>FR_S_C4 · active_force_length_exponent</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FR_S_C4 |
+| Parameter | active_force_length_exponent |
+| Unit | 1 |
+| Meaning | Exponent rho in the source active force-length curve. |
+| Source value | Not established |
+| Value used in this model | 3 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | No verified one-to-one numerical source is established for this added channel. Applied estimates are in Data/Model_Parameters/muscle_tendon.py; anatomical source records are in Data/Original_Study_Data/additional_muscles/. |
+
+</details>
+
+<details>
+<summary>FR_S_C4 · source_shortening_curvature</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FR_S_C4 |
+| Parameter | source_shortening_curvature |
+| Unit | 1 |
+| Meaning | Source shortening-curve coefficient; inactive when De Groote force-velocity mode is selected. |
+| Source value | Not established |
+| Value used in this model | 0.45283 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | No verified one-to-one numerical source is established for this added channel. Applied estimates are in Data/Model_Parameters/muscle_tendon.py; anatomical source records are in Data/Original_Study_Data/additional_muscles/. |
+
+</details>
+
+<details>
+<summary>FR_S_C4 · source_lengthening_curvature</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FR_S_C4 |
+| Parameter | source_lengthening_curvature |
+| Unit | 1 |
+| Meaning | Source lengthening-curve coefficient; inactive when De Groote force-velocity mode is selected. |
+| Source value | Not established |
+| Value used in this model | 0.35752841 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | No verified one-to-one numerical source is established for this added channel. Applied estimates are in Data/Model_Parameters/muscle_tendon.py; anatomical source records are in Data/Original_Study_Data/additional_muscles/. |
+
+</details>
+
+<details>
+<summary>FR_S_C4 · passive_fiber_enabled</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FR_S_C4 |
+| Parameter | passive_fiber_enabled |
+| Unit | 0/1 |
+| Meaning | 1 enables passive fiber tension within the elastic equilibrium; zero force below l_f/l_opt=1 does not mean it is disabled. |
+| Source value | Not established |
+| Value used in this model | 1 |
+| What changed and why | No verified source value is available for direct comparison. The published passive force-length law is included in every muscle channel. Its coefficients are from Prilutsky et al. (2016), Table 10.3, and Rahmati et al. (2025), Table 3. Applying the same normalized law to added muscle channels is a modeling assumption. |
+| Source / evidence | Published parallel elastic architecture: Prilutsky et al. 2016 Table 10.3 (10.1007/978-1-4939-3267-2_10); Rahmati et al. 2025 Table 3 (10.1113/JP287448). Common normalized curve extended to all model channels; no muscle-specific passive calibration is claimed. |
+
+</details>
+
+<details>
+<summary>FR_S_C4 · degroote_force_velocity_enabled</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FR_S_C4 |
+| Parameter | degroote_force_velocity_enabled |
+| Unit | 0/1 |
+| Meaning | 1 uses the documented De Groote/OpenSim velocity curve; 0 uses the source curve. |
+| Source value | Not established |
+| Value used in this model | 1 |
+| What changed and why | No verified source value is available for direct comparison. Model-law choice: 1 enables the smooth De Groote force-velocity relation; 0 selects the alternative implemented law. |
+| Source / evidence | No verified one-to-one numerical source is established for this added channel. Applied estimates are in Data/Model_Parameters/muscle_tendon.py; anatomical source records are in Data/Original_Study_Data/additional_muscles/. |
+
+</details>
+
+<details>
+<summary>FL_S_C5 · max_isometric_tendon_force_N</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_S_C5 |
+| Parameter | max_isometric_tendon_force_N |
+| Unit | N |
+| Meaning | Maximum isometric force projected along the tendon; do not multiply by pennation cosine twice. |
+| Source value | Not established |
+| Value used in this model | 5.8368291 |
+| What changed and why | No verified source value is available for direct comparison. Force capacity was calibrated with motor inputs to improve mechanical agreement; the fit does not uniquely identify it. |
+| Source / evidence | No verified one-to-one numerical source is established for this added channel. Applied estimates are in Data/Model_Parameters/muscle_tendon.py; anatomical source records are in Data/Original_Study_Data/additional_muscles/. |
+
+</details>
+
+<details>
+<summary>FL_S_C5 · optimal_fiber_length_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_S_C5 |
+| Parameter | optimal_fiber_length_m |
+| Unit | m |
+| Meaning | Optimal fascicle/fiber length, not whole muscle-tendon length. |
+| Source value | Not established |
+| Value used in this model | 0.044552508 |
+| What changed and why | No verified source value is available for direct comparison. Fiber length and shortening speed were calibrated to set the force-length and force-velocity operating ranges. Physical maximum fiber speed is optimal_fiber_length_m multiplied by max_fiber_speed_optimal_lengths_per_s. The source and applied numbers are given in this row; these are not new tissue measurements. |
+| Source / evidence | No verified one-to-one numerical source is established for this added channel. Applied estimates are in Data/Model_Parameters/muscle_tendon.py; anatomical source records are in Data/Original_Study_Data/additional_muscles/. |
+
+</details>
+
+<details>
+<summary>FL_S_C5 · tendon_slack_length_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_S_C5 |
+| Parameter | tendon_slack_length_m |
+| Unit | m |
+| Meaning | Unloaded series tendon length. |
+| Source value | Not established |
+| Value used in this model | 0.010507667 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | No verified one-to-one numerical source is established for this added channel. Applied estimates are in Data/Model_Parameters/muscle_tendon.py; anatomical source records are in Data/Original_Study_Data/additional_muscles/. |
+
+</details>
+
+<details>
+<summary>FL_S_C5 · pennation_cosine</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_S_C5 |
+| Parameter | pennation_cosine |
+| Unit | 1 |
+| Meaning | Cosine of the constant fiber-to-tendon pennation angle. |
+| Source value | Not established |
+| Value used in this model | 1 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | No verified one-to-one numerical source is established for this added channel. Applied estimates are in Data/Model_Parameters/muscle_tendon.py; anatomical source records are in Data/Original_Study_Data/additional_muscles/. |
+
+</details>
+
+<details>
+<summary>FL_S_C5 · tendon_strain_at_max_force</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_S_C5 |
+| Parameter | tendon_strain_at_max_force |
+| Unit | 1 |
+| Meaning | Tendon extension/slack length at one maximum isometric tendon force. |
+| Source value | Not established |
+| Value used in this model | 0.04 |
+| What changed and why | No verified source value is available for direct comparison. Assumed elastic-tendon compliance; not a measured tendon strain for this animal. |
+| Source / evidence | No verified one-to-one numerical source is established for this added channel. Applied estimates are in Data/Model_Parameters/muscle_tendon.py; anatomical source records are in Data/Original_Study_Data/additional_muscles/. |
+
+</details>
+
+<details>
+<summary>FL_S_C5 · max_fiber_speed_optimal_lengths_per_s</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_S_C5 |
+| Parameter | max_fiber_speed_optimal_lengths_per_s |
+| Unit | 1/s |
+| Meaning | Positive maximum-shortening speed magnitude, measured in optimal fiber lengths per second. |
+| Source value | Not established |
+| Value used in this model | 9.4339623 |
+| What changed and why | No verified source value is available for direct comparison. Fiber length and shortening speed were calibrated to set the force-length and force-velocity operating ranges. Physical maximum fiber speed is optimal_fiber_length_m multiplied by max_fiber_speed_optimal_lengths_per_s. The source and applied numbers are given in this row; these are not new tissue measurements. |
+| Source / evidence | No verified one-to-one numerical source is established for this added channel. Applied estimates are in Data/Model_Parameters/muscle_tendon.py; anatomical source records are in Data/Original_Study_Data/additional_muscles/. |
+
+</details>
+
+<details>
+<summary>FL_S_C5 · normalized_fiber_damping</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_S_C5 |
+| Parameter | normalized_fiber_damping |
+| Unit | 1 |
+| Meaning | Coefficient of normalized fiber velocity in the normalized tendon-direction force balance. |
+| Source value | Not established |
+| Value used in this model | 0.0084061337 |
+| What changed and why | No verified source value is available for direct comparison. Effective muscle force-balance coefficient; source-law conversion and calibration are described in the methods. |
+| Source / evidence | No verified one-to-one numerical source is established for this added channel. Applied estimates are in Data/Model_Parameters/muscle_tendon.py; anatomical source records are in Data/Original_Study_Data/additional_muscles/. |
+
+</details>
+
+<details>
+<summary>FL_S_C5 · MT_path_length_offset_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_S_C5 |
+| Parameter | MT_path_length_offset_m |
+| Unit | m |
+| Meaning | Constant offset added to the routed path to define muscle-tendon length. |
+| Source value | Not established |
+| Value used in this model | 0 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | No verified one-to-one numerical source is established for this added channel. Applied estimates are in Data/Model_Parameters/muscle_tendon.py; anatomical source records are in Data/Original_Study_Data/additional_muscles/. |
+
+</details>
+
+<details>
+<summary>FL_S_C5 · active_force_length_exponent</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_S_C5 |
+| Parameter | active_force_length_exponent |
+| Unit | 1 |
+| Meaning | Exponent rho in the source active force-length curve. |
+| Source value | Not established |
+| Value used in this model | 3 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | No verified one-to-one numerical source is established for this added channel. Applied estimates are in Data/Model_Parameters/muscle_tendon.py; anatomical source records are in Data/Original_Study_Data/additional_muscles/. |
+
+</details>
+
+<details>
+<summary>FL_S_C5 · source_shortening_curvature</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_S_C5 |
+| Parameter | source_shortening_curvature |
+| Unit | 1 |
+| Meaning | Source shortening-curve coefficient; inactive when De Groote force-velocity mode is selected. |
+| Source value | Not established |
+| Value used in this model | 0.45283 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | No verified one-to-one numerical source is established for this added channel. Applied estimates are in Data/Model_Parameters/muscle_tendon.py; anatomical source records are in Data/Original_Study_Data/additional_muscles/. |
+
+</details>
+
+<details>
+<summary>FL_S_C5 · source_lengthening_curvature</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_S_C5 |
+| Parameter | source_lengthening_curvature |
+| Unit | 1 |
+| Meaning | Source lengthening-curve coefficient; inactive when De Groote force-velocity mode is selected. |
+| Source value | Not established |
+| Value used in this model | 0.28988686 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | No verified one-to-one numerical source is established for this added channel. Applied estimates are in Data/Model_Parameters/muscle_tendon.py; anatomical source records are in Data/Original_Study_Data/additional_muscles/. |
+
+</details>
+
+<details>
+<summary>FL_S_C5 · passive_fiber_enabled</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_S_C5 |
+| Parameter | passive_fiber_enabled |
+| Unit | 0/1 |
+| Meaning | 1 enables passive fiber tension within the elastic equilibrium; zero force below l_f/l_opt=1 does not mean it is disabled. |
+| Source value | Not established |
+| Value used in this model | 1 |
+| What changed and why | No verified source value is available for direct comparison. The published passive force-length law is included in every muscle channel. Its coefficients are from Prilutsky et al. (2016), Table 10.3, and Rahmati et al. (2025), Table 3. Applying the same normalized law to added muscle channels is a modeling assumption. |
+| Source / evidence | Published parallel elastic architecture: Prilutsky et al. 2016 Table 10.3 (10.1007/978-1-4939-3267-2_10); Rahmati et al. 2025 Table 3 (10.1113/JP287448). Common normalized curve extended to all model channels; no muscle-specific passive calibration is claimed. |
+
+</details>
+
+<details>
+<summary>FL_S_C5 · degroote_force_velocity_enabled</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_S_C5 |
+| Parameter | degroote_force_velocity_enabled |
+| Unit | 0/1 |
+| Meaning | 1 uses the documented De Groote/OpenSim velocity curve; 0 uses the source curve. |
+| Source value | Not established |
+| Value used in this model | 1 |
+| What changed and why | No verified source value is available for direct comparison. Model-law choice: 1 enables the smooth De Groote force-velocity relation; 0 selects the alternative implemented law. |
+| Source / evidence | No verified one-to-one numerical source is established for this added channel. Applied estimates are in Data/Model_Parameters/muscle_tendon.py; anatomical source records are in Data/Original_Study_Data/additional_muscles/. |
+
+</details>
+
+<details>
+<summary>FR_S_C5 · max_isometric_tendon_force_N</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FR_S_C5 |
+| Parameter | max_isometric_tendon_force_N |
+| Unit | N |
+| Meaning | Maximum isometric force projected along the tendon; do not multiply by pennation cosine twice. |
+| Source value | Not established |
+| Value used in this model | 5.8368291 |
+| What changed and why | No verified source value is available for direct comparison. Force capacity was calibrated with motor inputs to improve mechanical agreement; the fit does not uniquely identify it. |
+| Source / evidence | No verified one-to-one numerical source is established for this added channel. Applied estimates are in Data/Model_Parameters/muscle_tendon.py; anatomical source records are in Data/Original_Study_Data/additional_muscles/. |
+
+</details>
+
+<details>
+<summary>FR_S_C5 · optimal_fiber_length_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FR_S_C5 |
+| Parameter | optimal_fiber_length_m |
+| Unit | m |
+| Meaning | Optimal fascicle/fiber length, not whole muscle-tendon length. |
+| Source value | Not established |
+| Value used in this model | 0.044552508 |
+| What changed and why | No verified source value is available for direct comparison. Fiber length and shortening speed were calibrated to set the force-length and force-velocity operating ranges. Physical maximum fiber speed is optimal_fiber_length_m multiplied by max_fiber_speed_optimal_lengths_per_s. The source and applied numbers are given in this row; these are not new tissue measurements. |
+| Source / evidence | No verified one-to-one numerical source is established for this added channel. Applied estimates are in Data/Model_Parameters/muscle_tendon.py; anatomical source records are in Data/Original_Study_Data/additional_muscles/. |
+
+</details>
+
+<details>
+<summary>FR_S_C5 · tendon_slack_length_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FR_S_C5 |
+| Parameter | tendon_slack_length_m |
+| Unit | m |
+| Meaning | Unloaded series tendon length. |
+| Source value | Not established |
+| Value used in this model | 0.010507667 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | No verified one-to-one numerical source is established for this added channel. Applied estimates are in Data/Model_Parameters/muscle_tendon.py; anatomical source records are in Data/Original_Study_Data/additional_muscles/. |
+
+</details>
+
+<details>
+<summary>FR_S_C5 · pennation_cosine</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FR_S_C5 |
+| Parameter | pennation_cosine |
+| Unit | 1 |
+| Meaning | Cosine of the constant fiber-to-tendon pennation angle. |
+| Source value | Not established |
+| Value used in this model | 1 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | No verified one-to-one numerical source is established for this added channel. Applied estimates are in Data/Model_Parameters/muscle_tendon.py; anatomical source records are in Data/Original_Study_Data/additional_muscles/. |
+
+</details>
+
+<details>
+<summary>FR_S_C5 · tendon_strain_at_max_force</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FR_S_C5 |
+| Parameter | tendon_strain_at_max_force |
+| Unit | 1 |
+| Meaning | Tendon extension/slack length at one maximum isometric tendon force. |
+| Source value | Not established |
+| Value used in this model | 0.04 |
+| What changed and why | No verified source value is available for direct comparison. Assumed elastic-tendon compliance; not a measured tendon strain for this animal. |
+| Source / evidence | No verified one-to-one numerical source is established for this added channel. Applied estimates are in Data/Model_Parameters/muscle_tendon.py; anatomical source records are in Data/Original_Study_Data/additional_muscles/. |
+
+</details>
+
+<details>
+<summary>FR_S_C5 · max_fiber_speed_optimal_lengths_per_s</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FR_S_C5 |
+| Parameter | max_fiber_speed_optimal_lengths_per_s |
+| Unit | 1/s |
+| Meaning | Positive maximum-shortening speed magnitude, measured in optimal fiber lengths per second. |
+| Source value | Not established |
+| Value used in this model | 9.4339623 |
+| What changed and why | No verified source value is available for direct comparison. Fiber length and shortening speed were calibrated to set the force-length and force-velocity operating ranges. Physical maximum fiber speed is optimal_fiber_length_m multiplied by max_fiber_speed_optimal_lengths_per_s. The source and applied numbers are given in this row; these are not new tissue measurements. |
+| Source / evidence | No verified one-to-one numerical source is established for this added channel. Applied estimates are in Data/Model_Parameters/muscle_tendon.py; anatomical source records are in Data/Original_Study_Data/additional_muscles/. |
+
+</details>
+
+<details>
+<summary>FR_S_C5 · normalized_fiber_damping</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FR_S_C5 |
+| Parameter | normalized_fiber_damping |
+| Unit | 1 |
+| Meaning | Coefficient of normalized fiber velocity in the normalized tendon-direction force balance. |
+| Source value | Not established |
+| Value used in this model | 0.0084061337 |
+| What changed and why | No verified source value is available for direct comparison. Effective muscle force-balance coefficient; source-law conversion and calibration are described in the methods. |
+| Source / evidence | No verified one-to-one numerical source is established for this added channel. Applied estimates are in Data/Model_Parameters/muscle_tendon.py; anatomical source records are in Data/Original_Study_Data/additional_muscles/. |
+
+</details>
+
+<details>
+<summary>FR_S_C5 · MT_path_length_offset_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FR_S_C5 |
+| Parameter | MT_path_length_offset_m |
+| Unit | m |
+| Meaning | Constant offset added to the routed path to define muscle-tendon length. |
+| Source value | Not established |
+| Value used in this model | 0 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | No verified one-to-one numerical source is established for this added channel. Applied estimates are in Data/Model_Parameters/muscle_tendon.py; anatomical source records are in Data/Original_Study_Data/additional_muscles/. |
+
+</details>
+
+<details>
+<summary>FR_S_C5 · active_force_length_exponent</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FR_S_C5 |
+| Parameter | active_force_length_exponent |
+| Unit | 1 |
+| Meaning | Exponent rho in the source active force-length curve. |
+| Source value | Not established |
+| Value used in this model | 3 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | No verified one-to-one numerical source is established for this added channel. Applied estimates are in Data/Model_Parameters/muscle_tendon.py; anatomical source records are in Data/Original_Study_Data/additional_muscles/. |
+
+</details>
+
+<details>
+<summary>FR_S_C5 · source_shortening_curvature</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FR_S_C5 |
+| Parameter | source_shortening_curvature |
+| Unit | 1 |
+| Meaning | Source shortening-curve coefficient; inactive when De Groote force-velocity mode is selected. |
+| Source value | Not established |
+| Value used in this model | 0.45283 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | No verified one-to-one numerical source is established for this added channel. Applied estimates are in Data/Model_Parameters/muscle_tendon.py; anatomical source records are in Data/Original_Study_Data/additional_muscles/. |
+
+</details>
+
+<details>
+<summary>FR_S_C5 · source_lengthening_curvature</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FR_S_C5 |
+| Parameter | source_lengthening_curvature |
+| Unit | 1 |
+| Meaning | Source lengthening-curve coefficient; inactive when De Groote force-velocity mode is selected. |
+| Source value | Not established |
+| Value used in this model | 0.28988686 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | No verified one-to-one numerical source is established for this added channel. Applied estimates are in Data/Model_Parameters/muscle_tendon.py; anatomical source records are in Data/Original_Study_Data/additional_muscles/. |
+
+</details>
+
+<details>
+<summary>FR_S_C5 · passive_fiber_enabled</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FR_S_C5 |
+| Parameter | passive_fiber_enabled |
+| Unit | 0/1 |
+| Meaning | 1 enables passive fiber tension within the elastic equilibrium; zero force below l_f/l_opt=1 does not mean it is disabled. |
+| Source value | Not established |
+| Value used in this model | 1 |
+| What changed and why | No verified source value is available for direct comparison. The published passive force-length law is included in every muscle channel. Its coefficients are from Prilutsky et al. (2016), Table 10.3, and Rahmati et al. (2025), Table 3. Applying the same normalized law to added muscle channels is a modeling assumption. |
+| Source / evidence | Published parallel elastic architecture: Prilutsky et al. 2016 Table 10.3 (10.1007/978-1-4939-3267-2_10); Rahmati et al. 2025 Table 3 (10.1113/JP287448). Common normalized curve extended to all model channels; no muscle-specific passive calibration is claimed. |
+
+</details>
+
+<details>
+<summary>FR_S_C5 · degroote_force_velocity_enabled</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FR_S_C5 |
+| Parameter | degroote_force_velocity_enabled |
+| Unit | 0/1 |
+| Meaning | 1 uses the documented De Groote/OpenSim velocity curve; 0 uses the source curve. |
+| Source value | Not established |
+| Value used in this model | 1 |
+| What changed and why | No verified source value is available for direct comparison. Model-law choice: 1 enables the smooth De Groote force-velocity relation; 0 selects the alternative implemented law. |
+| Source / evidence | No verified one-to-one numerical source is established for this added channel. Applied estimates are in Data/Model_Parameters/muscle_tendon.py; anatomical source records are in Data/Original_Study_Data/additional_muscles/. |
+
+</details>
+
+<details>
+<summary>FL_S_C6 · max_isometric_tendon_force_N</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_S_C6 |
+| Parameter | max_isometric_tendon_force_N |
+| Unit | N |
+| Meaning | Maximum isometric force projected along the tendon; do not multiply by pennation cosine twice. |
+| Source value | Not established |
+| Value used in this model | 5.7331901 |
+| What changed and why | No verified source value is available for direct comparison. Force capacity was calibrated with motor inputs to improve mechanical agreement; the fit does not uniquely identify it. |
+| Source / evidence | No verified one-to-one numerical source is established for this added channel. Applied estimates are in Data/Model_Parameters/muscle_tendon.py; anatomical source records are in Data/Original_Study_Data/additional_muscles/. |
+
+</details>
+
+<details>
+<summary>FL_S_C6 · optimal_fiber_length_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_S_C6 |
+| Parameter | optimal_fiber_length_m |
+| Unit | m |
+| Meaning | Optimal fascicle/fiber length, not whole muscle-tendon length. |
+| Source value | Not established |
+| Value used in this model | 0.042353869 |
+| What changed and why | No verified source value is available for direct comparison. Fiber length and shortening speed were calibrated to set the force-length and force-velocity operating ranges. Physical maximum fiber speed is optimal_fiber_length_m multiplied by max_fiber_speed_optimal_lengths_per_s. The source and applied numbers are given in this row; these are not new tissue measurements. |
+| Source / evidence | No verified one-to-one numerical source is established for this added channel. Applied estimates are in Data/Model_Parameters/muscle_tendon.py; anatomical source records are in Data/Original_Study_Data/additional_muscles/. |
+
+</details>
+
+<details>
+<summary>FL_S_C6 · tendon_slack_length_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_S_C6 |
+| Parameter | tendon_slack_length_m |
+| Unit | m |
+| Meaning | Unloaded series tendon length. |
+| Source value | Not established |
+| Value used in this model | 0.00998912 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | No verified one-to-one numerical source is established for this added channel. Applied estimates are in Data/Model_Parameters/muscle_tendon.py; anatomical source records are in Data/Original_Study_Data/additional_muscles/. |
+
+</details>
+
+<details>
+<summary>FL_S_C6 · pennation_cosine</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_S_C6 |
+| Parameter | pennation_cosine |
+| Unit | 1 |
+| Meaning | Cosine of the constant fiber-to-tendon pennation angle. |
+| Source value | Not established |
+| Value used in this model | 1 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | No verified one-to-one numerical source is established for this added channel. Applied estimates are in Data/Model_Parameters/muscle_tendon.py; anatomical source records are in Data/Original_Study_Data/additional_muscles/. |
+
+</details>
+
+<details>
+<summary>FL_S_C6 · tendon_strain_at_max_force</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_S_C6 |
+| Parameter | tendon_strain_at_max_force |
+| Unit | 1 |
+| Meaning | Tendon extension/slack length at one maximum isometric tendon force. |
+| Source value | Not established |
+| Value used in this model | 0.04 |
+| What changed and why | No verified source value is available for direct comparison. Assumed elastic-tendon compliance; not a measured tendon strain for this animal. |
+| Source / evidence | No verified one-to-one numerical source is established for this added channel. Applied estimates are in Data/Model_Parameters/muscle_tendon.py; anatomical source records are in Data/Original_Study_Data/additional_muscles/. |
+
+</details>
+
+<details>
+<summary>FL_S_C6 · max_fiber_speed_optimal_lengths_per_s</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_S_C6 |
+| Parameter | max_fiber_speed_optimal_lengths_per_s |
+| Unit | 1/s |
+| Meaning | Positive maximum-shortening speed magnitude, measured in optimal fiber lengths per second. |
+| Source value | Not established |
+| Value used in this model | 9.4339623 |
+| What changed and why | No verified source value is available for direct comparison. Fiber length and shortening speed were calibrated to set the force-length and force-velocity operating ranges. Physical maximum fiber speed is optimal_fiber_length_m multiplied by max_fiber_speed_optimal_lengths_per_s. The source and applied numbers are given in this row; these are not new tissue measurements. |
+| Source / evidence | No verified one-to-one numerical source is established for this added channel. Applied estimates are in Data/Model_Parameters/muscle_tendon.py; anatomical source records are in Data/Original_Study_Data/additional_muscles/. |
+
+</details>
+
+<details>
+<summary>FL_S_C6 · normalized_fiber_damping</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_S_C6 |
+| Parameter | normalized_fiber_damping |
+| Unit | 1 |
+| Meaning | Coefficient of normalized fiber velocity in the normalized tendon-direction force balance. |
+| Source value | Not established |
+| Value used in this model | 0.007991296 |
+| What changed and why | No verified source value is available for direct comparison. Effective muscle force-balance coefficient; source-law conversion and calibration are described in the methods. |
+| Source / evidence | No verified one-to-one numerical source is established for this added channel. Applied estimates are in Data/Model_Parameters/muscle_tendon.py; anatomical source records are in Data/Original_Study_Data/additional_muscles/. |
+
+</details>
+
+<details>
+<summary>FL_S_C6 · MT_path_length_offset_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_S_C6 |
+| Parameter | MT_path_length_offset_m |
+| Unit | m |
+| Meaning | Constant offset added to the routed path to define muscle-tendon length. |
+| Source value | Not established |
+| Value used in this model | 0 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | No verified one-to-one numerical source is established for this added channel. Applied estimates are in Data/Model_Parameters/muscle_tendon.py; anatomical source records are in Data/Original_Study_Data/additional_muscles/. |
+
+</details>
+
+<details>
+<summary>FL_S_C6 · active_force_length_exponent</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_S_C6 |
+| Parameter | active_force_length_exponent |
+| Unit | 1 |
+| Meaning | Exponent rho in the source active force-length curve. |
+| Source value | Not established |
+| Value used in this model | 3 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | No verified one-to-one numerical source is established for this added channel. Applied estimates are in Data/Model_Parameters/muscle_tendon.py; anatomical source records are in Data/Original_Study_Data/additional_muscles/. |
+
+</details>
+
+<details>
+<summary>FL_S_C6 · source_shortening_curvature</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_S_C6 |
+| Parameter | source_shortening_curvature |
+| Unit | 1 |
+| Meaning | Source shortening-curve coefficient; inactive when De Groote force-velocity mode is selected. |
+| Source value | Not established |
+| Value used in this model | 0.45283 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | No verified one-to-one numerical source is established for this added channel. Applied estimates are in Data/Model_Parameters/muscle_tendon.py; anatomical source records are in Data/Original_Study_Data/additional_muscles/. |
+
+</details>
+
+<details>
+<summary>FL_S_C6 · source_lengthening_curvature</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_S_C6 |
+| Parameter | source_lengthening_curvature |
+| Unit | 1 |
+| Meaning | Source lengthening-curve coefficient; inactive when De Groote force-velocity mode is selected. |
+| Source value | Not established |
+| Value used in this model | 0.29320654 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | No verified one-to-one numerical source is established for this added channel. Applied estimates are in Data/Model_Parameters/muscle_tendon.py; anatomical source records are in Data/Original_Study_Data/additional_muscles/. |
+
+</details>
+
+<details>
+<summary>FL_S_C6 · passive_fiber_enabled</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_S_C6 |
+| Parameter | passive_fiber_enabled |
+| Unit | 0/1 |
+| Meaning | 1 enables passive fiber tension within the elastic equilibrium; zero force below l_f/l_opt=1 does not mean it is disabled. |
+| Source value | Not established |
+| Value used in this model | 1 |
+| What changed and why | No verified source value is available for direct comparison. The published passive force-length law is included in every muscle channel. Its coefficients are from Prilutsky et al. (2016), Table 10.3, and Rahmati et al. (2025), Table 3. Applying the same normalized law to added muscle channels is a modeling assumption. |
+| Source / evidence | Published parallel elastic architecture: Prilutsky et al. 2016 Table 10.3 (10.1007/978-1-4939-3267-2_10); Rahmati et al. 2025 Table 3 (10.1113/JP287448). Common normalized curve extended to all model channels; no muscle-specific passive calibration is claimed. |
+
+</details>
+
+<details>
+<summary>FL_S_C6 · degroote_force_velocity_enabled</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_S_C6 |
+| Parameter | degroote_force_velocity_enabled |
+| Unit | 0/1 |
+| Meaning | 1 uses the documented De Groote/OpenSim velocity curve; 0 uses the source curve. |
+| Source value | Not established |
+| Value used in this model | 1 |
+| What changed and why | No verified source value is available for direct comparison. Model-law choice: 1 enables the smooth De Groote force-velocity relation; 0 selects the alternative implemented law. |
+| Source / evidence | No verified one-to-one numerical source is established for this added channel. Applied estimates are in Data/Model_Parameters/muscle_tendon.py; anatomical source records are in Data/Original_Study_Data/additional_muscles/. |
+
+</details>
+
+<details>
+<summary>FR_S_C6 · max_isometric_tendon_force_N</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FR_S_C6 |
+| Parameter | max_isometric_tendon_force_N |
+| Unit | N |
+| Meaning | Maximum isometric force projected along the tendon; do not multiply by pennation cosine twice. |
+| Source value | Not established |
+| Value used in this model | 5.7331901 |
+| What changed and why | No verified source value is available for direct comparison. Force capacity was calibrated with motor inputs to improve mechanical agreement; the fit does not uniquely identify it. |
+| Source / evidence | No verified one-to-one numerical source is established for this added channel. Applied estimates are in Data/Model_Parameters/muscle_tendon.py; anatomical source records are in Data/Original_Study_Data/additional_muscles/. |
+
+</details>
+
+<details>
+<summary>FR_S_C6 · optimal_fiber_length_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FR_S_C6 |
+| Parameter | optimal_fiber_length_m |
+| Unit | m |
+| Meaning | Optimal fascicle/fiber length, not whole muscle-tendon length. |
+| Source value | Not established |
+| Value used in this model | 0.042353869 |
+| What changed and why | No verified source value is available for direct comparison. Fiber length and shortening speed were calibrated to set the force-length and force-velocity operating ranges. Physical maximum fiber speed is optimal_fiber_length_m multiplied by max_fiber_speed_optimal_lengths_per_s. The source and applied numbers are given in this row; these are not new tissue measurements. |
+| Source / evidence | No verified one-to-one numerical source is established for this added channel. Applied estimates are in Data/Model_Parameters/muscle_tendon.py; anatomical source records are in Data/Original_Study_Data/additional_muscles/. |
+
+</details>
+
+<details>
+<summary>FR_S_C6 · tendon_slack_length_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FR_S_C6 |
+| Parameter | tendon_slack_length_m |
+| Unit | m |
+| Meaning | Unloaded series tendon length. |
+| Source value | Not established |
+| Value used in this model | 0.00998912 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | No verified one-to-one numerical source is established for this added channel. Applied estimates are in Data/Model_Parameters/muscle_tendon.py; anatomical source records are in Data/Original_Study_Data/additional_muscles/. |
+
+</details>
+
+<details>
+<summary>FR_S_C6 · pennation_cosine</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FR_S_C6 |
+| Parameter | pennation_cosine |
+| Unit | 1 |
+| Meaning | Cosine of the constant fiber-to-tendon pennation angle. |
+| Source value | Not established |
+| Value used in this model | 1 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | No verified one-to-one numerical source is established for this added channel. Applied estimates are in Data/Model_Parameters/muscle_tendon.py; anatomical source records are in Data/Original_Study_Data/additional_muscles/. |
+
+</details>
+
+<details>
+<summary>FR_S_C6 · tendon_strain_at_max_force</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FR_S_C6 |
+| Parameter | tendon_strain_at_max_force |
+| Unit | 1 |
+| Meaning | Tendon extension/slack length at one maximum isometric tendon force. |
+| Source value | Not established |
+| Value used in this model | 0.04 |
+| What changed and why | No verified source value is available for direct comparison. Assumed elastic-tendon compliance; not a measured tendon strain for this animal. |
+| Source / evidence | No verified one-to-one numerical source is established for this added channel. Applied estimates are in Data/Model_Parameters/muscle_tendon.py; anatomical source records are in Data/Original_Study_Data/additional_muscles/. |
+
+</details>
+
+<details>
+<summary>FR_S_C6 · max_fiber_speed_optimal_lengths_per_s</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FR_S_C6 |
+| Parameter | max_fiber_speed_optimal_lengths_per_s |
+| Unit | 1/s |
+| Meaning | Positive maximum-shortening speed magnitude, measured in optimal fiber lengths per second. |
+| Source value | Not established |
+| Value used in this model | 9.4339623 |
+| What changed and why | No verified source value is available for direct comparison. Fiber length and shortening speed were calibrated to set the force-length and force-velocity operating ranges. Physical maximum fiber speed is optimal_fiber_length_m multiplied by max_fiber_speed_optimal_lengths_per_s. The source and applied numbers are given in this row; these are not new tissue measurements. |
+| Source / evidence | No verified one-to-one numerical source is established for this added channel. Applied estimates are in Data/Model_Parameters/muscle_tendon.py; anatomical source records are in Data/Original_Study_Data/additional_muscles/. |
+
+</details>
+
+<details>
+<summary>FR_S_C6 · normalized_fiber_damping</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FR_S_C6 |
+| Parameter | normalized_fiber_damping |
+| Unit | 1 |
+| Meaning | Coefficient of normalized fiber velocity in the normalized tendon-direction force balance. |
+| Source value | Not established |
+| Value used in this model | 0.007991296 |
+| What changed and why | No verified source value is available for direct comparison. Effective muscle force-balance coefficient; source-law conversion and calibration are described in the methods. |
+| Source / evidence | No verified one-to-one numerical source is established for this added channel. Applied estimates are in Data/Model_Parameters/muscle_tendon.py; anatomical source records are in Data/Original_Study_Data/additional_muscles/. |
+
+</details>
+
+<details>
+<summary>FR_S_C6 · MT_path_length_offset_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FR_S_C6 |
+| Parameter | MT_path_length_offset_m |
+| Unit | m |
+| Meaning | Constant offset added to the routed path to define muscle-tendon length. |
+| Source value | Not established |
+| Value used in this model | 0 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | No verified one-to-one numerical source is established for this added channel. Applied estimates are in Data/Model_Parameters/muscle_tendon.py; anatomical source records are in Data/Original_Study_Data/additional_muscles/. |
+
+</details>
+
+<details>
+<summary>FR_S_C6 · active_force_length_exponent</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FR_S_C6 |
+| Parameter | active_force_length_exponent |
+| Unit | 1 |
+| Meaning | Exponent rho in the source active force-length curve. |
+| Source value | Not established |
+| Value used in this model | 3 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | No verified one-to-one numerical source is established for this added channel. Applied estimates are in Data/Model_Parameters/muscle_tendon.py; anatomical source records are in Data/Original_Study_Data/additional_muscles/. |
+
+</details>
+
+<details>
+<summary>FR_S_C6 · source_shortening_curvature</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FR_S_C6 |
+| Parameter | source_shortening_curvature |
+| Unit | 1 |
+| Meaning | Source shortening-curve coefficient; inactive when De Groote force-velocity mode is selected. |
+| Source value | Not established |
+| Value used in this model | 0.45283 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | No verified one-to-one numerical source is established for this added channel. Applied estimates are in Data/Model_Parameters/muscle_tendon.py; anatomical source records are in Data/Original_Study_Data/additional_muscles/. |
+
+</details>
+
+<details>
+<summary>FR_S_C6 · source_lengthening_curvature</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FR_S_C6 |
+| Parameter | source_lengthening_curvature |
+| Unit | 1 |
+| Meaning | Source lengthening-curve coefficient; inactive when De Groote force-velocity mode is selected. |
+| Source value | Not established |
+| Value used in this model | 0.29320654 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | No verified one-to-one numerical source is established for this added channel. Applied estimates are in Data/Model_Parameters/muscle_tendon.py; anatomical source records are in Data/Original_Study_Data/additional_muscles/. |
+
+</details>
+
+<details>
+<summary>FR_S_C6 · passive_fiber_enabled</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FR_S_C6 |
+| Parameter | passive_fiber_enabled |
+| Unit | 0/1 |
+| Meaning | 1 enables passive fiber tension within the elastic equilibrium; zero force below l_f/l_opt=1 does not mean it is disabled. |
+| Source value | Not established |
+| Value used in this model | 1 |
+| What changed and why | No verified source value is available for direct comparison. The published passive force-length law is included in every muscle channel. Its coefficients are from Prilutsky et al. (2016), Table 10.3, and Rahmati et al. (2025), Table 3. Applying the same normalized law to added muscle channels is a modeling assumption. |
+| Source / evidence | Published parallel elastic architecture: Prilutsky et al. 2016 Table 10.3 (10.1007/978-1-4939-3267-2_10); Rahmati et al. 2025 Table 3 (10.1113/JP287448). Common normalized curve extended to all model channels; no muscle-specific passive calibration is claimed. |
+
+</details>
+
+<details>
+<summary>FR_S_C6 · degroote_force_velocity_enabled</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FR_S_C6 |
+| Parameter | degroote_force_velocity_enabled |
+| Unit | 0/1 |
+| Meaning | 1 uses the documented De Groote/OpenSim velocity curve; 0 uses the source curve. |
+| Source value | Not established |
+| Value used in this model | 1 |
+| What changed and why | No verified source value is available for direct comparison. Model-law choice: 1 enables the smooth De Groote force-velocity relation; 0 selects the alternative implemented law. |
+| Source / evidence | No verified one-to-one numerical source is established for this added channel. Applied estimates are in Data/Model_Parameters/muscle_tendon.py; anatomical source records are in Data/Original_Study_Data/additional_muscles/. |
+
+</details>
+
+<details>
+<summary>FL_S_C7 · max_isometric_tendon_force_N</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_S_C7 |
+| Parameter | max_isometric_tendon_force_N |
+| Unit | N |
+| Meaning | Maximum isometric force projected along the tendon; do not multiply by pennation cosine twice. |
+| Source value | Not established |
+| Value used in this model | 5.1999748 |
+| What changed and why | No verified source value is available for direct comparison. Force capacity was calibrated with motor inputs to improve mechanical agreement; the fit does not uniquely identify it. |
+| Source / evidence | No verified one-to-one numerical source is established for this added channel. Applied estimates are in Data/Model_Parameters/muscle_tendon.py; anatomical source records are in Data/Original_Study_Data/additional_muscles/. |
+
+</details>
+
+<details>
+<summary>FL_S_C7 · optimal_fiber_length_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_S_C7 |
+| Parameter | optimal_fiber_length_m |
+| Unit | m |
+| Meaning | Optimal fascicle/fiber length, not whole muscle-tendon length. |
+| Source value | Not established |
+| Value used in this model | 0.038634931 |
+| What changed and why | No verified source value is available for direct comparison. Fiber length and shortening speed were calibrated to set the force-length and force-velocity operating ranges. Physical maximum fiber speed is optimal_fiber_length_m multiplied by max_fiber_speed_optimal_lengths_per_s. The source and applied numbers are given in this row; these are not new tissue measurements. |
+| Source / evidence | No verified one-to-one numerical source is established for this added channel. Applied estimates are in Data/Model_Parameters/muscle_tendon.py; anatomical source records are in Data/Original_Study_Data/additional_muscles/. |
+
+</details>
+
+<details>
+<summary>FL_S_C7 · tendon_slack_length_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_S_C7 |
+| Parameter | tendon_slack_length_m |
+| Unit | m |
+| Meaning | Unloaded series tendon length. |
+| Source value | Not established |
+| Value used in this model | 0.009112012 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | No verified one-to-one numerical source is established for this added channel. Applied estimates are in Data/Model_Parameters/muscle_tendon.py; anatomical source records are in Data/Original_Study_Data/additional_muscles/. |
+
+</details>
+
+<details>
+<summary>FL_S_C7 · pennation_cosine</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_S_C7 |
+| Parameter | pennation_cosine |
+| Unit | 1 |
+| Meaning | Cosine of the constant fiber-to-tendon pennation angle. |
+| Source value | Not established |
+| Value used in this model | 1 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | No verified one-to-one numerical source is established for this added channel. Applied estimates are in Data/Model_Parameters/muscle_tendon.py; anatomical source records are in Data/Original_Study_Data/additional_muscles/. |
+
+</details>
+
+<details>
+<summary>FL_S_C7 · tendon_strain_at_max_force</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_S_C7 |
+| Parameter | tendon_strain_at_max_force |
+| Unit | 1 |
+| Meaning | Tendon extension/slack length at one maximum isometric tendon force. |
+| Source value | Not established |
+| Value used in this model | 0.04 |
+| What changed and why | No verified source value is available for direct comparison. Assumed elastic-tendon compliance; not a measured tendon strain for this animal. |
+| Source / evidence | No verified one-to-one numerical source is established for this added channel. Applied estimates are in Data/Model_Parameters/muscle_tendon.py; anatomical source records are in Data/Original_Study_Data/additional_muscles/. |
+
+</details>
+
+<details>
+<summary>FL_S_C7 · max_fiber_speed_optimal_lengths_per_s</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_S_C7 |
+| Parameter | max_fiber_speed_optimal_lengths_per_s |
+| Unit | 1/s |
+| Meaning | Positive maximum-shortening speed magnitude, measured in optimal fiber lengths per second. |
+| Source value | Not established |
+| Value used in this model | 9.4339623 |
+| What changed and why | No verified source value is available for direct comparison. Fiber length and shortening speed were calibrated to set the force-length and force-velocity operating ranges. Physical maximum fiber speed is optimal_fiber_length_m multiplied by max_fiber_speed_optimal_lengths_per_s. The source and applied numbers are given in this row; these are not new tissue measurements. |
+| Source / evidence | No verified one-to-one numerical source is established for this added channel. Applied estimates are in Data/Model_Parameters/muscle_tendon.py; anatomical source records are in Data/Original_Study_Data/additional_muscles/. |
+
+</details>
+
+<details>
+<summary>FL_S_C7 · normalized_fiber_damping</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_S_C7 |
+| Parameter | normalized_fiber_damping |
+| Unit | 1 |
+| Meaning | Coefficient of normalized fiber velocity in the normalized tendon-direction force balance. |
+| Source value | Not established |
+| Value used in this model | 0.0072896096 |
+| What changed and why | No verified source value is available for direct comparison. Effective muscle force-balance coefficient; source-law conversion and calibration are described in the methods. |
+| Source / evidence | No verified one-to-one numerical source is established for this added channel. Applied estimates are in Data/Model_Parameters/muscle_tendon.py; anatomical source records are in Data/Original_Study_Data/additional_muscles/. |
+
+</details>
+
+<details>
+<summary>FL_S_C7 · MT_path_length_offset_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_S_C7 |
+| Parameter | MT_path_length_offset_m |
+| Unit | m |
+| Meaning | Constant offset added to the routed path to define muscle-tendon length. |
+| Source value | Not established |
+| Value used in this model | 0 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | No verified one-to-one numerical source is established for this added channel. Applied estimates are in Data/Model_Parameters/muscle_tendon.py; anatomical source records are in Data/Original_Study_Data/additional_muscles/. |
+
+</details>
+
+<details>
+<summary>FL_S_C7 · active_force_length_exponent</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_S_C7 |
+| Parameter | active_force_length_exponent |
+| Unit | 1 |
+| Meaning | Exponent rho in the source active force-length curve. |
+| Source value | Not established |
+| Value used in this model | 3 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | No verified one-to-one numerical source is established for this added channel. Applied estimates are in Data/Model_Parameters/muscle_tendon.py; anatomical source records are in Data/Original_Study_Data/additional_muscles/. |
+
+</details>
+
+<details>
+<summary>FL_S_C7 · source_shortening_curvature</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_S_C7 |
+| Parameter | source_shortening_curvature |
+| Unit | 1 |
+| Meaning | Source shortening-curve coefficient; inactive when De Groote force-velocity mode is selected. |
+| Source value | Not established |
+| Value used in this model | 0.45283 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | No verified one-to-one numerical source is established for this added channel. Applied estimates are in Data/Model_Parameters/muscle_tendon.py; anatomical source records are in Data/Original_Study_Data/additional_muscles/. |
+
+</details>
+
+<details>
+<summary>FL_S_C7 · source_lengthening_curvature</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_S_C7 |
+| Parameter | source_lengthening_curvature |
+| Unit | 1 |
+| Meaning | Source lengthening-curve coefficient; inactive when De Groote force-velocity mode is selected. |
+| Source value | Not established |
+| Value used in this model | 0.31156319 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | No verified one-to-one numerical source is established for this added channel. Applied estimates are in Data/Model_Parameters/muscle_tendon.py; anatomical source records are in Data/Original_Study_Data/additional_muscles/. |
+
+</details>
+
+<details>
+<summary>FL_S_C7 · passive_fiber_enabled</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_S_C7 |
+| Parameter | passive_fiber_enabled |
+| Unit | 0/1 |
+| Meaning | 1 enables passive fiber tension within the elastic equilibrium; zero force below l_f/l_opt=1 does not mean it is disabled. |
+| Source value | Not established |
+| Value used in this model | 1 |
+| What changed and why | No verified source value is available for direct comparison. The published passive force-length law is included in every muscle channel. Its coefficients are from Prilutsky et al. (2016), Table 10.3, and Rahmati et al. (2025), Table 3. Applying the same normalized law to added muscle channels is a modeling assumption. |
+| Source / evidence | Published parallel elastic architecture: Prilutsky et al. 2016 Table 10.3 (10.1007/978-1-4939-3267-2_10); Rahmati et al. 2025 Table 3 (10.1113/JP287448). Common normalized curve extended to all model channels; no muscle-specific passive calibration is claimed. |
+
+</details>
+
+<details>
+<summary>FL_S_C7 · degroote_force_velocity_enabled</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_S_C7 |
+| Parameter | degroote_force_velocity_enabled |
+| Unit | 0/1 |
+| Meaning | 1 uses the documented De Groote/OpenSim velocity curve; 0 uses the source curve. |
+| Source value | Not established |
+| Value used in this model | 1 |
+| What changed and why | No verified source value is available for direct comparison. Model-law choice: 1 enables the smooth De Groote force-velocity relation; 0 selects the alternative implemented law. |
+| Source / evidence | No verified one-to-one numerical source is established for this added channel. Applied estimates are in Data/Model_Parameters/muscle_tendon.py; anatomical source records are in Data/Original_Study_Data/additional_muscles/. |
+
+</details>
+
+<details>
+<summary>FR_S_C7 · max_isometric_tendon_force_N</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FR_S_C7 |
+| Parameter | max_isometric_tendon_force_N |
+| Unit | N |
+| Meaning | Maximum isometric force projected along the tendon; do not multiply by pennation cosine twice. |
+| Source value | Not established |
+| Value used in this model | 5.1999748 |
+| What changed and why | No verified source value is available for direct comparison. Force capacity was calibrated with motor inputs to improve mechanical agreement; the fit does not uniquely identify it. |
+| Source / evidence | No verified one-to-one numerical source is established for this added channel. Applied estimates are in Data/Model_Parameters/muscle_tendon.py; anatomical source records are in Data/Original_Study_Data/additional_muscles/. |
+
+</details>
+
+<details>
+<summary>FR_S_C7 · optimal_fiber_length_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FR_S_C7 |
+| Parameter | optimal_fiber_length_m |
+| Unit | m |
+| Meaning | Optimal fascicle/fiber length, not whole muscle-tendon length. |
+| Source value | Not established |
+| Value used in this model | 0.038634931 |
+| What changed and why | No verified source value is available for direct comparison. Fiber length and shortening speed were calibrated to set the force-length and force-velocity operating ranges. Physical maximum fiber speed is optimal_fiber_length_m multiplied by max_fiber_speed_optimal_lengths_per_s. The source and applied numbers are given in this row; these are not new tissue measurements. |
+| Source / evidence | No verified one-to-one numerical source is established for this added channel. Applied estimates are in Data/Model_Parameters/muscle_tendon.py; anatomical source records are in Data/Original_Study_Data/additional_muscles/. |
+
+</details>
+
+<details>
+<summary>FR_S_C7 · tendon_slack_length_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FR_S_C7 |
+| Parameter | tendon_slack_length_m |
+| Unit | m |
+| Meaning | Unloaded series tendon length. |
+| Source value | Not established |
+| Value used in this model | 0.009112012 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | No verified one-to-one numerical source is established for this added channel. Applied estimates are in Data/Model_Parameters/muscle_tendon.py; anatomical source records are in Data/Original_Study_Data/additional_muscles/. |
+
+</details>
+
+<details>
+<summary>FR_S_C7 · pennation_cosine</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FR_S_C7 |
+| Parameter | pennation_cosine |
+| Unit | 1 |
+| Meaning | Cosine of the constant fiber-to-tendon pennation angle. |
+| Source value | Not established |
+| Value used in this model | 1 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | No verified one-to-one numerical source is established for this added channel. Applied estimates are in Data/Model_Parameters/muscle_tendon.py; anatomical source records are in Data/Original_Study_Data/additional_muscles/. |
+
+</details>
+
+<details>
+<summary>FR_S_C7 · tendon_strain_at_max_force</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FR_S_C7 |
+| Parameter | tendon_strain_at_max_force |
+| Unit | 1 |
+| Meaning | Tendon extension/slack length at one maximum isometric tendon force. |
+| Source value | Not established |
+| Value used in this model | 0.04 |
+| What changed and why | No verified source value is available for direct comparison. Assumed elastic-tendon compliance; not a measured tendon strain for this animal. |
+| Source / evidence | No verified one-to-one numerical source is established for this added channel. Applied estimates are in Data/Model_Parameters/muscle_tendon.py; anatomical source records are in Data/Original_Study_Data/additional_muscles/. |
+
+</details>
+
+<details>
+<summary>FR_S_C7 · max_fiber_speed_optimal_lengths_per_s</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FR_S_C7 |
+| Parameter | max_fiber_speed_optimal_lengths_per_s |
+| Unit | 1/s |
+| Meaning | Positive maximum-shortening speed magnitude, measured in optimal fiber lengths per second. |
+| Source value | Not established |
+| Value used in this model | 9.4339623 |
+| What changed and why | No verified source value is available for direct comparison. Fiber length and shortening speed were calibrated to set the force-length and force-velocity operating ranges. Physical maximum fiber speed is optimal_fiber_length_m multiplied by max_fiber_speed_optimal_lengths_per_s. The source and applied numbers are given in this row; these are not new tissue measurements. |
+| Source / evidence | No verified one-to-one numerical source is established for this added channel. Applied estimates are in Data/Model_Parameters/muscle_tendon.py; anatomical source records are in Data/Original_Study_Data/additional_muscles/. |
+
+</details>
+
+<details>
+<summary>FR_S_C7 · normalized_fiber_damping</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FR_S_C7 |
+| Parameter | normalized_fiber_damping |
+| Unit | 1 |
+| Meaning | Coefficient of normalized fiber velocity in the normalized tendon-direction force balance. |
+| Source value | Not established |
+| Value used in this model | 0.0072896096 |
+| What changed and why | No verified source value is available for direct comparison. Effective muscle force-balance coefficient; source-law conversion and calibration are described in the methods. |
+| Source / evidence | No verified one-to-one numerical source is established for this added channel. Applied estimates are in Data/Model_Parameters/muscle_tendon.py; anatomical source records are in Data/Original_Study_Data/additional_muscles/. |
+
+</details>
+
+<details>
+<summary>FR_S_C7 · MT_path_length_offset_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FR_S_C7 |
+| Parameter | MT_path_length_offset_m |
+| Unit | m |
+| Meaning | Constant offset added to the routed path to define muscle-tendon length. |
+| Source value | Not established |
+| Value used in this model | 0 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | No verified one-to-one numerical source is established for this added channel. Applied estimates are in Data/Model_Parameters/muscle_tendon.py; anatomical source records are in Data/Original_Study_Data/additional_muscles/. |
+
+</details>
+
+<details>
+<summary>FR_S_C7 · active_force_length_exponent</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FR_S_C7 |
+| Parameter | active_force_length_exponent |
+| Unit | 1 |
+| Meaning | Exponent rho in the source active force-length curve. |
+| Source value | Not established |
+| Value used in this model | 3 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | No verified one-to-one numerical source is established for this added channel. Applied estimates are in Data/Model_Parameters/muscle_tendon.py; anatomical source records are in Data/Original_Study_Data/additional_muscles/. |
+
+</details>
+
+<details>
+<summary>FR_S_C7 · source_shortening_curvature</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FR_S_C7 |
+| Parameter | source_shortening_curvature |
+| Unit | 1 |
+| Meaning | Source shortening-curve coefficient; inactive when De Groote force-velocity mode is selected. |
+| Source value | Not established |
+| Value used in this model | 0.45283 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | No verified one-to-one numerical source is established for this added channel. Applied estimates are in Data/Model_Parameters/muscle_tendon.py; anatomical source records are in Data/Original_Study_Data/additional_muscles/. |
+
+</details>
+
+<details>
+<summary>FR_S_C7 · source_lengthening_curvature</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FR_S_C7 |
+| Parameter | source_lengthening_curvature |
+| Unit | 1 |
+| Meaning | Source lengthening-curve coefficient; inactive when De Groote force-velocity mode is selected. |
+| Source value | Not established |
+| Value used in this model | 0.31156319 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | No verified one-to-one numerical source is established for this added channel. Applied estimates are in Data/Model_Parameters/muscle_tendon.py; anatomical source records are in Data/Original_Study_Data/additional_muscles/. |
+
+</details>
+
+<details>
+<summary>FR_S_C7 · passive_fiber_enabled</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FR_S_C7 |
+| Parameter | passive_fiber_enabled |
+| Unit | 0/1 |
+| Meaning | 1 enables passive fiber tension within the elastic equilibrium; zero force below l_f/l_opt=1 does not mean it is disabled. |
+| Source value | Not established |
+| Value used in this model | 1 |
+| What changed and why | No verified source value is available for direct comparison. The published passive force-length law is included in every muscle channel. Its coefficients are from Prilutsky et al. (2016), Table 10.3, and Rahmati et al. (2025), Table 3. Applying the same normalized law to added muscle channels is a modeling assumption. |
+| Source / evidence | Published parallel elastic architecture: Prilutsky et al. 2016 Table 10.3 (10.1007/978-1-4939-3267-2_10); Rahmati et al. 2025 Table 3 (10.1113/JP287448). Common normalized curve extended to all model channels; no muscle-specific passive calibration is claimed. |
+
+</details>
+
+<details>
+<summary>FR_S_C7 · degroote_force_velocity_enabled</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FR_S_C7 |
+| Parameter | degroote_force_velocity_enabled |
+| Unit | 0/1 |
+| Meaning | 1 uses the documented De Groote/OpenSim velocity curve; 0 uses the source curve. |
+| Source value | Not established |
+| Value used in this model | 1 |
+| What changed and why | No verified source value is available for direct comparison. Model-law choice: 1 enables the smooth De Groote force-velocity relation; 0 selects the alternative implemented law. |
+| Source / evidence | No verified one-to-one numerical source is established for this added channel. Applied estimates are in Data/Model_Parameters/muscle_tendon.py; anatomical source records are in Data/Original_Study_Data/additional_muscles/. |
+
+</details>
+
+<details>
+<summary>FL_S_T1 · max_isometric_tendon_force_N</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_S_T1 |
+| Parameter | max_isometric_tendon_force_N |
+| Unit | N |
+| Meaning | Maximum isometric force projected along the tendon; do not multiply by pennation cosine twice. |
+| Source value | Not established |
+| Value used in this model | 6.6096791 |
+| What changed and why | No verified source value is available for direct comparison. Force capacity was calibrated with motor inputs to improve mechanical agreement; the fit does not uniquely identify it. |
+| Source / evidence | No verified one-to-one numerical source is established for this added channel. Applied estimates are in Data/Model_Parameters/muscle_tendon.py; anatomical source records are in Data/Original_Study_Data/additional_muscles/. |
+
+</details>
+
+<details>
+<summary>FL_S_T1 · optimal_fiber_length_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_S_T1 |
+| Parameter | optimal_fiber_length_m |
+| Unit | m |
+| Meaning | Optimal fascicle/fiber length, not whole muscle-tendon length. |
+| Source value | Not established |
+| Value used in this model | 0.03171576 |
+| What changed and why | No verified source value is available for direct comparison. Fiber length and shortening speed were calibrated to set the force-length and force-velocity operating ranges. Physical maximum fiber speed is optimal_fiber_length_m multiplied by max_fiber_speed_optimal_lengths_per_s. The source and applied numbers are given in this row; these are not new tissue measurements. |
+| Source / evidence | No verified one-to-one numerical source is established for this added channel. Applied estimates are in Data/Model_Parameters/muscle_tendon.py; anatomical source records are in Data/Original_Study_Data/additional_muscles/. |
+
+</details>
+
+<details>
+<summary>FL_S_T1 · tendon_slack_length_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_S_T1 |
+| Parameter | tendon_slack_length_m |
+| Unit | m |
+| Meaning | Unloaded series tendon length. |
+| Source value | Not established |
+| Value used in this model | 0.0074801321 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | No verified one-to-one numerical source is established for this added channel. Applied estimates are in Data/Model_Parameters/muscle_tendon.py; anatomical source records are in Data/Original_Study_Data/additional_muscles/. |
+
+</details>
+
+<details>
+<summary>FL_S_T1 · pennation_cosine</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_S_T1 |
+| Parameter | pennation_cosine |
+| Unit | 1 |
+| Meaning | Cosine of the constant fiber-to-tendon pennation angle. |
+| Source value | Not established |
+| Value used in this model | 1 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | No verified one-to-one numerical source is established for this added channel. Applied estimates are in Data/Model_Parameters/muscle_tendon.py; anatomical source records are in Data/Original_Study_Data/additional_muscles/. |
+
+</details>
+
+<details>
+<summary>FL_S_T1 · tendon_strain_at_max_force</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_S_T1 |
+| Parameter | tendon_strain_at_max_force |
+| Unit | 1 |
+| Meaning | Tendon extension/slack length at one maximum isometric tendon force. |
+| Source value | Not established |
+| Value used in this model | 0.04 |
+| What changed and why | No verified source value is available for direct comparison. Assumed elastic-tendon compliance; not a measured tendon strain for this animal. |
+| Source / evidence | No verified one-to-one numerical source is established for this added channel. Applied estimates are in Data/Model_Parameters/muscle_tendon.py; anatomical source records are in Data/Original_Study_Data/additional_muscles/. |
+
+</details>
+
+<details>
+<summary>FL_S_T1 · max_fiber_speed_optimal_lengths_per_s</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_S_T1 |
+| Parameter | max_fiber_speed_optimal_lengths_per_s |
+| Unit | 1/s |
+| Meaning | Positive maximum-shortening speed magnitude, measured in optimal fiber lengths per second. |
+| Source value | Not established |
+| Value used in this model | 9.4339623 |
+| What changed and why | No verified source value is available for direct comparison. Fiber length and shortening speed were calibrated to set the force-length and force-velocity operating ranges. Physical maximum fiber speed is optimal_fiber_length_m multiplied by max_fiber_speed_optimal_lengths_per_s. The source and applied numbers are given in this row; these are not new tissue measurements. |
+| Source / evidence | No verified one-to-one numerical source is established for this added channel. Applied estimates are in Data/Model_Parameters/muscle_tendon.py; anatomical source records are in Data/Original_Study_Data/additional_muscles/. |
+
+</details>
+
+<details>
+<summary>FL_S_T1 · normalized_fiber_damping</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_S_T1 |
+| Parameter | normalized_fiber_damping |
+| Unit | 1 |
+| Meaning | Coefficient of normalized fiber velocity in the normalized tendon-direction force balance. |
+| Source value | Not established |
+| Value used in this model | 0.0059841057 |
+| What changed and why | No verified source value is available for direct comparison. Effective muscle force-balance coefficient; source-law conversion and calibration are described in the methods. |
+| Source / evidence | No verified one-to-one numerical source is established for this added channel. Applied estimates are in Data/Model_Parameters/muscle_tendon.py; anatomical source records are in Data/Original_Study_Data/additional_muscles/. |
+
+</details>
+
+<details>
+<summary>FL_S_T1 · MT_path_length_offset_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_S_T1 |
+| Parameter | MT_path_length_offset_m |
+| Unit | m |
+| Meaning | Constant offset added to the routed path to define muscle-tendon length. |
+| Source value | Not established |
+| Value used in this model | 0 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | No verified one-to-one numerical source is established for this added channel. Applied estimates are in Data/Model_Parameters/muscle_tendon.py; anatomical source records are in Data/Original_Study_Data/additional_muscles/. |
+
+</details>
+
+<details>
+<summary>FL_S_T1 · active_force_length_exponent</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_S_T1 |
+| Parameter | active_force_length_exponent |
+| Unit | 1 |
+| Meaning | Exponent rho in the source active force-length curve. |
+| Source value | Not established |
+| Value used in this model | 3 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | No verified one-to-one numerical source is established for this added channel. Applied estimates are in Data/Model_Parameters/muscle_tendon.py; anatomical source records are in Data/Original_Study_Data/additional_muscles/. |
+
+</details>
+
+<details>
+<summary>FL_S_T1 · source_shortening_curvature</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_S_T1 |
+| Parameter | source_shortening_curvature |
+| Unit | 1 |
+| Meaning | Source shortening-curve coefficient; inactive when De Groote force-velocity mode is selected. |
+| Source value | Not established |
+| Value used in this model | 0.45283 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | No verified one-to-one numerical source is established for this added channel. Applied estimates are in Data/Model_Parameters/muscle_tendon.py; anatomical source records are in Data/Original_Study_Data/additional_muscles/. |
+
+</details>
+
+<details>
+<summary>FL_S_T1 · source_lengthening_curvature</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_S_T1 |
+| Parameter | source_lengthening_curvature |
+| Unit | 1 |
+| Meaning | Source lengthening-curve coefficient; inactive when De Groote force-velocity mode is selected. |
+| Source value | Not established |
+| Value used in this model | 0.27061534 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | No verified one-to-one numerical source is established for this added channel. Applied estimates are in Data/Model_Parameters/muscle_tendon.py; anatomical source records are in Data/Original_Study_Data/additional_muscles/. |
+
+</details>
+
+<details>
+<summary>FL_S_T1 · passive_fiber_enabled</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_S_T1 |
+| Parameter | passive_fiber_enabled |
+| Unit | 0/1 |
+| Meaning | 1 enables passive fiber tension within the elastic equilibrium; zero force below l_f/l_opt=1 does not mean it is disabled. |
+| Source value | Not established |
+| Value used in this model | 1 |
+| What changed and why | No verified source value is available for direct comparison. The published passive force-length law is included in every muscle channel. Its coefficients are from Prilutsky et al. (2016), Table 10.3, and Rahmati et al. (2025), Table 3. Applying the same normalized law to added muscle channels is a modeling assumption. |
+| Source / evidence | Published parallel elastic architecture: Prilutsky et al. 2016 Table 10.3 (10.1007/978-1-4939-3267-2_10); Rahmati et al. 2025 Table 3 (10.1113/JP287448). Common normalized curve extended to all model channels; no muscle-specific passive calibration is claimed. |
+
+</details>
+
+<details>
+<summary>FL_S_T1 · degroote_force_velocity_enabled</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_S_T1 |
+| Parameter | degroote_force_velocity_enabled |
+| Unit | 0/1 |
+| Meaning | 1 uses the documented De Groote/OpenSim velocity curve; 0 uses the source curve. |
+| Source value | Not established |
+| Value used in this model | 1 |
+| What changed and why | No verified source value is available for direct comparison. Model-law choice: 1 enables the smooth De Groote force-velocity relation; 0 selects the alternative implemented law. |
+| Source / evidence | No verified one-to-one numerical source is established for this added channel. Applied estimates are in Data/Model_Parameters/muscle_tendon.py; anatomical source records are in Data/Original_Study_Data/additional_muscles/. |
+
+</details>
+
+<details>
+<summary>FR_S_T1 · max_isometric_tendon_force_N</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FR_S_T1 |
+| Parameter | max_isometric_tendon_force_N |
+| Unit | N |
+| Meaning | Maximum isometric force projected along the tendon; do not multiply by pennation cosine twice. |
+| Source value | Not established |
+| Value used in this model | 6.6096791 |
+| What changed and why | No verified source value is available for direct comparison. Force capacity was calibrated with motor inputs to improve mechanical agreement; the fit does not uniquely identify it. |
+| Source / evidence | No verified one-to-one numerical source is established for this added channel. Applied estimates are in Data/Model_Parameters/muscle_tendon.py; anatomical source records are in Data/Original_Study_Data/additional_muscles/. |
+
+</details>
+
+<details>
+<summary>FR_S_T1 · optimal_fiber_length_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FR_S_T1 |
+| Parameter | optimal_fiber_length_m |
+| Unit | m |
+| Meaning | Optimal fascicle/fiber length, not whole muscle-tendon length. |
+| Source value | Not established |
+| Value used in this model | 0.03171576 |
+| What changed and why | No verified source value is available for direct comparison. Fiber length and shortening speed were calibrated to set the force-length and force-velocity operating ranges. Physical maximum fiber speed is optimal_fiber_length_m multiplied by max_fiber_speed_optimal_lengths_per_s. The source and applied numbers are given in this row; these are not new tissue measurements. |
+| Source / evidence | No verified one-to-one numerical source is established for this added channel. Applied estimates are in Data/Model_Parameters/muscle_tendon.py; anatomical source records are in Data/Original_Study_Data/additional_muscles/. |
+
+</details>
+
+<details>
+<summary>FR_S_T1 · tendon_slack_length_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FR_S_T1 |
+| Parameter | tendon_slack_length_m |
+| Unit | m |
+| Meaning | Unloaded series tendon length. |
+| Source value | Not established |
+| Value used in this model | 0.0074801321 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | No verified one-to-one numerical source is established for this added channel. Applied estimates are in Data/Model_Parameters/muscle_tendon.py; anatomical source records are in Data/Original_Study_Data/additional_muscles/. |
+
+</details>
+
+<details>
+<summary>FR_S_T1 · pennation_cosine</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FR_S_T1 |
+| Parameter | pennation_cosine |
+| Unit | 1 |
+| Meaning | Cosine of the constant fiber-to-tendon pennation angle. |
+| Source value | Not established |
+| Value used in this model | 1 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | No verified one-to-one numerical source is established for this added channel. Applied estimates are in Data/Model_Parameters/muscle_tendon.py; anatomical source records are in Data/Original_Study_Data/additional_muscles/. |
+
+</details>
+
+<details>
+<summary>FR_S_T1 · tendon_strain_at_max_force</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FR_S_T1 |
+| Parameter | tendon_strain_at_max_force |
+| Unit | 1 |
+| Meaning | Tendon extension/slack length at one maximum isometric tendon force. |
+| Source value | Not established |
+| Value used in this model | 0.04 |
+| What changed and why | No verified source value is available for direct comparison. Assumed elastic-tendon compliance; not a measured tendon strain for this animal. |
+| Source / evidence | No verified one-to-one numerical source is established for this added channel. Applied estimates are in Data/Model_Parameters/muscle_tendon.py; anatomical source records are in Data/Original_Study_Data/additional_muscles/. |
+
+</details>
+
+<details>
+<summary>FR_S_T1 · max_fiber_speed_optimal_lengths_per_s</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FR_S_T1 |
+| Parameter | max_fiber_speed_optimal_lengths_per_s |
+| Unit | 1/s |
+| Meaning | Positive maximum-shortening speed magnitude, measured in optimal fiber lengths per second. |
+| Source value | Not established |
+| Value used in this model | 9.4339623 |
+| What changed and why | No verified source value is available for direct comparison. Fiber length and shortening speed were calibrated to set the force-length and force-velocity operating ranges. Physical maximum fiber speed is optimal_fiber_length_m multiplied by max_fiber_speed_optimal_lengths_per_s. The source and applied numbers are given in this row; these are not new tissue measurements. |
+| Source / evidence | No verified one-to-one numerical source is established for this added channel. Applied estimates are in Data/Model_Parameters/muscle_tendon.py; anatomical source records are in Data/Original_Study_Data/additional_muscles/. |
+
+</details>
+
+<details>
+<summary>FR_S_T1 · normalized_fiber_damping</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FR_S_T1 |
+| Parameter | normalized_fiber_damping |
+| Unit | 1 |
+| Meaning | Coefficient of normalized fiber velocity in the normalized tendon-direction force balance. |
+| Source value | Not established |
+| Value used in this model | 0.0059841057 |
+| What changed and why | No verified source value is available for direct comparison. Effective muscle force-balance coefficient; source-law conversion and calibration are described in the methods. |
+| Source / evidence | No verified one-to-one numerical source is established for this added channel. Applied estimates are in Data/Model_Parameters/muscle_tendon.py; anatomical source records are in Data/Original_Study_Data/additional_muscles/. |
+
+</details>
+
+<details>
+<summary>FR_S_T1 · MT_path_length_offset_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FR_S_T1 |
+| Parameter | MT_path_length_offset_m |
+| Unit | m |
+| Meaning | Constant offset added to the routed path to define muscle-tendon length. |
+| Source value | Not established |
+| Value used in this model | 0 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | No verified one-to-one numerical source is established for this added channel. Applied estimates are in Data/Model_Parameters/muscle_tendon.py; anatomical source records are in Data/Original_Study_Data/additional_muscles/. |
+
+</details>
+
+<details>
+<summary>FR_S_T1 · active_force_length_exponent</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FR_S_T1 |
+| Parameter | active_force_length_exponent |
+| Unit | 1 |
+| Meaning | Exponent rho in the source active force-length curve. |
+| Source value | Not established |
+| Value used in this model | 3 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | No verified one-to-one numerical source is established for this added channel. Applied estimates are in Data/Model_Parameters/muscle_tendon.py; anatomical source records are in Data/Original_Study_Data/additional_muscles/. |
+
+</details>
+
+<details>
+<summary>FR_S_T1 · source_shortening_curvature</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FR_S_T1 |
+| Parameter | source_shortening_curvature |
+| Unit | 1 |
+| Meaning | Source shortening-curve coefficient; inactive when De Groote force-velocity mode is selected. |
+| Source value | Not established |
+| Value used in this model | 0.45283 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | No verified one-to-one numerical source is established for this added channel. Applied estimates are in Data/Model_Parameters/muscle_tendon.py; anatomical source records are in Data/Original_Study_Data/additional_muscles/. |
+
+</details>
+
+<details>
+<summary>FR_S_T1 · source_lengthening_curvature</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FR_S_T1 |
+| Parameter | source_lengthening_curvature |
+| Unit | 1 |
+| Meaning | Source lengthening-curve coefficient; inactive when De Groote force-velocity mode is selected. |
+| Source value | Not established |
+| Value used in this model | 0.27061534 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | No verified one-to-one numerical source is established for this added channel. Applied estimates are in Data/Model_Parameters/muscle_tendon.py; anatomical source records are in Data/Original_Study_Data/additional_muscles/. |
+
+</details>
+
+<details>
+<summary>FR_S_T1 · passive_fiber_enabled</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FR_S_T1 |
+| Parameter | passive_fiber_enabled |
+| Unit | 0/1 |
+| Meaning | 1 enables passive fiber tension within the elastic equilibrium; zero force below l_f/l_opt=1 does not mean it is disabled. |
+| Source value | Not established |
+| Value used in this model | 1 |
+| What changed and why | No verified source value is available for direct comparison. The published passive force-length law is included in every muscle channel. Its coefficients are from Prilutsky et al. (2016), Table 10.3, and Rahmati et al. (2025), Table 3. Applying the same normalized law to added muscle channels is a modeling assumption. |
+| Source / evidence | Published parallel elastic architecture: Prilutsky et al. 2016 Table 10.3 (10.1007/978-1-4939-3267-2_10); Rahmati et al. 2025 Table 3 (10.1113/JP287448). Common normalized curve extended to all model channels; no muscle-specific passive calibration is claimed. |
+
+</details>
+
+<details>
+<summary>FR_S_T1 · degroote_force_velocity_enabled</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FR_S_T1 |
+| Parameter | degroote_force_velocity_enabled |
+| Unit | 0/1 |
+| Meaning | 1 uses the documented De Groote/OpenSim velocity curve; 0 uses the source curve. |
+| Source value | Not established |
+| Value used in this model | 1 |
+| What changed and why | No verified source value is available for direct comparison. Model-law choice: 1 enables the smooth De Groote force-velocity relation; 0 selects the alternative implemented law. |
+| Source / evidence | No verified one-to-one numerical source is established for this added channel. Applied estimates are in Data/Model_Parameters/muscle_tendon.py; anatomical source records are in Data/Original_Study_Data/additional_muscles/. |
+
+</details>
+
+<details>
+<summary>FL_S_T2 · max_isometric_tendon_force_N</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_S_T2 |
+| Parameter | max_isometric_tendon_force_N |
+| Unit | N |
+| Meaning | Maximum isometric force projected along the tendon; do not multiply by pennation cosine twice. |
+| Source value | Not established |
+| Value used in this model | 3.1044071 |
+| What changed and why | No verified source value is available for direct comparison. Force capacity was calibrated with motor inputs to improve mechanical agreement; the fit does not uniquely identify it. |
+| Source / evidence | No verified one-to-one numerical source is established for this added channel. Applied estimates are in Data/Model_Parameters/muscle_tendon.py; anatomical source records are in Data/Original_Study_Data/additional_muscles/. |
+
+</details>
+
+<details>
+<summary>FL_S_T2 · optimal_fiber_length_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_S_T2 |
+| Parameter | optimal_fiber_length_m |
+| Unit | m |
+| Meaning | Optimal fascicle/fiber length, not whole muscle-tendon length. |
+| Source value | Not established |
+| Value used in this model | 0.02913179 |
+| What changed and why | No verified source value is available for direct comparison. Fiber length and shortening speed were calibrated to set the force-length and force-velocity operating ranges. Physical maximum fiber speed is optimal_fiber_length_m multiplied by max_fiber_speed_optimal_lengths_per_s. The source and applied numbers are given in this row; these are not new tissue measurements. |
+| Source / evidence | No verified one-to-one numerical source is established for this added channel. Applied estimates are in Data/Model_Parameters/muscle_tendon.py; anatomical source records are in Data/Original_Study_Data/additional_muscles/. |
+
+</details>
+
+<details>
+<summary>FL_S_T2 · tendon_slack_length_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_S_T2 |
+| Parameter | tendon_slack_length_m |
+| Unit | m |
+| Meaning | Unloaded series tendon length. |
+| Source value | Not established |
+| Value used in this model | 0.0068707051 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | No verified one-to-one numerical source is established for this added channel. Applied estimates are in Data/Model_Parameters/muscle_tendon.py; anatomical source records are in Data/Original_Study_Data/additional_muscles/. |
+
+</details>
+
+<details>
+<summary>FL_S_T2 · pennation_cosine</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_S_T2 |
+| Parameter | pennation_cosine |
+| Unit | 1 |
+| Meaning | Cosine of the constant fiber-to-tendon pennation angle. |
+| Source value | Not established |
+| Value used in this model | 1 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | No verified one-to-one numerical source is established for this added channel. Applied estimates are in Data/Model_Parameters/muscle_tendon.py; anatomical source records are in Data/Original_Study_Data/additional_muscles/. |
+
+</details>
+
+<details>
+<summary>FL_S_T2 · tendon_strain_at_max_force</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_S_T2 |
+| Parameter | tendon_strain_at_max_force |
+| Unit | 1 |
+| Meaning | Tendon extension/slack length at one maximum isometric tendon force. |
+| Source value | Not established |
+| Value used in this model | 0.04 |
+| What changed and why | No verified source value is available for direct comparison. Assumed elastic-tendon compliance; not a measured tendon strain for this animal. |
+| Source / evidence | No verified one-to-one numerical source is established for this added channel. Applied estimates are in Data/Model_Parameters/muscle_tendon.py; anatomical source records are in Data/Original_Study_Data/additional_muscles/. |
+
+</details>
+
+<details>
+<summary>FL_S_T2 · max_fiber_speed_optimal_lengths_per_s</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_S_T2 |
+| Parameter | max_fiber_speed_optimal_lengths_per_s |
+| Unit | 1/s |
+| Meaning | Positive maximum-shortening speed magnitude, measured in optimal fiber lengths per second. |
+| Source value | Not established |
+| Value used in this model | 9.4339623 |
+| What changed and why | No verified source value is available for direct comparison. Fiber length and shortening speed were calibrated to set the force-length and force-velocity operating ranges. Physical maximum fiber speed is optimal_fiber_length_m multiplied by max_fiber_speed_optimal_lengths_per_s. The source and applied numbers are given in this row; these are not new tissue measurements. |
+| Source / evidence | No verified one-to-one numerical source is established for this added channel. Applied estimates are in Data/Model_Parameters/muscle_tendon.py; anatomical source records are in Data/Original_Study_Data/additional_muscles/. |
+
+</details>
+
+<details>
+<summary>FL_S_T2 · normalized_fiber_damping</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_S_T2 |
+| Parameter | normalized_fiber_damping |
+| Unit | 1 |
+| Meaning | Coefficient of normalized fiber velocity in the normalized tendon-direction force balance. |
+| Source value | Not established |
+| Value used in this model | 0.0054965641 |
+| What changed and why | No verified source value is available for direct comparison. Effective muscle force-balance coefficient; source-law conversion and calibration are described in the methods. |
+| Source / evidence | No verified one-to-one numerical source is established for this added channel. Applied estimates are in Data/Model_Parameters/muscle_tendon.py; anatomical source records are in Data/Original_Study_Data/additional_muscles/. |
+
+</details>
+
+<details>
+<summary>FL_S_T2 · MT_path_length_offset_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_S_T2 |
+| Parameter | MT_path_length_offset_m |
+| Unit | m |
+| Meaning | Constant offset added to the routed path to define muscle-tendon length. |
+| Source value | Not established |
+| Value used in this model | 0 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | No verified one-to-one numerical source is established for this added channel. Applied estimates are in Data/Model_Parameters/muscle_tendon.py; anatomical source records are in Data/Original_Study_Data/additional_muscles/. |
+
+</details>
+
+<details>
+<summary>FL_S_T2 · active_force_length_exponent</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_S_T2 |
+| Parameter | active_force_length_exponent |
+| Unit | 1 |
+| Meaning | Exponent rho in the source active force-length curve. |
+| Source value | Not established |
+| Value used in this model | 3 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | No verified one-to-one numerical source is established for this added channel. Applied estimates are in Data/Model_Parameters/muscle_tendon.py; anatomical source records are in Data/Original_Study_Data/additional_muscles/. |
+
+</details>
+
+<details>
+<summary>FL_S_T2 · source_shortening_curvature</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_S_T2 |
+| Parameter | source_shortening_curvature |
+| Unit | 1 |
+| Meaning | Source shortening-curve coefficient; inactive when De Groote force-velocity mode is selected. |
+| Source value | Not established |
+| Value used in this model | 0.45283 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | No verified one-to-one numerical source is established for this added channel. Applied estimates are in Data/Model_Parameters/muscle_tendon.py; anatomical source records are in Data/Original_Study_Data/additional_muscles/. |
+
+</details>
+
+<details>
+<summary>FL_S_T2 · source_lengthening_curvature</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_S_T2 |
+| Parameter | source_lengthening_curvature |
+| Unit | 1 |
+| Meaning | Source lengthening-curve coefficient; inactive when De Groote force-velocity mode is selected. |
+| Source value | Not established |
+| Value used in this model | 0.41692897 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | No verified one-to-one numerical source is established for this added channel. Applied estimates are in Data/Model_Parameters/muscle_tendon.py; anatomical source records are in Data/Original_Study_Data/additional_muscles/. |
+
+</details>
+
+<details>
+<summary>FL_S_T2 · passive_fiber_enabled</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_S_T2 |
+| Parameter | passive_fiber_enabled |
+| Unit | 0/1 |
+| Meaning | 1 enables passive fiber tension within the elastic equilibrium; zero force below l_f/l_opt=1 does not mean it is disabled. |
+| Source value | Not established |
+| Value used in this model | 1 |
+| What changed and why | No verified source value is available for direct comparison. The published passive force-length law is included in every muscle channel. Its coefficients are from Prilutsky et al. (2016), Table 10.3, and Rahmati et al. (2025), Table 3. Applying the same normalized law to added muscle channels is a modeling assumption. |
+| Source / evidence | Published parallel elastic architecture: Prilutsky et al. 2016 Table 10.3 (10.1007/978-1-4939-3267-2_10); Rahmati et al. 2025 Table 3 (10.1113/JP287448). Common normalized curve extended to all model channels; no muscle-specific passive calibration is claimed. |
+
+</details>
+
+<details>
+<summary>FL_S_T2 · degroote_force_velocity_enabled</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_S_T2 |
+| Parameter | degroote_force_velocity_enabled |
+| Unit | 0/1 |
+| Meaning | 1 uses the documented De Groote/OpenSim velocity curve; 0 uses the source curve. |
+| Source value | Not established |
+| Value used in this model | 1 |
+| What changed and why | No verified source value is available for direct comparison. Model-law choice: 1 enables the smooth De Groote force-velocity relation; 0 selects the alternative implemented law. |
+| Source / evidence | No verified one-to-one numerical source is established for this added channel. Applied estimates are in Data/Model_Parameters/muscle_tendon.py; anatomical source records are in Data/Original_Study_Data/additional_muscles/. |
+
+</details>
+
+<details>
+<summary>FR_S_T2 · max_isometric_tendon_force_N</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FR_S_T2 |
+| Parameter | max_isometric_tendon_force_N |
+| Unit | N |
+| Meaning | Maximum isometric force projected along the tendon; do not multiply by pennation cosine twice. |
+| Source value | Not established |
+| Value used in this model | 3.1044071 |
+| What changed and why | No verified source value is available for direct comparison. Force capacity was calibrated with motor inputs to improve mechanical agreement; the fit does not uniquely identify it. |
+| Source / evidence | No verified one-to-one numerical source is established for this added channel. Applied estimates are in Data/Model_Parameters/muscle_tendon.py; anatomical source records are in Data/Original_Study_Data/additional_muscles/. |
+
+</details>
+
+<details>
+<summary>FR_S_T2 · optimal_fiber_length_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FR_S_T2 |
+| Parameter | optimal_fiber_length_m |
+| Unit | m |
+| Meaning | Optimal fascicle/fiber length, not whole muscle-tendon length. |
+| Source value | Not established |
+| Value used in this model | 0.02913179 |
+| What changed and why | No verified source value is available for direct comparison. Fiber length and shortening speed were calibrated to set the force-length and force-velocity operating ranges. Physical maximum fiber speed is optimal_fiber_length_m multiplied by max_fiber_speed_optimal_lengths_per_s. The source and applied numbers are given in this row; these are not new tissue measurements. |
+| Source / evidence | No verified one-to-one numerical source is established for this added channel. Applied estimates are in Data/Model_Parameters/muscle_tendon.py; anatomical source records are in Data/Original_Study_Data/additional_muscles/. |
+
+</details>
+
+<details>
+<summary>FR_S_T2 · tendon_slack_length_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FR_S_T2 |
+| Parameter | tendon_slack_length_m |
+| Unit | m |
+| Meaning | Unloaded series tendon length. |
+| Source value | Not established |
+| Value used in this model | 0.0068707051 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | No verified one-to-one numerical source is established for this added channel. Applied estimates are in Data/Model_Parameters/muscle_tendon.py; anatomical source records are in Data/Original_Study_Data/additional_muscles/. |
+
+</details>
+
+<details>
+<summary>FR_S_T2 · pennation_cosine</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FR_S_T2 |
+| Parameter | pennation_cosine |
+| Unit | 1 |
+| Meaning | Cosine of the constant fiber-to-tendon pennation angle. |
+| Source value | Not established |
+| Value used in this model | 1 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | No verified one-to-one numerical source is established for this added channel. Applied estimates are in Data/Model_Parameters/muscle_tendon.py; anatomical source records are in Data/Original_Study_Data/additional_muscles/. |
+
+</details>
+
+<details>
+<summary>FR_S_T2 · tendon_strain_at_max_force</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FR_S_T2 |
+| Parameter | tendon_strain_at_max_force |
+| Unit | 1 |
+| Meaning | Tendon extension/slack length at one maximum isometric tendon force. |
+| Source value | Not established |
+| Value used in this model | 0.04 |
+| What changed and why | No verified source value is available for direct comparison. Assumed elastic-tendon compliance; not a measured tendon strain for this animal. |
+| Source / evidence | No verified one-to-one numerical source is established for this added channel. Applied estimates are in Data/Model_Parameters/muscle_tendon.py; anatomical source records are in Data/Original_Study_Data/additional_muscles/. |
+
+</details>
+
+<details>
+<summary>FR_S_T2 · max_fiber_speed_optimal_lengths_per_s</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FR_S_T2 |
+| Parameter | max_fiber_speed_optimal_lengths_per_s |
+| Unit | 1/s |
+| Meaning | Positive maximum-shortening speed magnitude, measured in optimal fiber lengths per second. |
+| Source value | Not established |
+| Value used in this model | 9.4339623 |
+| What changed and why | No verified source value is available for direct comparison. Fiber length and shortening speed were calibrated to set the force-length and force-velocity operating ranges. Physical maximum fiber speed is optimal_fiber_length_m multiplied by max_fiber_speed_optimal_lengths_per_s. The source and applied numbers are given in this row; these are not new tissue measurements. |
+| Source / evidence | No verified one-to-one numerical source is established for this added channel. Applied estimates are in Data/Model_Parameters/muscle_tendon.py; anatomical source records are in Data/Original_Study_Data/additional_muscles/. |
+
+</details>
+
+<details>
+<summary>FR_S_T2 · normalized_fiber_damping</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FR_S_T2 |
+| Parameter | normalized_fiber_damping |
+| Unit | 1 |
+| Meaning | Coefficient of normalized fiber velocity in the normalized tendon-direction force balance. |
+| Source value | Not established |
+| Value used in this model | 0.0054965641 |
+| What changed and why | No verified source value is available for direct comparison. Effective muscle force-balance coefficient; source-law conversion and calibration are described in the methods. |
+| Source / evidence | No verified one-to-one numerical source is established for this added channel. Applied estimates are in Data/Model_Parameters/muscle_tendon.py; anatomical source records are in Data/Original_Study_Data/additional_muscles/. |
+
+</details>
+
+<details>
+<summary>FR_S_T2 · MT_path_length_offset_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FR_S_T2 |
+| Parameter | MT_path_length_offset_m |
+| Unit | m |
+| Meaning | Constant offset added to the routed path to define muscle-tendon length. |
+| Source value | Not established |
+| Value used in this model | 0 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | No verified one-to-one numerical source is established for this added channel. Applied estimates are in Data/Model_Parameters/muscle_tendon.py; anatomical source records are in Data/Original_Study_Data/additional_muscles/. |
+
+</details>
+
+<details>
+<summary>FR_S_T2 · active_force_length_exponent</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FR_S_T2 |
+| Parameter | active_force_length_exponent |
+| Unit | 1 |
+| Meaning | Exponent rho in the source active force-length curve. |
+| Source value | Not established |
+| Value used in this model | 3 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | No verified one-to-one numerical source is established for this added channel. Applied estimates are in Data/Model_Parameters/muscle_tendon.py; anatomical source records are in Data/Original_Study_Data/additional_muscles/. |
+
+</details>
+
+<details>
+<summary>FR_S_T2 · source_shortening_curvature</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FR_S_T2 |
+| Parameter | source_shortening_curvature |
+| Unit | 1 |
+| Meaning | Source shortening-curve coefficient; inactive when De Groote force-velocity mode is selected. |
+| Source value | Not established |
+| Value used in this model | 0.45283 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | No verified one-to-one numerical source is established for this added channel. Applied estimates are in Data/Model_Parameters/muscle_tendon.py; anatomical source records are in Data/Original_Study_Data/additional_muscles/. |
+
+</details>
+
+<details>
+<summary>FR_S_T2 · source_lengthening_curvature</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FR_S_T2 |
+| Parameter | source_lengthening_curvature |
+| Unit | 1 |
+| Meaning | Source lengthening-curve coefficient; inactive when De Groote force-velocity mode is selected. |
+| Source value | Not established |
+| Value used in this model | 0.41692897 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | No verified one-to-one numerical source is established for this added channel. Applied estimates are in Data/Model_Parameters/muscle_tendon.py; anatomical source records are in Data/Original_Study_Data/additional_muscles/. |
+
+</details>
+
+<details>
+<summary>FR_S_T2 · passive_fiber_enabled</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FR_S_T2 |
+| Parameter | passive_fiber_enabled |
+| Unit | 0/1 |
+| Meaning | 1 enables passive fiber tension within the elastic equilibrium; zero force below l_f/l_opt=1 does not mean it is disabled. |
+| Source value | Not established |
+| Value used in this model | 1 |
+| What changed and why | No verified source value is available for direct comparison. The published passive force-length law is included in every muscle channel. Its coefficients are from Prilutsky et al. (2016), Table 10.3, and Rahmati et al. (2025), Table 3. Applying the same normalized law to added muscle channels is a modeling assumption. |
+| Source / evidence | Published parallel elastic architecture: Prilutsky et al. 2016 Table 10.3 (10.1007/978-1-4939-3267-2_10); Rahmati et al. 2025 Table 3 (10.1113/JP287448). Common normalized curve extended to all model channels; no muscle-specific passive calibration is claimed. |
+
+</details>
+
+<details>
+<summary>FR_S_T2 · degroote_force_velocity_enabled</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FR_S_T2 |
+| Parameter | degroote_force_velocity_enabled |
+| Unit | 0/1 |
+| Meaning | 1 uses the documented De Groote/OpenSim velocity curve; 0 uses the source curve. |
+| Source value | Not established |
+| Value used in this model | 1 |
+| What changed and why | No verified source value is available for direct comparison. Model-law choice: 1 enables the smooth De Groote force-velocity relation; 0 selects the alternative implemented law. |
+| Source / evidence | No verified one-to-one numerical source is established for this added channel. Applied estimates are in Data/Model_Parameters/muscle_tendon.py; anatomical source records are in Data/Original_Study_Data/additional_muscles/. |
+
+</details>
+
+<details>
+<summary>FL_S_T3 · max_isometric_tendon_force_N</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_S_T3 |
+| Parameter | max_isometric_tendon_force_N |
+| Unit | N |
+| Meaning | Maximum isometric force projected along the tendon; do not multiply by pennation cosine twice. |
+| Source value | Not established |
+| Value used in this model | 1.6218194 |
+| What changed and why | No verified source value is available for direct comparison. Force capacity was calibrated with motor inputs to improve mechanical agreement; the fit does not uniquely identify it. |
+| Source / evidence | No verified one-to-one numerical source is established for this added channel. Applied estimates are in Data/Model_Parameters/muscle_tendon.py; anatomical source records are in Data/Original_Study_Data/additional_muscles/. |
+
+</details>
+
+<details>
+<summary>FL_S_T3 · optimal_fiber_length_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_S_T3 |
+| Parameter | optimal_fiber_length_m |
+| Unit | m |
+| Meaning | Optimal fascicle/fiber length, not whole muscle-tendon length. |
+| Source value | Not established |
+| Value used in this model | 0.022790213 |
+| What changed and why | No verified source value is available for direct comparison. Fiber length and shortening speed were calibrated to set the force-length and force-velocity operating ranges. Physical maximum fiber speed is optimal_fiber_length_m multiplied by max_fiber_speed_optimal_lengths_per_s. The source and applied numbers are given in this row; these are not new tissue measurements. |
+| Source / evidence | No verified one-to-one numerical source is established for this added channel. Applied estimates are in Data/Model_Parameters/muscle_tendon.py; anatomical source records are in Data/Original_Study_Data/additional_muscles/. |
+
+</details>
+
+<details>
+<summary>FL_S_T3 · tendon_slack_length_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_S_T3 |
+| Parameter | tendon_slack_length_m |
+| Unit | m |
+| Meaning | Unloaded series tendon length. |
+| Source value | Not established |
+| Value used in this model | 0.0053750502 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | No verified one-to-one numerical source is established for this added channel. Applied estimates are in Data/Model_Parameters/muscle_tendon.py; anatomical source records are in Data/Original_Study_Data/additional_muscles/. |
+
+</details>
+
+<details>
+<summary>FL_S_T3 · pennation_cosine</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_S_T3 |
+| Parameter | pennation_cosine |
+| Unit | 1 |
+| Meaning | Cosine of the constant fiber-to-tendon pennation angle. |
+| Source value | Not established |
+| Value used in this model | 1 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | No verified one-to-one numerical source is established for this added channel. Applied estimates are in Data/Model_Parameters/muscle_tendon.py; anatomical source records are in Data/Original_Study_Data/additional_muscles/. |
+
+</details>
+
+<details>
+<summary>FL_S_T3 · tendon_strain_at_max_force</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_S_T3 |
+| Parameter | tendon_strain_at_max_force |
+| Unit | 1 |
+| Meaning | Tendon extension/slack length at one maximum isometric tendon force. |
+| Source value | Not established |
+| Value used in this model | 0.04 |
+| What changed and why | No verified source value is available for direct comparison. Assumed elastic-tendon compliance; not a measured tendon strain for this animal. |
+| Source / evidence | No verified one-to-one numerical source is established for this added channel. Applied estimates are in Data/Model_Parameters/muscle_tendon.py; anatomical source records are in Data/Original_Study_Data/additional_muscles/. |
+
+</details>
+
+<details>
+<summary>FL_S_T3 · max_fiber_speed_optimal_lengths_per_s</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_S_T3 |
+| Parameter | max_fiber_speed_optimal_lengths_per_s |
+| Unit | 1/s |
+| Meaning | Positive maximum-shortening speed magnitude, measured in optimal fiber lengths per second. |
+| Source value | Not established |
+| Value used in this model | 9.4339623 |
+| What changed and why | No verified source value is available for direct comparison. Fiber length and shortening speed were calibrated to set the force-length and force-velocity operating ranges. Physical maximum fiber speed is optimal_fiber_length_m multiplied by max_fiber_speed_optimal_lengths_per_s. The source and applied numbers are given in this row; these are not new tissue measurements. |
+| Source / evidence | No verified one-to-one numerical source is established for this added channel. Applied estimates are in Data/Model_Parameters/muscle_tendon.py; anatomical source records are in Data/Original_Study_Data/additional_muscles/. |
+
+</details>
+
+<details>
+<summary>FL_S_T3 · normalized_fiber_damping</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_S_T3 |
+| Parameter | normalized_fiber_damping |
+| Unit | 1 |
+| Meaning | Coefficient of normalized fiber velocity in the normalized tendon-direction force balance. |
+| Source value | Not established |
+| Value used in this model | 0.0043000402 |
+| What changed and why | No verified source value is available for direct comparison. Effective muscle force-balance coefficient; source-law conversion and calibration are described in the methods. |
+| Source / evidence | No verified one-to-one numerical source is established for this added channel. Applied estimates are in Data/Model_Parameters/muscle_tendon.py; anatomical source records are in Data/Original_Study_Data/additional_muscles/. |
+
+</details>
+
+<details>
+<summary>FL_S_T3 · MT_path_length_offset_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_S_T3 |
+| Parameter | MT_path_length_offset_m |
+| Unit | m |
+| Meaning | Constant offset added to the routed path to define muscle-tendon length. |
+| Source value | Not established |
+| Value used in this model | 0 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | No verified one-to-one numerical source is established for this added channel. Applied estimates are in Data/Model_Parameters/muscle_tendon.py; anatomical source records are in Data/Original_Study_Data/additional_muscles/. |
+
+</details>
+
+<details>
+<summary>FL_S_T3 · active_force_length_exponent</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_S_T3 |
+| Parameter | active_force_length_exponent |
+| Unit | 1 |
+| Meaning | Exponent rho in the source active force-length curve. |
+| Source value | Not established |
+| Value used in this model | 3 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | No verified one-to-one numerical source is established for this added channel. Applied estimates are in Data/Model_Parameters/muscle_tendon.py; anatomical source records are in Data/Original_Study_Data/additional_muscles/. |
+
+</details>
+
+<details>
+<summary>FL_S_T3 · source_shortening_curvature</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_S_T3 |
+| Parameter | source_shortening_curvature |
+| Unit | 1 |
+| Meaning | Source shortening-curve coefficient; inactive when De Groote force-velocity mode is selected. |
+| Source value | Not established |
+| Value used in this model | 0.45283 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | No verified one-to-one numerical source is established for this added channel. Applied estimates are in Data/Model_Parameters/muscle_tendon.py; anatomical source records are in Data/Original_Study_Data/additional_muscles/. |
+
+</details>
+
+<details>
+<summary>FL_S_T3 · source_lengthening_curvature</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_S_T3 |
+| Parameter | source_lengthening_curvature |
+| Unit | 1 |
+| Meaning | Source lengthening-curve coefficient; inactive when De Groote force-velocity mode is selected. |
+| Source value | Not established |
+| Value used in this model | 0.54054061 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | No verified one-to-one numerical source is established for this added channel. Applied estimates are in Data/Model_Parameters/muscle_tendon.py; anatomical source records are in Data/Original_Study_Data/additional_muscles/. |
+
+</details>
+
+<details>
+<summary>FL_S_T3 · passive_fiber_enabled</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_S_T3 |
+| Parameter | passive_fiber_enabled |
+| Unit | 0/1 |
+| Meaning | 1 enables passive fiber tension within the elastic equilibrium; zero force below l_f/l_opt=1 does not mean it is disabled. |
+| Source value | Not established |
+| Value used in this model | 1 |
+| What changed and why | No verified source value is available for direct comparison. The published passive force-length law is included in every muscle channel. Its coefficients are from Prilutsky et al. (2016), Table 10.3, and Rahmati et al. (2025), Table 3. Applying the same normalized law to added muscle channels is a modeling assumption. |
+| Source / evidence | Published parallel elastic architecture: Prilutsky et al. 2016 Table 10.3 (10.1007/978-1-4939-3267-2_10); Rahmati et al. 2025 Table 3 (10.1113/JP287448). Common normalized curve extended to all model channels; no muscle-specific passive calibration is claimed. |
+
+</details>
+
+<details>
+<summary>FL_S_T3 · degroote_force_velocity_enabled</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_S_T3 |
+| Parameter | degroote_force_velocity_enabled |
+| Unit | 0/1 |
+| Meaning | 1 uses the documented De Groote/OpenSim velocity curve; 0 uses the source curve. |
+| Source value | Not established |
+| Value used in this model | 1 |
+| What changed and why | No verified source value is available for direct comparison. Model-law choice: 1 enables the smooth De Groote force-velocity relation; 0 selects the alternative implemented law. |
+| Source / evidence | No verified one-to-one numerical source is established for this added channel. Applied estimates are in Data/Model_Parameters/muscle_tendon.py; anatomical source records are in Data/Original_Study_Data/additional_muscles/. |
+
+</details>
+
+<details>
+<summary>FR_S_T3 · max_isometric_tendon_force_N</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FR_S_T3 |
+| Parameter | max_isometric_tendon_force_N |
+| Unit | N |
+| Meaning | Maximum isometric force projected along the tendon; do not multiply by pennation cosine twice. |
+| Source value | Not established |
+| Value used in this model | 1.6218194 |
+| What changed and why | No verified source value is available for direct comparison. Force capacity was calibrated with motor inputs to improve mechanical agreement; the fit does not uniquely identify it. |
+| Source / evidence | No verified one-to-one numerical source is established for this added channel. Applied estimates are in Data/Model_Parameters/muscle_tendon.py; anatomical source records are in Data/Original_Study_Data/additional_muscles/. |
+
+</details>
+
+<details>
+<summary>FR_S_T3 · optimal_fiber_length_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FR_S_T3 |
+| Parameter | optimal_fiber_length_m |
+| Unit | m |
+| Meaning | Optimal fascicle/fiber length, not whole muscle-tendon length. |
+| Source value | Not established |
+| Value used in this model | 0.022790213 |
+| What changed and why | No verified source value is available for direct comparison. Fiber length and shortening speed were calibrated to set the force-length and force-velocity operating ranges. Physical maximum fiber speed is optimal_fiber_length_m multiplied by max_fiber_speed_optimal_lengths_per_s. The source and applied numbers are given in this row; these are not new tissue measurements. |
+| Source / evidence | No verified one-to-one numerical source is established for this added channel. Applied estimates are in Data/Model_Parameters/muscle_tendon.py; anatomical source records are in Data/Original_Study_Data/additional_muscles/. |
+
+</details>
+
+<details>
+<summary>FR_S_T3 · tendon_slack_length_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FR_S_T3 |
+| Parameter | tendon_slack_length_m |
+| Unit | m |
+| Meaning | Unloaded series tendon length. |
+| Source value | Not established |
+| Value used in this model | 0.0053750502 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | No verified one-to-one numerical source is established for this added channel. Applied estimates are in Data/Model_Parameters/muscle_tendon.py; anatomical source records are in Data/Original_Study_Data/additional_muscles/. |
+
+</details>
+
+<details>
+<summary>FR_S_T3 · pennation_cosine</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FR_S_T3 |
+| Parameter | pennation_cosine |
+| Unit | 1 |
+| Meaning | Cosine of the constant fiber-to-tendon pennation angle. |
+| Source value | Not established |
+| Value used in this model | 1 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | No verified one-to-one numerical source is established for this added channel. Applied estimates are in Data/Model_Parameters/muscle_tendon.py; anatomical source records are in Data/Original_Study_Data/additional_muscles/. |
+
+</details>
+
+<details>
+<summary>FR_S_T3 · tendon_strain_at_max_force</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FR_S_T3 |
+| Parameter | tendon_strain_at_max_force |
+| Unit | 1 |
+| Meaning | Tendon extension/slack length at one maximum isometric tendon force. |
+| Source value | Not established |
+| Value used in this model | 0.04 |
+| What changed and why | No verified source value is available for direct comparison. Assumed elastic-tendon compliance; not a measured tendon strain for this animal. |
+| Source / evidence | No verified one-to-one numerical source is established for this added channel. Applied estimates are in Data/Model_Parameters/muscle_tendon.py; anatomical source records are in Data/Original_Study_Data/additional_muscles/. |
+
+</details>
+
+<details>
+<summary>FR_S_T3 · max_fiber_speed_optimal_lengths_per_s</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FR_S_T3 |
+| Parameter | max_fiber_speed_optimal_lengths_per_s |
+| Unit | 1/s |
+| Meaning | Positive maximum-shortening speed magnitude, measured in optimal fiber lengths per second. |
+| Source value | Not established |
+| Value used in this model | 9.4339623 |
+| What changed and why | No verified source value is available for direct comparison. Fiber length and shortening speed were calibrated to set the force-length and force-velocity operating ranges. Physical maximum fiber speed is optimal_fiber_length_m multiplied by max_fiber_speed_optimal_lengths_per_s. The source and applied numbers are given in this row; these are not new tissue measurements. |
+| Source / evidence | No verified one-to-one numerical source is established for this added channel. Applied estimates are in Data/Model_Parameters/muscle_tendon.py; anatomical source records are in Data/Original_Study_Data/additional_muscles/. |
+
+</details>
+
+<details>
+<summary>FR_S_T3 · normalized_fiber_damping</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FR_S_T3 |
+| Parameter | normalized_fiber_damping |
+| Unit | 1 |
+| Meaning | Coefficient of normalized fiber velocity in the normalized tendon-direction force balance. |
+| Source value | Not established |
+| Value used in this model | 0.0043000402 |
+| What changed and why | No verified source value is available for direct comparison. Effective muscle force-balance coefficient; source-law conversion and calibration are described in the methods. |
+| Source / evidence | No verified one-to-one numerical source is established for this added channel. Applied estimates are in Data/Model_Parameters/muscle_tendon.py; anatomical source records are in Data/Original_Study_Data/additional_muscles/. |
+
+</details>

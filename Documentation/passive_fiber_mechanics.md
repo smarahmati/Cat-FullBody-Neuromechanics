@@ -6,13 +6,13 @@
 
 ## Published passive law, included inside the forward solve
 
-${F}_{PE,i}={F}_{0,i}\,\frac{0.0075}{11.6}{[\exp \,(\min \{50,11.6({\lambda }_{i}-1)\})-1]}_{+},\,{\lambda }_{i}=\frac{{l}_{f,i}}{{l}_{opt,i}}$
+![Published passive law, included inside the forward solve](Figures_and_Videos/Equations/passive_fiber_mechanics_01.svg)
 
 F_PE,i is the passive fiber contribution projected along the tendon (N); F0,i is the already tendon-projected maximum isometric force (N); l_f,i is current fiber length (m); l_opt,i is optimal fiber length (m); λ_i is their dimensionless ratio. The operator [x]+ means max(0,x). The constants 0.0075 and 11.6 are dimensionless published curve coefficients. The cap 50 is numerical protection. Rectification to tension only and extension of the common curve to added channels are explicit assumptions.
 
 Sources: [Prilutsky, Klishko, Weber & Lemay (2016), Table 10.3](https://doi.org/10.1007/978-1-4939-3267-2_10); [Rahmati et al. (2025), Table 3](https://doi.org/10.1113/JP287448). The same passive coefficients appear in both. The current elastic-tendon, constant-pennation implementation is an adaptation; it is not an exact reproduction of either complete published model.
 
-${F}_{T,i}={F}_{0,i}[{a}_{i}{f}_{L}({\lambda }_{i}){f}_{V}({\nu }_{i})+{f}_{PE}({\lambda }_{i})+{\beta }_{i}{\nu }_{i}],\,{L}_{MT,i}={l}_{f,i}\cos {\alpha }_{i}+{l}_{T,i}$
+![Published passive law, included inside the forward solve](Figures_and_Videos/Equations/passive_fiber_mechanics_02.svg)
 
 F_T is tendon tension (N); a is activation (0–1); f_L and f_V are dimensionless active length and velocity factors; f_PE=F_PE/F0; β is dimensionless fiber damping; ν is fiber velocity divided by l_opt v_max (positive in lengthening). L_MT is whole muscle–tendon path length (m); l_T is elastic tendon length (m); α is constant pennation angle. F0 is already tendon-projected: do not multiply the force by cos α again. Passive force affects the equilibrium solution and therefore the tendon force applied to the skeleton; it is not added again in postprocessing.
 

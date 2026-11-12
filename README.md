@@ -83,13 +83,13 @@ You can also edit `SIMULATION_SECONDS` and `SHOW_GUI` near the top of [run.py](r
 
 ## Equations at a glance
 
-$$\dot a_i=(u_i-a_i)/\tau_i,\qquad L_{MT,i}=l_{f,i}\cos\alpha_i+l_{T,i}$$
+![Activation and muscle–tendon length](Documentation/Figures_and_Videos/Equations/readme_01.svg)
 
-$$F_{T,i}=F_{0,i}f_T\left((l_{T,i}-l_{s,i})/l_{s,i}\right),\qquad Q_{m,j}=\sum_i\left(-\frac{\partial L_{MT,i}}{\partial q_j}\right)F_{T,i}$$
+![Tendon force and muscle moments](Documentation/Figures_and_Videos/Equations/readme_02.svg)
 
-$$M(q)\ddot q+b(q,\dot q)=Q_m+Q_{passive}+J_c^TF_c+Q_{constraint}$$
+![Coupled multibody dynamics](Documentation/Figures_and_Videos/Equations/readme_03.svg)
 
-Here $u$ is excitation, $a$ activation, $\tau$ an activation time constant, $L_{MT}$ whole muscle–tendon length, $l_f$ fiber length, $l_T$ tendon length, $l_s$ tendon slack length, $\alpha$ pennation, $F_0$ tendon-projected maximum isometric force, $q$ generalized position, $M$ mass matrix, $b$ inertial/gravitational terms, $Q$ generalized forces and $J_c^TF_c$ contact loading. [The methods guide](Documentation/model_methods.md) defines **every term immediately after each full equation** and includes a final glossary.
+Here u is excitation, a activation, τ an activation time constant, L<sub>MT</sub> whole muscle–tendon length, l<sub>f</sub> fiber length, l<sub>T</sub> tendon length, l<sub>s</sub> tendon slack length, α pennation, F<sub>0</sub> tendon-projected maximum isometric force, q generalized position, M mass matrix, b inertial/gravitational terms, Q generalized forces and J<sub>c</sub><sup>T</sup>F<sub>c</sub> contact loading. [The methods guide](Documentation/model_methods.md) defines **every term immediately after each full equation** and includes a final glossary.
 
 ## From excitation to muscle force: the Hill-type model
 

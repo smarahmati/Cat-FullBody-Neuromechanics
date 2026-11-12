@@ -4,205 +4,3204 @@
 
 [Back to parameter guide](../parameter_tables.md)
 
-| Object | Parameter | Unit | Meaning | Source value | Value used in this model | What changed and why | Source / evidence |
-| --- | --- | --- | --- | --- | --- | --- | --- |
-| L_IP | max_isometric_tendon_force_N | N | Maximum isometric force projected along the tendon; do not multiply by pennation cosine twice. | 95.1724 | 95.292768 | Different from the verified source value. Change relative to source: +0.126%. Force capacity was calibrated with motor inputs to improve mechanical agreement; the fit does not uniquely identify it. | Generic hindlimb parameters from the author’s MATLAB Model 3 dataset. The source column reports the generic table; the applied column reports the calibrated simulation value. Data/Original_Study_Data/hindlimb/model3_parameters.json |
-| L_IP | optimal_fiber_length_m | m | Optimal fascicle/fiber length, not whole muscle-tendon length. | 0.064 | 0.056758115 | Different from the verified source value. Change relative to source: -11.3%. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Generic hindlimb parameters from the author’s MATLAB Model 3 dataset. The source column reports the generic table; the applied column reports the calibrated simulation value. Data/Original_Study_Data/hindlimb/model3_parameters.json |
-| L_IP | tendon_slack_length_m | m | Unloaded series tendon length. | 0.016 | 0.014151507 | Different from the verified source value. Change relative to source: -11.6%. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Generic hindlimb parameters from the author’s MATLAB Model 3 dataset. The source column reports the generic table; the applied column reports the calibrated simulation value. Data/Original_Study_Data/hindlimb/model3_parameters.json |
-| L_IP | pennation_cosine | 1 | Cosine of the constant fiber-to-tendon pennation angle. | 1 | 1 | Retained the verified source value; no numerical change from that source. | Generic hindlimb parameters from the author’s MATLAB Model 3 dataset. The source column reports the generic table; the applied column reports the calibrated simulation value. Data/Original_Study_Data/hindlimb/model3_parameters.json |
-| L_IP | tendon_strain_at_max_force | 1 | Tendon extension/slack length at one maximum isometric tendon force. | Not established | 0.04 | No verified source value is available for direct comparison. Assumed elastic-tendon compliance; not a measured tendon strain for this animal. | Generic hindlimb parameters from the author’s MATLAB Model 3 dataset. The source column reports the generic table; the applied column reports the calibrated simulation value. Data/Original_Study_Data/hindlimb/model3_parameters.json |
-| L_IP | max_fiber_speed_optimal_lengths_per_s | 1/s | Positive maximum-shortening speed magnitude, measured in optimal fiber lengths per second. | 8.5539062 | 9.6802501 | Different from the verified source value. Change relative to source: +13.2%. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Generic hindlimb parameters from the author’s MATLAB Model 3 dataset. The source column reports the generic table; the applied column reports the calibrated simulation value. Data/Original_Study_Data/hindlimb/model3_parameters.json |
-| L_IP | normalized_fiber_damping | 1 | Coefficient of normalized fiber velocity in the normalized tendon-direction force balance. | Not established | 0.066327495 | No verified source value is available for direct comparison. Effective muscle force-balance coefficient; source-law conversion and calibration are described in the methods. | Generic hindlimb parameters from the author’s MATLAB Model 3 dataset. The source column reports the generic table; the applied column reports the calibrated simulation value. Data/Original_Study_Data/hindlimb/model3_parameters.json |
-| L_IP | MT_path_length_offset_m | m | Constant offset added to the routed path to define muscle-tendon length. | Not established | 0 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Generic hindlimb parameters from the author’s MATLAB Model 3 dataset. The source column reports the generic table; the applied column reports the calibrated simulation value. Data/Original_Study_Data/hindlimb/model3_parameters.json |
-| L_IP | active_force_length_exponent | 1 | Exponent rho in the source active force-length curve. | Not established | 6 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Generic hindlimb parameters from the author’s MATLAB Model 3 dataset. The source column reports the generic table; the applied column reports the calibrated simulation value. Data/Original_Study_Data/hindlimb/model3_parameters.json |
-| L_IP | source_shortening_curvature | 1 | Source shortening-curve coefficient; inactive when De Groote force-velocity mode is selected. | Not established | 0.26983 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Generic hindlimb parameters from the author’s MATLAB Model 3 dataset. The source column reports the generic table; the applied column reports the calibrated simulation value. Data/Original_Study_Data/hindlimb/model3_parameters.json |
-| L_IP | source_lengthening_curvature | 1 | Source lengthening-curve coefficient; inactive when De Groote force-velocity mode is selected. | Not established | 0.029496476 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Generic hindlimb parameters from the author’s MATLAB Model 3 dataset. The source column reports the generic table; the applied column reports the calibrated simulation value. Data/Original_Study_Data/hindlimb/model3_parameters.json |
-| L_IP | passive_fiber_enabled | 0/1 | 1 enables passive fiber tension within the elastic equilibrium; zero force below l_f/l_opt=1 does not mean it is disabled. | Not established | 1 | No verified source value is available for direct comparison. The published passive force-length law is included in every muscle channel. Its coefficients are from Prilutsky et al. (2016), Table 10.3, and Rahmati et al. (2025), Table 3. Applying the same normalized law to added muscle channels is a modeling assumption. | Published parallel elastic architecture: Prilutsky et al. 2016 Table 10.3 (10.1007/978-1-4939-3267-2_10); Rahmati et al. 2025 Table 3 (10.1113/JP287448). Common normalized curve extended to all model channels; no muscle-specific passive calibration is claimed. |
-| L_IP | degroote_force_velocity_enabled | 0/1 | 1 uses the documented De Groote/OpenSim velocity curve; 0 uses the source curve. | Not established | 1 | No verified source value is available for direct comparison. Model-law choice: 1 enables the smooth De Groote force-velocity relation; 0 selects the alternative implemented law. | Generic hindlimb parameters from the author’s MATLAB Model 3 dataset. The source column reports the generic table; the applied column reports the calibrated simulation value. Data/Original_Study_Data/hindlimb/model3_parameters.json |
-| L_BFA | max_isometric_tendon_force_N | N | Maximum isometric force projected along the tendon; do not multiply by pennation cosine twice. | 52.596116 | 84.537076 | Different from the verified source value. Change relative to source: +60.7%. Force capacity was calibrated with motor inputs to improve mechanical agreement; the fit does not uniquely identify it. | Generic hindlimb parameters from the author’s MATLAB Model 3 dataset. The source column reports the generic table; the applied column reports the calibrated simulation value. Data/Original_Study_Data/hindlimb/model3_parameters.json |
-| L_BFA | optimal_fiber_length_m | m | Optimal fascicle/fiber length, not whole muscle-tendon length. | 0.031 | 0.030318052 | Different from the verified source value. Change relative to source: -2.2%. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Generic hindlimb parameters from the author’s MATLAB Model 3 dataset. The source column reports the generic table; the applied column reports the calibrated simulation value. Data/Original_Study_Data/hindlimb/model3_parameters.json |
-| L_BFA | tendon_slack_length_m | m | Unloaded series tendon length. | 0.031 | 0.030739897 | Different from the verified source value. Change relative to source: -0.839%. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Generic hindlimb parameters from the author’s MATLAB Model 3 dataset. The source column reports the generic table; the applied column reports the calibrated simulation value. Data/Original_Study_Data/hindlimb/model3_parameters.json |
-| L_BFA | pennation_cosine | 1 | Cosine of the constant fiber-to-tendon pennation angle. | 0.97029575 | 0.97029575 | Retained the verified source value; no numerical change from that source. | Generic hindlimb parameters from the author’s MATLAB Model 3 dataset. The source column reports the generic table; the applied column reports the calibrated simulation value. Data/Original_Study_Data/hindlimb/model3_parameters.json |
-| L_BFA | tendon_strain_at_max_force | 1 | Tendon extension/slack length at one maximum isometric tendon force. | Not established | 0.04 | No verified source value is available for direct comparison. Assumed elastic-tendon compliance; not a measured tendon strain for this animal. | Generic hindlimb parameters from the author’s MATLAB Model 3 dataset. The source column reports the generic table; the applied column reports the calibrated simulation value. Data/Original_Study_Data/hindlimb/model3_parameters.json |
-| L_BFA | max_fiber_speed_optimal_lengths_per_s | 1/s | Positive maximum-shortening speed magnitude, measured in optimal fiber lengths per second. | 10.753484 | 10.689181 | Different from the verified source value. Change relative to source: -0.598%. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Generic hindlimb parameters from the author’s MATLAB Model 3 dataset. The source column reports the generic table; the applied column reports the calibrated simulation value. Data/Original_Study_Data/hindlimb/model3_parameters.json |
-| L_BFA | normalized_fiber_damping | 1 | Coefficient of normalized fiber velocity in the normalized tendon-direction force balance. | Not established | 0.08062451 | No verified source value is available for direct comparison. Effective muscle force-balance coefficient; source-law conversion and calibration are described in the methods. | Generic hindlimb parameters from the author’s MATLAB Model 3 dataset. The source column reports the generic table; the applied column reports the calibrated simulation value. Data/Original_Study_Data/hindlimb/model3_parameters.json |
-| L_BFA | MT_path_length_offset_m | m | Constant offset added to the routed path to define muscle-tendon length. | Not established | 0 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Generic hindlimb parameters from the author’s MATLAB Model 3 dataset. The source column reports the generic table; the applied column reports the calibrated simulation value. Data/Original_Study_Data/hindlimb/model3_parameters.json |
-| L_BFA | active_force_length_exponent | 1 | Exponent rho in the source active force-length curve. | Not established | 6 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Generic hindlimb parameters from the author’s MATLAB Model 3 dataset. The source column reports the generic table; the applied column reports the calibrated simulation value. Data/Original_Study_Data/hindlimb/model3_parameters.json |
-| L_BFA | source_shortening_curvature | 1 | Source shortening-curve coefficient; inactive when De Groote force-velocity mode is selected. | Not established | 0.10513 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Generic hindlimb parameters from the author’s MATLAB Model 3 dataset. The source column reports the generic table; the applied column reports the calibrated simulation value. Data/Original_Study_Data/hindlimb/model3_parameters.json |
-| L_BFA | source_lengthening_curvature | 1 | Source lengthening-curve coefficient; inactive when De Groote force-velocity mode is selected. | Not established | 0.1177045 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Generic hindlimb parameters from the author’s MATLAB Model 3 dataset. The source column reports the generic table; the applied column reports the calibrated simulation value. Data/Original_Study_Data/hindlimb/model3_parameters.json |
-| L_BFA | passive_fiber_enabled | 0/1 | 1 enables passive fiber tension within the elastic equilibrium; zero force below l_f/l_opt=1 does not mean it is disabled. | Not established | 1 | No verified source value is available for direct comparison. The published passive force-length law is included in every muscle channel. Its coefficients are from Prilutsky et al. (2016), Table 10.3, and Rahmati et al. (2025), Table 3. Applying the same normalized law to added muscle channels is a modeling assumption. | Published parallel elastic architecture: Prilutsky et al. 2016 Table 10.3 (10.1007/978-1-4939-3267-2_10); Rahmati et al. 2025 Table 3 (10.1113/JP287448). Common normalized curve extended to all model channels; no muscle-specific passive calibration is claimed. |
-| L_BFA | degroote_force_velocity_enabled | 0/1 | 1 uses the documented De Groote/OpenSim velocity curve; 0 uses the source curve. | Not established | 1 | No verified source value is available for direct comparison. Model-law choice: 1 enables the smooth De Groote force-velocity relation; 0 selects the alternative implemented law. | Generic hindlimb parameters from the author’s MATLAB Model 3 dataset. The source column reports the generic table; the applied column reports the calibrated simulation value. Data/Original_Study_Data/hindlimb/model3_parameters.json |
-| L_VL | max_isometric_tendon_force_N | N | Maximum isometric force projected along the tendon; do not multiply by pennation cosine twice. | 202.13321 | 199.77614 | Different from the verified source value. Change relative to source: -1.17%. Force capacity was calibrated with motor inputs to improve mechanical agreement; the fit does not uniquely identify it. | Generic hindlimb parameters from the author’s MATLAB Model 3 dataset. The source column reports the generic table; the applied column reports the calibrated simulation value. Data/Original_Study_Data/hindlimb/model3_parameters.json |
-| L_VL | optimal_fiber_length_m | m | Optimal fascicle/fiber length, not whole muscle-tendon length. | 0.027461 | 0.027013467 | Different from the verified source value. Change relative to source: -1.63%. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Generic hindlimb parameters from the author’s MATLAB Model 3 dataset. The source column reports the generic table; the applied column reports the calibrated simulation value. Data/Original_Study_Data/hindlimb/model3_parameters.json |
-| L_VL | tendon_slack_length_m | m | Unloaded series tendon length. | 0.0823831 | 0.079931987 | Different from the verified source value. Change relative to source: -2.98%. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Generic hindlimb parameters from the author’s MATLAB Model 3 dataset. The source column reports the generic table; the applied column reports the calibrated simulation value. Data/Original_Study_Data/hindlimb/model3_parameters.json |
-| L_VL | pennation_cosine | 1 | Cosine of the constant fiber-to-tendon pennation angle. | 0.97154915 | 0.97154915 | Retained the verified source value; no numerical change from that source. | Generic hindlimb parameters from the author’s MATLAB Model 3 dataset. The source column reports the generic table; the applied column reports the calibrated simulation value. Data/Original_Study_Data/hindlimb/model3_parameters.json |
-| L_VL | tendon_strain_at_max_force | 1 | Tendon extension/slack length at one maximum isometric tendon force. | Not established | 0.04 | No verified source value is available for direct comparison. Assumed elastic-tendon compliance; not a measured tendon strain for this animal. | Generic hindlimb parameters from the author’s MATLAB Model 3 dataset. The source column reports the generic table; the applied column reports the calibrated simulation value. Data/Original_Study_Data/hindlimb/model3_parameters.json |
-| L_VL | max_fiber_speed_optimal_lengths_per_s | 1/s | Positive maximum-shortening speed magnitude, measured in optimal fiber lengths per second. | 6.59874 | 6.7610515 | Different from the verified source value. Change relative to source: +2.46%. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Generic hindlimb parameters from the author’s MATLAB Model 3 dataset. The source column reports the generic table; the applied column reports the calibrated simulation value. Data/Original_Study_Data/hindlimb/model3_parameters.json |
-| L_VL | normalized_fiber_damping | 1 | Coefficient of normalized fiber velocity in the normalized tendon-direction force balance. | Not established | 0.039109401 | No verified source value is available for direct comparison. Effective muscle force-balance coefficient; source-law conversion and calibration are described in the methods. | Generic hindlimb parameters from the author’s MATLAB Model 3 dataset. The source column reports the generic table; the applied column reports the calibrated simulation value. Data/Original_Study_Data/hindlimb/model3_parameters.json |
-| L_VL | MT_path_length_offset_m | m | Constant offset added to the routed path to define muscle-tendon length. | Not established | 0 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Generic hindlimb parameters from the author’s MATLAB Model 3 dataset. The source column reports the generic table; the applied column reports the calibrated simulation value. Data/Original_Study_Data/hindlimb/model3_parameters.json |
-| L_VL | active_force_length_exponent | 1 | Exponent rho in the source active force-length curve. | Not established | 3 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Generic hindlimb parameters from the author’s MATLAB Model 3 dataset. The source column reports the generic table; the applied column reports the calibrated simulation value. Data/Original_Study_Data/hindlimb/model3_parameters.json |
-| L_VL | source_shortening_curvature | 1 | Source shortening-curve coefficient; inactive when De Groote force-velocity mode is selected. | Not established | 0.41623 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Generic hindlimb parameters from the author’s MATLAB Model 3 dataset. The source column reports the generic table; the applied column reports the calibrated simulation value. Data/Original_Study_Data/hindlimb/model3_parameters.json |
-| L_VL | source_lengthening_curvature | 1 | Source lengthening-curve coefficient; inactive when De Groote force-velocity mode is selected. | Not established | 0.0089800326 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Generic hindlimb parameters from the author’s MATLAB Model 3 dataset. The source column reports the generic table; the applied column reports the calibrated simulation value. Data/Original_Study_Data/hindlimb/model3_parameters.json |
-| L_VL | passive_fiber_enabled | 0/1 | 1 enables passive fiber tension within the elastic equilibrium; zero force below l_f/l_opt=1 does not mean it is disabled. | Not established | 1 | No verified source value is available for direct comparison. The published passive force-length law is included in every muscle channel. Its coefficients are from Prilutsky et al. (2016), Table 10.3, and Rahmati et al. (2025), Table 3. Applying the same normalized law to added muscle channels is a modeling assumption. | Published parallel elastic architecture: Prilutsky et al. 2016 Table 10.3 (10.1007/978-1-4939-3267-2_10); Rahmati et al. 2025 Table 3 (10.1113/JP287448). Common normalized curve extended to all model channels; no muscle-specific passive calibration is claimed. |
-| L_VL | degroote_force_velocity_enabled | 0/1 | 1 uses the documented De Groote/OpenSim velocity curve; 0 uses the source curve. | Not established | 1 | No verified source value is available for direct comparison. Model-law choice: 1 enables the smooth De Groote force-velocity relation; 0 selects the alternative implemented law. | Generic hindlimb parameters from the author’s MATLAB Model 3 dataset. The source column reports the generic table; the applied column reports the calibrated simulation value. Data/Original_Study_Data/hindlimb/model3_parameters.json |
-| L_VM | max_isometric_tendon_force_N | N | Maximum isometric force projected along the tendon; do not multiply by pennation cosine twice. | 202.13321 | 229.63152 | Different from the verified source value. Change relative to source: +13.6%. Force capacity was calibrated with motor inputs to improve mechanical agreement; the fit does not uniquely identify it. | Generic hindlimb parameters from the author’s MATLAB Model 3 dataset. The source column reports the generic table; the applied column reports the calibrated simulation value. Data/Original_Study_Data/hindlimb/model3_parameters.json |
-| L_VM | optimal_fiber_length_m | m | Optimal fascicle/fiber length, not whole muscle-tendon length. | 0.027461 | 0.027067584 | Different from the verified source value. Change relative to source: -1.43%. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Generic hindlimb parameters from the author’s MATLAB Model 3 dataset. The source column reports the generic table; the applied column reports the calibrated simulation value. Data/Original_Study_Data/hindlimb/model3_parameters.json |
-| L_VM | tendon_slack_length_m | m | Unloaded series tendon length. | 0.0823831 | 0.080406115 | Different from the verified source value. Change relative to source: -2.4%. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Generic hindlimb parameters from the author’s MATLAB Model 3 dataset. The source column reports the generic table; the applied column reports the calibrated simulation value. Data/Original_Study_Data/hindlimb/model3_parameters.json |
-| L_VM | pennation_cosine | 1 | Cosine of the constant fiber-to-tendon pennation angle. | 0.97154915 | 0.97154915 | Retained the verified source value; no numerical change from that source. | Generic hindlimb parameters from the author’s MATLAB Model 3 dataset. The source column reports the generic table; the applied column reports the calibrated simulation value. Data/Original_Study_Data/hindlimb/model3_parameters.json |
-| L_VM | tendon_strain_at_max_force | 1 | Tendon extension/slack length at one maximum isometric tendon force. | Not established | 0.04 | No verified source value is available for direct comparison. Assumed elastic-tendon compliance; not a measured tendon strain for this animal. | Generic hindlimb parameters from the author’s MATLAB Model 3 dataset. The source column reports the generic table; the applied column reports the calibrated simulation value. Data/Original_Study_Data/hindlimb/model3_parameters.json |
-| L_VM | max_fiber_speed_optimal_lengths_per_s | 1/s | Positive maximum-shortening speed magnitude, measured in optimal fiber lengths per second. | 6.59874 | 6.7610515 | Different from the verified source value. Change relative to source: +2.46%. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Generic hindlimb parameters from the author’s MATLAB Model 3 dataset. The source column reports the generic table; the applied column reports the calibrated simulation value. Data/Original_Study_Data/hindlimb/model3_parameters.json |
-| L_VM | normalized_fiber_damping | 1 | Coefficient of normalized fiber velocity in the normalized tendon-direction force balance. | Not established | 0.052070916 | No verified source value is available for direct comparison. Effective muscle force-balance coefficient; source-law conversion and calibration are described in the methods. | Generic hindlimb parameters from the author’s MATLAB Model 3 dataset. The source column reports the generic table; the applied column reports the calibrated simulation value. Data/Original_Study_Data/hindlimb/model3_parameters.json |
-| L_VM | MT_path_length_offset_m | m | Constant offset added to the routed path to define muscle-tendon length. | Not established | 0 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Generic hindlimb parameters from the author’s MATLAB Model 3 dataset. The source column reports the generic table; the applied column reports the calibrated simulation value. Data/Original_Study_Data/hindlimb/model3_parameters.json |
-| L_VM | active_force_length_exponent | 1 | Exponent rho in the source active force-length curve. | Not established | 3 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Generic hindlimb parameters from the author’s MATLAB Model 3 dataset. The source column reports the generic table; the applied column reports the calibrated simulation value. Data/Original_Study_Data/hindlimb/model3_parameters.json |
-| L_VM | source_shortening_curvature | 1 | Source shortening-curve coefficient; inactive when De Groote force-velocity mode is selected. | Not established | 0.41623 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Generic hindlimb parameters from the author’s MATLAB Model 3 dataset. The source column reports the generic table; the applied column reports the calibrated simulation value. Data/Original_Study_Data/hindlimb/model3_parameters.json |
-| L_VM | source_lengthening_curvature | 1 | Source lengthening-curve coefficient; inactive when De Groote force-velocity mode is selected. | Not established | 0.0089800326 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Generic hindlimb parameters from the author’s MATLAB Model 3 dataset. The source column reports the generic table; the applied column reports the calibrated simulation value. Data/Original_Study_Data/hindlimb/model3_parameters.json |
-| L_VM | passive_fiber_enabled | 0/1 | 1 enables passive fiber tension within the elastic equilibrium; zero force below l_f/l_opt=1 does not mean it is disabled. | Not established | 1 | No verified source value is available for direct comparison. The published passive force-length law is included in every muscle channel. Its coefficients are from Prilutsky et al. (2016), Table 10.3, and Rahmati et al. (2025), Table 3. Applying the same normalized law to added muscle channels is a modeling assumption. | Published parallel elastic architecture: Prilutsky et al. 2016 Table 10.3 (10.1007/978-1-4939-3267-2_10); Rahmati et al. 2025 Table 3 (10.1113/JP287448). Common normalized curve extended to all model channels; no muscle-specific passive calibration is claimed. |
-| L_VM | degroote_force_velocity_enabled | 0/1 | 1 uses the documented De Groote/OpenSim velocity curve; 0 uses the source curve. | Not established | 1 | No verified source value is available for direct comparison. Model-law choice: 1 enables the smooth De Groote force-velocity relation; 0 selects the alternative implemented law. | Generic hindlimb parameters from the author’s MATLAB Model 3 dataset. The source column reports the generic table; the applied column reports the calibrated simulation value. Data/Original_Study_Data/hindlimb/model3_parameters.json |
-| L_TA | max_isometric_tendon_force_N | N | Maximum isometric force projected along the tendon; do not multiply by pennation cosine twice. | 40.403607 | 49.47473 | Different from the verified source value. Change relative to source: +22.5%. Force capacity was calibrated with motor inputs to improve mechanical agreement; the fit does not uniquely identify it. | Generic hindlimb parameters from the author’s MATLAB Model 3 dataset. The source column reports the generic table; the applied column reports the calibrated simulation value. Data/Original_Study_Data/hindlimb/model3_parameters.json |
-| L_TA | optimal_fiber_length_m | m | Optimal fascicle/fiber length, not whole muscle-tendon length. | 0.0814286 | 0.078875953 | Different from the verified source value. Change relative to source: -3.13%. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Generic hindlimb parameters from the author’s MATLAB Model 3 dataset. The source column reports the generic table; the applied column reports the calibrated simulation value. Data/Original_Study_Data/hindlimb/model3_parameters.json |
-| L_TA | tendon_slack_length_m | m | Unloaded series tendon length. | 0.057 | 0.057115572 | Different from the verified source value. Change relative to source: +0.203%. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Generic hindlimb parameters from the author’s MATLAB Model 3 dataset. The source column reports the generic table; the applied column reports the calibrated simulation value. Data/Original_Study_Data/hindlimb/model3_parameters.json |
-| L_TA | pennation_cosine | 1 | Cosine of the constant fiber-to-tendon pennation angle. | 0.99254616 | 0.99254616 | Retained the verified source value; no numerical change from that source. | Generic hindlimb parameters from the author’s MATLAB Model 3 dataset. The source column reports the generic table; the applied column reports the calibrated simulation value. Data/Original_Study_Data/hindlimb/model3_parameters.json |
-| L_TA | tendon_strain_at_max_force | 1 | Tendon extension/slack length at one maximum isometric tendon force. | Not established | 0.04 | No verified source value is available for direct comparison. Assumed elastic-tendon compliance; not a measured tendon strain for this animal. | Generic hindlimb parameters from the author’s MATLAB Model 3 dataset. The source column reports the generic table; the applied column reports the calibrated simulation value. Data/Original_Study_Data/hindlimb/model3_parameters.json |
-| L_TA | max_fiber_speed_optimal_lengths_per_s | 1/s | Positive maximum-shortening speed magnitude, measured in optimal fiber lengths per second. | 9.8980825 | 9.620499 | Different from the verified source value. Change relative to source: -2.8%. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Generic hindlimb parameters from the author’s MATLAB Model 3 dataset. The source column reports the generic table; the applied column reports the calibrated simulation value. Data/Original_Study_Data/hindlimb/model3_parameters.json |
-| L_TA | normalized_fiber_damping | 1 | Coefficient of normalized fiber velocity in the normalized tendon-direction force balance. | Not established | 0.023429909 | No verified source value is available for direct comparison. Effective muscle force-balance coefficient; source-law conversion and calibration are described in the methods. | Generic hindlimb parameters from the author’s MATLAB Model 3 dataset. The source column reports the generic table; the applied column reports the calibrated simulation value. Data/Original_Study_Data/hindlimb/model3_parameters.json |
-| L_TA | MT_path_length_offset_m | m | Constant offset added to the routed path to define muscle-tendon length. | Not established | 0.08997561 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Generic hindlimb parameters from the author’s MATLAB Model 3 dataset. The source column reports the generic table; the applied column reports the calibrated simulation value. Data/Original_Study_Data/hindlimb/model3_parameters.json |
-| L_TA | active_force_length_exponent | 1 | Exponent rho in the source active force-length curve. | Not established | 6 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Generic hindlimb parameters from the author’s MATLAB Model 3 dataset. The source column reports the generic table; the applied column reports the calibrated simulation value. Data/Original_Study_Data/hindlimb/model3_parameters.json |
-| L_TA | source_shortening_curvature | 1 | Source shortening-curve coefficient; inactive when De Groote force-velocity mode is selected. | Not established | 0.16918 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Generic hindlimb parameters from the author’s MATLAB Model 3 dataset. The source column reports the generic table; the applied column reports the calibrated simulation value. Data/Original_Study_Data/hindlimb/model3_parameters.json |
-| L_TA | source_lengthening_curvature | 1 | Source lengthening-curve coefficient; inactive when De Groote force-velocity mode is selected. | Not established | 0.099934809 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Generic hindlimb parameters from the author’s MATLAB Model 3 dataset. The source column reports the generic table; the applied column reports the calibrated simulation value. Data/Original_Study_Data/hindlimb/model3_parameters.json |
-| L_TA | passive_fiber_enabled | 0/1 | 1 enables passive fiber tension within the elastic equilibrium; zero force below l_f/l_opt=1 does not mean it is disabled. | Not established | 1 | No verified source value is available for direct comparison. The published passive force-length law is included in every muscle channel. Its coefficients are from Prilutsky et al. (2016), Table 10.3, and Rahmati et al. (2025), Table 3. Applying the same normalized law to added muscle channels is a modeling assumption. | Published parallel elastic architecture: Prilutsky et al. 2016 Table 10.3 (10.1007/978-1-4939-3267-2_10); Rahmati et al. 2025 Table 3 (10.1113/JP287448). Common normalized curve extended to all model channels; no muscle-specific passive calibration is claimed. |
-| L_TA | degroote_force_velocity_enabled | 0/1 | 1 uses the documented De Groote/OpenSim velocity curve; 0 uses the source curve. | Not established | 1 | No verified source value is available for direct comparison. Model-law choice: 1 enables the smooth De Groote force-velocity relation; 0 selects the alternative implemented law. | Generic hindlimb parameters from the author’s MATLAB Model 3 dataset. The source column reports the generic table; the applied column reports the calibrated simulation value. Data/Original_Study_Data/hindlimb/model3_parameters.json |
-| L_SO | max_isometric_tendon_force_N | N | Maximum isometric force projected along the tendon; do not multiply by pennation cosine twice. | 10.400002 | 9.2186085 | Different from the verified source value. Change relative to source: -11.4%. Force capacity was calibrated with motor inputs to improve mechanical agreement; the fit does not uniquely identify it. | Generic hindlimb parameters from the author’s MATLAB Model 3 dataset. The source column reports the generic table; the applied column reports the calibrated simulation value. Data/Original_Study_Data/hindlimb/model3_parameters.json |
-| L_SO | optimal_fiber_length_m | m | Optimal fascicle/fiber length, not whole muscle-tendon length. | 0.0345 | 0.039108378 | Different from the verified source value. Change relative to source: +13.4%. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Generic hindlimb parameters from the author’s MATLAB Model 3 dataset. The source column reports the generic table; the applied column reports the calibrated simulation value. Data/Original_Study_Data/hindlimb/model3_parameters.json |
-| L_SO | tendon_slack_length_m | m | Unloaded series tendon length. | 0.0689999 | 0.07082097 | Different from the verified source value. Change relative to source: +2.64%. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Generic hindlimb parameters from the author’s MATLAB Model 3 dataset. The source column reports the generic table; the applied column reports the calibrated simulation value. Data/Original_Study_Data/hindlimb/model3_parameters.json |
-| L_SO | pennation_cosine | 1 | Cosine of the constant fiber-to-tendon pennation angle. | 0.99254616 | 0.99254616 | Retained the verified source value; no numerical change from that source. | Generic hindlimb parameters from the author’s MATLAB Model 3 dataset. The source column reports the generic table; the applied column reports the calibrated simulation value. Data/Original_Study_Data/hindlimb/model3_parameters.json |
-| L_SO | tendon_strain_at_max_force | 1 | Tendon extension/slack length at one maximum isometric tendon force. | Not established | 0.04 | No verified source value is available for direct comparison. Assumed elastic-tendon compliance; not a measured tendon strain for this animal. | Generic hindlimb parameters from the author’s MATLAB Model 3 dataset. The source column reports the generic table; the applied column reports the calibrated simulation value. Data/Original_Study_Data/hindlimb/model3_parameters.json |
-| L_SO | max_fiber_speed_optimal_lengths_per_s | 1/s | Positive maximum-shortening speed magnitude, measured in optimal fiber lengths per second. | 5.1014493 | 4.9569961 | Different from the verified source value. Change relative to source: -2.83%. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Generic hindlimb parameters from the author’s MATLAB Model 3 dataset. The source column reports the generic table; the applied column reports the calibrated simulation value. Data/Original_Study_Data/hindlimb/model3_parameters.json |
-| L_SO | normalized_fiber_damping | 1 | Coefficient of normalized fiber velocity in the normalized tendon-direction force balance. | Not established | 0.025948615 | No verified source value is available for direct comparison. Effective muscle force-balance coefficient; source-law conversion and calibration are described in the methods. | Generic hindlimb parameters from the author’s MATLAB Model 3 dataset. The source column reports the generic table; the applied column reports the calibrated simulation value. Data/Original_Study_Data/hindlimb/model3_parameters.json |
-| L_SO | MT_path_length_offset_m | m | Constant offset added to the routed path to define muscle-tendon length. | Not established | 0 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Generic hindlimb parameters from the author’s MATLAB Model 3 dataset. The source column reports the generic table; the applied column reports the calibrated simulation value. Data/Original_Study_Data/hindlimb/model3_parameters.json |
-| L_SO | active_force_length_exponent | 1 | Exponent rho in the source active force-length curve. | Not established | 3 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Generic hindlimb parameters from the author’s MATLAB Model 3 dataset. The source column reports the generic table; the applied column reports the calibrated simulation value. Data/Original_Study_Data/hindlimb/model3_parameters.json |
-| L_SO | source_shortening_curvature | 1 | Source shortening-curve coefficient; inactive when De Groote force-velocity mode is selected. | Not established | 0.89203 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Generic hindlimb parameters from the author’s MATLAB Model 3 dataset. The source column reports the generic table; the applied column reports the calibrated simulation value. Data/Original_Study_Data/hindlimb/model3_parameters.json |
-| L_SO | source_lengthening_curvature | 1 | Source lengthening-curve coefficient; inactive when De Groote force-velocity mode is selected. | Not established | 0.076136239 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Generic hindlimb parameters from the author’s MATLAB Model 3 dataset. The source column reports the generic table; the applied column reports the calibrated simulation value. Data/Original_Study_Data/hindlimb/model3_parameters.json |
-| L_SO | passive_fiber_enabled | 0/1 | 1 enables passive fiber tension within the elastic equilibrium; zero force below l_f/l_opt=1 does not mean it is disabled. | Not established | 1 | No verified source value is available for direct comparison. The published passive force-length law is included in every muscle channel. Its coefficients are from Prilutsky et al. (2016), Table 10.3, and Rahmati et al. (2025), Table 3. Applying the same normalized law to added muscle channels is a modeling assumption. | Published parallel elastic architecture: Prilutsky et al. 2016 Table 10.3 (10.1007/978-1-4939-3267-2_10); Rahmati et al. 2025 Table 3 (10.1113/JP287448). Common normalized curve extended to all model channels; no muscle-specific passive calibration is claimed. |
-| L_SO | degroote_force_velocity_enabled | 0/1 | 1 uses the documented De Groote/OpenSim velocity curve; 0 uses the source curve. | Not established | 1 | No verified source value is available for direct comparison. Model-law choice: 1 enables the smooth De Groote force-velocity relation; 0 selects the alternative implemented law. | Generic hindlimb parameters from the author’s MATLAB Model 3 dataset. The source column reports the generic table; the applied column reports the calibrated simulation value. Data/Original_Study_Data/hindlimb/model3_parameters.json |
-| L_RF | max_isometric_tendon_force_N | N | Maximum isometric force projected along the tendon; do not multiply by pennation cosine twice. | 61.002611 | 71.083776 | Different from the verified source value. Change relative to source: +16.5%. Force capacity was calibrated with motor inputs to improve mechanical agreement; the fit does not uniquely identify it. | Generic hindlimb parameters from the author’s MATLAB Model 3 dataset. The source column reports the generic table; the applied column reports the calibrated simulation value. Data/Original_Study_Data/hindlimb/model3_parameters.json |
-| L_RF | optimal_fiber_length_m | m | Optimal fascicle/fiber length, not whole muscle-tendon length. | 0.0224993 | 0.020894135 | Different from the verified source value. Change relative to source: -7.13%. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Generic hindlimb parameters from the author’s MATLAB Model 3 dataset. The source column reports the generic table; the applied column reports the calibrated simulation value. Data/Original_Study_Data/hindlimb/model3_parameters.json |
-| L_RF | tendon_slack_length_m | m | Unloaded series tendon length. | 0.0899972 | 0.08471384 | Different from the verified source value. Change relative to source: -5.87%. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Generic hindlimb parameters from the author’s MATLAB Model 3 dataset. The source column reports the generic table; the applied column reports the calibrated simulation value. Data/Original_Study_Data/hindlimb/model3_parameters.json |
-| L_RF | pennation_cosine | 1 | Cosine of the constant fiber-to-tendon pennation angle. | 0.99254616 | 0.99254616 | Retained the verified source value; no numerical change from that source. | Generic hindlimb parameters from the author’s MATLAB Model 3 dataset. The source column reports the generic table; the applied column reports the calibrated simulation value. Data/Original_Study_Data/hindlimb/model3_parameters.json |
-| L_RF | tendon_strain_at_max_force | 1 | Tendon extension/slack length at one maximum isometric tendon force. | Not established | 0.04 | No verified source value is available for direct comparison. Assumed elastic-tendon compliance; not a measured tendon strain for this animal. | Generic hindlimb parameters from the author’s MATLAB Model 3 dataset. The source column reports the generic table; the applied column reports the calibrated simulation value. Data/Original_Study_Data/hindlimb/model3_parameters.json |
-| L_RF | max_fiber_speed_optimal_lengths_per_s | 1/s | Positive maximum-shortening speed magnitude, measured in optimal fiber lengths per second. | 9.5314965 | 9.9411732 | Different from the verified source value. Change relative to source: +4.3%. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Generic hindlimb parameters from the author’s MATLAB Model 3 dataset. The source column reports the generic table; the applied column reports the calibrated simulation value. Data/Original_Study_Data/hindlimb/model3_parameters.json |
-| L_RF | normalized_fiber_damping | 1 | Coefficient of normalized fiber velocity in the normalized tendon-direction force balance. | Not established | 0.10213679 | No verified source value is available for direct comparison. Effective muscle force-balance coefficient; source-law conversion and calibration are described in the methods. | Generic hindlimb parameters from the author’s MATLAB Model 3 dataset. The source column reports the generic table; the applied column reports the calibrated simulation value. Data/Original_Study_Data/hindlimb/model3_parameters.json |
-| L_RF | MT_path_length_offset_m | m | Constant offset added to the routed path to define muscle-tendon length. | Not established | 0 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Generic hindlimb parameters from the author’s MATLAB Model 3 dataset. The source column reports the generic table; the applied column reports the calibrated simulation value. Data/Original_Study_Data/hindlimb/model3_parameters.json |
-| L_RF | active_force_length_exponent | 1 | Exponent rho in the source active force-length curve. | Not established | 3 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Generic hindlimb parameters from the author’s MATLAB Model 3 dataset. The source column reports the generic table; the applied column reports the calibrated simulation value. Data/Original_Study_Data/hindlimb/model3_parameters.json |
-| L_RF | source_shortening_curvature | 1 | Source shortening-curve coefficient; inactive when De Groote force-velocity mode is selected. | Not established | 0.19663 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Generic hindlimb parameters from the author’s MATLAB Model 3 dataset. The source column reports the generic table; the applied column reports the calibrated simulation value. Data/Original_Study_Data/hindlimb/model3_parameters.json |
-| L_RF | source_lengthening_curvature | 1 | Source lengthening-curve coefficient; inactive when De Groote force-velocity mode is selected. | Not established | 0.060182966 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Generic hindlimb parameters from the author’s MATLAB Model 3 dataset. The source column reports the generic table; the applied column reports the calibrated simulation value. Data/Original_Study_Data/hindlimb/model3_parameters.json |
-| L_RF | passive_fiber_enabled | 0/1 | 1 enables passive fiber tension within the elastic equilibrium; zero force below l_f/l_opt=1 does not mean it is disabled. | Not established | 1 | No verified source value is available for direct comparison. The published passive force-length law is included in every muscle channel. Its coefficients are from Prilutsky et al. (2016), Table 10.3, and Rahmati et al. (2025), Table 3. Applying the same normalized law to added muscle channels is a modeling assumption. | Published parallel elastic architecture: Prilutsky et al. 2016 Table 10.3 (10.1007/978-1-4939-3267-2_10); Rahmati et al. 2025 Table 3 (10.1113/JP287448). Common normalized curve extended to all model channels; no muscle-specific passive calibration is claimed. |
-| L_RF | degroote_force_velocity_enabled | 0/1 | 1 uses the documented De Groote/OpenSim velocity curve; 0 uses the source curve. | Not established | 1 | No verified source value is available for direct comparison. Model-law choice: 1 enables the smooth De Groote force-velocity relation; 0 selects the alternative implemented law. | Generic hindlimb parameters from the author’s MATLAB Model 3 dataset. The source column reports the generic table; the applied column reports the calibrated simulation value. Data/Original_Study_Data/hindlimb/model3_parameters.json |
-| L_BFP | max_isometric_tendon_force_N | N | Maximum isometric force projected along the tendon; do not multiply by pennation cosine twice. | 94.900317 | 102.03244 | Different from the verified source value. Change relative to source: +7.52%. Force capacity was calibrated with motor inputs to improve mechanical agreement; the fit does not uniquely identify it. | Generic hindlimb parameters from the author’s MATLAB Model 3 dataset. The source column reports the generic table; the applied column reports the calibrated simulation value. Data/Original_Study_Data/hindlimb/model3_parameters.json |
-| L_BFP | optimal_fiber_length_m | m | Optimal fascicle/fiber length, not whole muscle-tendon length. | 0.057 | 0.060670864 | Different from the verified source value. Change relative to source: +6.44%. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Generic hindlimb parameters from the author’s MATLAB Model 3 dataset. The source column reports the generic table; the applied column reports the calibrated simulation value. Data/Original_Study_Data/hindlimb/model3_parameters.json |
-| L_BFP | tendon_slack_length_m | m | Unloaded series tendon length. | 0.057 | 0.061524333 | Different from the verified source value. Change relative to source: +7.94%. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Generic hindlimb parameters from the author’s MATLAB Model 3 dataset. The source column reports the generic table; the applied column reports the calibrated simulation value. Data/Original_Study_Data/hindlimb/model3_parameters.json |
-| L_BFP | pennation_cosine | 1 | Cosine of the constant fiber-to-tendon pennation angle. | 0.99254616 | 0.99254616 | Retained the verified source value; no numerical change from that source. | Generic hindlimb parameters from the author’s MATLAB Model 3 dataset. The source column reports the generic table; the applied column reports the calibrated simulation value. Data/Original_Study_Data/hindlimb/model3_parameters.json |
-| L_BFP | tendon_strain_at_max_force | 1 | Tendon extension/slack length at one maximum isometric tendon force. | Not established | 0.04 | No verified source value is available for direct comparison. Assumed elastic-tendon compliance; not a measured tendon strain for this animal. | Generic hindlimb parameters from the author’s MATLAB Model 3 dataset. The source column reports the generic table; the applied column reports the calibrated simulation value. Data/Original_Study_Data/hindlimb/model3_parameters.json |
-| L_BFP | max_fiber_speed_optimal_lengths_per_s | 1/s | Positive maximum-shortening speed magnitude, measured in optimal fiber lengths per second. | 10.753474 | 10.078088 | Different from the verified source value. Change relative to source: -6.28%. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Generic hindlimb parameters from the author’s MATLAB Model 3 dataset. The source column reports the generic table; the applied column reports the calibrated simulation value. Data/Original_Study_Data/hindlimb/model3_parameters.json |
-| L_BFP | normalized_fiber_damping | 1 | Coefficient of normalized fiber velocity in the normalized tendon-direction force balance. | Not established | 0.069318225 | No verified source value is available for direct comparison. Effective muscle force-balance coefficient; source-law conversion and calibration are described in the methods. | Generic hindlimb parameters from the author’s MATLAB Model 3 dataset. The source column reports the generic table; the applied column reports the calibrated simulation value. Data/Original_Study_Data/hindlimb/model3_parameters.json |
-| L_BFP | MT_path_length_offset_m | m | Constant offset added to the routed path to define muscle-tendon length. | Not established | 0 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Generic hindlimb parameters from the author’s MATLAB Model 3 dataset. The source column reports the generic table; the applied column reports the calibrated simulation value. Data/Original_Study_Data/hindlimb/model3_parameters.json |
-| L_BFP | active_force_length_exponent | 1 | Exponent rho in the source active force-length curve. | Not established | 6 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Generic hindlimb parameters from the author’s MATLAB Model 3 dataset. The source column reports the generic table; the applied column reports the calibrated simulation value. Data/Original_Study_Data/hindlimb/model3_parameters.json |
-| L_BFP | source_shortening_curvature | 1 | Source shortening-curve coefficient; inactive when De Groote force-velocity mode is selected. | Not established | 0.10513 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Generic hindlimb parameters from the author’s MATLAB Model 3 dataset. The source column reports the generic table; the applied column reports the calibrated simulation value. Data/Original_Study_Data/hindlimb/model3_parameters.json |
-| L_BFP | source_lengthening_curvature | 1 | Source lengthening-curve coefficient; inactive when De Groote force-velocity mode is selected. | Not established | 0.071271947 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Generic hindlimb parameters from the author’s MATLAB Model 3 dataset. The source column reports the generic table; the applied column reports the calibrated simulation value. Data/Original_Study_Data/hindlimb/model3_parameters.json |
-| L_BFP | passive_fiber_enabled | 0/1 | 1 enables passive fiber tension within the elastic equilibrium; zero force below l_f/l_opt=1 does not mean it is disabled. | Not established | 1 | No verified source value is available for direct comparison. The published passive force-length law is included in every muscle channel. Its coefficients are from Prilutsky et al. (2016), Table 10.3, and Rahmati et al. (2025), Table 3. Applying the same normalized law to added muscle channels is a modeling assumption. | Published parallel elastic architecture: Prilutsky et al. 2016 Table 10.3 (10.1007/978-1-4939-3267-2_10); Rahmati et al. 2025 Table 3 (10.1113/JP287448). Common normalized curve extended to all model channels; no muscle-specific passive calibration is claimed. |
-| L_BFP | degroote_force_velocity_enabled | 0/1 | 1 uses the documented De Groote/OpenSim velocity curve; 0 uses the source curve. | Not established | 1 | No verified source value is available for direct comparison. Model-law choice: 1 enables the smooth De Groote force-velocity relation; 0 selects the alternative implemented law. | Generic hindlimb parameters from the author’s MATLAB Model 3 dataset. The source column reports the generic table; the applied column reports the calibrated simulation value. Data/Original_Study_Data/hindlimb/model3_parameters.json |
-| L_SAM | max_isometric_tendon_force_N | N | Maximum isometric force projected along the tendon; do not multiply by pennation cosine twice. | 10.049972 | 10.447495 | Different from the verified source value. Change relative to source: +3.96%. Force capacity was calibrated with motor inputs to improve mechanical agreement; the fit does not uniquely identify it. | Generic hindlimb parameters from the author’s MATLAB Model 3 dataset. The source column reports the generic table; the applied column reports the calibrated simulation value. Data/Original_Study_Data/hindlimb/model3_parameters.json |
-| L_SAM | optimal_fiber_length_m | m | Optimal fascicle/fiber length, not whole muscle-tendon length. | 0.116 | 0.11149185 | Different from the verified source value. Change relative to source: -3.89%. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Generic hindlimb parameters from the author’s MATLAB Model 3 dataset. The source column reports the generic table; the applied column reports the calibrated simulation value. Data/Original_Study_Data/hindlimb/model3_parameters.json |
-| L_SAM | tendon_slack_length_m | m | Unloaded series tendon length. | 0.029 | 0.028342443 | Different from the verified source value. Change relative to source: -2.27%. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Generic hindlimb parameters from the author’s MATLAB Model 3 dataset. The source column reports the generic table; the applied column reports the calibrated simulation value. Data/Original_Study_Data/hindlimb/model3_parameters.json |
-| L_SAM | pennation_cosine | 1 | Cosine of the constant fiber-to-tendon pennation angle. | 0.99731448 | 0.99731448 | Retained the verified source value; no numerical change from that source. | Generic hindlimb parameters from the author’s MATLAB Model 3 dataset. The source column reports the generic table; the applied column reports the calibrated simulation value. Data/Original_Study_Data/hindlimb/model3_parameters.json |
-| L_SAM | tendon_strain_at_max_force | 1 | Tendon extension/slack length at one maximum isometric tendon force. | Not established | 0.04 | No verified source value is available for direct comparison. Assumed elastic-tendon compliance; not a measured tendon strain for this animal. | Generic hindlimb parameters from the author’s MATLAB Model 3 dataset. The source column reports the generic table; the applied column reports the calibrated simulation value. Data/Original_Study_Data/hindlimb/model3_parameters.json |
-| L_SAM | max_fiber_speed_optimal_lengths_per_s | 1/s | Positive maximum-shortening speed magnitude, measured in optimal fiber lengths per second. | 8.5539052 | 8.7000097 | Different from the verified source value. Change relative to source: +1.71%. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Generic hindlimb parameters from the author’s MATLAB Model 3 dataset. The source column reports the generic table; the applied column reports the calibrated simulation value. Data/Original_Study_Data/hindlimb/model3_parameters.json |
-| L_SAM | normalized_fiber_damping | 1 | Coefficient of normalized fiber velocity in the normalized tendon-direction force balance. | Not established | 0.073340405 | No verified source value is available for direct comparison. Effective muscle force-balance coefficient; source-law conversion and calibration are described in the methods. | Generic hindlimb parameters from the author’s MATLAB Model 3 dataset. The source column reports the generic table; the applied column reports the calibrated simulation value. Data/Original_Study_Data/hindlimb/model3_parameters.json |
-| L_SAM | MT_path_length_offset_m | m | Constant offset added to the routed path to define muscle-tendon length. | Not established | 0 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Generic hindlimb parameters from the author’s MATLAB Model 3 dataset. The source column reports the generic table; the applied column reports the calibrated simulation value. Data/Original_Study_Data/hindlimb/model3_parameters.json |
-| L_SAM | active_force_length_exponent | 1 | Exponent rho in the source active force-length curve. | Not established | 6 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Generic hindlimb parameters from the author’s MATLAB Model 3 dataset. The source column reports the generic table; the applied column reports the calibrated simulation value. Data/Original_Study_Data/hindlimb/model3_parameters.json |
-| L_SAM | source_shortening_curvature | 1 | Source shortening-curve coefficient; inactive when De Groote force-velocity mode is selected. | Not established | 0.26983 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Generic hindlimb parameters from the author’s MATLAB Model 3 dataset. The source column reports the generic table; the applied column reports the calibrated simulation value. Data/Original_Study_Data/hindlimb/model3_parameters.json |
-| L_SAM | source_lengthening_curvature | 1 | Source lengthening-curve coefficient; inactive when De Groote force-velocity mode is selected. | Not established | 0.2124363 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Generic hindlimb parameters from the author’s MATLAB Model 3 dataset. The source column reports the generic table; the applied column reports the calibrated simulation value. Data/Original_Study_Data/hindlimb/model3_parameters.json |
-| L_SAM | passive_fiber_enabled | 0/1 | 1 enables passive fiber tension within the elastic equilibrium; zero force below l_f/l_opt=1 does not mean it is disabled. | Not established | 1 | No verified source value is available for direct comparison. The published passive force-length law is included in every muscle channel. Its coefficients are from Prilutsky et al. (2016), Table 10.3, and Rahmati et al. (2025), Table 3. Applying the same normalized law to added muscle channels is a modeling assumption. | Published parallel elastic architecture: Prilutsky et al. 2016 Table 10.3 (10.1007/978-1-4939-3267-2_10); Rahmati et al. 2025 Table 3 (10.1113/JP287448). Common normalized curve extended to all model channels; no muscle-specific passive calibration is claimed. |
-| L_SAM | degroote_force_velocity_enabled | 0/1 | 1 uses the documented De Groote/OpenSim velocity curve; 0 uses the source curve. | Not established | 1 | No verified source value is available for direct comparison. Model-law choice: 1 enables the smooth De Groote force-velocity relation; 0 selects the alternative implemented law. | Generic hindlimb parameters from the author’s MATLAB Model 3 dataset. The source column reports the generic table; the applied column reports the calibrated simulation value. Data/Original_Study_Data/hindlimb/model3_parameters.json |
-| L_LG | max_isometric_tendon_force_N | N | Maximum isometric force projected along the tendon; do not multiply by pennation cosine twice. | 96.849923 | 94.67286 | Different from the verified source value. Change relative to source: -2.25%. Force capacity was calibrated with motor inputs to improve mechanical agreement; the fit does not uniquely identify it. | Generic hindlimb parameters from the author’s MATLAB Model 3 dataset. The source column reports the generic table; the applied column reports the calibrated simulation value. Data/Original_Study_Data/hindlimb/model3_parameters.json |
-| L_LG | optimal_fiber_length_m | m | Optimal fascicle/fiber length, not whole muscle-tendon length. | 0.027 | 0.028696483 | Different from the verified source value. Change relative to source: +6.28%. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Generic hindlimb parameters from the author’s MATLAB Model 3 dataset. The source column reports the generic table; the applied column reports the calibrated simulation value. Data/Original_Study_Data/hindlimb/model3_parameters.json |
-| L_LG | tendon_slack_length_m | m | Unloaded series tendon length. | 0.081 | 0.084222121 | Different from the verified source value. Change relative to source: +3.98%. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Generic hindlimb parameters from the author’s MATLAB Model 3 dataset. The source column reports the generic table; the applied column reports the calibrated simulation value. Data/Original_Study_Data/hindlimb/model3_parameters.json |
-| L_LG | pennation_cosine | 1 | Cosine of the constant fiber-to-tendon pennation angle. | 0.94551843 | 0.94551843 | Retained the verified source value; no numerical change from that source. | Generic hindlimb parameters from the author’s MATLAB Model 3 dataset. The source column reports the generic table; the applied column reports the calibrated simulation value. Data/Original_Study_Data/hindlimb/model3_parameters.json |
-| L_LG | tendon_strain_at_max_force | 1 | Tendon extension/slack length at one maximum isometric tendon force. | Not established | 0.04 | No verified source value is available for direct comparison. Assumed elastic-tendon compliance; not a measured tendon strain for this animal. | Generic hindlimb parameters from the author’s MATLAB Model 3 dataset. The source column reports the generic table; the applied column reports the calibrated simulation value. Data/Original_Study_Data/hindlimb/model3_parameters.json |
-| L_LG | max_fiber_speed_optimal_lengths_per_s | 1/s | Positive maximum-shortening speed magnitude, measured in optimal fiber lengths per second. | 9.5925926 | 9.1957009 | Different from the verified source value. Change relative to source: -4.14%. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Generic hindlimb parameters from the author’s MATLAB Model 3 dataset. The source column reports the generic table; the applied column reports the calibrated simulation value. Data/Original_Study_Data/hindlimb/model3_parameters.json |
-| L_LG | normalized_fiber_damping | 1 | Coefficient of normalized fiber velocity in the normalized tendon-direction force balance. | Not established | 0.028104583 | No verified source value is available for direct comparison. Effective muscle force-balance coefficient; source-law conversion and calibration are described in the methods. | Generic hindlimb parameters from the author’s MATLAB Model 3 dataset. The source column reports the generic table; the applied column reports the calibrated simulation value. Data/Original_Study_Data/hindlimb/model3_parameters.json |
-| L_LG | MT_path_length_offset_m | m | Constant offset added to the routed path to define muscle-tendon length. | Not established | 0 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Generic hindlimb parameters from the author’s MATLAB Model 3 dataset. The source column reports the generic table; the applied column reports the calibrated simulation value. Data/Original_Study_Data/hindlimb/model3_parameters.json |
-| L_LG | active_force_length_exponent | 1 | Exponent rho in the source active force-length curve. | Not established | 3 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Generic hindlimb parameters from the author’s MATLAB Model 3 dataset. The source column reports the generic table; the applied column reports the calibrated simulation value. Data/Original_Study_Data/hindlimb/model3_parameters.json |
-| L_LG | source_shortening_curvature | 1 | Source shortening-curve coefficient; inactive when De Groote force-velocity mode is selected. | Not established | 0.192055 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Generic hindlimb parameters from the author’s MATLAB Model 3 dataset. The source column reports the generic table; the applied column reports the calibrated simulation value. Data/Original_Study_Data/hindlimb/model3_parameters.json |
-| L_LG | source_lengthening_curvature | 1 | Source lengthening-curve coefficient; inactive when De Groote force-velocity mode is selected. | Not established | 0.038076183 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Generic hindlimb parameters from the author’s MATLAB Model 3 dataset. The source column reports the generic table; the applied column reports the calibrated simulation value. Data/Original_Study_Data/hindlimb/model3_parameters.json |
-| L_LG | passive_fiber_enabled | 0/1 | 1 enables passive fiber tension within the elastic equilibrium; zero force below l_f/l_opt=1 does not mean it is disabled. | Not established | 1 | No verified source value is available for direct comparison. The published passive force-length law is included in every muscle channel. Its coefficients are from Prilutsky et al. (2016), Table 10.3, and Rahmati et al. (2025), Table 3. Applying the same normalized law to added muscle channels is a modeling assumption. | Published parallel elastic architecture: Prilutsky et al. 2016 Table 10.3 (10.1007/978-1-4939-3267-2_10); Rahmati et al. 2025 Table 3 (10.1113/JP287448). Common normalized curve extended to all model channels; no muscle-specific passive calibration is claimed. |
-| L_LG | degroote_force_velocity_enabled | 0/1 | 1 uses the documented De Groote/OpenSim velocity curve; 0 uses the source curve. | Not established | 1 | No verified source value is available for direct comparison. Model-law choice: 1 enables the smooth De Groote force-velocity relation; 0 selects the alternative implemented law. | Generic hindlimb parameters from the author’s MATLAB Model 3 dataset. The source column reports the generic table; the applied column reports the calibrated simulation value. Data/Original_Study_Data/hindlimb/model3_parameters.json |
-| L_MG | max_isometric_tendon_force_N | N | Maximum isometric force projected along the tendon; do not multiply by pennation cosine twice. | 96.849923 | 87.898144 | Different from the verified source value. Change relative to source: -9.24%. Force capacity was calibrated with motor inputs to improve mechanical agreement; the fit does not uniquely identify it. | Generic hindlimb parameters from the author’s MATLAB Model 3 dataset. The source column reports the generic table; the applied column reports the calibrated simulation value. Data/Original_Study_Data/hindlimb/model3_parameters.json |
-| L_MG | optimal_fiber_length_m | m | Optimal fascicle/fiber length, not whole muscle-tendon length. | 0.027 | 0.028902184 | Different from the verified source value. Change relative to source: +7.05%. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Generic hindlimb parameters from the author’s MATLAB Model 3 dataset. The source column reports the generic table; the applied column reports the calibrated simulation value. Data/Original_Study_Data/hindlimb/model3_parameters.json |
-| L_MG | tendon_slack_length_m | m | Unloaded series tendon length. | 0.081 | 0.084967463 | Different from the verified source value. Change relative to source: +4.9%. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Generic hindlimb parameters from the author’s MATLAB Model 3 dataset. The source column reports the generic table; the applied column reports the calibrated simulation value. Data/Original_Study_Data/hindlimb/model3_parameters.json |
-| L_MG | pennation_cosine | 1 | Cosine of the constant fiber-to-tendon pennation angle. | 0.94551843 | 0.94551843 | Retained the verified source value; no numerical change from that source. | Generic hindlimb parameters from the author’s MATLAB Model 3 dataset. The source column reports the generic table; the applied column reports the calibrated simulation value. Data/Original_Study_Data/hindlimb/model3_parameters.json |
-| L_MG | tendon_strain_at_max_force | 1 | Tendon extension/slack length at one maximum isometric tendon force. | Not established | 0.04 | No verified source value is available for direct comparison. Assumed elastic-tendon compliance; not a measured tendon strain for this animal. | Generic hindlimb parameters from the author’s MATLAB Model 3 dataset. The source column reports the generic table; the applied column reports the calibrated simulation value. Data/Original_Study_Data/hindlimb/model3_parameters.json |
-| L_MG | max_fiber_speed_optimal_lengths_per_s | 1/s | Positive maximum-shortening speed magnitude, measured in optimal fiber lengths per second. | 9.5925926 | 9.1957009 | Different from the verified source value. Change relative to source: -4.14%. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Generic hindlimb parameters from the author’s MATLAB Model 3 dataset. The source column reports the generic table; the applied column reports the calibrated simulation value. Data/Original_Study_Data/hindlimb/model3_parameters.json |
-| L_MG | normalized_fiber_damping | 1 | Coefficient of normalized fiber velocity in the normalized tendon-direction force balance. | Not established | 0.040119667 | No verified source value is available for direct comparison. Effective muscle force-balance coefficient; source-law conversion and calibration are described in the methods. | Generic hindlimb parameters from the author’s MATLAB Model 3 dataset. The source column reports the generic table; the applied column reports the calibrated simulation value. Data/Original_Study_Data/hindlimb/model3_parameters.json |
-| L_MG | MT_path_length_offset_m | m | Constant offset added to the routed path to define muscle-tendon length. | Not established | 0 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Generic hindlimb parameters from the author’s MATLAB Model 3 dataset. The source column reports the generic table; the applied column reports the calibrated simulation value. Data/Original_Study_Data/hindlimb/model3_parameters.json |
-| L_MG | active_force_length_exponent | 1 | Exponent rho in the source active force-length curve. | Not established | 3 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Generic hindlimb parameters from the author’s MATLAB Model 3 dataset. The source column reports the generic table; the applied column reports the calibrated simulation value. Data/Original_Study_Data/hindlimb/model3_parameters.json |
-| L_MG | source_shortening_curvature | 1 | Source shortening-curve coefficient; inactive when De Groote force-velocity mode is selected. | Not established | 0.192055 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Generic hindlimb parameters from the author’s MATLAB Model 3 dataset. The source column reports the generic table; the applied column reports the calibrated simulation value. Data/Original_Study_Data/hindlimb/model3_parameters.json |
-| L_MG | source_lengthening_curvature | 1 | Source lengthening-curve coefficient; inactive when De Groote force-velocity mode is selected. | Not established | 0.038076183 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Generic hindlimb parameters from the author’s MATLAB Model 3 dataset. The source column reports the generic table; the applied column reports the calibrated simulation value. Data/Original_Study_Data/hindlimb/model3_parameters.json |
-| L_MG | passive_fiber_enabled | 0/1 | 1 enables passive fiber tension within the elastic equilibrium; zero force below l_f/l_opt=1 does not mean it is disabled. | Not established | 1 | No verified source value is available for direct comparison. The published passive force-length law is included in every muscle channel. Its coefficients are from Prilutsky et al. (2016), Table 10.3, and Rahmati et al. (2025), Table 3. Applying the same normalized law to added muscle channels is a modeling assumption. | Published parallel elastic architecture: Prilutsky et al. 2016 Table 10.3 (10.1007/978-1-4939-3267-2_10); Rahmati et al. 2025 Table 3 (10.1113/JP287448). Common normalized curve extended to all model channels; no muscle-specific passive calibration is claimed. |
-| L_MG | degroote_force_velocity_enabled | 0/1 | 1 uses the documented De Groote/OpenSim velocity curve; 0 uses the source curve. | Not established | 1 | No verified source value is available for direct comparison. Model-law choice: 1 enables the smooth De Groote force-velocity relation; 0 selects the alternative implemented law. | Generic hindlimb parameters from the author’s MATLAB Model 3 dataset. The source column reports the generic table; the applied column reports the calibrated simulation value. Data/Original_Study_Data/hindlimb/model3_parameters.json |
-| R_IP | max_isometric_tendon_force_N | N | Maximum isometric force projected along the tendon; do not multiply by pennation cosine twice. | 95.1724 | 95.292768 | Different from the verified source value. Change relative to source: +0.126%. Force capacity was calibrated with motor inputs to improve mechanical agreement; the fit does not uniquely identify it. | Generic hindlimb parameters from the author’s MATLAB Model 3 dataset. The source column reports the generic table; the applied column reports the calibrated simulation value. Data/Original_Study_Data/hindlimb/model3_parameters.json |
-| R_IP | optimal_fiber_length_m | m | Optimal fascicle/fiber length, not whole muscle-tendon length. | 0.064 | 0.056758115 | Different from the verified source value. Change relative to source: -11.3%. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Generic hindlimb parameters from the author’s MATLAB Model 3 dataset. The source column reports the generic table; the applied column reports the calibrated simulation value. Data/Original_Study_Data/hindlimb/model3_parameters.json |
-| R_IP | tendon_slack_length_m | m | Unloaded series tendon length. | 0.016 | 0.014151507 | Different from the verified source value. Change relative to source: -11.6%. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Generic hindlimb parameters from the author’s MATLAB Model 3 dataset. The source column reports the generic table; the applied column reports the calibrated simulation value. Data/Original_Study_Data/hindlimb/model3_parameters.json |
-| R_IP | pennation_cosine | 1 | Cosine of the constant fiber-to-tendon pennation angle. | 1 | 1 | Retained the verified source value; no numerical change from that source. | Generic hindlimb parameters from the author’s MATLAB Model 3 dataset. The source column reports the generic table; the applied column reports the calibrated simulation value. Data/Original_Study_Data/hindlimb/model3_parameters.json |
-| R_IP | tendon_strain_at_max_force | 1 | Tendon extension/slack length at one maximum isometric tendon force. | Not established | 0.04 | No verified source value is available for direct comparison. Assumed elastic-tendon compliance; not a measured tendon strain for this animal. | Generic hindlimb parameters from the author’s MATLAB Model 3 dataset. The source column reports the generic table; the applied column reports the calibrated simulation value. Data/Original_Study_Data/hindlimb/model3_parameters.json |
-| R_IP | max_fiber_speed_optimal_lengths_per_s | 1/s | Positive maximum-shortening speed magnitude, measured in optimal fiber lengths per second. | 8.5539062 | 9.6802501 | Different from the verified source value. Change relative to source: +13.2%. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Generic hindlimb parameters from the author’s MATLAB Model 3 dataset. The source column reports the generic table; the applied column reports the calibrated simulation value. Data/Original_Study_Data/hindlimb/model3_parameters.json |
-| R_IP | normalized_fiber_damping | 1 | Coefficient of normalized fiber velocity in the normalized tendon-direction force balance. | Not established | 0.066327495 | No verified source value is available for direct comparison. Effective muscle force-balance coefficient; source-law conversion and calibration are described in the methods. | Generic hindlimb parameters from the author’s MATLAB Model 3 dataset. The source column reports the generic table; the applied column reports the calibrated simulation value. Data/Original_Study_Data/hindlimb/model3_parameters.json |
-| R_IP | MT_path_length_offset_m | m | Constant offset added to the routed path to define muscle-tendon length. | Not established | 0 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Generic hindlimb parameters from the author’s MATLAB Model 3 dataset. The source column reports the generic table; the applied column reports the calibrated simulation value. Data/Original_Study_Data/hindlimb/model3_parameters.json |
-| R_IP | active_force_length_exponent | 1 | Exponent rho in the source active force-length curve. | Not established | 6 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Generic hindlimb parameters from the author’s MATLAB Model 3 dataset. The source column reports the generic table; the applied column reports the calibrated simulation value. Data/Original_Study_Data/hindlimb/model3_parameters.json |
-| R_IP | source_shortening_curvature | 1 | Source shortening-curve coefficient; inactive when De Groote force-velocity mode is selected. | Not established | 0.26983 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Generic hindlimb parameters from the author’s MATLAB Model 3 dataset. The source column reports the generic table; the applied column reports the calibrated simulation value. Data/Original_Study_Data/hindlimb/model3_parameters.json |
-| R_IP | source_lengthening_curvature | 1 | Source lengthening-curve coefficient; inactive when De Groote force-velocity mode is selected. | Not established | 0.029496476 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Generic hindlimb parameters from the author’s MATLAB Model 3 dataset. The source column reports the generic table; the applied column reports the calibrated simulation value. Data/Original_Study_Data/hindlimb/model3_parameters.json |
-| R_IP | passive_fiber_enabled | 0/1 | 1 enables passive fiber tension within the elastic equilibrium; zero force below l_f/l_opt=1 does not mean it is disabled. | Not established | 1 | No verified source value is available for direct comparison. The published passive force-length law is included in every muscle channel. Its coefficients are from Prilutsky et al. (2016), Table 10.3, and Rahmati et al. (2025), Table 3. Applying the same normalized law to added muscle channels is a modeling assumption. | Published parallel elastic architecture: Prilutsky et al. 2016 Table 10.3 (10.1007/978-1-4939-3267-2_10); Rahmati et al. 2025 Table 3 (10.1113/JP287448). Common normalized curve extended to all model channels; no muscle-specific passive calibration is claimed. |
-| R_IP | degroote_force_velocity_enabled | 0/1 | 1 uses the documented De Groote/OpenSim velocity curve; 0 uses the source curve. | Not established | 1 | No verified source value is available for direct comparison. Model-law choice: 1 enables the smooth De Groote force-velocity relation; 0 selects the alternative implemented law. | Generic hindlimb parameters from the author’s MATLAB Model 3 dataset. The source column reports the generic table; the applied column reports the calibrated simulation value. Data/Original_Study_Data/hindlimb/model3_parameters.json |
-| R_BFA | max_isometric_tendon_force_N | N | Maximum isometric force projected along the tendon; do not multiply by pennation cosine twice. | 52.596116 | 84.537076 | Different from the verified source value. Change relative to source: +60.7%. Force capacity was calibrated with motor inputs to improve mechanical agreement; the fit does not uniquely identify it. | Generic hindlimb parameters from the author’s MATLAB Model 3 dataset. The source column reports the generic table; the applied column reports the calibrated simulation value. Data/Original_Study_Data/hindlimb/model3_parameters.json |
-| R_BFA | optimal_fiber_length_m | m | Optimal fascicle/fiber length, not whole muscle-tendon length. | 0.031 | 0.030318052 | Different from the verified source value. Change relative to source: -2.2%. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Generic hindlimb parameters from the author’s MATLAB Model 3 dataset. The source column reports the generic table; the applied column reports the calibrated simulation value. Data/Original_Study_Data/hindlimb/model3_parameters.json |
-| R_BFA | tendon_slack_length_m | m | Unloaded series tendon length. | 0.031 | 0.030739897 | Different from the verified source value. Change relative to source: -0.839%. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Generic hindlimb parameters from the author’s MATLAB Model 3 dataset. The source column reports the generic table; the applied column reports the calibrated simulation value. Data/Original_Study_Data/hindlimb/model3_parameters.json |
-| R_BFA | pennation_cosine | 1 | Cosine of the constant fiber-to-tendon pennation angle. | 0.97029575 | 0.97029575 | Retained the verified source value; no numerical change from that source. | Generic hindlimb parameters from the author’s MATLAB Model 3 dataset. The source column reports the generic table; the applied column reports the calibrated simulation value. Data/Original_Study_Data/hindlimb/model3_parameters.json |
-| R_BFA | tendon_strain_at_max_force | 1 | Tendon extension/slack length at one maximum isometric tendon force. | Not established | 0.04 | No verified source value is available for direct comparison. Assumed elastic-tendon compliance; not a measured tendon strain for this animal. | Generic hindlimb parameters from the author’s MATLAB Model 3 dataset. The source column reports the generic table; the applied column reports the calibrated simulation value. Data/Original_Study_Data/hindlimb/model3_parameters.json |
-| R_BFA | max_fiber_speed_optimal_lengths_per_s | 1/s | Positive maximum-shortening speed magnitude, measured in optimal fiber lengths per second. | 10.753484 | 10.689181 | Different from the verified source value. Change relative to source: -0.598%. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Generic hindlimb parameters from the author’s MATLAB Model 3 dataset. The source column reports the generic table; the applied column reports the calibrated simulation value. Data/Original_Study_Data/hindlimb/model3_parameters.json |
-| R_BFA | normalized_fiber_damping | 1 | Coefficient of normalized fiber velocity in the normalized tendon-direction force balance. | Not established | 0.08062451 | No verified source value is available for direct comparison. Effective muscle force-balance coefficient; source-law conversion and calibration are described in the methods. | Generic hindlimb parameters from the author’s MATLAB Model 3 dataset. The source column reports the generic table; the applied column reports the calibrated simulation value. Data/Original_Study_Data/hindlimb/model3_parameters.json |
-| R_BFA | MT_path_length_offset_m | m | Constant offset added to the routed path to define muscle-tendon length. | Not established | 0 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Generic hindlimb parameters from the author’s MATLAB Model 3 dataset. The source column reports the generic table; the applied column reports the calibrated simulation value. Data/Original_Study_Data/hindlimb/model3_parameters.json |
-| R_BFA | active_force_length_exponent | 1 | Exponent rho in the source active force-length curve. | Not established | 6 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Generic hindlimb parameters from the author’s MATLAB Model 3 dataset. The source column reports the generic table; the applied column reports the calibrated simulation value. Data/Original_Study_Data/hindlimb/model3_parameters.json |
-| R_BFA | source_shortening_curvature | 1 | Source shortening-curve coefficient; inactive when De Groote force-velocity mode is selected. | Not established | 0.10513 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Generic hindlimb parameters from the author’s MATLAB Model 3 dataset. The source column reports the generic table; the applied column reports the calibrated simulation value. Data/Original_Study_Data/hindlimb/model3_parameters.json |
-| R_BFA | source_lengthening_curvature | 1 | Source lengthening-curve coefficient; inactive when De Groote force-velocity mode is selected. | Not established | 0.1177045 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Generic hindlimb parameters from the author’s MATLAB Model 3 dataset. The source column reports the generic table; the applied column reports the calibrated simulation value. Data/Original_Study_Data/hindlimb/model3_parameters.json |
-| R_BFA | passive_fiber_enabled | 0/1 | 1 enables passive fiber tension within the elastic equilibrium; zero force below l_f/l_opt=1 does not mean it is disabled. | Not established | 1 | No verified source value is available for direct comparison. The published passive force-length law is included in every muscle channel. Its coefficients are from Prilutsky et al. (2016), Table 10.3, and Rahmati et al. (2025), Table 3. Applying the same normalized law to added muscle channels is a modeling assumption. | Published parallel elastic architecture: Prilutsky et al. 2016 Table 10.3 (10.1007/978-1-4939-3267-2_10); Rahmati et al. 2025 Table 3 (10.1113/JP287448). Common normalized curve extended to all model channels; no muscle-specific passive calibration is claimed. |
-| R_BFA | degroote_force_velocity_enabled | 0/1 | 1 uses the documented De Groote/OpenSim velocity curve; 0 uses the source curve. | Not established | 1 | No verified source value is available for direct comparison. Model-law choice: 1 enables the smooth De Groote force-velocity relation; 0 selects the alternative implemented law. | Generic hindlimb parameters from the author’s MATLAB Model 3 dataset. The source column reports the generic table; the applied column reports the calibrated simulation value. Data/Original_Study_Data/hindlimb/model3_parameters.json |
-| R_VL | max_isometric_tendon_force_N | N | Maximum isometric force projected along the tendon; do not multiply by pennation cosine twice. | 202.13321 | 199.77614 | Different from the verified source value. Change relative to source: -1.17%. Force capacity was calibrated with motor inputs to improve mechanical agreement; the fit does not uniquely identify it. | Generic hindlimb parameters from the author’s MATLAB Model 3 dataset. The source column reports the generic table; the applied column reports the calibrated simulation value. Data/Original_Study_Data/hindlimb/model3_parameters.json |
-| R_VL | optimal_fiber_length_m | m | Optimal fascicle/fiber length, not whole muscle-tendon length. | 0.027461 | 0.027013467 | Different from the verified source value. Change relative to source: -1.63%. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Generic hindlimb parameters from the author’s MATLAB Model 3 dataset. The source column reports the generic table; the applied column reports the calibrated simulation value. Data/Original_Study_Data/hindlimb/model3_parameters.json |
-| R_VL | tendon_slack_length_m | m | Unloaded series tendon length. | 0.0823831 | 0.079931987 | Different from the verified source value. Change relative to source: -2.98%. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Generic hindlimb parameters from the author’s MATLAB Model 3 dataset. The source column reports the generic table; the applied column reports the calibrated simulation value. Data/Original_Study_Data/hindlimb/model3_parameters.json |
-| R_VL | pennation_cosine | 1 | Cosine of the constant fiber-to-tendon pennation angle. | 0.97154915 | 0.97154915 | Retained the verified source value; no numerical change from that source. | Generic hindlimb parameters from the author’s MATLAB Model 3 dataset. The source column reports the generic table; the applied column reports the calibrated simulation value. Data/Original_Study_Data/hindlimb/model3_parameters.json |
-| R_VL | tendon_strain_at_max_force | 1 | Tendon extension/slack length at one maximum isometric tendon force. | Not established | 0.04 | No verified source value is available for direct comparison. Assumed elastic-tendon compliance; not a measured tendon strain for this animal. | Generic hindlimb parameters from the author’s MATLAB Model 3 dataset. The source column reports the generic table; the applied column reports the calibrated simulation value. Data/Original_Study_Data/hindlimb/model3_parameters.json |
-| R_VL | max_fiber_speed_optimal_lengths_per_s | 1/s | Positive maximum-shortening speed magnitude, measured in optimal fiber lengths per second. | 6.59874 | 6.7610515 | Different from the verified source value. Change relative to source: +2.46%. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Generic hindlimb parameters from the author’s MATLAB Model 3 dataset. The source column reports the generic table; the applied column reports the calibrated simulation value. Data/Original_Study_Data/hindlimb/model3_parameters.json |
-| R_VL | normalized_fiber_damping | 1 | Coefficient of normalized fiber velocity in the normalized tendon-direction force balance. | Not established | 0.039109401 | No verified source value is available for direct comparison. Effective muscle force-balance coefficient; source-law conversion and calibration are described in the methods. | Generic hindlimb parameters from the author’s MATLAB Model 3 dataset. The source column reports the generic table; the applied column reports the calibrated simulation value. Data/Original_Study_Data/hindlimb/model3_parameters.json |
-| R_VL | MT_path_length_offset_m | m | Constant offset added to the routed path to define muscle-tendon length. | Not established | 0 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Generic hindlimb parameters from the author’s MATLAB Model 3 dataset. The source column reports the generic table; the applied column reports the calibrated simulation value. Data/Original_Study_Data/hindlimb/model3_parameters.json |
-| R_VL | active_force_length_exponent | 1 | Exponent rho in the source active force-length curve. | Not established | 3 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Generic hindlimb parameters from the author’s MATLAB Model 3 dataset. The source column reports the generic table; the applied column reports the calibrated simulation value. Data/Original_Study_Data/hindlimb/model3_parameters.json |
-| R_VL | source_shortening_curvature | 1 | Source shortening-curve coefficient; inactive when De Groote force-velocity mode is selected. | Not established | 0.41623 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Generic hindlimb parameters from the author’s MATLAB Model 3 dataset. The source column reports the generic table; the applied column reports the calibrated simulation value. Data/Original_Study_Data/hindlimb/model3_parameters.json |
-| R_VL | source_lengthening_curvature | 1 | Source lengthening-curve coefficient; inactive when De Groote force-velocity mode is selected. | Not established | 0.0089800326 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Generic hindlimb parameters from the author’s MATLAB Model 3 dataset. The source column reports the generic table; the applied column reports the calibrated simulation value. Data/Original_Study_Data/hindlimb/model3_parameters.json |
-| R_VL | passive_fiber_enabled | 0/1 | 1 enables passive fiber tension within the elastic equilibrium; zero force below l_f/l_opt=1 does not mean it is disabled. | Not established | 1 | No verified source value is available for direct comparison. The published passive force-length law is included in every muscle channel. Its coefficients are from Prilutsky et al. (2016), Table 10.3, and Rahmati et al. (2025), Table 3. Applying the same normalized law to added muscle channels is a modeling assumption. | Published parallel elastic architecture: Prilutsky et al. 2016 Table 10.3 (10.1007/978-1-4939-3267-2_10); Rahmati et al. 2025 Table 3 (10.1113/JP287448). Common normalized curve extended to all model channels; no muscle-specific passive calibration is claimed. |
-| R_VL | degroote_force_velocity_enabled | 0/1 | 1 uses the documented De Groote/OpenSim velocity curve; 0 uses the source curve. | Not established | 1 | No verified source value is available for direct comparison. Model-law choice: 1 enables the smooth De Groote force-velocity relation; 0 selects the alternative implemented law. | Generic hindlimb parameters from the author’s MATLAB Model 3 dataset. The source column reports the generic table; the applied column reports the calibrated simulation value. Data/Original_Study_Data/hindlimb/model3_parameters.json |
-| R_VM | max_isometric_tendon_force_N | N | Maximum isometric force projected along the tendon; do not multiply by pennation cosine twice. | 202.13321 | 229.63152 | Different from the verified source value. Change relative to source: +13.6%. Force capacity was calibrated with motor inputs to improve mechanical agreement; the fit does not uniquely identify it. | Generic hindlimb parameters from the author’s MATLAB Model 3 dataset. The source column reports the generic table; the applied column reports the calibrated simulation value. Data/Original_Study_Data/hindlimb/model3_parameters.json |
-| R_VM | optimal_fiber_length_m | m | Optimal fascicle/fiber length, not whole muscle-tendon length. | 0.027461 | 0.027067584 | Different from the verified source value. Change relative to source: -1.43%. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Generic hindlimb parameters from the author’s MATLAB Model 3 dataset. The source column reports the generic table; the applied column reports the calibrated simulation value. Data/Original_Study_Data/hindlimb/model3_parameters.json |
-| R_VM | tendon_slack_length_m | m | Unloaded series tendon length. | 0.0823831 | 0.080406115 | Different from the verified source value. Change relative to source: -2.4%. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Generic hindlimb parameters from the author’s MATLAB Model 3 dataset. The source column reports the generic table; the applied column reports the calibrated simulation value. Data/Original_Study_Data/hindlimb/model3_parameters.json |
-| R_VM | pennation_cosine | 1 | Cosine of the constant fiber-to-tendon pennation angle. | 0.97154915 | 0.97154915 | Retained the verified source value; no numerical change from that source. | Generic hindlimb parameters from the author’s MATLAB Model 3 dataset. The source column reports the generic table; the applied column reports the calibrated simulation value. Data/Original_Study_Data/hindlimb/model3_parameters.json |
-| R_VM | tendon_strain_at_max_force | 1 | Tendon extension/slack length at one maximum isometric tendon force. | Not established | 0.04 | No verified source value is available for direct comparison. Assumed elastic-tendon compliance; not a measured tendon strain for this animal. | Generic hindlimb parameters from the author’s MATLAB Model 3 dataset. The source column reports the generic table; the applied column reports the calibrated simulation value. Data/Original_Study_Data/hindlimb/model3_parameters.json |
-| R_VM | max_fiber_speed_optimal_lengths_per_s | 1/s | Positive maximum-shortening speed magnitude, measured in optimal fiber lengths per second. | 6.59874 | 6.7610515 | Different from the verified source value. Change relative to source: +2.46%. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Generic hindlimb parameters from the author’s MATLAB Model 3 dataset. The source column reports the generic table; the applied column reports the calibrated simulation value. Data/Original_Study_Data/hindlimb/model3_parameters.json |
-| R_VM | normalized_fiber_damping | 1 | Coefficient of normalized fiber velocity in the normalized tendon-direction force balance. | Not established | 0.052070916 | No verified source value is available for direct comparison. Effective muscle force-balance coefficient; source-law conversion and calibration are described in the methods. | Generic hindlimb parameters from the author’s MATLAB Model 3 dataset. The source column reports the generic table; the applied column reports the calibrated simulation value. Data/Original_Study_Data/hindlimb/model3_parameters.json |
-| R_VM | MT_path_length_offset_m | m | Constant offset added to the routed path to define muscle-tendon length. | Not established | 0 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Generic hindlimb parameters from the author’s MATLAB Model 3 dataset. The source column reports the generic table; the applied column reports the calibrated simulation value. Data/Original_Study_Data/hindlimb/model3_parameters.json |
-| R_VM | active_force_length_exponent | 1 | Exponent rho in the source active force-length curve. | Not established | 3 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Generic hindlimb parameters from the author’s MATLAB Model 3 dataset. The source column reports the generic table; the applied column reports the calibrated simulation value. Data/Original_Study_Data/hindlimb/model3_parameters.json |
-| R_VM | source_shortening_curvature | 1 | Source shortening-curve coefficient; inactive when De Groote force-velocity mode is selected. | Not established | 0.41623 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Generic hindlimb parameters from the author’s MATLAB Model 3 dataset. The source column reports the generic table; the applied column reports the calibrated simulation value. Data/Original_Study_Data/hindlimb/model3_parameters.json |
-| R_VM | source_lengthening_curvature | 1 | Source lengthening-curve coefficient; inactive when De Groote force-velocity mode is selected. | Not established | 0.0089800326 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Generic hindlimb parameters from the author’s MATLAB Model 3 dataset. The source column reports the generic table; the applied column reports the calibrated simulation value. Data/Original_Study_Data/hindlimb/model3_parameters.json |
-| R_VM | passive_fiber_enabled | 0/1 | 1 enables passive fiber tension within the elastic equilibrium; zero force below l_f/l_opt=1 does not mean it is disabled. | Not established | 1 | No verified source value is available for direct comparison. The published passive force-length law is included in every muscle channel. Its coefficients are from Prilutsky et al. (2016), Table 10.3, and Rahmati et al. (2025), Table 3. Applying the same normalized law to added muscle channels is a modeling assumption. | Published parallel elastic architecture: Prilutsky et al. 2016 Table 10.3 (10.1007/978-1-4939-3267-2_10); Rahmati et al. 2025 Table 3 (10.1113/JP287448). Common normalized curve extended to all model channels; no muscle-specific passive calibration is claimed. |
-| R_VM | degroote_force_velocity_enabled | 0/1 | 1 uses the documented De Groote/OpenSim velocity curve; 0 uses the source curve. | Not established | 1 | No verified source value is available for direct comparison. Model-law choice: 1 enables the smooth De Groote force-velocity relation; 0 selects the alternative implemented law. | Generic hindlimb parameters from the author’s MATLAB Model 3 dataset. The source column reports the generic table; the applied column reports the calibrated simulation value. Data/Original_Study_Data/hindlimb/model3_parameters.json |
-| R_TA | max_isometric_tendon_force_N | N | Maximum isometric force projected along the tendon; do not multiply by pennation cosine twice. | 40.403607 | 49.47473 | Different from the verified source value. Change relative to source: +22.5%. Force capacity was calibrated with motor inputs to improve mechanical agreement; the fit does not uniquely identify it. | Generic hindlimb parameters from the author’s MATLAB Model 3 dataset. The source column reports the generic table; the applied column reports the calibrated simulation value. Data/Original_Study_Data/hindlimb/model3_parameters.json |
-| R_TA | optimal_fiber_length_m | m | Optimal fascicle/fiber length, not whole muscle-tendon length. | 0.0814286 | 0.078875953 | Different from the verified source value. Change relative to source: -3.13%. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Generic hindlimb parameters from the author’s MATLAB Model 3 dataset. The source column reports the generic table; the applied column reports the calibrated simulation value. Data/Original_Study_Data/hindlimb/model3_parameters.json |
-| R_TA | tendon_slack_length_m | m | Unloaded series tendon length. | 0.057 | 0.057115572 | Different from the verified source value. Change relative to source: +0.203%. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Generic hindlimb parameters from the author’s MATLAB Model 3 dataset. The source column reports the generic table; the applied column reports the calibrated simulation value. Data/Original_Study_Data/hindlimb/model3_parameters.json |
-| R_TA | pennation_cosine | 1 | Cosine of the constant fiber-to-tendon pennation angle. | 0.99254616 | 0.99254616 | Retained the verified source value; no numerical change from that source. | Generic hindlimb parameters from the author’s MATLAB Model 3 dataset. The source column reports the generic table; the applied column reports the calibrated simulation value. Data/Original_Study_Data/hindlimb/model3_parameters.json |
-| R_TA | tendon_strain_at_max_force | 1 | Tendon extension/slack length at one maximum isometric tendon force. | Not established | 0.04 | No verified source value is available for direct comparison. Assumed elastic-tendon compliance; not a measured tendon strain for this animal. | Generic hindlimb parameters from the author’s MATLAB Model 3 dataset. The source column reports the generic table; the applied column reports the calibrated simulation value. Data/Original_Study_Data/hindlimb/model3_parameters.json |
+Each entry contains its values, units, meaning and source information. Select an entry to read all fields.
+
+<details>
+<summary>L_IP · max_isometric_tendon_force_N</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | L_IP |
+| Parameter | max_isometric_tendon_force_N |
+| Unit | N |
+| Meaning | Maximum isometric force projected along the tendon; do not multiply by pennation cosine twice. |
+| Source value | 95.1724 |
+| Value used in this model | 95.292768 |
+| What changed and why | Different from the verified source value. Change relative to source: +0.126%. Force capacity was calibrated with motor inputs to improve mechanical agreement; the fit does not uniquely identify it. |
+| Source / evidence | Generic hindlimb parameters from the author’s MATLAB Model 3 dataset. The source column reports the generic table; the applied column reports the calibrated simulation value. Data/Original_Study_Data/hindlimb/model3_parameters.json |
+
+</details>
+
+<details>
+<summary>L_IP · optimal_fiber_length_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | L_IP |
+| Parameter | optimal_fiber_length_m |
+| Unit | m |
+| Meaning | Optimal fascicle/fiber length, not whole muscle-tendon length. |
+| Source value | 0.064 |
+| Value used in this model | 0.056758115 |
+| What changed and why | Different from the verified source value. Change relative to source: -11.3%. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Generic hindlimb parameters from the author’s MATLAB Model 3 dataset. The source column reports the generic table; the applied column reports the calibrated simulation value. Data/Original_Study_Data/hindlimb/model3_parameters.json |
+
+</details>
+
+<details>
+<summary>L_IP · tendon_slack_length_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | L_IP |
+| Parameter | tendon_slack_length_m |
+| Unit | m |
+| Meaning | Unloaded series tendon length. |
+| Source value | 0.016 |
+| Value used in this model | 0.014151507 |
+| What changed and why | Different from the verified source value. Change relative to source: -11.6%. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Generic hindlimb parameters from the author’s MATLAB Model 3 dataset. The source column reports the generic table; the applied column reports the calibrated simulation value. Data/Original_Study_Data/hindlimb/model3_parameters.json |
+
+</details>
+
+<details>
+<summary>L_IP · pennation_cosine</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | L_IP |
+| Parameter | pennation_cosine |
+| Unit | 1 |
+| Meaning | Cosine of the constant fiber-to-tendon pennation angle. |
+| Source value | 1 |
+| Value used in this model | 1 |
+| What changed and why | Retained the verified source value; no numerical change from that source. |
+| Source / evidence | Generic hindlimb parameters from the author’s MATLAB Model 3 dataset. The source column reports the generic table; the applied column reports the calibrated simulation value. Data/Original_Study_Data/hindlimb/model3_parameters.json |
+
+</details>
+
+<details>
+<summary>L_IP · tendon_strain_at_max_force</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | L_IP |
+| Parameter | tendon_strain_at_max_force |
+| Unit | 1 |
+| Meaning | Tendon extension/slack length at one maximum isometric tendon force. |
+| Source value | Not established |
+| Value used in this model | 0.04 |
+| What changed and why | No verified source value is available for direct comparison. Assumed elastic-tendon compliance; not a measured tendon strain for this animal. |
+| Source / evidence | Generic hindlimb parameters from the author’s MATLAB Model 3 dataset. The source column reports the generic table; the applied column reports the calibrated simulation value. Data/Original_Study_Data/hindlimb/model3_parameters.json |
+
+</details>
+
+<details>
+<summary>L_IP · max_fiber_speed_optimal_lengths_per_s</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | L_IP |
+| Parameter | max_fiber_speed_optimal_lengths_per_s |
+| Unit | 1/s |
+| Meaning | Positive maximum-shortening speed magnitude, measured in optimal fiber lengths per second. |
+| Source value | 8.5539062 |
+| Value used in this model | 9.6802501 |
+| What changed and why | Different from the verified source value. Change relative to source: +13.2%. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Generic hindlimb parameters from the author’s MATLAB Model 3 dataset. The source column reports the generic table; the applied column reports the calibrated simulation value. Data/Original_Study_Data/hindlimb/model3_parameters.json |
+
+</details>
+
+<details>
+<summary>L_IP · normalized_fiber_damping</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | L_IP |
+| Parameter | normalized_fiber_damping |
+| Unit | 1 |
+| Meaning | Coefficient of normalized fiber velocity in the normalized tendon-direction force balance. |
+| Source value | Not established |
+| Value used in this model | 0.066327495 |
+| What changed and why | No verified source value is available for direct comparison. Effective muscle force-balance coefficient; source-law conversion and calibration are described in the methods. |
+| Source / evidence | Generic hindlimb parameters from the author’s MATLAB Model 3 dataset. The source column reports the generic table; the applied column reports the calibrated simulation value. Data/Original_Study_Data/hindlimb/model3_parameters.json |
+
+</details>
+
+<details>
+<summary>L_IP · MT_path_length_offset_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | L_IP |
+| Parameter | MT_path_length_offset_m |
+| Unit | m |
+| Meaning | Constant offset added to the routed path to define muscle-tendon length. |
+| Source value | Not established |
+| Value used in this model | 0 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Generic hindlimb parameters from the author’s MATLAB Model 3 dataset. The source column reports the generic table; the applied column reports the calibrated simulation value. Data/Original_Study_Data/hindlimb/model3_parameters.json |
+
+</details>
+
+<details>
+<summary>L_IP · active_force_length_exponent</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | L_IP |
+| Parameter | active_force_length_exponent |
+| Unit | 1 |
+| Meaning | Exponent rho in the source active force-length curve. |
+| Source value | Not established |
+| Value used in this model | 6 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Generic hindlimb parameters from the author’s MATLAB Model 3 dataset. The source column reports the generic table; the applied column reports the calibrated simulation value. Data/Original_Study_Data/hindlimb/model3_parameters.json |
+
+</details>
+
+<details>
+<summary>L_IP · source_shortening_curvature</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | L_IP |
+| Parameter | source_shortening_curvature |
+| Unit | 1 |
+| Meaning | Source shortening-curve coefficient; inactive when De Groote force-velocity mode is selected. |
+| Source value | Not established |
+| Value used in this model | 0.26983 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Generic hindlimb parameters from the author’s MATLAB Model 3 dataset. The source column reports the generic table; the applied column reports the calibrated simulation value. Data/Original_Study_Data/hindlimb/model3_parameters.json |
+
+</details>
+
+<details>
+<summary>L_IP · source_lengthening_curvature</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | L_IP |
+| Parameter | source_lengthening_curvature |
+| Unit | 1 |
+| Meaning | Source lengthening-curve coefficient; inactive when De Groote force-velocity mode is selected. |
+| Source value | Not established |
+| Value used in this model | 0.029496476 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Generic hindlimb parameters from the author’s MATLAB Model 3 dataset. The source column reports the generic table; the applied column reports the calibrated simulation value. Data/Original_Study_Data/hindlimb/model3_parameters.json |
+
+</details>
+
+<details>
+<summary>L_IP · passive_fiber_enabled</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | L_IP |
+| Parameter | passive_fiber_enabled |
+| Unit | 0/1 |
+| Meaning | 1 enables passive fiber tension within the elastic equilibrium; zero force below l_f/l_opt=1 does not mean it is disabled. |
+| Source value | Not established |
+| Value used in this model | 1 |
+| What changed and why | No verified source value is available for direct comparison. The published passive force-length law is included in every muscle channel. Its coefficients are from Prilutsky et al. (2016), Table 10.3, and Rahmati et al. (2025), Table 3. Applying the same normalized law to added muscle channels is a modeling assumption. |
+| Source / evidence | Published parallel elastic architecture: Prilutsky et al. 2016 Table 10.3 (10.1007/978-1-4939-3267-2_10); Rahmati et al. 2025 Table 3 (10.1113/JP287448). Common normalized curve extended to all model channels; no muscle-specific passive calibration is claimed. |
+
+</details>
+
+<details>
+<summary>L_IP · degroote_force_velocity_enabled</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | L_IP |
+| Parameter | degroote_force_velocity_enabled |
+| Unit | 0/1 |
+| Meaning | 1 uses the documented De Groote/OpenSim velocity curve; 0 uses the source curve. |
+| Source value | Not established |
+| Value used in this model | 1 |
+| What changed and why | No verified source value is available for direct comparison. Model-law choice: 1 enables the smooth De Groote force-velocity relation; 0 selects the alternative implemented law. |
+| Source / evidence | Generic hindlimb parameters from the author’s MATLAB Model 3 dataset. The source column reports the generic table; the applied column reports the calibrated simulation value. Data/Original_Study_Data/hindlimb/model3_parameters.json |
+
+</details>
+
+<details>
+<summary>L_BFA · max_isometric_tendon_force_N</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | L_BFA |
+| Parameter | max_isometric_tendon_force_N |
+| Unit | N |
+| Meaning | Maximum isometric force projected along the tendon; do not multiply by pennation cosine twice. |
+| Source value | 52.596116 |
+| Value used in this model | 84.537076 |
+| What changed and why | Different from the verified source value. Change relative to source: +60.7%. Force capacity was calibrated with motor inputs to improve mechanical agreement; the fit does not uniquely identify it. |
+| Source / evidence | Generic hindlimb parameters from the author’s MATLAB Model 3 dataset. The source column reports the generic table; the applied column reports the calibrated simulation value. Data/Original_Study_Data/hindlimb/model3_parameters.json |
+
+</details>
+
+<details>
+<summary>L_BFA · optimal_fiber_length_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | L_BFA |
+| Parameter | optimal_fiber_length_m |
+| Unit | m |
+| Meaning | Optimal fascicle/fiber length, not whole muscle-tendon length. |
+| Source value | 0.031 |
+| Value used in this model | 0.030318052 |
+| What changed and why | Different from the verified source value. Change relative to source: -2.2%. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Generic hindlimb parameters from the author’s MATLAB Model 3 dataset. The source column reports the generic table; the applied column reports the calibrated simulation value. Data/Original_Study_Data/hindlimb/model3_parameters.json |
+
+</details>
+
+<details>
+<summary>L_BFA · tendon_slack_length_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | L_BFA |
+| Parameter | tendon_slack_length_m |
+| Unit | m |
+| Meaning | Unloaded series tendon length. |
+| Source value | 0.031 |
+| Value used in this model | 0.030739897 |
+| What changed and why | Different from the verified source value. Change relative to source: -0.839%. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Generic hindlimb parameters from the author’s MATLAB Model 3 dataset. The source column reports the generic table; the applied column reports the calibrated simulation value. Data/Original_Study_Data/hindlimb/model3_parameters.json |
+
+</details>
+
+<details>
+<summary>L_BFA · pennation_cosine</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | L_BFA |
+| Parameter | pennation_cosine |
+| Unit | 1 |
+| Meaning | Cosine of the constant fiber-to-tendon pennation angle. |
+| Source value | 0.97029575 |
+| Value used in this model | 0.97029575 |
+| What changed and why | Retained the verified source value; no numerical change from that source. |
+| Source / evidence | Generic hindlimb parameters from the author’s MATLAB Model 3 dataset. The source column reports the generic table; the applied column reports the calibrated simulation value. Data/Original_Study_Data/hindlimb/model3_parameters.json |
+
+</details>
+
+<details>
+<summary>L_BFA · tendon_strain_at_max_force</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | L_BFA |
+| Parameter | tendon_strain_at_max_force |
+| Unit | 1 |
+| Meaning | Tendon extension/slack length at one maximum isometric tendon force. |
+| Source value | Not established |
+| Value used in this model | 0.04 |
+| What changed and why | No verified source value is available for direct comparison. Assumed elastic-tendon compliance; not a measured tendon strain for this animal. |
+| Source / evidence | Generic hindlimb parameters from the author’s MATLAB Model 3 dataset. The source column reports the generic table; the applied column reports the calibrated simulation value. Data/Original_Study_Data/hindlimb/model3_parameters.json |
+
+</details>
+
+<details>
+<summary>L_BFA · max_fiber_speed_optimal_lengths_per_s</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | L_BFA |
+| Parameter | max_fiber_speed_optimal_lengths_per_s |
+| Unit | 1/s |
+| Meaning | Positive maximum-shortening speed magnitude, measured in optimal fiber lengths per second. |
+| Source value | 10.753484 |
+| Value used in this model | 10.689181 |
+| What changed and why | Different from the verified source value. Change relative to source: -0.598%. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Generic hindlimb parameters from the author’s MATLAB Model 3 dataset. The source column reports the generic table; the applied column reports the calibrated simulation value. Data/Original_Study_Data/hindlimb/model3_parameters.json |
+
+</details>
+
+<details>
+<summary>L_BFA · normalized_fiber_damping</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | L_BFA |
+| Parameter | normalized_fiber_damping |
+| Unit | 1 |
+| Meaning | Coefficient of normalized fiber velocity in the normalized tendon-direction force balance. |
+| Source value | Not established |
+| Value used in this model | 0.08062451 |
+| What changed and why | No verified source value is available for direct comparison. Effective muscle force-balance coefficient; source-law conversion and calibration are described in the methods. |
+| Source / evidence | Generic hindlimb parameters from the author’s MATLAB Model 3 dataset. The source column reports the generic table; the applied column reports the calibrated simulation value. Data/Original_Study_Data/hindlimb/model3_parameters.json |
+
+</details>
+
+<details>
+<summary>L_BFA · MT_path_length_offset_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | L_BFA |
+| Parameter | MT_path_length_offset_m |
+| Unit | m |
+| Meaning | Constant offset added to the routed path to define muscle-tendon length. |
+| Source value | Not established |
+| Value used in this model | 0 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Generic hindlimb parameters from the author’s MATLAB Model 3 dataset. The source column reports the generic table; the applied column reports the calibrated simulation value. Data/Original_Study_Data/hindlimb/model3_parameters.json |
+
+</details>
+
+<details>
+<summary>L_BFA · active_force_length_exponent</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | L_BFA |
+| Parameter | active_force_length_exponent |
+| Unit | 1 |
+| Meaning | Exponent rho in the source active force-length curve. |
+| Source value | Not established |
+| Value used in this model | 6 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Generic hindlimb parameters from the author’s MATLAB Model 3 dataset. The source column reports the generic table; the applied column reports the calibrated simulation value. Data/Original_Study_Data/hindlimb/model3_parameters.json |
+
+</details>
+
+<details>
+<summary>L_BFA · source_shortening_curvature</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | L_BFA |
+| Parameter | source_shortening_curvature |
+| Unit | 1 |
+| Meaning | Source shortening-curve coefficient; inactive when De Groote force-velocity mode is selected. |
+| Source value | Not established |
+| Value used in this model | 0.10513 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Generic hindlimb parameters from the author’s MATLAB Model 3 dataset. The source column reports the generic table; the applied column reports the calibrated simulation value. Data/Original_Study_Data/hindlimb/model3_parameters.json |
+
+</details>
+
+<details>
+<summary>L_BFA · source_lengthening_curvature</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | L_BFA |
+| Parameter | source_lengthening_curvature |
+| Unit | 1 |
+| Meaning | Source lengthening-curve coefficient; inactive when De Groote force-velocity mode is selected. |
+| Source value | Not established |
+| Value used in this model | 0.1177045 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Generic hindlimb parameters from the author’s MATLAB Model 3 dataset. The source column reports the generic table; the applied column reports the calibrated simulation value. Data/Original_Study_Data/hindlimb/model3_parameters.json |
+
+</details>
+
+<details>
+<summary>L_BFA · passive_fiber_enabled</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | L_BFA |
+| Parameter | passive_fiber_enabled |
+| Unit | 0/1 |
+| Meaning | 1 enables passive fiber tension within the elastic equilibrium; zero force below l_f/l_opt=1 does not mean it is disabled. |
+| Source value | Not established |
+| Value used in this model | 1 |
+| What changed and why | No verified source value is available for direct comparison. The published passive force-length law is included in every muscle channel. Its coefficients are from Prilutsky et al. (2016), Table 10.3, and Rahmati et al. (2025), Table 3. Applying the same normalized law to added muscle channels is a modeling assumption. |
+| Source / evidence | Published parallel elastic architecture: Prilutsky et al. 2016 Table 10.3 (10.1007/978-1-4939-3267-2_10); Rahmati et al. 2025 Table 3 (10.1113/JP287448). Common normalized curve extended to all model channels; no muscle-specific passive calibration is claimed. |
+
+</details>
+
+<details>
+<summary>L_BFA · degroote_force_velocity_enabled</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | L_BFA |
+| Parameter | degroote_force_velocity_enabled |
+| Unit | 0/1 |
+| Meaning | 1 uses the documented De Groote/OpenSim velocity curve; 0 uses the source curve. |
+| Source value | Not established |
+| Value used in this model | 1 |
+| What changed and why | No verified source value is available for direct comparison. Model-law choice: 1 enables the smooth De Groote force-velocity relation; 0 selects the alternative implemented law. |
+| Source / evidence | Generic hindlimb parameters from the author’s MATLAB Model 3 dataset. The source column reports the generic table; the applied column reports the calibrated simulation value. Data/Original_Study_Data/hindlimb/model3_parameters.json |
+
+</details>
+
+<details>
+<summary>L_VL · max_isometric_tendon_force_N</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | L_VL |
+| Parameter | max_isometric_tendon_force_N |
+| Unit | N |
+| Meaning | Maximum isometric force projected along the tendon; do not multiply by pennation cosine twice. |
+| Source value | 202.13321 |
+| Value used in this model | 199.77614 |
+| What changed and why | Different from the verified source value. Change relative to source: -1.17%. Force capacity was calibrated with motor inputs to improve mechanical agreement; the fit does not uniquely identify it. |
+| Source / evidence | Generic hindlimb parameters from the author’s MATLAB Model 3 dataset. The source column reports the generic table; the applied column reports the calibrated simulation value. Data/Original_Study_Data/hindlimb/model3_parameters.json |
+
+</details>
+
+<details>
+<summary>L_VL · optimal_fiber_length_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | L_VL |
+| Parameter | optimal_fiber_length_m |
+| Unit | m |
+| Meaning | Optimal fascicle/fiber length, not whole muscle-tendon length. |
+| Source value | 0.027461 |
+| Value used in this model | 0.027013467 |
+| What changed and why | Different from the verified source value. Change relative to source: -1.63%. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Generic hindlimb parameters from the author’s MATLAB Model 3 dataset. The source column reports the generic table; the applied column reports the calibrated simulation value. Data/Original_Study_Data/hindlimb/model3_parameters.json |
+
+</details>
+
+<details>
+<summary>L_VL · tendon_slack_length_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | L_VL |
+| Parameter | tendon_slack_length_m |
+| Unit | m |
+| Meaning | Unloaded series tendon length. |
+| Source value | 0.0823831 |
+| Value used in this model | 0.079931987 |
+| What changed and why | Different from the verified source value. Change relative to source: -2.98%. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Generic hindlimb parameters from the author’s MATLAB Model 3 dataset. The source column reports the generic table; the applied column reports the calibrated simulation value. Data/Original_Study_Data/hindlimb/model3_parameters.json |
+
+</details>
+
+<details>
+<summary>L_VL · pennation_cosine</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | L_VL |
+| Parameter | pennation_cosine |
+| Unit | 1 |
+| Meaning | Cosine of the constant fiber-to-tendon pennation angle. |
+| Source value | 0.97154915 |
+| Value used in this model | 0.97154915 |
+| What changed and why | Retained the verified source value; no numerical change from that source. |
+| Source / evidence | Generic hindlimb parameters from the author’s MATLAB Model 3 dataset. The source column reports the generic table; the applied column reports the calibrated simulation value. Data/Original_Study_Data/hindlimb/model3_parameters.json |
+
+</details>
+
+<details>
+<summary>L_VL · tendon_strain_at_max_force</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | L_VL |
+| Parameter | tendon_strain_at_max_force |
+| Unit | 1 |
+| Meaning | Tendon extension/slack length at one maximum isometric tendon force. |
+| Source value | Not established |
+| Value used in this model | 0.04 |
+| What changed and why | No verified source value is available for direct comparison. Assumed elastic-tendon compliance; not a measured tendon strain for this animal. |
+| Source / evidence | Generic hindlimb parameters from the author’s MATLAB Model 3 dataset. The source column reports the generic table; the applied column reports the calibrated simulation value. Data/Original_Study_Data/hindlimb/model3_parameters.json |
+
+</details>
+
+<details>
+<summary>L_VL · max_fiber_speed_optimal_lengths_per_s</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | L_VL |
+| Parameter | max_fiber_speed_optimal_lengths_per_s |
+| Unit | 1/s |
+| Meaning | Positive maximum-shortening speed magnitude, measured in optimal fiber lengths per second. |
+| Source value | 6.59874 |
+| Value used in this model | 6.7610515 |
+| What changed and why | Different from the verified source value. Change relative to source: +2.46%. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Generic hindlimb parameters from the author’s MATLAB Model 3 dataset. The source column reports the generic table; the applied column reports the calibrated simulation value. Data/Original_Study_Data/hindlimb/model3_parameters.json |
+
+</details>
+
+<details>
+<summary>L_VL · normalized_fiber_damping</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | L_VL |
+| Parameter | normalized_fiber_damping |
+| Unit | 1 |
+| Meaning | Coefficient of normalized fiber velocity in the normalized tendon-direction force balance. |
+| Source value | Not established |
+| Value used in this model | 0.039109401 |
+| What changed and why | No verified source value is available for direct comparison. Effective muscle force-balance coefficient; source-law conversion and calibration are described in the methods. |
+| Source / evidence | Generic hindlimb parameters from the author’s MATLAB Model 3 dataset. The source column reports the generic table; the applied column reports the calibrated simulation value. Data/Original_Study_Data/hindlimb/model3_parameters.json |
+
+</details>
+
+<details>
+<summary>L_VL · MT_path_length_offset_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | L_VL |
+| Parameter | MT_path_length_offset_m |
+| Unit | m |
+| Meaning | Constant offset added to the routed path to define muscle-tendon length. |
+| Source value | Not established |
+| Value used in this model | 0 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Generic hindlimb parameters from the author’s MATLAB Model 3 dataset. The source column reports the generic table; the applied column reports the calibrated simulation value. Data/Original_Study_Data/hindlimb/model3_parameters.json |
+
+</details>
+
+<details>
+<summary>L_VL · active_force_length_exponent</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | L_VL |
+| Parameter | active_force_length_exponent |
+| Unit | 1 |
+| Meaning | Exponent rho in the source active force-length curve. |
+| Source value | Not established |
+| Value used in this model | 3 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Generic hindlimb parameters from the author’s MATLAB Model 3 dataset. The source column reports the generic table; the applied column reports the calibrated simulation value. Data/Original_Study_Data/hindlimb/model3_parameters.json |
+
+</details>
+
+<details>
+<summary>L_VL · source_shortening_curvature</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | L_VL |
+| Parameter | source_shortening_curvature |
+| Unit | 1 |
+| Meaning | Source shortening-curve coefficient; inactive when De Groote force-velocity mode is selected. |
+| Source value | Not established |
+| Value used in this model | 0.41623 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Generic hindlimb parameters from the author’s MATLAB Model 3 dataset. The source column reports the generic table; the applied column reports the calibrated simulation value. Data/Original_Study_Data/hindlimb/model3_parameters.json |
+
+</details>
+
+<details>
+<summary>L_VL · source_lengthening_curvature</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | L_VL |
+| Parameter | source_lengthening_curvature |
+| Unit | 1 |
+| Meaning | Source lengthening-curve coefficient; inactive when De Groote force-velocity mode is selected. |
+| Source value | Not established |
+| Value used in this model | 0.0089800326 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Generic hindlimb parameters from the author’s MATLAB Model 3 dataset. The source column reports the generic table; the applied column reports the calibrated simulation value. Data/Original_Study_Data/hindlimb/model3_parameters.json |
+
+</details>
+
+<details>
+<summary>L_VL · passive_fiber_enabled</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | L_VL |
+| Parameter | passive_fiber_enabled |
+| Unit | 0/1 |
+| Meaning | 1 enables passive fiber tension within the elastic equilibrium; zero force below l_f/l_opt=1 does not mean it is disabled. |
+| Source value | Not established |
+| Value used in this model | 1 |
+| What changed and why | No verified source value is available for direct comparison. The published passive force-length law is included in every muscle channel. Its coefficients are from Prilutsky et al. (2016), Table 10.3, and Rahmati et al. (2025), Table 3. Applying the same normalized law to added muscle channels is a modeling assumption. |
+| Source / evidence | Published parallel elastic architecture: Prilutsky et al. 2016 Table 10.3 (10.1007/978-1-4939-3267-2_10); Rahmati et al. 2025 Table 3 (10.1113/JP287448). Common normalized curve extended to all model channels; no muscle-specific passive calibration is claimed. |
+
+</details>
+
+<details>
+<summary>L_VL · degroote_force_velocity_enabled</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | L_VL |
+| Parameter | degroote_force_velocity_enabled |
+| Unit | 0/1 |
+| Meaning | 1 uses the documented De Groote/OpenSim velocity curve; 0 uses the source curve. |
+| Source value | Not established |
+| Value used in this model | 1 |
+| What changed and why | No verified source value is available for direct comparison. Model-law choice: 1 enables the smooth De Groote force-velocity relation; 0 selects the alternative implemented law. |
+| Source / evidence | Generic hindlimb parameters from the author’s MATLAB Model 3 dataset. The source column reports the generic table; the applied column reports the calibrated simulation value. Data/Original_Study_Data/hindlimb/model3_parameters.json |
+
+</details>
+
+<details>
+<summary>L_VM · max_isometric_tendon_force_N</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | L_VM |
+| Parameter | max_isometric_tendon_force_N |
+| Unit | N |
+| Meaning | Maximum isometric force projected along the tendon; do not multiply by pennation cosine twice. |
+| Source value | 202.13321 |
+| Value used in this model | 229.63152 |
+| What changed and why | Different from the verified source value. Change relative to source: +13.6%. Force capacity was calibrated with motor inputs to improve mechanical agreement; the fit does not uniquely identify it. |
+| Source / evidence | Generic hindlimb parameters from the author’s MATLAB Model 3 dataset. The source column reports the generic table; the applied column reports the calibrated simulation value. Data/Original_Study_Data/hindlimb/model3_parameters.json |
+
+</details>
+
+<details>
+<summary>L_VM · optimal_fiber_length_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | L_VM |
+| Parameter | optimal_fiber_length_m |
+| Unit | m |
+| Meaning | Optimal fascicle/fiber length, not whole muscle-tendon length. |
+| Source value | 0.027461 |
+| Value used in this model | 0.027067584 |
+| What changed and why | Different from the verified source value. Change relative to source: -1.43%. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Generic hindlimb parameters from the author’s MATLAB Model 3 dataset. The source column reports the generic table; the applied column reports the calibrated simulation value. Data/Original_Study_Data/hindlimb/model3_parameters.json |
+
+</details>
+
+<details>
+<summary>L_VM · tendon_slack_length_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | L_VM |
+| Parameter | tendon_slack_length_m |
+| Unit | m |
+| Meaning | Unloaded series tendon length. |
+| Source value | 0.0823831 |
+| Value used in this model | 0.080406115 |
+| What changed and why | Different from the verified source value. Change relative to source: -2.4%. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Generic hindlimb parameters from the author’s MATLAB Model 3 dataset. The source column reports the generic table; the applied column reports the calibrated simulation value. Data/Original_Study_Data/hindlimb/model3_parameters.json |
+
+</details>
+
+<details>
+<summary>L_VM · pennation_cosine</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | L_VM |
+| Parameter | pennation_cosine |
+| Unit | 1 |
+| Meaning | Cosine of the constant fiber-to-tendon pennation angle. |
+| Source value | 0.97154915 |
+| Value used in this model | 0.97154915 |
+| What changed and why | Retained the verified source value; no numerical change from that source. |
+| Source / evidence | Generic hindlimb parameters from the author’s MATLAB Model 3 dataset. The source column reports the generic table; the applied column reports the calibrated simulation value. Data/Original_Study_Data/hindlimb/model3_parameters.json |
+
+</details>
+
+<details>
+<summary>L_VM · tendon_strain_at_max_force</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | L_VM |
+| Parameter | tendon_strain_at_max_force |
+| Unit | 1 |
+| Meaning | Tendon extension/slack length at one maximum isometric tendon force. |
+| Source value | Not established |
+| Value used in this model | 0.04 |
+| What changed and why | No verified source value is available for direct comparison. Assumed elastic-tendon compliance; not a measured tendon strain for this animal. |
+| Source / evidence | Generic hindlimb parameters from the author’s MATLAB Model 3 dataset. The source column reports the generic table; the applied column reports the calibrated simulation value. Data/Original_Study_Data/hindlimb/model3_parameters.json |
+
+</details>
+
+<details>
+<summary>L_VM · max_fiber_speed_optimal_lengths_per_s</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | L_VM |
+| Parameter | max_fiber_speed_optimal_lengths_per_s |
+| Unit | 1/s |
+| Meaning | Positive maximum-shortening speed magnitude, measured in optimal fiber lengths per second. |
+| Source value | 6.59874 |
+| Value used in this model | 6.7610515 |
+| What changed and why | Different from the verified source value. Change relative to source: +2.46%. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Generic hindlimb parameters from the author’s MATLAB Model 3 dataset. The source column reports the generic table; the applied column reports the calibrated simulation value. Data/Original_Study_Data/hindlimb/model3_parameters.json |
+
+</details>
+
+<details>
+<summary>L_VM · normalized_fiber_damping</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | L_VM |
+| Parameter | normalized_fiber_damping |
+| Unit | 1 |
+| Meaning | Coefficient of normalized fiber velocity in the normalized tendon-direction force balance. |
+| Source value | Not established |
+| Value used in this model | 0.052070916 |
+| What changed and why | No verified source value is available for direct comparison. Effective muscle force-balance coefficient; source-law conversion and calibration are described in the methods. |
+| Source / evidence | Generic hindlimb parameters from the author’s MATLAB Model 3 dataset. The source column reports the generic table; the applied column reports the calibrated simulation value. Data/Original_Study_Data/hindlimb/model3_parameters.json |
+
+</details>
+
+<details>
+<summary>L_VM · MT_path_length_offset_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | L_VM |
+| Parameter | MT_path_length_offset_m |
+| Unit | m |
+| Meaning | Constant offset added to the routed path to define muscle-tendon length. |
+| Source value | Not established |
+| Value used in this model | 0 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Generic hindlimb parameters from the author’s MATLAB Model 3 dataset. The source column reports the generic table; the applied column reports the calibrated simulation value. Data/Original_Study_Data/hindlimb/model3_parameters.json |
+
+</details>
+
+<details>
+<summary>L_VM · active_force_length_exponent</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | L_VM |
+| Parameter | active_force_length_exponent |
+| Unit | 1 |
+| Meaning | Exponent rho in the source active force-length curve. |
+| Source value | Not established |
+| Value used in this model | 3 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Generic hindlimb parameters from the author’s MATLAB Model 3 dataset. The source column reports the generic table; the applied column reports the calibrated simulation value. Data/Original_Study_Data/hindlimb/model3_parameters.json |
+
+</details>
+
+<details>
+<summary>L_VM · source_shortening_curvature</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | L_VM |
+| Parameter | source_shortening_curvature |
+| Unit | 1 |
+| Meaning | Source shortening-curve coefficient; inactive when De Groote force-velocity mode is selected. |
+| Source value | Not established |
+| Value used in this model | 0.41623 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Generic hindlimb parameters from the author’s MATLAB Model 3 dataset. The source column reports the generic table; the applied column reports the calibrated simulation value. Data/Original_Study_Data/hindlimb/model3_parameters.json |
+
+</details>
+
+<details>
+<summary>L_VM · source_lengthening_curvature</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | L_VM |
+| Parameter | source_lengthening_curvature |
+| Unit | 1 |
+| Meaning | Source lengthening-curve coefficient; inactive when De Groote force-velocity mode is selected. |
+| Source value | Not established |
+| Value used in this model | 0.0089800326 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Generic hindlimb parameters from the author’s MATLAB Model 3 dataset. The source column reports the generic table; the applied column reports the calibrated simulation value. Data/Original_Study_Data/hindlimb/model3_parameters.json |
+
+</details>
+
+<details>
+<summary>L_VM · passive_fiber_enabled</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | L_VM |
+| Parameter | passive_fiber_enabled |
+| Unit | 0/1 |
+| Meaning | 1 enables passive fiber tension within the elastic equilibrium; zero force below l_f/l_opt=1 does not mean it is disabled. |
+| Source value | Not established |
+| Value used in this model | 1 |
+| What changed and why | No verified source value is available for direct comparison. The published passive force-length law is included in every muscle channel. Its coefficients are from Prilutsky et al. (2016), Table 10.3, and Rahmati et al. (2025), Table 3. Applying the same normalized law to added muscle channels is a modeling assumption. |
+| Source / evidence | Published parallel elastic architecture: Prilutsky et al. 2016 Table 10.3 (10.1007/978-1-4939-3267-2_10); Rahmati et al. 2025 Table 3 (10.1113/JP287448). Common normalized curve extended to all model channels; no muscle-specific passive calibration is claimed. |
+
+</details>
+
+<details>
+<summary>L_VM · degroote_force_velocity_enabled</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | L_VM |
+| Parameter | degroote_force_velocity_enabled |
+| Unit | 0/1 |
+| Meaning | 1 uses the documented De Groote/OpenSim velocity curve; 0 uses the source curve. |
+| Source value | Not established |
+| Value used in this model | 1 |
+| What changed and why | No verified source value is available for direct comparison. Model-law choice: 1 enables the smooth De Groote force-velocity relation; 0 selects the alternative implemented law. |
+| Source / evidence | Generic hindlimb parameters from the author’s MATLAB Model 3 dataset. The source column reports the generic table; the applied column reports the calibrated simulation value. Data/Original_Study_Data/hindlimb/model3_parameters.json |
+
+</details>
+
+<details>
+<summary>L_TA · max_isometric_tendon_force_N</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | L_TA |
+| Parameter | max_isometric_tendon_force_N |
+| Unit | N |
+| Meaning | Maximum isometric force projected along the tendon; do not multiply by pennation cosine twice. |
+| Source value | 40.403607 |
+| Value used in this model | 49.47473 |
+| What changed and why | Different from the verified source value. Change relative to source: +22.5%. Force capacity was calibrated with motor inputs to improve mechanical agreement; the fit does not uniquely identify it. |
+| Source / evidence | Generic hindlimb parameters from the author’s MATLAB Model 3 dataset. The source column reports the generic table; the applied column reports the calibrated simulation value. Data/Original_Study_Data/hindlimb/model3_parameters.json |
+
+</details>
+
+<details>
+<summary>L_TA · optimal_fiber_length_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | L_TA |
+| Parameter | optimal_fiber_length_m |
+| Unit | m |
+| Meaning | Optimal fascicle/fiber length, not whole muscle-tendon length. |
+| Source value | 0.0814286 |
+| Value used in this model | 0.078875953 |
+| What changed and why | Different from the verified source value. Change relative to source: -3.13%. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Generic hindlimb parameters from the author’s MATLAB Model 3 dataset. The source column reports the generic table; the applied column reports the calibrated simulation value. Data/Original_Study_Data/hindlimb/model3_parameters.json |
+
+</details>
+
+<details>
+<summary>L_TA · tendon_slack_length_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | L_TA |
+| Parameter | tendon_slack_length_m |
+| Unit | m |
+| Meaning | Unloaded series tendon length. |
+| Source value | 0.057 |
+| Value used in this model | 0.057115572 |
+| What changed and why | Different from the verified source value. Change relative to source: +0.203%. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Generic hindlimb parameters from the author’s MATLAB Model 3 dataset. The source column reports the generic table; the applied column reports the calibrated simulation value. Data/Original_Study_Data/hindlimb/model3_parameters.json |
+
+</details>
+
+<details>
+<summary>L_TA · pennation_cosine</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | L_TA |
+| Parameter | pennation_cosine |
+| Unit | 1 |
+| Meaning | Cosine of the constant fiber-to-tendon pennation angle. |
+| Source value | 0.99254616 |
+| Value used in this model | 0.99254616 |
+| What changed and why | Retained the verified source value; no numerical change from that source. |
+| Source / evidence | Generic hindlimb parameters from the author’s MATLAB Model 3 dataset. The source column reports the generic table; the applied column reports the calibrated simulation value. Data/Original_Study_Data/hindlimb/model3_parameters.json |
+
+</details>
+
+<details>
+<summary>L_TA · tendon_strain_at_max_force</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | L_TA |
+| Parameter | tendon_strain_at_max_force |
+| Unit | 1 |
+| Meaning | Tendon extension/slack length at one maximum isometric tendon force. |
+| Source value | Not established |
+| Value used in this model | 0.04 |
+| What changed and why | No verified source value is available for direct comparison. Assumed elastic-tendon compliance; not a measured tendon strain for this animal. |
+| Source / evidence | Generic hindlimb parameters from the author’s MATLAB Model 3 dataset. The source column reports the generic table; the applied column reports the calibrated simulation value. Data/Original_Study_Data/hindlimb/model3_parameters.json |
+
+</details>
+
+<details>
+<summary>L_TA · max_fiber_speed_optimal_lengths_per_s</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | L_TA |
+| Parameter | max_fiber_speed_optimal_lengths_per_s |
+| Unit | 1/s |
+| Meaning | Positive maximum-shortening speed magnitude, measured in optimal fiber lengths per second. |
+| Source value | 9.8980825 |
+| Value used in this model | 9.620499 |
+| What changed and why | Different from the verified source value. Change relative to source: -2.8%. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Generic hindlimb parameters from the author’s MATLAB Model 3 dataset. The source column reports the generic table; the applied column reports the calibrated simulation value. Data/Original_Study_Data/hindlimb/model3_parameters.json |
+
+</details>
+
+<details>
+<summary>L_TA · normalized_fiber_damping</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | L_TA |
+| Parameter | normalized_fiber_damping |
+| Unit | 1 |
+| Meaning | Coefficient of normalized fiber velocity in the normalized tendon-direction force balance. |
+| Source value | Not established |
+| Value used in this model | 0.023429909 |
+| What changed and why | No verified source value is available for direct comparison. Effective muscle force-balance coefficient; source-law conversion and calibration are described in the methods. |
+| Source / evidence | Generic hindlimb parameters from the author’s MATLAB Model 3 dataset. The source column reports the generic table; the applied column reports the calibrated simulation value. Data/Original_Study_Data/hindlimb/model3_parameters.json |
+
+</details>
+
+<details>
+<summary>L_TA · MT_path_length_offset_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | L_TA |
+| Parameter | MT_path_length_offset_m |
+| Unit | m |
+| Meaning | Constant offset added to the routed path to define muscle-tendon length. |
+| Source value | Not established |
+| Value used in this model | 0.08997561 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Generic hindlimb parameters from the author’s MATLAB Model 3 dataset. The source column reports the generic table; the applied column reports the calibrated simulation value. Data/Original_Study_Data/hindlimb/model3_parameters.json |
+
+</details>
+
+<details>
+<summary>L_TA · active_force_length_exponent</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | L_TA |
+| Parameter | active_force_length_exponent |
+| Unit | 1 |
+| Meaning | Exponent rho in the source active force-length curve. |
+| Source value | Not established |
+| Value used in this model | 6 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Generic hindlimb parameters from the author’s MATLAB Model 3 dataset. The source column reports the generic table; the applied column reports the calibrated simulation value. Data/Original_Study_Data/hindlimb/model3_parameters.json |
+
+</details>
+
+<details>
+<summary>L_TA · source_shortening_curvature</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | L_TA |
+| Parameter | source_shortening_curvature |
+| Unit | 1 |
+| Meaning | Source shortening-curve coefficient; inactive when De Groote force-velocity mode is selected. |
+| Source value | Not established |
+| Value used in this model | 0.16918 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Generic hindlimb parameters from the author’s MATLAB Model 3 dataset. The source column reports the generic table; the applied column reports the calibrated simulation value. Data/Original_Study_Data/hindlimb/model3_parameters.json |
+
+</details>
+
+<details>
+<summary>L_TA · source_lengthening_curvature</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | L_TA |
+| Parameter | source_lengthening_curvature |
+| Unit | 1 |
+| Meaning | Source lengthening-curve coefficient; inactive when De Groote force-velocity mode is selected. |
+| Source value | Not established |
+| Value used in this model | 0.099934809 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Generic hindlimb parameters from the author’s MATLAB Model 3 dataset. The source column reports the generic table; the applied column reports the calibrated simulation value. Data/Original_Study_Data/hindlimb/model3_parameters.json |
+
+</details>
+
+<details>
+<summary>L_TA · passive_fiber_enabled</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | L_TA |
+| Parameter | passive_fiber_enabled |
+| Unit | 0/1 |
+| Meaning | 1 enables passive fiber tension within the elastic equilibrium; zero force below l_f/l_opt=1 does not mean it is disabled. |
+| Source value | Not established |
+| Value used in this model | 1 |
+| What changed and why | No verified source value is available for direct comparison. The published passive force-length law is included in every muscle channel. Its coefficients are from Prilutsky et al. (2016), Table 10.3, and Rahmati et al. (2025), Table 3. Applying the same normalized law to added muscle channels is a modeling assumption. |
+| Source / evidence | Published parallel elastic architecture: Prilutsky et al. 2016 Table 10.3 (10.1007/978-1-4939-3267-2_10); Rahmati et al. 2025 Table 3 (10.1113/JP287448). Common normalized curve extended to all model channels; no muscle-specific passive calibration is claimed. |
+
+</details>
+
+<details>
+<summary>L_TA · degroote_force_velocity_enabled</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | L_TA |
+| Parameter | degroote_force_velocity_enabled |
+| Unit | 0/1 |
+| Meaning | 1 uses the documented De Groote/OpenSim velocity curve; 0 uses the source curve. |
+| Source value | Not established |
+| Value used in this model | 1 |
+| What changed and why | No verified source value is available for direct comparison. Model-law choice: 1 enables the smooth De Groote force-velocity relation; 0 selects the alternative implemented law. |
+| Source / evidence | Generic hindlimb parameters from the author’s MATLAB Model 3 dataset. The source column reports the generic table; the applied column reports the calibrated simulation value. Data/Original_Study_Data/hindlimb/model3_parameters.json |
+
+</details>
+
+<details>
+<summary>L_SO · max_isometric_tendon_force_N</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | L_SO |
+| Parameter | max_isometric_tendon_force_N |
+| Unit | N |
+| Meaning | Maximum isometric force projected along the tendon; do not multiply by pennation cosine twice. |
+| Source value | 10.400002 |
+| Value used in this model | 9.2186085 |
+| What changed and why | Different from the verified source value. Change relative to source: -11.4%. Force capacity was calibrated with motor inputs to improve mechanical agreement; the fit does not uniquely identify it. |
+| Source / evidence | Generic hindlimb parameters from the author’s MATLAB Model 3 dataset. The source column reports the generic table; the applied column reports the calibrated simulation value. Data/Original_Study_Data/hindlimb/model3_parameters.json |
+
+</details>
+
+<details>
+<summary>L_SO · optimal_fiber_length_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | L_SO |
+| Parameter | optimal_fiber_length_m |
+| Unit | m |
+| Meaning | Optimal fascicle/fiber length, not whole muscle-tendon length. |
+| Source value | 0.0345 |
+| Value used in this model | 0.039108378 |
+| What changed and why | Different from the verified source value. Change relative to source: +13.4%. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Generic hindlimb parameters from the author’s MATLAB Model 3 dataset. The source column reports the generic table; the applied column reports the calibrated simulation value. Data/Original_Study_Data/hindlimb/model3_parameters.json |
+
+</details>
+
+<details>
+<summary>L_SO · tendon_slack_length_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | L_SO |
+| Parameter | tendon_slack_length_m |
+| Unit | m |
+| Meaning | Unloaded series tendon length. |
+| Source value | 0.0689999 |
+| Value used in this model | 0.07082097 |
+| What changed and why | Different from the verified source value. Change relative to source: +2.64%. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Generic hindlimb parameters from the author’s MATLAB Model 3 dataset. The source column reports the generic table; the applied column reports the calibrated simulation value. Data/Original_Study_Data/hindlimb/model3_parameters.json |
+
+</details>
+
+<details>
+<summary>L_SO · pennation_cosine</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | L_SO |
+| Parameter | pennation_cosine |
+| Unit | 1 |
+| Meaning | Cosine of the constant fiber-to-tendon pennation angle. |
+| Source value | 0.99254616 |
+| Value used in this model | 0.99254616 |
+| What changed and why | Retained the verified source value; no numerical change from that source. |
+| Source / evidence | Generic hindlimb parameters from the author’s MATLAB Model 3 dataset. The source column reports the generic table; the applied column reports the calibrated simulation value. Data/Original_Study_Data/hindlimb/model3_parameters.json |
+
+</details>
+
+<details>
+<summary>L_SO · tendon_strain_at_max_force</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | L_SO |
+| Parameter | tendon_strain_at_max_force |
+| Unit | 1 |
+| Meaning | Tendon extension/slack length at one maximum isometric tendon force. |
+| Source value | Not established |
+| Value used in this model | 0.04 |
+| What changed and why | No verified source value is available for direct comparison. Assumed elastic-tendon compliance; not a measured tendon strain for this animal. |
+| Source / evidence | Generic hindlimb parameters from the author’s MATLAB Model 3 dataset. The source column reports the generic table; the applied column reports the calibrated simulation value. Data/Original_Study_Data/hindlimb/model3_parameters.json |
+
+</details>
+
+<details>
+<summary>L_SO · max_fiber_speed_optimal_lengths_per_s</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | L_SO |
+| Parameter | max_fiber_speed_optimal_lengths_per_s |
+| Unit | 1/s |
+| Meaning | Positive maximum-shortening speed magnitude, measured in optimal fiber lengths per second. |
+| Source value | 5.1014493 |
+| Value used in this model | 4.9569961 |
+| What changed and why | Different from the verified source value. Change relative to source: -2.83%. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Generic hindlimb parameters from the author’s MATLAB Model 3 dataset. The source column reports the generic table; the applied column reports the calibrated simulation value. Data/Original_Study_Data/hindlimb/model3_parameters.json |
+
+</details>
+
+<details>
+<summary>L_SO · normalized_fiber_damping</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | L_SO |
+| Parameter | normalized_fiber_damping |
+| Unit | 1 |
+| Meaning | Coefficient of normalized fiber velocity in the normalized tendon-direction force balance. |
+| Source value | Not established |
+| Value used in this model | 0.025948615 |
+| What changed and why | No verified source value is available for direct comparison. Effective muscle force-balance coefficient; source-law conversion and calibration are described in the methods. |
+| Source / evidence | Generic hindlimb parameters from the author’s MATLAB Model 3 dataset. The source column reports the generic table; the applied column reports the calibrated simulation value. Data/Original_Study_Data/hindlimb/model3_parameters.json |
+
+</details>
+
+<details>
+<summary>L_SO · MT_path_length_offset_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | L_SO |
+| Parameter | MT_path_length_offset_m |
+| Unit | m |
+| Meaning | Constant offset added to the routed path to define muscle-tendon length. |
+| Source value | Not established |
+| Value used in this model | 0 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Generic hindlimb parameters from the author’s MATLAB Model 3 dataset. The source column reports the generic table; the applied column reports the calibrated simulation value. Data/Original_Study_Data/hindlimb/model3_parameters.json |
+
+</details>
+
+<details>
+<summary>L_SO · active_force_length_exponent</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | L_SO |
+| Parameter | active_force_length_exponent |
+| Unit | 1 |
+| Meaning | Exponent rho in the source active force-length curve. |
+| Source value | Not established |
+| Value used in this model | 3 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Generic hindlimb parameters from the author’s MATLAB Model 3 dataset. The source column reports the generic table; the applied column reports the calibrated simulation value. Data/Original_Study_Data/hindlimb/model3_parameters.json |
+
+</details>
+
+<details>
+<summary>L_SO · source_shortening_curvature</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | L_SO |
+| Parameter | source_shortening_curvature |
+| Unit | 1 |
+| Meaning | Source shortening-curve coefficient; inactive when De Groote force-velocity mode is selected. |
+| Source value | Not established |
+| Value used in this model | 0.89203 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Generic hindlimb parameters from the author’s MATLAB Model 3 dataset. The source column reports the generic table; the applied column reports the calibrated simulation value. Data/Original_Study_Data/hindlimb/model3_parameters.json |
+
+</details>
+
+<details>
+<summary>L_SO · source_lengthening_curvature</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | L_SO |
+| Parameter | source_lengthening_curvature |
+| Unit | 1 |
+| Meaning | Source lengthening-curve coefficient; inactive when De Groote force-velocity mode is selected. |
+| Source value | Not established |
+| Value used in this model | 0.076136239 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Generic hindlimb parameters from the author’s MATLAB Model 3 dataset. The source column reports the generic table; the applied column reports the calibrated simulation value. Data/Original_Study_Data/hindlimb/model3_parameters.json |
+
+</details>
+
+<details>
+<summary>L_SO · passive_fiber_enabled</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | L_SO |
+| Parameter | passive_fiber_enabled |
+| Unit | 0/1 |
+| Meaning | 1 enables passive fiber tension within the elastic equilibrium; zero force below l_f/l_opt=1 does not mean it is disabled. |
+| Source value | Not established |
+| Value used in this model | 1 |
+| What changed and why | No verified source value is available for direct comparison. The published passive force-length law is included in every muscle channel. Its coefficients are from Prilutsky et al. (2016), Table 10.3, and Rahmati et al. (2025), Table 3. Applying the same normalized law to added muscle channels is a modeling assumption. |
+| Source / evidence | Published parallel elastic architecture: Prilutsky et al. 2016 Table 10.3 (10.1007/978-1-4939-3267-2_10); Rahmati et al. 2025 Table 3 (10.1113/JP287448). Common normalized curve extended to all model channels; no muscle-specific passive calibration is claimed. |
+
+</details>
+
+<details>
+<summary>L_SO · degroote_force_velocity_enabled</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | L_SO |
+| Parameter | degroote_force_velocity_enabled |
+| Unit | 0/1 |
+| Meaning | 1 uses the documented De Groote/OpenSim velocity curve; 0 uses the source curve. |
+| Source value | Not established |
+| Value used in this model | 1 |
+| What changed and why | No verified source value is available for direct comparison. Model-law choice: 1 enables the smooth De Groote force-velocity relation; 0 selects the alternative implemented law. |
+| Source / evidence | Generic hindlimb parameters from the author’s MATLAB Model 3 dataset. The source column reports the generic table; the applied column reports the calibrated simulation value. Data/Original_Study_Data/hindlimb/model3_parameters.json |
+
+</details>
+
+<details>
+<summary>L_RF · max_isometric_tendon_force_N</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | L_RF |
+| Parameter | max_isometric_tendon_force_N |
+| Unit | N |
+| Meaning | Maximum isometric force projected along the tendon; do not multiply by pennation cosine twice. |
+| Source value | 61.002611 |
+| Value used in this model | 71.083776 |
+| What changed and why | Different from the verified source value. Change relative to source: +16.5%. Force capacity was calibrated with motor inputs to improve mechanical agreement; the fit does not uniquely identify it. |
+| Source / evidence | Generic hindlimb parameters from the author’s MATLAB Model 3 dataset. The source column reports the generic table; the applied column reports the calibrated simulation value. Data/Original_Study_Data/hindlimb/model3_parameters.json |
+
+</details>
+
+<details>
+<summary>L_RF · optimal_fiber_length_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | L_RF |
+| Parameter | optimal_fiber_length_m |
+| Unit | m |
+| Meaning | Optimal fascicle/fiber length, not whole muscle-tendon length. |
+| Source value | 0.0224993 |
+| Value used in this model | 0.020894135 |
+| What changed and why | Different from the verified source value. Change relative to source: -7.13%. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Generic hindlimb parameters from the author’s MATLAB Model 3 dataset. The source column reports the generic table; the applied column reports the calibrated simulation value. Data/Original_Study_Data/hindlimb/model3_parameters.json |
+
+</details>
+
+<details>
+<summary>L_RF · tendon_slack_length_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | L_RF |
+| Parameter | tendon_slack_length_m |
+| Unit | m |
+| Meaning | Unloaded series tendon length. |
+| Source value | 0.0899972 |
+| Value used in this model | 0.08471384 |
+| What changed and why | Different from the verified source value. Change relative to source: -5.87%. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Generic hindlimb parameters from the author’s MATLAB Model 3 dataset. The source column reports the generic table; the applied column reports the calibrated simulation value. Data/Original_Study_Data/hindlimb/model3_parameters.json |
+
+</details>
+
+<details>
+<summary>L_RF · pennation_cosine</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | L_RF |
+| Parameter | pennation_cosine |
+| Unit | 1 |
+| Meaning | Cosine of the constant fiber-to-tendon pennation angle. |
+| Source value | 0.99254616 |
+| Value used in this model | 0.99254616 |
+| What changed and why | Retained the verified source value; no numerical change from that source. |
+| Source / evidence | Generic hindlimb parameters from the author’s MATLAB Model 3 dataset. The source column reports the generic table; the applied column reports the calibrated simulation value. Data/Original_Study_Data/hindlimb/model3_parameters.json |
+
+</details>
+
+<details>
+<summary>L_RF · tendon_strain_at_max_force</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | L_RF |
+| Parameter | tendon_strain_at_max_force |
+| Unit | 1 |
+| Meaning | Tendon extension/slack length at one maximum isometric tendon force. |
+| Source value | Not established |
+| Value used in this model | 0.04 |
+| What changed and why | No verified source value is available for direct comparison. Assumed elastic-tendon compliance; not a measured tendon strain for this animal. |
+| Source / evidence | Generic hindlimb parameters from the author’s MATLAB Model 3 dataset. The source column reports the generic table; the applied column reports the calibrated simulation value. Data/Original_Study_Data/hindlimb/model3_parameters.json |
+
+</details>
+
+<details>
+<summary>L_RF · max_fiber_speed_optimal_lengths_per_s</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | L_RF |
+| Parameter | max_fiber_speed_optimal_lengths_per_s |
+| Unit | 1/s |
+| Meaning | Positive maximum-shortening speed magnitude, measured in optimal fiber lengths per second. |
+| Source value | 9.5314965 |
+| Value used in this model | 9.9411732 |
+| What changed and why | Different from the verified source value. Change relative to source: +4.3%. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Generic hindlimb parameters from the author’s MATLAB Model 3 dataset. The source column reports the generic table; the applied column reports the calibrated simulation value. Data/Original_Study_Data/hindlimb/model3_parameters.json |
+
+</details>
+
+<details>
+<summary>L_RF · normalized_fiber_damping</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | L_RF |
+| Parameter | normalized_fiber_damping |
+| Unit | 1 |
+| Meaning | Coefficient of normalized fiber velocity in the normalized tendon-direction force balance. |
+| Source value | Not established |
+| Value used in this model | 0.10213679 |
+| What changed and why | No verified source value is available for direct comparison. Effective muscle force-balance coefficient; source-law conversion and calibration are described in the methods. |
+| Source / evidence | Generic hindlimb parameters from the author’s MATLAB Model 3 dataset. The source column reports the generic table; the applied column reports the calibrated simulation value. Data/Original_Study_Data/hindlimb/model3_parameters.json |
+
+</details>
+
+<details>
+<summary>L_RF · MT_path_length_offset_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | L_RF |
+| Parameter | MT_path_length_offset_m |
+| Unit | m |
+| Meaning | Constant offset added to the routed path to define muscle-tendon length. |
+| Source value | Not established |
+| Value used in this model | 0 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Generic hindlimb parameters from the author’s MATLAB Model 3 dataset. The source column reports the generic table; the applied column reports the calibrated simulation value. Data/Original_Study_Data/hindlimb/model3_parameters.json |
+
+</details>
+
+<details>
+<summary>L_RF · active_force_length_exponent</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | L_RF |
+| Parameter | active_force_length_exponent |
+| Unit | 1 |
+| Meaning | Exponent rho in the source active force-length curve. |
+| Source value | Not established |
+| Value used in this model | 3 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Generic hindlimb parameters from the author’s MATLAB Model 3 dataset. The source column reports the generic table; the applied column reports the calibrated simulation value. Data/Original_Study_Data/hindlimb/model3_parameters.json |
+
+</details>
+
+<details>
+<summary>L_RF · source_shortening_curvature</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | L_RF |
+| Parameter | source_shortening_curvature |
+| Unit | 1 |
+| Meaning | Source shortening-curve coefficient; inactive when De Groote force-velocity mode is selected. |
+| Source value | Not established |
+| Value used in this model | 0.19663 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Generic hindlimb parameters from the author’s MATLAB Model 3 dataset. The source column reports the generic table; the applied column reports the calibrated simulation value. Data/Original_Study_Data/hindlimb/model3_parameters.json |
+
+</details>
+
+<details>
+<summary>L_RF · source_lengthening_curvature</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | L_RF |
+| Parameter | source_lengthening_curvature |
+| Unit | 1 |
+| Meaning | Source lengthening-curve coefficient; inactive when De Groote force-velocity mode is selected. |
+| Source value | Not established |
+| Value used in this model | 0.060182966 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Generic hindlimb parameters from the author’s MATLAB Model 3 dataset. The source column reports the generic table; the applied column reports the calibrated simulation value. Data/Original_Study_Data/hindlimb/model3_parameters.json |
+
+</details>
+
+<details>
+<summary>L_RF · passive_fiber_enabled</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | L_RF |
+| Parameter | passive_fiber_enabled |
+| Unit | 0/1 |
+| Meaning | 1 enables passive fiber tension within the elastic equilibrium; zero force below l_f/l_opt=1 does not mean it is disabled. |
+| Source value | Not established |
+| Value used in this model | 1 |
+| What changed and why | No verified source value is available for direct comparison. The published passive force-length law is included in every muscle channel. Its coefficients are from Prilutsky et al. (2016), Table 10.3, and Rahmati et al. (2025), Table 3. Applying the same normalized law to added muscle channels is a modeling assumption. |
+| Source / evidence | Published parallel elastic architecture: Prilutsky et al. 2016 Table 10.3 (10.1007/978-1-4939-3267-2_10); Rahmati et al. 2025 Table 3 (10.1113/JP287448). Common normalized curve extended to all model channels; no muscle-specific passive calibration is claimed. |
+
+</details>
+
+<details>
+<summary>L_RF · degroote_force_velocity_enabled</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | L_RF |
+| Parameter | degroote_force_velocity_enabled |
+| Unit | 0/1 |
+| Meaning | 1 uses the documented De Groote/OpenSim velocity curve; 0 uses the source curve. |
+| Source value | Not established |
+| Value used in this model | 1 |
+| What changed and why | No verified source value is available for direct comparison. Model-law choice: 1 enables the smooth De Groote force-velocity relation; 0 selects the alternative implemented law. |
+| Source / evidence | Generic hindlimb parameters from the author’s MATLAB Model 3 dataset. The source column reports the generic table; the applied column reports the calibrated simulation value. Data/Original_Study_Data/hindlimb/model3_parameters.json |
+
+</details>
+
+<details>
+<summary>L_BFP · max_isometric_tendon_force_N</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | L_BFP |
+| Parameter | max_isometric_tendon_force_N |
+| Unit | N |
+| Meaning | Maximum isometric force projected along the tendon; do not multiply by pennation cosine twice. |
+| Source value | 94.900317 |
+| Value used in this model | 102.03244 |
+| What changed and why | Different from the verified source value. Change relative to source: +7.52%. Force capacity was calibrated with motor inputs to improve mechanical agreement; the fit does not uniquely identify it. |
+| Source / evidence | Generic hindlimb parameters from the author’s MATLAB Model 3 dataset. The source column reports the generic table; the applied column reports the calibrated simulation value. Data/Original_Study_Data/hindlimb/model3_parameters.json |
+
+</details>
+
+<details>
+<summary>L_BFP · optimal_fiber_length_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | L_BFP |
+| Parameter | optimal_fiber_length_m |
+| Unit | m |
+| Meaning | Optimal fascicle/fiber length, not whole muscle-tendon length. |
+| Source value | 0.057 |
+| Value used in this model | 0.060670864 |
+| What changed and why | Different from the verified source value. Change relative to source: +6.44%. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Generic hindlimb parameters from the author’s MATLAB Model 3 dataset. The source column reports the generic table; the applied column reports the calibrated simulation value. Data/Original_Study_Data/hindlimb/model3_parameters.json |
+
+</details>
+
+<details>
+<summary>L_BFP · tendon_slack_length_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | L_BFP |
+| Parameter | tendon_slack_length_m |
+| Unit | m |
+| Meaning | Unloaded series tendon length. |
+| Source value | 0.057 |
+| Value used in this model | 0.061524333 |
+| What changed and why | Different from the verified source value. Change relative to source: +7.94%. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Generic hindlimb parameters from the author’s MATLAB Model 3 dataset. The source column reports the generic table; the applied column reports the calibrated simulation value. Data/Original_Study_Data/hindlimb/model3_parameters.json |
+
+</details>
+
+<details>
+<summary>L_BFP · pennation_cosine</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | L_BFP |
+| Parameter | pennation_cosine |
+| Unit | 1 |
+| Meaning | Cosine of the constant fiber-to-tendon pennation angle. |
+| Source value | 0.99254616 |
+| Value used in this model | 0.99254616 |
+| What changed and why | Retained the verified source value; no numerical change from that source. |
+| Source / evidence | Generic hindlimb parameters from the author’s MATLAB Model 3 dataset. The source column reports the generic table; the applied column reports the calibrated simulation value. Data/Original_Study_Data/hindlimb/model3_parameters.json |
+
+</details>
+
+<details>
+<summary>L_BFP · tendon_strain_at_max_force</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | L_BFP |
+| Parameter | tendon_strain_at_max_force |
+| Unit | 1 |
+| Meaning | Tendon extension/slack length at one maximum isometric tendon force. |
+| Source value | Not established |
+| Value used in this model | 0.04 |
+| What changed and why | No verified source value is available for direct comparison. Assumed elastic-tendon compliance; not a measured tendon strain for this animal. |
+| Source / evidence | Generic hindlimb parameters from the author’s MATLAB Model 3 dataset. The source column reports the generic table; the applied column reports the calibrated simulation value. Data/Original_Study_Data/hindlimb/model3_parameters.json |
+
+</details>
+
+<details>
+<summary>L_BFP · max_fiber_speed_optimal_lengths_per_s</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | L_BFP |
+| Parameter | max_fiber_speed_optimal_lengths_per_s |
+| Unit | 1/s |
+| Meaning | Positive maximum-shortening speed magnitude, measured in optimal fiber lengths per second. |
+| Source value | 10.753474 |
+| Value used in this model | 10.078088 |
+| What changed and why | Different from the verified source value. Change relative to source: -6.28%. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Generic hindlimb parameters from the author’s MATLAB Model 3 dataset. The source column reports the generic table; the applied column reports the calibrated simulation value. Data/Original_Study_Data/hindlimb/model3_parameters.json |
+
+</details>
+
+<details>
+<summary>L_BFP · normalized_fiber_damping</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | L_BFP |
+| Parameter | normalized_fiber_damping |
+| Unit | 1 |
+| Meaning | Coefficient of normalized fiber velocity in the normalized tendon-direction force balance. |
+| Source value | Not established |
+| Value used in this model | 0.069318225 |
+| What changed and why | No verified source value is available for direct comparison. Effective muscle force-balance coefficient; source-law conversion and calibration are described in the methods. |
+| Source / evidence | Generic hindlimb parameters from the author’s MATLAB Model 3 dataset. The source column reports the generic table; the applied column reports the calibrated simulation value. Data/Original_Study_Data/hindlimb/model3_parameters.json |
+
+</details>
+
+<details>
+<summary>L_BFP · MT_path_length_offset_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | L_BFP |
+| Parameter | MT_path_length_offset_m |
+| Unit | m |
+| Meaning | Constant offset added to the routed path to define muscle-tendon length. |
+| Source value | Not established |
+| Value used in this model | 0 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Generic hindlimb parameters from the author’s MATLAB Model 3 dataset. The source column reports the generic table; the applied column reports the calibrated simulation value. Data/Original_Study_Data/hindlimb/model3_parameters.json |
+
+</details>
+
+<details>
+<summary>L_BFP · active_force_length_exponent</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | L_BFP |
+| Parameter | active_force_length_exponent |
+| Unit | 1 |
+| Meaning | Exponent rho in the source active force-length curve. |
+| Source value | Not established |
+| Value used in this model | 6 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Generic hindlimb parameters from the author’s MATLAB Model 3 dataset. The source column reports the generic table; the applied column reports the calibrated simulation value. Data/Original_Study_Data/hindlimb/model3_parameters.json |
+
+</details>
+
+<details>
+<summary>L_BFP · source_shortening_curvature</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | L_BFP |
+| Parameter | source_shortening_curvature |
+| Unit | 1 |
+| Meaning | Source shortening-curve coefficient; inactive when De Groote force-velocity mode is selected. |
+| Source value | Not established |
+| Value used in this model | 0.10513 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Generic hindlimb parameters from the author’s MATLAB Model 3 dataset. The source column reports the generic table; the applied column reports the calibrated simulation value. Data/Original_Study_Data/hindlimb/model3_parameters.json |
+
+</details>
+
+<details>
+<summary>L_BFP · source_lengthening_curvature</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | L_BFP |
+| Parameter | source_lengthening_curvature |
+| Unit | 1 |
+| Meaning | Source lengthening-curve coefficient; inactive when De Groote force-velocity mode is selected. |
+| Source value | Not established |
+| Value used in this model | 0.071271947 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Generic hindlimb parameters from the author’s MATLAB Model 3 dataset. The source column reports the generic table; the applied column reports the calibrated simulation value. Data/Original_Study_Data/hindlimb/model3_parameters.json |
+
+</details>
+
+<details>
+<summary>L_BFP · passive_fiber_enabled</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | L_BFP |
+| Parameter | passive_fiber_enabled |
+| Unit | 0/1 |
+| Meaning | 1 enables passive fiber tension within the elastic equilibrium; zero force below l_f/l_opt=1 does not mean it is disabled. |
+| Source value | Not established |
+| Value used in this model | 1 |
+| What changed and why | No verified source value is available for direct comparison. The published passive force-length law is included in every muscle channel. Its coefficients are from Prilutsky et al. (2016), Table 10.3, and Rahmati et al. (2025), Table 3. Applying the same normalized law to added muscle channels is a modeling assumption. |
+| Source / evidence | Published parallel elastic architecture: Prilutsky et al. 2016 Table 10.3 (10.1007/978-1-4939-3267-2_10); Rahmati et al. 2025 Table 3 (10.1113/JP287448). Common normalized curve extended to all model channels; no muscle-specific passive calibration is claimed. |
+
+</details>
+
+<details>
+<summary>L_BFP · degroote_force_velocity_enabled</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | L_BFP |
+| Parameter | degroote_force_velocity_enabled |
+| Unit | 0/1 |
+| Meaning | 1 uses the documented De Groote/OpenSim velocity curve; 0 uses the source curve. |
+| Source value | Not established |
+| Value used in this model | 1 |
+| What changed and why | No verified source value is available for direct comparison. Model-law choice: 1 enables the smooth De Groote force-velocity relation; 0 selects the alternative implemented law. |
+| Source / evidence | Generic hindlimb parameters from the author’s MATLAB Model 3 dataset. The source column reports the generic table; the applied column reports the calibrated simulation value. Data/Original_Study_Data/hindlimb/model3_parameters.json |
+
+</details>
+
+<details>
+<summary>L_SAM · max_isometric_tendon_force_N</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | L_SAM |
+| Parameter | max_isometric_tendon_force_N |
+| Unit | N |
+| Meaning | Maximum isometric force projected along the tendon; do not multiply by pennation cosine twice. |
+| Source value | 10.049972 |
+| Value used in this model | 10.447495 |
+| What changed and why | Different from the verified source value. Change relative to source: +3.96%. Force capacity was calibrated with motor inputs to improve mechanical agreement; the fit does not uniquely identify it. |
+| Source / evidence | Generic hindlimb parameters from the author’s MATLAB Model 3 dataset. The source column reports the generic table; the applied column reports the calibrated simulation value. Data/Original_Study_Data/hindlimb/model3_parameters.json |
+
+</details>
+
+<details>
+<summary>L_SAM · optimal_fiber_length_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | L_SAM |
+| Parameter | optimal_fiber_length_m |
+| Unit | m |
+| Meaning | Optimal fascicle/fiber length, not whole muscle-tendon length. |
+| Source value | 0.116 |
+| Value used in this model | 0.11149185 |
+| What changed and why | Different from the verified source value. Change relative to source: -3.89%. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Generic hindlimb parameters from the author’s MATLAB Model 3 dataset. The source column reports the generic table; the applied column reports the calibrated simulation value. Data/Original_Study_Data/hindlimb/model3_parameters.json |
+
+</details>
+
+<details>
+<summary>L_SAM · tendon_slack_length_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | L_SAM |
+| Parameter | tendon_slack_length_m |
+| Unit | m |
+| Meaning | Unloaded series tendon length. |
+| Source value | 0.029 |
+| Value used in this model | 0.028342443 |
+| What changed and why | Different from the verified source value. Change relative to source: -2.27%. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Generic hindlimb parameters from the author’s MATLAB Model 3 dataset. The source column reports the generic table; the applied column reports the calibrated simulation value. Data/Original_Study_Data/hindlimb/model3_parameters.json |
+
+</details>
+
+<details>
+<summary>L_SAM · pennation_cosine</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | L_SAM |
+| Parameter | pennation_cosine |
+| Unit | 1 |
+| Meaning | Cosine of the constant fiber-to-tendon pennation angle. |
+| Source value | 0.99731448 |
+| Value used in this model | 0.99731448 |
+| What changed and why | Retained the verified source value; no numerical change from that source. |
+| Source / evidence | Generic hindlimb parameters from the author’s MATLAB Model 3 dataset. The source column reports the generic table; the applied column reports the calibrated simulation value. Data/Original_Study_Data/hindlimb/model3_parameters.json |
+
+</details>
+
+<details>
+<summary>L_SAM · tendon_strain_at_max_force</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | L_SAM |
+| Parameter | tendon_strain_at_max_force |
+| Unit | 1 |
+| Meaning | Tendon extension/slack length at one maximum isometric tendon force. |
+| Source value | Not established |
+| Value used in this model | 0.04 |
+| What changed and why | No verified source value is available for direct comparison. Assumed elastic-tendon compliance; not a measured tendon strain for this animal. |
+| Source / evidence | Generic hindlimb parameters from the author’s MATLAB Model 3 dataset. The source column reports the generic table; the applied column reports the calibrated simulation value. Data/Original_Study_Data/hindlimb/model3_parameters.json |
+
+</details>
+
+<details>
+<summary>L_SAM · max_fiber_speed_optimal_lengths_per_s</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | L_SAM |
+| Parameter | max_fiber_speed_optimal_lengths_per_s |
+| Unit | 1/s |
+| Meaning | Positive maximum-shortening speed magnitude, measured in optimal fiber lengths per second. |
+| Source value | 8.5539052 |
+| Value used in this model | 8.7000097 |
+| What changed and why | Different from the verified source value. Change relative to source: +1.71%. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Generic hindlimb parameters from the author’s MATLAB Model 3 dataset. The source column reports the generic table; the applied column reports the calibrated simulation value. Data/Original_Study_Data/hindlimb/model3_parameters.json |
+
+</details>
+
+<details>
+<summary>L_SAM · normalized_fiber_damping</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | L_SAM |
+| Parameter | normalized_fiber_damping |
+| Unit | 1 |
+| Meaning | Coefficient of normalized fiber velocity in the normalized tendon-direction force balance. |
+| Source value | Not established |
+| Value used in this model | 0.073340405 |
+| What changed and why | No verified source value is available for direct comparison. Effective muscle force-balance coefficient; source-law conversion and calibration are described in the methods. |
+| Source / evidence | Generic hindlimb parameters from the author’s MATLAB Model 3 dataset. The source column reports the generic table; the applied column reports the calibrated simulation value. Data/Original_Study_Data/hindlimb/model3_parameters.json |
+
+</details>
+
+<details>
+<summary>L_SAM · MT_path_length_offset_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | L_SAM |
+| Parameter | MT_path_length_offset_m |
+| Unit | m |
+| Meaning | Constant offset added to the routed path to define muscle-tendon length. |
+| Source value | Not established |
+| Value used in this model | 0 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Generic hindlimb parameters from the author’s MATLAB Model 3 dataset. The source column reports the generic table; the applied column reports the calibrated simulation value. Data/Original_Study_Data/hindlimb/model3_parameters.json |
+
+</details>
+
+<details>
+<summary>L_SAM · active_force_length_exponent</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | L_SAM |
+| Parameter | active_force_length_exponent |
+| Unit | 1 |
+| Meaning | Exponent rho in the source active force-length curve. |
+| Source value | Not established |
+| Value used in this model | 6 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Generic hindlimb parameters from the author’s MATLAB Model 3 dataset. The source column reports the generic table; the applied column reports the calibrated simulation value. Data/Original_Study_Data/hindlimb/model3_parameters.json |
+
+</details>
+
+<details>
+<summary>L_SAM · source_shortening_curvature</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | L_SAM |
+| Parameter | source_shortening_curvature |
+| Unit | 1 |
+| Meaning | Source shortening-curve coefficient; inactive when De Groote force-velocity mode is selected. |
+| Source value | Not established |
+| Value used in this model | 0.26983 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Generic hindlimb parameters from the author’s MATLAB Model 3 dataset. The source column reports the generic table; the applied column reports the calibrated simulation value. Data/Original_Study_Data/hindlimb/model3_parameters.json |
+
+</details>
+
+<details>
+<summary>L_SAM · source_lengthening_curvature</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | L_SAM |
+| Parameter | source_lengthening_curvature |
+| Unit | 1 |
+| Meaning | Source lengthening-curve coefficient; inactive when De Groote force-velocity mode is selected. |
+| Source value | Not established |
+| Value used in this model | 0.2124363 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Generic hindlimb parameters from the author’s MATLAB Model 3 dataset. The source column reports the generic table; the applied column reports the calibrated simulation value. Data/Original_Study_Data/hindlimb/model3_parameters.json |
+
+</details>
+
+<details>
+<summary>L_SAM · passive_fiber_enabled</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | L_SAM |
+| Parameter | passive_fiber_enabled |
+| Unit | 0/1 |
+| Meaning | 1 enables passive fiber tension within the elastic equilibrium; zero force below l_f/l_opt=1 does not mean it is disabled. |
+| Source value | Not established |
+| Value used in this model | 1 |
+| What changed and why | No verified source value is available for direct comparison. The published passive force-length law is included in every muscle channel. Its coefficients are from Prilutsky et al. (2016), Table 10.3, and Rahmati et al. (2025), Table 3. Applying the same normalized law to added muscle channels is a modeling assumption. |
+| Source / evidence | Published parallel elastic architecture: Prilutsky et al. 2016 Table 10.3 (10.1007/978-1-4939-3267-2_10); Rahmati et al. 2025 Table 3 (10.1113/JP287448). Common normalized curve extended to all model channels; no muscle-specific passive calibration is claimed. |
+
+</details>
+
+<details>
+<summary>L_SAM · degroote_force_velocity_enabled</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | L_SAM |
+| Parameter | degroote_force_velocity_enabled |
+| Unit | 0/1 |
+| Meaning | 1 uses the documented De Groote/OpenSim velocity curve; 0 uses the source curve. |
+| Source value | Not established |
+| Value used in this model | 1 |
+| What changed and why | No verified source value is available for direct comparison. Model-law choice: 1 enables the smooth De Groote force-velocity relation; 0 selects the alternative implemented law. |
+| Source / evidence | Generic hindlimb parameters from the author’s MATLAB Model 3 dataset. The source column reports the generic table; the applied column reports the calibrated simulation value. Data/Original_Study_Data/hindlimb/model3_parameters.json |
+
+</details>
+
+<details>
+<summary>L_LG · max_isometric_tendon_force_N</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | L_LG |
+| Parameter | max_isometric_tendon_force_N |
+| Unit | N |
+| Meaning | Maximum isometric force projected along the tendon; do not multiply by pennation cosine twice. |
+| Source value | 96.849923 |
+| Value used in this model | 94.67286 |
+| What changed and why | Different from the verified source value. Change relative to source: -2.25%. Force capacity was calibrated with motor inputs to improve mechanical agreement; the fit does not uniquely identify it. |
+| Source / evidence | Generic hindlimb parameters from the author’s MATLAB Model 3 dataset. The source column reports the generic table; the applied column reports the calibrated simulation value. Data/Original_Study_Data/hindlimb/model3_parameters.json |
+
+</details>
+
+<details>
+<summary>L_LG · optimal_fiber_length_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | L_LG |
+| Parameter | optimal_fiber_length_m |
+| Unit | m |
+| Meaning | Optimal fascicle/fiber length, not whole muscle-tendon length. |
+| Source value | 0.027 |
+| Value used in this model | 0.028696483 |
+| What changed and why | Different from the verified source value. Change relative to source: +6.28%. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Generic hindlimb parameters from the author’s MATLAB Model 3 dataset. The source column reports the generic table; the applied column reports the calibrated simulation value. Data/Original_Study_Data/hindlimb/model3_parameters.json |
+
+</details>
+
+<details>
+<summary>L_LG · tendon_slack_length_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | L_LG |
+| Parameter | tendon_slack_length_m |
+| Unit | m |
+| Meaning | Unloaded series tendon length. |
+| Source value | 0.081 |
+| Value used in this model | 0.084222121 |
+| What changed and why | Different from the verified source value. Change relative to source: +3.98%. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Generic hindlimb parameters from the author’s MATLAB Model 3 dataset. The source column reports the generic table; the applied column reports the calibrated simulation value. Data/Original_Study_Data/hindlimb/model3_parameters.json |
+
+</details>
+
+<details>
+<summary>L_LG · pennation_cosine</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | L_LG |
+| Parameter | pennation_cosine |
+| Unit | 1 |
+| Meaning | Cosine of the constant fiber-to-tendon pennation angle. |
+| Source value | 0.94551843 |
+| Value used in this model | 0.94551843 |
+| What changed and why | Retained the verified source value; no numerical change from that source. |
+| Source / evidence | Generic hindlimb parameters from the author’s MATLAB Model 3 dataset. The source column reports the generic table; the applied column reports the calibrated simulation value. Data/Original_Study_Data/hindlimb/model3_parameters.json |
+
+</details>
+
+<details>
+<summary>L_LG · tendon_strain_at_max_force</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | L_LG |
+| Parameter | tendon_strain_at_max_force |
+| Unit | 1 |
+| Meaning | Tendon extension/slack length at one maximum isometric tendon force. |
+| Source value | Not established |
+| Value used in this model | 0.04 |
+| What changed and why | No verified source value is available for direct comparison. Assumed elastic-tendon compliance; not a measured tendon strain for this animal. |
+| Source / evidence | Generic hindlimb parameters from the author’s MATLAB Model 3 dataset. The source column reports the generic table; the applied column reports the calibrated simulation value. Data/Original_Study_Data/hindlimb/model3_parameters.json |
+
+</details>
+
+<details>
+<summary>L_LG · max_fiber_speed_optimal_lengths_per_s</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | L_LG |
+| Parameter | max_fiber_speed_optimal_lengths_per_s |
+| Unit | 1/s |
+| Meaning | Positive maximum-shortening speed magnitude, measured in optimal fiber lengths per second. |
+| Source value | 9.5925926 |
+| Value used in this model | 9.1957009 |
+| What changed and why | Different from the verified source value. Change relative to source: -4.14%. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Generic hindlimb parameters from the author’s MATLAB Model 3 dataset. The source column reports the generic table; the applied column reports the calibrated simulation value. Data/Original_Study_Data/hindlimb/model3_parameters.json |
+
+</details>
+
+<details>
+<summary>L_LG · normalized_fiber_damping</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | L_LG |
+| Parameter | normalized_fiber_damping |
+| Unit | 1 |
+| Meaning | Coefficient of normalized fiber velocity in the normalized tendon-direction force balance. |
+| Source value | Not established |
+| Value used in this model | 0.028104583 |
+| What changed and why | No verified source value is available for direct comparison. Effective muscle force-balance coefficient; source-law conversion and calibration are described in the methods. |
+| Source / evidence | Generic hindlimb parameters from the author’s MATLAB Model 3 dataset. The source column reports the generic table; the applied column reports the calibrated simulation value. Data/Original_Study_Data/hindlimb/model3_parameters.json |
+
+</details>
+
+<details>
+<summary>L_LG · MT_path_length_offset_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | L_LG |
+| Parameter | MT_path_length_offset_m |
+| Unit | m |
+| Meaning | Constant offset added to the routed path to define muscle-tendon length. |
+| Source value | Not established |
+| Value used in this model | 0 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Generic hindlimb parameters from the author’s MATLAB Model 3 dataset. The source column reports the generic table; the applied column reports the calibrated simulation value. Data/Original_Study_Data/hindlimb/model3_parameters.json |
+
+</details>
+
+<details>
+<summary>L_LG · active_force_length_exponent</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | L_LG |
+| Parameter | active_force_length_exponent |
+| Unit | 1 |
+| Meaning | Exponent rho in the source active force-length curve. |
+| Source value | Not established |
+| Value used in this model | 3 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Generic hindlimb parameters from the author’s MATLAB Model 3 dataset. The source column reports the generic table; the applied column reports the calibrated simulation value. Data/Original_Study_Data/hindlimb/model3_parameters.json |
+
+</details>
+
+<details>
+<summary>L_LG · source_shortening_curvature</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | L_LG |
+| Parameter | source_shortening_curvature |
+| Unit | 1 |
+| Meaning | Source shortening-curve coefficient; inactive when De Groote force-velocity mode is selected. |
+| Source value | Not established |
+| Value used in this model | 0.192055 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Generic hindlimb parameters from the author’s MATLAB Model 3 dataset. The source column reports the generic table; the applied column reports the calibrated simulation value. Data/Original_Study_Data/hindlimb/model3_parameters.json |
+
+</details>
+
+<details>
+<summary>L_LG · source_lengthening_curvature</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | L_LG |
+| Parameter | source_lengthening_curvature |
+| Unit | 1 |
+| Meaning | Source lengthening-curve coefficient; inactive when De Groote force-velocity mode is selected. |
+| Source value | Not established |
+| Value used in this model | 0.038076183 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Generic hindlimb parameters from the author’s MATLAB Model 3 dataset. The source column reports the generic table; the applied column reports the calibrated simulation value. Data/Original_Study_Data/hindlimb/model3_parameters.json |
+
+</details>
+
+<details>
+<summary>L_LG · passive_fiber_enabled</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | L_LG |
+| Parameter | passive_fiber_enabled |
+| Unit | 0/1 |
+| Meaning | 1 enables passive fiber tension within the elastic equilibrium; zero force below l_f/l_opt=1 does not mean it is disabled. |
+| Source value | Not established |
+| Value used in this model | 1 |
+| What changed and why | No verified source value is available for direct comparison. The published passive force-length law is included in every muscle channel. Its coefficients are from Prilutsky et al. (2016), Table 10.3, and Rahmati et al. (2025), Table 3. Applying the same normalized law to added muscle channels is a modeling assumption. |
+| Source / evidence | Published parallel elastic architecture: Prilutsky et al. 2016 Table 10.3 (10.1007/978-1-4939-3267-2_10); Rahmati et al. 2025 Table 3 (10.1113/JP287448). Common normalized curve extended to all model channels; no muscle-specific passive calibration is claimed. |
+
+</details>
+
+<details>
+<summary>L_LG · degroote_force_velocity_enabled</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | L_LG |
+| Parameter | degroote_force_velocity_enabled |
+| Unit | 0/1 |
+| Meaning | 1 uses the documented De Groote/OpenSim velocity curve; 0 uses the source curve. |
+| Source value | Not established |
+| Value used in this model | 1 |
+| What changed and why | No verified source value is available for direct comparison. Model-law choice: 1 enables the smooth De Groote force-velocity relation; 0 selects the alternative implemented law. |
+| Source / evidence | Generic hindlimb parameters from the author’s MATLAB Model 3 dataset. The source column reports the generic table; the applied column reports the calibrated simulation value. Data/Original_Study_Data/hindlimb/model3_parameters.json |
+
+</details>
+
+<details>
+<summary>L_MG · max_isometric_tendon_force_N</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | L_MG |
+| Parameter | max_isometric_tendon_force_N |
+| Unit | N |
+| Meaning | Maximum isometric force projected along the tendon; do not multiply by pennation cosine twice. |
+| Source value | 96.849923 |
+| Value used in this model | 87.898144 |
+| What changed and why | Different from the verified source value. Change relative to source: -9.24%. Force capacity was calibrated with motor inputs to improve mechanical agreement; the fit does not uniquely identify it. |
+| Source / evidence | Generic hindlimb parameters from the author’s MATLAB Model 3 dataset. The source column reports the generic table; the applied column reports the calibrated simulation value. Data/Original_Study_Data/hindlimb/model3_parameters.json |
+
+</details>
+
+<details>
+<summary>L_MG · optimal_fiber_length_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | L_MG |
+| Parameter | optimal_fiber_length_m |
+| Unit | m |
+| Meaning | Optimal fascicle/fiber length, not whole muscle-tendon length. |
+| Source value | 0.027 |
+| Value used in this model | 0.028902184 |
+| What changed and why | Different from the verified source value. Change relative to source: +7.05%. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Generic hindlimb parameters from the author’s MATLAB Model 3 dataset. The source column reports the generic table; the applied column reports the calibrated simulation value. Data/Original_Study_Data/hindlimb/model3_parameters.json |
+
+</details>
+
+<details>
+<summary>L_MG · tendon_slack_length_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | L_MG |
+| Parameter | tendon_slack_length_m |
+| Unit | m |
+| Meaning | Unloaded series tendon length. |
+| Source value | 0.081 |
+| Value used in this model | 0.084967463 |
+| What changed and why | Different from the verified source value. Change relative to source: +4.9%. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Generic hindlimb parameters from the author’s MATLAB Model 3 dataset. The source column reports the generic table; the applied column reports the calibrated simulation value. Data/Original_Study_Data/hindlimb/model3_parameters.json |
+
+</details>
+
+<details>
+<summary>L_MG · pennation_cosine</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | L_MG |
+| Parameter | pennation_cosine |
+| Unit | 1 |
+| Meaning | Cosine of the constant fiber-to-tendon pennation angle. |
+| Source value | 0.94551843 |
+| Value used in this model | 0.94551843 |
+| What changed and why | Retained the verified source value; no numerical change from that source. |
+| Source / evidence | Generic hindlimb parameters from the author’s MATLAB Model 3 dataset. The source column reports the generic table; the applied column reports the calibrated simulation value. Data/Original_Study_Data/hindlimb/model3_parameters.json |
+
+</details>
+
+<details>
+<summary>L_MG · tendon_strain_at_max_force</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | L_MG |
+| Parameter | tendon_strain_at_max_force |
+| Unit | 1 |
+| Meaning | Tendon extension/slack length at one maximum isometric tendon force. |
+| Source value | Not established |
+| Value used in this model | 0.04 |
+| What changed and why | No verified source value is available for direct comparison. Assumed elastic-tendon compliance; not a measured tendon strain for this animal. |
+| Source / evidence | Generic hindlimb parameters from the author’s MATLAB Model 3 dataset. The source column reports the generic table; the applied column reports the calibrated simulation value. Data/Original_Study_Data/hindlimb/model3_parameters.json |
+
+</details>
+
+<details>
+<summary>L_MG · max_fiber_speed_optimal_lengths_per_s</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | L_MG |
+| Parameter | max_fiber_speed_optimal_lengths_per_s |
+| Unit | 1/s |
+| Meaning | Positive maximum-shortening speed magnitude, measured in optimal fiber lengths per second. |
+| Source value | 9.5925926 |
+| Value used in this model | 9.1957009 |
+| What changed and why | Different from the verified source value. Change relative to source: -4.14%. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Generic hindlimb parameters from the author’s MATLAB Model 3 dataset. The source column reports the generic table; the applied column reports the calibrated simulation value. Data/Original_Study_Data/hindlimb/model3_parameters.json |
+
+</details>
+
+<details>
+<summary>L_MG · normalized_fiber_damping</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | L_MG |
+| Parameter | normalized_fiber_damping |
+| Unit | 1 |
+| Meaning | Coefficient of normalized fiber velocity in the normalized tendon-direction force balance. |
+| Source value | Not established |
+| Value used in this model | 0.040119667 |
+| What changed and why | No verified source value is available for direct comparison. Effective muscle force-balance coefficient; source-law conversion and calibration are described in the methods. |
+| Source / evidence | Generic hindlimb parameters from the author’s MATLAB Model 3 dataset. The source column reports the generic table; the applied column reports the calibrated simulation value. Data/Original_Study_Data/hindlimb/model3_parameters.json |
+
+</details>
+
+<details>
+<summary>L_MG · MT_path_length_offset_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | L_MG |
+| Parameter | MT_path_length_offset_m |
+| Unit | m |
+| Meaning | Constant offset added to the routed path to define muscle-tendon length. |
+| Source value | Not established |
+| Value used in this model | 0 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Generic hindlimb parameters from the author’s MATLAB Model 3 dataset. The source column reports the generic table; the applied column reports the calibrated simulation value. Data/Original_Study_Data/hindlimb/model3_parameters.json |
+
+</details>
+
+<details>
+<summary>L_MG · active_force_length_exponent</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | L_MG |
+| Parameter | active_force_length_exponent |
+| Unit | 1 |
+| Meaning | Exponent rho in the source active force-length curve. |
+| Source value | Not established |
+| Value used in this model | 3 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Generic hindlimb parameters from the author’s MATLAB Model 3 dataset. The source column reports the generic table; the applied column reports the calibrated simulation value. Data/Original_Study_Data/hindlimb/model3_parameters.json |
+
+</details>
+
+<details>
+<summary>L_MG · source_shortening_curvature</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | L_MG |
+| Parameter | source_shortening_curvature |
+| Unit | 1 |
+| Meaning | Source shortening-curve coefficient; inactive when De Groote force-velocity mode is selected. |
+| Source value | Not established |
+| Value used in this model | 0.192055 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Generic hindlimb parameters from the author’s MATLAB Model 3 dataset. The source column reports the generic table; the applied column reports the calibrated simulation value. Data/Original_Study_Data/hindlimb/model3_parameters.json |
+
+</details>
+
+<details>
+<summary>L_MG · source_lengthening_curvature</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | L_MG |
+| Parameter | source_lengthening_curvature |
+| Unit | 1 |
+| Meaning | Source lengthening-curve coefficient; inactive when De Groote force-velocity mode is selected. |
+| Source value | Not established |
+| Value used in this model | 0.038076183 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Generic hindlimb parameters from the author’s MATLAB Model 3 dataset. The source column reports the generic table; the applied column reports the calibrated simulation value. Data/Original_Study_Data/hindlimb/model3_parameters.json |
+
+</details>
+
+<details>
+<summary>L_MG · passive_fiber_enabled</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | L_MG |
+| Parameter | passive_fiber_enabled |
+| Unit | 0/1 |
+| Meaning | 1 enables passive fiber tension within the elastic equilibrium; zero force below l_f/l_opt=1 does not mean it is disabled. |
+| Source value | Not established |
+| Value used in this model | 1 |
+| What changed and why | No verified source value is available for direct comparison. The published passive force-length law is included in every muscle channel. Its coefficients are from Prilutsky et al. (2016), Table 10.3, and Rahmati et al. (2025), Table 3. Applying the same normalized law to added muscle channels is a modeling assumption. |
+| Source / evidence | Published parallel elastic architecture: Prilutsky et al. 2016 Table 10.3 (10.1007/978-1-4939-3267-2_10); Rahmati et al. 2025 Table 3 (10.1113/JP287448). Common normalized curve extended to all model channels; no muscle-specific passive calibration is claimed. |
+
+</details>
+
+<details>
+<summary>L_MG · degroote_force_velocity_enabled</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | L_MG |
+| Parameter | degroote_force_velocity_enabled |
+| Unit | 0/1 |
+| Meaning | 1 uses the documented De Groote/OpenSim velocity curve; 0 uses the source curve. |
+| Source value | Not established |
+| Value used in this model | 1 |
+| What changed and why | No verified source value is available for direct comparison. Model-law choice: 1 enables the smooth De Groote force-velocity relation; 0 selects the alternative implemented law. |
+| Source / evidence | Generic hindlimb parameters from the author’s MATLAB Model 3 dataset. The source column reports the generic table; the applied column reports the calibrated simulation value. Data/Original_Study_Data/hindlimb/model3_parameters.json |
+
+</details>
+
+<details>
+<summary>R_IP · max_isometric_tendon_force_N</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | R_IP |
+| Parameter | max_isometric_tendon_force_N |
+| Unit | N |
+| Meaning | Maximum isometric force projected along the tendon; do not multiply by pennation cosine twice. |
+| Source value | 95.1724 |
+| Value used in this model | 95.292768 |
+| What changed and why | Different from the verified source value. Change relative to source: +0.126%. Force capacity was calibrated with motor inputs to improve mechanical agreement; the fit does not uniquely identify it. |
+| Source / evidence | Generic hindlimb parameters from the author’s MATLAB Model 3 dataset. The source column reports the generic table; the applied column reports the calibrated simulation value. Data/Original_Study_Data/hindlimb/model3_parameters.json |
+
+</details>
+
+<details>
+<summary>R_IP · optimal_fiber_length_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | R_IP |
+| Parameter | optimal_fiber_length_m |
+| Unit | m |
+| Meaning | Optimal fascicle/fiber length, not whole muscle-tendon length. |
+| Source value | 0.064 |
+| Value used in this model | 0.056758115 |
+| What changed and why | Different from the verified source value. Change relative to source: -11.3%. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Generic hindlimb parameters from the author’s MATLAB Model 3 dataset. The source column reports the generic table; the applied column reports the calibrated simulation value. Data/Original_Study_Data/hindlimb/model3_parameters.json |
+
+</details>
+
+<details>
+<summary>R_IP · tendon_slack_length_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | R_IP |
+| Parameter | tendon_slack_length_m |
+| Unit | m |
+| Meaning | Unloaded series tendon length. |
+| Source value | 0.016 |
+| Value used in this model | 0.014151507 |
+| What changed and why | Different from the verified source value. Change relative to source: -11.6%. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Generic hindlimb parameters from the author’s MATLAB Model 3 dataset. The source column reports the generic table; the applied column reports the calibrated simulation value. Data/Original_Study_Data/hindlimb/model3_parameters.json |
+
+</details>
+
+<details>
+<summary>R_IP · pennation_cosine</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | R_IP |
+| Parameter | pennation_cosine |
+| Unit | 1 |
+| Meaning | Cosine of the constant fiber-to-tendon pennation angle. |
+| Source value | 1 |
+| Value used in this model | 1 |
+| What changed and why | Retained the verified source value; no numerical change from that source. |
+| Source / evidence | Generic hindlimb parameters from the author’s MATLAB Model 3 dataset. The source column reports the generic table; the applied column reports the calibrated simulation value. Data/Original_Study_Data/hindlimb/model3_parameters.json |
+
+</details>
+
+<details>
+<summary>R_IP · tendon_strain_at_max_force</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | R_IP |
+| Parameter | tendon_strain_at_max_force |
+| Unit | 1 |
+| Meaning | Tendon extension/slack length at one maximum isometric tendon force. |
+| Source value | Not established |
+| Value used in this model | 0.04 |
+| What changed and why | No verified source value is available for direct comparison. Assumed elastic-tendon compliance; not a measured tendon strain for this animal. |
+| Source / evidence | Generic hindlimb parameters from the author’s MATLAB Model 3 dataset. The source column reports the generic table; the applied column reports the calibrated simulation value. Data/Original_Study_Data/hindlimb/model3_parameters.json |
+
+</details>
+
+<details>
+<summary>R_IP · max_fiber_speed_optimal_lengths_per_s</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | R_IP |
+| Parameter | max_fiber_speed_optimal_lengths_per_s |
+| Unit | 1/s |
+| Meaning | Positive maximum-shortening speed magnitude, measured in optimal fiber lengths per second. |
+| Source value | 8.5539062 |
+| Value used in this model | 9.6802501 |
+| What changed and why | Different from the verified source value. Change relative to source: +13.2%. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Generic hindlimb parameters from the author’s MATLAB Model 3 dataset. The source column reports the generic table; the applied column reports the calibrated simulation value. Data/Original_Study_Data/hindlimb/model3_parameters.json |
+
+</details>
+
+<details>
+<summary>R_IP · normalized_fiber_damping</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | R_IP |
+| Parameter | normalized_fiber_damping |
+| Unit | 1 |
+| Meaning | Coefficient of normalized fiber velocity in the normalized tendon-direction force balance. |
+| Source value | Not established |
+| Value used in this model | 0.066327495 |
+| What changed and why | No verified source value is available for direct comparison. Effective muscle force-balance coefficient; source-law conversion and calibration are described in the methods. |
+| Source / evidence | Generic hindlimb parameters from the author’s MATLAB Model 3 dataset. The source column reports the generic table; the applied column reports the calibrated simulation value. Data/Original_Study_Data/hindlimb/model3_parameters.json |
+
+</details>
+
+<details>
+<summary>R_IP · MT_path_length_offset_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | R_IP |
+| Parameter | MT_path_length_offset_m |
+| Unit | m |
+| Meaning | Constant offset added to the routed path to define muscle-tendon length. |
+| Source value | Not established |
+| Value used in this model | 0 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Generic hindlimb parameters from the author’s MATLAB Model 3 dataset. The source column reports the generic table; the applied column reports the calibrated simulation value. Data/Original_Study_Data/hindlimb/model3_parameters.json |
+
+</details>
+
+<details>
+<summary>R_IP · active_force_length_exponent</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | R_IP |
+| Parameter | active_force_length_exponent |
+| Unit | 1 |
+| Meaning | Exponent rho in the source active force-length curve. |
+| Source value | Not established |
+| Value used in this model | 6 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Generic hindlimb parameters from the author’s MATLAB Model 3 dataset. The source column reports the generic table; the applied column reports the calibrated simulation value. Data/Original_Study_Data/hindlimb/model3_parameters.json |
+
+</details>
+
+<details>
+<summary>R_IP · source_shortening_curvature</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | R_IP |
+| Parameter | source_shortening_curvature |
+| Unit | 1 |
+| Meaning | Source shortening-curve coefficient; inactive when De Groote force-velocity mode is selected. |
+| Source value | Not established |
+| Value used in this model | 0.26983 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Generic hindlimb parameters from the author’s MATLAB Model 3 dataset. The source column reports the generic table; the applied column reports the calibrated simulation value. Data/Original_Study_Data/hindlimb/model3_parameters.json |
+
+</details>
+
+<details>
+<summary>R_IP · source_lengthening_curvature</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | R_IP |
+| Parameter | source_lengthening_curvature |
+| Unit | 1 |
+| Meaning | Source lengthening-curve coefficient; inactive when De Groote force-velocity mode is selected. |
+| Source value | Not established |
+| Value used in this model | 0.029496476 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Generic hindlimb parameters from the author’s MATLAB Model 3 dataset. The source column reports the generic table; the applied column reports the calibrated simulation value. Data/Original_Study_Data/hindlimb/model3_parameters.json |
+
+</details>
+
+<details>
+<summary>R_IP · passive_fiber_enabled</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | R_IP |
+| Parameter | passive_fiber_enabled |
+| Unit | 0/1 |
+| Meaning | 1 enables passive fiber tension within the elastic equilibrium; zero force below l_f/l_opt=1 does not mean it is disabled. |
+| Source value | Not established |
+| Value used in this model | 1 |
+| What changed and why | No verified source value is available for direct comparison. The published passive force-length law is included in every muscle channel. Its coefficients are from Prilutsky et al. (2016), Table 10.3, and Rahmati et al. (2025), Table 3. Applying the same normalized law to added muscle channels is a modeling assumption. |
+| Source / evidence | Published parallel elastic architecture: Prilutsky et al. 2016 Table 10.3 (10.1007/978-1-4939-3267-2_10); Rahmati et al. 2025 Table 3 (10.1113/JP287448). Common normalized curve extended to all model channels; no muscle-specific passive calibration is claimed. |
+
+</details>
+
+<details>
+<summary>R_IP · degroote_force_velocity_enabled</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | R_IP |
+| Parameter | degroote_force_velocity_enabled |
+| Unit | 0/1 |
+| Meaning | 1 uses the documented De Groote/OpenSim velocity curve; 0 uses the source curve. |
+| Source value | Not established |
+| Value used in this model | 1 |
+| What changed and why | No verified source value is available for direct comparison. Model-law choice: 1 enables the smooth De Groote force-velocity relation; 0 selects the alternative implemented law. |
+| Source / evidence | Generic hindlimb parameters from the author’s MATLAB Model 3 dataset. The source column reports the generic table; the applied column reports the calibrated simulation value. Data/Original_Study_Data/hindlimb/model3_parameters.json |
+
+</details>
+
+<details>
+<summary>R_BFA · max_isometric_tendon_force_N</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | R_BFA |
+| Parameter | max_isometric_tendon_force_N |
+| Unit | N |
+| Meaning | Maximum isometric force projected along the tendon; do not multiply by pennation cosine twice. |
+| Source value | 52.596116 |
+| Value used in this model | 84.537076 |
+| What changed and why | Different from the verified source value. Change relative to source: +60.7%. Force capacity was calibrated with motor inputs to improve mechanical agreement; the fit does not uniquely identify it. |
+| Source / evidence | Generic hindlimb parameters from the author’s MATLAB Model 3 dataset. The source column reports the generic table; the applied column reports the calibrated simulation value. Data/Original_Study_Data/hindlimb/model3_parameters.json |
+
+</details>
+
+<details>
+<summary>R_BFA · optimal_fiber_length_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | R_BFA |
+| Parameter | optimal_fiber_length_m |
+| Unit | m |
+| Meaning | Optimal fascicle/fiber length, not whole muscle-tendon length. |
+| Source value | 0.031 |
+| Value used in this model | 0.030318052 |
+| What changed and why | Different from the verified source value. Change relative to source: -2.2%. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Generic hindlimb parameters from the author’s MATLAB Model 3 dataset. The source column reports the generic table; the applied column reports the calibrated simulation value. Data/Original_Study_Data/hindlimb/model3_parameters.json |
+
+</details>
+
+<details>
+<summary>R_BFA · tendon_slack_length_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | R_BFA |
+| Parameter | tendon_slack_length_m |
+| Unit | m |
+| Meaning | Unloaded series tendon length. |
+| Source value | 0.031 |
+| Value used in this model | 0.030739897 |
+| What changed and why | Different from the verified source value. Change relative to source: -0.839%. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Generic hindlimb parameters from the author’s MATLAB Model 3 dataset. The source column reports the generic table; the applied column reports the calibrated simulation value. Data/Original_Study_Data/hindlimb/model3_parameters.json |
+
+</details>
+
+<details>
+<summary>R_BFA · pennation_cosine</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | R_BFA |
+| Parameter | pennation_cosine |
+| Unit | 1 |
+| Meaning | Cosine of the constant fiber-to-tendon pennation angle. |
+| Source value | 0.97029575 |
+| Value used in this model | 0.97029575 |
+| What changed and why | Retained the verified source value; no numerical change from that source. |
+| Source / evidence | Generic hindlimb parameters from the author’s MATLAB Model 3 dataset. The source column reports the generic table; the applied column reports the calibrated simulation value. Data/Original_Study_Data/hindlimb/model3_parameters.json |
+
+</details>
+
+<details>
+<summary>R_BFA · tendon_strain_at_max_force</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | R_BFA |
+| Parameter | tendon_strain_at_max_force |
+| Unit | 1 |
+| Meaning | Tendon extension/slack length at one maximum isometric tendon force. |
+| Source value | Not established |
+| Value used in this model | 0.04 |
+| What changed and why | No verified source value is available for direct comparison. Assumed elastic-tendon compliance; not a measured tendon strain for this animal. |
+| Source / evidence | Generic hindlimb parameters from the author’s MATLAB Model 3 dataset. The source column reports the generic table; the applied column reports the calibrated simulation value. Data/Original_Study_Data/hindlimb/model3_parameters.json |
+
+</details>
+
+<details>
+<summary>R_BFA · max_fiber_speed_optimal_lengths_per_s</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | R_BFA |
+| Parameter | max_fiber_speed_optimal_lengths_per_s |
+| Unit | 1/s |
+| Meaning | Positive maximum-shortening speed magnitude, measured in optimal fiber lengths per second. |
+| Source value | 10.753484 |
+| Value used in this model | 10.689181 |
+| What changed and why | Different from the verified source value. Change relative to source: -0.598%. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Generic hindlimb parameters from the author’s MATLAB Model 3 dataset. The source column reports the generic table; the applied column reports the calibrated simulation value. Data/Original_Study_Data/hindlimb/model3_parameters.json |
+
+</details>
+
+<details>
+<summary>R_BFA · normalized_fiber_damping</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | R_BFA |
+| Parameter | normalized_fiber_damping |
+| Unit | 1 |
+| Meaning | Coefficient of normalized fiber velocity in the normalized tendon-direction force balance. |
+| Source value | Not established |
+| Value used in this model | 0.08062451 |
+| What changed and why | No verified source value is available for direct comparison. Effective muscle force-balance coefficient; source-law conversion and calibration are described in the methods. |
+| Source / evidence | Generic hindlimb parameters from the author’s MATLAB Model 3 dataset. The source column reports the generic table; the applied column reports the calibrated simulation value. Data/Original_Study_Data/hindlimb/model3_parameters.json |
+
+</details>
+
+<details>
+<summary>R_BFA · MT_path_length_offset_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | R_BFA |
+| Parameter | MT_path_length_offset_m |
+| Unit | m |
+| Meaning | Constant offset added to the routed path to define muscle-tendon length. |
+| Source value | Not established |
+| Value used in this model | 0 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Generic hindlimb parameters from the author’s MATLAB Model 3 dataset. The source column reports the generic table; the applied column reports the calibrated simulation value. Data/Original_Study_Data/hindlimb/model3_parameters.json |
+
+</details>
+
+<details>
+<summary>R_BFA · active_force_length_exponent</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | R_BFA |
+| Parameter | active_force_length_exponent |
+| Unit | 1 |
+| Meaning | Exponent rho in the source active force-length curve. |
+| Source value | Not established |
+| Value used in this model | 6 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Generic hindlimb parameters from the author’s MATLAB Model 3 dataset. The source column reports the generic table; the applied column reports the calibrated simulation value. Data/Original_Study_Data/hindlimb/model3_parameters.json |
+
+</details>
+
+<details>
+<summary>R_BFA · source_shortening_curvature</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | R_BFA |
+| Parameter | source_shortening_curvature |
+| Unit | 1 |
+| Meaning | Source shortening-curve coefficient; inactive when De Groote force-velocity mode is selected. |
+| Source value | Not established |
+| Value used in this model | 0.10513 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Generic hindlimb parameters from the author’s MATLAB Model 3 dataset. The source column reports the generic table; the applied column reports the calibrated simulation value. Data/Original_Study_Data/hindlimb/model3_parameters.json |
+
+</details>
+
+<details>
+<summary>R_BFA · source_lengthening_curvature</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | R_BFA |
+| Parameter | source_lengthening_curvature |
+| Unit | 1 |
+| Meaning | Source lengthening-curve coefficient; inactive when De Groote force-velocity mode is selected. |
+| Source value | Not established |
+| Value used in this model | 0.1177045 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Generic hindlimb parameters from the author’s MATLAB Model 3 dataset. The source column reports the generic table; the applied column reports the calibrated simulation value. Data/Original_Study_Data/hindlimb/model3_parameters.json |
+
+</details>
+
+<details>
+<summary>R_BFA · passive_fiber_enabled</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | R_BFA |
+| Parameter | passive_fiber_enabled |
+| Unit | 0/1 |
+| Meaning | 1 enables passive fiber tension within the elastic equilibrium; zero force below l_f/l_opt=1 does not mean it is disabled. |
+| Source value | Not established |
+| Value used in this model | 1 |
+| What changed and why | No verified source value is available for direct comparison. The published passive force-length law is included in every muscle channel. Its coefficients are from Prilutsky et al. (2016), Table 10.3, and Rahmati et al. (2025), Table 3. Applying the same normalized law to added muscle channels is a modeling assumption. |
+| Source / evidence | Published parallel elastic architecture: Prilutsky et al. 2016 Table 10.3 (10.1007/978-1-4939-3267-2_10); Rahmati et al. 2025 Table 3 (10.1113/JP287448). Common normalized curve extended to all model channels; no muscle-specific passive calibration is claimed. |
+
+</details>
+
+<details>
+<summary>R_BFA · degroote_force_velocity_enabled</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | R_BFA |
+| Parameter | degroote_force_velocity_enabled |
+| Unit | 0/1 |
+| Meaning | 1 uses the documented De Groote/OpenSim velocity curve; 0 uses the source curve. |
+| Source value | Not established |
+| Value used in this model | 1 |
+| What changed and why | No verified source value is available for direct comparison. Model-law choice: 1 enables the smooth De Groote force-velocity relation; 0 selects the alternative implemented law. |
+| Source / evidence | Generic hindlimb parameters from the author’s MATLAB Model 3 dataset. The source column reports the generic table; the applied column reports the calibrated simulation value. Data/Original_Study_Data/hindlimb/model3_parameters.json |
+
+</details>
+
+<details>
+<summary>R_VL · max_isometric_tendon_force_N</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | R_VL |
+| Parameter | max_isometric_tendon_force_N |
+| Unit | N |
+| Meaning | Maximum isometric force projected along the tendon; do not multiply by pennation cosine twice. |
+| Source value | 202.13321 |
+| Value used in this model | 199.77614 |
+| What changed and why | Different from the verified source value. Change relative to source: -1.17%. Force capacity was calibrated with motor inputs to improve mechanical agreement; the fit does not uniquely identify it. |
+| Source / evidence | Generic hindlimb parameters from the author’s MATLAB Model 3 dataset. The source column reports the generic table; the applied column reports the calibrated simulation value. Data/Original_Study_Data/hindlimb/model3_parameters.json |
+
+</details>
+
+<details>
+<summary>R_VL · optimal_fiber_length_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | R_VL |
+| Parameter | optimal_fiber_length_m |
+| Unit | m |
+| Meaning | Optimal fascicle/fiber length, not whole muscle-tendon length. |
+| Source value | 0.027461 |
+| Value used in this model | 0.027013467 |
+| What changed and why | Different from the verified source value. Change relative to source: -1.63%. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Generic hindlimb parameters from the author’s MATLAB Model 3 dataset. The source column reports the generic table; the applied column reports the calibrated simulation value. Data/Original_Study_Data/hindlimb/model3_parameters.json |
+
+</details>
+
+<details>
+<summary>R_VL · tendon_slack_length_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | R_VL |
+| Parameter | tendon_slack_length_m |
+| Unit | m |
+| Meaning | Unloaded series tendon length. |
+| Source value | 0.0823831 |
+| Value used in this model | 0.079931987 |
+| What changed and why | Different from the verified source value. Change relative to source: -2.98%. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Generic hindlimb parameters from the author’s MATLAB Model 3 dataset. The source column reports the generic table; the applied column reports the calibrated simulation value. Data/Original_Study_Data/hindlimb/model3_parameters.json |
+
+</details>
+
+<details>
+<summary>R_VL · pennation_cosine</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | R_VL |
+| Parameter | pennation_cosine |
+| Unit | 1 |
+| Meaning | Cosine of the constant fiber-to-tendon pennation angle. |
+| Source value | 0.97154915 |
+| Value used in this model | 0.97154915 |
+| What changed and why | Retained the verified source value; no numerical change from that source. |
+| Source / evidence | Generic hindlimb parameters from the author’s MATLAB Model 3 dataset. The source column reports the generic table; the applied column reports the calibrated simulation value. Data/Original_Study_Data/hindlimb/model3_parameters.json |
+
+</details>
+
+<details>
+<summary>R_VL · tendon_strain_at_max_force</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | R_VL |
+| Parameter | tendon_strain_at_max_force |
+| Unit | 1 |
+| Meaning | Tendon extension/slack length at one maximum isometric tendon force. |
+| Source value | Not established |
+| Value used in this model | 0.04 |
+| What changed and why | No verified source value is available for direct comparison. Assumed elastic-tendon compliance; not a measured tendon strain for this animal. |
+| Source / evidence | Generic hindlimb parameters from the author’s MATLAB Model 3 dataset. The source column reports the generic table; the applied column reports the calibrated simulation value. Data/Original_Study_Data/hindlimb/model3_parameters.json |
+
+</details>
+
+<details>
+<summary>R_VL · max_fiber_speed_optimal_lengths_per_s</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | R_VL |
+| Parameter | max_fiber_speed_optimal_lengths_per_s |
+| Unit | 1/s |
+| Meaning | Positive maximum-shortening speed magnitude, measured in optimal fiber lengths per second. |
+| Source value | 6.59874 |
+| Value used in this model | 6.7610515 |
+| What changed and why | Different from the verified source value. Change relative to source: +2.46%. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Generic hindlimb parameters from the author’s MATLAB Model 3 dataset. The source column reports the generic table; the applied column reports the calibrated simulation value. Data/Original_Study_Data/hindlimb/model3_parameters.json |
+
+</details>
+
+<details>
+<summary>R_VL · normalized_fiber_damping</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | R_VL |
+| Parameter | normalized_fiber_damping |
+| Unit | 1 |
+| Meaning | Coefficient of normalized fiber velocity in the normalized tendon-direction force balance. |
+| Source value | Not established |
+| Value used in this model | 0.039109401 |
+| What changed and why | No verified source value is available for direct comparison. Effective muscle force-balance coefficient; source-law conversion and calibration are described in the methods. |
+| Source / evidence | Generic hindlimb parameters from the author’s MATLAB Model 3 dataset. The source column reports the generic table; the applied column reports the calibrated simulation value. Data/Original_Study_Data/hindlimb/model3_parameters.json |
+
+</details>
+
+<details>
+<summary>R_VL · MT_path_length_offset_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | R_VL |
+| Parameter | MT_path_length_offset_m |
+| Unit | m |
+| Meaning | Constant offset added to the routed path to define muscle-tendon length. |
+| Source value | Not established |
+| Value used in this model | 0 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Generic hindlimb parameters from the author’s MATLAB Model 3 dataset. The source column reports the generic table; the applied column reports the calibrated simulation value. Data/Original_Study_Data/hindlimb/model3_parameters.json |
+
+</details>
+
+<details>
+<summary>R_VL · active_force_length_exponent</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | R_VL |
+| Parameter | active_force_length_exponent |
+| Unit | 1 |
+| Meaning | Exponent rho in the source active force-length curve. |
+| Source value | Not established |
+| Value used in this model | 3 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Generic hindlimb parameters from the author’s MATLAB Model 3 dataset. The source column reports the generic table; the applied column reports the calibrated simulation value. Data/Original_Study_Data/hindlimb/model3_parameters.json |
+
+</details>
+
+<details>
+<summary>R_VL · source_shortening_curvature</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | R_VL |
+| Parameter | source_shortening_curvature |
+| Unit | 1 |
+| Meaning | Source shortening-curve coefficient; inactive when De Groote force-velocity mode is selected. |
+| Source value | Not established |
+| Value used in this model | 0.41623 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Generic hindlimb parameters from the author’s MATLAB Model 3 dataset. The source column reports the generic table; the applied column reports the calibrated simulation value. Data/Original_Study_Data/hindlimb/model3_parameters.json |
+
+</details>
+
+<details>
+<summary>R_VL · source_lengthening_curvature</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | R_VL |
+| Parameter | source_lengthening_curvature |
+| Unit | 1 |
+| Meaning | Source lengthening-curve coefficient; inactive when De Groote force-velocity mode is selected. |
+| Source value | Not established |
+| Value used in this model | 0.0089800326 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Generic hindlimb parameters from the author’s MATLAB Model 3 dataset. The source column reports the generic table; the applied column reports the calibrated simulation value. Data/Original_Study_Data/hindlimb/model3_parameters.json |
+
+</details>
+
+<details>
+<summary>R_VL · passive_fiber_enabled</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | R_VL |
+| Parameter | passive_fiber_enabled |
+| Unit | 0/1 |
+| Meaning | 1 enables passive fiber tension within the elastic equilibrium; zero force below l_f/l_opt=1 does not mean it is disabled. |
+| Source value | Not established |
+| Value used in this model | 1 |
+| What changed and why | No verified source value is available for direct comparison. The published passive force-length law is included in every muscle channel. Its coefficients are from Prilutsky et al. (2016), Table 10.3, and Rahmati et al. (2025), Table 3. Applying the same normalized law to added muscle channels is a modeling assumption. |
+| Source / evidence | Published parallel elastic architecture: Prilutsky et al. 2016 Table 10.3 (10.1007/978-1-4939-3267-2_10); Rahmati et al. 2025 Table 3 (10.1113/JP287448). Common normalized curve extended to all model channels; no muscle-specific passive calibration is claimed. |
+
+</details>
+
+<details>
+<summary>R_VL · degroote_force_velocity_enabled</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | R_VL |
+| Parameter | degroote_force_velocity_enabled |
+| Unit | 0/1 |
+| Meaning | 1 uses the documented De Groote/OpenSim velocity curve; 0 uses the source curve. |
+| Source value | Not established |
+| Value used in this model | 1 |
+| What changed and why | No verified source value is available for direct comparison. Model-law choice: 1 enables the smooth De Groote force-velocity relation; 0 selects the alternative implemented law. |
+| Source / evidence | Generic hindlimb parameters from the author’s MATLAB Model 3 dataset. The source column reports the generic table; the applied column reports the calibrated simulation value. Data/Original_Study_Data/hindlimb/model3_parameters.json |
+
+</details>
+
+<details>
+<summary>R_VM · max_isometric_tendon_force_N</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | R_VM |
+| Parameter | max_isometric_tendon_force_N |
+| Unit | N |
+| Meaning | Maximum isometric force projected along the tendon; do not multiply by pennation cosine twice. |
+| Source value | 202.13321 |
+| Value used in this model | 229.63152 |
+| What changed and why | Different from the verified source value. Change relative to source: +13.6%. Force capacity was calibrated with motor inputs to improve mechanical agreement; the fit does not uniquely identify it. |
+| Source / evidence | Generic hindlimb parameters from the author’s MATLAB Model 3 dataset. The source column reports the generic table; the applied column reports the calibrated simulation value. Data/Original_Study_Data/hindlimb/model3_parameters.json |
+
+</details>
+
+<details>
+<summary>R_VM · optimal_fiber_length_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | R_VM |
+| Parameter | optimal_fiber_length_m |
+| Unit | m |
+| Meaning | Optimal fascicle/fiber length, not whole muscle-tendon length. |
+| Source value | 0.027461 |
+| Value used in this model | 0.027067584 |
+| What changed and why | Different from the verified source value. Change relative to source: -1.43%. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Generic hindlimb parameters from the author’s MATLAB Model 3 dataset. The source column reports the generic table; the applied column reports the calibrated simulation value. Data/Original_Study_Data/hindlimb/model3_parameters.json |
+
+</details>
+
+<details>
+<summary>R_VM · tendon_slack_length_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | R_VM |
+| Parameter | tendon_slack_length_m |
+| Unit | m |
+| Meaning | Unloaded series tendon length. |
+| Source value | 0.0823831 |
+| Value used in this model | 0.080406115 |
+| What changed and why | Different from the verified source value. Change relative to source: -2.4%. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Generic hindlimb parameters from the author’s MATLAB Model 3 dataset. The source column reports the generic table; the applied column reports the calibrated simulation value. Data/Original_Study_Data/hindlimb/model3_parameters.json |
+
+</details>
+
+<details>
+<summary>R_VM · pennation_cosine</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | R_VM |
+| Parameter | pennation_cosine |
+| Unit | 1 |
+| Meaning | Cosine of the constant fiber-to-tendon pennation angle. |
+| Source value | 0.97154915 |
+| Value used in this model | 0.97154915 |
+| What changed and why | Retained the verified source value; no numerical change from that source. |
+| Source / evidence | Generic hindlimb parameters from the author’s MATLAB Model 3 dataset. The source column reports the generic table; the applied column reports the calibrated simulation value. Data/Original_Study_Data/hindlimb/model3_parameters.json |
+
+</details>
+
+<details>
+<summary>R_VM · tendon_strain_at_max_force</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | R_VM |
+| Parameter | tendon_strain_at_max_force |
+| Unit | 1 |
+| Meaning | Tendon extension/slack length at one maximum isometric tendon force. |
+| Source value | Not established |
+| Value used in this model | 0.04 |
+| What changed and why | No verified source value is available for direct comparison. Assumed elastic-tendon compliance; not a measured tendon strain for this animal. |
+| Source / evidence | Generic hindlimb parameters from the author’s MATLAB Model 3 dataset. The source column reports the generic table; the applied column reports the calibrated simulation value. Data/Original_Study_Data/hindlimb/model3_parameters.json |
+
+</details>
+
+<details>
+<summary>R_VM · max_fiber_speed_optimal_lengths_per_s</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | R_VM |
+| Parameter | max_fiber_speed_optimal_lengths_per_s |
+| Unit | 1/s |
+| Meaning | Positive maximum-shortening speed magnitude, measured in optimal fiber lengths per second. |
+| Source value | 6.59874 |
+| Value used in this model | 6.7610515 |
+| What changed and why | Different from the verified source value. Change relative to source: +2.46%. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Generic hindlimb parameters from the author’s MATLAB Model 3 dataset. The source column reports the generic table; the applied column reports the calibrated simulation value. Data/Original_Study_Data/hindlimb/model3_parameters.json |
+
+</details>
+
+<details>
+<summary>R_VM · normalized_fiber_damping</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | R_VM |
+| Parameter | normalized_fiber_damping |
+| Unit | 1 |
+| Meaning | Coefficient of normalized fiber velocity in the normalized tendon-direction force balance. |
+| Source value | Not established |
+| Value used in this model | 0.052070916 |
+| What changed and why | No verified source value is available for direct comparison. Effective muscle force-balance coefficient; source-law conversion and calibration are described in the methods. |
+| Source / evidence | Generic hindlimb parameters from the author’s MATLAB Model 3 dataset. The source column reports the generic table; the applied column reports the calibrated simulation value. Data/Original_Study_Data/hindlimb/model3_parameters.json |
+
+</details>
+
+<details>
+<summary>R_VM · MT_path_length_offset_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | R_VM |
+| Parameter | MT_path_length_offset_m |
+| Unit | m |
+| Meaning | Constant offset added to the routed path to define muscle-tendon length. |
+| Source value | Not established |
+| Value used in this model | 0 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Generic hindlimb parameters from the author’s MATLAB Model 3 dataset. The source column reports the generic table; the applied column reports the calibrated simulation value. Data/Original_Study_Data/hindlimb/model3_parameters.json |
+
+</details>
+
+<details>
+<summary>R_VM · active_force_length_exponent</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | R_VM |
+| Parameter | active_force_length_exponent |
+| Unit | 1 |
+| Meaning | Exponent rho in the source active force-length curve. |
+| Source value | Not established |
+| Value used in this model | 3 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Generic hindlimb parameters from the author’s MATLAB Model 3 dataset. The source column reports the generic table; the applied column reports the calibrated simulation value. Data/Original_Study_Data/hindlimb/model3_parameters.json |
+
+</details>
+
+<details>
+<summary>R_VM · source_shortening_curvature</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | R_VM |
+| Parameter | source_shortening_curvature |
+| Unit | 1 |
+| Meaning | Source shortening-curve coefficient; inactive when De Groote force-velocity mode is selected. |
+| Source value | Not established |
+| Value used in this model | 0.41623 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Generic hindlimb parameters from the author’s MATLAB Model 3 dataset. The source column reports the generic table; the applied column reports the calibrated simulation value. Data/Original_Study_Data/hindlimb/model3_parameters.json |
+
+</details>
+
+<details>
+<summary>R_VM · source_lengthening_curvature</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | R_VM |
+| Parameter | source_lengthening_curvature |
+| Unit | 1 |
+| Meaning | Source lengthening-curve coefficient; inactive when De Groote force-velocity mode is selected. |
+| Source value | Not established |
+| Value used in this model | 0.0089800326 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Generic hindlimb parameters from the author’s MATLAB Model 3 dataset. The source column reports the generic table; the applied column reports the calibrated simulation value. Data/Original_Study_Data/hindlimb/model3_parameters.json |
+
+</details>
+
+<details>
+<summary>R_VM · passive_fiber_enabled</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | R_VM |
+| Parameter | passive_fiber_enabled |
+| Unit | 0/1 |
+| Meaning | 1 enables passive fiber tension within the elastic equilibrium; zero force below l_f/l_opt=1 does not mean it is disabled. |
+| Source value | Not established |
+| Value used in this model | 1 |
+| What changed and why | No verified source value is available for direct comparison. The published passive force-length law is included in every muscle channel. Its coefficients are from Prilutsky et al. (2016), Table 10.3, and Rahmati et al. (2025), Table 3. Applying the same normalized law to added muscle channels is a modeling assumption. |
+| Source / evidence | Published parallel elastic architecture: Prilutsky et al. 2016 Table 10.3 (10.1007/978-1-4939-3267-2_10); Rahmati et al. 2025 Table 3 (10.1113/JP287448). Common normalized curve extended to all model channels; no muscle-specific passive calibration is claimed. |
+
+</details>
+
+<details>
+<summary>R_VM · degroote_force_velocity_enabled</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | R_VM |
+| Parameter | degroote_force_velocity_enabled |
+| Unit | 0/1 |
+| Meaning | 1 uses the documented De Groote/OpenSim velocity curve; 0 uses the source curve. |
+| Source value | Not established |
+| Value used in this model | 1 |
+| What changed and why | No verified source value is available for direct comparison. Model-law choice: 1 enables the smooth De Groote force-velocity relation; 0 selects the alternative implemented law. |
+| Source / evidence | Generic hindlimb parameters from the author’s MATLAB Model 3 dataset. The source column reports the generic table; the applied column reports the calibrated simulation value. Data/Original_Study_Data/hindlimb/model3_parameters.json |
+
+</details>
+
+<details>
+<summary>R_TA · max_isometric_tendon_force_N</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | R_TA |
+| Parameter | max_isometric_tendon_force_N |
+| Unit | N |
+| Meaning | Maximum isometric force projected along the tendon; do not multiply by pennation cosine twice. |
+| Source value | 40.403607 |
+| Value used in this model | 49.47473 |
+| What changed and why | Different from the verified source value. Change relative to source: +22.5%. Force capacity was calibrated with motor inputs to improve mechanical agreement; the fit does not uniquely identify it. |
+| Source / evidence | Generic hindlimb parameters from the author’s MATLAB Model 3 dataset. The source column reports the generic table; the applied column reports the calibrated simulation value. Data/Original_Study_Data/hindlimb/model3_parameters.json |
+
+</details>
+
+<details>
+<summary>R_TA · optimal_fiber_length_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | R_TA |
+| Parameter | optimal_fiber_length_m |
+| Unit | m |
+| Meaning | Optimal fascicle/fiber length, not whole muscle-tendon length. |
+| Source value | 0.0814286 |
+| Value used in this model | 0.078875953 |
+| What changed and why | Different from the verified source value. Change relative to source: -3.13%. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Generic hindlimb parameters from the author’s MATLAB Model 3 dataset. The source column reports the generic table; the applied column reports the calibrated simulation value. Data/Original_Study_Data/hindlimb/model3_parameters.json |
+
+</details>
+
+<details>
+<summary>R_TA · tendon_slack_length_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | R_TA |
+| Parameter | tendon_slack_length_m |
+| Unit | m |
+| Meaning | Unloaded series tendon length. |
+| Source value | 0.057 |
+| Value used in this model | 0.057115572 |
+| What changed and why | Different from the verified source value. Change relative to source: +0.203%. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Generic hindlimb parameters from the author’s MATLAB Model 3 dataset. The source column reports the generic table; the applied column reports the calibrated simulation value. Data/Original_Study_Data/hindlimb/model3_parameters.json |
+
+</details>
+
+<details>
+<summary>R_TA · pennation_cosine</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | R_TA |
+| Parameter | pennation_cosine |
+| Unit | 1 |
+| Meaning | Cosine of the constant fiber-to-tendon pennation angle. |
+| Source value | 0.99254616 |
+| Value used in this model | 0.99254616 |
+| What changed and why | Retained the verified source value; no numerical change from that source. |
+| Source / evidence | Generic hindlimb parameters from the author’s MATLAB Model 3 dataset. The source column reports the generic table; the applied column reports the calibrated simulation value. Data/Original_Study_Data/hindlimb/model3_parameters.json |
+
+</details>
+
+<details>
+<summary>R_TA · tendon_strain_at_max_force</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | R_TA |
+| Parameter | tendon_strain_at_max_force |
+| Unit | 1 |
+| Meaning | Tendon extension/slack length at one maximum isometric tendon force. |
+| Source value | Not established |
+| Value used in this model | 0.04 |
+| What changed and why | No verified source value is available for direct comparison. Assumed elastic-tendon compliance; not a measured tendon strain for this animal. |
+| Source / evidence | Generic hindlimb parameters from the author’s MATLAB Model 3 dataset. The source column reports the generic table; the applied column reports the calibrated simulation value. Data/Original_Study_Data/hindlimb/model3_parameters.json |
+
+</details>

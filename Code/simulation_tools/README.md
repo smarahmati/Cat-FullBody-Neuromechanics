@@ -19,3 +19,6 @@ Commands for running the model, playing its saved movement, exporting figures an
 | [render_walking_video.py](render_walking_video.py) | Render a video of the cat from saved forward-dynamics states. |
 | [run_forward_simulation.py](run_forward_simulation.py) | Run the coupled forward model from editable files. |
 | [view_walking_simulation.py](view_walking_simulation.py) | Inspect an already computed forward run; never solve or alter its motion. |
+| [generate_github_guides.py](generate_github_guides.py) | Create GitHub-readable guides with equation figures and complete parameter entries. |
+| [render_documentation_equations.py](render_documentation_equations.py) | Keep editable equation sources and render new or changed equations as scalable figures. |
+| [equation_renderer/README.md](equation_renderer/README.md) | Optional MathJax tool for building equation figures; not needed to run the simulation. |

@@ -4,194 +4,3028 @@
 
 [Back to parameter guide](../parameter_tables.md)
 
-| Object | Parameter | Unit | Meaning | Source value | Value used in this model | What changed and why | Source / evidence |
-| --- | --- | --- | --- | --- | --- | --- | --- |
-| pelvis_x | position_in_body_m | m | Joint center in its owning body frame. | Not established | [0.0, 0.0, 0.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| pelvis_x | axis_in_body | 1 | Unit direction of rotation or translation in the body frame. | Not established | [0.9132052441078028, -0.4074999167288356, 0.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| pelvis_x | range | rad or m | Lower and upper limit in native coordinates; anatomical plotting conventions are documented separately. | Not established | [0.0, 0.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| pelvis_x | passive_stiffness | N m/rad or N/m | Passive linear stiffness, with spring reference given separately. | Not established | 0 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| pelvis_x | passive_damping | N m s/rad or N s/m | Nonnegative passive viscous coefficient. | Not established | 0 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| pelvis_x | armature | kg m^2 or kg | Additional generalized inertia; an engine/model parameter. | Not established | 0 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| pelvis_x | spring_reference | rad or m | Native coordinate at zero passive spring force. | Not established | 0 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| pelvis_x | limit_solver_reference | engine units | Soft joint-limit solver reference parameters; not paw-contact material coefficients. | Not established | [0.02, 1.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| pelvis_x | limit_solver_impedance | engine units | Soft joint-limit solver impedance parameters. | Not established | [0.9, 0.95, 0.001, 0.5, 2.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| pelvis_z | position_in_body_m | m | Joint center in its owning body frame. | Not established | [0.0, 0.0, 0.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| pelvis_z | axis_in_body | 1 | Unit direction of rotation or translation in the body frame. | Not established | [0.4074999167288356, 0.9132052441078028, 0.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| pelvis_z | range | rad or m | Lower and upper limit in native coordinates; anatomical plotting conventions are documented separately. | Not established | [0.0, 0.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| pelvis_z | passive_stiffness | N m/rad or N/m | Passive linear stiffness, with spring reference given separately. | Not established | 0 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| pelvis_z | passive_damping | N m s/rad or N s/m | Nonnegative passive viscous coefficient. | Not established | 0 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| pelvis_z | armature | kg m^2 or kg | Additional generalized inertia; an engine/model parameter. | Not established | 0 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| pelvis_z | spring_reference | rad or m | Native coordinate at zero passive spring force. | Not established | 0 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| pelvis_z | limit_solver_reference | engine units | Soft joint-limit solver reference parameters; not paw-contact material coefficients. | Not established | [0.02, 1.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| pelvis_z | limit_solver_impedance | engine units | Soft joint-limit solver impedance parameters. | Not established | [0.9, 0.95, 0.001, 0.5, 2.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| pelvis_pitch | position_in_body_m | m | Joint center in its owning body frame. | Not established | [0.0, 0.0, 0.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| pelvis_pitch | axis_in_body | 1 | Unit direction of rotation or translation in the body frame. | Not established | [0.0, 0.0, -0.9999999999999999] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| pelvis_pitch | range | rad or m | Lower and upper limit in native coordinates; anatomical plotting conventions are documented separately. | Not established | [0.0, 0.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| pelvis_pitch | passive_stiffness | N m/rad or N/m | Passive linear stiffness, with spring reference given separately. | Not established | 0 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| pelvis_pitch | passive_damping | N m s/rad or N s/m | Nonnegative passive viscous coefficient. | Not established | 0 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| pelvis_pitch | armature | kg m^2 or kg | Additional generalized inertia; an engine/model parameter. | Not established | 0 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| pelvis_pitch | spring_reference | rad or m | Native coordinate at zero passive spring force. | Not established | 0 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| pelvis_pitch | limit_solver_reference | engine units | Soft joint-limit solver reference parameters; not paw-contact material coefficients. | Not established | [0.02, 1.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| pelvis_pitch | limit_solver_impedance | engine units | Soft joint-limit solver impedance parameters. | Not established | [0.9, 0.95, 0.001, 0.5, 2.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| L_hip | position_in_body_m | m | Joint center in its owning body frame. | Not established | [0.0, 0.0, 0.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| L_hip | axis_in_body | 1 | Unit direction of rotation or translation in the body frame. | Not established | [0.0, 0.0, 1.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| L_hip | range | rad or m | Lower and upper limit in native coordinates; anatomical plotting conventions are documented separately. | Not established | [-2.8, -0.89] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| L_hip | passive_stiffness | N m/rad or N/m | Passive linear stiffness, with spring reference given separately. | Not established | 0 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| L_hip | passive_damping | N m s/rad or N s/m | Nonnegative passive viscous coefficient. | Not established | 0.001 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| L_hip | armature | kg m^2 or kg | Additional generalized inertia; an engine/model parameter. | Not established | 2e-06 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| L_hip | spring_reference | rad or m | Native coordinate at zero passive spring force. | Not established | 0 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| L_hip | limit_solver_reference | engine units | Soft joint-limit solver reference parameters; not paw-contact material coefficients. | Not established | [0.003, 1.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| L_hip | limit_solver_impedance | engine units | Soft joint-limit solver impedance parameters. | Not established | [0.99, 0.999, 0.001, 0.5, 2.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| L_knee | position_in_body_m | m | Joint center in its owning body frame. | Not established | [0.0, 0.0, 0.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| L_knee | axis_in_body | 1 | Unit direction of rotation or translation in the body frame. | Not established | [0.0, 0.0, 1.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| L_knee | range | rad or m | Lower and upper limit in native coordinates; anatomical plotting conventions are documented separately. | Not established | [-2.3, -0.55] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| L_knee | passive_stiffness | N m/rad or N/m | Passive linear stiffness, with spring reference given separately. | Not established | 0 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| L_knee | passive_damping | N m s/rad or N s/m | Nonnegative passive viscous coefficient. | Not established | 0.001 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| L_knee | armature | kg m^2 or kg | Additional generalized inertia; an engine/model parameter. | Not established | 2e-06 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| L_knee | spring_reference | rad or m | Native coordinate at zero passive spring force. | Not established | 0 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| L_knee | limit_solver_reference | engine units | Soft joint-limit solver reference parameters; not paw-contact material coefficients. | Not established | [0.003, 1.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| L_knee | limit_solver_impedance | engine units | Soft joint-limit solver impedance parameters. | Not established | [0.99, 0.999, 0.001, 0.5, 2.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| L_ankle | position_in_body_m | m | Joint center in its owning body frame. | Not established | [0.0, 0.0, 0.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| L_ankle | axis_in_body | 1 | Unit direction of rotation or translation in the body frame. | Not established | [0.0, 0.0, 1.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| L_ankle | range | rad or m | Lower and upper limit in native coordinates; anatomical plotting conventions are documented separately. | Not established | [0.2, 1.95] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| L_ankle | passive_stiffness | N m/rad or N/m | Passive linear stiffness, with spring reference given separately. | Not established | 0 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| L_ankle | passive_damping | N m s/rad or N s/m | Nonnegative passive viscous coefficient. | Not established | 0.001 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| L_ankle | armature | kg m^2 or kg | Additional generalized inertia; an engine/model parameter. | Not established | 2e-06 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| L_ankle | spring_reference | rad or m | Native coordinate at zero passive spring force. | Not established | 0 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| L_ankle | limit_solver_reference | engine units | Soft joint-limit solver reference parameters; not paw-contact material coefficients. | Not established | [0.003, 1.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| L_ankle | limit_solver_impedance | engine units | Soft joint-limit solver impedance parameters. | Not established | [0.99, 0.999, 0.001, 0.5, 2.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| L_mtp | position_in_body_m | m | Joint center in its owning body frame. | Not established | [0.0, 0.0, 0.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| L_mtp | axis_in_body | 1 | Unit direction of rotation or translation in the body frame. | Not established | [0.0, 0.0, 1.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| L_mtp | range | rad or m | Lower and upper limit in native coordinates; anatomical plotting conventions are documented separately. | Not established | [-0.498392, 1.8] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| L_mtp | passive_stiffness | N m/rad or N/m | Passive linear stiffness, with spring reference given separately. | Not established | 0.01 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| L_mtp | passive_damping | N m s/rad or N s/m | Nonnegative passive viscous coefficient. | Not established | 0.0005 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| L_mtp | armature | kg m^2 or kg | Additional generalized inertia; an engine/model parameter. | Not established | 2e-06 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| L_mtp | spring_reference | rad or m | Native coordinate at zero passive spring force. | Not established | 0 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| L_mtp | limit_solver_reference | engine units | Soft joint-limit solver reference parameters; not paw-contact material coefficients. | Not established | [0.003, 1.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| L_mtp | limit_solver_impedance | engine units | Soft joint-limit solver impedance parameters. | Not established | [0.99, 0.999, 0.001, 0.5, 2.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| R_hip | position_in_body_m | m | Joint center in its owning body frame. | Not established | [0.0, 0.0, 0.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| R_hip | axis_in_body | 1 | Unit direction of rotation or translation in the body frame. | Not established | [0.0, 0.0, 1.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| R_hip | range | rad or m | Lower and upper limit in native coordinates; anatomical plotting conventions are documented separately. | Not established | [-2.8, -1.05] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| R_hip | passive_stiffness | N m/rad or N/m | Passive linear stiffness, with spring reference given separately. | Not established | 0 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| R_hip | passive_damping | N m s/rad or N s/m | Nonnegative passive viscous coefficient. | Not established | 0.001 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| R_hip | armature | kg m^2 or kg | Additional generalized inertia; an engine/model parameter. | Not established | 2e-06 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| R_hip | spring_reference | rad or m | Native coordinate at zero passive spring force. | Not established | 0 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| R_hip | limit_solver_reference | engine units | Soft joint-limit solver reference parameters; not paw-contact material coefficients. | Not established | [0.003, 1.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| R_hip | limit_solver_impedance | engine units | Soft joint-limit solver impedance parameters. | Not established | [0.99, 0.999, 0.001, 0.5, 2.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| R_knee | position_in_body_m | m | Joint center in its owning body frame. | Not established | [0.0, 0.0, 0.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| R_knee | axis_in_body | 1 | Unit direction of rotation or translation in the body frame. | Not established | [0.0, 0.0, 1.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| R_knee | range | rad or m | Lower and upper limit in native coordinates; anatomical plotting conventions are documented separately. | Not established | [-2.3, -0.55] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| R_knee | passive_stiffness | N m/rad or N/m | Passive linear stiffness, with spring reference given separately. | Not established | 0 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| R_knee | passive_damping | N m s/rad or N s/m | Nonnegative passive viscous coefficient. | Not established | 0.001 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| R_knee | armature | kg m^2 or kg | Additional generalized inertia; an engine/model parameter. | Not established | 2e-06 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| R_knee | spring_reference | rad or m | Native coordinate at zero passive spring force. | Not established | 0 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| R_knee | limit_solver_reference | engine units | Soft joint-limit solver reference parameters; not paw-contact material coefficients. | Not established | [0.003, 1.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| R_knee | limit_solver_impedance | engine units | Soft joint-limit solver impedance parameters. | Not established | [0.99, 0.999, 0.001, 0.5, 2.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| R_ankle | position_in_body_m | m | Joint center in its owning body frame. | Not established | [0.0, 0.0, 0.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| R_ankle | axis_in_body | 1 | Unit direction of rotation or translation in the body frame. | Not established | [0.0, 0.0, 1.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| R_ankle | range | rad or m | Lower and upper limit in native coordinates; anatomical plotting conventions are documented separately. | Not established | [0.2, 1.95] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| R_ankle | passive_stiffness | N m/rad or N/m | Passive linear stiffness, with spring reference given separately. | Not established | 0 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| R_ankle | passive_damping | N m s/rad or N s/m | Nonnegative passive viscous coefficient. | Not established | 0.001 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| R_ankle | armature | kg m^2 or kg | Additional generalized inertia; an engine/model parameter. | Not established | 2e-06 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| R_ankle | spring_reference | rad or m | Native coordinate at zero passive spring force. | Not established | 0 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| R_ankle | limit_solver_reference | engine units | Soft joint-limit solver reference parameters; not paw-contact material coefficients. | Not established | [0.003, 1.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| R_ankle | limit_solver_impedance | engine units | Soft joint-limit solver impedance parameters. | Not established | [0.99, 0.999, 0.001, 0.5, 2.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| R_mtp | position_in_body_m | m | Joint center in its owning body frame. | Not established | [0.0, 0.0, 0.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| R_mtp | axis_in_body | 1 | Unit direction of rotation or translation in the body frame. | Not established | [0.0, 0.0, 1.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| R_mtp | range | rad or m | Lower and upper limit in native coordinates; anatomical plotting conventions are documented separately. | Not established | [-0.498392, 1.8] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| R_mtp | passive_stiffness | N m/rad or N/m | Passive linear stiffness, with spring reference given separately. | Not established | 0.01 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| R_mtp | passive_damping | N m s/rad or N s/m | Nonnegative passive viscous coefficient. | Not established | 0.0005 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| R_mtp | armature | kg m^2 or kg | Additional generalized inertia; an engine/model parameter. | Not established | 2e-06 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| R_mtp | spring_reference | rad or m | Native coordinate at zero passive spring force. | Not established | 0 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| R_mtp | limit_solver_reference | engine units | Soft joint-limit solver reference parameters; not paw-contact material coefficients. | Not established | [0.003, 1.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| R_mtp | limit_solver_impedance | engine units | Soft joint-limit solver impedance parameters. | Not established | [0.99, 0.999, 0.001, 0.5, 2.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| FL_scapulothoracic | position_in_body_m | m | Joint center in its owning body frame. | Not established | [0.006041293692496915, 0.0057710941954443335, -4.16527781698493e-18] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| FL_scapulothoracic | axis_in_body | 1 | Unit direction of rotation or translation in the body frame. | Not established | [-3.16261890488892e-16, 1.9589193577125763e-16, 0.9999999999999993] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| FL_scapulothoracic | range | rad or m | Lower and upper limit in native coordinates; anatomical plotting conventions are documented separately. | Not established | [-0.8, 0.8] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| FL_scapulothoracic | passive_stiffness | N m/rad or N/m | Passive linear stiffness, with spring reference given separately. | Not established | 1.3254638 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| FL_scapulothoracic | passive_damping | N m s/rad or N s/m | Nonnegative passive viscous coefficient. | Not established | 0.02683806 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| FL_scapulothoracic | armature | kg m^2 or kg | Additional generalized inertia; an engine/model parameter. | Not established | 2e-06 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| FL_scapulothoracic | spring_reference | rad or m | Native coordinate at zero passive spring force. | Not established | 0.11642999 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| FL_scapulothoracic | limit_solver_reference | engine units | Soft joint-limit solver reference parameters; not paw-contact material coefficients. | Not established | [0.003, 1.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| FL_scapulothoracic | limit_solver_impedance | engine units | Soft joint-limit solver impedance parameters. | Not established | [0.99, 0.999, 0.001, 0.5, 2.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| FL_shoulder | position_in_body_m | m | Joint center in its owning body frame. | Not established | [0.0, 0.0, 0.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| FL_shoulder | axis_in_body | 1 | Unit direction of rotation or translation in the body frame. | Not established | [0.0, 0.0, 1.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| FL_shoulder | range | rad or m | Lower and upper limit in native coordinates; anatomical plotting conventions are documented separately. | Not established | [-1.8766967294087722, -0.7214530320239354] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| FL_shoulder | passive_stiffness | N m/rad or N/m | Passive linear stiffness, with spring reference given separately. | Not established | 0 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| FL_shoulder | passive_damping | N m s/rad or N s/m | Nonnegative passive viscous coefficient. | Not established | 0.001 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| FL_shoulder | armature | kg m^2 or kg | Additional generalized inertia; an engine/model parameter. | Not established | 2e-06 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| FL_shoulder | spring_reference | rad or m | Native coordinate at zero passive spring force. | Not established | 0 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| FL_shoulder | limit_solver_reference | engine units | Soft joint-limit solver reference parameters; not paw-contact material coefficients. | Not established | [0.003, 1.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| FL_shoulder | limit_solver_impedance | engine units | Soft joint-limit solver impedance parameters. | Not established | [0.99, 0.999, 0.001, 0.5, 2.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| FL_elbow | position_in_body_m | m | Joint center in its owning body frame. | Not established | [0.0, 0.0, 0.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| FL_elbow | axis_in_body | 1 | Unit direction of rotation or translation in the body frame. | Not established | [0.0, 0.0, 1.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| FL_elbow | range | rad or m | Lower and upper limit in native coordinates; anatomical plotting conventions are documented separately. | Not established | [0.34375538143410944, 2.020734489790133] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| FL_elbow | passive_stiffness | N m/rad or N/m | Passive linear stiffness, with spring reference given separately. | Not established | 0 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| FL_elbow | passive_damping | N m s/rad or N s/m | Nonnegative passive viscous coefficient. | Not established | 0.001 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| FL_elbow | armature | kg m^2 or kg | Additional generalized inertia; an engine/model parameter. | Not established | 2e-06 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| FL_elbow | spring_reference | rad or m | Native coordinate at zero passive spring force. | Not established | 0 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| FL_elbow | limit_solver_reference | engine units | Soft joint-limit solver reference parameters; not paw-contact material coefficients. | Not established | [0.003, 1.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| FL_elbow | limit_solver_impedance | engine units | Soft joint-limit solver impedance parameters. | Not established | [0.99, 0.999, 0.001, 0.5, 2.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| FL_wrist | position_in_body_m | m | Joint center in its owning body frame. | Not established | [0.0, 0.0, 0.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| FL_wrist | axis_in_body | 1 | Unit direction of rotation or translation in the body frame. | Not established | [0.0, 0.0, 1.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| FL_wrist | range | rad or m | Lower and upper limit in native coordinates; anatomical plotting conventions are documented separately. | Not established | [-1.1689410980761448, 0.5241615878217658] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| FL_wrist | passive_stiffness | N m/rad or N/m | Passive linear stiffness, with spring reference given separately. | Not established | 0 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| FL_wrist | passive_damping | N m s/rad or N s/m | Nonnegative passive viscous coefficient. | Not established | 0.0049486 | No verified source value is available for direct comparison. Distal forelimb passive damping was calibrated to improve mechanical behavior. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| FL_wrist | armature | kg m^2 or kg | Additional generalized inertia; an engine/model parameter. | Not established | 2e-06 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| FL_wrist | spring_reference | rad or m | Native coordinate at zero passive spring force. | Not established | 0 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| FL_wrist | limit_solver_reference | engine units | Soft joint-limit solver reference parameters; not paw-contact material coefficients. | Not established | [0.003, 1.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| FL_wrist | limit_solver_impedance | engine units | Soft joint-limit solver impedance parameters. | Not established | [0.99, 0.999, 0.001, 0.5, 2.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| FL_mcp | position_in_body_m | m | Joint center in its owning body frame. | Not established | [0.0, 0.0, 0.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| FL_mcp | axis_in_body | 1 | Unit direction of rotation or translation in the body frame. | Not established | [0.0, 0.0, 1.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| FL_mcp | range | rad or m | Lower and upper limit in native coordinates; anatomical plotting conventions are documented separately. | Not established | [-0.5902191353889319, 1.3791475675996363] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| FL_mcp | passive_stiffness | N m/rad or N/m | Passive linear stiffness, with spring reference given separately. | Not established | 0.12982562 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| FL_mcp | passive_damping | N m s/rad or N s/m | Nonnegative passive viscous coefficient. | Not established | 0.010005757 | No verified source value is available for direct comparison. Distal forelimb passive damping was calibrated to improve mechanical behavior. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| FL_mcp | armature | kg m^2 or kg | Additional generalized inertia; an engine/model parameter. | Not established | 2e-06 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| FL_mcp | spring_reference | rad or m | Native coordinate at zero passive spring force. | Not established | -0.01970531 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| FL_mcp | limit_solver_reference | engine units | Soft joint-limit solver reference parameters; not paw-contact material coefficients. | Not established | [0.003, 1.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| FL_mcp | limit_solver_impedance | engine units | Soft joint-limit solver impedance parameters. | Not established | [0.99, 0.999, 0.001, 0.5, 2.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| FR_scapulothoracic | position_in_body_m | m | Joint center in its owning body frame. | Not established | [0.006041293692496915, 0.0057710941954443335, -4.16527781698493e-18] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| FR_scapulothoracic | axis_in_body | 1 | Unit direction of rotation or translation in the body frame. | Not established | [-3.16261890488892e-16, 1.9589193577125763e-16, 0.9999999999999993] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| FR_scapulothoracic | range | rad or m | Lower and upper limit in native coordinates; anatomical plotting conventions are documented separately. | Not established | [-0.8, 0.8] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| FR_scapulothoracic | passive_stiffness | N m/rad or N/m | Passive linear stiffness, with spring reference given separately. | Not established | 1.3254638 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| FR_scapulothoracic | passive_damping | N m s/rad or N s/m | Nonnegative passive viscous coefficient. | Not established | 0.02683806 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| FR_scapulothoracic | armature | kg m^2 or kg | Additional generalized inertia; an engine/model parameter. | Not established | 2e-06 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| FR_scapulothoracic | spring_reference | rad or m | Native coordinate at zero passive spring force. | Not established | 0.11642999 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| FR_scapulothoracic | limit_solver_reference | engine units | Soft joint-limit solver reference parameters; not paw-contact material coefficients. | Not established | [0.003, 1.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| FR_scapulothoracic | limit_solver_impedance | engine units | Soft joint-limit solver impedance parameters. | Not established | [0.99, 0.999, 0.001, 0.5, 2.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| FR_shoulder | position_in_body_m | m | Joint center in its owning body frame. | Not established | [0.0, 0.0, 0.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| FR_shoulder | axis_in_body | 1 | Unit direction of rotation or translation in the body frame. | Not established | [0.0, 0.0, 1.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| FR_shoulder | range | rad or m | Lower and upper limit in native coordinates; anatomical plotting conventions are documented separately. | Not established | [-1.8766967294087722, -0.7214530320239354] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| FR_shoulder | passive_stiffness | N m/rad or N/m | Passive linear stiffness, with spring reference given separately. | Not established | 0 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| FR_shoulder | passive_damping | N m s/rad or N s/m | Nonnegative passive viscous coefficient. | Not established | 0.001 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| FR_shoulder | armature | kg m^2 or kg | Additional generalized inertia; an engine/model parameter. | Not established | 2e-06 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| FR_shoulder | spring_reference | rad or m | Native coordinate at zero passive spring force. | Not established | 0 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| FR_shoulder | limit_solver_reference | engine units | Soft joint-limit solver reference parameters; not paw-contact material coefficients. | Not established | [0.003, 1.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| FR_shoulder | limit_solver_impedance | engine units | Soft joint-limit solver impedance parameters. | Not established | [0.99, 0.999, 0.001, 0.5, 2.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| FR_elbow | position_in_body_m | m | Joint center in its owning body frame. | Not established | [0.0, 0.0, 0.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| FR_elbow | axis_in_body | 1 | Unit direction of rotation or translation in the body frame. | Not established | [0.0, 0.0, 1.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| FR_elbow | range | rad or m | Lower and upper limit in native coordinates; anatomical plotting conventions are documented separately. | Not established | [0.34375538143410944, 2.020734489790133] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| FR_elbow | passive_stiffness | N m/rad or N/m | Passive linear stiffness, with spring reference given separately. | Not established | 0 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| FR_elbow | passive_damping | N m s/rad or N s/m | Nonnegative passive viscous coefficient. | Not established | 0.001 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| FR_elbow | armature | kg m^2 or kg | Additional generalized inertia; an engine/model parameter. | Not established | 2e-06 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| FR_elbow | spring_reference | rad or m | Native coordinate at zero passive spring force. | Not established | 0 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| FR_elbow | limit_solver_reference | engine units | Soft joint-limit solver reference parameters; not paw-contact material coefficients. | Not established | [0.003, 1.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| FR_elbow | limit_solver_impedance | engine units | Soft joint-limit solver impedance parameters. | Not established | [0.99, 0.999, 0.001, 0.5, 2.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| FR_wrist | position_in_body_m | m | Joint center in its owning body frame. | Not established | [0.0, 0.0, 0.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| FR_wrist | axis_in_body | 1 | Unit direction of rotation or translation in the body frame. | Not established | [0.0, 0.0, 1.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| FR_wrist | range | rad or m | Lower and upper limit in native coordinates; anatomical plotting conventions are documented separately. | Not established | [-1.1689410980761448, 0.5241615878217658] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| FR_wrist | passive_stiffness | N m/rad or N/m | Passive linear stiffness, with spring reference given separately. | Not established | 0 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| FR_wrist | passive_damping | N m s/rad or N s/m | Nonnegative passive viscous coefficient. | Not established | 0.0049486 | No verified source value is available for direct comparison. Distal forelimb passive damping was calibrated to improve mechanical behavior. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| FR_wrist | armature | kg m^2 or kg | Additional generalized inertia; an engine/model parameter. | Not established | 2e-06 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| FR_wrist | spring_reference | rad or m | Native coordinate at zero passive spring force. | Not established | 0 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| FR_wrist | limit_solver_reference | engine units | Soft joint-limit solver reference parameters; not paw-contact material coefficients. | Not established | [0.003, 1.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| FR_wrist | limit_solver_impedance | engine units | Soft joint-limit solver impedance parameters. | Not established | [0.99, 0.999, 0.001, 0.5, 2.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| FR_mcp | position_in_body_m | m | Joint center in its owning body frame. | Not established | [0.0, 0.0, 0.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| FR_mcp | axis_in_body | 1 | Unit direction of rotation or translation in the body frame. | Not established | [0.0, 0.0, 1.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| FR_mcp | range | rad or m | Lower and upper limit in native coordinates; anatomical plotting conventions are documented separately. | Not established | [-0.5902191353889319, 1.3791475675996363] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| FR_mcp | passive_stiffness | N m/rad or N/m | Passive linear stiffness, with spring reference given separately. | Not established | 0.12982562 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| FR_mcp | passive_damping | N m s/rad or N s/m | Nonnegative passive viscous coefficient. | Not established | 0.010005757 | No verified source value is available for direct comparison. Distal forelimb passive damping was calibrated to improve mechanical behavior. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| FR_mcp | armature | kg m^2 or kg | Additional generalized inertia; an engine/model parameter. | Not established | 2e-06 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| FR_mcp | spring_reference | rad or m | Native coordinate at zero passive spring force. | Not established | -0.01970531 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| FR_mcp | limit_solver_reference | engine units | Soft joint-limit solver reference parameters; not paw-contact material coefficients. | Not established | [0.003, 1.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| FR_mcp | limit_solver_impedance | engine units | Soft joint-limit solver impedance parameters. | Not established | [0.99, 0.999, 0.001, 0.5, 2.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+Each entry contains its values, units, meaning and source information. Select an entry to read all fields.
+
+<details>
+<summary>pelvis_x · position_in_body_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | pelvis_x |
+| Parameter | position_in_body_m |
+| Unit | m |
+| Meaning | Joint center in its owning body frame. |
+| Source value | Not established |
+| Value used in this model | [0.0, 0.0, 0.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>pelvis_x · axis_in_body</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | pelvis_x |
+| Parameter | axis_in_body |
+| Unit | 1 |
+| Meaning | Unit direction of rotation or translation in the body frame. |
+| Source value | Not established |
+| Value used in this model | [0.9132052441078028, -0.4074999167288356, 0.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>pelvis_x · range</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | pelvis_x |
+| Parameter | range |
+| Unit | rad or m |
+| Meaning | Lower and upper limit in native coordinates; anatomical plotting conventions are documented separately. |
+| Source value | Not established |
+| Value used in this model | [0.0, 0.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>pelvis_x · passive_stiffness</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | pelvis_x |
+| Parameter | passive_stiffness |
+| Unit | N m/rad or N/m |
+| Meaning | Passive linear stiffness, with spring reference given separately. |
+| Source value | Not established |
+| Value used in this model | 0 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>pelvis_x · passive_damping</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | pelvis_x |
+| Parameter | passive_damping |
+| Unit | N m s/rad or N s/m |
+| Meaning | Nonnegative passive viscous coefficient. |
+| Source value | Not established |
+| Value used in this model | 0 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>pelvis_x · armature</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | pelvis_x |
+| Parameter | armature |
+| Unit | kg m^2 or kg |
+| Meaning | Additional generalized inertia; an engine/model parameter. |
+| Source value | Not established |
+| Value used in this model | 0 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>pelvis_x · spring_reference</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | pelvis_x |
+| Parameter | spring_reference |
+| Unit | rad or m |
+| Meaning | Native coordinate at zero passive spring force. |
+| Source value | Not established |
+| Value used in this model | 0 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>pelvis_x · limit_solver_reference</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | pelvis_x |
+| Parameter | limit_solver_reference |
+| Unit | engine units |
+| Meaning | Soft joint-limit solver reference parameters; not paw-contact material coefficients. |
+| Source value | Not established |
+| Value used in this model | [0.02, 1.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>pelvis_x · limit_solver_impedance</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | pelvis_x |
+| Parameter | limit_solver_impedance |
+| Unit | engine units |
+| Meaning | Soft joint-limit solver impedance parameters. |
+| Source value | Not established |
+| Value used in this model | [0.9, 0.95, 0.001, 0.5, 2.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>pelvis_z · position_in_body_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | pelvis_z |
+| Parameter | position_in_body_m |
+| Unit | m |
+| Meaning | Joint center in its owning body frame. |
+| Source value | Not established |
+| Value used in this model | [0.0, 0.0, 0.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>pelvis_z · axis_in_body</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | pelvis_z |
+| Parameter | axis_in_body |
+| Unit | 1 |
+| Meaning | Unit direction of rotation or translation in the body frame. |
+| Source value | Not established |
+| Value used in this model | [0.4074999167288356, 0.9132052441078028, 0.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>pelvis_z · range</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | pelvis_z |
+| Parameter | range |
+| Unit | rad or m |
+| Meaning | Lower and upper limit in native coordinates; anatomical plotting conventions are documented separately. |
+| Source value | Not established |
+| Value used in this model | [0.0, 0.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>pelvis_z · passive_stiffness</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | pelvis_z |
+| Parameter | passive_stiffness |
+| Unit | N m/rad or N/m |
+| Meaning | Passive linear stiffness, with spring reference given separately. |
+| Source value | Not established |
+| Value used in this model | 0 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>pelvis_z · passive_damping</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | pelvis_z |
+| Parameter | passive_damping |
+| Unit | N m s/rad or N s/m |
+| Meaning | Nonnegative passive viscous coefficient. |
+| Source value | Not established |
+| Value used in this model | 0 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>pelvis_z · armature</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | pelvis_z |
+| Parameter | armature |
+| Unit | kg m^2 or kg |
+| Meaning | Additional generalized inertia; an engine/model parameter. |
+| Source value | Not established |
+| Value used in this model | 0 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>pelvis_z · spring_reference</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | pelvis_z |
+| Parameter | spring_reference |
+| Unit | rad or m |
+| Meaning | Native coordinate at zero passive spring force. |
+| Source value | Not established |
+| Value used in this model | 0 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>pelvis_z · limit_solver_reference</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | pelvis_z |
+| Parameter | limit_solver_reference |
+| Unit | engine units |
+| Meaning | Soft joint-limit solver reference parameters; not paw-contact material coefficients. |
+| Source value | Not established |
+| Value used in this model | [0.02, 1.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>pelvis_z · limit_solver_impedance</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | pelvis_z |
+| Parameter | limit_solver_impedance |
+| Unit | engine units |
+| Meaning | Soft joint-limit solver impedance parameters. |
+| Source value | Not established |
+| Value used in this model | [0.9, 0.95, 0.001, 0.5, 2.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>pelvis_pitch · position_in_body_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | pelvis_pitch |
+| Parameter | position_in_body_m |
+| Unit | m |
+| Meaning | Joint center in its owning body frame. |
+| Source value | Not established |
+| Value used in this model | [0.0, 0.0, 0.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>pelvis_pitch · axis_in_body</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | pelvis_pitch |
+| Parameter | axis_in_body |
+| Unit | 1 |
+| Meaning | Unit direction of rotation or translation in the body frame. |
+| Source value | Not established |
+| Value used in this model | [0.0, 0.0, -0.9999999999999999] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>pelvis_pitch · range</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | pelvis_pitch |
+| Parameter | range |
+| Unit | rad or m |
+| Meaning | Lower and upper limit in native coordinates; anatomical plotting conventions are documented separately. |
+| Source value | Not established |
+| Value used in this model | [0.0, 0.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>pelvis_pitch · passive_stiffness</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | pelvis_pitch |
+| Parameter | passive_stiffness |
+| Unit | N m/rad or N/m |
+| Meaning | Passive linear stiffness, with spring reference given separately. |
+| Source value | Not established |
+| Value used in this model | 0 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>pelvis_pitch · passive_damping</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | pelvis_pitch |
+| Parameter | passive_damping |
+| Unit | N m s/rad or N s/m |
+| Meaning | Nonnegative passive viscous coefficient. |
+| Source value | Not established |
+| Value used in this model | 0 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>pelvis_pitch · armature</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | pelvis_pitch |
+| Parameter | armature |
+| Unit | kg m^2 or kg |
+| Meaning | Additional generalized inertia; an engine/model parameter. |
+| Source value | Not established |
+| Value used in this model | 0 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>pelvis_pitch · spring_reference</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | pelvis_pitch |
+| Parameter | spring_reference |
+| Unit | rad or m |
+| Meaning | Native coordinate at zero passive spring force. |
+| Source value | Not established |
+| Value used in this model | 0 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>pelvis_pitch · limit_solver_reference</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | pelvis_pitch |
+| Parameter | limit_solver_reference |
+| Unit | engine units |
+| Meaning | Soft joint-limit solver reference parameters; not paw-contact material coefficients. |
+| Source value | Not established |
+| Value used in this model | [0.02, 1.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>pelvis_pitch · limit_solver_impedance</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | pelvis_pitch |
+| Parameter | limit_solver_impedance |
+| Unit | engine units |
+| Meaning | Soft joint-limit solver impedance parameters. |
+| Source value | Not established |
+| Value used in this model | [0.9, 0.95, 0.001, 0.5, 2.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>L_hip · position_in_body_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | L_hip |
+| Parameter | position_in_body_m |
+| Unit | m |
+| Meaning | Joint center in its owning body frame. |
+| Source value | Not established |
+| Value used in this model | [0.0, 0.0, 0.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>L_hip · axis_in_body</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | L_hip |
+| Parameter | axis_in_body |
+| Unit | 1 |
+| Meaning | Unit direction of rotation or translation in the body frame. |
+| Source value | Not established |
+| Value used in this model | [0.0, 0.0, 1.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>L_hip · range</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | L_hip |
+| Parameter | range |
+| Unit | rad or m |
+| Meaning | Lower and upper limit in native coordinates; anatomical plotting conventions are documented separately. |
+| Source value | Not established |
+| Value used in this model | [-2.8, -0.89] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>L_hip · passive_stiffness</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | L_hip |
+| Parameter | passive_stiffness |
+| Unit | N m/rad or N/m |
+| Meaning | Passive linear stiffness, with spring reference given separately. |
+| Source value | Not established |
+| Value used in this model | 0 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>L_hip · passive_damping</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | L_hip |
+| Parameter | passive_damping |
+| Unit | N m s/rad or N s/m |
+| Meaning | Nonnegative passive viscous coefficient. |
+| Source value | Not established |
+| Value used in this model | 0.001 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>L_hip · armature</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | L_hip |
+| Parameter | armature |
+| Unit | kg m^2 or kg |
+| Meaning | Additional generalized inertia; an engine/model parameter. |
+| Source value | Not established |
+| Value used in this model | 2e-06 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>L_hip · spring_reference</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | L_hip |
+| Parameter | spring_reference |
+| Unit | rad or m |
+| Meaning | Native coordinate at zero passive spring force. |
+| Source value | Not established |
+| Value used in this model | 0 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>L_hip · limit_solver_reference</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | L_hip |
+| Parameter | limit_solver_reference |
+| Unit | engine units |
+| Meaning | Soft joint-limit solver reference parameters; not paw-contact material coefficients. |
+| Source value | Not established |
+| Value used in this model | [0.003, 1.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>L_hip · limit_solver_impedance</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | L_hip |
+| Parameter | limit_solver_impedance |
+| Unit | engine units |
+| Meaning | Soft joint-limit solver impedance parameters. |
+| Source value | Not established |
+| Value used in this model | [0.99, 0.999, 0.001, 0.5, 2.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>L_knee · position_in_body_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | L_knee |
+| Parameter | position_in_body_m |
+| Unit | m |
+| Meaning | Joint center in its owning body frame. |
+| Source value | Not established |
+| Value used in this model | [0.0, 0.0, 0.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>L_knee · axis_in_body</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | L_knee |
+| Parameter | axis_in_body |
+| Unit | 1 |
+| Meaning | Unit direction of rotation or translation in the body frame. |
+| Source value | Not established |
+| Value used in this model | [0.0, 0.0, 1.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>L_knee · range</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | L_knee |
+| Parameter | range |
+| Unit | rad or m |
+| Meaning | Lower and upper limit in native coordinates; anatomical plotting conventions are documented separately. |
+| Source value | Not established |
+| Value used in this model | [-2.3, -0.55] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>L_knee · passive_stiffness</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | L_knee |
+| Parameter | passive_stiffness |
+| Unit | N m/rad or N/m |
+| Meaning | Passive linear stiffness, with spring reference given separately. |
+| Source value | Not established |
+| Value used in this model | 0 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>L_knee · passive_damping</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | L_knee |
+| Parameter | passive_damping |
+| Unit | N m s/rad or N s/m |
+| Meaning | Nonnegative passive viscous coefficient. |
+| Source value | Not established |
+| Value used in this model | 0.001 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>L_knee · armature</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | L_knee |
+| Parameter | armature |
+| Unit | kg m^2 or kg |
+| Meaning | Additional generalized inertia; an engine/model parameter. |
+| Source value | Not established |
+| Value used in this model | 2e-06 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>L_knee · spring_reference</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | L_knee |
+| Parameter | spring_reference |
+| Unit | rad or m |
+| Meaning | Native coordinate at zero passive spring force. |
+| Source value | Not established |
+| Value used in this model | 0 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>L_knee · limit_solver_reference</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | L_knee |
+| Parameter | limit_solver_reference |
+| Unit | engine units |
+| Meaning | Soft joint-limit solver reference parameters; not paw-contact material coefficients. |
+| Source value | Not established |
+| Value used in this model | [0.003, 1.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>L_knee · limit_solver_impedance</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | L_knee |
+| Parameter | limit_solver_impedance |
+| Unit | engine units |
+| Meaning | Soft joint-limit solver impedance parameters. |
+| Source value | Not established |
+| Value used in this model | [0.99, 0.999, 0.001, 0.5, 2.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>L_ankle · position_in_body_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | L_ankle |
+| Parameter | position_in_body_m |
+| Unit | m |
+| Meaning | Joint center in its owning body frame. |
+| Source value | Not established |
+| Value used in this model | [0.0, 0.0, 0.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>L_ankle · axis_in_body</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | L_ankle |
+| Parameter | axis_in_body |
+| Unit | 1 |
+| Meaning | Unit direction of rotation or translation in the body frame. |
+| Source value | Not established |
+| Value used in this model | [0.0, 0.0, 1.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>L_ankle · range</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | L_ankle |
+| Parameter | range |
+| Unit | rad or m |
+| Meaning | Lower and upper limit in native coordinates; anatomical plotting conventions are documented separately. |
+| Source value | Not established |
+| Value used in this model | [0.2, 1.95] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>L_ankle · passive_stiffness</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | L_ankle |
+| Parameter | passive_stiffness |
+| Unit | N m/rad or N/m |
+| Meaning | Passive linear stiffness, with spring reference given separately. |
+| Source value | Not established |
+| Value used in this model | 0 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>L_ankle · passive_damping</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | L_ankle |
+| Parameter | passive_damping |
+| Unit | N m s/rad or N s/m |
+| Meaning | Nonnegative passive viscous coefficient. |
+| Source value | Not established |
+| Value used in this model | 0.001 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>L_ankle · armature</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | L_ankle |
+| Parameter | armature |
+| Unit | kg m^2 or kg |
+| Meaning | Additional generalized inertia; an engine/model parameter. |
+| Source value | Not established |
+| Value used in this model | 2e-06 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>L_ankle · spring_reference</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | L_ankle |
+| Parameter | spring_reference |
+| Unit | rad or m |
+| Meaning | Native coordinate at zero passive spring force. |
+| Source value | Not established |
+| Value used in this model | 0 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>L_ankle · limit_solver_reference</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | L_ankle |
+| Parameter | limit_solver_reference |
+| Unit | engine units |
+| Meaning | Soft joint-limit solver reference parameters; not paw-contact material coefficients. |
+| Source value | Not established |
+| Value used in this model | [0.003, 1.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>L_ankle · limit_solver_impedance</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | L_ankle |
+| Parameter | limit_solver_impedance |
+| Unit | engine units |
+| Meaning | Soft joint-limit solver impedance parameters. |
+| Source value | Not established |
+| Value used in this model | [0.99, 0.999, 0.001, 0.5, 2.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>L_mtp · position_in_body_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | L_mtp |
+| Parameter | position_in_body_m |
+| Unit | m |
+| Meaning | Joint center in its owning body frame. |
+| Source value | Not established |
+| Value used in this model | [0.0, 0.0, 0.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>L_mtp · axis_in_body</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | L_mtp |
+| Parameter | axis_in_body |
+| Unit | 1 |
+| Meaning | Unit direction of rotation or translation in the body frame. |
+| Source value | Not established |
+| Value used in this model | [0.0, 0.0, 1.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>L_mtp · range</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | L_mtp |
+| Parameter | range |
+| Unit | rad or m |
+| Meaning | Lower and upper limit in native coordinates; anatomical plotting conventions are documented separately. |
+| Source value | Not established |
+| Value used in this model | [-0.498392, 1.8] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>L_mtp · passive_stiffness</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | L_mtp |
+| Parameter | passive_stiffness |
+| Unit | N m/rad or N/m |
+| Meaning | Passive linear stiffness, with spring reference given separately. |
+| Source value | Not established |
+| Value used in this model | 0.01 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>L_mtp · passive_damping</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | L_mtp |
+| Parameter | passive_damping |
+| Unit | N m s/rad or N s/m |
+| Meaning | Nonnegative passive viscous coefficient. |
+| Source value | Not established |
+| Value used in this model | 0.0005 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>L_mtp · armature</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | L_mtp |
+| Parameter | armature |
+| Unit | kg m^2 or kg |
+| Meaning | Additional generalized inertia; an engine/model parameter. |
+| Source value | Not established |
+| Value used in this model | 2e-06 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>L_mtp · spring_reference</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | L_mtp |
+| Parameter | spring_reference |
+| Unit | rad or m |
+| Meaning | Native coordinate at zero passive spring force. |
+| Source value | Not established |
+| Value used in this model | 0 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>L_mtp · limit_solver_reference</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | L_mtp |
+| Parameter | limit_solver_reference |
+| Unit | engine units |
+| Meaning | Soft joint-limit solver reference parameters; not paw-contact material coefficients. |
+| Source value | Not established |
+| Value used in this model | [0.003, 1.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>L_mtp · limit_solver_impedance</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | L_mtp |
+| Parameter | limit_solver_impedance |
+| Unit | engine units |
+| Meaning | Soft joint-limit solver impedance parameters. |
+| Source value | Not established |
+| Value used in this model | [0.99, 0.999, 0.001, 0.5, 2.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>R_hip · position_in_body_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | R_hip |
+| Parameter | position_in_body_m |
+| Unit | m |
+| Meaning | Joint center in its owning body frame. |
+| Source value | Not established |
+| Value used in this model | [0.0, 0.0, 0.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>R_hip · axis_in_body</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | R_hip |
+| Parameter | axis_in_body |
+| Unit | 1 |
+| Meaning | Unit direction of rotation or translation in the body frame. |
+| Source value | Not established |
+| Value used in this model | [0.0, 0.0, 1.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>R_hip · range</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | R_hip |
+| Parameter | range |
+| Unit | rad or m |
+| Meaning | Lower and upper limit in native coordinates; anatomical plotting conventions are documented separately. |
+| Source value | Not established |
+| Value used in this model | [-2.8, -1.05] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>R_hip · passive_stiffness</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | R_hip |
+| Parameter | passive_stiffness |
+| Unit | N m/rad or N/m |
+| Meaning | Passive linear stiffness, with spring reference given separately. |
+| Source value | Not established |
+| Value used in this model | 0 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>R_hip · passive_damping</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | R_hip |
+| Parameter | passive_damping |
+| Unit | N m s/rad or N s/m |
+| Meaning | Nonnegative passive viscous coefficient. |
+| Source value | Not established |
+| Value used in this model | 0.001 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>R_hip · armature</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | R_hip |
+| Parameter | armature |
+| Unit | kg m^2 or kg |
+| Meaning | Additional generalized inertia; an engine/model parameter. |
+| Source value | Not established |
+| Value used in this model | 2e-06 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>R_hip · spring_reference</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | R_hip |
+| Parameter | spring_reference |
+| Unit | rad or m |
+| Meaning | Native coordinate at zero passive spring force. |
+| Source value | Not established |
+| Value used in this model | 0 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>R_hip · limit_solver_reference</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | R_hip |
+| Parameter | limit_solver_reference |
+| Unit | engine units |
+| Meaning | Soft joint-limit solver reference parameters; not paw-contact material coefficients. |
+| Source value | Not established |
+| Value used in this model | [0.003, 1.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>R_hip · limit_solver_impedance</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | R_hip |
+| Parameter | limit_solver_impedance |
+| Unit | engine units |
+| Meaning | Soft joint-limit solver impedance parameters. |
+| Source value | Not established |
+| Value used in this model | [0.99, 0.999, 0.001, 0.5, 2.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>R_knee · position_in_body_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | R_knee |
+| Parameter | position_in_body_m |
+| Unit | m |
+| Meaning | Joint center in its owning body frame. |
+| Source value | Not established |
+| Value used in this model | [0.0, 0.0, 0.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>R_knee · axis_in_body</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | R_knee |
+| Parameter | axis_in_body |
+| Unit | 1 |
+| Meaning | Unit direction of rotation or translation in the body frame. |
+| Source value | Not established |
+| Value used in this model | [0.0, 0.0, 1.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>R_knee · range</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | R_knee |
+| Parameter | range |
+| Unit | rad or m |
+| Meaning | Lower and upper limit in native coordinates; anatomical plotting conventions are documented separately. |
+| Source value | Not established |
+| Value used in this model | [-2.3, -0.55] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>R_knee · passive_stiffness</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | R_knee |
+| Parameter | passive_stiffness |
+| Unit | N m/rad or N/m |
+| Meaning | Passive linear stiffness, with spring reference given separately. |
+| Source value | Not established |
+| Value used in this model | 0 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>R_knee · passive_damping</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | R_knee |
+| Parameter | passive_damping |
+| Unit | N m s/rad or N s/m |
+| Meaning | Nonnegative passive viscous coefficient. |
+| Source value | Not established |
+| Value used in this model | 0.001 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>R_knee · armature</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | R_knee |
+| Parameter | armature |
+| Unit | kg m^2 or kg |
+| Meaning | Additional generalized inertia; an engine/model parameter. |
+| Source value | Not established |
+| Value used in this model | 2e-06 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>R_knee · spring_reference</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | R_knee |
+| Parameter | spring_reference |
+| Unit | rad or m |
+| Meaning | Native coordinate at zero passive spring force. |
+| Source value | Not established |
+| Value used in this model | 0 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>R_knee · limit_solver_reference</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | R_knee |
+| Parameter | limit_solver_reference |
+| Unit | engine units |
+| Meaning | Soft joint-limit solver reference parameters; not paw-contact material coefficients. |
+| Source value | Not established |
+| Value used in this model | [0.003, 1.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>R_knee · limit_solver_impedance</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | R_knee |
+| Parameter | limit_solver_impedance |
+| Unit | engine units |
+| Meaning | Soft joint-limit solver impedance parameters. |
+| Source value | Not established |
+| Value used in this model | [0.99, 0.999, 0.001, 0.5, 2.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>R_ankle · position_in_body_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | R_ankle |
+| Parameter | position_in_body_m |
+| Unit | m |
+| Meaning | Joint center in its owning body frame. |
+| Source value | Not established |
+| Value used in this model | [0.0, 0.0, 0.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>R_ankle · axis_in_body</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | R_ankle |
+| Parameter | axis_in_body |
+| Unit | 1 |
+| Meaning | Unit direction of rotation or translation in the body frame. |
+| Source value | Not established |
+| Value used in this model | [0.0, 0.0, 1.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>R_ankle · range</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | R_ankle |
+| Parameter | range |
+| Unit | rad or m |
+| Meaning | Lower and upper limit in native coordinates; anatomical plotting conventions are documented separately. |
+| Source value | Not established |
+| Value used in this model | [0.2, 1.95] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>R_ankle · passive_stiffness</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | R_ankle |
+| Parameter | passive_stiffness |
+| Unit | N m/rad or N/m |
+| Meaning | Passive linear stiffness, with spring reference given separately. |
+| Source value | Not established |
+| Value used in this model | 0 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>R_ankle · passive_damping</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | R_ankle |
+| Parameter | passive_damping |
+| Unit | N m s/rad or N s/m |
+| Meaning | Nonnegative passive viscous coefficient. |
+| Source value | Not established |
+| Value used in this model | 0.001 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>R_ankle · armature</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | R_ankle |
+| Parameter | armature |
+| Unit | kg m^2 or kg |
+| Meaning | Additional generalized inertia; an engine/model parameter. |
+| Source value | Not established |
+| Value used in this model | 2e-06 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>R_ankle · spring_reference</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | R_ankle |
+| Parameter | spring_reference |
+| Unit | rad or m |
+| Meaning | Native coordinate at zero passive spring force. |
+| Source value | Not established |
+| Value used in this model | 0 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>R_ankle · limit_solver_reference</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | R_ankle |
+| Parameter | limit_solver_reference |
+| Unit | engine units |
+| Meaning | Soft joint-limit solver reference parameters; not paw-contact material coefficients. |
+| Source value | Not established |
+| Value used in this model | [0.003, 1.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>R_ankle · limit_solver_impedance</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | R_ankle |
+| Parameter | limit_solver_impedance |
+| Unit | engine units |
+| Meaning | Soft joint-limit solver impedance parameters. |
+| Source value | Not established |
+| Value used in this model | [0.99, 0.999, 0.001, 0.5, 2.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>R_mtp · position_in_body_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | R_mtp |
+| Parameter | position_in_body_m |
+| Unit | m |
+| Meaning | Joint center in its owning body frame. |
+| Source value | Not established |
+| Value used in this model | [0.0, 0.0, 0.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>R_mtp · axis_in_body</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | R_mtp |
+| Parameter | axis_in_body |
+| Unit | 1 |
+| Meaning | Unit direction of rotation or translation in the body frame. |
+| Source value | Not established |
+| Value used in this model | [0.0, 0.0, 1.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>R_mtp · range</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | R_mtp |
+| Parameter | range |
+| Unit | rad or m |
+| Meaning | Lower and upper limit in native coordinates; anatomical plotting conventions are documented separately. |
+| Source value | Not established |
+| Value used in this model | [-0.498392, 1.8] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>R_mtp · passive_stiffness</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | R_mtp |
+| Parameter | passive_stiffness |
+| Unit | N m/rad or N/m |
+| Meaning | Passive linear stiffness, with spring reference given separately. |
+| Source value | Not established |
+| Value used in this model | 0.01 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>R_mtp · passive_damping</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | R_mtp |
+| Parameter | passive_damping |
+| Unit | N m s/rad or N s/m |
+| Meaning | Nonnegative passive viscous coefficient. |
+| Source value | Not established |
+| Value used in this model | 0.0005 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>R_mtp · armature</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | R_mtp |
+| Parameter | armature |
+| Unit | kg m^2 or kg |
+| Meaning | Additional generalized inertia; an engine/model parameter. |
+| Source value | Not established |
+| Value used in this model | 2e-06 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>R_mtp · spring_reference</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | R_mtp |
+| Parameter | spring_reference |
+| Unit | rad or m |
+| Meaning | Native coordinate at zero passive spring force. |
+| Source value | Not established |
+| Value used in this model | 0 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>R_mtp · limit_solver_reference</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | R_mtp |
+| Parameter | limit_solver_reference |
+| Unit | engine units |
+| Meaning | Soft joint-limit solver reference parameters; not paw-contact material coefficients. |
+| Source value | Not established |
+| Value used in this model | [0.003, 1.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>R_mtp · limit_solver_impedance</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | R_mtp |
+| Parameter | limit_solver_impedance |
+| Unit | engine units |
+| Meaning | Soft joint-limit solver impedance parameters. |
+| Source value | Not established |
+| Value used in this model | [0.99, 0.999, 0.001, 0.5, 2.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>FL_scapulothoracic · position_in_body_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_scapulothoracic |
+| Parameter | position_in_body_m |
+| Unit | m |
+| Meaning | Joint center in its owning body frame. |
+| Source value | Not established |
+| Value used in this model | [0.006041293692496915, 0.0057710941954443335, -4.16527781698493e-18] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>FL_scapulothoracic · axis_in_body</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_scapulothoracic |
+| Parameter | axis_in_body |
+| Unit | 1 |
+| Meaning | Unit direction of rotation or translation in the body frame. |
+| Source value | Not established |
+| Value used in this model | [-3.16261890488892e-16, 1.9589193577125763e-16, 0.9999999999999993] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>FL_scapulothoracic · range</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_scapulothoracic |
+| Parameter | range |
+| Unit | rad or m |
+| Meaning | Lower and upper limit in native coordinates; anatomical plotting conventions are documented separately. |
+| Source value | Not established |
+| Value used in this model | [-0.8, 0.8] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>FL_scapulothoracic · passive_stiffness</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_scapulothoracic |
+| Parameter | passive_stiffness |
+| Unit | N m/rad or N/m |
+| Meaning | Passive linear stiffness, with spring reference given separately. |
+| Source value | Not established |
+| Value used in this model | 1.3254638 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>FL_scapulothoracic · passive_damping</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_scapulothoracic |
+| Parameter | passive_damping |
+| Unit | N m s/rad or N s/m |
+| Meaning | Nonnegative passive viscous coefficient. |
+| Source value | Not established |
+| Value used in this model | 0.02683806 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>FL_scapulothoracic · armature</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_scapulothoracic |
+| Parameter | armature |
+| Unit | kg m^2 or kg |
+| Meaning | Additional generalized inertia; an engine/model parameter. |
+| Source value | Not established |
+| Value used in this model | 2e-06 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>FL_scapulothoracic · spring_reference</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_scapulothoracic |
+| Parameter | spring_reference |
+| Unit | rad or m |
+| Meaning | Native coordinate at zero passive spring force. |
+| Source value | Not established |
+| Value used in this model | 0.11642999 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>FL_scapulothoracic · limit_solver_reference</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_scapulothoracic |
+| Parameter | limit_solver_reference |
+| Unit | engine units |
+| Meaning | Soft joint-limit solver reference parameters; not paw-contact material coefficients. |
+| Source value | Not established |
+| Value used in this model | [0.003, 1.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>FL_scapulothoracic · limit_solver_impedance</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_scapulothoracic |
+| Parameter | limit_solver_impedance |
+| Unit | engine units |
+| Meaning | Soft joint-limit solver impedance parameters. |
+| Source value | Not established |
+| Value used in this model | [0.99, 0.999, 0.001, 0.5, 2.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>FL_shoulder · position_in_body_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_shoulder |
+| Parameter | position_in_body_m |
+| Unit | m |
+| Meaning | Joint center in its owning body frame. |
+| Source value | Not established |
+| Value used in this model | [0.0, 0.0, 0.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>FL_shoulder · axis_in_body</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_shoulder |
+| Parameter | axis_in_body |
+| Unit | 1 |
+| Meaning | Unit direction of rotation or translation in the body frame. |
+| Source value | Not established |
+| Value used in this model | [0.0, 0.0, 1.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>FL_shoulder · range</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_shoulder |
+| Parameter | range |
+| Unit | rad or m |
+| Meaning | Lower and upper limit in native coordinates; anatomical plotting conventions are documented separately. |
+| Source value | Not established |
+| Value used in this model | [-1.8766967294087722, -0.7214530320239354] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>FL_shoulder · passive_stiffness</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_shoulder |
+| Parameter | passive_stiffness |
+| Unit | N m/rad or N/m |
+| Meaning | Passive linear stiffness, with spring reference given separately. |
+| Source value | Not established |
+| Value used in this model | 0 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>FL_shoulder · passive_damping</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_shoulder |
+| Parameter | passive_damping |
+| Unit | N m s/rad or N s/m |
+| Meaning | Nonnegative passive viscous coefficient. |
+| Source value | Not established |
+| Value used in this model | 0.001 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>FL_shoulder · armature</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_shoulder |
+| Parameter | armature |
+| Unit | kg m^2 or kg |
+| Meaning | Additional generalized inertia; an engine/model parameter. |
+| Source value | Not established |
+| Value used in this model | 2e-06 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>FL_shoulder · spring_reference</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_shoulder |
+| Parameter | spring_reference |
+| Unit | rad or m |
+| Meaning | Native coordinate at zero passive spring force. |
+| Source value | Not established |
+| Value used in this model | 0 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>FL_shoulder · limit_solver_reference</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_shoulder |
+| Parameter | limit_solver_reference |
+| Unit | engine units |
+| Meaning | Soft joint-limit solver reference parameters; not paw-contact material coefficients. |
+| Source value | Not established |
+| Value used in this model | [0.003, 1.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>FL_shoulder · limit_solver_impedance</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_shoulder |
+| Parameter | limit_solver_impedance |
+| Unit | engine units |
+| Meaning | Soft joint-limit solver impedance parameters. |
+| Source value | Not established |
+| Value used in this model | [0.99, 0.999, 0.001, 0.5, 2.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>FL_elbow · position_in_body_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_elbow |
+| Parameter | position_in_body_m |
+| Unit | m |
+| Meaning | Joint center in its owning body frame. |
+| Source value | Not established |
+| Value used in this model | [0.0, 0.0, 0.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>FL_elbow · axis_in_body</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_elbow |
+| Parameter | axis_in_body |
+| Unit | 1 |
+| Meaning | Unit direction of rotation or translation in the body frame. |
+| Source value | Not established |
+| Value used in this model | [0.0, 0.0, 1.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>FL_elbow · range</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_elbow |
+| Parameter | range |
+| Unit | rad or m |
+| Meaning | Lower and upper limit in native coordinates; anatomical plotting conventions are documented separately. |
+| Source value | Not established |
+| Value used in this model | [0.34375538143410944, 2.020734489790133] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>FL_elbow · passive_stiffness</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_elbow |
+| Parameter | passive_stiffness |
+| Unit | N m/rad or N/m |
+| Meaning | Passive linear stiffness, with spring reference given separately. |
+| Source value | Not established |
+| Value used in this model | 0 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>FL_elbow · passive_damping</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_elbow |
+| Parameter | passive_damping |
+| Unit | N m s/rad or N s/m |
+| Meaning | Nonnegative passive viscous coefficient. |
+| Source value | Not established |
+| Value used in this model | 0.001 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>FL_elbow · armature</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_elbow |
+| Parameter | armature |
+| Unit | kg m^2 or kg |
+| Meaning | Additional generalized inertia; an engine/model parameter. |
+| Source value | Not established |
+| Value used in this model | 2e-06 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>FL_elbow · spring_reference</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_elbow |
+| Parameter | spring_reference |
+| Unit | rad or m |
+| Meaning | Native coordinate at zero passive spring force. |
+| Source value | Not established |
+| Value used in this model | 0 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>FL_elbow · limit_solver_reference</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_elbow |
+| Parameter | limit_solver_reference |
+| Unit | engine units |
+| Meaning | Soft joint-limit solver reference parameters; not paw-contact material coefficients. |
+| Source value | Not established |
+| Value used in this model | [0.003, 1.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>FL_elbow · limit_solver_impedance</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_elbow |
+| Parameter | limit_solver_impedance |
+| Unit | engine units |
+| Meaning | Soft joint-limit solver impedance parameters. |
+| Source value | Not established |
+| Value used in this model | [0.99, 0.999, 0.001, 0.5, 2.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>FL_wrist · position_in_body_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_wrist |
+| Parameter | position_in_body_m |
+| Unit | m |
+| Meaning | Joint center in its owning body frame. |
+| Source value | Not established |
+| Value used in this model | [0.0, 0.0, 0.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>FL_wrist · axis_in_body</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_wrist |
+| Parameter | axis_in_body |
+| Unit | 1 |
+| Meaning | Unit direction of rotation or translation in the body frame. |
+| Source value | Not established |
+| Value used in this model | [0.0, 0.0, 1.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>FL_wrist · range</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_wrist |
+| Parameter | range |
+| Unit | rad or m |
+| Meaning | Lower and upper limit in native coordinates; anatomical plotting conventions are documented separately. |
+| Source value | Not established |
+| Value used in this model | [-1.1689410980761448, 0.5241615878217658] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>FL_wrist · passive_stiffness</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_wrist |
+| Parameter | passive_stiffness |
+| Unit | N m/rad or N/m |
+| Meaning | Passive linear stiffness, with spring reference given separately. |
+| Source value | Not established |
+| Value used in this model | 0 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>FL_wrist · passive_damping</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_wrist |
+| Parameter | passive_damping |
+| Unit | N m s/rad or N s/m |
+| Meaning | Nonnegative passive viscous coefficient. |
+| Source value | Not established |
+| Value used in this model | 0.0049486 |
+| What changed and why | No verified source value is available for direct comparison. Distal forelimb passive damping was calibrated to improve mechanical behavior. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>FL_wrist · armature</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_wrist |
+| Parameter | armature |
+| Unit | kg m^2 or kg |
+| Meaning | Additional generalized inertia; an engine/model parameter. |
+| Source value | Not established |
+| Value used in this model | 2e-06 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>FL_wrist · spring_reference</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_wrist |
+| Parameter | spring_reference |
+| Unit | rad or m |
+| Meaning | Native coordinate at zero passive spring force. |
+| Source value | Not established |
+| Value used in this model | 0 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>FL_wrist · limit_solver_reference</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_wrist |
+| Parameter | limit_solver_reference |
+| Unit | engine units |
+| Meaning | Soft joint-limit solver reference parameters; not paw-contact material coefficients. |
+| Source value | Not established |
+| Value used in this model | [0.003, 1.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>FL_wrist · limit_solver_impedance</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_wrist |
+| Parameter | limit_solver_impedance |
+| Unit | engine units |
+| Meaning | Soft joint-limit solver impedance parameters. |
+| Source value | Not established |
+| Value used in this model | [0.99, 0.999, 0.001, 0.5, 2.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>FL_mcp · position_in_body_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_mcp |
+| Parameter | position_in_body_m |
+| Unit | m |
+| Meaning | Joint center in its owning body frame. |
+| Source value | Not established |
+| Value used in this model | [0.0, 0.0, 0.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>FL_mcp · axis_in_body</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_mcp |
+| Parameter | axis_in_body |
+| Unit | 1 |
+| Meaning | Unit direction of rotation or translation in the body frame. |
+| Source value | Not established |
+| Value used in this model | [0.0, 0.0, 1.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>FL_mcp · range</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_mcp |
+| Parameter | range |
+| Unit | rad or m |
+| Meaning | Lower and upper limit in native coordinates; anatomical plotting conventions are documented separately. |
+| Source value | Not established |
+| Value used in this model | [-0.5902191353889319, 1.3791475675996363] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>FL_mcp · passive_stiffness</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_mcp |
+| Parameter | passive_stiffness |
+| Unit | N m/rad or N/m |
+| Meaning | Passive linear stiffness, with spring reference given separately. |
+| Source value | Not established |
+| Value used in this model | 0.12982562 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>FL_mcp · passive_damping</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_mcp |
+| Parameter | passive_damping |
+| Unit | N m s/rad or N s/m |
+| Meaning | Nonnegative passive viscous coefficient. |
+| Source value | Not established |
+| Value used in this model | 0.010005757 |
+| What changed and why | No verified source value is available for direct comparison. Distal forelimb passive damping was calibrated to improve mechanical behavior. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>FL_mcp · armature</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_mcp |
+| Parameter | armature |
+| Unit | kg m^2 or kg |
+| Meaning | Additional generalized inertia; an engine/model parameter. |
+| Source value | Not established |
+| Value used in this model | 2e-06 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>FL_mcp · spring_reference</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_mcp |
+| Parameter | spring_reference |
+| Unit | rad or m |
+| Meaning | Native coordinate at zero passive spring force. |
+| Source value | Not established |
+| Value used in this model | -0.01970531 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>FL_mcp · limit_solver_reference</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_mcp |
+| Parameter | limit_solver_reference |
+| Unit | engine units |
+| Meaning | Soft joint-limit solver reference parameters; not paw-contact material coefficients. |
+| Source value | Not established |
+| Value used in this model | [0.003, 1.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>FL_mcp · limit_solver_impedance</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_mcp |
+| Parameter | limit_solver_impedance |
+| Unit | engine units |
+| Meaning | Soft joint-limit solver impedance parameters. |
+| Source value | Not established |
+| Value used in this model | [0.99, 0.999, 0.001, 0.5, 2.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>FR_scapulothoracic · position_in_body_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FR_scapulothoracic |
+| Parameter | position_in_body_m |
+| Unit | m |
+| Meaning | Joint center in its owning body frame. |
+| Source value | Not established |
+| Value used in this model | [0.006041293692496915, 0.0057710941954443335, -4.16527781698493e-18] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>FR_scapulothoracic · axis_in_body</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FR_scapulothoracic |
+| Parameter | axis_in_body |
+| Unit | 1 |
+| Meaning | Unit direction of rotation or translation in the body frame. |
+| Source value | Not established |
+| Value used in this model | [-3.16261890488892e-16, 1.9589193577125763e-16, 0.9999999999999993] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>FR_scapulothoracic · range</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FR_scapulothoracic |
+| Parameter | range |
+| Unit | rad or m |
+| Meaning | Lower and upper limit in native coordinates; anatomical plotting conventions are documented separately. |
+| Source value | Not established |
+| Value used in this model | [-0.8, 0.8] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>FR_scapulothoracic · passive_stiffness</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FR_scapulothoracic |
+| Parameter | passive_stiffness |
+| Unit | N m/rad or N/m |
+| Meaning | Passive linear stiffness, with spring reference given separately. |
+| Source value | Not established |
+| Value used in this model | 1.3254638 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>FR_scapulothoracic · passive_damping</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FR_scapulothoracic |
+| Parameter | passive_damping |
+| Unit | N m s/rad or N s/m |
+| Meaning | Nonnegative passive viscous coefficient. |
+| Source value | Not established |
+| Value used in this model | 0.02683806 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>FR_scapulothoracic · armature</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FR_scapulothoracic |
+| Parameter | armature |
+| Unit | kg m^2 or kg |
+| Meaning | Additional generalized inertia; an engine/model parameter. |
+| Source value | Not established |
+| Value used in this model | 2e-06 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>FR_scapulothoracic · spring_reference</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FR_scapulothoracic |
+| Parameter | spring_reference |
+| Unit | rad or m |
+| Meaning | Native coordinate at zero passive spring force. |
+| Source value | Not established |
+| Value used in this model | 0.11642999 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>FR_scapulothoracic · limit_solver_reference</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FR_scapulothoracic |
+| Parameter | limit_solver_reference |
+| Unit | engine units |
+| Meaning | Soft joint-limit solver reference parameters; not paw-contact material coefficients. |
+| Source value | Not established |
+| Value used in this model | [0.003, 1.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>FR_scapulothoracic · limit_solver_impedance</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FR_scapulothoracic |
+| Parameter | limit_solver_impedance |
+| Unit | engine units |
+| Meaning | Soft joint-limit solver impedance parameters. |
+| Source value | Not established |
+| Value used in this model | [0.99, 0.999, 0.001, 0.5, 2.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>FR_shoulder · position_in_body_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FR_shoulder |
+| Parameter | position_in_body_m |
+| Unit | m |
+| Meaning | Joint center in its owning body frame. |
+| Source value | Not established |
+| Value used in this model | [0.0, 0.0, 0.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>FR_shoulder · axis_in_body</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FR_shoulder |
+| Parameter | axis_in_body |
+| Unit | 1 |
+| Meaning | Unit direction of rotation or translation in the body frame. |
+| Source value | Not established |
+| Value used in this model | [0.0, 0.0, 1.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>FR_shoulder · range</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FR_shoulder |
+| Parameter | range |
+| Unit | rad or m |
+| Meaning | Lower and upper limit in native coordinates; anatomical plotting conventions are documented separately. |
+| Source value | Not established |
+| Value used in this model | [-1.8766967294087722, -0.7214530320239354] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>FR_shoulder · passive_stiffness</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FR_shoulder |
+| Parameter | passive_stiffness |
+| Unit | N m/rad or N/m |
+| Meaning | Passive linear stiffness, with spring reference given separately. |
+| Source value | Not established |
+| Value used in this model | 0 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>FR_shoulder · passive_damping</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FR_shoulder |
+| Parameter | passive_damping |
+| Unit | N m s/rad or N s/m |
+| Meaning | Nonnegative passive viscous coefficient. |
+| Source value | Not established |
+| Value used in this model | 0.001 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>FR_shoulder · armature</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FR_shoulder |
+| Parameter | armature |
+| Unit | kg m^2 or kg |
+| Meaning | Additional generalized inertia; an engine/model parameter. |
+| Source value | Not established |
+| Value used in this model | 2e-06 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>FR_shoulder · spring_reference</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FR_shoulder |
+| Parameter | spring_reference |
+| Unit | rad or m |
+| Meaning | Native coordinate at zero passive spring force. |
+| Source value | Not established |
+| Value used in this model | 0 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>FR_shoulder · limit_solver_reference</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FR_shoulder |
+| Parameter | limit_solver_reference |
+| Unit | engine units |
+| Meaning | Soft joint-limit solver reference parameters; not paw-contact material coefficients. |
+| Source value | Not established |
+| Value used in this model | [0.003, 1.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>FR_shoulder · limit_solver_impedance</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FR_shoulder |
+| Parameter | limit_solver_impedance |
+| Unit | engine units |
+| Meaning | Soft joint-limit solver impedance parameters. |
+| Source value | Not established |
+| Value used in this model | [0.99, 0.999, 0.001, 0.5, 2.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>FR_elbow · position_in_body_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FR_elbow |
+| Parameter | position_in_body_m |
+| Unit | m |
+| Meaning | Joint center in its owning body frame. |
+| Source value | Not established |
+| Value used in this model | [0.0, 0.0, 0.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>FR_elbow · axis_in_body</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FR_elbow |
+| Parameter | axis_in_body |
+| Unit | 1 |
+| Meaning | Unit direction of rotation or translation in the body frame. |
+| Source value | Not established |
+| Value used in this model | [0.0, 0.0, 1.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>FR_elbow · range</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FR_elbow |
+| Parameter | range |
+| Unit | rad or m |
+| Meaning | Lower and upper limit in native coordinates; anatomical plotting conventions are documented separately. |
+| Source value | Not established |
+| Value used in this model | [0.34375538143410944, 2.020734489790133] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>FR_elbow · passive_stiffness</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FR_elbow |
+| Parameter | passive_stiffness |
+| Unit | N m/rad or N/m |
+| Meaning | Passive linear stiffness, with spring reference given separately. |
+| Source value | Not established |
+| Value used in this model | 0 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>FR_elbow · passive_damping</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FR_elbow |
+| Parameter | passive_damping |
+| Unit | N m s/rad or N s/m |
+| Meaning | Nonnegative passive viscous coefficient. |
+| Source value | Not established |
+| Value used in this model | 0.001 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>FR_elbow · armature</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FR_elbow |
+| Parameter | armature |
+| Unit | kg m^2 or kg |
+| Meaning | Additional generalized inertia; an engine/model parameter. |
+| Source value | Not established |
+| Value used in this model | 2e-06 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>FR_elbow · spring_reference</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FR_elbow |
+| Parameter | spring_reference |
+| Unit | rad or m |
+| Meaning | Native coordinate at zero passive spring force. |
+| Source value | Not established |
+| Value used in this model | 0 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>FR_elbow · limit_solver_reference</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FR_elbow |
+| Parameter | limit_solver_reference |
+| Unit | engine units |
+| Meaning | Soft joint-limit solver reference parameters; not paw-contact material coefficients. |
+| Source value | Not established |
+| Value used in this model | [0.003, 1.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>FR_elbow · limit_solver_impedance</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FR_elbow |
+| Parameter | limit_solver_impedance |
+| Unit | engine units |
+| Meaning | Soft joint-limit solver impedance parameters. |
+| Source value | Not established |
+| Value used in this model | [0.99, 0.999, 0.001, 0.5, 2.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>FR_wrist · position_in_body_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FR_wrist |
+| Parameter | position_in_body_m |
+| Unit | m |
+| Meaning | Joint center in its owning body frame. |
+| Source value | Not established |
+| Value used in this model | [0.0, 0.0, 0.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>FR_wrist · axis_in_body</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FR_wrist |
+| Parameter | axis_in_body |
+| Unit | 1 |
+| Meaning | Unit direction of rotation or translation in the body frame. |
+| Source value | Not established |
+| Value used in this model | [0.0, 0.0, 1.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>FR_wrist · range</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FR_wrist |
+| Parameter | range |
+| Unit | rad or m |
+| Meaning | Lower and upper limit in native coordinates; anatomical plotting conventions are documented separately. |
+| Source value | Not established |
+| Value used in this model | [-1.1689410980761448, 0.5241615878217658] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>FR_wrist · passive_stiffness</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FR_wrist |
+| Parameter | passive_stiffness |
+| Unit | N m/rad or N/m |
+| Meaning | Passive linear stiffness, with spring reference given separately. |
+| Source value | Not established |
+| Value used in this model | 0 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>FR_wrist · passive_damping</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FR_wrist |
+| Parameter | passive_damping |
+| Unit | N m s/rad or N s/m |
+| Meaning | Nonnegative passive viscous coefficient. |
+| Source value | Not established |
+| Value used in this model | 0.0049486 |
+| What changed and why | No verified source value is available for direct comparison. Distal forelimb passive damping was calibrated to improve mechanical behavior. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>FR_wrist · armature</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FR_wrist |
+| Parameter | armature |
+| Unit | kg m^2 or kg |
+| Meaning | Additional generalized inertia; an engine/model parameter. |
+| Source value | Not established |
+| Value used in this model | 2e-06 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>FR_wrist · spring_reference</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FR_wrist |
+| Parameter | spring_reference |
+| Unit | rad or m |
+| Meaning | Native coordinate at zero passive spring force. |
+| Source value | Not established |
+| Value used in this model | 0 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>FR_wrist · limit_solver_reference</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FR_wrist |
+| Parameter | limit_solver_reference |
+| Unit | engine units |
+| Meaning | Soft joint-limit solver reference parameters; not paw-contact material coefficients. |
+| Source value | Not established |
+| Value used in this model | [0.003, 1.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>FR_wrist · limit_solver_impedance</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FR_wrist |
+| Parameter | limit_solver_impedance |
+| Unit | engine units |
+| Meaning | Soft joint-limit solver impedance parameters. |
+| Source value | Not established |
+| Value used in this model | [0.99, 0.999, 0.001, 0.5, 2.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>FR_mcp · position_in_body_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FR_mcp |
+| Parameter | position_in_body_m |
+| Unit | m |
+| Meaning | Joint center in its owning body frame. |
+| Source value | Not established |
+| Value used in this model | [0.0, 0.0, 0.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>FR_mcp · axis_in_body</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FR_mcp |
+| Parameter | axis_in_body |
+| Unit | 1 |
+| Meaning | Unit direction of rotation or translation in the body frame. |
+| Source value | Not established |
+| Value used in this model | [0.0, 0.0, 1.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>FR_mcp · range</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FR_mcp |
+| Parameter | range |
+| Unit | rad or m |
+| Meaning | Lower and upper limit in native coordinates; anatomical plotting conventions are documented separately. |
+| Source value | Not established |
+| Value used in this model | [-0.5902191353889319, 1.3791475675996363] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>FR_mcp · passive_stiffness</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FR_mcp |
+| Parameter | passive_stiffness |
+| Unit | N m/rad or N/m |
+| Meaning | Passive linear stiffness, with spring reference given separately. |
+| Source value | Not established |
+| Value used in this model | 0.12982562 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>FR_mcp · passive_damping</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FR_mcp |
+| Parameter | passive_damping |
+| Unit | N m s/rad or N s/m |
+| Meaning | Nonnegative passive viscous coefficient. |
+| Source value | Not established |
+| Value used in this model | 0.010005757 |
+| What changed and why | No verified source value is available for direct comparison. Distal forelimb passive damping was calibrated to improve mechanical behavior. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>FR_mcp · armature</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FR_mcp |
+| Parameter | armature |
+| Unit | kg m^2 or kg |
+| Meaning | Additional generalized inertia; an engine/model parameter. |
+| Source value | Not established |
+| Value used in this model | 2e-06 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>FR_mcp · spring_reference</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FR_mcp |
+| Parameter | spring_reference |
+| Unit | rad or m |
+| Meaning | Native coordinate at zero passive spring force. |
+| Source value | Not established |
+| Value used in this model | -0.01970531 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>FR_mcp · limit_solver_reference</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FR_mcp |
+| Parameter | limit_solver_reference |
+| Unit | engine units |
+| Meaning | Soft joint-limit solver reference parameters; not paw-contact material coefficients. |
+| Source value | Not established |
+| Value used in this model | [0.003, 1.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>FR_mcp · limit_solver_impedance</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FR_mcp |
+| Parameter | limit_solver_impedance |
+| Unit | engine units |
+| Meaning | Soft joint-limit solver impedance parameters. |
+| Source value | Not established |
+| Value used in this model | [0.99, 0.999, 0.001, 0.5, 2.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>

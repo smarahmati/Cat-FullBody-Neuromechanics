@@ -4,29 +4,244 @@
 
 [Back to parameter guide](../parameter_tables.md)
 
-| Object | Applied initial value |
+Each entry contains its values, units, meaning and source information. Select an entry to read all fields.
+
+<details>
+<summary>L_paw_pad0 · [0.0, 0.0]</summary>
+
+| Field | Value |
 | --- | --- |
-| L_paw_pad0 | [0.0, 0.0] |
-| L_paw_pad1 | [0.0, 0.0] |
-| L_paw_pad2 | [0.0, 0.0] |
-| L_paw_pad3 | [0.0, 0.0] |
-| L_paw_pad4 | [0.0, 0.0] |
-| L_paw_pad5 | [0.0, 0.0] |
-| R_paw_pad0 | [0.0, 0.0] |
-| R_paw_pad1 | [0.0, 0.0] |
-| R_paw_pad2 | [-6.625154927893859e-05, -9.836656344473204e-19] |
-| R_paw_pad3 | [-6.625154898795637e-05, -9.836656344473204e-19] |
-| R_paw_pad4 | [0.0006065666878787488, -1.7253743856456664e-18] |
-| R_paw_pad5 | [0.0006065666892054754, -1.7253743856456664e-18] |
-| FL_contactpad0 | [0.0, 0.0] |
-| FL_contactpad1 | [0.0, 0.0] |
-| FL_contactpad2 | [-0.00023791809765974514, -2.654916342542892e-17] |
-| FL_contactpad3 | [-0.0002379180976599318, -2.6549163425428512e-17] |
-| FL_contactpad4 | [7.091345942516367e-05, -3.3989750215567644e-17] |
-| FL_contactpad5 | [7.091345788102e-05, -3.398975021556764e-17] |
-| FR_contactpad0 | [0.0, 0.0] |
-| FR_contactpad1 | [0.0, 0.0] |
-| FR_contactpad2 | [0.0, 0.0] |
-| FR_contactpad3 | [0.0, 0.0] |
-| FR_contactpad4 | [3.6106912332098414e-05, 0.0] |
-| FR_contactpad5 | [3.6106911690813815e-05, 0.0] |
+| Object | L_paw_pad0 |
+| Applied initial value | [0.0, 0.0] |
+
+</details>
+
+<details>
+<summary>L_paw_pad1 · [0.0, 0.0]</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | L_paw_pad1 |
+| Applied initial value | [0.0, 0.0] |
+
+</details>
+
+<details>
+<summary>L_paw_pad2 · [0.0, 0.0]</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | L_paw_pad2 |
+| Applied initial value | [0.0, 0.0] |
+
+</details>
+
+<details>
+<summary>L_paw_pad3 · [0.0, 0.0]</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | L_paw_pad3 |
+| Applied initial value | [0.0, 0.0] |
+
+</details>
+
+<details>
+<summary>L_paw_pad4 · [0.0, 0.0]</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | L_paw_pad4 |
+| Applied initial value | [0.0, 0.0] |
+
+</details>
+
+<details>
+<summary>L_paw_pad5 · [0.0, 0.0]</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | L_paw_pad5 |
+| Applied initial value | [0.0, 0.0] |
+
+</details>
+
+<details>
+<summary>R_paw_pad0 · [0.0, 0.0]</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | R_paw_pad0 |
+| Applied initial value | [0.0, 0.0] |
+
+</details>
+
+<details>
+<summary>R_paw_pad1 · [0.0, 0.0]</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | R_paw_pad1 |
+| Applied initial value | [0.0, 0.0] |
+
+</details>
+
+<details>
+<summary>R_paw_pad2 · [-6.625154927893859e-05, -9.836656344473204e-19]</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | R_paw_pad2 |
+| Applied initial value | [-6.625154927893859e-05, -9.836656344473204e-19] |
+
+</details>
+
+<details>
+<summary>R_paw_pad3 · [-6.625154898795637e-05, -9.836656344473204e-19]</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | R_paw_pad3 |
+| Applied initial value | [-6.625154898795637e-05, -9.836656344473204e-19] |
+
+</details>
+
+<details>
+<summary>R_paw_pad4 · [0.0006065666878787488, -1.7253743856456664e-18]</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | R_paw_pad4 |
+| Applied initial value | [0.0006065666878787488, -1.7253743856456664e-18] |
+
+</details>
+
+<details>
+<summary>R_paw_pad5 · [0.0006065666892054754, -1.7253743856456664e-18]</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | R_paw_pad5 |
+| Applied initial value | [0.0006065666892054754, -1.7253743856456664e-18] |
+
+</details>
+
+<details>
+<summary>FL_contactpad0 · [0.0, 0.0]</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_contactpad0 |
+| Applied initial value | [0.0, 0.0] |
+
+</details>
+
+<details>
+<summary>FL_contactpad1 · [0.0, 0.0]</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_contactpad1 |
+| Applied initial value | [0.0, 0.0] |
+
+</details>
+
+<details>
+<summary>FL_contactpad2 · [-0.00023791809765974514, -2.654916342542892e-17]</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_contactpad2 |
+| Applied initial value | [-0.00023791809765974514, -2.654916342542892e-17] |
+
+</details>
+
+<details>
+<summary>FL_contactpad3 · [-0.0002379180976599318, -2.6549163425428512e-17]</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_contactpad3 |
+| Applied initial value | [-0.0002379180976599318, -2.6549163425428512e-17] |
+
+</details>
+
+<details>
+<summary>FL_contactpad4 · [7.091345942516367e-05, -3.3989750215567644e-17]</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_contactpad4 |
+| Applied initial value | [7.091345942516367e-05, -3.3989750215567644e-17] |
+
+</details>
+
+<details>
+<summary>FL_contactpad5 · [7.091345788102e-05, -3.398975021556764e-17]</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_contactpad5 |
+| Applied initial value | [7.091345788102e-05, -3.398975021556764e-17] |
+
+</details>
+
+<details>
+<summary>FR_contactpad0 · [0.0, 0.0]</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FR_contactpad0 |
+| Applied initial value | [0.0, 0.0] |
+
+</details>
+
+<details>
+<summary>FR_contactpad1 · [0.0, 0.0]</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FR_contactpad1 |
+| Applied initial value | [0.0, 0.0] |
+
+</details>
+
+<details>
+<summary>FR_contactpad2 · [0.0, 0.0]</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FR_contactpad2 |
+| Applied initial value | [0.0, 0.0] |
+
+</details>
+
+<details>
+<summary>FR_contactpad3 · [0.0, 0.0]</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FR_contactpad3 |
+| Applied initial value | [0.0, 0.0] |
+
+</details>
+
+<details>
+<summary>FR_contactpad4 · [3.6106912332098414e-05, 0.0]</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FR_contactpad4 |
+| Applied initial value | [3.6106912332098414e-05, 0.0] |
+
+</details>
+
+<details>
+<summary>FR_contactpad5 · [3.6106911690813815e-05, 0.0]</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FR_contactpad5 |
+| Applied initial value | [3.6106911690813815e-05, 0.0] |
+
+</details>

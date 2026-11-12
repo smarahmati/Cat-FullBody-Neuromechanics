@@ -4,143 +4,2212 @@
 
 [Back to parameter guide](../parameter_tables.md)
 
-| Object | Parameter | Unit | Meaning | Source value | Value used in this model | What changed and why | Source / evidence |
-| --- | --- | --- | --- | --- | --- | --- | --- |
-| pelvis | mass_kg | kg | Mass of this rigid body, not total cat mass. | 0.3246 | 0.073966979 | Different from the verified source value. Change relative to source: -77.2%. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Generic hindlimb segment mass from the author’s MATLAB Model 3 source tables. Source and applied masses refer to different parameterizations; see Data/Original_Study_Data/hindlimb/original_numeric_tables.json. |
-| pelvis | principal_inertia_kg_m2 | kg m^2 | Three principal moments about the body center of mass. | Not established | [2.7737617135207495e-05, 2.7737617135207495e-05, 2.7737617135207495e-05] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| pelvis | COM_position_in_body_m | m | Center of mass in this body local frame. | Not established | [0.0, 0.0, 0.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| pelvis | inertia_frame_quaternion_wxyz | 1 | Orientation of principal inertia axes in the body frame. | Not established | [1.0, 0.0, 0.0, 0.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| pelvis | body_position_in_parent_m | m | Local placement relative to the parent; these offsets encode skeletal segment dimensions. | Not established | [0.0, 0.0, 0.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| pelvis | body_orientation_in_parent_wxyz | 1 | Body orientation relative to its parent, scalar-first quaternion. | Not established | [0.6915933133185649, 0.6915933133185649, -0.14730474864392273, 0.14730474864392273] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| L_pelvis_anchor | mass_kg | kg | Mass of this rigid body, not total cat mass. | Not established | 0 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| L_pelvis_anchor | principal_inertia_kg_m2 | kg m^2 | Three principal moments about the body center of mass. | Not established | [0.0, 0.0, 0.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| L_pelvis_anchor | COM_position_in_body_m | m | Center of mass in this body local frame. | Not established | [0.0, 0.0, -0.0204087361216] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| L_pelvis_anchor | inertia_frame_quaternion_wxyz | 1 | Orientation of principal inertia axes in the body frame. | Not established | [1.0, 0.0, 0.0, 0.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| L_pelvis_anchor | body_position_in_parent_m | m | Local placement relative to the parent; these offsets encode skeletal segment dimensions. | Not established | [0.0, 0.0, -0.0204087361216] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| L_pelvis_anchor | body_orientation_in_parent_wxyz | 1 | Body orientation relative to its parent, scalar-first quaternion. | Not established | [1.0, 0.0, 0.0, 0.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| L_thigh | mass_kg | kg | Mass of this rigid body, not total cat mass. | 0.1495 | 0.13822579 | Different from the verified source value. Change relative to source: -7.54%. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Generic hindlimb segment mass from the author’s MATLAB Model 3 source tables. Source and applied masses refer to different parameterizations; see Data/Original_Study_Data/hindlimb/original_numeric_tables.json. |
-| L_thigh | principal_inertia_kg_m2 | kg m^2 | Three principal moments about the body center of mass. | Not established | [1.2950046229361893e-05, 0.00012475339735377054, 0.00012475339735377054] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| L_thigh | COM_position_in_body_m | m | Center of mass in this body local frame. | Not established | [0.04230267214799589, 0.0, 0.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| L_thigh | inertia_frame_quaternion_wxyz | 1 | Orientation of principal inertia axes in the body frame. | Not established | [1.0, 0.0, 0.0, 0.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| L_thigh | body_position_in_parent_m | m | Local placement relative to the parent; these offsets encode skeletal segment dimensions. | Not established | [0.0, 0.0, 0.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| L_thigh | body_orientation_in_parent_wxyz | 1 | Body orientation relative to its parent, scalar-first quaternion. | Not established | [1.0, 0.0, 0.0, 0.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| L_shank | mass_kg | kg | Mass of this rigid body, not total cat mass. | 0.0635 | 0.05871129 | Different from the verified source value. Change relative to source: -7.54%. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Generic hindlimb segment mass from the author’s MATLAB Model 3 source tables. Source and applied masses refer to different parameterizations; see Data/Original_Study_Data/hindlimb/original_numeric_tables.json. |
-| L_shank | principal_inertia_kg_m2 | kg m^2 | Three principal moments about the body center of mass. | Not established | [5.473648906738064e-06, 6.133221971906929e-05, 6.133221971906929e-05] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| L_shank | COM_position_in_body_m | m | Center of mass in this body local frame. | Not established | [0.045940487804878055, 0.0, 0.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| L_shank | inertia_frame_quaternion_wxyz | 1 | Orientation of principal inertia axes in the body frame. | Not established | [1.0, 0.0, 0.0, 0.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| L_shank | body_position_in_parent_m | m | Local placement relative to the parent; these offsets encode skeletal segment dimensions. | Not established | [0.0955, 0.0, 0.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| L_shank | body_orientation_in_parent_wxyz | 1 | Body orientation relative to its parent, scalar-first quaternion. | Not established | [1.0, 0.0, 0.0, 0.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| L_foot | mass_kg | kg | Mass of this rigid body, not total cat mass. | 0.0217 | 0.020063543 | Different from the verified source value. Change relative to source: -7.54%. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Generic hindlimb segment mass from the author’s MATLAB Model 3 source tables. Source and applied masses refer to different parameterizations; see Data/Original_Study_Data/hindlimb/original_numeric_tables.json. |
-| L_foot | principal_inertia_kg_m2 | kg m^2 | Three principal moments about the body center of mass. | Not established | [8.457199464524766e-07, 7.997195910071741e-06, 7.997195910071741e-06] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| L_foot | COM_position_in_body_m | m | Center of mass in this body local frame. | Not established | [0.032576197387518144, 0.0, 0.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| L_foot | inertia_frame_quaternion_wxyz | 1 | Orientation of principal inertia axes in the body frame. | Not established | [1.0, 0.0, 0.0, 0.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| L_foot | body_position_in_parent_m | m | Local placement relative to the parent; these offsets encode skeletal segment dimensions. | Not established | [0.1085, 0.0, 0.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| L_foot | body_orientation_in_parent_wxyz | 1 | Body orientation relative to its parent, scalar-first quaternion. | Not established | [1.0, 0.0, 0.0, 0.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| L_digits | mass_kg | kg | Mass of this rigid body, not total cat mass. | 0.0078 | 0.0072117805 | Different from the verified source value. Change relative to source: -7.54%. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Generic hindlimb segment mass from the author’s MATLAB Model 3 source tables. Source and applied masses refer to different parameterizations; see Data/Original_Study_Data/hindlimb/original_numeric_tables.json. |
-| L_digits | principal_inertia_kg_m2 | kg m^2 | Three principal moments about the body center of mass. | Not established | [5.65847389558233e-08, 7.831797779352706e-07, 7.831797779352706e-07] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| L_digits | COM_position_in_body_m | m | Center of mass in this body local frame. | Not established | [0.018, 0.0, 0.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| L_digits | inertia_frame_quaternion_wxyz | 1 | Orientation of principal inertia axes in the body frame. | Not established | [1.0, 0.0, 0.0, 0.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| L_digits | body_position_in_parent_m | m | Local placement relative to the parent; these offsets encode skeletal segment dimensions. | Not established | [0.067, 0.0, 0.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| L_digits | body_orientation_in_parent_wxyz | 1 | Body orientation relative to its parent, scalar-first quaternion. | Not established | [1.0, 0.0, 0.0, 0.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| R_pelvis_anchor | mass_kg | kg | Mass of this rigid body, not total cat mass. | Not established | 0 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| R_pelvis_anchor | principal_inertia_kg_m2 | kg m^2 | Three principal moments about the body center of mass. | Not established | [0.0, 0.0, 0.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| R_pelvis_anchor | COM_position_in_body_m | m | Center of mass in this body local frame. | Not established | [0.0, 0.0, 0.0204087361216] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| R_pelvis_anchor | inertia_frame_quaternion_wxyz | 1 | Orientation of principal inertia axes in the body frame. | Not established | [1.0, 0.0, 0.0, 0.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| R_pelvis_anchor | body_position_in_parent_m | m | Local placement relative to the parent; these offsets encode skeletal segment dimensions. | Not established | [0.0, 0.0, 0.0204087361216] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| R_pelvis_anchor | body_orientation_in_parent_wxyz | 1 | Body orientation relative to its parent, scalar-first quaternion. | Not established | [1.0, 0.0, 0.0, 0.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| R_thigh | mass_kg | kg | Mass of this rigid body, not total cat mass. | 0.1495 | 0.13822579 | Different from the verified source value. Change relative to source: -7.54%. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Generic hindlimb segment mass from the author’s MATLAB Model 3 source tables. Source and applied masses refer to different parameterizations; see Data/Original_Study_Data/hindlimb/original_numeric_tables.json. |
-| R_thigh | principal_inertia_kg_m2 | kg m^2 | Three principal moments about the body center of mass. | Not established | [1.2950046229361893e-05, 0.00012475339735377054, 0.00012475339735377054] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| R_thigh | COM_position_in_body_m | m | Center of mass in this body local frame. | Not established | [0.04230267214799589, 0.0, -0.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| R_thigh | inertia_frame_quaternion_wxyz | 1 | Orientation of principal inertia axes in the body frame. | Not established | [1.0, 0.0, 0.0, 0.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| R_thigh | body_position_in_parent_m | m | Local placement relative to the parent; these offsets encode skeletal segment dimensions. | Not established | [0.0, 0.0, -0.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| R_thigh | body_orientation_in_parent_wxyz | 1 | Body orientation relative to its parent, scalar-first quaternion. | Not established | [1.0, 0.0, 0.0, 0.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| R_shank | mass_kg | kg | Mass of this rigid body, not total cat mass. | 0.0635 | 0.05871129 | Different from the verified source value. Change relative to source: -7.54%. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Generic hindlimb segment mass from the author’s MATLAB Model 3 source tables. Source and applied masses refer to different parameterizations; see Data/Original_Study_Data/hindlimb/original_numeric_tables.json. |
-| R_shank | principal_inertia_kg_m2 | kg m^2 | Three principal moments about the body center of mass. | Not established | [5.473648906738064e-06, 6.133221971906929e-05, 6.133221971906929e-05] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| R_shank | COM_position_in_body_m | m | Center of mass in this body local frame. | Not established | [0.045940487804878055, 0.0, -0.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| R_shank | inertia_frame_quaternion_wxyz | 1 | Orientation of principal inertia axes in the body frame. | Not established | [1.0, 0.0, 0.0, 0.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| R_shank | body_position_in_parent_m | m | Local placement relative to the parent; these offsets encode skeletal segment dimensions. | Not established | [0.0955, 0.0, -0.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| R_shank | body_orientation_in_parent_wxyz | 1 | Body orientation relative to its parent, scalar-first quaternion. | Not established | [1.0, 0.0, 0.0, 0.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| R_foot | mass_kg | kg | Mass of this rigid body, not total cat mass. | 0.0217 | 0.020063543 | Different from the verified source value. Change relative to source: -7.54%. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Generic hindlimb segment mass from the author’s MATLAB Model 3 source tables. Source and applied masses refer to different parameterizations; see Data/Original_Study_Data/hindlimb/original_numeric_tables.json. |
-| R_foot | principal_inertia_kg_m2 | kg m^2 | Three principal moments about the body center of mass. | Not established | [8.457199464524766e-07, 7.997195910071741e-06, 7.997195910071741e-06] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| R_foot | COM_position_in_body_m | m | Center of mass in this body local frame. | Not established | [0.032576197387518144, 0.0, -0.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| R_foot | inertia_frame_quaternion_wxyz | 1 | Orientation of principal inertia axes in the body frame. | Not established | [1.0, 0.0, 0.0, 0.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| R_foot | body_position_in_parent_m | m | Local placement relative to the parent; these offsets encode skeletal segment dimensions. | Not established | [0.1085, 0.0, -0.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| R_foot | body_orientation_in_parent_wxyz | 1 | Body orientation relative to its parent, scalar-first quaternion. | Not established | [1.0, 0.0, 0.0, 0.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| R_digits | mass_kg | kg | Mass of this rigid body, not total cat mass. | 0.0078 | 0.0072117805 | Different from the verified source value. Change relative to source: -7.54%. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Generic hindlimb segment mass from the author’s MATLAB Model 3 source tables. Source and applied masses refer to different parameterizations; see Data/Original_Study_Data/hindlimb/original_numeric_tables.json. |
-| R_digits | principal_inertia_kg_m2 | kg m^2 | Three principal moments about the body center of mass. | Not established | [5.65847389558233e-08, 7.831797779352706e-07, 7.831797779352706e-07] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| R_digits | COM_position_in_body_m | m | Center of mass in this body local frame. | Not established | [0.018, 0.0, -0.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| R_digits | inertia_frame_quaternion_wxyz | 1 | Orientation of principal inertia axes in the body frame. | Not established | [1.0, 0.0, 0.0, 0.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| R_digits | body_position_in_parent_m | m | Local placement relative to the parent; these offsets encode skeletal segment dimensions. | Not established | [0.067, 0.0, -0.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| R_digits | body_orientation_in_parent_wxyz | 1 | Body orientation relative to its parent, scalar-first quaternion. | Not established | [1.0, 0.0, 0.0, 0.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| cat_root | mass_kg | kg | Mass of this rigid body, not total cat mass. | Not established | 1.6917178 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| cat_root | principal_inertia_kg_m2 | kg m^2 | Three principal moments about the body center of mass. | Not established | [0.00164908651561237, 0.009685084429504328, 0.009287192401937618] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| cat_root | COM_position_in_body_m | m | Center of mass in this body local frame. | Not established | [0.07917885382672582, 0.0, 0.22] | No verified source value is available for direct comparison. Trunk center of mass was calibrated to adjust body balance and limb loading. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| cat_root | inertia_frame_quaternion_wxyz | 1 | Orientation of principal inertia axes in the body frame. | Not established | [1.0, 0.0, 0.0, 0.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| cat_root | body_position_in_parent_m | m | Local placement relative to the parent; these offsets encode skeletal segment dimensions. | Not established | [-0.09261350342858944, -0.1997167342633804, 0.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| cat_root | body_orientation_in_parent_wxyz | 1 | Body orientation relative to its parent, scalar-first quaternion. | Not established | [0.6905076763443475, -0.6905076763443476, 0.15231266825031237, -0.1523126682503124] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| FL_scapula | mass_kg | kg | Mass of this rigid body, not total cat mass. | Not established | 0.058377117 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| FL_scapula | principal_inertia_kg_m2 | kg m^2 | Three principal moments about the body center of mass. | Not established | [3.236421733154842e-06, 3.236421733154841e-05, 3.236421733154841e-05] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| FL_scapula | COM_position_in_body_m | m | Center of mass in this body local frame. | Not established | [0.02748354285714286, 0.0, 0.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| FL_scapula | inertia_frame_quaternion_wxyz | 1 | Orientation of principal inertia axes in the body frame. | Not established | [1.0, 0.0, 0.0, 0.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| FL_scapula | body_position_in_parent_m | m | Local placement relative to the parent; these offsets encode skeletal segment dimensions. | Not established | [0.2148799182938485, 0.02499999999999998, 0.20477734483331916] | No verified source value is available for direct comparison. Forelimb mounting position was calibrated to improve whole-body geometry and loading. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| FL_scapula | body_orientation_in_parent_wxyz | 1 | Body orientation relative to its parent, scalar-first quaternion. | Not established | [0.5910014263518294, 0.5910014263518292, 0.38822327860408246, -0.3882232786040824] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| FL_upperarm | mass_kg | kg | Mass of this rigid body, not total cat mass. | Not established | 0.074851628 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| FL_upperarm | principal_inertia_kg_m2 | kg m^2 | Three principal moments about the body center of mass. | Not established | [5.525364373047746e-06, 5.5253643730477466e-05, 5.5253643730477466e-05] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| FL_upperarm | COM_position_in_body_m | m | Center of mass in this body local frame. | Not established | [0.04528403714285715, 0.0, 0.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| FL_upperarm | inertia_frame_quaternion_wxyz | 1 | Orientation of principal inertia axes in the body frame. | Not established | [1.0, 0.0, 0.0, 0.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| FL_upperarm | body_position_in_parent_m | m | Local placement relative to the parent; these offsets encode skeletal segment dimensions. | Not established | [0.05771428571428572, 0.0, 0.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| FL_upperarm | body_orientation_in_parent_wxyz | 1 | Body orientation relative to its parent, scalar-first quaternion. | Not established | [1.0, 0.0, 0.0, 0.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| FL_forearm | mass_kg | kg | Mass of this rigid body, not total cat mass. | Not established | 0.038469275 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| FL_forearm | principal_inertia_kg_m2 | kg m^2 | Three principal moments about the body center of mass. | Not established | [3.2719639232485494e-06, 3.271963923248549e-05, 3.271963923248549e-05] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| FL_forearm | COM_position_in_body_m | m | Center of mass in this body local frame. | Not established | [0.04300274, 0.0, 0.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| FL_forearm | inertia_frame_quaternion_wxyz | 1 | Orientation of principal inertia axes in the body frame. | Not established | [1.0, 0.0, 0.0, 0.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| FL_forearm | body_position_in_parent_m | m | Local placement relative to the parent; these offsets encode skeletal segment dimensions. | Not established | [0.09275714285714286, 0.0, 0.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| FL_forearm | body_orientation_in_parent_wxyz | 1 | Body orientation relative to its parent, scalar-first quaternion. | Not established | [1.0, 0.0, 0.0, 0.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| FL_carpals | mass_kg | kg | Mass of this rigid body, not total cat mass. | Not established | 0.0069503922 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| FL_carpals | principal_inertia_kg_m2 | kg m^2 | Three principal moments about the body center of mass. | Not established | [5.424105824185633e-08, 5.424105824185633e-07, 5.424105824185633e-07] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| FL_carpals | COM_position_in_body_m | m | Center of mass in this body local frame. | Not established | [0.013664871428571429, 0.0, 0.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| FL_carpals | inertia_frame_quaternion_wxyz | 1 | Orientation of principal inertia axes in the body frame. | Not established | [1.0, 0.0, 0.0, 0.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| FL_carpals | body_position_in_parent_m | m | Local placement relative to the parent; these offsets encode skeletal segment dimensions. | Not established | [0.09465714285714286, 0.0, 0.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| FL_carpals | body_orientation_in_parent_wxyz | 1 | Body orientation relative to its parent, scalar-first quaternion. | Not established | [1.0, 0.0, 0.0, 0.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| FL_digits | mass_kg | kg | Mass of this rigid body, not total cat mass. | Not established | 0.0047087907 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| FL_digits | principal_inertia_kg_m2 | kg m^2 | Three principal moments about the body center of mass. | Not established | [2.5373014476651885e-08, 2.5373014476651884e-07, 2.5373014476651884e-07] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| FL_digits | COM_position_in_body_m | m | Center of mass in this body local frame. | Not established | [0.012714285714285714, 0.0, 0.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| FL_digits | inertia_frame_quaternion_wxyz | 1 | Orientation of principal inertia axes in the body frame. | Not established | [1.0, 0.0, 0.0, 0.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| FL_digits | body_position_in_parent_m | m | Local placement relative to the parent; these offsets encode skeletal segment dimensions. | Not established | [0.026142857142857138, 0.0, 0.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| FL_digits | body_orientation_in_parent_wxyz | 1 | Body orientation relative to its parent, scalar-first quaternion. | Not established | [1.0, 0.0, 0.0, 0.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| FR_scapula | mass_kg | kg | Mass of this rigid body, not total cat mass. | Not established | 0.058377117 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| FR_scapula | principal_inertia_kg_m2 | kg m^2 | Three principal moments about the body center of mass. | Not established | [3.236421733154842e-06, 3.236421733154841e-05, 3.236421733154841e-05] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| FR_scapula | COM_position_in_body_m | m | Center of mass in this body local frame. | Not established | [0.02748354285714286, 0.0, 0.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| FR_scapula | inertia_frame_quaternion_wxyz | 1 | Orientation of principal inertia axes in the body frame. | Not established | [1.0, 0.0, 0.0, 0.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| FR_scapula | body_position_in_parent_m | m | Local placement relative to the parent; these offsets encode skeletal segment dimensions. | Not established | [0.2148799182938485, -0.024999999999999998, 0.20477734483331916] | No verified source value is available for direct comparison. Forelimb mounting position was calibrated to improve whole-body geometry and loading. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| FR_scapula | body_orientation_in_parent_wxyz | 1 | Body orientation relative to its parent, scalar-first quaternion. | Not established | [0.5910014263518294, 0.5910014263518292, 0.38822327860408246, -0.3882232786040824] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| FR_upperarm | mass_kg | kg | Mass of this rigid body, not total cat mass. | Not established | 0.074851628 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| FR_upperarm | principal_inertia_kg_m2 | kg m^2 | Three principal moments about the body center of mass. | Not established | [5.525364373047746e-06, 5.5253643730477466e-05, 5.5253643730477466e-05] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| FR_upperarm | COM_position_in_body_m | m | Center of mass in this body local frame. | Not established | [0.04528403714285715, 0.0, 0.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| FR_upperarm | inertia_frame_quaternion_wxyz | 1 | Orientation of principal inertia axes in the body frame. | Not established | [1.0, 0.0, 0.0, 0.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| FR_upperarm | body_position_in_parent_m | m | Local placement relative to the parent; these offsets encode skeletal segment dimensions. | Not established | [0.05771428571428572, 0.0, 0.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| FR_upperarm | body_orientation_in_parent_wxyz | 1 | Body orientation relative to its parent, scalar-first quaternion. | Not established | [1.0, 0.0, 0.0, 0.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| FR_forearm | mass_kg | kg | Mass of this rigid body, not total cat mass. | Not established | 0.038469275 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| FR_forearm | principal_inertia_kg_m2 | kg m^2 | Three principal moments about the body center of mass. | Not established | [3.2719639232485494e-06, 3.271963923248549e-05, 3.271963923248549e-05] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| FR_forearm | COM_position_in_body_m | m | Center of mass in this body local frame. | Not established | [0.04300274, 0.0, 0.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| FR_forearm | inertia_frame_quaternion_wxyz | 1 | Orientation of principal inertia axes in the body frame. | Not established | [1.0, 0.0, 0.0, 0.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| FR_forearm | body_position_in_parent_m | m | Local placement relative to the parent; these offsets encode skeletal segment dimensions. | Not established | [0.09275714285714286, 0.0, 0.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| FR_forearm | body_orientation_in_parent_wxyz | 1 | Body orientation relative to its parent, scalar-first quaternion. | Not established | [1.0, 0.0, 0.0, 0.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| FR_carpals | mass_kg | kg | Mass of this rigid body, not total cat mass. | Not established | 0.0069503922 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| FR_carpals | principal_inertia_kg_m2 | kg m^2 | Three principal moments about the body center of mass. | Not established | [5.424105824185633e-08, 5.424105824185633e-07, 5.424105824185633e-07] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| FR_carpals | COM_position_in_body_m | m | Center of mass in this body local frame. | Not established | [0.013664871428571429, 0.0, 0.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| FR_carpals | inertia_frame_quaternion_wxyz | 1 | Orientation of principal inertia axes in the body frame. | Not established | [1.0, 0.0, 0.0, 0.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| FR_carpals | body_position_in_parent_m | m | Local placement relative to the parent; these offsets encode skeletal segment dimensions. | Not established | [0.09465714285714286, 0.0, 0.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| FR_carpals | body_orientation_in_parent_wxyz | 1 | Body orientation relative to its parent, scalar-first quaternion. | Not established | [1.0, 0.0, 0.0, 0.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| FR_digits | mass_kg | kg | Mass of this rigid body, not total cat mass. | Not established | 0.0047087907 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| FR_digits | principal_inertia_kg_m2 | kg m^2 | Three principal moments about the body center of mass. | Not established | [2.5373014476651885e-08, 2.5373014476651884e-07, 2.5373014476651884e-07] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| FR_digits | COM_position_in_body_m | m | Center of mass in this body local frame. | Not established | [0.012714285714285714, 0.0, 0.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| FR_digits | inertia_frame_quaternion_wxyz | 1 | Orientation of principal inertia axes in the body frame. | Not established | [1.0, 0.0, 0.0, 0.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| FR_digits | body_position_in_parent_m | m | Local placement relative to the parent; these offsets encode skeletal segment dimensions. | Not established | [0.026142857142857138, 0.0, 0.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| FR_digits | body_orientation_in_parent_wxyz | 1 | Body orientation relative to its parent, scalar-first quaternion. | Not established | [1.0, 0.0, 0.0, 0.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| head_neck_mass | mass_kg | kg | Mass of this rigid body, not total cat mass. | Not established | 0.379176 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| head_neck_mass | principal_inertia_kg_m2 | kg m^2 | Three principal moments about the body center of mass. | Not established | [0.00021423444000000003, 0.0003507378, 0.0003222996] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| head_neck_mass | COM_position_in_body_m | m | Center of mass in this body local frame. | Not established | [0.0, 0.0, 0.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| head_neck_mass | inertia_frame_quaternion_wxyz | 1 | Orientation of principal inertia axes in the body frame. | Not established | [1.0, 0.0, 0.0, 0.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| head_neck_mass | body_position_in_parent_m | m | Local placement relative to the parent; these offsets encode skeletal segment dimensions. | Not established | [0.325, 0.0, 0.255] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| head_neck_mass | body_orientation_in_parent_wxyz | 1 | Body orientation relative to its parent, scalar-first quaternion. | Not established | [1.0, 0.0, 0.0, 0.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+Each entry contains its values, units, meaning and source information. Select an entry to read all fields.
+
+<details>
+<summary>pelvis · mass_kg</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | pelvis |
+| Parameter | mass_kg |
+| Unit | kg |
+| Meaning | Mass of this rigid body, not total cat mass. |
+| Source value | 0.3246 |
+| Value used in this model | 0.073966979 |
+| What changed and why | Different from the verified source value. Change relative to source: -77.2%. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Generic hindlimb segment mass from the author’s MATLAB Model 3 source tables. Source and applied masses refer to different parameterizations; see Data/Original_Study_Data/hindlimb/original_numeric_tables.json. |
+
+</details>
+
+<details>
+<summary>pelvis · principal_inertia_kg_m2</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | pelvis |
+| Parameter | principal_inertia_kg_m2 |
+| Unit | kg m^2 |
+| Meaning | Three principal moments about the body center of mass. |
+| Source value | Not established |
+| Value used in this model | [2.7737617135207495e-05, 2.7737617135207495e-05, 2.7737617135207495e-05] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>pelvis · COM_position_in_body_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | pelvis |
+| Parameter | COM_position_in_body_m |
+| Unit | m |
+| Meaning | Center of mass in this body local frame. |
+| Source value | Not established |
+| Value used in this model | [0.0, 0.0, 0.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>pelvis · inertia_frame_quaternion_wxyz</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | pelvis |
+| Parameter | inertia_frame_quaternion_wxyz |
+| Unit | 1 |
+| Meaning | Orientation of principal inertia axes in the body frame. |
+| Source value | Not established |
+| Value used in this model | [1.0, 0.0, 0.0, 0.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>pelvis · body_position_in_parent_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | pelvis |
+| Parameter | body_position_in_parent_m |
+| Unit | m |
+| Meaning | Local placement relative to the parent; these offsets encode skeletal segment dimensions. |
+| Source value | Not established |
+| Value used in this model | [0.0, 0.0, 0.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>pelvis · body_orientation_in_parent_wxyz</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | pelvis |
+| Parameter | body_orientation_in_parent_wxyz |
+| Unit | 1 |
+| Meaning | Body orientation relative to its parent, scalar-first quaternion. |
+| Source value | Not established |
+| Value used in this model | [0.6915933133185649, 0.6915933133185649, -0.14730474864392273, 0.14730474864392273] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>L_pelvis_anchor · mass_kg</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | L_pelvis_anchor |
+| Parameter | mass_kg |
+| Unit | kg |
+| Meaning | Mass of this rigid body, not total cat mass. |
+| Source value | Not established |
+| Value used in this model | 0 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>L_pelvis_anchor · principal_inertia_kg_m2</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | L_pelvis_anchor |
+| Parameter | principal_inertia_kg_m2 |
+| Unit | kg m^2 |
+| Meaning | Three principal moments about the body center of mass. |
+| Source value | Not established |
+| Value used in this model | [0.0, 0.0, 0.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>L_pelvis_anchor · COM_position_in_body_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | L_pelvis_anchor |
+| Parameter | COM_position_in_body_m |
+| Unit | m |
+| Meaning | Center of mass in this body local frame. |
+| Source value | Not established |
+| Value used in this model | [0.0, 0.0, -0.0204087361216] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>L_pelvis_anchor · inertia_frame_quaternion_wxyz</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | L_pelvis_anchor |
+| Parameter | inertia_frame_quaternion_wxyz |
+| Unit | 1 |
+| Meaning | Orientation of principal inertia axes in the body frame. |
+| Source value | Not established |
+| Value used in this model | [1.0, 0.0, 0.0, 0.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>L_pelvis_anchor · body_position_in_parent_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | L_pelvis_anchor |
+| Parameter | body_position_in_parent_m |
+| Unit | m |
+| Meaning | Local placement relative to the parent; these offsets encode skeletal segment dimensions. |
+| Source value | Not established |
+| Value used in this model | [0.0, 0.0, -0.0204087361216] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>L_pelvis_anchor · body_orientation_in_parent_wxyz</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | L_pelvis_anchor |
+| Parameter | body_orientation_in_parent_wxyz |
+| Unit | 1 |
+| Meaning | Body orientation relative to its parent, scalar-first quaternion. |
+| Source value | Not established |
+| Value used in this model | [1.0, 0.0, 0.0, 0.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>L_thigh · mass_kg</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | L_thigh |
+| Parameter | mass_kg |
+| Unit | kg |
+| Meaning | Mass of this rigid body, not total cat mass. |
+| Source value | 0.1495 |
+| Value used in this model | 0.13822579 |
+| What changed and why | Different from the verified source value. Change relative to source: -7.54%. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Generic hindlimb segment mass from the author’s MATLAB Model 3 source tables. Source and applied masses refer to different parameterizations; see Data/Original_Study_Data/hindlimb/original_numeric_tables.json. |
+
+</details>
+
+<details>
+<summary>L_thigh · principal_inertia_kg_m2</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | L_thigh |
+| Parameter | principal_inertia_kg_m2 |
+| Unit | kg m^2 |
+| Meaning | Three principal moments about the body center of mass. |
+| Source value | Not established |
+| Value used in this model | [1.2950046229361893e-05, 0.00012475339735377054, 0.00012475339735377054] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>L_thigh · COM_position_in_body_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | L_thigh |
+| Parameter | COM_position_in_body_m |
+| Unit | m |
+| Meaning | Center of mass in this body local frame. |
+| Source value | Not established |
+| Value used in this model | [0.04230267214799589, 0.0, 0.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>L_thigh · inertia_frame_quaternion_wxyz</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | L_thigh |
+| Parameter | inertia_frame_quaternion_wxyz |
+| Unit | 1 |
+| Meaning | Orientation of principal inertia axes in the body frame. |
+| Source value | Not established |
+| Value used in this model | [1.0, 0.0, 0.0, 0.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>L_thigh · body_position_in_parent_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | L_thigh |
+| Parameter | body_position_in_parent_m |
+| Unit | m |
+| Meaning | Local placement relative to the parent; these offsets encode skeletal segment dimensions. |
+| Source value | Not established |
+| Value used in this model | [0.0, 0.0, 0.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>L_thigh · body_orientation_in_parent_wxyz</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | L_thigh |
+| Parameter | body_orientation_in_parent_wxyz |
+| Unit | 1 |
+| Meaning | Body orientation relative to its parent, scalar-first quaternion. |
+| Source value | Not established |
+| Value used in this model | [1.0, 0.0, 0.0, 0.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>L_shank · mass_kg</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | L_shank |
+| Parameter | mass_kg |
+| Unit | kg |
+| Meaning | Mass of this rigid body, not total cat mass. |
+| Source value | 0.0635 |
+| Value used in this model | 0.05871129 |
+| What changed and why | Different from the verified source value. Change relative to source: -7.54%. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Generic hindlimb segment mass from the author’s MATLAB Model 3 source tables. Source and applied masses refer to different parameterizations; see Data/Original_Study_Data/hindlimb/original_numeric_tables.json. |
+
+</details>
+
+<details>
+<summary>L_shank · principal_inertia_kg_m2</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | L_shank |
+| Parameter | principal_inertia_kg_m2 |
+| Unit | kg m^2 |
+| Meaning | Three principal moments about the body center of mass. |
+| Source value | Not established |
+| Value used in this model | [5.473648906738064e-06, 6.133221971906929e-05, 6.133221971906929e-05] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>L_shank · COM_position_in_body_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | L_shank |
+| Parameter | COM_position_in_body_m |
+| Unit | m |
+| Meaning | Center of mass in this body local frame. |
+| Source value | Not established |
+| Value used in this model | [0.045940487804878055, 0.0, 0.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>L_shank · inertia_frame_quaternion_wxyz</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | L_shank |
+| Parameter | inertia_frame_quaternion_wxyz |
+| Unit | 1 |
+| Meaning | Orientation of principal inertia axes in the body frame. |
+| Source value | Not established |
+| Value used in this model | [1.0, 0.0, 0.0, 0.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>L_shank · body_position_in_parent_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | L_shank |
+| Parameter | body_position_in_parent_m |
+| Unit | m |
+| Meaning | Local placement relative to the parent; these offsets encode skeletal segment dimensions. |
+| Source value | Not established |
+| Value used in this model | [0.0955, 0.0, 0.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>L_shank · body_orientation_in_parent_wxyz</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | L_shank |
+| Parameter | body_orientation_in_parent_wxyz |
+| Unit | 1 |
+| Meaning | Body orientation relative to its parent, scalar-first quaternion. |
+| Source value | Not established |
+| Value used in this model | [1.0, 0.0, 0.0, 0.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>L_foot · mass_kg</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | L_foot |
+| Parameter | mass_kg |
+| Unit | kg |
+| Meaning | Mass of this rigid body, not total cat mass. |
+| Source value | 0.0217 |
+| Value used in this model | 0.020063543 |
+| What changed and why | Different from the verified source value. Change relative to source: -7.54%. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Generic hindlimb segment mass from the author’s MATLAB Model 3 source tables. Source and applied masses refer to different parameterizations; see Data/Original_Study_Data/hindlimb/original_numeric_tables.json. |
+
+</details>
+
+<details>
+<summary>L_foot · principal_inertia_kg_m2</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | L_foot |
+| Parameter | principal_inertia_kg_m2 |
+| Unit | kg m^2 |
+| Meaning | Three principal moments about the body center of mass. |
+| Source value | Not established |
+| Value used in this model | [8.457199464524766e-07, 7.997195910071741e-06, 7.997195910071741e-06] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>L_foot · COM_position_in_body_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | L_foot |
+| Parameter | COM_position_in_body_m |
+| Unit | m |
+| Meaning | Center of mass in this body local frame. |
+| Source value | Not established |
+| Value used in this model | [0.032576197387518144, 0.0, 0.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>L_foot · inertia_frame_quaternion_wxyz</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | L_foot |
+| Parameter | inertia_frame_quaternion_wxyz |
+| Unit | 1 |
+| Meaning | Orientation of principal inertia axes in the body frame. |
+| Source value | Not established |
+| Value used in this model | [1.0, 0.0, 0.0, 0.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>L_foot · body_position_in_parent_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | L_foot |
+| Parameter | body_position_in_parent_m |
+| Unit | m |
+| Meaning | Local placement relative to the parent; these offsets encode skeletal segment dimensions. |
+| Source value | Not established |
+| Value used in this model | [0.1085, 0.0, 0.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>L_foot · body_orientation_in_parent_wxyz</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | L_foot |
+| Parameter | body_orientation_in_parent_wxyz |
+| Unit | 1 |
+| Meaning | Body orientation relative to its parent, scalar-first quaternion. |
+| Source value | Not established |
+| Value used in this model | [1.0, 0.0, 0.0, 0.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>L_digits · mass_kg</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | L_digits |
+| Parameter | mass_kg |
+| Unit | kg |
+| Meaning | Mass of this rigid body, not total cat mass. |
+| Source value | 0.0078 |
+| Value used in this model | 0.0072117805 |
+| What changed and why | Different from the verified source value. Change relative to source: -7.54%. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Generic hindlimb segment mass from the author’s MATLAB Model 3 source tables. Source and applied masses refer to different parameterizations; see Data/Original_Study_Data/hindlimb/original_numeric_tables.json. |
+
+</details>
+
+<details>
+<summary>L_digits · principal_inertia_kg_m2</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | L_digits |
+| Parameter | principal_inertia_kg_m2 |
+| Unit | kg m^2 |
+| Meaning | Three principal moments about the body center of mass. |
+| Source value | Not established |
+| Value used in this model | [5.65847389558233e-08, 7.831797779352706e-07, 7.831797779352706e-07] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>L_digits · COM_position_in_body_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | L_digits |
+| Parameter | COM_position_in_body_m |
+| Unit | m |
+| Meaning | Center of mass in this body local frame. |
+| Source value | Not established |
+| Value used in this model | [0.018, 0.0, 0.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>L_digits · inertia_frame_quaternion_wxyz</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | L_digits |
+| Parameter | inertia_frame_quaternion_wxyz |
+| Unit | 1 |
+| Meaning | Orientation of principal inertia axes in the body frame. |
+| Source value | Not established |
+| Value used in this model | [1.0, 0.0, 0.0, 0.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>L_digits · body_position_in_parent_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | L_digits |
+| Parameter | body_position_in_parent_m |
+| Unit | m |
+| Meaning | Local placement relative to the parent; these offsets encode skeletal segment dimensions. |
+| Source value | Not established |
+| Value used in this model | [0.067, 0.0, 0.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>L_digits · body_orientation_in_parent_wxyz</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | L_digits |
+| Parameter | body_orientation_in_parent_wxyz |
+| Unit | 1 |
+| Meaning | Body orientation relative to its parent, scalar-first quaternion. |
+| Source value | Not established |
+| Value used in this model | [1.0, 0.0, 0.0, 0.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>R_pelvis_anchor · mass_kg</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | R_pelvis_anchor |
+| Parameter | mass_kg |
+| Unit | kg |
+| Meaning | Mass of this rigid body, not total cat mass. |
+| Source value | Not established |
+| Value used in this model | 0 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>R_pelvis_anchor · principal_inertia_kg_m2</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | R_pelvis_anchor |
+| Parameter | principal_inertia_kg_m2 |
+| Unit | kg m^2 |
+| Meaning | Three principal moments about the body center of mass. |
+| Source value | Not established |
+| Value used in this model | [0.0, 0.0, 0.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>R_pelvis_anchor · COM_position_in_body_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | R_pelvis_anchor |
+| Parameter | COM_position_in_body_m |
+| Unit | m |
+| Meaning | Center of mass in this body local frame. |
+| Source value | Not established |
+| Value used in this model | [0.0, 0.0, 0.0204087361216] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>R_pelvis_anchor · inertia_frame_quaternion_wxyz</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | R_pelvis_anchor |
+| Parameter | inertia_frame_quaternion_wxyz |
+| Unit | 1 |
+| Meaning | Orientation of principal inertia axes in the body frame. |
+| Source value | Not established |
+| Value used in this model | [1.0, 0.0, 0.0, 0.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>R_pelvis_anchor · body_position_in_parent_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | R_pelvis_anchor |
+| Parameter | body_position_in_parent_m |
+| Unit | m |
+| Meaning | Local placement relative to the parent; these offsets encode skeletal segment dimensions. |
+| Source value | Not established |
+| Value used in this model | [0.0, 0.0, 0.0204087361216] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>R_pelvis_anchor · body_orientation_in_parent_wxyz</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | R_pelvis_anchor |
+| Parameter | body_orientation_in_parent_wxyz |
+| Unit | 1 |
+| Meaning | Body orientation relative to its parent, scalar-first quaternion. |
+| Source value | Not established |
+| Value used in this model | [1.0, 0.0, 0.0, 0.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>R_thigh · mass_kg</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | R_thigh |
+| Parameter | mass_kg |
+| Unit | kg |
+| Meaning | Mass of this rigid body, not total cat mass. |
+| Source value | 0.1495 |
+| Value used in this model | 0.13822579 |
+| What changed and why | Different from the verified source value. Change relative to source: -7.54%. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Generic hindlimb segment mass from the author’s MATLAB Model 3 source tables. Source and applied masses refer to different parameterizations; see Data/Original_Study_Data/hindlimb/original_numeric_tables.json. |
+
+</details>
+
+<details>
+<summary>R_thigh · principal_inertia_kg_m2</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | R_thigh |
+| Parameter | principal_inertia_kg_m2 |
+| Unit | kg m^2 |
+| Meaning | Three principal moments about the body center of mass. |
+| Source value | Not established |
+| Value used in this model | [1.2950046229361893e-05, 0.00012475339735377054, 0.00012475339735377054] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>R_thigh · COM_position_in_body_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | R_thigh |
+| Parameter | COM_position_in_body_m |
+| Unit | m |
+| Meaning | Center of mass in this body local frame. |
+| Source value | Not established |
+| Value used in this model | [0.04230267214799589, 0.0, -0.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>R_thigh · inertia_frame_quaternion_wxyz</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | R_thigh |
+| Parameter | inertia_frame_quaternion_wxyz |
+| Unit | 1 |
+| Meaning | Orientation of principal inertia axes in the body frame. |
+| Source value | Not established |
+| Value used in this model | [1.0, 0.0, 0.0, 0.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>R_thigh · body_position_in_parent_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | R_thigh |
+| Parameter | body_position_in_parent_m |
+| Unit | m |
+| Meaning | Local placement relative to the parent; these offsets encode skeletal segment dimensions. |
+| Source value | Not established |
+| Value used in this model | [0.0, 0.0, -0.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>R_thigh · body_orientation_in_parent_wxyz</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | R_thigh |
+| Parameter | body_orientation_in_parent_wxyz |
+| Unit | 1 |
+| Meaning | Body orientation relative to its parent, scalar-first quaternion. |
+| Source value | Not established |
+| Value used in this model | [1.0, 0.0, 0.0, 0.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>R_shank · mass_kg</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | R_shank |
+| Parameter | mass_kg |
+| Unit | kg |
+| Meaning | Mass of this rigid body, not total cat mass. |
+| Source value | 0.0635 |
+| Value used in this model | 0.05871129 |
+| What changed and why | Different from the verified source value. Change relative to source: -7.54%. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Generic hindlimb segment mass from the author’s MATLAB Model 3 source tables. Source and applied masses refer to different parameterizations; see Data/Original_Study_Data/hindlimb/original_numeric_tables.json. |
+
+</details>
+
+<details>
+<summary>R_shank · principal_inertia_kg_m2</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | R_shank |
+| Parameter | principal_inertia_kg_m2 |
+| Unit | kg m^2 |
+| Meaning | Three principal moments about the body center of mass. |
+| Source value | Not established |
+| Value used in this model | [5.473648906738064e-06, 6.133221971906929e-05, 6.133221971906929e-05] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>R_shank · COM_position_in_body_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | R_shank |
+| Parameter | COM_position_in_body_m |
+| Unit | m |
+| Meaning | Center of mass in this body local frame. |
+| Source value | Not established |
+| Value used in this model | [0.045940487804878055, 0.0, -0.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>R_shank · inertia_frame_quaternion_wxyz</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | R_shank |
+| Parameter | inertia_frame_quaternion_wxyz |
+| Unit | 1 |
+| Meaning | Orientation of principal inertia axes in the body frame. |
+| Source value | Not established |
+| Value used in this model | [1.0, 0.0, 0.0, 0.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>R_shank · body_position_in_parent_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | R_shank |
+| Parameter | body_position_in_parent_m |
+| Unit | m |
+| Meaning | Local placement relative to the parent; these offsets encode skeletal segment dimensions. |
+| Source value | Not established |
+| Value used in this model | [0.0955, 0.0, -0.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>R_shank · body_orientation_in_parent_wxyz</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | R_shank |
+| Parameter | body_orientation_in_parent_wxyz |
+| Unit | 1 |
+| Meaning | Body orientation relative to its parent, scalar-first quaternion. |
+| Source value | Not established |
+| Value used in this model | [1.0, 0.0, 0.0, 0.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>R_foot · mass_kg</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | R_foot |
+| Parameter | mass_kg |
+| Unit | kg |
+| Meaning | Mass of this rigid body, not total cat mass. |
+| Source value | 0.0217 |
+| Value used in this model | 0.020063543 |
+| What changed and why | Different from the verified source value. Change relative to source: -7.54%. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Generic hindlimb segment mass from the author’s MATLAB Model 3 source tables. Source and applied masses refer to different parameterizations; see Data/Original_Study_Data/hindlimb/original_numeric_tables.json. |
+
+</details>
+
+<details>
+<summary>R_foot · principal_inertia_kg_m2</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | R_foot |
+| Parameter | principal_inertia_kg_m2 |
+| Unit | kg m^2 |
+| Meaning | Three principal moments about the body center of mass. |
+| Source value | Not established |
+| Value used in this model | [8.457199464524766e-07, 7.997195910071741e-06, 7.997195910071741e-06] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>R_foot · COM_position_in_body_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | R_foot |
+| Parameter | COM_position_in_body_m |
+| Unit | m |
+| Meaning | Center of mass in this body local frame. |
+| Source value | Not established |
+| Value used in this model | [0.032576197387518144, 0.0, -0.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>R_foot · inertia_frame_quaternion_wxyz</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | R_foot |
+| Parameter | inertia_frame_quaternion_wxyz |
+| Unit | 1 |
+| Meaning | Orientation of principal inertia axes in the body frame. |
+| Source value | Not established |
+| Value used in this model | [1.0, 0.0, 0.0, 0.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>R_foot · body_position_in_parent_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | R_foot |
+| Parameter | body_position_in_parent_m |
+| Unit | m |
+| Meaning | Local placement relative to the parent; these offsets encode skeletal segment dimensions. |
+| Source value | Not established |
+| Value used in this model | [0.1085, 0.0, -0.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>R_foot · body_orientation_in_parent_wxyz</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | R_foot |
+| Parameter | body_orientation_in_parent_wxyz |
+| Unit | 1 |
+| Meaning | Body orientation relative to its parent, scalar-first quaternion. |
+| Source value | Not established |
+| Value used in this model | [1.0, 0.0, 0.0, 0.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>R_digits · mass_kg</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | R_digits |
+| Parameter | mass_kg |
+| Unit | kg |
+| Meaning | Mass of this rigid body, not total cat mass. |
+| Source value | 0.0078 |
+| Value used in this model | 0.0072117805 |
+| What changed and why | Different from the verified source value. Change relative to source: -7.54%. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Generic hindlimb segment mass from the author’s MATLAB Model 3 source tables. Source and applied masses refer to different parameterizations; see Data/Original_Study_Data/hindlimb/original_numeric_tables.json. |
+
+</details>
+
+<details>
+<summary>R_digits · principal_inertia_kg_m2</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | R_digits |
+| Parameter | principal_inertia_kg_m2 |
+| Unit | kg m^2 |
+| Meaning | Three principal moments about the body center of mass. |
+| Source value | Not established |
+| Value used in this model | [5.65847389558233e-08, 7.831797779352706e-07, 7.831797779352706e-07] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>R_digits · COM_position_in_body_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | R_digits |
+| Parameter | COM_position_in_body_m |
+| Unit | m |
+| Meaning | Center of mass in this body local frame. |
+| Source value | Not established |
+| Value used in this model | [0.018, 0.0, -0.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>R_digits · inertia_frame_quaternion_wxyz</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | R_digits |
+| Parameter | inertia_frame_quaternion_wxyz |
+| Unit | 1 |
+| Meaning | Orientation of principal inertia axes in the body frame. |
+| Source value | Not established |
+| Value used in this model | [1.0, 0.0, 0.0, 0.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>R_digits · body_position_in_parent_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | R_digits |
+| Parameter | body_position_in_parent_m |
+| Unit | m |
+| Meaning | Local placement relative to the parent; these offsets encode skeletal segment dimensions. |
+| Source value | Not established |
+| Value used in this model | [0.067, 0.0, -0.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>R_digits · body_orientation_in_parent_wxyz</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | R_digits |
+| Parameter | body_orientation_in_parent_wxyz |
+| Unit | 1 |
+| Meaning | Body orientation relative to its parent, scalar-first quaternion. |
+| Source value | Not established |
+| Value used in this model | [1.0, 0.0, 0.0, 0.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>cat_root · mass_kg</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | cat_root |
+| Parameter | mass_kg |
+| Unit | kg |
+| Meaning | Mass of this rigid body, not total cat mass. |
+| Source value | Not established |
+| Value used in this model | 1.6917178 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>cat_root · principal_inertia_kg_m2</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | cat_root |
+| Parameter | principal_inertia_kg_m2 |
+| Unit | kg m^2 |
+| Meaning | Three principal moments about the body center of mass. |
+| Source value | Not established |
+| Value used in this model | [0.00164908651561237, 0.009685084429504328, 0.009287192401937618] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>cat_root · COM_position_in_body_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | cat_root |
+| Parameter | COM_position_in_body_m |
+| Unit | m |
+| Meaning | Center of mass in this body local frame. |
+| Source value | Not established |
+| Value used in this model | [0.07917885382672582, 0.0, 0.22] |
+| What changed and why | No verified source value is available for direct comparison. Trunk center of mass was calibrated to adjust body balance and limb loading. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>cat_root · inertia_frame_quaternion_wxyz</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | cat_root |
+| Parameter | inertia_frame_quaternion_wxyz |
+| Unit | 1 |
+| Meaning | Orientation of principal inertia axes in the body frame. |
+| Source value | Not established |
+| Value used in this model | [1.0, 0.0, 0.0, 0.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>cat_root · body_position_in_parent_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | cat_root |
+| Parameter | body_position_in_parent_m |
+| Unit | m |
+| Meaning | Local placement relative to the parent; these offsets encode skeletal segment dimensions. |
+| Source value | Not established |
+| Value used in this model | [-0.09261350342858944, -0.1997167342633804, 0.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>cat_root · body_orientation_in_parent_wxyz</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | cat_root |
+| Parameter | body_orientation_in_parent_wxyz |
+| Unit | 1 |
+| Meaning | Body orientation relative to its parent, scalar-first quaternion. |
+| Source value | Not established |
+| Value used in this model | [0.6905076763443475, -0.6905076763443476, 0.15231266825031237, -0.1523126682503124] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>FL_scapula · mass_kg</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_scapula |
+| Parameter | mass_kg |
+| Unit | kg |
+| Meaning | Mass of this rigid body, not total cat mass. |
+| Source value | Not established |
+| Value used in this model | 0.058377117 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>FL_scapula · principal_inertia_kg_m2</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_scapula |
+| Parameter | principal_inertia_kg_m2 |
+| Unit | kg m^2 |
+| Meaning | Three principal moments about the body center of mass. |
+| Source value | Not established |
+| Value used in this model | [3.236421733154842e-06, 3.236421733154841e-05, 3.236421733154841e-05] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>FL_scapula · COM_position_in_body_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_scapula |
+| Parameter | COM_position_in_body_m |
+| Unit | m |
+| Meaning | Center of mass in this body local frame. |
+| Source value | Not established |
+| Value used in this model | [0.02748354285714286, 0.0, 0.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>FL_scapula · inertia_frame_quaternion_wxyz</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_scapula |
+| Parameter | inertia_frame_quaternion_wxyz |
+| Unit | 1 |
+| Meaning | Orientation of principal inertia axes in the body frame. |
+| Source value | Not established |
+| Value used in this model | [1.0, 0.0, 0.0, 0.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>FL_scapula · body_position_in_parent_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_scapula |
+| Parameter | body_position_in_parent_m |
+| Unit | m |
+| Meaning | Local placement relative to the parent; these offsets encode skeletal segment dimensions. |
+| Source value | Not established |
+| Value used in this model | [0.2148799182938485, 0.02499999999999998, 0.20477734483331916] |
+| What changed and why | No verified source value is available for direct comparison. Forelimb mounting position was calibrated to improve whole-body geometry and loading. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>FL_scapula · body_orientation_in_parent_wxyz</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_scapula |
+| Parameter | body_orientation_in_parent_wxyz |
+| Unit | 1 |
+| Meaning | Body orientation relative to its parent, scalar-first quaternion. |
+| Source value | Not established |
+| Value used in this model | [0.5910014263518294, 0.5910014263518292, 0.38822327860408246, -0.3882232786040824] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>FL_upperarm · mass_kg</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_upperarm |
+| Parameter | mass_kg |
+| Unit | kg |
+| Meaning | Mass of this rigid body, not total cat mass. |
+| Source value | Not established |
+| Value used in this model | 0.074851628 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>FL_upperarm · principal_inertia_kg_m2</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_upperarm |
+| Parameter | principal_inertia_kg_m2 |
+| Unit | kg m^2 |
+| Meaning | Three principal moments about the body center of mass. |
+| Source value | Not established |
+| Value used in this model | [5.525364373047746e-06, 5.5253643730477466e-05, 5.5253643730477466e-05] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>FL_upperarm · COM_position_in_body_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_upperarm |
+| Parameter | COM_position_in_body_m |
+| Unit | m |
+| Meaning | Center of mass in this body local frame. |
+| Source value | Not established |
+| Value used in this model | [0.04528403714285715, 0.0, 0.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>FL_upperarm · inertia_frame_quaternion_wxyz</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_upperarm |
+| Parameter | inertia_frame_quaternion_wxyz |
+| Unit | 1 |
+| Meaning | Orientation of principal inertia axes in the body frame. |
+| Source value | Not established |
+| Value used in this model | [1.0, 0.0, 0.0, 0.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>FL_upperarm · body_position_in_parent_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_upperarm |
+| Parameter | body_position_in_parent_m |
+| Unit | m |
+| Meaning | Local placement relative to the parent; these offsets encode skeletal segment dimensions. |
+| Source value | Not established |
+| Value used in this model | [0.05771428571428572, 0.0, 0.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>FL_upperarm · body_orientation_in_parent_wxyz</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_upperarm |
+| Parameter | body_orientation_in_parent_wxyz |
+| Unit | 1 |
+| Meaning | Body orientation relative to its parent, scalar-first quaternion. |
+| Source value | Not established |
+| Value used in this model | [1.0, 0.0, 0.0, 0.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>FL_forearm · mass_kg</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_forearm |
+| Parameter | mass_kg |
+| Unit | kg |
+| Meaning | Mass of this rigid body, not total cat mass. |
+| Source value | Not established |
+| Value used in this model | 0.038469275 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>FL_forearm · principal_inertia_kg_m2</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_forearm |
+| Parameter | principal_inertia_kg_m2 |
+| Unit | kg m^2 |
+| Meaning | Three principal moments about the body center of mass. |
+| Source value | Not established |
+| Value used in this model | [3.2719639232485494e-06, 3.271963923248549e-05, 3.271963923248549e-05] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>FL_forearm · COM_position_in_body_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_forearm |
+| Parameter | COM_position_in_body_m |
+| Unit | m |
+| Meaning | Center of mass in this body local frame. |
+| Source value | Not established |
+| Value used in this model | [0.04300274, 0.0, 0.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>FL_forearm · inertia_frame_quaternion_wxyz</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_forearm |
+| Parameter | inertia_frame_quaternion_wxyz |
+| Unit | 1 |
+| Meaning | Orientation of principal inertia axes in the body frame. |
+| Source value | Not established |
+| Value used in this model | [1.0, 0.0, 0.0, 0.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>FL_forearm · body_position_in_parent_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_forearm |
+| Parameter | body_position_in_parent_m |
+| Unit | m |
+| Meaning | Local placement relative to the parent; these offsets encode skeletal segment dimensions. |
+| Source value | Not established |
+| Value used in this model | [0.09275714285714286, 0.0, 0.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>FL_forearm · body_orientation_in_parent_wxyz</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_forearm |
+| Parameter | body_orientation_in_parent_wxyz |
+| Unit | 1 |
+| Meaning | Body orientation relative to its parent, scalar-first quaternion. |
+| Source value | Not established |
+| Value used in this model | [1.0, 0.0, 0.0, 0.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>FL_carpals · mass_kg</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_carpals |
+| Parameter | mass_kg |
+| Unit | kg |
+| Meaning | Mass of this rigid body, not total cat mass. |
+| Source value | Not established |
+| Value used in this model | 0.0069503922 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>FL_carpals · principal_inertia_kg_m2</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_carpals |
+| Parameter | principal_inertia_kg_m2 |
+| Unit | kg m^2 |
+| Meaning | Three principal moments about the body center of mass. |
+| Source value | Not established |
+| Value used in this model | [5.424105824185633e-08, 5.424105824185633e-07, 5.424105824185633e-07] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>FL_carpals · COM_position_in_body_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_carpals |
+| Parameter | COM_position_in_body_m |
+| Unit | m |
+| Meaning | Center of mass in this body local frame. |
+| Source value | Not established |
+| Value used in this model | [0.013664871428571429, 0.0, 0.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>FL_carpals · inertia_frame_quaternion_wxyz</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_carpals |
+| Parameter | inertia_frame_quaternion_wxyz |
+| Unit | 1 |
+| Meaning | Orientation of principal inertia axes in the body frame. |
+| Source value | Not established |
+| Value used in this model | [1.0, 0.0, 0.0, 0.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>FL_carpals · body_position_in_parent_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_carpals |
+| Parameter | body_position_in_parent_m |
+| Unit | m |
+| Meaning | Local placement relative to the parent; these offsets encode skeletal segment dimensions. |
+| Source value | Not established |
+| Value used in this model | [0.09465714285714286, 0.0, 0.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>FL_carpals · body_orientation_in_parent_wxyz</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_carpals |
+| Parameter | body_orientation_in_parent_wxyz |
+| Unit | 1 |
+| Meaning | Body orientation relative to its parent, scalar-first quaternion. |
+| Source value | Not established |
+| Value used in this model | [1.0, 0.0, 0.0, 0.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>FL_digits · mass_kg</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_digits |
+| Parameter | mass_kg |
+| Unit | kg |
+| Meaning | Mass of this rigid body, not total cat mass. |
+| Source value | Not established |
+| Value used in this model | 0.0047087907 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>FL_digits · principal_inertia_kg_m2</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_digits |
+| Parameter | principal_inertia_kg_m2 |
+| Unit | kg m^2 |
+| Meaning | Three principal moments about the body center of mass. |
+| Source value | Not established |
+| Value used in this model | [2.5373014476651885e-08, 2.5373014476651884e-07, 2.5373014476651884e-07] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>FL_digits · COM_position_in_body_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_digits |
+| Parameter | COM_position_in_body_m |
+| Unit | m |
+| Meaning | Center of mass in this body local frame. |
+| Source value | Not established |
+| Value used in this model | [0.012714285714285714, 0.0, 0.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>FL_digits · inertia_frame_quaternion_wxyz</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_digits |
+| Parameter | inertia_frame_quaternion_wxyz |
+| Unit | 1 |
+| Meaning | Orientation of principal inertia axes in the body frame. |
+| Source value | Not established |
+| Value used in this model | [1.0, 0.0, 0.0, 0.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>FL_digits · body_position_in_parent_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_digits |
+| Parameter | body_position_in_parent_m |
+| Unit | m |
+| Meaning | Local placement relative to the parent; these offsets encode skeletal segment dimensions. |
+| Source value | Not established |
+| Value used in this model | [0.026142857142857138, 0.0, 0.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>FL_digits · body_orientation_in_parent_wxyz</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_digits |
+| Parameter | body_orientation_in_parent_wxyz |
+| Unit | 1 |
+| Meaning | Body orientation relative to its parent, scalar-first quaternion. |
+| Source value | Not established |
+| Value used in this model | [1.0, 0.0, 0.0, 0.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>FR_scapula · mass_kg</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FR_scapula |
+| Parameter | mass_kg |
+| Unit | kg |
+| Meaning | Mass of this rigid body, not total cat mass. |
+| Source value | Not established |
+| Value used in this model | 0.058377117 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>FR_scapula · principal_inertia_kg_m2</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FR_scapula |
+| Parameter | principal_inertia_kg_m2 |
+| Unit | kg m^2 |
+| Meaning | Three principal moments about the body center of mass. |
+| Source value | Not established |
+| Value used in this model | [3.236421733154842e-06, 3.236421733154841e-05, 3.236421733154841e-05] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>FR_scapula · COM_position_in_body_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FR_scapula |
+| Parameter | COM_position_in_body_m |
+| Unit | m |
+| Meaning | Center of mass in this body local frame. |
+| Source value | Not established |
+| Value used in this model | [0.02748354285714286, 0.0, 0.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>FR_scapula · inertia_frame_quaternion_wxyz</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FR_scapula |
+| Parameter | inertia_frame_quaternion_wxyz |
+| Unit | 1 |
+| Meaning | Orientation of principal inertia axes in the body frame. |
+| Source value | Not established |
+| Value used in this model | [1.0, 0.0, 0.0, 0.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>FR_scapula · body_position_in_parent_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FR_scapula |
+| Parameter | body_position_in_parent_m |
+| Unit | m |
+| Meaning | Local placement relative to the parent; these offsets encode skeletal segment dimensions. |
+| Source value | Not established |
+| Value used in this model | [0.2148799182938485, -0.024999999999999998, 0.20477734483331916] |
+| What changed and why | No verified source value is available for direct comparison. Forelimb mounting position was calibrated to improve whole-body geometry and loading. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>FR_scapula · body_orientation_in_parent_wxyz</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FR_scapula |
+| Parameter | body_orientation_in_parent_wxyz |
+| Unit | 1 |
+| Meaning | Body orientation relative to its parent, scalar-first quaternion. |
+| Source value | Not established |
+| Value used in this model | [0.5910014263518294, 0.5910014263518292, 0.38822327860408246, -0.3882232786040824] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>FR_upperarm · mass_kg</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FR_upperarm |
+| Parameter | mass_kg |
+| Unit | kg |
+| Meaning | Mass of this rigid body, not total cat mass. |
+| Source value | Not established |
+| Value used in this model | 0.074851628 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>FR_upperarm · principal_inertia_kg_m2</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FR_upperarm |
+| Parameter | principal_inertia_kg_m2 |
+| Unit | kg m^2 |
+| Meaning | Three principal moments about the body center of mass. |
+| Source value | Not established |
+| Value used in this model | [5.525364373047746e-06, 5.5253643730477466e-05, 5.5253643730477466e-05] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>FR_upperarm · COM_position_in_body_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FR_upperarm |
+| Parameter | COM_position_in_body_m |
+| Unit | m |
+| Meaning | Center of mass in this body local frame. |
+| Source value | Not established |
+| Value used in this model | [0.04528403714285715, 0.0, 0.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>FR_upperarm · inertia_frame_quaternion_wxyz</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FR_upperarm |
+| Parameter | inertia_frame_quaternion_wxyz |
+| Unit | 1 |
+| Meaning | Orientation of principal inertia axes in the body frame. |
+| Source value | Not established |
+| Value used in this model | [1.0, 0.0, 0.0, 0.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>FR_upperarm · body_position_in_parent_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FR_upperarm |
+| Parameter | body_position_in_parent_m |
+| Unit | m |
+| Meaning | Local placement relative to the parent; these offsets encode skeletal segment dimensions. |
+| Source value | Not established |
+| Value used in this model | [0.05771428571428572, 0.0, 0.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>FR_upperarm · body_orientation_in_parent_wxyz</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FR_upperarm |
+| Parameter | body_orientation_in_parent_wxyz |
+| Unit | 1 |
+| Meaning | Body orientation relative to its parent, scalar-first quaternion. |
+| Source value | Not established |
+| Value used in this model | [1.0, 0.0, 0.0, 0.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>FR_forearm · mass_kg</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FR_forearm |
+| Parameter | mass_kg |
+| Unit | kg |
+| Meaning | Mass of this rigid body, not total cat mass. |
+| Source value | Not established |
+| Value used in this model | 0.038469275 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>FR_forearm · principal_inertia_kg_m2</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FR_forearm |
+| Parameter | principal_inertia_kg_m2 |
+| Unit | kg m^2 |
+| Meaning | Three principal moments about the body center of mass. |
+| Source value | Not established |
+| Value used in this model | [3.2719639232485494e-06, 3.271963923248549e-05, 3.271963923248549e-05] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>FR_forearm · COM_position_in_body_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FR_forearm |
+| Parameter | COM_position_in_body_m |
+| Unit | m |
+| Meaning | Center of mass in this body local frame. |
+| Source value | Not established |
+| Value used in this model | [0.04300274, 0.0, 0.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>FR_forearm · inertia_frame_quaternion_wxyz</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FR_forearm |
+| Parameter | inertia_frame_quaternion_wxyz |
+| Unit | 1 |
+| Meaning | Orientation of principal inertia axes in the body frame. |
+| Source value | Not established |
+| Value used in this model | [1.0, 0.0, 0.0, 0.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>FR_forearm · body_position_in_parent_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FR_forearm |
+| Parameter | body_position_in_parent_m |
+| Unit | m |
+| Meaning | Local placement relative to the parent; these offsets encode skeletal segment dimensions. |
+| Source value | Not established |
+| Value used in this model | [0.09275714285714286, 0.0, 0.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>FR_forearm · body_orientation_in_parent_wxyz</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FR_forearm |
+| Parameter | body_orientation_in_parent_wxyz |
+| Unit | 1 |
+| Meaning | Body orientation relative to its parent, scalar-first quaternion. |
+| Source value | Not established |
+| Value used in this model | [1.0, 0.0, 0.0, 0.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>FR_carpals · mass_kg</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FR_carpals |
+| Parameter | mass_kg |
+| Unit | kg |
+| Meaning | Mass of this rigid body, not total cat mass. |
+| Source value | Not established |
+| Value used in this model | 0.0069503922 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>FR_carpals · principal_inertia_kg_m2</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FR_carpals |
+| Parameter | principal_inertia_kg_m2 |
+| Unit | kg m^2 |
+| Meaning | Three principal moments about the body center of mass. |
+| Source value | Not established |
+| Value used in this model | [5.424105824185633e-08, 5.424105824185633e-07, 5.424105824185633e-07] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>FR_carpals · COM_position_in_body_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FR_carpals |
+| Parameter | COM_position_in_body_m |
+| Unit | m |
+| Meaning | Center of mass in this body local frame. |
+| Source value | Not established |
+| Value used in this model | [0.013664871428571429, 0.0, 0.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>FR_carpals · inertia_frame_quaternion_wxyz</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FR_carpals |
+| Parameter | inertia_frame_quaternion_wxyz |
+| Unit | 1 |
+| Meaning | Orientation of principal inertia axes in the body frame. |
+| Source value | Not established |
+| Value used in this model | [1.0, 0.0, 0.0, 0.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>FR_carpals · body_position_in_parent_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FR_carpals |
+| Parameter | body_position_in_parent_m |
+| Unit | m |
+| Meaning | Local placement relative to the parent; these offsets encode skeletal segment dimensions. |
+| Source value | Not established |
+| Value used in this model | [0.09465714285714286, 0.0, 0.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>FR_carpals · body_orientation_in_parent_wxyz</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FR_carpals |
+| Parameter | body_orientation_in_parent_wxyz |
+| Unit | 1 |
+| Meaning | Body orientation relative to its parent, scalar-first quaternion. |
+| Source value | Not established |
+| Value used in this model | [1.0, 0.0, 0.0, 0.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>FR_digits · mass_kg</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FR_digits |
+| Parameter | mass_kg |
+| Unit | kg |
+| Meaning | Mass of this rigid body, not total cat mass. |
+| Source value | Not established |
+| Value used in this model | 0.0047087907 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>FR_digits · principal_inertia_kg_m2</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FR_digits |
+| Parameter | principal_inertia_kg_m2 |
+| Unit | kg m^2 |
+| Meaning | Three principal moments about the body center of mass. |
+| Source value | Not established |
+| Value used in this model | [2.5373014476651885e-08, 2.5373014476651884e-07, 2.5373014476651884e-07] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>FR_digits · COM_position_in_body_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FR_digits |
+| Parameter | COM_position_in_body_m |
+| Unit | m |
+| Meaning | Center of mass in this body local frame. |
+| Source value | Not established |
+| Value used in this model | [0.012714285714285714, 0.0, 0.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>FR_digits · inertia_frame_quaternion_wxyz</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FR_digits |
+| Parameter | inertia_frame_quaternion_wxyz |
+| Unit | 1 |
+| Meaning | Orientation of principal inertia axes in the body frame. |
+| Source value | Not established |
+| Value used in this model | [1.0, 0.0, 0.0, 0.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>FR_digits · body_position_in_parent_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FR_digits |
+| Parameter | body_position_in_parent_m |
+| Unit | m |
+| Meaning | Local placement relative to the parent; these offsets encode skeletal segment dimensions. |
+| Source value | Not established |
+| Value used in this model | [0.026142857142857138, 0.0, 0.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>FR_digits · body_orientation_in_parent_wxyz</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FR_digits |
+| Parameter | body_orientation_in_parent_wxyz |
+| Unit | 1 |
+| Meaning | Body orientation relative to its parent, scalar-first quaternion. |
+| Source value | Not established |
+| Value used in this model | [1.0, 0.0, 0.0, 0.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>head_neck_mass · mass_kg</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | head_neck_mass |
+| Parameter | mass_kg |
+| Unit | kg |
+| Meaning | Mass of this rigid body, not total cat mass. |
+| Source value | Not established |
+| Value used in this model | 0.379176 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>head_neck_mass · principal_inertia_kg_m2</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | head_neck_mass |
+| Parameter | principal_inertia_kg_m2 |
+| Unit | kg m^2 |
+| Meaning | Three principal moments about the body center of mass. |
+| Source value | Not established |
+| Value used in this model | [0.00021423444000000003, 0.0003507378, 0.0003222996] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>head_neck_mass · COM_position_in_body_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | head_neck_mass |
+| Parameter | COM_position_in_body_m |
+| Unit | m |
+| Meaning | Center of mass in this body local frame. |
+| Source value | Not established |
+| Value used in this model | [0.0, 0.0, 0.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>head_neck_mass · inertia_frame_quaternion_wxyz</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | head_neck_mass |
+| Parameter | inertia_frame_quaternion_wxyz |
+| Unit | 1 |
+| Meaning | Orientation of principal inertia axes in the body frame. |
+| Source value | Not established |
+| Value used in this model | [1.0, 0.0, 0.0, 0.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>head_neck_mass · body_position_in_parent_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | head_neck_mass |
+| Parameter | body_position_in_parent_m |
+| Unit | m |
+| Meaning | Local placement relative to the parent; these offsets encode skeletal segment dimensions. |
+| Source value | Not established |
+| Value used in this model | [0.325, 0.0, 0.255] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>head_neck_mass · body_orientation_in_parent_wxyz</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | head_neck_mass |
+| Parameter | body_orientation_in_parent_wxyz |
+| Unit | 1 |
+| Meaning | Body orientation relative to its parent, scalar-first quaternion. |
+| Source value | Not established |
+| Value used in this model | [1.0, 0.0, 0.0, 0.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>

@@ -26,6 +26,9 @@
 <p>After editing the HTML guides or equation source, run this from the project root:</p>
 <pre>python Code/simulation_tools/generate_github_guides.py</pre>
 <p>The generator preserves scientific content, rewrites navigation to Markdown or actual source code, and splits long parameter tables into readable pages. The root README is maintained separately. It does not change the simulation.</p>
+<p>Equations in the GitHub guides are self-contained SVG figures. Their editable LaTeX is in <a href="equations.json">equations.json</a> and the <a href="Figures_and_Videos/Equations/equation_sources.json">figure source catalog</a>. Building a new or changed equation figure also requires Node.js and the pinned MathJax renderer; the simulator does not need Node.js. Install the renderer once from the project root:</p>
+<pre>npm install --prefix Code/simulation_tools/equation_renderer</pre>
+<p>Unchanged figures are reused. Each parameter entry presents its source and applied values in a two-column table; select the entry to see all fields.</p>
 <h2>Optional local website build</h2>
 <pre>python Code/simulation_tools/build_documentation_website.py --output _site --include-untracked</pre>
 <p>Choose a new or empty output directory. This packages the HTML and checks its local links; it does not publish anything. Large numerical downloads remain in the repository. Local private papers, restricted meshes and ignored runs are excluded.</p>

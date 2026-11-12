@@ -92,9 +92,7 @@ Open each equation to inspect its formulation, definitions and corresponding cod
 
 ### 2. Prescribed periodic excitation
 
-$$
-u_i(t)=\operatorname{clip}_{[0,1]}U_i\left(\operatorname{frac}\frac{t}{T}\right)\tag{2}
-$$
+![Equation 2: Prescribed periodic excitation](Figures_and_Videos/Equations/method_02_prescribed_periodic_excitation.svg)
 
 i: muscle channel; uᵢ: applied dimensionless excitation (0–1); Uᵢ: linearly interpolated fixed input table; t: simulation time (s); T: input period, 0.6833333333 s; frac: fractional part of the cycle. The same prescribed excitation cycle repeats throughout the calculation, independently of motion and forces.
 
@@ -102,9 +100,7 @@ Code: [muscle_excitation.py](../Code/neuromechanics/muscle_excitation.py).
 
 ### 3. Activation dynamics
 
-$$
-\dot a_i=\frac{u_i-a_i}{\tau_i},\qquad \tau_i=\begin{cases}\tau_{act,i}(0.5+1.5a_i)&u_i>a_i\\ \tau_{deact,i}/(0.5+1.5a_i)&u_i\leq a_i\end{cases}\tag{3}
-$$
+![Equation 3: Activation dynamics](Figures_and_Videos/Equations/method_03_activation_dynamics.svg)
 
 aᵢ: activation (0–1); uᵢ: excitation (0–1); τ_act and τ_deact: activation and deactivation time constants (s), from activation.py. q and GRFs do not enter this input law. Native MuJoCo integrates activation. The equation is the unsmoothed branch; switch_smoothing_width is also exposed in the parameters. The current values are checked in the parameter table.
 
@@ -112,9 +108,7 @@ Code: [activation_derivative.py](../Code/neuromechanics/activation_derivative.py
 
 ### 4. Path length and fiber–tendon partition
 
-$$
-L_{MT,i}(\mathbf q)=L_{path,i}(\mathbf q)+\Delta L_i,\qquad l_{T,i}=L_{MT,i}-l_{f,i}\cos\alpha_i\tag{4}
-$$
+![Equation 4: Path length and fiber–tendon partition](Figures_and_Videos/Equations/method_04_path_length_and_fiber_tendon_partition.svg)
 
 L_MT: whole muscle–tendon length (m), not fiber length; L_path: routed origin/via/wrap/insertion length (m); ΔL: fixed path-length offset (m); l_T: tendon length (m); l_f: fiber length (m); α: constant pennation angle. Editable attachment coordinates are local to their named bones. Source pulley routing and native wrapping are described in the attachment map.
 
@@ -122,9 +116,7 @@ Code: [muscle_tendon_dynamics.py](../Code/neuromechanics/muscle_tendon_dynamics.
 
 ### 5. Normalized fiber variables
 
-$$
-\lambda_i=\frac{l_{f,i}}{l_{opt,i}},\qquad\nu_i=\frac{\dot l_{f,i}}{l_{opt,i}v_{max,i}}\tag{5}
-$$
+![Equation 5: Normalized fiber variables](Figures_and_Videos/Equations/method_05_normalized_fiber_variables.svg)
 
 λ: dimensionless normalized fiber length; ν: normalized fiber velocity, positive when lengthening; l_opt: optimal fiber length (m); v_max: positive maximum-shortening-speed magnitude in optimal lengths/s. l_opt v_max is a physical speed in m/s.
 
@@ -132,9 +124,7 @@ Code: [solve_elastic_muscle_equilibrium.py](../Code/neuromechanics/solve_elastic
 
 ### 6. Active force–length curve
 
-$$
-f_L(\lambda_i)=\exp\left[-\left|\frac{\lambda_i^{1.55}-1}{0.55}\right|^{\rho_i}\right]\tag{6}
-$$
+![Equation 6: Active force–length curve](Figures_and_Videos/Equations/method_06_active_force_length_curve.svg)
 
 f_L: dimensionless active force–length multiplier; λ: normalized fiber length; ρᵢ: channel-specific exponent. The constants 1.55 and 0.55 are editable in formulation_constants.py. The applied muscle parameters select the source MATLAB curve rather than the unused generic piecewise fallback.
 
@@ -142,9 +132,7 @@ Code: [muscle_force_length_velocity.py](../Code/neuromechanics/muscle_force_leng
 
 ### 7. Applied smooth force–velocity curve
 
-$$
-f_V(\nu)=\max\{0,d_1\operatorname{asinh}(d_2\nu+d_3)+d_4\}\tag{7}
-$$
+![Equation 7: Applied smooth force–velocity curve](Figures_and_Videos/Equations/method_07_applied_smooth_force_velocity_curve.svg)
 
 f_V: dimensionless velocity multiplier; ν: normalized fiber velocity; d₁ = −0.3211346128, d₂ = −8.149, d₃ = −0.374, d₄ = 0.8825327733. Current channels enable this curve. Source shortening/lengthening coefficients remain available but inactive when this flag is 1. Excursions outside the stated normalized domain [−1,1] are diagnostics, not validated muscle behavior.
 
@@ -152,9 +140,7 @@ Code: [muscle_force_velocity_degroote.py](../Code/neuromechanics/muscle_force_ve
 
 ### 8. Optional source velocity curve
 
-$$
-f_V^{src}(\nu)=\begin{cases}\max\{0,c_i(1+\nu)/(c_i-\nu)\}&\nu<0\\ [e_i+(1.8+0.8e_i)\nu]/(e_i+\nu)&\nu\geq0\end{cases}\tag{8}
-$$
+![Equation 8: Optional source velocity curve](Figures_and_Videos/Equations/method_08_optional_source_velocity_curve.svg)
 
 cᵢ and eᵢ: dimensionless source-shortening and source-lengthening curvature values in muscle_tendon.py; ν: normalized fiber velocity. This branch is used only if degroote_force_velocity_enabled is 0. It is retained for transparent inspection; changing that flag creates a different mechanical model requiring a new trial.
 
@@ -162,9 +148,7 @@ Code: [muscle_force_length_velocity.py](../Code/neuromechanics/muscle_force_leng
 
 ### 9. Passive fiber force
 
-$$
-f_{PE}(\lambda)=\begin{cases}\dfrac{0.0075}{11.6}\left[\exp(11.6(\lambda-1))-1\right]&\lambda>1\ \text{and enabled}\\0&\text{otherwise}\end{cases}\tag{9}
-$$
+![Equation 9: Passive fiber force](Figures_and_Videos/Equations/method_09_passive_fiber_force.svg)
 
 f_PE: passive tension normalized by tendon-projected maximum isometric force F0; lambda = l_f/l_opt is normalized fiber length, dimensionless. All 104 current channels (28 hindlimb and 76 forelimb) have passive_fiber_enabled = 1. The branch contributes zero when lambda <= 1 and positive tension when lambda > 1. Published coefficients 0.0075 and 11.6 are from Prilutsky et al. (2016), Table 10.3, and Rahmati et al. (2025), Table 3. Rectification to prevent compression and the exponent cap of 50 are implementation adaptations. The same normalized law is extended to added toe/girdle channels; this is not a measurement of each channel's passive force curve. F_PE = F0 f_PE is included inside fiber/tendon equilibrium.
 
@@ -174,9 +158,7 @@ Code: [muscle_force_length_velocity.py](../Code/neuromechanics/muscle_force_leng
 
 ### 10. Elastic tendon law
 
-$$
-\epsilon_i=\frac{l_{T,i}-l_{s,i}}{l_{s,i}},\quad f_T(\epsilon)=\begin{cases}0&\epsilon\leq0\\0.33\dfrac{e^{k\epsilon/\epsilon_{toe}}-1}{e^k-1}&0<\epsilon\leq\epsilon_{toe}\\0.33+\dfrac{0.67(\epsilon-\epsilon_{toe})}{\epsilon_0-\epsilon_{toe}}&\epsilon>\epsilon_{toe}\end{cases}\tag{10}
-$$
+![Equation 10: Elastic tendon law](Figures_and_Videos/Equations/method_10_elastic_tendon_law.svg)
 
 ε: tendon strain; l_T: tendon length (m); l_s: slack tendon length (m); f_T: normalized tension; ε₀: strain at maximum isometric tendon force; ε_toe: toe-region transition strain; k = 3: exponential toe curvature. This custom exponential-to-linear tendon law is an implementation assumption, not an identified tendon law for every cat muscle.
 
@@ -184,9 +166,7 @@ Code: [elastic_tendon_force.py](../Code/neuromechanics/elastic_tendon_force.py).
 
 ### 11. Continuous tendon transition
 
-$$
-\epsilon_{toe}=\epsilon_0\frac{0.33ke^k}{0.33ke^k+0.67(e^k-1)},\qquad F_{T,i}=F_{0,i}f_T(\epsilon_i)\tag{11}
-$$
+![Equation 11: Continuous tendon transition](Figures_and_Videos/Equations/method_11_continuous_tendon_transition.svg)
 
 ε_toe and ε₀: dimensionless strains; k: toe curvature; F_T: tendon tension (N); F₀: maximum isometric force already projected along the tendon (N). This choice makes force and slope continuous at the transition and gives f_T(ε₀)=1. Do not multiply F₀ by cos α again.
 
@@ -194,9 +174,7 @@ Code: [elastic_tendon_transition.py](../Code/neuromechanics/elastic_tendon_trans
 
 ### 12. Fiber–tendon equilibrium and time discretization
 
-$$
-f_T(\epsilon_i)-a_i f_L(\lambda_i)f_V(\nu_i)-f_{PE}(\lambda_i)-\beta_i\nu_i=0,\qquad\dot l_{f,i}^{n+1}=\frac{l_{f,i}^{n+1}-l_{f,i}^{n}}{h}\tag{12}
-$$
+![Equation 12: Fiber–tendon equilibrium and time discretization](Figures_and_Videos/Equations/method_12_fiber_tendon_equilibrium_and_time_discretization.svg)
 
 βᵢ: normalized fiber damping coefficient; n: time-step index; h: integration step (s); all force-balance terms are dimensionless tendon-direction forces. Safeguarded Newton iteration with bisection fallback solves for l_f at each step. Fiber bounds and residuals are reported. Pennation enters length geometry; the force scale is tendon-projected. This is a massless series equilibrium model.
 
@@ -204,9 +182,7 @@ Code: [solve_elastic_muscle_equilibrium.py](../Code/neuromechanics/solve_elastic
 
 ### 13. Generalized muscle force and moment arms
 
-$$
-r_{ij}=-\frac{\partial L_{MT,i}}{\partial q_j},\qquad Q_{m,j}=\sum_i r_{ij}F_{T,i}\tag{13}
-$$
+![Equation 13: Generalized muscle force and moment arms](Figures_and_Videos/Equations/method_13_generalized_muscle_force_and_moment_arms.svg)
 
 j: generalized coordinate; rᵢⱼ: signed moment arm (m for a rotational coordinate, dimensionless for a translational coordinate); Q_m: summed generalized muscle force (N m for a hinge, N for a slider). Individual contributions rᵢⱼF_T are saved separately. They exclude passive joint forces, contact and joint reactions. Source moving-route geometry was checked by a virtual-work audit.
 

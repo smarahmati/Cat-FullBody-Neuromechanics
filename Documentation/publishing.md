@@ -32,6 +32,14 @@ python Code/simulation_tools/generate_github_guides.py
 
 The generator preserves scientific content, rewrites navigation to Markdown or actual source code, and splits long parameter tables into readable pages. The root README is maintained separately. It does not change the simulation.
 
+Equations in the GitHub guides are self-contained SVG figures. Their editable LaTeX is in [equations.json](equations.json) and the [figure source catalog](Figures_and_Videos/Equations/equation_sources.json). Building a new or changed equation figure also requires Node.js and the pinned MathJax renderer; the simulator does not need Node.js. Install the renderer once from the project root:
+
+```
+npm install --prefix Code/simulation_tools/equation_renderer
+```
+
+Unchanged figures are reused. Each parameter entry presents its source and applied values in a two-column table; select the entry to see all fields.
+
 ## Optional local website build
 
 ```

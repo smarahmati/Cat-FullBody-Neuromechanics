@@ -4,205 +4,3204 @@
 
 [Back to parameter guide](../parameter_tables.md)
 
-| Object | Parameter | Unit | Meaning | Source value | Value used in this model | What changed and why | Source / evidence |
-| --- | --- | --- | --- | --- | --- | --- | --- |
-| FL_BicepsBrachii | source_lengthening_curvature | 1 | Source lengthening-curve coefficient; inactive when De Groote force-velocity mode is selected. | Not established | 0.078973475 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Author’s nine-group forelimb parameter table. In Results_Function.m, tendon-projected force F0 = 2.3 × 9.806 × PCSA × cos(PA), with PCSA in cm², PA the pennation angle and F0 in N. Tendon slack length is taken from the source table. Data/Original_Study_Data/forelimb/forelimb_9groups_parameters.json |
-| FL_BicepsBrachii | passive_fiber_enabled | 0/1 | 1 enables passive fiber tension within the elastic equilibrium; zero force below l_f/l_opt=1 does not mean it is disabled. | Not established | 1 | No verified source value is available for direct comparison. The published passive force-length law is included in every muscle channel. Its coefficients are from Prilutsky et al. (2016), Table 10.3, and Rahmati et al. (2025), Table 3. Applying the same normalized law to added muscle channels is a modeling assumption. | Published parallel elastic architecture: Prilutsky et al. 2016 Table 10.3 (10.1007/978-1-4939-3267-2_10); Rahmati et al. 2025 Table 3 (10.1113/JP287448). Common normalized curve extended to all model channels; no muscle-specific passive calibration is claimed. |
-| FL_BicepsBrachii | degroote_force_velocity_enabled | 0/1 | 1 uses the documented De Groote/OpenSim velocity curve; 0 uses the source curve. | Not established | 1 | No verified source value is available for direct comparison. Model-law choice: 1 enables the smooth De Groote force-velocity relation; 0 selects the alternative implemented law. | Author’s nine-group forelimb parameter table. In Results_Function.m, tendon-projected force F0 = 2.3 × 9.806 × PCSA × cos(PA), with PCSA in cm², PA the pennation angle and F0 in N. Tendon slack length is taken from the source table. Data/Original_Study_Data/forelimb/forelimb_9groups_parameters.json |
-| FL_ElbowFlexor | max_isometric_tendon_force_N | N | Maximum isometric force projected along the tendon; do not multiply by pennation cosine twice. | 55.534105 | 61.029495 | Different from the verified source value. Change relative to source: +9.9%. Force capacity was calibrated with motor inputs to improve mechanical agreement; the fit does not uniquely identify it. | Author’s nine-group forelimb parameter table. In Results_Function.m, tendon-projected force F0 = 2.3 × 9.806 × PCSA × cos(PA), with PCSA in cm², PA the pennation angle and F0 in N. Tendon slack length is taken from the source table. Data/Original_Study_Data/forelimb/forelimb_9groups_parameters.json |
-| FL_ElbowFlexor | optimal_fiber_length_m | m | Optimal fascicle/fiber length, not whole muscle-tendon length. | 0.04448412 | 0.047153167 | Different from the verified source value. Change relative to source: +6%. Fiber length and shortening speed were calibrated to set the force-length and force-velocity operating ranges. Physical maximum fiber speed is optimal_fiber_length_m multiplied by max_fiber_speed_optimal_lengths_per_s. The source and applied numbers are given in this row; these are not new tissue measurements. | Author’s nine-group forelimb parameter table. In Results_Function.m, tendon-projected force F0 = 2.3 × 9.806 × PCSA × cos(PA), with PCSA in cm², PA the pennation angle and F0 in N. Tendon slack length is taken from the source table. Data/Original_Study_Data/forelimb/forelimb_9groups_parameters.json |
-| FL_ElbowFlexor | tendon_slack_length_m | m | Unloaded series tendon length. | Not established | 0.026006177 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Author’s nine-group forelimb parameter table. In Results_Function.m, tendon-projected force F0 = 2.3 × 9.806 × PCSA × cos(PA), with PCSA in cm², PA the pennation angle and F0 in N. Tendon slack length is taken from the source table. Data/Original_Study_Data/forelimb/forelimb_9groups_parameters.json |
-| FL_ElbowFlexor | pennation_cosine | 1 | Cosine of the constant fiber-to-tendon pennation angle. | 0.98360646 | 0.98360646 | Retained the verified source value; no numerical change from that source. | Author’s nine-group forelimb parameter table. In Results_Function.m, tendon-projected force F0 = 2.3 × 9.806 × PCSA × cos(PA), with PCSA in cm², PA the pennation angle and F0 in N. Tendon slack length is taken from the source table. Data/Original_Study_Data/forelimb/forelimb_9groups_parameters.json |
-| FL_ElbowFlexor | tendon_strain_at_max_force | 1 | Tendon extension/slack length at one maximum isometric tendon force. | Not established | 0.04 | No verified source value is available for direct comparison. Assumed elastic-tendon compliance; not a measured tendon strain for this animal. | Author’s nine-group forelimb parameter table. In Results_Function.m, tendon-projected force F0 = 2.3 × 9.806 × PCSA × cos(PA), with PCSA in cm², PA the pennation angle and F0 in N. Tendon slack length is taken from the source table. Data/Original_Study_Data/forelimb/forelimb_9groups_parameters.json |
-| FL_ElbowFlexor | max_fiber_speed_optimal_lengths_per_s | 1/s | Positive maximum-shortening speed magnitude, measured in optimal fiber lengths per second. | 12.159742 | 11.471455 | Different from the verified source value. Change relative to source: -5.66%. Fiber length and shortening speed were calibrated to set the force-length and force-velocity operating ranges. Physical maximum fiber speed is optimal_fiber_length_m multiplied by max_fiber_speed_optimal_lengths_per_s. The source and applied numbers are given in this row; these are not new tissue measurements. | Author’s nine-group forelimb parameter table. In Results_Function.m, tendon-projected force F0 = 2.3 × 9.806 × PCSA × cos(PA), with PCSA in cm², PA the pennation angle and F0 in N. Tendon slack length is taken from the source table. Data/Original_Study_Data/forelimb/forelimb_9groups_parameters.json |
-| FL_ElbowFlexor | normalized_fiber_damping | 1 | Coefficient of normalized fiber velocity in the normalized tendon-direction force balance. | Not established | 0.010818309 | No verified source value is available for direct comparison. Effective muscle force-balance coefficient; source-law conversion and calibration are described in the methods. | Author’s nine-group forelimb parameter table. In Results_Function.m, tendon-projected force F0 = 2.3 × 9.806 × PCSA × cos(PA), with PCSA in cm², PA the pennation angle and F0 in N. Tendon slack length is taken from the source table. Data/Original_Study_Data/forelimb/forelimb_9groups_parameters.json |
-| FL_ElbowFlexor | MT_path_length_offset_m | m | Constant offset added to the routed path to define muscle-tendon length. | Not established | 0 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Author’s nine-group forelimb parameter table. In Results_Function.m, tendon-projected force F0 = 2.3 × 9.806 × PCSA × cos(PA), with PCSA in cm², PA the pennation angle and F0 in N. Tendon slack length is taken from the source table. Data/Original_Study_Data/forelimb/forelimb_9groups_parameters.json |
-| FL_ElbowFlexor | active_force_length_exponent | 1 | Exponent rho in the source active force-length curve. | Not established | 6 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Author’s nine-group forelimb parameter table. In Results_Function.m, tendon-projected force F0 = 2.3 × 9.806 × PCSA × cos(PA), with PCSA in cm², PA the pennation angle and F0 in N. Tendon slack length is taken from the source table. Data/Original_Study_Data/forelimb/forelimb_9groups_parameters.json |
-| FL_ElbowFlexor | source_shortening_curvature | 1 | Source shortening-curve coefficient; inactive when De Groote force-velocity mode is selected. | Not established | 0.146305 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Author’s nine-group forelimb parameter table. In Results_Function.m, tendon-projected force F0 = 2.3 × 9.806 × PCSA × cos(PA), with PCSA in cm², PA the pennation angle and F0 in N. Tendon slack length is taken from the source table. Data/Original_Study_Data/forelimb/forelimb_9groups_parameters.json |
-| FL_ElbowFlexor | source_lengthening_curvature | 1 | Source lengthening-curve coefficient; inactive when De Groote force-velocity mode is selected. | Not established | 0.086389978 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Author’s nine-group forelimb parameter table. In Results_Function.m, tendon-projected force F0 = 2.3 × 9.806 × PCSA × cos(PA), with PCSA in cm², PA the pennation angle and F0 in N. Tendon slack length is taken from the source table. Data/Original_Study_Data/forelimb/forelimb_9groups_parameters.json |
-| FL_ElbowFlexor | passive_fiber_enabled | 0/1 | 1 enables passive fiber tension within the elastic equilibrium; zero force below l_f/l_opt=1 does not mean it is disabled. | Not established | 1 | No verified source value is available for direct comparison. The published passive force-length law is included in every muscle channel. Its coefficients are from Prilutsky et al. (2016), Table 10.3, and Rahmati et al. (2025), Table 3. Applying the same normalized law to added muscle channels is a modeling assumption. | Published parallel elastic architecture: Prilutsky et al. 2016 Table 10.3 (10.1007/978-1-4939-3267-2_10); Rahmati et al. 2025 Table 3 (10.1113/JP287448). Common normalized curve extended to all model channels; no muscle-specific passive calibration is claimed. |
-| FL_ElbowFlexor | degroote_force_velocity_enabled | 0/1 | 1 uses the documented De Groote/OpenSim velocity curve; 0 uses the source curve. | Not established | 1 | No verified source value is available for direct comparison. Model-law choice: 1 enables the smooth De Groote force-velocity relation; 0 selects the alternative implemented law. | Author’s nine-group forelimb parameter table. In Results_Function.m, tendon-projected force F0 = 2.3 × 9.806 × PCSA × cos(PA), with PCSA in cm², PA the pennation angle and F0 in N. Tendon slack length is taken from the source table. Data/Original_Study_Data/forelimb/forelimb_9groups_parameters.json |
-| FL_ElbowFlexorWristFlexor | max_isometric_tendon_force_N | N | Maximum isometric force projected along the tendon; do not multiply by pennation cosine twice. | 97.321038 | 21.357654 | Different from the verified source value. Change relative to source: -78.1%. Force capacity was calibrated with motor inputs to improve mechanical agreement; the fit does not uniquely identify it. | Author’s nine-group forelimb parameter table. In Results_Function.m, tendon-projected force F0 = 2.3 × 9.806 × PCSA × cos(PA), with PCSA in cm², PA the pennation angle and F0 in N. Tendon slack length is taken from the source table. Data/Original_Study_Data/forelimb/forelimb_9groups_parameters.json |
-| FL_ElbowFlexorWristFlexor | optimal_fiber_length_m | m | Optimal fascicle/fiber length, not whole muscle-tendon length. | 0.027434457 | 0.029080524 | Different from the verified source value. Change relative to source: +6%. Fiber length and shortening speed were calibrated to set the force-length and force-velocity operating ranges. Physical maximum fiber speed is optimal_fiber_length_m multiplied by max_fiber_speed_optimal_lengths_per_s. The source and applied numbers are given in this row; these are not new tissue measurements. | Author’s nine-group forelimb parameter table. In Results_Function.m, tendon-projected force F0 = 2.3 × 9.806 × PCSA × cos(PA), with PCSA in cm², PA the pennation angle and F0 in N. Tendon slack length is taken from the source table. Data/Original_Study_Data/forelimb/forelimb_9groups_parameters.json |
-| FL_ElbowFlexorWristFlexor | tendon_slack_length_m | m | Unloaded series tendon length. | Not established | 0.11113157 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Author’s nine-group forelimb parameter table. In Results_Function.m, tendon-projected force F0 = 2.3 × 9.806 × PCSA × cos(PA), with PCSA in cm², PA the pennation angle and F0 in N. Tendon slack length is taken from the source table. Data/Original_Study_Data/forelimb/forelimb_9groups_parameters.json |
-| FL_ElbowFlexorWristFlexor | pennation_cosine | 1 | Cosine of the constant fiber-to-tendon pennation angle. | 0.9919682 | 0.9919682 | Retained the verified source value; no numerical change from that source. | Author’s nine-group forelimb parameter table. In Results_Function.m, tendon-projected force F0 = 2.3 × 9.806 × PCSA × cos(PA), with PCSA in cm², PA the pennation angle and F0 in N. Tendon slack length is taken from the source table. Data/Original_Study_Data/forelimb/forelimb_9groups_parameters.json |
-| FL_ElbowFlexorWristFlexor | tendon_strain_at_max_force | 1 | Tendon extension/slack length at one maximum isometric tendon force. | Not established | 0.04 | No verified source value is available for direct comparison. Assumed elastic-tendon compliance; not a measured tendon strain for this animal. | Author’s nine-group forelimb parameter table. In Results_Function.m, tendon-projected force F0 = 2.3 × 9.806 × PCSA × cos(PA), with PCSA in cm², PA the pennation angle and F0 in N. Tendon slack length is taken from the source table. Data/Original_Study_Data/forelimb/forelimb_9groups_parameters.json |
-| FL_ElbowFlexorWristFlexor | max_fiber_speed_optimal_lengths_per_s | 1/s | Positive maximum-shortening speed magnitude, measured in optimal fiber lengths per second. | 13.256289 | 12.505933 | Different from the verified source value. Change relative to source: -5.66%. Fiber length and shortening speed were calibrated to set the force-length and force-velocity operating ranges. Physical maximum fiber speed is optimal_fiber_length_m multiplied by max_fiber_speed_optimal_lengths_per_s. The source and applied numbers are given in this row; these are not new tissue measurements. | Author’s nine-group forelimb parameter table. In Results_Function.m, tendon-projected force F0 = 2.3 × 9.806 × PCSA × cos(PA), with PCSA in cm², PA the pennation angle and F0 in N. Tendon slack length is taken from the source table. Data/Original_Study_Data/forelimb/forelimb_9groups_parameters.json |
-| FL_ElbowFlexorWristFlexor | normalized_fiber_damping | 1 | Coefficient of normalized fiber velocity in the normalized tendon-direction force balance. | Not established | 0.0072735816 | No verified source value is available for direct comparison. Effective muscle force-balance coefficient; source-law conversion and calibration are described in the methods. | Author’s nine-group forelimb parameter table. In Results_Function.m, tendon-projected force F0 = 2.3 × 9.806 × PCSA × cos(PA), with PCSA in cm², PA the pennation angle and F0 in N. Tendon slack length is taken from the source table. Data/Original_Study_Data/forelimb/forelimb_9groups_parameters.json |
-| FL_ElbowFlexorWristFlexor | MT_path_length_offset_m | m | Constant offset added to the routed path to define muscle-tendon length. | Not established | 0 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Author’s nine-group forelimb parameter table. In Results_Function.m, tendon-projected force F0 = 2.3 × 9.806 × PCSA × cos(PA), with PCSA in cm², PA the pennation angle and F0 in N. Tendon slack length is taken from the source table. Data/Original_Study_Data/forelimb/forelimb_9groups_parameters.json |
-| FL_ElbowFlexorWristFlexor | active_force_length_exponent | 1 | Exponent rho in the source active force-length curve. | Not established | 3 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Author’s nine-group forelimb parameter table. In Results_Function.m, tendon-projected force F0 = 2.3 × 9.806 × PCSA × cos(PA), with PCSA in cm², PA the pennation angle and F0 in N. Tendon slack length is taken from the source table. Data/Original_Study_Data/forelimb/forelimb_9groups_parameters.json |
-| FL_ElbowFlexorWristFlexor | source_shortening_curvature | 1 | Source shortening-curve coefficient; inactive when De Groote force-velocity mode is selected. | Not established | 0.03193 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Author’s nine-group forelimb parameter table. In Results_Function.m, tendon-projected force F0 = 2.3 × 9.806 × PCSA × cos(PA), with PCSA in cm², PA the pennation angle and F0 in N. Tendon slack length is taken from the source table. Data/Original_Study_Data/forelimb/forelimb_9groups_parameters.json |
-| FL_ElbowFlexorWristFlexor | source_lengthening_curvature | 1 | Source lengthening-curve coefficient; inactive when De Groote force-velocity mode is selected. | Not established | 0.19358173 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Author’s nine-group forelimb parameter table. In Results_Function.m, tendon-projected force F0 = 2.3 × 9.806 × PCSA × cos(PA), with PCSA in cm², PA the pennation angle and F0 in N. Tendon slack length is taken from the source table. Data/Original_Study_Data/forelimb/forelimb_9groups_parameters.json |
-| FL_ElbowFlexorWristFlexor | passive_fiber_enabled | 0/1 | 1 enables passive fiber tension within the elastic equilibrium; zero force below l_f/l_opt=1 does not mean it is disabled. | Not established | 1 | No verified source value is available for direct comparison. The published passive force-length law is included in every muscle channel. Its coefficients are from Prilutsky et al. (2016), Table 10.3, and Rahmati et al. (2025), Table 3. Applying the same normalized law to added muscle channels is a modeling assumption. | Published parallel elastic architecture: Prilutsky et al. 2016 Table 10.3 (10.1007/978-1-4939-3267-2_10); Rahmati et al. 2025 Table 3 (10.1113/JP287448). Common normalized curve extended to all model channels; no muscle-specific passive calibration is claimed. |
-| FL_ElbowFlexorWristFlexor | degroote_force_velocity_enabled | 0/1 | 1 uses the documented De Groote/OpenSim velocity curve; 0 uses the source curve. | Not established | 1 | No verified source value is available for direct comparison. Model-law choice: 1 enables the smooth De Groote force-velocity relation; 0 selects the alternative implemented law. | Author’s nine-group forelimb parameter table. In Results_Function.m, tendon-projected force F0 = 2.3 × 9.806 × PCSA × cos(PA), with PCSA in cm², PA the pennation angle and F0 in N. Tendon slack length is taken from the source table. Data/Original_Study_Data/forelimb/forelimb_9groups_parameters.json |
-| FL_WristFlexor | max_isometric_tendon_force_N | N | Maximum isometric force projected along the tendon; do not multiply by pennation cosine twice. | 11.388898 | 11.387723 | Different from the verified source value. Change relative to source: -0.0103%. Force capacity was calibrated with motor inputs to improve mechanical agreement; the fit does not uniquely identify it. | Author’s nine-group forelimb parameter table. In Results_Function.m, tendon-projected force F0 = 2.3 × 9.806 × PCSA × cos(PA), with PCSA in cm², PA the pennation angle and F0 in N. Tendon slack length is taken from the source table. Data/Original_Study_Data/forelimb/forelimb_9groups_parameters.json |
-| FL_WristFlexor | optimal_fiber_length_m | m | Optimal fascicle/fiber length, not whole muscle-tendon length. | 0.02098791 | 0.022247185 | Different from the verified source value. Change relative to source: +6%. Fiber length and shortening speed were calibrated to set the force-length and force-velocity operating ranges. Physical maximum fiber speed is optimal_fiber_length_m multiplied by max_fiber_speed_optimal_lengths_per_s. The source and applied numbers are given in this row; these are not new tissue measurements. | Author’s nine-group forelimb parameter table. In Results_Function.m, tendon-projected force F0 = 2.3 × 9.806 × PCSA × cos(PA), with PCSA in cm², PA the pennation angle and F0 in N. Tendon slack length is taken from the source table. Data/Original_Study_Data/forelimb/forelimb_9groups_parameters.json |
-| FL_WristFlexor | tendon_slack_length_m | m | Unloaded series tendon length. | Not established | 0.086397541 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Author’s nine-group forelimb parameter table. In Results_Function.m, tendon-projected force F0 = 2.3 × 9.806 × PCSA × cos(PA), with PCSA in cm², PA the pennation angle and F0 in N. Tendon slack length is taken from the source table. Data/Original_Study_Data/forelimb/forelimb_9groups_parameters.json |
-| FL_WristFlexor | pennation_cosine | 1 | Cosine of the constant fiber-to-tendon pennation angle. | 0.99993231 | 0.99993231 | Retained the verified source value; no numerical change from that source. | Author’s nine-group forelimb parameter table. In Results_Function.m, tendon-projected force F0 = 2.3 × 9.806 × PCSA × cos(PA), with PCSA in cm², PA the pennation angle and F0 in N. Tendon slack length is taken from the source table. Data/Original_Study_Data/forelimb/forelimb_9groups_parameters.json |
-| FL_WristFlexor | tendon_strain_at_max_force | 1 | Tendon extension/slack length at one maximum isometric tendon force. | Not established | 0.04 | No verified source value is available for direct comparison. Assumed elastic-tendon compliance; not a measured tendon strain for this animal. | Author’s nine-group forelimb parameter table. In Results_Function.m, tendon-projected force F0 = 2.3 × 9.806 × PCSA × cos(PA), with PCSA in cm², PA the pennation angle and F0 in N. Tendon slack length is taken from the source table. Data/Original_Study_Data/forelimb/forelimb_9groups_parameters.json |
-| FL_WristFlexor | max_fiber_speed_optimal_lengths_per_s | 1/s | Positive maximum-shortening speed magnitude, measured in optimal fiber lengths per second. | 13.153 | 12.408491 | Different from the verified source value. Change relative to source: -5.66%. Fiber length and shortening speed were calibrated to set the force-length and force-velocity operating ranges. Physical maximum fiber speed is optimal_fiber_length_m multiplied by max_fiber_speed_optimal_lengths_per_s. The source and applied numbers are given in this row; these are not new tissue measurements. | Author’s nine-group forelimb parameter table. In Results_Function.m, tendon-projected force F0 = 2.3 × 9.806 × PCSA × cos(PA), with PCSA in cm², PA the pennation angle and F0 in N. Tendon slack length is taken from the source table. Data/Original_Study_Data/forelimb/forelimb_9groups_parameters.json |
-| FL_WristFlexor | normalized_fiber_damping | 1 | Coefficient of normalized fiber velocity in the normalized tendon-direction force balance. | Not established | 0.0055210796 | No verified source value is available for direct comparison. Effective muscle force-balance coefficient; source-law conversion and calibration are described in the methods. | Author’s nine-group forelimb parameter table. In Results_Function.m, tendon-projected force F0 = 2.3 × 9.806 × PCSA × cos(PA), with PCSA in cm², PA the pennation angle and F0 in N. Tendon slack length is taken from the source table. Data/Original_Study_Data/forelimb/forelimb_9groups_parameters.json |
-| FL_WristFlexor | MT_path_length_offset_m | m | Constant offset added to the routed path to define muscle-tendon length. | Not established | 0 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Author’s nine-group forelimb parameter table. In Results_Function.m, tendon-projected force F0 = 2.3 × 9.806 × PCSA × cos(PA), with PCSA in cm², PA the pennation angle and F0 in N. Tendon slack length is taken from the source table. Data/Original_Study_Data/forelimb/forelimb_9groups_parameters.json |
-| FL_WristFlexor | active_force_length_exponent | 1 | Exponent rho in the source active force-length curve. | Not established | 3 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Author’s nine-group forelimb parameter table. In Results_Function.m, tendon-projected force F0 = 2.3 × 9.806 × PCSA × cos(PA), with PCSA in cm², PA the pennation angle and F0 in N. Tendon slack length is taken from the source table. Data/Original_Study_Data/forelimb/forelimb_9groups_parameters.json |
-| FL_WristFlexor | source_shortening_curvature | 1 | Source shortening-curve coefficient; inactive when De Groote force-velocity mode is selected. | Not established | 0.01363 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Author’s nine-group forelimb parameter table. In Results_Function.m, tendon-projected force F0 = 2.3 × 9.806 × PCSA × cos(PA), with PCSA in cm², PA the pennation angle and F0 in N. Tendon slack length is taken from the source table. Data/Original_Study_Data/forelimb/forelimb_9groups_parameters.json |
-| FL_WristFlexor | source_lengthening_curvature | 1 | Source lengthening-curve coefficient; inactive when De Groote force-velocity mode is selected. | Not established | 0.69249608 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Author’s nine-group forelimb parameter table. In Results_Function.m, tendon-projected force F0 = 2.3 × 9.806 × PCSA × cos(PA), with PCSA in cm², PA the pennation angle and F0 in N. Tendon slack length is taken from the source table. Data/Original_Study_Data/forelimb/forelimb_9groups_parameters.json |
-| FL_WristFlexor | passive_fiber_enabled | 0/1 | 1 enables passive fiber tension within the elastic equilibrium; zero force below l_f/l_opt=1 does not mean it is disabled. | Not established | 1 | No verified source value is available for direct comparison. The published passive force-length law is included in every muscle channel. Its coefficients are from Prilutsky et al. (2016), Table 10.3, and Rahmati et al. (2025), Table 3. Applying the same normalized law to added muscle channels is a modeling assumption. | Published parallel elastic architecture: Prilutsky et al. 2016 Table 10.3 (10.1007/978-1-4939-3267-2_10); Rahmati et al. 2025 Table 3 (10.1113/JP287448). Common normalized curve extended to all model channels; no muscle-specific passive calibration is claimed. |
-| FL_WristFlexor | degroote_force_velocity_enabled | 0/1 | 1 uses the documented De Groote/OpenSim velocity curve; 0 uses the source curve. | Not established | 1 | No verified source value is available for direct comparison. Model-law choice: 1 enables the smooth De Groote force-velocity relation; 0 selects the alternative implemented law. | Author’s nine-group forelimb parameter table. In Results_Function.m, tendon-projected force F0 = 2.3 × 9.806 × PCSA × cos(PA), with PCSA in cm², PA the pennation angle and F0 in N. Tendon slack length is taken from the source table. Data/Original_Study_Data/forelimb/forelimb_9groups_parameters.json |
-| FL_WristExtensor | max_isometric_tendon_force_N | N | Maximum isometric force projected along the tendon; do not multiply by pennation cosine twice. | 825.3025 | 93.484274 | Different from the verified source value. Change relative to source: -88.7%. Force capacity was calibrated with motor inputs to improve mechanical agreement; the fit does not uniquely identify it. | Author’s nine-group forelimb parameter table. In Results_Function.m, tendon-projected force F0 = 2.3 × 9.806 × PCSA × cos(PA), with PCSA in cm², PA the pennation angle and F0 in N. Tendon slack length is taken from the source table. Data/Original_Study_Data/forelimb/forelimb_9groups_parameters.json |
-| FL_WristExtensor | optimal_fiber_length_m | m | Optimal fascicle/fiber length, not whole muscle-tendon length. | 0.013195799 | 0.013987547 | Different from the verified source value. Change relative to source: +6%. Fiber length and shortening speed were calibrated to set the force-length and force-velocity operating ranges. Physical maximum fiber speed is optimal_fiber_length_m multiplied by max_fiber_speed_optimal_lengths_per_s. The source and applied numbers are given in this row; these are not new tissue measurements. | Author’s nine-group forelimb parameter table. In Results_Function.m, tendon-projected force F0 = 2.3 × 9.806 × PCSA × cos(PA), with PCSA in cm², PA the pennation angle and F0 in N. Tendon slack length is taken from the source table. Data/Original_Study_Data/forelimb/forelimb_9groups_parameters.json |
-| FL_WristExtensor | tendon_slack_length_m | m | Unloaded series tendon length. | Not established | 0.10741379 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Author’s nine-group forelimb parameter table. In Results_Function.m, tendon-projected force F0 = 2.3 × 9.806 × PCSA × cos(PA), with PCSA in cm², PA the pennation angle and F0 in N. Tendon slack length is taken from the source table. Data/Original_Study_Data/forelimb/forelimb_9groups_parameters.json |
-| FL_WristExtensor | pennation_cosine | 1 | Cosine of the constant fiber-to-tendon pennation angle. | 0.98985904 | 0.98985904 | Retained the verified source value; no numerical change from that source. | Author’s nine-group forelimb parameter table. In Results_Function.m, tendon-projected force F0 = 2.3 × 9.806 × PCSA × cos(PA), with PCSA in cm², PA the pennation angle and F0 in N. Tendon slack length is taken from the source table. Data/Original_Study_Data/forelimb/forelimb_9groups_parameters.json |
-| FL_WristExtensor | tendon_strain_at_max_force | 1 | Tendon extension/slack length at one maximum isometric tendon force. | Not established | 0.04 | No verified source value is available for direct comparison. Assumed elastic-tendon compliance; not a measured tendon strain for this animal. | Author’s nine-group forelimb parameter table. In Results_Function.m, tendon-projected force F0 = 2.3 × 9.806 × PCSA × cos(PA), with PCSA in cm², PA the pennation angle and F0 in N. Tendon slack length is taken from the source table. Data/Original_Study_Data/forelimb/forelimb_9groups_parameters.json |
-| FL_WristExtensor | max_fiber_speed_optimal_lengths_per_s | 1/s | Positive maximum-shortening speed magnitude, measured in optimal fiber lengths per second. | 11.741004 | 11.076419 | Different from the verified source value. Change relative to source: -5.66%. Fiber length and shortening speed were calibrated to set the force-length and force-velocity operating ranges. Physical maximum fiber speed is optimal_fiber_length_m multiplied by max_fiber_speed_optimal_lengths_per_s. The source and applied numbers are given in this row; these are not new tissue measurements. | Author’s nine-group forelimb parameter table. In Results_Function.m, tendon-projected force F0 = 2.3 × 9.806 × PCSA × cos(PA), with PCSA in cm², PA the pennation angle and F0 in N. Tendon slack length is taken from the source table. Data/Original_Study_Data/forelimb/forelimb_9groups_parameters.json |
-| FL_WristExtensor | normalized_fiber_damping | 1 | Coefficient of normalized fiber velocity in the normalized tendon-direction force balance. | Not established | 0.0030986385 | No verified source value is available for direct comparison. Effective muscle force-balance coefficient; source-law conversion and calibration are described in the methods. | Author’s nine-group forelimb parameter table. In Results_Function.m, tendon-projected force F0 = 2.3 × 9.806 × PCSA × cos(PA), with PCSA in cm², PA the pennation angle and F0 in N. Tendon slack length is taken from the source table. Data/Original_Study_Data/forelimb/forelimb_9groups_parameters.json |
-| FL_WristExtensor | MT_path_length_offset_m | m | Constant offset added to the routed path to define muscle-tendon length. | Not established | 0 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Author’s nine-group forelimb parameter table. In Results_Function.m, tendon-projected force F0 = 2.3 × 9.806 × PCSA × cos(PA), with PCSA in cm², PA the pennation angle and F0 in N. Tendon slack length is taken from the source table. Data/Original_Study_Data/forelimb/forelimb_9groups_parameters.json |
-| FL_WristExtensor | active_force_length_exponent | 1 | Exponent rho in the source active force-length curve. | Not established | 3 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Author’s nine-group forelimb parameter table. In Results_Function.m, tendon-projected force F0 = 2.3 × 9.806 × PCSA × cos(PA), with PCSA in cm², PA the pennation angle and F0 in N. Tendon slack length is taken from the source table. Data/Original_Study_Data/forelimb/forelimb_9groups_parameters.json |
-| FL_WristExtensor | source_shortening_curvature | 1 | Source shortening-curve coefficient; inactive when De Groote force-velocity mode is selected. | Not established | 0.17935937 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Author’s nine-group forelimb parameter table. In Results_Function.m, tendon-projected force F0 = 2.3 × 9.806 × PCSA × cos(PA), with PCSA in cm², PA the pennation angle and F0 in N. Tendon slack length is taken from the source table. Data/Original_Study_Data/forelimb/forelimb_9groups_parameters.json |
-| FL_WristExtensor | source_lengthening_curvature | 1 | Source lengthening-curve coefficient; inactive when De Groote force-velocity mode is selected. | Not established | 0.0053141231 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Author’s nine-group forelimb parameter table. In Results_Function.m, tendon-projected force F0 = 2.3 × 9.806 × PCSA × cos(PA), with PCSA in cm², PA the pennation angle and F0 in N. Tendon slack length is taken from the source table. Data/Original_Study_Data/forelimb/forelimb_9groups_parameters.json |
-| FL_WristExtensor | passive_fiber_enabled | 0/1 | 1 enables passive fiber tension within the elastic equilibrium; zero force below l_f/l_opt=1 does not mean it is disabled. | Not established | 1 | No verified source value is available for direct comparison. The published passive force-length law is included in every muscle channel. Its coefficients are from Prilutsky et al. (2016), Table 10.3, and Rahmati et al. (2025), Table 3. Applying the same normalized law to added muscle channels is a modeling assumption. | Published parallel elastic architecture: Prilutsky et al. 2016 Table 10.3 (10.1007/978-1-4939-3267-2_10); Rahmati et al. 2025 Table 3 (10.1113/JP287448). Common normalized curve extended to all model channels; no muscle-specific passive calibration is claimed. |
-| FL_WristExtensor | degroote_force_velocity_enabled | 0/1 | 1 uses the documented De Groote/OpenSim velocity curve; 0 uses the source curve. | Not established | 1 | No verified source value is available for direct comparison. Model-law choice: 1 enables the smooth De Groote force-velocity relation; 0 selects the alternative implemented law. | Author’s nine-group forelimb parameter table. In Results_Function.m, tendon-projected force F0 = 2.3 × 9.806 × PCSA × cos(PA), with PCSA in cm², PA the pennation angle and F0 in N. Tendon slack length is taken from the source table. Data/Original_Study_Data/forelimb/forelimb_9groups_parameters.json |
-| FL_ShoulderFlexor | max_isometric_tendon_force_N | N | Maximum isometric force projected along the tendon; do not multiply by pennation cosine twice. | 60.746922 | 69.411418 | Different from the verified source value. Change relative to source: +14.3%. Force capacity was calibrated with motor inputs to improve mechanical agreement; the fit does not uniquely identify it. | Author’s nine-group forelimb parameter table. In Results_Function.m, tendon-projected force F0 = 2.3 × 9.806 × PCSA × cos(PA), with PCSA in cm², PA the pennation angle and F0 in N. Tendon slack length is taken from the source table. Data/Original_Study_Data/forelimb/forelimb_9groups_parameters.json |
-| FL_ShoulderFlexor | optimal_fiber_length_m | m | Optimal fascicle/fiber length, not whole muscle-tendon length. | 0.039496916 | 0.041866731 | Different from the verified source value. Change relative to source: +6%. Fiber length and shortening speed were calibrated to set the force-length and force-velocity operating ranges. Physical maximum fiber speed is optimal_fiber_length_m multiplied by max_fiber_speed_optimal_lengths_per_s. The source and applied numbers are given in this row; these are not new tissue measurements. | Author’s nine-group forelimb parameter table. In Results_Function.m, tendon-projected force F0 = 2.3 × 9.806 × PCSA × cos(PA), with PCSA in cm², PA the pennation angle and F0 in N. Tendon slack length is taken from the source table. Data/Original_Study_Data/forelimb/forelimb_9groups_parameters.json |
-| FL_ShoulderFlexor | tendon_slack_length_m | m | Unloaded series tendon length. | Not established | 0.024504272 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Author’s nine-group forelimb parameter table. In Results_Function.m, tendon-projected force F0 = 2.3 × 9.806 × PCSA × cos(PA), with PCSA in cm², PA the pennation angle and F0 in N. Tendon slack length is taken from the source table. Data/Original_Study_Data/forelimb/forelimb_9groups_parameters.json |
-| FL_ShoulderFlexor | pennation_cosine | 1 | Cosine of the constant fiber-to-tendon pennation angle. | 0.99756405 | 0.99756405 | Retained the verified source value; no numerical change from that source. | Author’s nine-group forelimb parameter table. In Results_Function.m, tendon-projected force F0 = 2.3 × 9.806 × PCSA × cos(PA), with PCSA in cm², PA the pennation angle and F0 in N. Tendon slack length is taken from the source table. Data/Original_Study_Data/forelimb/forelimb_9groups_parameters.json |
-| FL_ShoulderFlexor | tendon_strain_at_max_force | 1 | Tendon extension/slack length at one maximum isometric tendon force. | Not established | 0.04 | No verified source value is available for direct comparison. Assumed elastic-tendon compliance; not a measured tendon strain for this animal. | Author’s nine-group forelimb parameter table. In Results_Function.m, tendon-projected force F0 = 2.3 × 9.806 × PCSA × cos(PA), with PCSA in cm², PA the pennation angle and F0 in N. Tendon slack length is taken from the source table. Data/Original_Study_Data/forelimb/forelimb_9groups_parameters.json |
-| FL_ShoulderFlexor | max_fiber_speed_optimal_lengths_per_s | 1/s | Positive maximum-shortening speed magnitude, measured in optimal fiber lengths per second. | 11 | 10.377358 | Different from the verified source value. Change relative to source: -5.66%. Fiber length and shortening speed were calibrated to set the force-length and force-velocity operating ranges. Physical maximum fiber speed is optimal_fiber_length_m multiplied by max_fiber_speed_optimal_lengths_per_s. The source and applied numbers are given in this row; these are not new tissue measurements. | Author’s nine-group forelimb parameter table. In Results_Function.m, tendon-projected force F0 = 2.3 × 9.806 × PCSA × cos(PA), with PCSA in cm², PA the pennation angle and F0 in N. Tendon slack length is taken from the source table. Data/Original_Study_Data/forelimb/forelimb_9groups_parameters.json |
-| FL_ShoulderFlexor | normalized_fiber_damping | 1 | Coefficient of normalized fiber velocity in the normalized tendon-direction force balance. | Not established | 0.0086893216 | No verified source value is available for direct comparison. Effective muscle force-balance coefficient; source-law conversion and calibration are described in the methods. | Author’s nine-group forelimb parameter table. In Results_Function.m, tendon-projected force F0 = 2.3 × 9.806 × PCSA × cos(PA), with PCSA in cm², PA the pennation angle and F0 in N. Tendon slack length is taken from the source table. Data/Original_Study_Data/forelimb/forelimb_9groups_parameters.json |
-| FL_ShoulderFlexor | MT_path_length_offset_m | m | Constant offset added to the routed path to define muscle-tendon length. | Not established | 0 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Author’s nine-group forelimb parameter table. In Results_Function.m, tendon-projected force F0 = 2.3 × 9.806 × PCSA × cos(PA), with PCSA in cm², PA the pennation angle and F0 in N. Tendon slack length is taken from the source table. Data/Original_Study_Data/forelimb/forelimb_9groups_parameters.json |
-| FL_ShoulderFlexor | active_force_length_exponent | 1 | Exponent rho in the source active force-length curve. | Not established | 6 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Author’s nine-group forelimb parameter table. In Results_Function.m, tendon-projected force F0 = 2.3 × 9.806 × PCSA × cos(PA), with PCSA in cm², PA the pennation angle and F0 in N. Tendon slack length is taken from the source table. Data/Original_Study_Data/forelimb/forelimb_9groups_parameters.json |
-| FL_ShoulderFlexor | source_shortening_curvature | 1 | Source shortening-curve coefficient; inactive when De Groote force-velocity mode is selected. | Not established | 0.195715 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Author’s nine-group forelimb parameter table. In Results_Function.m, tendon-projected force F0 = 2.3 × 9.806 × PCSA × cos(PA), with PCSA in cm², PA the pennation angle and F0 in N. Tendon slack length is taken from the source table. Data/Original_Study_Data/forelimb/forelimb_9groups_parameters.json |
-| FL_ShoulderFlexor | source_lengthening_curvature | 1 | Source lengthening-curve coefficient; inactive when De Groote force-velocity mode is selected. | Not established | 0.061928536 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Author’s nine-group forelimb parameter table. In Results_Function.m, tendon-projected force F0 = 2.3 × 9.806 × PCSA × cos(PA), with PCSA in cm², PA the pennation angle and F0 in N. Tendon slack length is taken from the source table. Data/Original_Study_Data/forelimb/forelimb_9groups_parameters.json |
-| FL_ShoulderFlexor | passive_fiber_enabled | 0/1 | 1 enables passive fiber tension within the elastic equilibrium; zero force below l_f/l_opt=1 does not mean it is disabled. | Not established | 1 | No verified source value is available for direct comparison. The published passive force-length law is included in every muscle channel. Its coefficients are from Prilutsky et al. (2016), Table 10.3, and Rahmati et al. (2025), Table 3. Applying the same normalized law to added muscle channels is a modeling assumption. | Published parallel elastic architecture: Prilutsky et al. 2016 Table 10.3 (10.1007/978-1-4939-3267-2_10); Rahmati et al. 2025 Table 3 (10.1113/JP287448). Common normalized curve extended to all model channels; no muscle-specific passive calibration is claimed. |
-| FL_ShoulderFlexor | degroote_force_velocity_enabled | 0/1 | 1 uses the documented De Groote/OpenSim velocity curve; 0 uses the source curve. | Not established | 1 | No verified source value is available for direct comparison. Model-law choice: 1 enables the smooth De Groote force-velocity relation; 0 selects the alternative implemented law. | Author’s nine-group forelimb parameter table. In Results_Function.m, tendon-projected force F0 = 2.3 × 9.806 × PCSA × cos(PA), with PCSA in cm², PA the pennation angle and F0 in N. Tendon slack length is taken from the source table. Data/Original_Study_Data/forelimb/forelimb_9groups_parameters.json |
-| FL_TricepsBrachiiLong | max_isometric_tendon_force_N | N | Maximum isometric force projected along the tendon; do not multiply by pennation cosine twice. | 201.95677 | 189.10697 | Different from the verified source value. Change relative to source: -6.36%. Force capacity was calibrated with motor inputs to improve mechanical agreement; the fit does not uniquely identify it. | Author’s nine-group forelimb parameter table. In Results_Function.m, tendon-projected force F0 = 2.3 × 9.806 × PCSA × cos(PA), with PCSA in cm², PA the pennation angle and F0 in N. Tendon slack length is taken from the source table. Data/Original_Study_Data/forelimb/forelimb_9groups_parameters.json |
-| FL_TricepsBrachiiLong | optimal_fiber_length_m | m | Optimal fascicle/fiber length, not whole muscle-tendon length. | 0.023863208 | 0.025295 | Different from the verified source value. Change relative to source: +6%. Fiber length and shortening speed were calibrated to set the force-length and force-velocity operating ranges. Physical maximum fiber speed is optimal_fiber_length_m multiplied by max_fiber_speed_optimal_lengths_per_s. The source and applied numbers are given in this row; these are not new tissue measurements. | Author’s nine-group forelimb parameter table. In Results_Function.m, tendon-projected force F0 = 2.3 × 9.806 × PCSA × cos(PA), with PCSA in cm², PA the pennation angle and F0 in N. Tendon slack length is taken from the source table. Data/Original_Study_Data/forelimb/forelimb_9groups_parameters.json |
-| FL_TricepsBrachiiLong | tendon_slack_length_m | m | Unloaded series tendon length. | Not established | 0.078117496 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Author’s nine-group forelimb parameter table. In Results_Function.m, tendon-projected force F0 = 2.3 × 9.806 × PCSA × cos(PA), with PCSA in cm², PA the pennation angle and F0 in N. Tendon slack length is taken from the source table. Data/Original_Study_Data/forelimb/forelimb_9groups_parameters.json |
-| FL_TricepsBrachiiLong | pennation_cosine | 1 | Cosine of the constant fiber-to-tendon pennation angle. | 0.97304487 | 0.97304487 | Retained the verified source value; no numerical change from that source. | Author’s nine-group forelimb parameter table. In Results_Function.m, tendon-projected force F0 = 2.3 × 9.806 × PCSA × cos(PA), with PCSA in cm², PA the pennation angle and F0 in N. Tendon slack length is taken from the source table. Data/Original_Study_Data/forelimb/forelimb_9groups_parameters.json |
-| FL_TricepsBrachiiLong | tendon_strain_at_max_force | 1 | Tendon extension/slack length at one maximum isometric tendon force. | Not established | 0.04 | No verified source value is available for direct comparison. Assumed elastic-tendon compliance; not a measured tendon strain for this animal. | Author’s nine-group forelimb parameter table. In Results_Function.m, tendon-projected force F0 = 2.3 × 9.806 × PCSA × cos(PA), with PCSA in cm², PA the pennation angle and F0 in N. Tendon slack length is taken from the source table. Data/Original_Study_Data/forelimb/forelimb_9groups_parameters.json |
-| FL_TricepsBrachiiLong | max_fiber_speed_optimal_lengths_per_s | 1/s | Positive maximum-shortening speed magnitude, measured in optimal fiber lengths per second. | 11.365 | 10.721698 | Different from the verified source value. Change relative to source: -5.66%. Fiber length and shortening speed were calibrated to set the force-length and force-velocity operating ranges. Physical maximum fiber speed is optimal_fiber_length_m multiplied by max_fiber_speed_optimal_lengths_per_s. The source and applied numbers are given in this row; these are not new tissue measurements. | Author’s nine-group forelimb parameter table. In Results_Function.m, tendon-projected force F0 = 2.3 × 9.806 × PCSA × cos(PA), with PCSA in cm², PA the pennation angle and F0 in N. Tendon slack length is taken from the source table. Data/Original_Study_Data/forelimb/forelimb_9groups_parameters.json |
-| FL_TricepsBrachiiLong | normalized_fiber_damping | 1 | Coefficient of normalized fiber velocity in the normalized tendon-direction force balance. | Not established | 0.0054241071 | No verified source value is available for direct comparison. Effective muscle force-balance coefficient; source-law conversion and calibration are described in the methods. | Author’s nine-group forelimb parameter table. In Results_Function.m, tendon-projected force F0 = 2.3 × 9.806 × PCSA × cos(PA), with PCSA in cm², PA the pennation angle and F0 in N. Tendon slack length is taken from the source table. Data/Original_Study_Data/forelimb/forelimb_9groups_parameters.json |
-| FL_TricepsBrachiiLong | MT_path_length_offset_m | m | Constant offset added to the routed path to define muscle-tendon length. | Not established | 0 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Author’s nine-group forelimb parameter table. In Results_Function.m, tendon-projected force F0 = 2.3 × 9.806 × PCSA × cos(PA), with PCSA in cm², PA the pennation angle and F0 in N. Tendon slack length is taken from the source table. Data/Original_Study_Data/forelimb/forelimb_9groups_parameters.json |
-| FL_TricepsBrachiiLong | active_force_length_exponent | 1 | Exponent rho in the source active force-length curve. | Not established | 3 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Author’s nine-group forelimb parameter table. In Results_Function.m, tendon-projected force F0 = 2.3 × 9.806 × PCSA × cos(PA), with PCSA in cm², PA the pennation angle and F0 in N. Tendon slack length is taken from the source table. Data/Original_Study_Data/forelimb/forelimb_9groups_parameters.json |
-| FL_TricepsBrachiiLong | source_shortening_curvature | 1 | Source shortening-curve coefficient; inactive when De Groote force-velocity mode is selected. | Not established | 0.23323 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Author’s nine-group forelimb parameter table. In Results_Function.m, tendon-projected force F0 = 2.3 × 9.806 × PCSA × cos(PA), with PCSA in cm², PA the pennation angle and F0 in N. Tendon slack length is taken from the source table. Data/Original_Study_Data/forelimb/forelimb_9groups_parameters.json |
-| FL_TricepsBrachiiLong | source_lengthening_curvature | 1 | Source lengthening-curve coefficient; inactive when De Groote force-velocity mode is selected. | Not established | 0.016191972 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Author’s nine-group forelimb parameter table. In Results_Function.m, tendon-projected force F0 = 2.3 × 9.806 × PCSA × cos(PA), with PCSA in cm², PA the pennation angle and F0 in N. Tendon slack length is taken from the source table. Data/Original_Study_Data/forelimb/forelimb_9groups_parameters.json |
-| FL_TricepsBrachiiLong | passive_fiber_enabled | 0/1 | 1 enables passive fiber tension within the elastic equilibrium; zero force below l_f/l_opt=1 does not mean it is disabled. | Not established | 1 | No verified source value is available for direct comparison. The published passive force-length law is included in every muscle channel. Its coefficients are from Prilutsky et al. (2016), Table 10.3, and Rahmati et al. (2025), Table 3. Applying the same normalized law to added muscle channels is a modeling assumption. | Published parallel elastic architecture: Prilutsky et al. 2016 Table 10.3 (10.1007/978-1-4939-3267-2_10); Rahmati et al. 2025 Table 3 (10.1113/JP287448). Common normalized curve extended to all model channels; no muscle-specific passive calibration is claimed. |
-| FL_TricepsBrachiiLong | degroote_force_velocity_enabled | 0/1 | 1 uses the documented De Groote/OpenSim velocity curve; 0 uses the source curve. | Not established | 1 | No verified source value is available for direct comparison. Model-law choice: 1 enables the smooth De Groote force-velocity relation; 0 selects the alternative implemented law. | Author’s nine-group forelimb parameter table. In Results_Function.m, tendon-projected force F0 = 2.3 × 9.806 × PCSA × cos(PA), with PCSA in cm², PA the pennation angle and F0 in N. Tendon slack length is taken from the source table. Data/Original_Study_Data/forelimb/forelimb_9groups_parameters.json |
-| FR_ShoulderExtensor | max_isometric_tendon_force_N | N | Maximum isometric force projected along the tendon; do not multiply by pennation cosine twice. | 563.29175 | 536.97279 | Different from the verified source value. Change relative to source: -4.67%. Force capacity was calibrated with motor inputs to improve mechanical agreement; the fit does not uniquely identify it. | Author’s nine-group forelimb parameter table. In Results_Function.m, tendon-projected force F0 = 2.3 × 9.806 × PCSA × cos(PA), with PCSA in cm², PA the pennation angle and F0 in N. Tendon slack length is taken from the source table. Data/Original_Study_Data/forelimb/forelimb_9groups_parameters.json |
-| FR_ShoulderExtensor | optimal_fiber_length_m | m | Optimal fascicle/fiber length, not whole muscle-tendon length. | 0.015859438 | 0.016811005 | Different from the verified source value. Change relative to source: +6%. Fiber length and shortening speed were calibrated to set the force-length and force-velocity operating ranges. Physical maximum fiber speed is optimal_fiber_length_m multiplied by max_fiber_speed_optimal_lengths_per_s. The source and applied numbers are given in this row; these are not new tissue measurements. | Author’s nine-group forelimb parameter table. In Results_Function.m, tendon-projected force F0 = 2.3 × 9.806 × PCSA × cos(PA), with PCSA in cm², PA the pennation angle and F0 in N. Tendon slack length is taken from the source table. Data/Original_Study_Data/forelimb/forelimb_9groups_parameters.json |
-| FR_ShoulderExtensor | tendon_slack_length_m | m | Unloaded series tendon length. | Not established | 0.045085994 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Author’s nine-group forelimb parameter table. In Results_Function.m, tendon-projected force F0 = 2.3 × 9.806 × PCSA × cos(PA), with PCSA in cm², PA the pennation angle and F0 in N. Tendon slack length is taken from the source table. Data/Original_Study_Data/forelimb/forelimb_9groups_parameters.json |
-| FR_ShoulderExtensor | pennation_cosine | 1 | Cosine of the constant fiber-to-tendon pennation angle. | 0.96542209 | 0.96542209 | Retained the verified source value; no numerical change from that source. | Author’s nine-group forelimb parameter table. In Results_Function.m, tendon-projected force F0 = 2.3 × 9.806 × PCSA × cos(PA), with PCSA in cm², PA the pennation angle and F0 in N. Tendon slack length is taken from the source table. Data/Original_Study_Data/forelimb/forelimb_9groups_parameters.json |
-| FR_ShoulderExtensor | tendon_strain_at_max_force | 1 | Tendon extension/slack length at one maximum isometric tendon force. | Not established | 0.04 | No verified source value is available for direct comparison. Assumed elastic-tendon compliance; not a measured tendon strain for this animal. | Author’s nine-group forelimb parameter table. In Results_Function.m, tendon-projected force F0 = 2.3 × 9.806 × PCSA × cos(PA), with PCSA in cm², PA the pennation angle and F0 in N. Tendon slack length is taken from the source table. Data/Original_Study_Data/forelimb/forelimb_9groups_parameters.json |
-| FR_ShoulderExtensor | max_fiber_speed_optimal_lengths_per_s | 1/s | Positive maximum-shortening speed magnitude, measured in optimal fiber lengths per second. | 11 | 10.377358 | Different from the verified source value. Change relative to source: -5.66%. Fiber length and shortening speed were calibrated to set the force-length and force-velocity operating ranges. Physical maximum fiber speed is optimal_fiber_length_m multiplied by max_fiber_speed_optimal_lengths_per_s. The source and applied numbers are given in this row; these are not new tissue measurements. | Author’s nine-group forelimb parameter table. In Results_Function.m, tendon-projected force F0 = 2.3 × 9.806 × PCSA × cos(PA), with PCSA in cm², PA the pennation angle and F0 in N. Tendon slack length is taken from the source table. Data/Original_Study_Data/forelimb/forelimb_9groups_parameters.json |
-| FR_ShoulderExtensor | normalized_fiber_damping | 1 | Coefficient of normalized fiber velocity in the normalized tendon-direction force balance. | Not established | 0.0034890764 | No verified source value is available for direct comparison. Effective muscle force-balance coefficient; source-law conversion and calibration are described in the methods. | Author’s nine-group forelimb parameter table. In Results_Function.m, tendon-projected force F0 = 2.3 × 9.806 × PCSA × cos(PA), with PCSA in cm², PA the pennation angle and F0 in N. Tendon slack length is taken from the source table. Data/Original_Study_Data/forelimb/forelimb_9groups_parameters.json |
-| FR_ShoulderExtensor | MT_path_length_offset_m | m | Constant offset added to the routed path to define muscle-tendon length. | Not established | 0 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Author’s nine-group forelimb parameter table. In Results_Function.m, tendon-projected force F0 = 2.3 × 9.806 × PCSA × cos(PA), with PCSA in cm², PA the pennation angle and F0 in N. Tendon slack length is taken from the source table. Data/Original_Study_Data/forelimb/forelimb_9groups_parameters.json |
-| FR_ShoulderExtensor | active_force_length_exponent | 1 | Exponent rho in the source active force-length curve. | Not established | 3 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Author’s nine-group forelimb parameter table. In Results_Function.m, tendon-projected force F0 = 2.3 × 9.806 × PCSA × cos(PA), with PCSA in cm², PA the pennation angle and F0 in N. Tendon slack length is taken from the source table. Data/Original_Study_Data/forelimb/forelimb_9groups_parameters.json |
-| FR_ShoulderExtensor | source_shortening_curvature | 1 | Source shortening-curve coefficient; inactive when De Groote force-velocity mode is selected. | Not established | 0.3718525 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Author’s nine-group forelimb parameter table. In Results_Function.m, tendon-projected force F0 = 2.3 × 9.806 × PCSA × cos(PA), with PCSA in cm², PA the pennation angle and F0 in N. Tendon slack length is taken from the source table. Data/Original_Study_Data/forelimb/forelimb_9groups_parameters.json |
-| FR_ShoulderExtensor | source_lengthening_curvature | 1 | Source lengthening-curve coefficient; inactive when De Groote force-velocity mode is selected. | Not established | 0.0036703378 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Author’s nine-group forelimb parameter table. In Results_Function.m, tendon-projected force F0 = 2.3 × 9.806 × PCSA × cos(PA), with PCSA in cm², PA the pennation angle and F0 in N. Tendon slack length is taken from the source table. Data/Original_Study_Data/forelimb/forelimb_9groups_parameters.json |
-| FR_ShoulderExtensor | passive_fiber_enabled | 0/1 | 1 enables passive fiber tension within the elastic equilibrium; zero force below l_f/l_opt=1 does not mean it is disabled. | Not established | 1 | No verified source value is available for direct comparison. The published passive force-length law is included in every muscle channel. Its coefficients are from Prilutsky et al. (2016), Table 10.3, and Rahmati et al. (2025), Table 3. Applying the same normalized law to added muscle channels is a modeling assumption. | Published parallel elastic architecture: Prilutsky et al. 2016 Table 10.3 (10.1007/978-1-4939-3267-2_10); Rahmati et al. 2025 Table 3 (10.1113/JP287448). Common normalized curve extended to all model channels; no muscle-specific passive calibration is claimed. |
-| FR_ShoulderExtensor | degroote_force_velocity_enabled | 0/1 | 1 uses the documented De Groote/OpenSim velocity curve; 0 uses the source curve. | Not established | 1 | No verified source value is available for direct comparison. Model-law choice: 1 enables the smooth De Groote force-velocity relation; 0 selects the alternative implemented law. | Author’s nine-group forelimb parameter table. In Results_Function.m, tendon-projected force F0 = 2.3 × 9.806 × PCSA × cos(PA), with PCSA in cm², PA the pennation angle and F0 in N. Tendon slack length is taken from the source table. Data/Original_Study_Data/forelimb/forelimb_9groups_parameters.json |
-| FR_ElbowExtensor | max_isometric_tendon_force_N | N | Maximum isometric force projected along the tendon; do not multiply by pennation cosine twice. | 124.06863 | 125.72992 | Different from the verified source value. Change relative to source: +1.34%. Force capacity was calibrated with motor inputs to improve mechanical agreement; the fit does not uniquely identify it. | Author’s nine-group forelimb parameter table. In Results_Function.m, tendon-projected force F0 = 2.3 × 9.806 × PCSA × cos(PA), with PCSA in cm², PA the pennation angle and F0 in N. Tendon slack length is taken from the source table. Data/Original_Study_Data/forelimb/forelimb_9groups_parameters.json |
-| FR_ElbowExtensor | optimal_fiber_length_m | m | Optimal fascicle/fiber length, not whole muscle-tendon length. | 0.029062041 | 0.030805763 | Different from the verified source value. Change relative to source: +6%. Fiber length and shortening speed were calibrated to set the force-length and force-velocity operating ranges. Physical maximum fiber speed is optimal_fiber_length_m multiplied by max_fiber_speed_optimal_lengths_per_s. The source and applied numbers are given in this row; these are not new tissue measurements. | Author’s nine-group forelimb parameter table. In Results_Function.m, tendon-projected force F0 = 2.3 × 9.806 × PCSA × cos(PA), with PCSA in cm², PA the pennation angle and F0 in N. Tendon slack length is taken from the source table. Data/Original_Study_Data/forelimb/forelimb_9groups_parameters.json |
-| FR_ElbowExtensor | tendon_slack_length_m | m | Unloaded series tendon length. | Not established | 0.032747692 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Author’s nine-group forelimb parameter table. In Results_Function.m, tendon-projected force F0 = 2.3 × 9.806 × PCSA × cos(PA), with PCSA in cm², PA the pennation angle and F0 in N. Tendon slack length is taken from the source table. Data/Original_Study_Data/forelimb/forelimb_9groups_parameters.json |
-| FR_ElbowExtensor | pennation_cosine | 1 | Cosine of the constant fiber-to-tendon pennation angle. | 0.9862856 | 0.9862856 | Retained the verified source value; no numerical change from that source. | Author’s nine-group forelimb parameter table. In Results_Function.m, tendon-projected force F0 = 2.3 × 9.806 × PCSA × cos(PA), with PCSA in cm², PA the pennation angle and F0 in N. Tendon slack length is taken from the source table. Data/Original_Study_Data/forelimb/forelimb_9groups_parameters.json |
-| FR_ElbowExtensor | tendon_strain_at_max_force | 1 | Tendon extension/slack length at one maximum isometric tendon force. | Not established | 0.04 | No verified source value is available for direct comparison. Assumed elastic-tendon compliance; not a measured tendon strain for this animal. | Author’s nine-group forelimb parameter table. In Results_Function.m, tendon-projected force F0 = 2.3 × 9.806 × PCSA × cos(PA), with PCSA in cm², PA the pennation angle and F0 in N. Tendon slack length is taken from the source table. Data/Original_Study_Data/forelimb/forelimb_9groups_parameters.json |
-| FR_ElbowExtensor | max_fiber_speed_optimal_lengths_per_s | 1/s | Positive maximum-shortening speed magnitude, measured in optimal fiber lengths per second. | 8.675125 | 8.1840802 | Different from the verified source value. Change relative to source: -5.66%. Fiber length and shortening speed were calibrated to set the force-length and force-velocity operating ranges. Physical maximum fiber speed is optimal_fiber_length_m multiplied by max_fiber_speed_optimal_lengths_per_s. The source and applied numbers are given in this row; these are not new tissue measurements. | Author’s nine-group forelimb parameter table. In Results_Function.m, tendon-projected force F0 = 2.3 × 9.806 × PCSA × cos(PA), with PCSA in cm², PA the pennation angle and F0 in N. Tendon slack length is taken from the source table. Data/Original_Study_Data/forelimb/forelimb_9groups_parameters.json |
-| FR_ElbowExtensor | normalized_fiber_damping | 1 | Coefficient of normalized fiber velocity in the normalized tendon-direction force balance. | Not established | 0.0050423367 | No verified source value is available for direct comparison. Effective muscle force-balance coefficient; source-law conversion and calibration are described in the methods. | Author’s nine-group forelimb parameter table. In Results_Function.m, tendon-projected force F0 = 2.3 × 9.806 × PCSA × cos(PA), with PCSA in cm², PA the pennation angle and F0 in N. Tendon slack length is taken from the source table. Data/Original_Study_Data/forelimb/forelimb_9groups_parameters.json |
-| FR_ElbowExtensor | MT_path_length_offset_m | m | Constant offset added to the routed path to define muscle-tendon length. | Not established | 0 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Author’s nine-group forelimb parameter table. In Results_Function.m, tendon-projected force F0 = 2.3 × 9.806 × PCSA × cos(PA), with PCSA in cm², PA the pennation angle and F0 in N. Tendon slack length is taken from the source table. Data/Original_Study_Data/forelimb/forelimb_9groups_parameters.json |
-| FR_ElbowExtensor | active_force_length_exponent | 1 | Exponent rho in the source active force-length curve. | Not established | 3 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Author’s nine-group forelimb parameter table. In Results_Function.m, tendon-projected force F0 = 2.3 × 9.806 × PCSA × cos(PA), with PCSA in cm², PA the pennation angle and F0 in N. Tendon slack length is taken from the source table. Data/Original_Study_Data/forelimb/forelimb_9groups_parameters.json |
-| FR_ElbowExtensor | source_shortening_curvature | 1 | Source shortening-curve coefficient; inactive when De Groote force-velocity mode is selected. | Not established | 0.5008675 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Author’s nine-group forelimb parameter table. In Results_Function.m, tendon-projected force F0 = 2.3 × 9.806 × PCSA × cos(PA), with PCSA in cm², PA the pennation angle and F0 in N. Tendon slack length is taken from the source table. Data/Original_Study_Data/forelimb/forelimb_9groups_parameters.json |
-| FR_ElbowExtensor | source_lengthening_curvature | 1 | Source lengthening-curve coefficient; inactive when De Groote force-velocity mode is selected. | Not established | 0.012498821 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Author’s nine-group forelimb parameter table. In Results_Function.m, tendon-projected force F0 = 2.3 × 9.806 × PCSA × cos(PA), with PCSA in cm², PA the pennation angle and F0 in N. Tendon slack length is taken from the source table. Data/Original_Study_Data/forelimb/forelimb_9groups_parameters.json |
-| FR_ElbowExtensor | passive_fiber_enabled | 0/1 | 1 enables passive fiber tension within the elastic equilibrium; zero force below l_f/l_opt=1 does not mean it is disabled. | Not established | 1 | No verified source value is available for direct comparison. The published passive force-length law is included in every muscle channel. Its coefficients are from Prilutsky et al. (2016), Table 10.3, and Rahmati et al. (2025), Table 3. Applying the same normalized law to added muscle channels is a modeling assumption. | Published parallel elastic architecture: Prilutsky et al. 2016 Table 10.3 (10.1007/978-1-4939-3267-2_10); Rahmati et al. 2025 Table 3 (10.1113/JP287448). Common normalized curve extended to all model channels; no muscle-specific passive calibration is claimed. |
-| FR_ElbowExtensor | degroote_force_velocity_enabled | 0/1 | 1 uses the documented De Groote/OpenSim velocity curve; 0 uses the source curve. | Not established | 1 | No verified source value is available for direct comparison. Model-law choice: 1 enables the smooth De Groote force-velocity relation; 0 selects the alternative implemented law. | Author’s nine-group forelimb parameter table. In Results_Function.m, tendon-projected force F0 = 2.3 × 9.806 × PCSA × cos(PA), with PCSA in cm², PA the pennation angle and F0 in N. Tendon slack length is taken from the source table. Data/Original_Study_Data/forelimb/forelimb_9groups_parameters.json |
-| FR_BicepsBrachii | max_isometric_tendon_force_N | N | Maximum isometric force projected along the tendon; do not multiply by pennation cosine twice. | 50.419327 | 56.958168 | Different from the verified source value. Change relative to source: +13%. Force capacity was calibrated with motor inputs to improve mechanical agreement; the fit does not uniquely identify it. | Author’s nine-group forelimb parameter table. In Results_Function.m, tendon-projected force F0 = 2.3 × 9.806 × PCSA × cos(PA), with PCSA in cm², PA the pennation angle and F0 in N. Tendon slack length is taken from the source table. Data/Original_Study_Data/forelimb/forelimb_9groups_parameters.json |
-| FR_BicepsBrachii | optimal_fiber_length_m | m | Optimal fascicle/fiber length, not whole muscle-tendon length. | 0.025089143 | 0.026594491 | Different from the verified source value. Change relative to source: +6%. Fiber length and shortening speed were calibrated to set the force-length and force-velocity operating ranges. Physical maximum fiber speed is optimal_fiber_length_m multiplied by max_fiber_speed_optimal_lengths_per_s. The source and applied numbers are given in this row; these are not new tissue measurements. | Author’s nine-group forelimb parameter table. In Results_Function.m, tendon-projected force F0 = 2.3 × 9.806 × PCSA × cos(PA), with PCSA in cm², PA the pennation angle and F0 in N. Tendon slack length is taken from the source table. Data/Original_Study_Data/forelimb/forelimb_9groups_parameters.json |
-| FR_BicepsBrachii | tendon_slack_length_m | m | Unloaded series tendon length. | Not established | 0.08788348 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Author’s nine-group forelimb parameter table. In Results_Function.m, tendon-projected force F0 = 2.3 × 9.806 × PCSA × cos(PA), with PCSA in cm², PA the pennation angle and F0 in N. Tendon slack length is taken from the source table. Data/Original_Study_Data/forelimb/forelimb_9groups_parameters.json |
-| FR_BicepsBrachii | pennation_cosine | 1 | Cosine of the constant fiber-to-tendon pennation angle. | 0.98480775 | 0.98480775 | Retained the verified source value; no numerical change from that source. | Author’s nine-group forelimb parameter table. In Results_Function.m, tendon-projected force F0 = 2.3 × 9.806 × PCSA × cos(PA), with PCSA in cm², PA the pennation angle and F0 in N. Tendon slack length is taken from the source table. Data/Original_Study_Data/forelimb/forelimb_9groups_parameters.json |
-| FR_BicepsBrachii | tendon_strain_at_max_force | 1 | Tendon extension/slack length at one maximum isometric tendon force. | Not established | 0.04 | No verified source value is available for direct comparison. Assumed elastic-tendon compliance; not a measured tendon strain for this animal. | Author’s nine-group forelimb parameter table. In Results_Function.m, tendon-projected force F0 = 2.3 × 9.806 × PCSA × cos(PA), with PCSA in cm², PA the pennation angle and F0 in N. Tendon slack length is taken from the source table. Data/Original_Study_Data/forelimb/forelimb_9groups_parameters.json |
-| FR_BicepsBrachii | max_fiber_speed_optimal_lengths_per_s | 1/s | Positive maximum-shortening speed magnitude, measured in optimal fiber lengths per second. | 11.878 | 11.20566 | Different from the verified source value. Change relative to source: -5.66%. Fiber length and shortening speed were calibrated to set the force-length and force-velocity operating ranges. Physical maximum fiber speed is optimal_fiber_length_m multiplied by max_fiber_speed_optimal_lengths_per_s. The source and applied numbers are given in this row; these are not new tissue measurements. | Author’s nine-group forelimb parameter table. In Results_Function.m, tendon-projected force F0 = 2.3 × 9.806 × PCSA × cos(PA), with PCSA in cm², PA the pennation angle and F0 in N. Tendon slack length is taken from the source table. Data/Original_Study_Data/forelimb/forelimb_9groups_parameters.json |
-| FR_BicepsBrachii | normalized_fiber_damping | 1 | Coefficient of normalized fiber velocity in the normalized tendon-direction force balance. | Not established | 0.0059601767 | No verified source value is available for direct comparison. Effective muscle force-balance coefficient; source-law conversion and calibration are described in the methods. | Author’s nine-group forelimb parameter table. In Results_Function.m, tendon-projected force F0 = 2.3 × 9.806 × PCSA × cos(PA), with PCSA in cm², PA the pennation angle and F0 in N. Tendon slack length is taken from the source table. Data/Original_Study_Data/forelimb/forelimb_9groups_parameters.json |
-| FR_BicepsBrachii | MT_path_length_offset_m | m | Constant offset added to the routed path to define muscle-tendon length. | Not established | 0 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Author’s nine-group forelimb parameter table. In Results_Function.m, tendon-projected force F0 = 2.3 × 9.806 × PCSA × cos(PA), with PCSA in cm², PA the pennation angle and F0 in N. Tendon slack length is taken from the source table. Data/Original_Study_Data/forelimb/forelimb_9groups_parameters.json |
-| FR_BicepsBrachii | active_force_length_exponent | 1 | Exponent rho in the source active force-length curve. | Not established | 3 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Author’s nine-group forelimb parameter table. In Results_Function.m, tendon-projected force F0 = 2.3 × 9.806 × PCSA × cos(PA), with PCSA in cm², PA the pennation angle and F0 in N. Tendon slack length is taken from the source table. Data/Original_Study_Data/forelimb/forelimb_9groups_parameters.json |
-| FR_BicepsBrachii | source_shortening_curvature | 1 | Source shortening-curve coefficient; inactive when De Groote force-velocity mode is selected. | Not established | 0.17833 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Author’s nine-group forelimb parameter table. In Results_Function.m, tendon-projected force F0 = 2.3 × 9.806 × PCSA × cos(PA), with PCSA in cm², PA the pennation angle and F0 in N. Tendon slack length is taken from the source table. Data/Original_Study_Data/forelimb/forelimb_9groups_parameters.json |
-| FR_BicepsBrachii | source_lengthening_curvature | 1 | Source lengthening-curve coefficient; inactive when De Groote force-velocity mode is selected. | Not established | 0.078973475 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Author’s nine-group forelimb parameter table. In Results_Function.m, tendon-projected force F0 = 2.3 × 9.806 × PCSA × cos(PA), with PCSA in cm², PA the pennation angle and F0 in N. Tendon slack length is taken from the source table. Data/Original_Study_Data/forelimb/forelimb_9groups_parameters.json |
-| FR_BicepsBrachii | passive_fiber_enabled | 0/1 | 1 enables passive fiber tension within the elastic equilibrium; zero force below l_f/l_opt=1 does not mean it is disabled. | Not established | 1 | No verified source value is available for direct comparison. The published passive force-length law is included in every muscle channel. Its coefficients are from Prilutsky et al. (2016), Table 10.3, and Rahmati et al. (2025), Table 3. Applying the same normalized law to added muscle channels is a modeling assumption. | Published parallel elastic architecture: Prilutsky et al. 2016 Table 10.3 (10.1007/978-1-4939-3267-2_10); Rahmati et al. 2025 Table 3 (10.1113/JP287448). Common normalized curve extended to all model channels; no muscle-specific passive calibration is claimed. |
-| FR_BicepsBrachii | degroote_force_velocity_enabled | 0/1 | 1 uses the documented De Groote/OpenSim velocity curve; 0 uses the source curve. | Not established | 1 | No verified source value is available for direct comparison. Model-law choice: 1 enables the smooth De Groote force-velocity relation; 0 selects the alternative implemented law. | Author’s nine-group forelimb parameter table. In Results_Function.m, tendon-projected force F0 = 2.3 × 9.806 × PCSA × cos(PA), with PCSA in cm², PA the pennation angle and F0 in N. Tendon slack length is taken from the source table. Data/Original_Study_Data/forelimb/forelimb_9groups_parameters.json |
-| FR_ElbowFlexor | max_isometric_tendon_force_N | N | Maximum isometric force projected along the tendon; do not multiply by pennation cosine twice. | 55.534105 | 61.029495 | Different from the verified source value. Change relative to source: +9.9%. Force capacity was calibrated with motor inputs to improve mechanical agreement; the fit does not uniquely identify it. | Author’s nine-group forelimb parameter table. In Results_Function.m, tendon-projected force F0 = 2.3 × 9.806 × PCSA × cos(PA), with PCSA in cm², PA the pennation angle and F0 in N. Tendon slack length is taken from the source table. Data/Original_Study_Data/forelimb/forelimb_9groups_parameters.json |
-| FR_ElbowFlexor | optimal_fiber_length_m | m | Optimal fascicle/fiber length, not whole muscle-tendon length. | 0.04448412 | 0.047153167 | Different from the verified source value. Change relative to source: +6%. Fiber length and shortening speed were calibrated to set the force-length and force-velocity operating ranges. Physical maximum fiber speed is optimal_fiber_length_m multiplied by max_fiber_speed_optimal_lengths_per_s. The source and applied numbers are given in this row; these are not new tissue measurements. | Author’s nine-group forelimb parameter table. In Results_Function.m, tendon-projected force F0 = 2.3 × 9.806 × PCSA × cos(PA), with PCSA in cm², PA the pennation angle and F0 in N. Tendon slack length is taken from the source table. Data/Original_Study_Data/forelimb/forelimb_9groups_parameters.json |
-| FR_ElbowFlexor | tendon_slack_length_m | m | Unloaded series tendon length. | Not established | 0.026006177 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Author’s nine-group forelimb parameter table. In Results_Function.m, tendon-projected force F0 = 2.3 × 9.806 × PCSA × cos(PA), with PCSA in cm², PA the pennation angle and F0 in N. Tendon slack length is taken from the source table. Data/Original_Study_Data/forelimb/forelimb_9groups_parameters.json |
-| FR_ElbowFlexor | pennation_cosine | 1 | Cosine of the constant fiber-to-tendon pennation angle. | 0.98360646 | 0.98360646 | Retained the verified source value; no numerical change from that source. | Author’s nine-group forelimb parameter table. In Results_Function.m, tendon-projected force F0 = 2.3 × 9.806 × PCSA × cos(PA), with PCSA in cm², PA the pennation angle and F0 in N. Tendon slack length is taken from the source table. Data/Original_Study_Data/forelimb/forelimb_9groups_parameters.json |
-| FR_ElbowFlexor | tendon_strain_at_max_force | 1 | Tendon extension/slack length at one maximum isometric tendon force. | Not established | 0.04 | No verified source value is available for direct comparison. Assumed elastic-tendon compliance; not a measured tendon strain for this animal. | Author’s nine-group forelimb parameter table. In Results_Function.m, tendon-projected force F0 = 2.3 × 9.806 × PCSA × cos(PA), with PCSA in cm², PA the pennation angle and F0 in N. Tendon slack length is taken from the source table. Data/Original_Study_Data/forelimb/forelimb_9groups_parameters.json |
-| FR_ElbowFlexor | max_fiber_speed_optimal_lengths_per_s | 1/s | Positive maximum-shortening speed magnitude, measured in optimal fiber lengths per second. | 12.159742 | 11.471455 | Different from the verified source value. Change relative to source: -5.66%. Fiber length and shortening speed were calibrated to set the force-length and force-velocity operating ranges. Physical maximum fiber speed is optimal_fiber_length_m multiplied by max_fiber_speed_optimal_lengths_per_s. The source and applied numbers are given in this row; these are not new tissue measurements. | Author’s nine-group forelimb parameter table. In Results_Function.m, tendon-projected force F0 = 2.3 × 9.806 × PCSA × cos(PA), with PCSA in cm², PA the pennation angle and F0 in N. Tendon slack length is taken from the source table. Data/Original_Study_Data/forelimb/forelimb_9groups_parameters.json |
-| FR_ElbowFlexor | normalized_fiber_damping | 1 | Coefficient of normalized fiber velocity in the normalized tendon-direction force balance. | Not established | 0.010818309 | No verified source value is available for direct comparison. Effective muscle force-balance coefficient; source-law conversion and calibration are described in the methods. | Author’s nine-group forelimb parameter table. In Results_Function.m, tendon-projected force F0 = 2.3 × 9.806 × PCSA × cos(PA), with PCSA in cm², PA the pennation angle and F0 in N. Tendon slack length is taken from the source table. Data/Original_Study_Data/forelimb/forelimb_9groups_parameters.json |
-| FR_ElbowFlexor | MT_path_length_offset_m | m | Constant offset added to the routed path to define muscle-tendon length. | Not established | 0 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Author’s nine-group forelimb parameter table. In Results_Function.m, tendon-projected force F0 = 2.3 × 9.806 × PCSA × cos(PA), with PCSA in cm², PA the pennation angle and F0 in N. Tendon slack length is taken from the source table. Data/Original_Study_Data/forelimb/forelimb_9groups_parameters.json |
-| FR_ElbowFlexor | active_force_length_exponent | 1 | Exponent rho in the source active force-length curve. | Not established | 6 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Author’s nine-group forelimb parameter table. In Results_Function.m, tendon-projected force F0 = 2.3 × 9.806 × PCSA × cos(PA), with PCSA in cm², PA the pennation angle and F0 in N. Tendon slack length is taken from the source table. Data/Original_Study_Data/forelimb/forelimb_9groups_parameters.json |
-| FR_ElbowFlexor | source_shortening_curvature | 1 | Source shortening-curve coefficient; inactive when De Groote force-velocity mode is selected. | Not established | 0.146305 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Author’s nine-group forelimb parameter table. In Results_Function.m, tendon-projected force F0 = 2.3 × 9.806 × PCSA × cos(PA), with PCSA in cm², PA the pennation angle and F0 in N. Tendon slack length is taken from the source table. Data/Original_Study_Data/forelimb/forelimb_9groups_parameters.json |
-| FR_ElbowFlexor | source_lengthening_curvature | 1 | Source lengthening-curve coefficient; inactive when De Groote force-velocity mode is selected. | Not established | 0.086389978 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Author’s nine-group forelimb parameter table. In Results_Function.m, tendon-projected force F0 = 2.3 × 9.806 × PCSA × cos(PA), with PCSA in cm², PA the pennation angle and F0 in N. Tendon slack length is taken from the source table. Data/Original_Study_Data/forelimb/forelimb_9groups_parameters.json |
-| FR_ElbowFlexor | passive_fiber_enabled | 0/1 | 1 enables passive fiber tension within the elastic equilibrium; zero force below l_f/l_opt=1 does not mean it is disabled. | Not established | 1 | No verified source value is available for direct comparison. The published passive force-length law is included in every muscle channel. Its coefficients are from Prilutsky et al. (2016), Table 10.3, and Rahmati et al. (2025), Table 3. Applying the same normalized law to added muscle channels is a modeling assumption. | Published parallel elastic architecture: Prilutsky et al. 2016 Table 10.3 (10.1007/978-1-4939-3267-2_10); Rahmati et al. 2025 Table 3 (10.1113/JP287448). Common normalized curve extended to all model channels; no muscle-specific passive calibration is claimed. |
-| FR_ElbowFlexor | degroote_force_velocity_enabled | 0/1 | 1 uses the documented De Groote/OpenSim velocity curve; 0 uses the source curve. | Not established | 1 | No verified source value is available for direct comparison. Model-law choice: 1 enables the smooth De Groote force-velocity relation; 0 selects the alternative implemented law. | Author’s nine-group forelimb parameter table. In Results_Function.m, tendon-projected force F0 = 2.3 × 9.806 × PCSA × cos(PA), with PCSA in cm², PA the pennation angle and F0 in N. Tendon slack length is taken from the source table. Data/Original_Study_Data/forelimb/forelimb_9groups_parameters.json |
-| FR_ElbowFlexorWristFlexor | max_isometric_tendon_force_N | N | Maximum isometric force projected along the tendon; do not multiply by pennation cosine twice. | 97.321038 | 21.357654 | Different from the verified source value. Change relative to source: -78.1%. Force capacity was calibrated with motor inputs to improve mechanical agreement; the fit does not uniquely identify it. | Author’s nine-group forelimb parameter table. In Results_Function.m, tendon-projected force F0 = 2.3 × 9.806 × PCSA × cos(PA), with PCSA in cm², PA the pennation angle and F0 in N. Tendon slack length is taken from the source table. Data/Original_Study_Data/forelimb/forelimb_9groups_parameters.json |
-| FR_ElbowFlexorWristFlexor | optimal_fiber_length_m | m | Optimal fascicle/fiber length, not whole muscle-tendon length. | 0.027434457 | 0.029080524 | Different from the verified source value. Change relative to source: +6%. Fiber length and shortening speed were calibrated to set the force-length and force-velocity operating ranges. Physical maximum fiber speed is optimal_fiber_length_m multiplied by max_fiber_speed_optimal_lengths_per_s. The source and applied numbers are given in this row; these are not new tissue measurements. | Author’s nine-group forelimb parameter table. In Results_Function.m, tendon-projected force F0 = 2.3 × 9.806 × PCSA × cos(PA), with PCSA in cm², PA the pennation angle and F0 in N. Tendon slack length is taken from the source table. Data/Original_Study_Data/forelimb/forelimb_9groups_parameters.json |
-| FR_ElbowFlexorWristFlexor | tendon_slack_length_m | m | Unloaded series tendon length. | Not established | 0.11113157 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Author’s nine-group forelimb parameter table. In Results_Function.m, tendon-projected force F0 = 2.3 × 9.806 × PCSA × cos(PA), with PCSA in cm², PA the pennation angle and F0 in N. Tendon slack length is taken from the source table. Data/Original_Study_Data/forelimb/forelimb_9groups_parameters.json |
-| FR_ElbowFlexorWristFlexor | pennation_cosine | 1 | Cosine of the constant fiber-to-tendon pennation angle. | 0.9919682 | 0.9919682 | Retained the verified source value; no numerical change from that source. | Author’s nine-group forelimb parameter table. In Results_Function.m, tendon-projected force F0 = 2.3 × 9.806 × PCSA × cos(PA), with PCSA in cm², PA the pennation angle and F0 in N. Tendon slack length is taken from the source table. Data/Original_Study_Data/forelimb/forelimb_9groups_parameters.json |
-| FR_ElbowFlexorWristFlexor | tendon_strain_at_max_force | 1 | Tendon extension/slack length at one maximum isometric tendon force. | Not established | 0.04 | No verified source value is available for direct comparison. Assumed elastic-tendon compliance; not a measured tendon strain for this animal. | Author’s nine-group forelimb parameter table. In Results_Function.m, tendon-projected force F0 = 2.3 × 9.806 × PCSA × cos(PA), with PCSA in cm², PA the pennation angle and F0 in N. Tendon slack length is taken from the source table. Data/Original_Study_Data/forelimb/forelimb_9groups_parameters.json |
-| FR_ElbowFlexorWristFlexor | max_fiber_speed_optimal_lengths_per_s | 1/s | Positive maximum-shortening speed magnitude, measured in optimal fiber lengths per second. | 13.256289 | 12.505933 | Different from the verified source value. Change relative to source: -5.66%. Fiber length and shortening speed were calibrated to set the force-length and force-velocity operating ranges. Physical maximum fiber speed is optimal_fiber_length_m multiplied by max_fiber_speed_optimal_lengths_per_s. The source and applied numbers are given in this row; these are not new tissue measurements. | Author’s nine-group forelimb parameter table. In Results_Function.m, tendon-projected force F0 = 2.3 × 9.806 × PCSA × cos(PA), with PCSA in cm², PA the pennation angle and F0 in N. Tendon slack length is taken from the source table. Data/Original_Study_Data/forelimb/forelimb_9groups_parameters.json |
-| FR_ElbowFlexorWristFlexor | normalized_fiber_damping | 1 | Coefficient of normalized fiber velocity in the normalized tendon-direction force balance. | Not established | 0.0072735816 | No verified source value is available for direct comparison. Effective muscle force-balance coefficient; source-law conversion and calibration are described in the methods. | Author’s nine-group forelimb parameter table. In Results_Function.m, tendon-projected force F0 = 2.3 × 9.806 × PCSA × cos(PA), with PCSA in cm², PA the pennation angle and F0 in N. Tendon slack length is taken from the source table. Data/Original_Study_Data/forelimb/forelimb_9groups_parameters.json |
-| FR_ElbowFlexorWristFlexor | MT_path_length_offset_m | m | Constant offset added to the routed path to define muscle-tendon length. | Not established | 0 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Author’s nine-group forelimb parameter table. In Results_Function.m, tendon-projected force F0 = 2.3 × 9.806 × PCSA × cos(PA), with PCSA in cm², PA the pennation angle and F0 in N. Tendon slack length is taken from the source table. Data/Original_Study_Data/forelimb/forelimb_9groups_parameters.json |
-| FR_ElbowFlexorWristFlexor | active_force_length_exponent | 1 | Exponent rho in the source active force-length curve. | Not established | 3 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Author’s nine-group forelimb parameter table. In Results_Function.m, tendon-projected force F0 = 2.3 × 9.806 × PCSA × cos(PA), with PCSA in cm², PA the pennation angle and F0 in N. Tendon slack length is taken from the source table. Data/Original_Study_Data/forelimb/forelimb_9groups_parameters.json |
-| FR_ElbowFlexorWristFlexor | source_shortening_curvature | 1 | Source shortening-curve coefficient; inactive when De Groote force-velocity mode is selected. | Not established | 0.03193 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Author’s nine-group forelimb parameter table. In Results_Function.m, tendon-projected force F0 = 2.3 × 9.806 × PCSA × cos(PA), with PCSA in cm², PA the pennation angle and F0 in N. Tendon slack length is taken from the source table. Data/Original_Study_Data/forelimb/forelimb_9groups_parameters.json |
-| FR_ElbowFlexorWristFlexor | source_lengthening_curvature | 1 | Source lengthening-curve coefficient; inactive when De Groote force-velocity mode is selected. | Not established | 0.19358173 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Author’s nine-group forelimb parameter table. In Results_Function.m, tendon-projected force F0 = 2.3 × 9.806 × PCSA × cos(PA), with PCSA in cm², PA the pennation angle and F0 in N. Tendon slack length is taken from the source table. Data/Original_Study_Data/forelimb/forelimb_9groups_parameters.json |
-| FR_ElbowFlexorWristFlexor | passive_fiber_enabled | 0/1 | 1 enables passive fiber tension within the elastic equilibrium; zero force below l_f/l_opt=1 does not mean it is disabled. | Not established | 1 | No verified source value is available for direct comparison. The published passive force-length law is included in every muscle channel. Its coefficients are from Prilutsky et al. (2016), Table 10.3, and Rahmati et al. (2025), Table 3. Applying the same normalized law to added muscle channels is a modeling assumption. | Published parallel elastic architecture: Prilutsky et al. 2016 Table 10.3 (10.1007/978-1-4939-3267-2_10); Rahmati et al. 2025 Table 3 (10.1113/JP287448). Common normalized curve extended to all model channels; no muscle-specific passive calibration is claimed. |
-| FR_ElbowFlexorWristFlexor | degroote_force_velocity_enabled | 0/1 | 1 uses the documented De Groote/OpenSim velocity curve; 0 uses the source curve. | Not established | 1 | No verified source value is available for direct comparison. Model-law choice: 1 enables the smooth De Groote force-velocity relation; 0 selects the alternative implemented law. | Author’s nine-group forelimb parameter table. In Results_Function.m, tendon-projected force F0 = 2.3 × 9.806 × PCSA × cos(PA), with PCSA in cm², PA the pennation angle and F0 in N. Tendon slack length is taken from the source table. Data/Original_Study_Data/forelimb/forelimb_9groups_parameters.json |
-| FR_WristFlexor | max_isometric_tendon_force_N | N | Maximum isometric force projected along the tendon; do not multiply by pennation cosine twice. | 11.388898 | 11.387723 | Different from the verified source value. Change relative to source: -0.0103%. Force capacity was calibrated with motor inputs to improve mechanical agreement; the fit does not uniquely identify it. | Author’s nine-group forelimb parameter table. In Results_Function.m, tendon-projected force F0 = 2.3 × 9.806 × PCSA × cos(PA), with PCSA in cm², PA the pennation angle and F0 in N. Tendon slack length is taken from the source table. Data/Original_Study_Data/forelimb/forelimb_9groups_parameters.json |
-| FR_WristFlexor | optimal_fiber_length_m | m | Optimal fascicle/fiber length, not whole muscle-tendon length. | 0.02098791 | 0.022247185 | Different from the verified source value. Change relative to source: +6%. Fiber length and shortening speed were calibrated to set the force-length and force-velocity operating ranges. Physical maximum fiber speed is optimal_fiber_length_m multiplied by max_fiber_speed_optimal_lengths_per_s. The source and applied numbers are given in this row; these are not new tissue measurements. | Author’s nine-group forelimb parameter table. In Results_Function.m, tendon-projected force F0 = 2.3 × 9.806 × PCSA × cos(PA), with PCSA in cm², PA the pennation angle and F0 in N. Tendon slack length is taken from the source table. Data/Original_Study_Data/forelimb/forelimb_9groups_parameters.json |
-| FR_WristFlexor | tendon_slack_length_m | m | Unloaded series tendon length. | Not established | 0.086397541 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Author’s nine-group forelimb parameter table. In Results_Function.m, tendon-projected force F0 = 2.3 × 9.806 × PCSA × cos(PA), with PCSA in cm², PA the pennation angle and F0 in N. Tendon slack length is taken from the source table. Data/Original_Study_Data/forelimb/forelimb_9groups_parameters.json |
-| FR_WristFlexor | pennation_cosine | 1 | Cosine of the constant fiber-to-tendon pennation angle. | 0.99993231 | 0.99993231 | Retained the verified source value; no numerical change from that source. | Author’s nine-group forelimb parameter table. In Results_Function.m, tendon-projected force F0 = 2.3 × 9.806 × PCSA × cos(PA), with PCSA in cm², PA the pennation angle and F0 in N. Tendon slack length is taken from the source table. Data/Original_Study_Data/forelimb/forelimb_9groups_parameters.json |
-| FR_WristFlexor | tendon_strain_at_max_force | 1 | Tendon extension/slack length at one maximum isometric tendon force. | Not established | 0.04 | No verified source value is available for direct comparison. Assumed elastic-tendon compliance; not a measured tendon strain for this animal. | Author’s nine-group forelimb parameter table. In Results_Function.m, tendon-projected force F0 = 2.3 × 9.806 × PCSA × cos(PA), with PCSA in cm², PA the pennation angle and F0 in N. Tendon slack length is taken from the source table. Data/Original_Study_Data/forelimb/forelimb_9groups_parameters.json |
-| FR_WristFlexor | max_fiber_speed_optimal_lengths_per_s | 1/s | Positive maximum-shortening speed magnitude, measured in optimal fiber lengths per second. | 13.153 | 12.408491 | Different from the verified source value. Change relative to source: -5.66%. Fiber length and shortening speed were calibrated to set the force-length and force-velocity operating ranges. Physical maximum fiber speed is optimal_fiber_length_m multiplied by max_fiber_speed_optimal_lengths_per_s. The source and applied numbers are given in this row; these are not new tissue measurements. | Author’s nine-group forelimb parameter table. In Results_Function.m, tendon-projected force F0 = 2.3 × 9.806 × PCSA × cos(PA), with PCSA in cm², PA the pennation angle and F0 in N. Tendon slack length is taken from the source table. Data/Original_Study_Data/forelimb/forelimb_9groups_parameters.json |
-| FR_WristFlexor | normalized_fiber_damping | 1 | Coefficient of normalized fiber velocity in the normalized tendon-direction force balance. | Not established | 0.0055210796 | No verified source value is available for direct comparison. Effective muscle force-balance coefficient; source-law conversion and calibration are described in the methods. | Author’s nine-group forelimb parameter table. In Results_Function.m, tendon-projected force F0 = 2.3 × 9.806 × PCSA × cos(PA), with PCSA in cm², PA the pennation angle and F0 in N. Tendon slack length is taken from the source table. Data/Original_Study_Data/forelimb/forelimb_9groups_parameters.json |
-| FR_WristFlexor | MT_path_length_offset_m | m | Constant offset added to the routed path to define muscle-tendon length. | Not established | 0 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Author’s nine-group forelimb parameter table. In Results_Function.m, tendon-projected force F0 = 2.3 × 9.806 × PCSA × cos(PA), with PCSA in cm², PA the pennation angle and F0 in N. Tendon slack length is taken from the source table. Data/Original_Study_Data/forelimb/forelimb_9groups_parameters.json |
-| FR_WristFlexor | active_force_length_exponent | 1 | Exponent rho in the source active force-length curve. | Not established | 3 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Author’s nine-group forelimb parameter table. In Results_Function.m, tendon-projected force F0 = 2.3 × 9.806 × PCSA × cos(PA), with PCSA in cm², PA the pennation angle and F0 in N. Tendon slack length is taken from the source table. Data/Original_Study_Data/forelimb/forelimb_9groups_parameters.json |
-| FR_WristFlexor | source_shortening_curvature | 1 | Source shortening-curve coefficient; inactive when De Groote force-velocity mode is selected. | Not established | 0.01363 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Author’s nine-group forelimb parameter table. In Results_Function.m, tendon-projected force F0 = 2.3 × 9.806 × PCSA × cos(PA), with PCSA in cm², PA the pennation angle and F0 in N. Tendon slack length is taken from the source table. Data/Original_Study_Data/forelimb/forelimb_9groups_parameters.json |
-| FR_WristFlexor | source_lengthening_curvature | 1 | Source lengthening-curve coefficient; inactive when De Groote force-velocity mode is selected. | Not established | 0.69249608 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Author’s nine-group forelimb parameter table. In Results_Function.m, tendon-projected force F0 = 2.3 × 9.806 × PCSA × cos(PA), with PCSA in cm², PA the pennation angle and F0 in N. Tendon slack length is taken from the source table. Data/Original_Study_Data/forelimb/forelimb_9groups_parameters.json |
-| FR_WristFlexor | passive_fiber_enabled | 0/1 | 1 enables passive fiber tension within the elastic equilibrium; zero force below l_f/l_opt=1 does not mean it is disabled. | Not established | 1 | No verified source value is available for direct comparison. The published passive force-length law is included in every muscle channel. Its coefficients are from Prilutsky et al. (2016), Table 10.3, and Rahmati et al. (2025), Table 3. Applying the same normalized law to added muscle channels is a modeling assumption. | Published parallel elastic architecture: Prilutsky et al. 2016 Table 10.3 (10.1007/978-1-4939-3267-2_10); Rahmati et al. 2025 Table 3 (10.1113/JP287448). Common normalized curve extended to all model channels; no muscle-specific passive calibration is claimed. |
-| FR_WristFlexor | degroote_force_velocity_enabled | 0/1 | 1 uses the documented De Groote/OpenSim velocity curve; 0 uses the source curve. | Not established | 1 | No verified source value is available for direct comparison. Model-law choice: 1 enables the smooth De Groote force-velocity relation; 0 selects the alternative implemented law. | Author’s nine-group forelimb parameter table. In Results_Function.m, tendon-projected force F0 = 2.3 × 9.806 × PCSA × cos(PA), with PCSA in cm², PA the pennation angle and F0 in N. Tendon slack length is taken from the source table. Data/Original_Study_Data/forelimb/forelimb_9groups_parameters.json |
-| FR_WristExtensor | max_isometric_tendon_force_N | N | Maximum isometric force projected along the tendon; do not multiply by pennation cosine twice. | 825.3025 | 93.484274 | Different from the verified source value. Change relative to source: -88.7%. Force capacity was calibrated with motor inputs to improve mechanical agreement; the fit does not uniquely identify it. | Author’s nine-group forelimb parameter table. In Results_Function.m, tendon-projected force F0 = 2.3 × 9.806 × PCSA × cos(PA), with PCSA in cm², PA the pennation angle and F0 in N. Tendon slack length is taken from the source table. Data/Original_Study_Data/forelimb/forelimb_9groups_parameters.json |
-| FR_WristExtensor | optimal_fiber_length_m | m | Optimal fascicle/fiber length, not whole muscle-tendon length. | 0.013195799 | 0.013987547 | Different from the verified source value. Change relative to source: +6%. Fiber length and shortening speed were calibrated to set the force-length and force-velocity operating ranges. Physical maximum fiber speed is optimal_fiber_length_m multiplied by max_fiber_speed_optimal_lengths_per_s. The source and applied numbers are given in this row; these are not new tissue measurements. | Author’s nine-group forelimb parameter table. In Results_Function.m, tendon-projected force F0 = 2.3 × 9.806 × PCSA × cos(PA), with PCSA in cm², PA the pennation angle and F0 in N. Tendon slack length is taken from the source table. Data/Original_Study_Data/forelimb/forelimb_9groups_parameters.json |
-| FR_WristExtensor | tendon_slack_length_m | m | Unloaded series tendon length. | Not established | 0.10741379 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Author’s nine-group forelimb parameter table. In Results_Function.m, tendon-projected force F0 = 2.3 × 9.806 × PCSA × cos(PA), with PCSA in cm², PA the pennation angle and F0 in N. Tendon slack length is taken from the source table. Data/Original_Study_Data/forelimb/forelimb_9groups_parameters.json |
-| FR_WristExtensor | pennation_cosine | 1 | Cosine of the constant fiber-to-tendon pennation angle. | 0.98985904 | 0.98985904 | Retained the verified source value; no numerical change from that source. | Author’s nine-group forelimb parameter table. In Results_Function.m, tendon-projected force F0 = 2.3 × 9.806 × PCSA × cos(PA), with PCSA in cm², PA the pennation angle and F0 in N. Tendon slack length is taken from the source table. Data/Original_Study_Data/forelimb/forelimb_9groups_parameters.json |
-| FR_WristExtensor | tendon_strain_at_max_force | 1 | Tendon extension/slack length at one maximum isometric tendon force. | Not established | 0.04 | No verified source value is available for direct comparison. Assumed elastic-tendon compliance; not a measured tendon strain for this animal. | Author’s nine-group forelimb parameter table. In Results_Function.m, tendon-projected force F0 = 2.3 × 9.806 × PCSA × cos(PA), with PCSA in cm², PA the pennation angle and F0 in N. Tendon slack length is taken from the source table. Data/Original_Study_Data/forelimb/forelimb_9groups_parameters.json |
-| FR_WristExtensor | max_fiber_speed_optimal_lengths_per_s | 1/s | Positive maximum-shortening speed magnitude, measured in optimal fiber lengths per second. | 11.741004 | 11.076419 | Different from the verified source value. Change relative to source: -5.66%. Fiber length and shortening speed were calibrated to set the force-length and force-velocity operating ranges. Physical maximum fiber speed is optimal_fiber_length_m multiplied by max_fiber_speed_optimal_lengths_per_s. The source and applied numbers are given in this row; these are not new tissue measurements. | Author’s nine-group forelimb parameter table. In Results_Function.m, tendon-projected force F0 = 2.3 × 9.806 × PCSA × cos(PA), with PCSA in cm², PA the pennation angle and F0 in N. Tendon slack length is taken from the source table. Data/Original_Study_Data/forelimb/forelimb_9groups_parameters.json |
-| FR_WristExtensor | normalized_fiber_damping | 1 | Coefficient of normalized fiber velocity in the normalized tendon-direction force balance. | Not established | 0.0030986385 | No verified source value is available for direct comparison. Effective muscle force-balance coefficient; source-law conversion and calibration are described in the methods. | Author’s nine-group forelimb parameter table. In Results_Function.m, tendon-projected force F0 = 2.3 × 9.806 × PCSA × cos(PA), with PCSA in cm², PA the pennation angle and F0 in N. Tendon slack length is taken from the source table. Data/Original_Study_Data/forelimb/forelimb_9groups_parameters.json |
-| FR_WristExtensor | MT_path_length_offset_m | m | Constant offset added to the routed path to define muscle-tendon length. | Not established | 0 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Author’s nine-group forelimb parameter table. In Results_Function.m, tendon-projected force F0 = 2.3 × 9.806 × PCSA × cos(PA), with PCSA in cm², PA the pennation angle and F0 in N. Tendon slack length is taken from the source table. Data/Original_Study_Data/forelimb/forelimb_9groups_parameters.json |
-| FR_WristExtensor | active_force_length_exponent | 1 | Exponent rho in the source active force-length curve. | Not established | 3 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Author’s nine-group forelimb parameter table. In Results_Function.m, tendon-projected force F0 = 2.3 × 9.806 × PCSA × cos(PA), with PCSA in cm², PA the pennation angle and F0 in N. Tendon slack length is taken from the source table. Data/Original_Study_Data/forelimb/forelimb_9groups_parameters.json |
-| FR_WristExtensor | source_shortening_curvature | 1 | Source shortening-curve coefficient; inactive when De Groote force-velocity mode is selected. | Not established | 0.17935937 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Author’s nine-group forelimb parameter table. In Results_Function.m, tendon-projected force F0 = 2.3 × 9.806 × PCSA × cos(PA), with PCSA in cm², PA the pennation angle and F0 in N. Tendon slack length is taken from the source table. Data/Original_Study_Data/forelimb/forelimb_9groups_parameters.json |
-| FR_WristExtensor | source_lengthening_curvature | 1 | Source lengthening-curve coefficient; inactive when De Groote force-velocity mode is selected. | Not established | 0.0053141231 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Author’s nine-group forelimb parameter table. In Results_Function.m, tendon-projected force F0 = 2.3 × 9.806 × PCSA × cos(PA), with PCSA in cm², PA the pennation angle and F0 in N. Tendon slack length is taken from the source table. Data/Original_Study_Data/forelimb/forelimb_9groups_parameters.json |
-| FR_WristExtensor | passive_fiber_enabled | 0/1 | 1 enables passive fiber tension within the elastic equilibrium; zero force below l_f/l_opt=1 does not mean it is disabled. | Not established | 1 | No verified source value is available for direct comparison. The published passive force-length law is included in every muscle channel. Its coefficients are from Prilutsky et al. (2016), Table 10.3, and Rahmati et al. (2025), Table 3. Applying the same normalized law to added muscle channels is a modeling assumption. | Published parallel elastic architecture: Prilutsky et al. 2016 Table 10.3 (10.1007/978-1-4939-3267-2_10); Rahmati et al. 2025 Table 3 (10.1113/JP287448). Common normalized curve extended to all model channels; no muscle-specific passive calibration is claimed. |
-| FR_WristExtensor | degroote_force_velocity_enabled | 0/1 | 1 uses the documented De Groote/OpenSim velocity curve; 0 uses the source curve. | Not established | 1 | No verified source value is available for direct comparison. Model-law choice: 1 enables the smooth De Groote force-velocity relation; 0 selects the alternative implemented law. | Author’s nine-group forelimb parameter table. In Results_Function.m, tendon-projected force F0 = 2.3 × 9.806 × PCSA × cos(PA), with PCSA in cm², PA the pennation angle and F0 in N. Tendon slack length is taken from the source table. Data/Original_Study_Data/forelimb/forelimb_9groups_parameters.json |
-| FR_ShoulderFlexor | max_isometric_tendon_force_N | N | Maximum isometric force projected along the tendon; do not multiply by pennation cosine twice. | 60.746922 | 69.411418 | Different from the verified source value. Change relative to source: +14.3%. Force capacity was calibrated with motor inputs to improve mechanical agreement; the fit does not uniquely identify it. | Author’s nine-group forelimb parameter table. In Results_Function.m, tendon-projected force F0 = 2.3 × 9.806 × PCSA × cos(PA), with PCSA in cm², PA the pennation angle and F0 in N. Tendon slack length is taken from the source table. Data/Original_Study_Data/forelimb/forelimb_9groups_parameters.json |
-| FR_ShoulderFlexor | optimal_fiber_length_m | m | Optimal fascicle/fiber length, not whole muscle-tendon length. | 0.039496916 | 0.041866731 | Different from the verified source value. Change relative to source: +6%. Fiber length and shortening speed were calibrated to set the force-length and force-velocity operating ranges. Physical maximum fiber speed is optimal_fiber_length_m multiplied by max_fiber_speed_optimal_lengths_per_s. The source and applied numbers are given in this row; these are not new tissue measurements. | Author’s nine-group forelimb parameter table. In Results_Function.m, tendon-projected force F0 = 2.3 × 9.806 × PCSA × cos(PA), with PCSA in cm², PA the pennation angle and F0 in N. Tendon slack length is taken from the source table. Data/Original_Study_Data/forelimb/forelimb_9groups_parameters.json |
-| FR_ShoulderFlexor | tendon_slack_length_m | m | Unloaded series tendon length. | Not established | 0.024504272 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Author’s nine-group forelimb parameter table. In Results_Function.m, tendon-projected force F0 = 2.3 × 9.806 × PCSA × cos(PA), with PCSA in cm², PA the pennation angle and F0 in N. Tendon slack length is taken from the source table. Data/Original_Study_Data/forelimb/forelimb_9groups_parameters.json |
-| FR_ShoulderFlexor | pennation_cosine | 1 | Cosine of the constant fiber-to-tendon pennation angle. | 0.99756405 | 0.99756405 | Retained the verified source value; no numerical change from that source. | Author’s nine-group forelimb parameter table. In Results_Function.m, tendon-projected force F0 = 2.3 × 9.806 × PCSA × cos(PA), with PCSA in cm², PA the pennation angle and F0 in N. Tendon slack length is taken from the source table. Data/Original_Study_Data/forelimb/forelimb_9groups_parameters.json |
-| FR_ShoulderFlexor | tendon_strain_at_max_force | 1 | Tendon extension/slack length at one maximum isometric tendon force. | Not established | 0.04 | No verified source value is available for direct comparison. Assumed elastic-tendon compliance; not a measured tendon strain for this animal. | Author’s nine-group forelimb parameter table. In Results_Function.m, tendon-projected force F0 = 2.3 × 9.806 × PCSA × cos(PA), with PCSA in cm², PA the pennation angle and F0 in N. Tendon slack length is taken from the source table. Data/Original_Study_Data/forelimb/forelimb_9groups_parameters.json |
-| FR_ShoulderFlexor | max_fiber_speed_optimal_lengths_per_s | 1/s | Positive maximum-shortening speed magnitude, measured in optimal fiber lengths per second. | 11 | 10.377358 | Different from the verified source value. Change relative to source: -5.66%. Fiber length and shortening speed were calibrated to set the force-length and force-velocity operating ranges. Physical maximum fiber speed is optimal_fiber_length_m multiplied by max_fiber_speed_optimal_lengths_per_s. The source and applied numbers are given in this row; these are not new tissue measurements. | Author’s nine-group forelimb parameter table. In Results_Function.m, tendon-projected force F0 = 2.3 × 9.806 × PCSA × cos(PA), with PCSA in cm², PA the pennation angle and F0 in N. Tendon slack length is taken from the source table. Data/Original_Study_Data/forelimb/forelimb_9groups_parameters.json |
-| FR_ShoulderFlexor | normalized_fiber_damping | 1 | Coefficient of normalized fiber velocity in the normalized tendon-direction force balance. | Not established | 0.0086893216 | No verified source value is available for direct comparison. Effective muscle force-balance coefficient; source-law conversion and calibration are described in the methods. | Author’s nine-group forelimb parameter table. In Results_Function.m, tendon-projected force F0 = 2.3 × 9.806 × PCSA × cos(PA), with PCSA in cm², PA the pennation angle and F0 in N. Tendon slack length is taken from the source table. Data/Original_Study_Data/forelimb/forelimb_9groups_parameters.json |
-| FR_ShoulderFlexor | MT_path_length_offset_m | m | Constant offset added to the routed path to define muscle-tendon length. | Not established | 0 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Author’s nine-group forelimb parameter table. In Results_Function.m, tendon-projected force F0 = 2.3 × 9.806 × PCSA × cos(PA), with PCSA in cm², PA the pennation angle and F0 in N. Tendon slack length is taken from the source table. Data/Original_Study_Data/forelimb/forelimb_9groups_parameters.json |
-| FR_ShoulderFlexor | active_force_length_exponent | 1 | Exponent rho in the source active force-length curve. | Not established | 6 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Author’s nine-group forelimb parameter table. In Results_Function.m, tendon-projected force F0 = 2.3 × 9.806 × PCSA × cos(PA), with PCSA in cm², PA the pennation angle and F0 in N. Tendon slack length is taken from the source table. Data/Original_Study_Data/forelimb/forelimb_9groups_parameters.json |
-| FR_ShoulderFlexor | source_shortening_curvature | 1 | Source shortening-curve coefficient; inactive when De Groote force-velocity mode is selected. | Not established | 0.195715 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Author’s nine-group forelimb parameter table. In Results_Function.m, tendon-projected force F0 = 2.3 × 9.806 × PCSA × cos(PA), with PCSA in cm², PA the pennation angle and F0 in N. Tendon slack length is taken from the source table. Data/Original_Study_Data/forelimb/forelimb_9groups_parameters.json |
-| FR_ShoulderFlexor | source_lengthening_curvature | 1 | Source lengthening-curve coefficient; inactive when De Groote force-velocity mode is selected. | Not established | 0.061928536 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Author’s nine-group forelimb parameter table. In Results_Function.m, tendon-projected force F0 = 2.3 × 9.806 × PCSA × cos(PA), with PCSA in cm², PA the pennation angle and F0 in N. Tendon slack length is taken from the source table. Data/Original_Study_Data/forelimb/forelimb_9groups_parameters.json |
-| FR_ShoulderFlexor | passive_fiber_enabled | 0/1 | 1 enables passive fiber tension within the elastic equilibrium; zero force below l_f/l_opt=1 does not mean it is disabled. | Not established | 1 | No verified source value is available for direct comparison. The published passive force-length law is included in every muscle channel. Its coefficients are from Prilutsky et al. (2016), Table 10.3, and Rahmati et al. (2025), Table 3. Applying the same normalized law to added muscle channels is a modeling assumption. | Published parallel elastic architecture: Prilutsky et al. 2016 Table 10.3 (10.1007/978-1-4939-3267-2_10); Rahmati et al. 2025 Table 3 (10.1113/JP287448). Common normalized curve extended to all model channels; no muscle-specific passive calibration is claimed. |
-| FR_ShoulderFlexor | degroote_force_velocity_enabled | 0/1 | 1 uses the documented De Groote/OpenSim velocity curve; 0 uses the source curve. | Not established | 1 | No verified source value is available for direct comparison. Model-law choice: 1 enables the smooth De Groote force-velocity relation; 0 selects the alternative implemented law. | Author’s nine-group forelimb parameter table. In Results_Function.m, tendon-projected force F0 = 2.3 × 9.806 × PCSA × cos(PA), with PCSA in cm², PA the pennation angle and F0 in N. Tendon slack length is taken from the source table. Data/Original_Study_Data/forelimb/forelimb_9groups_parameters.json |
-| FR_TricepsBrachiiLong | max_isometric_tendon_force_N | N | Maximum isometric force projected along the tendon; do not multiply by pennation cosine twice. | 201.95677 | 189.10697 | Different from the verified source value. Change relative to source: -6.36%. Force capacity was calibrated with motor inputs to improve mechanical agreement; the fit does not uniquely identify it. | Author’s nine-group forelimb parameter table. In Results_Function.m, tendon-projected force F0 = 2.3 × 9.806 × PCSA × cos(PA), with PCSA in cm², PA the pennation angle and F0 in N. Tendon slack length is taken from the source table. Data/Original_Study_Data/forelimb/forelimb_9groups_parameters.json |
-| FR_TricepsBrachiiLong | optimal_fiber_length_m | m | Optimal fascicle/fiber length, not whole muscle-tendon length. | 0.023863208 | 0.025295 | Different from the verified source value. Change relative to source: +6%. Fiber length and shortening speed were calibrated to set the force-length and force-velocity operating ranges. Physical maximum fiber speed is optimal_fiber_length_m multiplied by max_fiber_speed_optimal_lengths_per_s. The source and applied numbers are given in this row; these are not new tissue measurements. | Author’s nine-group forelimb parameter table. In Results_Function.m, tendon-projected force F0 = 2.3 × 9.806 × PCSA × cos(PA), with PCSA in cm², PA the pennation angle and F0 in N. Tendon slack length is taken from the source table. Data/Original_Study_Data/forelimb/forelimb_9groups_parameters.json |
-| FR_TricepsBrachiiLong | tendon_slack_length_m | m | Unloaded series tendon length. | Not established | 0.078117496 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Author’s nine-group forelimb parameter table. In Results_Function.m, tendon-projected force F0 = 2.3 × 9.806 × PCSA × cos(PA), with PCSA in cm², PA the pennation angle and F0 in N. Tendon slack length is taken from the source table. Data/Original_Study_Data/forelimb/forelimb_9groups_parameters.json |
-| FR_TricepsBrachiiLong | pennation_cosine | 1 | Cosine of the constant fiber-to-tendon pennation angle. | 0.97304487 | 0.97304487 | Retained the verified source value; no numerical change from that source. | Author’s nine-group forelimb parameter table. In Results_Function.m, tendon-projected force F0 = 2.3 × 9.806 × PCSA × cos(PA), with PCSA in cm², PA the pennation angle and F0 in N. Tendon slack length is taken from the source table. Data/Original_Study_Data/forelimb/forelimb_9groups_parameters.json |
-| FR_TricepsBrachiiLong | tendon_strain_at_max_force | 1 | Tendon extension/slack length at one maximum isometric tendon force. | Not established | 0.04 | No verified source value is available for direct comparison. Assumed elastic-tendon compliance; not a measured tendon strain for this animal. | Author’s nine-group forelimb parameter table. In Results_Function.m, tendon-projected force F0 = 2.3 × 9.806 × PCSA × cos(PA), with PCSA in cm², PA the pennation angle and F0 in N. Tendon slack length is taken from the source table. Data/Original_Study_Data/forelimb/forelimb_9groups_parameters.json |
-| FR_TricepsBrachiiLong | max_fiber_speed_optimal_lengths_per_s | 1/s | Positive maximum-shortening speed magnitude, measured in optimal fiber lengths per second. | 11.365 | 10.721698 | Different from the verified source value. Change relative to source: -5.66%. Fiber length and shortening speed were calibrated to set the force-length and force-velocity operating ranges. Physical maximum fiber speed is optimal_fiber_length_m multiplied by max_fiber_speed_optimal_lengths_per_s. The source and applied numbers are given in this row; these are not new tissue measurements. | Author’s nine-group forelimb parameter table. In Results_Function.m, tendon-projected force F0 = 2.3 × 9.806 × PCSA × cos(PA), with PCSA in cm², PA the pennation angle and F0 in N. Tendon slack length is taken from the source table. Data/Original_Study_Data/forelimb/forelimb_9groups_parameters.json |
-| FR_TricepsBrachiiLong | normalized_fiber_damping | 1 | Coefficient of normalized fiber velocity in the normalized tendon-direction force balance. | Not established | 0.0054241071 | No verified source value is available for direct comparison. Effective muscle force-balance coefficient; source-law conversion and calibration are described in the methods. | Author’s nine-group forelimb parameter table. In Results_Function.m, tendon-projected force F0 = 2.3 × 9.806 × PCSA × cos(PA), with PCSA in cm², PA the pennation angle and F0 in N. Tendon slack length is taken from the source table. Data/Original_Study_Data/forelimb/forelimb_9groups_parameters.json |
-| FR_TricepsBrachiiLong | MT_path_length_offset_m | m | Constant offset added to the routed path to define muscle-tendon length. | Not established | 0 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Author’s nine-group forelimb parameter table. In Results_Function.m, tendon-projected force F0 = 2.3 × 9.806 × PCSA × cos(PA), with PCSA in cm², PA the pennation angle and F0 in N. Tendon slack length is taken from the source table. Data/Original_Study_Data/forelimb/forelimb_9groups_parameters.json |
-| FR_TricepsBrachiiLong | active_force_length_exponent | 1 | Exponent rho in the source active force-length curve. | Not established | 3 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Author’s nine-group forelimb parameter table. In Results_Function.m, tendon-projected force F0 = 2.3 × 9.806 × PCSA × cos(PA), with PCSA in cm², PA the pennation angle and F0 in N. Tendon slack length is taken from the source table. Data/Original_Study_Data/forelimb/forelimb_9groups_parameters.json |
-| FR_TricepsBrachiiLong | source_shortening_curvature | 1 | Source shortening-curve coefficient; inactive when De Groote force-velocity mode is selected. | Not established | 0.23323 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Author’s nine-group forelimb parameter table. In Results_Function.m, tendon-projected force F0 = 2.3 × 9.806 × PCSA × cos(PA), with PCSA in cm², PA the pennation angle and F0 in N. Tendon slack length is taken from the source table. Data/Original_Study_Data/forelimb/forelimb_9groups_parameters.json |
-| FR_TricepsBrachiiLong | source_lengthening_curvature | 1 | Source lengthening-curve coefficient; inactive when De Groote force-velocity mode is selected. | Not established | 0.016191972 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Author’s nine-group forelimb parameter table. In Results_Function.m, tendon-projected force F0 = 2.3 × 9.806 × PCSA × cos(PA), with PCSA in cm², PA the pennation angle and F0 in N. Tendon slack length is taken from the source table. Data/Original_Study_Data/forelimb/forelimb_9groups_parameters.json |
-| FR_TricepsBrachiiLong | passive_fiber_enabled | 0/1 | 1 enables passive fiber tension within the elastic equilibrium; zero force below l_f/l_opt=1 does not mean it is disabled. | Not established | 1 | No verified source value is available for direct comparison. The published passive force-length law is included in every muscle channel. Its coefficients are from Prilutsky et al. (2016), Table 10.3, and Rahmati et al. (2025), Table 3. Applying the same normalized law to added muscle channels is a modeling assumption. | Published parallel elastic architecture: Prilutsky et al. 2016 Table 10.3 (10.1007/978-1-4939-3267-2_10); Rahmati et al. 2025 Table 3 (10.1113/JP287448). Common normalized curve extended to all model channels; no muscle-specific passive calibration is claimed. |
-| FR_TricepsBrachiiLong | degroote_force_velocity_enabled | 0/1 | 1 uses the documented De Groote/OpenSim velocity curve; 0 uses the source curve. | Not established | 1 | No verified source value is available for direct comparison. Model-law choice: 1 enables the smooth De Groote force-velocity relation; 0 selects the alternative implemented law. | Author’s nine-group forelimb parameter table. In Results_Function.m, tendon-projected force F0 = 2.3 × 9.806 × PCSA × cos(PA), with PCSA in cm², PA the pennation angle and F0 in N. Tendon slack length is taken from the source table. Data/Original_Study_Data/forelimb/forelimb_9groups_parameters.json |
-| FL_S_C3 | max_isometric_tendon_force_N | N | Maximum isometric force projected along the tendon; do not multiply by pennation cosine twice. | Not established | 3.8436556 | No verified source value is available for direct comparison. Force capacity was calibrated with motor inputs to improve mechanical agreement; the fit does not uniquely identify it. | No verified one-to-one numerical source is established for this added channel. Applied estimates are in Data/Model_Parameters/muscle_tendon.py; anatomical source records are in Data/Original_Study_Data/additional_muscles/. |
-| FL_S_C3 | optimal_fiber_length_m | m | Optimal fascicle/fiber length, not whole muscle-tendon length. | Not established | 0.051569882 | No verified source value is available for direct comparison. Fiber length and shortening speed were calibrated to set the force-length and force-velocity operating ranges. Physical maximum fiber speed is optimal_fiber_length_m multiplied by max_fiber_speed_optimal_lengths_per_s. The source and applied numbers are given in this row; these are not new tissue measurements. | No verified one-to-one numerical source is established for this added channel. Applied estimates are in Data/Model_Parameters/muscle_tendon.py; anatomical source records are in Data/Original_Study_Data/additional_muscles/. |
+Each entry contains its values, units, meaning and source information. Select an entry to read all fields.
+
+<details>
+<summary>FL_BicepsBrachii · source_lengthening_curvature</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_BicepsBrachii |
+| Parameter | source_lengthening_curvature |
+| Unit | 1 |
+| Meaning | Source lengthening-curve coefficient; inactive when De Groote force-velocity mode is selected. |
+| Source value | Not established |
+| Value used in this model | 0.078973475 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Author’s nine-group forelimb parameter table. In Results_Function.m, tendon-projected force F0 = 2.3 × 9.806 × PCSA × cos(PA), with PCSA in cm², PA the pennation angle and F0 in N. Tendon slack length is taken from the source table. Data/Original_Study_Data/forelimb/forelimb_9groups_parameters.json |
+
+</details>
+
+<details>
+<summary>FL_BicepsBrachii · passive_fiber_enabled</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_BicepsBrachii |
+| Parameter | passive_fiber_enabled |
+| Unit | 0/1 |
+| Meaning | 1 enables passive fiber tension within the elastic equilibrium; zero force below l_f/l_opt=1 does not mean it is disabled. |
+| Source value | Not established |
+| Value used in this model | 1 |
+| What changed and why | No verified source value is available for direct comparison. The published passive force-length law is included in every muscle channel. Its coefficients are from Prilutsky et al. (2016), Table 10.3, and Rahmati et al. (2025), Table 3. Applying the same normalized law to added muscle channels is a modeling assumption. |
+| Source / evidence | Published parallel elastic architecture: Prilutsky et al. 2016 Table 10.3 (10.1007/978-1-4939-3267-2_10); Rahmati et al. 2025 Table 3 (10.1113/JP287448). Common normalized curve extended to all model channels; no muscle-specific passive calibration is claimed. |
+
+</details>
+
+<details>
+<summary>FL_BicepsBrachii · degroote_force_velocity_enabled</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_BicepsBrachii |
+| Parameter | degroote_force_velocity_enabled |
+| Unit | 0/1 |
+| Meaning | 1 uses the documented De Groote/OpenSim velocity curve; 0 uses the source curve. |
+| Source value | Not established |
+| Value used in this model | 1 |
+| What changed and why | No verified source value is available for direct comparison. Model-law choice: 1 enables the smooth De Groote force-velocity relation; 0 selects the alternative implemented law. |
+| Source / evidence | Author’s nine-group forelimb parameter table. In Results_Function.m, tendon-projected force F0 = 2.3 × 9.806 × PCSA × cos(PA), with PCSA in cm², PA the pennation angle and F0 in N. Tendon slack length is taken from the source table. Data/Original_Study_Data/forelimb/forelimb_9groups_parameters.json |
+
+</details>
+
+<details>
+<summary>FL_ElbowFlexor · max_isometric_tendon_force_N</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_ElbowFlexor |
+| Parameter | max_isometric_tendon_force_N |
+| Unit | N |
+| Meaning | Maximum isometric force projected along the tendon; do not multiply by pennation cosine twice. |
+| Source value | 55.534105 |
+| Value used in this model | 61.029495 |
+| What changed and why | Different from the verified source value. Change relative to source: +9.9%. Force capacity was calibrated with motor inputs to improve mechanical agreement; the fit does not uniquely identify it. |
+| Source / evidence | Author’s nine-group forelimb parameter table. In Results_Function.m, tendon-projected force F0 = 2.3 × 9.806 × PCSA × cos(PA), with PCSA in cm², PA the pennation angle and F0 in N. Tendon slack length is taken from the source table. Data/Original_Study_Data/forelimb/forelimb_9groups_parameters.json |
+
+</details>
+
+<details>
+<summary>FL_ElbowFlexor · optimal_fiber_length_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_ElbowFlexor |
+| Parameter | optimal_fiber_length_m |
+| Unit | m |
+| Meaning | Optimal fascicle/fiber length, not whole muscle-tendon length. |
+| Source value | 0.04448412 |
+| Value used in this model | 0.047153167 |
+| What changed and why | Different from the verified source value. Change relative to source: +6%. Fiber length and shortening speed were calibrated to set the force-length and force-velocity operating ranges. Physical maximum fiber speed is optimal_fiber_length_m multiplied by max_fiber_speed_optimal_lengths_per_s. The source and applied numbers are given in this row; these are not new tissue measurements. |
+| Source / evidence | Author’s nine-group forelimb parameter table. In Results_Function.m, tendon-projected force F0 = 2.3 × 9.806 × PCSA × cos(PA), with PCSA in cm², PA the pennation angle and F0 in N. Tendon slack length is taken from the source table. Data/Original_Study_Data/forelimb/forelimb_9groups_parameters.json |
+
+</details>
+
+<details>
+<summary>FL_ElbowFlexor · tendon_slack_length_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_ElbowFlexor |
+| Parameter | tendon_slack_length_m |
+| Unit | m |
+| Meaning | Unloaded series tendon length. |
+| Source value | Not established |
+| Value used in this model | 0.026006177 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Author’s nine-group forelimb parameter table. In Results_Function.m, tendon-projected force F0 = 2.3 × 9.806 × PCSA × cos(PA), with PCSA in cm², PA the pennation angle and F0 in N. Tendon slack length is taken from the source table. Data/Original_Study_Data/forelimb/forelimb_9groups_parameters.json |
+
+</details>
+
+<details>
+<summary>FL_ElbowFlexor · pennation_cosine</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_ElbowFlexor |
+| Parameter | pennation_cosine |
+| Unit | 1 |
+| Meaning | Cosine of the constant fiber-to-tendon pennation angle. |
+| Source value | 0.98360646 |
+| Value used in this model | 0.98360646 |
+| What changed and why | Retained the verified source value; no numerical change from that source. |
+| Source / evidence | Author’s nine-group forelimb parameter table. In Results_Function.m, tendon-projected force F0 = 2.3 × 9.806 × PCSA × cos(PA), with PCSA in cm², PA the pennation angle and F0 in N. Tendon slack length is taken from the source table. Data/Original_Study_Data/forelimb/forelimb_9groups_parameters.json |
+
+</details>
+
+<details>
+<summary>FL_ElbowFlexor · tendon_strain_at_max_force</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_ElbowFlexor |
+| Parameter | tendon_strain_at_max_force |
+| Unit | 1 |
+| Meaning | Tendon extension/slack length at one maximum isometric tendon force. |
+| Source value | Not established |
+| Value used in this model | 0.04 |
+| What changed and why | No verified source value is available for direct comparison. Assumed elastic-tendon compliance; not a measured tendon strain for this animal. |
+| Source / evidence | Author’s nine-group forelimb parameter table. In Results_Function.m, tendon-projected force F0 = 2.3 × 9.806 × PCSA × cos(PA), with PCSA in cm², PA the pennation angle and F0 in N. Tendon slack length is taken from the source table. Data/Original_Study_Data/forelimb/forelimb_9groups_parameters.json |
+
+</details>
+
+<details>
+<summary>FL_ElbowFlexor · max_fiber_speed_optimal_lengths_per_s</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_ElbowFlexor |
+| Parameter | max_fiber_speed_optimal_lengths_per_s |
+| Unit | 1/s |
+| Meaning | Positive maximum-shortening speed magnitude, measured in optimal fiber lengths per second. |
+| Source value | 12.159742 |
+| Value used in this model | 11.471455 |
+| What changed and why | Different from the verified source value. Change relative to source: -5.66%. Fiber length and shortening speed were calibrated to set the force-length and force-velocity operating ranges. Physical maximum fiber speed is optimal_fiber_length_m multiplied by max_fiber_speed_optimal_lengths_per_s. The source and applied numbers are given in this row; these are not new tissue measurements. |
+| Source / evidence | Author’s nine-group forelimb parameter table. In Results_Function.m, tendon-projected force F0 = 2.3 × 9.806 × PCSA × cos(PA), with PCSA in cm², PA the pennation angle and F0 in N. Tendon slack length is taken from the source table. Data/Original_Study_Data/forelimb/forelimb_9groups_parameters.json |
+
+</details>
+
+<details>
+<summary>FL_ElbowFlexor · normalized_fiber_damping</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_ElbowFlexor |
+| Parameter | normalized_fiber_damping |
+| Unit | 1 |
+| Meaning | Coefficient of normalized fiber velocity in the normalized tendon-direction force balance. |
+| Source value | Not established |
+| Value used in this model | 0.010818309 |
+| What changed and why | No verified source value is available for direct comparison. Effective muscle force-balance coefficient; source-law conversion and calibration are described in the methods. |
+| Source / evidence | Author’s nine-group forelimb parameter table. In Results_Function.m, tendon-projected force F0 = 2.3 × 9.806 × PCSA × cos(PA), with PCSA in cm², PA the pennation angle and F0 in N. Tendon slack length is taken from the source table. Data/Original_Study_Data/forelimb/forelimb_9groups_parameters.json |
+
+</details>
+
+<details>
+<summary>FL_ElbowFlexor · MT_path_length_offset_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_ElbowFlexor |
+| Parameter | MT_path_length_offset_m |
+| Unit | m |
+| Meaning | Constant offset added to the routed path to define muscle-tendon length. |
+| Source value | Not established |
+| Value used in this model | 0 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Author’s nine-group forelimb parameter table. In Results_Function.m, tendon-projected force F0 = 2.3 × 9.806 × PCSA × cos(PA), with PCSA in cm², PA the pennation angle and F0 in N. Tendon slack length is taken from the source table. Data/Original_Study_Data/forelimb/forelimb_9groups_parameters.json |
+
+</details>
+
+<details>
+<summary>FL_ElbowFlexor · active_force_length_exponent</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_ElbowFlexor |
+| Parameter | active_force_length_exponent |
+| Unit | 1 |
+| Meaning | Exponent rho in the source active force-length curve. |
+| Source value | Not established |
+| Value used in this model | 6 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Author’s nine-group forelimb parameter table. In Results_Function.m, tendon-projected force F0 = 2.3 × 9.806 × PCSA × cos(PA), with PCSA in cm², PA the pennation angle and F0 in N. Tendon slack length is taken from the source table. Data/Original_Study_Data/forelimb/forelimb_9groups_parameters.json |
+
+</details>
+
+<details>
+<summary>FL_ElbowFlexor · source_shortening_curvature</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_ElbowFlexor |
+| Parameter | source_shortening_curvature |
+| Unit | 1 |
+| Meaning | Source shortening-curve coefficient; inactive when De Groote force-velocity mode is selected. |
+| Source value | Not established |
+| Value used in this model | 0.146305 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Author’s nine-group forelimb parameter table. In Results_Function.m, tendon-projected force F0 = 2.3 × 9.806 × PCSA × cos(PA), with PCSA in cm², PA the pennation angle and F0 in N. Tendon slack length is taken from the source table. Data/Original_Study_Data/forelimb/forelimb_9groups_parameters.json |
+
+</details>
+
+<details>
+<summary>FL_ElbowFlexor · source_lengthening_curvature</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_ElbowFlexor |
+| Parameter | source_lengthening_curvature |
+| Unit | 1 |
+| Meaning | Source lengthening-curve coefficient; inactive when De Groote force-velocity mode is selected. |
+| Source value | Not established |
+| Value used in this model | 0.086389978 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Author’s nine-group forelimb parameter table. In Results_Function.m, tendon-projected force F0 = 2.3 × 9.806 × PCSA × cos(PA), with PCSA in cm², PA the pennation angle and F0 in N. Tendon slack length is taken from the source table. Data/Original_Study_Data/forelimb/forelimb_9groups_parameters.json |
+
+</details>
+
+<details>
+<summary>FL_ElbowFlexor · passive_fiber_enabled</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_ElbowFlexor |
+| Parameter | passive_fiber_enabled |
+| Unit | 0/1 |
+| Meaning | 1 enables passive fiber tension within the elastic equilibrium; zero force below l_f/l_opt=1 does not mean it is disabled. |
+| Source value | Not established |
+| Value used in this model | 1 |
+| What changed and why | No verified source value is available for direct comparison. The published passive force-length law is included in every muscle channel. Its coefficients are from Prilutsky et al. (2016), Table 10.3, and Rahmati et al. (2025), Table 3. Applying the same normalized law to added muscle channels is a modeling assumption. |
+| Source / evidence | Published parallel elastic architecture: Prilutsky et al. 2016 Table 10.3 (10.1007/978-1-4939-3267-2_10); Rahmati et al. 2025 Table 3 (10.1113/JP287448). Common normalized curve extended to all model channels; no muscle-specific passive calibration is claimed. |
+
+</details>
+
+<details>
+<summary>FL_ElbowFlexor · degroote_force_velocity_enabled</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_ElbowFlexor |
+| Parameter | degroote_force_velocity_enabled |
+| Unit | 0/1 |
+| Meaning | 1 uses the documented De Groote/OpenSim velocity curve; 0 uses the source curve. |
+| Source value | Not established |
+| Value used in this model | 1 |
+| What changed and why | No verified source value is available for direct comparison. Model-law choice: 1 enables the smooth De Groote force-velocity relation; 0 selects the alternative implemented law. |
+| Source / evidence | Author’s nine-group forelimb parameter table. In Results_Function.m, tendon-projected force F0 = 2.3 × 9.806 × PCSA × cos(PA), with PCSA in cm², PA the pennation angle and F0 in N. Tendon slack length is taken from the source table. Data/Original_Study_Data/forelimb/forelimb_9groups_parameters.json |
+
+</details>
+
+<details>
+<summary>FL_ElbowFlexorWristFlexor · max_isometric_tendon_force_N</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_ElbowFlexorWristFlexor |
+| Parameter | max_isometric_tendon_force_N |
+| Unit | N |
+| Meaning | Maximum isometric force projected along the tendon; do not multiply by pennation cosine twice. |
+| Source value | 97.321038 |
+| Value used in this model | 21.357654 |
+| What changed and why | Different from the verified source value. Change relative to source: -78.1%. Force capacity was calibrated with motor inputs to improve mechanical agreement; the fit does not uniquely identify it. |
+| Source / evidence | Author’s nine-group forelimb parameter table. In Results_Function.m, tendon-projected force F0 = 2.3 × 9.806 × PCSA × cos(PA), with PCSA in cm², PA the pennation angle and F0 in N. Tendon slack length is taken from the source table. Data/Original_Study_Data/forelimb/forelimb_9groups_parameters.json |
+
+</details>
+
+<details>
+<summary>FL_ElbowFlexorWristFlexor · optimal_fiber_length_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_ElbowFlexorWristFlexor |
+| Parameter | optimal_fiber_length_m |
+| Unit | m |
+| Meaning | Optimal fascicle/fiber length, not whole muscle-tendon length. |
+| Source value | 0.027434457 |
+| Value used in this model | 0.029080524 |
+| What changed and why | Different from the verified source value. Change relative to source: +6%. Fiber length and shortening speed were calibrated to set the force-length and force-velocity operating ranges. Physical maximum fiber speed is optimal_fiber_length_m multiplied by max_fiber_speed_optimal_lengths_per_s. The source and applied numbers are given in this row; these are not new tissue measurements. |
+| Source / evidence | Author’s nine-group forelimb parameter table. In Results_Function.m, tendon-projected force F0 = 2.3 × 9.806 × PCSA × cos(PA), with PCSA in cm², PA the pennation angle and F0 in N. Tendon slack length is taken from the source table. Data/Original_Study_Data/forelimb/forelimb_9groups_parameters.json |
+
+</details>
+
+<details>
+<summary>FL_ElbowFlexorWristFlexor · tendon_slack_length_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_ElbowFlexorWristFlexor |
+| Parameter | tendon_slack_length_m |
+| Unit | m |
+| Meaning | Unloaded series tendon length. |
+| Source value | Not established |
+| Value used in this model | 0.11113157 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Author’s nine-group forelimb parameter table. In Results_Function.m, tendon-projected force F0 = 2.3 × 9.806 × PCSA × cos(PA), with PCSA in cm², PA the pennation angle and F0 in N. Tendon slack length is taken from the source table. Data/Original_Study_Data/forelimb/forelimb_9groups_parameters.json |
+
+</details>
+
+<details>
+<summary>FL_ElbowFlexorWristFlexor · pennation_cosine</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_ElbowFlexorWristFlexor |
+| Parameter | pennation_cosine |
+| Unit | 1 |
+| Meaning | Cosine of the constant fiber-to-tendon pennation angle. |
+| Source value | 0.9919682 |
+| Value used in this model | 0.9919682 |
+| What changed and why | Retained the verified source value; no numerical change from that source. |
+| Source / evidence | Author’s nine-group forelimb parameter table. In Results_Function.m, tendon-projected force F0 = 2.3 × 9.806 × PCSA × cos(PA), with PCSA in cm², PA the pennation angle and F0 in N. Tendon slack length is taken from the source table. Data/Original_Study_Data/forelimb/forelimb_9groups_parameters.json |
+
+</details>
+
+<details>
+<summary>FL_ElbowFlexorWristFlexor · tendon_strain_at_max_force</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_ElbowFlexorWristFlexor |
+| Parameter | tendon_strain_at_max_force |
+| Unit | 1 |
+| Meaning | Tendon extension/slack length at one maximum isometric tendon force. |
+| Source value | Not established |
+| Value used in this model | 0.04 |
+| What changed and why | No verified source value is available for direct comparison. Assumed elastic-tendon compliance; not a measured tendon strain for this animal. |
+| Source / evidence | Author’s nine-group forelimb parameter table. In Results_Function.m, tendon-projected force F0 = 2.3 × 9.806 × PCSA × cos(PA), with PCSA in cm², PA the pennation angle and F0 in N. Tendon slack length is taken from the source table. Data/Original_Study_Data/forelimb/forelimb_9groups_parameters.json |
+
+</details>
+
+<details>
+<summary>FL_ElbowFlexorWristFlexor · max_fiber_speed_optimal_lengths_per_s</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_ElbowFlexorWristFlexor |
+| Parameter | max_fiber_speed_optimal_lengths_per_s |
+| Unit | 1/s |
+| Meaning | Positive maximum-shortening speed magnitude, measured in optimal fiber lengths per second. |
+| Source value | 13.256289 |
+| Value used in this model | 12.505933 |
+| What changed and why | Different from the verified source value. Change relative to source: -5.66%. Fiber length and shortening speed were calibrated to set the force-length and force-velocity operating ranges. Physical maximum fiber speed is optimal_fiber_length_m multiplied by max_fiber_speed_optimal_lengths_per_s. The source and applied numbers are given in this row; these are not new tissue measurements. |
+| Source / evidence | Author’s nine-group forelimb parameter table. In Results_Function.m, tendon-projected force F0 = 2.3 × 9.806 × PCSA × cos(PA), with PCSA in cm², PA the pennation angle and F0 in N. Tendon slack length is taken from the source table. Data/Original_Study_Data/forelimb/forelimb_9groups_parameters.json |
+
+</details>
+
+<details>
+<summary>FL_ElbowFlexorWristFlexor · normalized_fiber_damping</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_ElbowFlexorWristFlexor |
+| Parameter | normalized_fiber_damping |
+| Unit | 1 |
+| Meaning | Coefficient of normalized fiber velocity in the normalized tendon-direction force balance. |
+| Source value | Not established |
+| Value used in this model | 0.0072735816 |
+| What changed and why | No verified source value is available for direct comparison. Effective muscle force-balance coefficient; source-law conversion and calibration are described in the methods. |
+| Source / evidence | Author’s nine-group forelimb parameter table. In Results_Function.m, tendon-projected force F0 = 2.3 × 9.806 × PCSA × cos(PA), with PCSA in cm², PA the pennation angle and F0 in N. Tendon slack length is taken from the source table. Data/Original_Study_Data/forelimb/forelimb_9groups_parameters.json |
+
+</details>
+
+<details>
+<summary>FL_ElbowFlexorWristFlexor · MT_path_length_offset_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_ElbowFlexorWristFlexor |
+| Parameter | MT_path_length_offset_m |
+| Unit | m |
+| Meaning | Constant offset added to the routed path to define muscle-tendon length. |
+| Source value | Not established |
+| Value used in this model | 0 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Author’s nine-group forelimb parameter table. In Results_Function.m, tendon-projected force F0 = 2.3 × 9.806 × PCSA × cos(PA), with PCSA in cm², PA the pennation angle and F0 in N. Tendon slack length is taken from the source table. Data/Original_Study_Data/forelimb/forelimb_9groups_parameters.json |
+
+</details>
+
+<details>
+<summary>FL_ElbowFlexorWristFlexor · active_force_length_exponent</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_ElbowFlexorWristFlexor |
+| Parameter | active_force_length_exponent |
+| Unit | 1 |
+| Meaning | Exponent rho in the source active force-length curve. |
+| Source value | Not established |
+| Value used in this model | 3 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Author’s nine-group forelimb parameter table. In Results_Function.m, tendon-projected force F0 = 2.3 × 9.806 × PCSA × cos(PA), with PCSA in cm², PA the pennation angle and F0 in N. Tendon slack length is taken from the source table. Data/Original_Study_Data/forelimb/forelimb_9groups_parameters.json |
+
+</details>
+
+<details>
+<summary>FL_ElbowFlexorWristFlexor · source_shortening_curvature</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_ElbowFlexorWristFlexor |
+| Parameter | source_shortening_curvature |
+| Unit | 1 |
+| Meaning | Source shortening-curve coefficient; inactive when De Groote force-velocity mode is selected. |
+| Source value | Not established |
+| Value used in this model | 0.03193 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Author’s nine-group forelimb parameter table. In Results_Function.m, tendon-projected force F0 = 2.3 × 9.806 × PCSA × cos(PA), with PCSA in cm², PA the pennation angle and F0 in N. Tendon slack length is taken from the source table. Data/Original_Study_Data/forelimb/forelimb_9groups_parameters.json |
+
+</details>
+
+<details>
+<summary>FL_ElbowFlexorWristFlexor · source_lengthening_curvature</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_ElbowFlexorWristFlexor |
+| Parameter | source_lengthening_curvature |
+| Unit | 1 |
+| Meaning | Source lengthening-curve coefficient; inactive when De Groote force-velocity mode is selected. |
+| Source value | Not established |
+| Value used in this model | 0.19358173 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Author’s nine-group forelimb parameter table. In Results_Function.m, tendon-projected force F0 = 2.3 × 9.806 × PCSA × cos(PA), with PCSA in cm², PA the pennation angle and F0 in N. Tendon slack length is taken from the source table. Data/Original_Study_Data/forelimb/forelimb_9groups_parameters.json |
+
+</details>
+
+<details>
+<summary>FL_ElbowFlexorWristFlexor · passive_fiber_enabled</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_ElbowFlexorWristFlexor |
+| Parameter | passive_fiber_enabled |
+| Unit | 0/1 |
+| Meaning | 1 enables passive fiber tension within the elastic equilibrium; zero force below l_f/l_opt=1 does not mean it is disabled. |
+| Source value | Not established |
+| Value used in this model | 1 |
+| What changed and why | No verified source value is available for direct comparison. The published passive force-length law is included in every muscle channel. Its coefficients are from Prilutsky et al. (2016), Table 10.3, and Rahmati et al. (2025), Table 3. Applying the same normalized law to added muscle channels is a modeling assumption. |
+| Source / evidence | Published parallel elastic architecture: Prilutsky et al. 2016 Table 10.3 (10.1007/978-1-4939-3267-2_10); Rahmati et al. 2025 Table 3 (10.1113/JP287448). Common normalized curve extended to all model channels; no muscle-specific passive calibration is claimed. |
+
+</details>
+
+<details>
+<summary>FL_ElbowFlexorWristFlexor · degroote_force_velocity_enabled</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_ElbowFlexorWristFlexor |
+| Parameter | degroote_force_velocity_enabled |
+| Unit | 0/1 |
+| Meaning | 1 uses the documented De Groote/OpenSim velocity curve; 0 uses the source curve. |
+| Source value | Not established |
+| Value used in this model | 1 |
+| What changed and why | No verified source value is available for direct comparison. Model-law choice: 1 enables the smooth De Groote force-velocity relation; 0 selects the alternative implemented law. |
+| Source / evidence | Author’s nine-group forelimb parameter table. In Results_Function.m, tendon-projected force F0 = 2.3 × 9.806 × PCSA × cos(PA), with PCSA in cm², PA the pennation angle and F0 in N. Tendon slack length is taken from the source table. Data/Original_Study_Data/forelimb/forelimb_9groups_parameters.json |
+
+</details>
+
+<details>
+<summary>FL_WristFlexor · max_isometric_tendon_force_N</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_WristFlexor |
+| Parameter | max_isometric_tendon_force_N |
+| Unit | N |
+| Meaning | Maximum isometric force projected along the tendon; do not multiply by pennation cosine twice. |
+| Source value | 11.388898 |
+| Value used in this model | 11.387723 |
+| What changed and why | Different from the verified source value. Change relative to source: -0.0103%. Force capacity was calibrated with motor inputs to improve mechanical agreement; the fit does not uniquely identify it. |
+| Source / evidence | Author’s nine-group forelimb parameter table. In Results_Function.m, tendon-projected force F0 = 2.3 × 9.806 × PCSA × cos(PA), with PCSA in cm², PA the pennation angle and F0 in N. Tendon slack length is taken from the source table. Data/Original_Study_Data/forelimb/forelimb_9groups_parameters.json |
+
+</details>
+
+<details>
+<summary>FL_WristFlexor · optimal_fiber_length_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_WristFlexor |
+| Parameter | optimal_fiber_length_m |
+| Unit | m |
+| Meaning | Optimal fascicle/fiber length, not whole muscle-tendon length. |
+| Source value | 0.02098791 |
+| Value used in this model | 0.022247185 |
+| What changed and why | Different from the verified source value. Change relative to source: +6%. Fiber length and shortening speed were calibrated to set the force-length and force-velocity operating ranges. Physical maximum fiber speed is optimal_fiber_length_m multiplied by max_fiber_speed_optimal_lengths_per_s. The source and applied numbers are given in this row; these are not new tissue measurements. |
+| Source / evidence | Author’s nine-group forelimb parameter table. In Results_Function.m, tendon-projected force F0 = 2.3 × 9.806 × PCSA × cos(PA), with PCSA in cm², PA the pennation angle and F0 in N. Tendon slack length is taken from the source table. Data/Original_Study_Data/forelimb/forelimb_9groups_parameters.json |
+
+</details>
+
+<details>
+<summary>FL_WristFlexor · tendon_slack_length_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_WristFlexor |
+| Parameter | tendon_slack_length_m |
+| Unit | m |
+| Meaning | Unloaded series tendon length. |
+| Source value | Not established |
+| Value used in this model | 0.086397541 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Author’s nine-group forelimb parameter table. In Results_Function.m, tendon-projected force F0 = 2.3 × 9.806 × PCSA × cos(PA), with PCSA in cm², PA the pennation angle and F0 in N. Tendon slack length is taken from the source table. Data/Original_Study_Data/forelimb/forelimb_9groups_parameters.json |
+
+</details>
+
+<details>
+<summary>FL_WristFlexor · pennation_cosine</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_WristFlexor |
+| Parameter | pennation_cosine |
+| Unit | 1 |
+| Meaning | Cosine of the constant fiber-to-tendon pennation angle. |
+| Source value | 0.99993231 |
+| Value used in this model | 0.99993231 |
+| What changed and why | Retained the verified source value; no numerical change from that source. |
+| Source / evidence | Author’s nine-group forelimb parameter table. In Results_Function.m, tendon-projected force F0 = 2.3 × 9.806 × PCSA × cos(PA), with PCSA in cm², PA the pennation angle and F0 in N. Tendon slack length is taken from the source table. Data/Original_Study_Data/forelimb/forelimb_9groups_parameters.json |
+
+</details>
+
+<details>
+<summary>FL_WristFlexor · tendon_strain_at_max_force</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_WristFlexor |
+| Parameter | tendon_strain_at_max_force |
+| Unit | 1 |
+| Meaning | Tendon extension/slack length at one maximum isometric tendon force. |
+| Source value | Not established |
+| Value used in this model | 0.04 |
+| What changed and why | No verified source value is available for direct comparison. Assumed elastic-tendon compliance; not a measured tendon strain for this animal. |
+| Source / evidence | Author’s nine-group forelimb parameter table. In Results_Function.m, tendon-projected force F0 = 2.3 × 9.806 × PCSA × cos(PA), with PCSA in cm², PA the pennation angle and F0 in N. Tendon slack length is taken from the source table. Data/Original_Study_Data/forelimb/forelimb_9groups_parameters.json |
+
+</details>
+
+<details>
+<summary>FL_WristFlexor · max_fiber_speed_optimal_lengths_per_s</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_WristFlexor |
+| Parameter | max_fiber_speed_optimal_lengths_per_s |
+| Unit | 1/s |
+| Meaning | Positive maximum-shortening speed magnitude, measured in optimal fiber lengths per second. |
+| Source value | 13.153 |
+| Value used in this model | 12.408491 |
+| What changed and why | Different from the verified source value. Change relative to source: -5.66%. Fiber length and shortening speed were calibrated to set the force-length and force-velocity operating ranges. Physical maximum fiber speed is optimal_fiber_length_m multiplied by max_fiber_speed_optimal_lengths_per_s. The source and applied numbers are given in this row; these are not new tissue measurements. |
+| Source / evidence | Author’s nine-group forelimb parameter table. In Results_Function.m, tendon-projected force F0 = 2.3 × 9.806 × PCSA × cos(PA), with PCSA in cm², PA the pennation angle and F0 in N. Tendon slack length is taken from the source table. Data/Original_Study_Data/forelimb/forelimb_9groups_parameters.json |
+
+</details>
+
+<details>
+<summary>FL_WristFlexor · normalized_fiber_damping</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_WristFlexor |
+| Parameter | normalized_fiber_damping |
+| Unit | 1 |
+| Meaning | Coefficient of normalized fiber velocity in the normalized tendon-direction force balance. |
+| Source value | Not established |
+| Value used in this model | 0.0055210796 |
+| What changed and why | No verified source value is available for direct comparison. Effective muscle force-balance coefficient; source-law conversion and calibration are described in the methods. |
+| Source / evidence | Author’s nine-group forelimb parameter table. In Results_Function.m, tendon-projected force F0 = 2.3 × 9.806 × PCSA × cos(PA), with PCSA in cm², PA the pennation angle and F0 in N. Tendon slack length is taken from the source table. Data/Original_Study_Data/forelimb/forelimb_9groups_parameters.json |
+
+</details>
+
+<details>
+<summary>FL_WristFlexor · MT_path_length_offset_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_WristFlexor |
+| Parameter | MT_path_length_offset_m |
+| Unit | m |
+| Meaning | Constant offset added to the routed path to define muscle-tendon length. |
+| Source value | Not established |
+| Value used in this model | 0 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Author’s nine-group forelimb parameter table. In Results_Function.m, tendon-projected force F0 = 2.3 × 9.806 × PCSA × cos(PA), with PCSA in cm², PA the pennation angle and F0 in N. Tendon slack length is taken from the source table. Data/Original_Study_Data/forelimb/forelimb_9groups_parameters.json |
+
+</details>
+
+<details>
+<summary>FL_WristFlexor · active_force_length_exponent</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_WristFlexor |
+| Parameter | active_force_length_exponent |
+| Unit | 1 |
+| Meaning | Exponent rho in the source active force-length curve. |
+| Source value | Not established |
+| Value used in this model | 3 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Author’s nine-group forelimb parameter table. In Results_Function.m, tendon-projected force F0 = 2.3 × 9.806 × PCSA × cos(PA), with PCSA in cm², PA the pennation angle and F0 in N. Tendon slack length is taken from the source table. Data/Original_Study_Data/forelimb/forelimb_9groups_parameters.json |
+
+</details>
+
+<details>
+<summary>FL_WristFlexor · source_shortening_curvature</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_WristFlexor |
+| Parameter | source_shortening_curvature |
+| Unit | 1 |
+| Meaning | Source shortening-curve coefficient; inactive when De Groote force-velocity mode is selected. |
+| Source value | Not established |
+| Value used in this model | 0.01363 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Author’s nine-group forelimb parameter table. In Results_Function.m, tendon-projected force F0 = 2.3 × 9.806 × PCSA × cos(PA), with PCSA in cm², PA the pennation angle and F0 in N. Tendon slack length is taken from the source table. Data/Original_Study_Data/forelimb/forelimb_9groups_parameters.json |
+
+</details>
+
+<details>
+<summary>FL_WristFlexor · source_lengthening_curvature</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_WristFlexor |
+| Parameter | source_lengthening_curvature |
+| Unit | 1 |
+| Meaning | Source lengthening-curve coefficient; inactive when De Groote force-velocity mode is selected. |
+| Source value | Not established |
+| Value used in this model | 0.69249608 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Author’s nine-group forelimb parameter table. In Results_Function.m, tendon-projected force F0 = 2.3 × 9.806 × PCSA × cos(PA), with PCSA in cm², PA the pennation angle and F0 in N. Tendon slack length is taken from the source table. Data/Original_Study_Data/forelimb/forelimb_9groups_parameters.json |
+
+</details>
+
+<details>
+<summary>FL_WristFlexor · passive_fiber_enabled</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_WristFlexor |
+| Parameter | passive_fiber_enabled |
+| Unit | 0/1 |
+| Meaning | 1 enables passive fiber tension within the elastic equilibrium; zero force below l_f/l_opt=1 does not mean it is disabled. |
+| Source value | Not established |
+| Value used in this model | 1 |
+| What changed and why | No verified source value is available for direct comparison. The published passive force-length law is included in every muscle channel. Its coefficients are from Prilutsky et al. (2016), Table 10.3, and Rahmati et al. (2025), Table 3. Applying the same normalized law to added muscle channels is a modeling assumption. |
+| Source / evidence | Published parallel elastic architecture: Prilutsky et al. 2016 Table 10.3 (10.1007/978-1-4939-3267-2_10); Rahmati et al. 2025 Table 3 (10.1113/JP287448). Common normalized curve extended to all model channels; no muscle-specific passive calibration is claimed. |
+
+</details>
+
+<details>
+<summary>FL_WristFlexor · degroote_force_velocity_enabled</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_WristFlexor |
+| Parameter | degroote_force_velocity_enabled |
+| Unit | 0/1 |
+| Meaning | 1 uses the documented De Groote/OpenSim velocity curve; 0 uses the source curve. |
+| Source value | Not established |
+| Value used in this model | 1 |
+| What changed and why | No verified source value is available for direct comparison. Model-law choice: 1 enables the smooth De Groote force-velocity relation; 0 selects the alternative implemented law. |
+| Source / evidence | Author’s nine-group forelimb parameter table. In Results_Function.m, tendon-projected force F0 = 2.3 × 9.806 × PCSA × cos(PA), with PCSA in cm², PA the pennation angle and F0 in N. Tendon slack length is taken from the source table. Data/Original_Study_Data/forelimb/forelimb_9groups_parameters.json |
+
+</details>
+
+<details>
+<summary>FL_WristExtensor · max_isometric_tendon_force_N</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_WristExtensor |
+| Parameter | max_isometric_tendon_force_N |
+| Unit | N |
+| Meaning | Maximum isometric force projected along the tendon; do not multiply by pennation cosine twice. |
+| Source value | 825.3025 |
+| Value used in this model | 93.484274 |
+| What changed and why | Different from the verified source value. Change relative to source: -88.7%. Force capacity was calibrated with motor inputs to improve mechanical agreement; the fit does not uniquely identify it. |
+| Source / evidence | Author’s nine-group forelimb parameter table. In Results_Function.m, tendon-projected force F0 = 2.3 × 9.806 × PCSA × cos(PA), with PCSA in cm², PA the pennation angle and F0 in N. Tendon slack length is taken from the source table. Data/Original_Study_Data/forelimb/forelimb_9groups_parameters.json |
+
+</details>
+
+<details>
+<summary>FL_WristExtensor · optimal_fiber_length_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_WristExtensor |
+| Parameter | optimal_fiber_length_m |
+| Unit | m |
+| Meaning | Optimal fascicle/fiber length, not whole muscle-tendon length. |
+| Source value | 0.013195799 |
+| Value used in this model | 0.013987547 |
+| What changed and why | Different from the verified source value. Change relative to source: +6%. Fiber length and shortening speed were calibrated to set the force-length and force-velocity operating ranges. Physical maximum fiber speed is optimal_fiber_length_m multiplied by max_fiber_speed_optimal_lengths_per_s. The source and applied numbers are given in this row; these are not new tissue measurements. |
+| Source / evidence | Author’s nine-group forelimb parameter table. In Results_Function.m, tendon-projected force F0 = 2.3 × 9.806 × PCSA × cos(PA), with PCSA in cm², PA the pennation angle and F0 in N. Tendon slack length is taken from the source table. Data/Original_Study_Data/forelimb/forelimb_9groups_parameters.json |
+
+</details>
+
+<details>
+<summary>FL_WristExtensor · tendon_slack_length_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_WristExtensor |
+| Parameter | tendon_slack_length_m |
+| Unit | m |
+| Meaning | Unloaded series tendon length. |
+| Source value | Not established |
+| Value used in this model | 0.10741379 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Author’s nine-group forelimb parameter table. In Results_Function.m, tendon-projected force F0 = 2.3 × 9.806 × PCSA × cos(PA), with PCSA in cm², PA the pennation angle and F0 in N. Tendon slack length is taken from the source table. Data/Original_Study_Data/forelimb/forelimb_9groups_parameters.json |
+
+</details>
+
+<details>
+<summary>FL_WristExtensor · pennation_cosine</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_WristExtensor |
+| Parameter | pennation_cosine |
+| Unit | 1 |
+| Meaning | Cosine of the constant fiber-to-tendon pennation angle. |
+| Source value | 0.98985904 |
+| Value used in this model | 0.98985904 |
+| What changed and why | Retained the verified source value; no numerical change from that source. |
+| Source / evidence | Author’s nine-group forelimb parameter table. In Results_Function.m, tendon-projected force F0 = 2.3 × 9.806 × PCSA × cos(PA), with PCSA in cm², PA the pennation angle and F0 in N. Tendon slack length is taken from the source table. Data/Original_Study_Data/forelimb/forelimb_9groups_parameters.json |
+
+</details>
+
+<details>
+<summary>FL_WristExtensor · tendon_strain_at_max_force</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_WristExtensor |
+| Parameter | tendon_strain_at_max_force |
+| Unit | 1 |
+| Meaning | Tendon extension/slack length at one maximum isometric tendon force. |
+| Source value | Not established |
+| Value used in this model | 0.04 |
+| What changed and why | No verified source value is available for direct comparison. Assumed elastic-tendon compliance; not a measured tendon strain for this animal. |
+| Source / evidence | Author’s nine-group forelimb parameter table. In Results_Function.m, tendon-projected force F0 = 2.3 × 9.806 × PCSA × cos(PA), with PCSA in cm², PA the pennation angle and F0 in N. Tendon slack length is taken from the source table. Data/Original_Study_Data/forelimb/forelimb_9groups_parameters.json |
+
+</details>
+
+<details>
+<summary>FL_WristExtensor · max_fiber_speed_optimal_lengths_per_s</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_WristExtensor |
+| Parameter | max_fiber_speed_optimal_lengths_per_s |
+| Unit | 1/s |
+| Meaning | Positive maximum-shortening speed magnitude, measured in optimal fiber lengths per second. |
+| Source value | 11.741004 |
+| Value used in this model | 11.076419 |
+| What changed and why | Different from the verified source value. Change relative to source: -5.66%. Fiber length and shortening speed were calibrated to set the force-length and force-velocity operating ranges. Physical maximum fiber speed is optimal_fiber_length_m multiplied by max_fiber_speed_optimal_lengths_per_s. The source and applied numbers are given in this row; these are not new tissue measurements. |
+| Source / evidence | Author’s nine-group forelimb parameter table. In Results_Function.m, tendon-projected force F0 = 2.3 × 9.806 × PCSA × cos(PA), with PCSA in cm², PA the pennation angle and F0 in N. Tendon slack length is taken from the source table. Data/Original_Study_Data/forelimb/forelimb_9groups_parameters.json |
+
+</details>
+
+<details>
+<summary>FL_WristExtensor · normalized_fiber_damping</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_WristExtensor |
+| Parameter | normalized_fiber_damping |
+| Unit | 1 |
+| Meaning | Coefficient of normalized fiber velocity in the normalized tendon-direction force balance. |
+| Source value | Not established |
+| Value used in this model | 0.0030986385 |
+| What changed and why | No verified source value is available for direct comparison. Effective muscle force-balance coefficient; source-law conversion and calibration are described in the methods. |
+| Source / evidence | Author’s nine-group forelimb parameter table. In Results_Function.m, tendon-projected force F0 = 2.3 × 9.806 × PCSA × cos(PA), with PCSA in cm², PA the pennation angle and F0 in N. Tendon slack length is taken from the source table. Data/Original_Study_Data/forelimb/forelimb_9groups_parameters.json |
+
+</details>
+
+<details>
+<summary>FL_WristExtensor · MT_path_length_offset_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_WristExtensor |
+| Parameter | MT_path_length_offset_m |
+| Unit | m |
+| Meaning | Constant offset added to the routed path to define muscle-tendon length. |
+| Source value | Not established |
+| Value used in this model | 0 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Author’s nine-group forelimb parameter table. In Results_Function.m, tendon-projected force F0 = 2.3 × 9.806 × PCSA × cos(PA), with PCSA in cm², PA the pennation angle and F0 in N. Tendon slack length is taken from the source table. Data/Original_Study_Data/forelimb/forelimb_9groups_parameters.json |
+
+</details>
+
+<details>
+<summary>FL_WristExtensor · active_force_length_exponent</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_WristExtensor |
+| Parameter | active_force_length_exponent |
+| Unit | 1 |
+| Meaning | Exponent rho in the source active force-length curve. |
+| Source value | Not established |
+| Value used in this model | 3 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Author’s nine-group forelimb parameter table. In Results_Function.m, tendon-projected force F0 = 2.3 × 9.806 × PCSA × cos(PA), with PCSA in cm², PA the pennation angle and F0 in N. Tendon slack length is taken from the source table. Data/Original_Study_Data/forelimb/forelimb_9groups_parameters.json |
+
+</details>
+
+<details>
+<summary>FL_WristExtensor · source_shortening_curvature</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_WristExtensor |
+| Parameter | source_shortening_curvature |
+| Unit | 1 |
+| Meaning | Source shortening-curve coefficient; inactive when De Groote force-velocity mode is selected. |
+| Source value | Not established |
+| Value used in this model | 0.17935937 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Author’s nine-group forelimb parameter table. In Results_Function.m, tendon-projected force F0 = 2.3 × 9.806 × PCSA × cos(PA), with PCSA in cm², PA the pennation angle and F0 in N. Tendon slack length is taken from the source table. Data/Original_Study_Data/forelimb/forelimb_9groups_parameters.json |
+
+</details>
+
+<details>
+<summary>FL_WristExtensor · source_lengthening_curvature</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_WristExtensor |
+| Parameter | source_lengthening_curvature |
+| Unit | 1 |
+| Meaning | Source lengthening-curve coefficient; inactive when De Groote force-velocity mode is selected. |
+| Source value | Not established |
+| Value used in this model | 0.0053141231 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Author’s nine-group forelimb parameter table. In Results_Function.m, tendon-projected force F0 = 2.3 × 9.806 × PCSA × cos(PA), with PCSA in cm², PA the pennation angle and F0 in N. Tendon slack length is taken from the source table. Data/Original_Study_Data/forelimb/forelimb_9groups_parameters.json |
+
+</details>
+
+<details>
+<summary>FL_WristExtensor · passive_fiber_enabled</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_WristExtensor |
+| Parameter | passive_fiber_enabled |
+| Unit | 0/1 |
+| Meaning | 1 enables passive fiber tension within the elastic equilibrium; zero force below l_f/l_opt=1 does not mean it is disabled. |
+| Source value | Not established |
+| Value used in this model | 1 |
+| What changed and why | No verified source value is available for direct comparison. The published passive force-length law is included in every muscle channel. Its coefficients are from Prilutsky et al. (2016), Table 10.3, and Rahmati et al. (2025), Table 3. Applying the same normalized law to added muscle channels is a modeling assumption. |
+| Source / evidence | Published parallel elastic architecture: Prilutsky et al. 2016 Table 10.3 (10.1007/978-1-4939-3267-2_10); Rahmati et al. 2025 Table 3 (10.1113/JP287448). Common normalized curve extended to all model channels; no muscle-specific passive calibration is claimed. |
+
+</details>
+
+<details>
+<summary>FL_WristExtensor · degroote_force_velocity_enabled</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_WristExtensor |
+| Parameter | degroote_force_velocity_enabled |
+| Unit | 0/1 |
+| Meaning | 1 uses the documented De Groote/OpenSim velocity curve; 0 uses the source curve. |
+| Source value | Not established |
+| Value used in this model | 1 |
+| What changed and why | No verified source value is available for direct comparison. Model-law choice: 1 enables the smooth De Groote force-velocity relation; 0 selects the alternative implemented law. |
+| Source / evidence | Author’s nine-group forelimb parameter table. In Results_Function.m, tendon-projected force F0 = 2.3 × 9.806 × PCSA × cos(PA), with PCSA in cm², PA the pennation angle and F0 in N. Tendon slack length is taken from the source table. Data/Original_Study_Data/forelimb/forelimb_9groups_parameters.json |
+
+</details>
+
+<details>
+<summary>FL_ShoulderFlexor · max_isometric_tendon_force_N</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_ShoulderFlexor |
+| Parameter | max_isometric_tendon_force_N |
+| Unit | N |
+| Meaning | Maximum isometric force projected along the tendon; do not multiply by pennation cosine twice. |
+| Source value | 60.746922 |
+| Value used in this model | 69.411418 |
+| What changed and why | Different from the verified source value. Change relative to source: +14.3%. Force capacity was calibrated with motor inputs to improve mechanical agreement; the fit does not uniquely identify it. |
+| Source / evidence | Author’s nine-group forelimb parameter table. In Results_Function.m, tendon-projected force F0 = 2.3 × 9.806 × PCSA × cos(PA), with PCSA in cm², PA the pennation angle and F0 in N. Tendon slack length is taken from the source table. Data/Original_Study_Data/forelimb/forelimb_9groups_parameters.json |
+
+</details>
+
+<details>
+<summary>FL_ShoulderFlexor · optimal_fiber_length_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_ShoulderFlexor |
+| Parameter | optimal_fiber_length_m |
+| Unit | m |
+| Meaning | Optimal fascicle/fiber length, not whole muscle-tendon length. |
+| Source value | 0.039496916 |
+| Value used in this model | 0.041866731 |
+| What changed and why | Different from the verified source value. Change relative to source: +6%. Fiber length and shortening speed were calibrated to set the force-length and force-velocity operating ranges. Physical maximum fiber speed is optimal_fiber_length_m multiplied by max_fiber_speed_optimal_lengths_per_s. The source and applied numbers are given in this row; these are not new tissue measurements. |
+| Source / evidence | Author’s nine-group forelimb parameter table. In Results_Function.m, tendon-projected force F0 = 2.3 × 9.806 × PCSA × cos(PA), with PCSA in cm², PA the pennation angle and F0 in N. Tendon slack length is taken from the source table. Data/Original_Study_Data/forelimb/forelimb_9groups_parameters.json |
+
+</details>
+
+<details>
+<summary>FL_ShoulderFlexor · tendon_slack_length_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_ShoulderFlexor |
+| Parameter | tendon_slack_length_m |
+| Unit | m |
+| Meaning | Unloaded series tendon length. |
+| Source value | Not established |
+| Value used in this model | 0.024504272 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Author’s nine-group forelimb parameter table. In Results_Function.m, tendon-projected force F0 = 2.3 × 9.806 × PCSA × cos(PA), with PCSA in cm², PA the pennation angle and F0 in N. Tendon slack length is taken from the source table. Data/Original_Study_Data/forelimb/forelimb_9groups_parameters.json |
+
+</details>
+
+<details>
+<summary>FL_ShoulderFlexor · pennation_cosine</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_ShoulderFlexor |
+| Parameter | pennation_cosine |
+| Unit | 1 |
+| Meaning | Cosine of the constant fiber-to-tendon pennation angle. |
+| Source value | 0.99756405 |
+| Value used in this model | 0.99756405 |
+| What changed and why | Retained the verified source value; no numerical change from that source. |
+| Source / evidence | Author’s nine-group forelimb parameter table. In Results_Function.m, tendon-projected force F0 = 2.3 × 9.806 × PCSA × cos(PA), with PCSA in cm², PA the pennation angle and F0 in N. Tendon slack length is taken from the source table. Data/Original_Study_Data/forelimb/forelimb_9groups_parameters.json |
+
+</details>
+
+<details>
+<summary>FL_ShoulderFlexor · tendon_strain_at_max_force</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_ShoulderFlexor |
+| Parameter | tendon_strain_at_max_force |
+| Unit | 1 |
+| Meaning | Tendon extension/slack length at one maximum isometric tendon force. |
+| Source value | Not established |
+| Value used in this model | 0.04 |
+| What changed and why | No verified source value is available for direct comparison. Assumed elastic-tendon compliance; not a measured tendon strain for this animal. |
+| Source / evidence | Author’s nine-group forelimb parameter table. In Results_Function.m, tendon-projected force F0 = 2.3 × 9.806 × PCSA × cos(PA), with PCSA in cm², PA the pennation angle and F0 in N. Tendon slack length is taken from the source table. Data/Original_Study_Data/forelimb/forelimb_9groups_parameters.json |
+
+</details>
+
+<details>
+<summary>FL_ShoulderFlexor · max_fiber_speed_optimal_lengths_per_s</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_ShoulderFlexor |
+| Parameter | max_fiber_speed_optimal_lengths_per_s |
+| Unit | 1/s |
+| Meaning | Positive maximum-shortening speed magnitude, measured in optimal fiber lengths per second. |
+| Source value | 11 |
+| Value used in this model | 10.377358 |
+| What changed and why | Different from the verified source value. Change relative to source: -5.66%. Fiber length and shortening speed were calibrated to set the force-length and force-velocity operating ranges. Physical maximum fiber speed is optimal_fiber_length_m multiplied by max_fiber_speed_optimal_lengths_per_s. The source and applied numbers are given in this row; these are not new tissue measurements. |
+| Source / evidence | Author’s nine-group forelimb parameter table. In Results_Function.m, tendon-projected force F0 = 2.3 × 9.806 × PCSA × cos(PA), with PCSA in cm², PA the pennation angle and F0 in N. Tendon slack length is taken from the source table. Data/Original_Study_Data/forelimb/forelimb_9groups_parameters.json |
+
+</details>
+
+<details>
+<summary>FL_ShoulderFlexor · normalized_fiber_damping</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_ShoulderFlexor |
+| Parameter | normalized_fiber_damping |
+| Unit | 1 |
+| Meaning | Coefficient of normalized fiber velocity in the normalized tendon-direction force balance. |
+| Source value | Not established |
+| Value used in this model | 0.0086893216 |
+| What changed and why | No verified source value is available for direct comparison. Effective muscle force-balance coefficient; source-law conversion and calibration are described in the methods. |
+| Source / evidence | Author’s nine-group forelimb parameter table. In Results_Function.m, tendon-projected force F0 = 2.3 × 9.806 × PCSA × cos(PA), with PCSA in cm², PA the pennation angle and F0 in N. Tendon slack length is taken from the source table. Data/Original_Study_Data/forelimb/forelimb_9groups_parameters.json |
+
+</details>
+
+<details>
+<summary>FL_ShoulderFlexor · MT_path_length_offset_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_ShoulderFlexor |
+| Parameter | MT_path_length_offset_m |
+| Unit | m |
+| Meaning | Constant offset added to the routed path to define muscle-tendon length. |
+| Source value | Not established |
+| Value used in this model | 0 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Author’s nine-group forelimb parameter table. In Results_Function.m, tendon-projected force F0 = 2.3 × 9.806 × PCSA × cos(PA), with PCSA in cm², PA the pennation angle and F0 in N. Tendon slack length is taken from the source table. Data/Original_Study_Data/forelimb/forelimb_9groups_parameters.json |
+
+</details>
+
+<details>
+<summary>FL_ShoulderFlexor · active_force_length_exponent</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_ShoulderFlexor |
+| Parameter | active_force_length_exponent |
+| Unit | 1 |
+| Meaning | Exponent rho in the source active force-length curve. |
+| Source value | Not established |
+| Value used in this model | 6 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Author’s nine-group forelimb parameter table. In Results_Function.m, tendon-projected force F0 = 2.3 × 9.806 × PCSA × cos(PA), with PCSA in cm², PA the pennation angle and F0 in N. Tendon slack length is taken from the source table. Data/Original_Study_Data/forelimb/forelimb_9groups_parameters.json |
+
+</details>
+
+<details>
+<summary>FL_ShoulderFlexor · source_shortening_curvature</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_ShoulderFlexor |
+| Parameter | source_shortening_curvature |
+| Unit | 1 |
+| Meaning | Source shortening-curve coefficient; inactive when De Groote force-velocity mode is selected. |
+| Source value | Not established |
+| Value used in this model | 0.195715 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Author’s nine-group forelimb parameter table. In Results_Function.m, tendon-projected force F0 = 2.3 × 9.806 × PCSA × cos(PA), with PCSA in cm², PA the pennation angle and F0 in N. Tendon slack length is taken from the source table. Data/Original_Study_Data/forelimb/forelimb_9groups_parameters.json |
+
+</details>
+
+<details>
+<summary>FL_ShoulderFlexor · source_lengthening_curvature</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_ShoulderFlexor |
+| Parameter | source_lengthening_curvature |
+| Unit | 1 |
+| Meaning | Source lengthening-curve coefficient; inactive when De Groote force-velocity mode is selected. |
+| Source value | Not established |
+| Value used in this model | 0.061928536 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Author’s nine-group forelimb parameter table. In Results_Function.m, tendon-projected force F0 = 2.3 × 9.806 × PCSA × cos(PA), with PCSA in cm², PA the pennation angle and F0 in N. Tendon slack length is taken from the source table. Data/Original_Study_Data/forelimb/forelimb_9groups_parameters.json |
+
+</details>
+
+<details>
+<summary>FL_ShoulderFlexor · passive_fiber_enabled</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_ShoulderFlexor |
+| Parameter | passive_fiber_enabled |
+| Unit | 0/1 |
+| Meaning | 1 enables passive fiber tension within the elastic equilibrium; zero force below l_f/l_opt=1 does not mean it is disabled. |
+| Source value | Not established |
+| Value used in this model | 1 |
+| What changed and why | No verified source value is available for direct comparison. The published passive force-length law is included in every muscle channel. Its coefficients are from Prilutsky et al. (2016), Table 10.3, and Rahmati et al. (2025), Table 3. Applying the same normalized law to added muscle channels is a modeling assumption. |
+| Source / evidence | Published parallel elastic architecture: Prilutsky et al. 2016 Table 10.3 (10.1007/978-1-4939-3267-2_10); Rahmati et al. 2025 Table 3 (10.1113/JP287448). Common normalized curve extended to all model channels; no muscle-specific passive calibration is claimed. |
+
+</details>
+
+<details>
+<summary>FL_ShoulderFlexor · degroote_force_velocity_enabled</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_ShoulderFlexor |
+| Parameter | degroote_force_velocity_enabled |
+| Unit | 0/1 |
+| Meaning | 1 uses the documented De Groote/OpenSim velocity curve; 0 uses the source curve. |
+| Source value | Not established |
+| Value used in this model | 1 |
+| What changed and why | No verified source value is available for direct comparison. Model-law choice: 1 enables the smooth De Groote force-velocity relation; 0 selects the alternative implemented law. |
+| Source / evidence | Author’s nine-group forelimb parameter table. In Results_Function.m, tendon-projected force F0 = 2.3 × 9.806 × PCSA × cos(PA), with PCSA in cm², PA the pennation angle and F0 in N. Tendon slack length is taken from the source table. Data/Original_Study_Data/forelimb/forelimb_9groups_parameters.json |
+
+</details>
+
+<details>
+<summary>FL_TricepsBrachiiLong · max_isometric_tendon_force_N</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_TricepsBrachiiLong |
+| Parameter | max_isometric_tendon_force_N |
+| Unit | N |
+| Meaning | Maximum isometric force projected along the tendon; do not multiply by pennation cosine twice. |
+| Source value | 201.95677 |
+| Value used in this model | 189.10697 |
+| What changed and why | Different from the verified source value. Change relative to source: -6.36%. Force capacity was calibrated with motor inputs to improve mechanical agreement; the fit does not uniquely identify it. |
+| Source / evidence | Author’s nine-group forelimb parameter table. In Results_Function.m, tendon-projected force F0 = 2.3 × 9.806 × PCSA × cos(PA), with PCSA in cm², PA the pennation angle and F0 in N. Tendon slack length is taken from the source table. Data/Original_Study_Data/forelimb/forelimb_9groups_parameters.json |
+
+</details>
+
+<details>
+<summary>FL_TricepsBrachiiLong · optimal_fiber_length_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_TricepsBrachiiLong |
+| Parameter | optimal_fiber_length_m |
+| Unit | m |
+| Meaning | Optimal fascicle/fiber length, not whole muscle-tendon length. |
+| Source value | 0.023863208 |
+| Value used in this model | 0.025295 |
+| What changed and why | Different from the verified source value. Change relative to source: +6%. Fiber length and shortening speed were calibrated to set the force-length and force-velocity operating ranges. Physical maximum fiber speed is optimal_fiber_length_m multiplied by max_fiber_speed_optimal_lengths_per_s. The source and applied numbers are given in this row; these are not new tissue measurements. |
+| Source / evidence | Author’s nine-group forelimb parameter table. In Results_Function.m, tendon-projected force F0 = 2.3 × 9.806 × PCSA × cos(PA), with PCSA in cm², PA the pennation angle and F0 in N. Tendon slack length is taken from the source table. Data/Original_Study_Data/forelimb/forelimb_9groups_parameters.json |
+
+</details>
+
+<details>
+<summary>FL_TricepsBrachiiLong · tendon_slack_length_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_TricepsBrachiiLong |
+| Parameter | tendon_slack_length_m |
+| Unit | m |
+| Meaning | Unloaded series tendon length. |
+| Source value | Not established |
+| Value used in this model | 0.078117496 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Author’s nine-group forelimb parameter table. In Results_Function.m, tendon-projected force F0 = 2.3 × 9.806 × PCSA × cos(PA), with PCSA in cm², PA the pennation angle and F0 in N. Tendon slack length is taken from the source table. Data/Original_Study_Data/forelimb/forelimb_9groups_parameters.json |
+
+</details>
+
+<details>
+<summary>FL_TricepsBrachiiLong · pennation_cosine</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_TricepsBrachiiLong |
+| Parameter | pennation_cosine |
+| Unit | 1 |
+| Meaning | Cosine of the constant fiber-to-tendon pennation angle. |
+| Source value | 0.97304487 |
+| Value used in this model | 0.97304487 |
+| What changed and why | Retained the verified source value; no numerical change from that source. |
+| Source / evidence | Author’s nine-group forelimb parameter table. In Results_Function.m, tendon-projected force F0 = 2.3 × 9.806 × PCSA × cos(PA), with PCSA in cm², PA the pennation angle and F0 in N. Tendon slack length is taken from the source table. Data/Original_Study_Data/forelimb/forelimb_9groups_parameters.json |
+
+</details>
+
+<details>
+<summary>FL_TricepsBrachiiLong · tendon_strain_at_max_force</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_TricepsBrachiiLong |
+| Parameter | tendon_strain_at_max_force |
+| Unit | 1 |
+| Meaning | Tendon extension/slack length at one maximum isometric tendon force. |
+| Source value | Not established |
+| Value used in this model | 0.04 |
+| What changed and why | No verified source value is available for direct comparison. Assumed elastic-tendon compliance; not a measured tendon strain for this animal. |
+| Source / evidence | Author’s nine-group forelimb parameter table. In Results_Function.m, tendon-projected force F0 = 2.3 × 9.806 × PCSA × cos(PA), with PCSA in cm², PA the pennation angle and F0 in N. Tendon slack length is taken from the source table. Data/Original_Study_Data/forelimb/forelimb_9groups_parameters.json |
+
+</details>
+
+<details>
+<summary>FL_TricepsBrachiiLong · max_fiber_speed_optimal_lengths_per_s</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_TricepsBrachiiLong |
+| Parameter | max_fiber_speed_optimal_lengths_per_s |
+| Unit | 1/s |
+| Meaning | Positive maximum-shortening speed magnitude, measured in optimal fiber lengths per second. |
+| Source value | 11.365 |
+| Value used in this model | 10.721698 |
+| What changed and why | Different from the verified source value. Change relative to source: -5.66%. Fiber length and shortening speed were calibrated to set the force-length and force-velocity operating ranges. Physical maximum fiber speed is optimal_fiber_length_m multiplied by max_fiber_speed_optimal_lengths_per_s. The source and applied numbers are given in this row; these are not new tissue measurements. |
+| Source / evidence | Author’s nine-group forelimb parameter table. In Results_Function.m, tendon-projected force F0 = 2.3 × 9.806 × PCSA × cos(PA), with PCSA in cm², PA the pennation angle and F0 in N. Tendon slack length is taken from the source table. Data/Original_Study_Data/forelimb/forelimb_9groups_parameters.json |
+
+</details>
+
+<details>
+<summary>FL_TricepsBrachiiLong · normalized_fiber_damping</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_TricepsBrachiiLong |
+| Parameter | normalized_fiber_damping |
+| Unit | 1 |
+| Meaning | Coefficient of normalized fiber velocity in the normalized tendon-direction force balance. |
+| Source value | Not established |
+| Value used in this model | 0.0054241071 |
+| What changed and why | No verified source value is available for direct comparison. Effective muscle force-balance coefficient; source-law conversion and calibration are described in the methods. |
+| Source / evidence | Author’s nine-group forelimb parameter table. In Results_Function.m, tendon-projected force F0 = 2.3 × 9.806 × PCSA × cos(PA), with PCSA in cm², PA the pennation angle and F0 in N. Tendon slack length is taken from the source table. Data/Original_Study_Data/forelimb/forelimb_9groups_parameters.json |
+
+</details>
+
+<details>
+<summary>FL_TricepsBrachiiLong · MT_path_length_offset_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_TricepsBrachiiLong |
+| Parameter | MT_path_length_offset_m |
+| Unit | m |
+| Meaning | Constant offset added to the routed path to define muscle-tendon length. |
+| Source value | Not established |
+| Value used in this model | 0 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Author’s nine-group forelimb parameter table. In Results_Function.m, tendon-projected force F0 = 2.3 × 9.806 × PCSA × cos(PA), with PCSA in cm², PA the pennation angle and F0 in N. Tendon slack length is taken from the source table. Data/Original_Study_Data/forelimb/forelimb_9groups_parameters.json |
+
+</details>
+
+<details>
+<summary>FL_TricepsBrachiiLong · active_force_length_exponent</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_TricepsBrachiiLong |
+| Parameter | active_force_length_exponent |
+| Unit | 1 |
+| Meaning | Exponent rho in the source active force-length curve. |
+| Source value | Not established |
+| Value used in this model | 3 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Author’s nine-group forelimb parameter table. In Results_Function.m, tendon-projected force F0 = 2.3 × 9.806 × PCSA × cos(PA), with PCSA in cm², PA the pennation angle and F0 in N. Tendon slack length is taken from the source table. Data/Original_Study_Data/forelimb/forelimb_9groups_parameters.json |
+
+</details>
+
+<details>
+<summary>FL_TricepsBrachiiLong · source_shortening_curvature</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_TricepsBrachiiLong |
+| Parameter | source_shortening_curvature |
+| Unit | 1 |
+| Meaning | Source shortening-curve coefficient; inactive when De Groote force-velocity mode is selected. |
+| Source value | Not established |
+| Value used in this model | 0.23323 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Author’s nine-group forelimb parameter table. In Results_Function.m, tendon-projected force F0 = 2.3 × 9.806 × PCSA × cos(PA), with PCSA in cm², PA the pennation angle and F0 in N. Tendon slack length is taken from the source table. Data/Original_Study_Data/forelimb/forelimb_9groups_parameters.json |
+
+</details>
+
+<details>
+<summary>FL_TricepsBrachiiLong · source_lengthening_curvature</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_TricepsBrachiiLong |
+| Parameter | source_lengthening_curvature |
+| Unit | 1 |
+| Meaning | Source lengthening-curve coefficient; inactive when De Groote force-velocity mode is selected. |
+| Source value | Not established |
+| Value used in this model | 0.016191972 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Author’s nine-group forelimb parameter table. In Results_Function.m, tendon-projected force F0 = 2.3 × 9.806 × PCSA × cos(PA), with PCSA in cm², PA the pennation angle and F0 in N. Tendon slack length is taken from the source table. Data/Original_Study_Data/forelimb/forelimb_9groups_parameters.json |
+
+</details>
+
+<details>
+<summary>FL_TricepsBrachiiLong · passive_fiber_enabled</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_TricepsBrachiiLong |
+| Parameter | passive_fiber_enabled |
+| Unit | 0/1 |
+| Meaning | 1 enables passive fiber tension within the elastic equilibrium; zero force below l_f/l_opt=1 does not mean it is disabled. |
+| Source value | Not established |
+| Value used in this model | 1 |
+| What changed and why | No verified source value is available for direct comparison. The published passive force-length law is included in every muscle channel. Its coefficients are from Prilutsky et al. (2016), Table 10.3, and Rahmati et al. (2025), Table 3. Applying the same normalized law to added muscle channels is a modeling assumption. |
+| Source / evidence | Published parallel elastic architecture: Prilutsky et al. 2016 Table 10.3 (10.1007/978-1-4939-3267-2_10); Rahmati et al. 2025 Table 3 (10.1113/JP287448). Common normalized curve extended to all model channels; no muscle-specific passive calibration is claimed. |
+
+</details>
+
+<details>
+<summary>FL_TricepsBrachiiLong · degroote_force_velocity_enabled</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_TricepsBrachiiLong |
+| Parameter | degroote_force_velocity_enabled |
+| Unit | 0/1 |
+| Meaning | 1 uses the documented De Groote/OpenSim velocity curve; 0 uses the source curve. |
+| Source value | Not established |
+| Value used in this model | 1 |
+| What changed and why | No verified source value is available for direct comparison. Model-law choice: 1 enables the smooth De Groote force-velocity relation; 0 selects the alternative implemented law. |
+| Source / evidence | Author’s nine-group forelimb parameter table. In Results_Function.m, tendon-projected force F0 = 2.3 × 9.806 × PCSA × cos(PA), with PCSA in cm², PA the pennation angle and F0 in N. Tendon slack length is taken from the source table. Data/Original_Study_Data/forelimb/forelimb_9groups_parameters.json |
+
+</details>
+
+<details>
+<summary>FR_ShoulderExtensor · max_isometric_tendon_force_N</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FR_ShoulderExtensor |
+| Parameter | max_isometric_tendon_force_N |
+| Unit | N |
+| Meaning | Maximum isometric force projected along the tendon; do not multiply by pennation cosine twice. |
+| Source value | 563.29175 |
+| Value used in this model | 536.97279 |
+| What changed and why | Different from the verified source value. Change relative to source: -4.67%. Force capacity was calibrated with motor inputs to improve mechanical agreement; the fit does not uniquely identify it. |
+| Source / evidence | Author’s nine-group forelimb parameter table. In Results_Function.m, tendon-projected force F0 = 2.3 × 9.806 × PCSA × cos(PA), with PCSA in cm², PA the pennation angle and F0 in N. Tendon slack length is taken from the source table. Data/Original_Study_Data/forelimb/forelimb_9groups_parameters.json |
+
+</details>
+
+<details>
+<summary>FR_ShoulderExtensor · optimal_fiber_length_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FR_ShoulderExtensor |
+| Parameter | optimal_fiber_length_m |
+| Unit | m |
+| Meaning | Optimal fascicle/fiber length, not whole muscle-tendon length. |
+| Source value | 0.015859438 |
+| Value used in this model | 0.016811005 |
+| What changed and why | Different from the verified source value. Change relative to source: +6%. Fiber length and shortening speed were calibrated to set the force-length and force-velocity operating ranges. Physical maximum fiber speed is optimal_fiber_length_m multiplied by max_fiber_speed_optimal_lengths_per_s. The source and applied numbers are given in this row; these are not new tissue measurements. |
+| Source / evidence | Author’s nine-group forelimb parameter table. In Results_Function.m, tendon-projected force F0 = 2.3 × 9.806 × PCSA × cos(PA), with PCSA in cm², PA the pennation angle and F0 in N. Tendon slack length is taken from the source table. Data/Original_Study_Data/forelimb/forelimb_9groups_parameters.json |
+
+</details>
+
+<details>
+<summary>FR_ShoulderExtensor · tendon_slack_length_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FR_ShoulderExtensor |
+| Parameter | tendon_slack_length_m |
+| Unit | m |
+| Meaning | Unloaded series tendon length. |
+| Source value | Not established |
+| Value used in this model | 0.045085994 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Author’s nine-group forelimb parameter table. In Results_Function.m, tendon-projected force F0 = 2.3 × 9.806 × PCSA × cos(PA), with PCSA in cm², PA the pennation angle and F0 in N. Tendon slack length is taken from the source table. Data/Original_Study_Data/forelimb/forelimb_9groups_parameters.json |
+
+</details>
+
+<details>
+<summary>FR_ShoulderExtensor · pennation_cosine</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FR_ShoulderExtensor |
+| Parameter | pennation_cosine |
+| Unit | 1 |
+| Meaning | Cosine of the constant fiber-to-tendon pennation angle. |
+| Source value | 0.96542209 |
+| Value used in this model | 0.96542209 |
+| What changed and why | Retained the verified source value; no numerical change from that source. |
+| Source / evidence | Author’s nine-group forelimb parameter table. In Results_Function.m, tendon-projected force F0 = 2.3 × 9.806 × PCSA × cos(PA), with PCSA in cm², PA the pennation angle and F0 in N. Tendon slack length is taken from the source table. Data/Original_Study_Data/forelimb/forelimb_9groups_parameters.json |
+
+</details>
+
+<details>
+<summary>FR_ShoulderExtensor · tendon_strain_at_max_force</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FR_ShoulderExtensor |
+| Parameter | tendon_strain_at_max_force |
+| Unit | 1 |
+| Meaning | Tendon extension/slack length at one maximum isometric tendon force. |
+| Source value | Not established |
+| Value used in this model | 0.04 |
+| What changed and why | No verified source value is available for direct comparison. Assumed elastic-tendon compliance; not a measured tendon strain for this animal. |
+| Source / evidence | Author’s nine-group forelimb parameter table. In Results_Function.m, tendon-projected force F0 = 2.3 × 9.806 × PCSA × cos(PA), with PCSA in cm², PA the pennation angle and F0 in N. Tendon slack length is taken from the source table. Data/Original_Study_Data/forelimb/forelimb_9groups_parameters.json |
+
+</details>
+
+<details>
+<summary>FR_ShoulderExtensor · max_fiber_speed_optimal_lengths_per_s</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FR_ShoulderExtensor |
+| Parameter | max_fiber_speed_optimal_lengths_per_s |
+| Unit | 1/s |
+| Meaning | Positive maximum-shortening speed magnitude, measured in optimal fiber lengths per second. |
+| Source value | 11 |
+| Value used in this model | 10.377358 |
+| What changed and why | Different from the verified source value. Change relative to source: -5.66%. Fiber length and shortening speed were calibrated to set the force-length and force-velocity operating ranges. Physical maximum fiber speed is optimal_fiber_length_m multiplied by max_fiber_speed_optimal_lengths_per_s. The source and applied numbers are given in this row; these are not new tissue measurements. |
+| Source / evidence | Author’s nine-group forelimb parameter table. In Results_Function.m, tendon-projected force F0 = 2.3 × 9.806 × PCSA × cos(PA), with PCSA in cm², PA the pennation angle and F0 in N. Tendon slack length is taken from the source table. Data/Original_Study_Data/forelimb/forelimb_9groups_parameters.json |
+
+</details>
+
+<details>
+<summary>FR_ShoulderExtensor · normalized_fiber_damping</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FR_ShoulderExtensor |
+| Parameter | normalized_fiber_damping |
+| Unit | 1 |
+| Meaning | Coefficient of normalized fiber velocity in the normalized tendon-direction force balance. |
+| Source value | Not established |
+| Value used in this model | 0.0034890764 |
+| What changed and why | No verified source value is available for direct comparison. Effective muscle force-balance coefficient; source-law conversion and calibration are described in the methods. |
+| Source / evidence | Author’s nine-group forelimb parameter table. In Results_Function.m, tendon-projected force F0 = 2.3 × 9.806 × PCSA × cos(PA), with PCSA in cm², PA the pennation angle and F0 in N. Tendon slack length is taken from the source table. Data/Original_Study_Data/forelimb/forelimb_9groups_parameters.json |
+
+</details>
+
+<details>
+<summary>FR_ShoulderExtensor · MT_path_length_offset_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FR_ShoulderExtensor |
+| Parameter | MT_path_length_offset_m |
+| Unit | m |
+| Meaning | Constant offset added to the routed path to define muscle-tendon length. |
+| Source value | Not established |
+| Value used in this model | 0 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Author’s nine-group forelimb parameter table. In Results_Function.m, tendon-projected force F0 = 2.3 × 9.806 × PCSA × cos(PA), with PCSA in cm², PA the pennation angle and F0 in N. Tendon slack length is taken from the source table. Data/Original_Study_Data/forelimb/forelimb_9groups_parameters.json |
+
+</details>
+
+<details>
+<summary>FR_ShoulderExtensor · active_force_length_exponent</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FR_ShoulderExtensor |
+| Parameter | active_force_length_exponent |
+| Unit | 1 |
+| Meaning | Exponent rho in the source active force-length curve. |
+| Source value | Not established |
+| Value used in this model | 3 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Author’s nine-group forelimb parameter table. In Results_Function.m, tendon-projected force F0 = 2.3 × 9.806 × PCSA × cos(PA), with PCSA in cm², PA the pennation angle and F0 in N. Tendon slack length is taken from the source table. Data/Original_Study_Data/forelimb/forelimb_9groups_parameters.json |
+
+</details>
+
+<details>
+<summary>FR_ShoulderExtensor · source_shortening_curvature</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FR_ShoulderExtensor |
+| Parameter | source_shortening_curvature |
+| Unit | 1 |
+| Meaning | Source shortening-curve coefficient; inactive when De Groote force-velocity mode is selected. |
+| Source value | Not established |
+| Value used in this model | 0.3718525 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Author’s nine-group forelimb parameter table. In Results_Function.m, tendon-projected force F0 = 2.3 × 9.806 × PCSA × cos(PA), with PCSA in cm², PA the pennation angle and F0 in N. Tendon slack length is taken from the source table. Data/Original_Study_Data/forelimb/forelimb_9groups_parameters.json |
+
+</details>
+
+<details>
+<summary>FR_ShoulderExtensor · source_lengthening_curvature</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FR_ShoulderExtensor |
+| Parameter | source_lengthening_curvature |
+| Unit | 1 |
+| Meaning | Source lengthening-curve coefficient; inactive when De Groote force-velocity mode is selected. |
+| Source value | Not established |
+| Value used in this model | 0.0036703378 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Author’s nine-group forelimb parameter table. In Results_Function.m, tendon-projected force F0 = 2.3 × 9.806 × PCSA × cos(PA), with PCSA in cm², PA the pennation angle and F0 in N. Tendon slack length is taken from the source table. Data/Original_Study_Data/forelimb/forelimb_9groups_parameters.json |
+
+</details>
+
+<details>
+<summary>FR_ShoulderExtensor · passive_fiber_enabled</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FR_ShoulderExtensor |
+| Parameter | passive_fiber_enabled |
+| Unit | 0/1 |
+| Meaning | 1 enables passive fiber tension within the elastic equilibrium; zero force below l_f/l_opt=1 does not mean it is disabled. |
+| Source value | Not established |
+| Value used in this model | 1 |
+| What changed and why | No verified source value is available for direct comparison. The published passive force-length law is included in every muscle channel. Its coefficients are from Prilutsky et al. (2016), Table 10.3, and Rahmati et al. (2025), Table 3. Applying the same normalized law to added muscle channels is a modeling assumption. |
+| Source / evidence | Published parallel elastic architecture: Prilutsky et al. 2016 Table 10.3 (10.1007/978-1-4939-3267-2_10); Rahmati et al. 2025 Table 3 (10.1113/JP287448). Common normalized curve extended to all model channels; no muscle-specific passive calibration is claimed. |
+
+</details>
+
+<details>
+<summary>FR_ShoulderExtensor · degroote_force_velocity_enabled</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FR_ShoulderExtensor |
+| Parameter | degroote_force_velocity_enabled |
+| Unit | 0/1 |
+| Meaning | 1 uses the documented De Groote/OpenSim velocity curve; 0 uses the source curve. |
+| Source value | Not established |
+| Value used in this model | 1 |
+| What changed and why | No verified source value is available for direct comparison. Model-law choice: 1 enables the smooth De Groote force-velocity relation; 0 selects the alternative implemented law. |
+| Source / evidence | Author’s nine-group forelimb parameter table. In Results_Function.m, tendon-projected force F0 = 2.3 × 9.806 × PCSA × cos(PA), with PCSA in cm², PA the pennation angle and F0 in N. Tendon slack length is taken from the source table. Data/Original_Study_Data/forelimb/forelimb_9groups_parameters.json |
+
+</details>
+
+<details>
+<summary>FR_ElbowExtensor · max_isometric_tendon_force_N</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FR_ElbowExtensor |
+| Parameter | max_isometric_tendon_force_N |
+| Unit | N |
+| Meaning | Maximum isometric force projected along the tendon; do not multiply by pennation cosine twice. |
+| Source value | 124.06863 |
+| Value used in this model | 125.72992 |
+| What changed and why | Different from the verified source value. Change relative to source: +1.34%. Force capacity was calibrated with motor inputs to improve mechanical agreement; the fit does not uniquely identify it. |
+| Source / evidence | Author’s nine-group forelimb parameter table. In Results_Function.m, tendon-projected force F0 = 2.3 × 9.806 × PCSA × cos(PA), with PCSA in cm², PA the pennation angle and F0 in N. Tendon slack length is taken from the source table. Data/Original_Study_Data/forelimb/forelimb_9groups_parameters.json |
+
+</details>
+
+<details>
+<summary>FR_ElbowExtensor · optimal_fiber_length_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FR_ElbowExtensor |
+| Parameter | optimal_fiber_length_m |
+| Unit | m |
+| Meaning | Optimal fascicle/fiber length, not whole muscle-tendon length. |
+| Source value | 0.029062041 |
+| Value used in this model | 0.030805763 |
+| What changed and why | Different from the verified source value. Change relative to source: +6%. Fiber length and shortening speed were calibrated to set the force-length and force-velocity operating ranges. Physical maximum fiber speed is optimal_fiber_length_m multiplied by max_fiber_speed_optimal_lengths_per_s. The source and applied numbers are given in this row; these are not new tissue measurements. |
+| Source / evidence | Author’s nine-group forelimb parameter table. In Results_Function.m, tendon-projected force F0 = 2.3 × 9.806 × PCSA × cos(PA), with PCSA in cm², PA the pennation angle and F0 in N. Tendon slack length is taken from the source table. Data/Original_Study_Data/forelimb/forelimb_9groups_parameters.json |
+
+</details>
+
+<details>
+<summary>FR_ElbowExtensor · tendon_slack_length_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FR_ElbowExtensor |
+| Parameter | tendon_slack_length_m |
+| Unit | m |
+| Meaning | Unloaded series tendon length. |
+| Source value | Not established |
+| Value used in this model | 0.032747692 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Author’s nine-group forelimb parameter table. In Results_Function.m, tendon-projected force F0 = 2.3 × 9.806 × PCSA × cos(PA), with PCSA in cm², PA the pennation angle and F0 in N. Tendon slack length is taken from the source table. Data/Original_Study_Data/forelimb/forelimb_9groups_parameters.json |
+
+</details>
+
+<details>
+<summary>FR_ElbowExtensor · pennation_cosine</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FR_ElbowExtensor |
+| Parameter | pennation_cosine |
+| Unit | 1 |
+| Meaning | Cosine of the constant fiber-to-tendon pennation angle. |
+| Source value | 0.9862856 |
+| Value used in this model | 0.9862856 |
+| What changed and why | Retained the verified source value; no numerical change from that source. |
+| Source / evidence | Author’s nine-group forelimb parameter table. In Results_Function.m, tendon-projected force F0 = 2.3 × 9.806 × PCSA × cos(PA), with PCSA in cm², PA the pennation angle and F0 in N. Tendon slack length is taken from the source table. Data/Original_Study_Data/forelimb/forelimb_9groups_parameters.json |
+
+</details>
+
+<details>
+<summary>FR_ElbowExtensor · tendon_strain_at_max_force</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FR_ElbowExtensor |
+| Parameter | tendon_strain_at_max_force |
+| Unit | 1 |
+| Meaning | Tendon extension/slack length at one maximum isometric tendon force. |
+| Source value | Not established |
+| Value used in this model | 0.04 |
+| What changed and why | No verified source value is available for direct comparison. Assumed elastic-tendon compliance; not a measured tendon strain for this animal. |
+| Source / evidence | Author’s nine-group forelimb parameter table. In Results_Function.m, tendon-projected force F0 = 2.3 × 9.806 × PCSA × cos(PA), with PCSA in cm², PA the pennation angle and F0 in N. Tendon slack length is taken from the source table. Data/Original_Study_Data/forelimb/forelimb_9groups_parameters.json |
+
+</details>
+
+<details>
+<summary>FR_ElbowExtensor · max_fiber_speed_optimal_lengths_per_s</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FR_ElbowExtensor |
+| Parameter | max_fiber_speed_optimal_lengths_per_s |
+| Unit | 1/s |
+| Meaning | Positive maximum-shortening speed magnitude, measured in optimal fiber lengths per second. |
+| Source value | 8.675125 |
+| Value used in this model | 8.1840802 |
+| What changed and why | Different from the verified source value. Change relative to source: -5.66%. Fiber length and shortening speed were calibrated to set the force-length and force-velocity operating ranges. Physical maximum fiber speed is optimal_fiber_length_m multiplied by max_fiber_speed_optimal_lengths_per_s. The source and applied numbers are given in this row; these are not new tissue measurements. |
+| Source / evidence | Author’s nine-group forelimb parameter table. In Results_Function.m, tendon-projected force F0 = 2.3 × 9.806 × PCSA × cos(PA), with PCSA in cm², PA the pennation angle and F0 in N. Tendon slack length is taken from the source table. Data/Original_Study_Data/forelimb/forelimb_9groups_parameters.json |
+
+</details>
+
+<details>
+<summary>FR_ElbowExtensor · normalized_fiber_damping</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FR_ElbowExtensor |
+| Parameter | normalized_fiber_damping |
+| Unit | 1 |
+| Meaning | Coefficient of normalized fiber velocity in the normalized tendon-direction force balance. |
+| Source value | Not established |
+| Value used in this model | 0.0050423367 |
+| What changed and why | No verified source value is available for direct comparison. Effective muscle force-balance coefficient; source-law conversion and calibration are described in the methods. |
+| Source / evidence | Author’s nine-group forelimb parameter table. In Results_Function.m, tendon-projected force F0 = 2.3 × 9.806 × PCSA × cos(PA), with PCSA in cm², PA the pennation angle and F0 in N. Tendon slack length is taken from the source table. Data/Original_Study_Data/forelimb/forelimb_9groups_parameters.json |
+
+</details>
+
+<details>
+<summary>FR_ElbowExtensor · MT_path_length_offset_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FR_ElbowExtensor |
+| Parameter | MT_path_length_offset_m |
+| Unit | m |
+| Meaning | Constant offset added to the routed path to define muscle-tendon length. |
+| Source value | Not established |
+| Value used in this model | 0 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Author’s nine-group forelimb parameter table. In Results_Function.m, tendon-projected force F0 = 2.3 × 9.806 × PCSA × cos(PA), with PCSA in cm², PA the pennation angle and F0 in N. Tendon slack length is taken from the source table. Data/Original_Study_Data/forelimb/forelimb_9groups_parameters.json |
+
+</details>
+
+<details>
+<summary>FR_ElbowExtensor · active_force_length_exponent</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FR_ElbowExtensor |
+| Parameter | active_force_length_exponent |
+| Unit | 1 |
+| Meaning | Exponent rho in the source active force-length curve. |
+| Source value | Not established |
+| Value used in this model | 3 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Author’s nine-group forelimb parameter table. In Results_Function.m, tendon-projected force F0 = 2.3 × 9.806 × PCSA × cos(PA), with PCSA in cm², PA the pennation angle and F0 in N. Tendon slack length is taken from the source table. Data/Original_Study_Data/forelimb/forelimb_9groups_parameters.json |
+
+</details>
+
+<details>
+<summary>FR_ElbowExtensor · source_shortening_curvature</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FR_ElbowExtensor |
+| Parameter | source_shortening_curvature |
+| Unit | 1 |
+| Meaning | Source shortening-curve coefficient; inactive when De Groote force-velocity mode is selected. |
+| Source value | Not established |
+| Value used in this model | 0.5008675 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Author’s nine-group forelimb parameter table. In Results_Function.m, tendon-projected force F0 = 2.3 × 9.806 × PCSA × cos(PA), with PCSA in cm², PA the pennation angle and F0 in N. Tendon slack length is taken from the source table. Data/Original_Study_Data/forelimb/forelimb_9groups_parameters.json |
+
+</details>
+
+<details>
+<summary>FR_ElbowExtensor · source_lengthening_curvature</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FR_ElbowExtensor |
+| Parameter | source_lengthening_curvature |
+| Unit | 1 |
+| Meaning | Source lengthening-curve coefficient; inactive when De Groote force-velocity mode is selected. |
+| Source value | Not established |
+| Value used in this model | 0.012498821 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Author’s nine-group forelimb parameter table. In Results_Function.m, tendon-projected force F0 = 2.3 × 9.806 × PCSA × cos(PA), with PCSA in cm², PA the pennation angle and F0 in N. Tendon slack length is taken from the source table. Data/Original_Study_Data/forelimb/forelimb_9groups_parameters.json |
+
+</details>
+
+<details>
+<summary>FR_ElbowExtensor · passive_fiber_enabled</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FR_ElbowExtensor |
+| Parameter | passive_fiber_enabled |
+| Unit | 0/1 |
+| Meaning | 1 enables passive fiber tension within the elastic equilibrium; zero force below l_f/l_opt=1 does not mean it is disabled. |
+| Source value | Not established |
+| Value used in this model | 1 |
+| What changed and why | No verified source value is available for direct comparison. The published passive force-length law is included in every muscle channel. Its coefficients are from Prilutsky et al. (2016), Table 10.3, and Rahmati et al. (2025), Table 3. Applying the same normalized law to added muscle channels is a modeling assumption. |
+| Source / evidence | Published parallel elastic architecture: Prilutsky et al. 2016 Table 10.3 (10.1007/978-1-4939-3267-2_10); Rahmati et al. 2025 Table 3 (10.1113/JP287448). Common normalized curve extended to all model channels; no muscle-specific passive calibration is claimed. |
+
+</details>
+
+<details>
+<summary>FR_ElbowExtensor · degroote_force_velocity_enabled</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FR_ElbowExtensor |
+| Parameter | degroote_force_velocity_enabled |
+| Unit | 0/1 |
+| Meaning | 1 uses the documented De Groote/OpenSim velocity curve; 0 uses the source curve. |
+| Source value | Not established |
+| Value used in this model | 1 |
+| What changed and why | No verified source value is available for direct comparison. Model-law choice: 1 enables the smooth De Groote force-velocity relation; 0 selects the alternative implemented law. |
+| Source / evidence | Author’s nine-group forelimb parameter table. In Results_Function.m, tendon-projected force F0 = 2.3 × 9.806 × PCSA × cos(PA), with PCSA in cm², PA the pennation angle and F0 in N. Tendon slack length is taken from the source table. Data/Original_Study_Data/forelimb/forelimb_9groups_parameters.json |
+
+</details>
+
+<details>
+<summary>FR_BicepsBrachii · max_isometric_tendon_force_N</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FR_BicepsBrachii |
+| Parameter | max_isometric_tendon_force_N |
+| Unit | N |
+| Meaning | Maximum isometric force projected along the tendon; do not multiply by pennation cosine twice. |
+| Source value | 50.419327 |
+| Value used in this model | 56.958168 |
+| What changed and why | Different from the verified source value. Change relative to source: +13%. Force capacity was calibrated with motor inputs to improve mechanical agreement; the fit does not uniquely identify it. |
+| Source / evidence | Author’s nine-group forelimb parameter table. In Results_Function.m, tendon-projected force F0 = 2.3 × 9.806 × PCSA × cos(PA), with PCSA in cm², PA the pennation angle and F0 in N. Tendon slack length is taken from the source table. Data/Original_Study_Data/forelimb/forelimb_9groups_parameters.json |
+
+</details>
+
+<details>
+<summary>FR_BicepsBrachii · optimal_fiber_length_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FR_BicepsBrachii |
+| Parameter | optimal_fiber_length_m |
+| Unit | m |
+| Meaning | Optimal fascicle/fiber length, not whole muscle-tendon length. |
+| Source value | 0.025089143 |
+| Value used in this model | 0.026594491 |
+| What changed and why | Different from the verified source value. Change relative to source: +6%. Fiber length and shortening speed were calibrated to set the force-length and force-velocity operating ranges. Physical maximum fiber speed is optimal_fiber_length_m multiplied by max_fiber_speed_optimal_lengths_per_s. The source and applied numbers are given in this row; these are not new tissue measurements. |
+| Source / evidence | Author’s nine-group forelimb parameter table. In Results_Function.m, tendon-projected force F0 = 2.3 × 9.806 × PCSA × cos(PA), with PCSA in cm², PA the pennation angle and F0 in N. Tendon slack length is taken from the source table. Data/Original_Study_Data/forelimb/forelimb_9groups_parameters.json |
+
+</details>
+
+<details>
+<summary>FR_BicepsBrachii · tendon_slack_length_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FR_BicepsBrachii |
+| Parameter | tendon_slack_length_m |
+| Unit | m |
+| Meaning | Unloaded series tendon length. |
+| Source value | Not established |
+| Value used in this model | 0.08788348 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Author’s nine-group forelimb parameter table. In Results_Function.m, tendon-projected force F0 = 2.3 × 9.806 × PCSA × cos(PA), with PCSA in cm², PA the pennation angle and F0 in N. Tendon slack length is taken from the source table. Data/Original_Study_Data/forelimb/forelimb_9groups_parameters.json |
+
+</details>
+
+<details>
+<summary>FR_BicepsBrachii · pennation_cosine</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FR_BicepsBrachii |
+| Parameter | pennation_cosine |
+| Unit | 1 |
+| Meaning | Cosine of the constant fiber-to-tendon pennation angle. |
+| Source value | 0.98480775 |
+| Value used in this model | 0.98480775 |
+| What changed and why | Retained the verified source value; no numerical change from that source. |
+| Source / evidence | Author’s nine-group forelimb parameter table. In Results_Function.m, tendon-projected force F0 = 2.3 × 9.806 × PCSA × cos(PA), with PCSA in cm², PA the pennation angle and F0 in N. Tendon slack length is taken from the source table. Data/Original_Study_Data/forelimb/forelimb_9groups_parameters.json |
+
+</details>
+
+<details>
+<summary>FR_BicepsBrachii · tendon_strain_at_max_force</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FR_BicepsBrachii |
+| Parameter | tendon_strain_at_max_force |
+| Unit | 1 |
+| Meaning | Tendon extension/slack length at one maximum isometric tendon force. |
+| Source value | Not established |
+| Value used in this model | 0.04 |
+| What changed and why | No verified source value is available for direct comparison. Assumed elastic-tendon compliance; not a measured tendon strain for this animal. |
+| Source / evidence | Author’s nine-group forelimb parameter table. In Results_Function.m, tendon-projected force F0 = 2.3 × 9.806 × PCSA × cos(PA), with PCSA in cm², PA the pennation angle and F0 in N. Tendon slack length is taken from the source table. Data/Original_Study_Data/forelimb/forelimb_9groups_parameters.json |
+
+</details>
+
+<details>
+<summary>FR_BicepsBrachii · max_fiber_speed_optimal_lengths_per_s</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FR_BicepsBrachii |
+| Parameter | max_fiber_speed_optimal_lengths_per_s |
+| Unit | 1/s |
+| Meaning | Positive maximum-shortening speed magnitude, measured in optimal fiber lengths per second. |
+| Source value | 11.878 |
+| Value used in this model | 11.20566 |
+| What changed and why | Different from the verified source value. Change relative to source: -5.66%. Fiber length and shortening speed were calibrated to set the force-length and force-velocity operating ranges. Physical maximum fiber speed is optimal_fiber_length_m multiplied by max_fiber_speed_optimal_lengths_per_s. The source and applied numbers are given in this row; these are not new tissue measurements. |
+| Source / evidence | Author’s nine-group forelimb parameter table. In Results_Function.m, tendon-projected force F0 = 2.3 × 9.806 × PCSA × cos(PA), with PCSA in cm², PA the pennation angle and F0 in N. Tendon slack length is taken from the source table. Data/Original_Study_Data/forelimb/forelimb_9groups_parameters.json |
+
+</details>
+
+<details>
+<summary>FR_BicepsBrachii · normalized_fiber_damping</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FR_BicepsBrachii |
+| Parameter | normalized_fiber_damping |
+| Unit | 1 |
+| Meaning | Coefficient of normalized fiber velocity in the normalized tendon-direction force balance. |
+| Source value | Not established |
+| Value used in this model | 0.0059601767 |
+| What changed and why | No verified source value is available for direct comparison. Effective muscle force-balance coefficient; source-law conversion and calibration are described in the methods. |
+| Source / evidence | Author’s nine-group forelimb parameter table. In Results_Function.m, tendon-projected force F0 = 2.3 × 9.806 × PCSA × cos(PA), with PCSA in cm², PA the pennation angle and F0 in N. Tendon slack length is taken from the source table. Data/Original_Study_Data/forelimb/forelimb_9groups_parameters.json |
+
+</details>
+
+<details>
+<summary>FR_BicepsBrachii · MT_path_length_offset_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FR_BicepsBrachii |
+| Parameter | MT_path_length_offset_m |
+| Unit | m |
+| Meaning | Constant offset added to the routed path to define muscle-tendon length. |
+| Source value | Not established |
+| Value used in this model | 0 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Author’s nine-group forelimb parameter table. In Results_Function.m, tendon-projected force F0 = 2.3 × 9.806 × PCSA × cos(PA), with PCSA in cm², PA the pennation angle and F0 in N. Tendon slack length is taken from the source table. Data/Original_Study_Data/forelimb/forelimb_9groups_parameters.json |
+
+</details>
+
+<details>
+<summary>FR_BicepsBrachii · active_force_length_exponent</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FR_BicepsBrachii |
+| Parameter | active_force_length_exponent |
+| Unit | 1 |
+| Meaning | Exponent rho in the source active force-length curve. |
+| Source value | Not established |
+| Value used in this model | 3 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Author’s nine-group forelimb parameter table. In Results_Function.m, tendon-projected force F0 = 2.3 × 9.806 × PCSA × cos(PA), with PCSA in cm², PA the pennation angle and F0 in N. Tendon slack length is taken from the source table. Data/Original_Study_Data/forelimb/forelimb_9groups_parameters.json |
+
+</details>
+
+<details>
+<summary>FR_BicepsBrachii · source_shortening_curvature</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FR_BicepsBrachii |
+| Parameter | source_shortening_curvature |
+| Unit | 1 |
+| Meaning | Source shortening-curve coefficient; inactive when De Groote force-velocity mode is selected. |
+| Source value | Not established |
+| Value used in this model | 0.17833 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Author’s nine-group forelimb parameter table. In Results_Function.m, tendon-projected force F0 = 2.3 × 9.806 × PCSA × cos(PA), with PCSA in cm², PA the pennation angle and F0 in N. Tendon slack length is taken from the source table. Data/Original_Study_Data/forelimb/forelimb_9groups_parameters.json |
+
+</details>
+
+<details>
+<summary>FR_BicepsBrachii · source_lengthening_curvature</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FR_BicepsBrachii |
+| Parameter | source_lengthening_curvature |
+| Unit | 1 |
+| Meaning | Source lengthening-curve coefficient; inactive when De Groote force-velocity mode is selected. |
+| Source value | Not established |
+| Value used in this model | 0.078973475 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Author’s nine-group forelimb parameter table. In Results_Function.m, tendon-projected force F0 = 2.3 × 9.806 × PCSA × cos(PA), with PCSA in cm², PA the pennation angle and F0 in N. Tendon slack length is taken from the source table. Data/Original_Study_Data/forelimb/forelimb_9groups_parameters.json |
+
+</details>
+
+<details>
+<summary>FR_BicepsBrachii · passive_fiber_enabled</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FR_BicepsBrachii |
+| Parameter | passive_fiber_enabled |
+| Unit | 0/1 |
+| Meaning | 1 enables passive fiber tension within the elastic equilibrium; zero force below l_f/l_opt=1 does not mean it is disabled. |
+| Source value | Not established |
+| Value used in this model | 1 |
+| What changed and why | No verified source value is available for direct comparison. The published passive force-length law is included in every muscle channel. Its coefficients are from Prilutsky et al. (2016), Table 10.3, and Rahmati et al. (2025), Table 3. Applying the same normalized law to added muscle channels is a modeling assumption. |
+| Source / evidence | Published parallel elastic architecture: Prilutsky et al. 2016 Table 10.3 (10.1007/978-1-4939-3267-2_10); Rahmati et al. 2025 Table 3 (10.1113/JP287448). Common normalized curve extended to all model channels; no muscle-specific passive calibration is claimed. |
+
+</details>
+
+<details>
+<summary>FR_BicepsBrachii · degroote_force_velocity_enabled</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FR_BicepsBrachii |
+| Parameter | degroote_force_velocity_enabled |
+| Unit | 0/1 |
+| Meaning | 1 uses the documented De Groote/OpenSim velocity curve; 0 uses the source curve. |
+| Source value | Not established |
+| Value used in this model | 1 |
+| What changed and why | No verified source value is available for direct comparison. Model-law choice: 1 enables the smooth De Groote force-velocity relation; 0 selects the alternative implemented law. |
+| Source / evidence | Author’s nine-group forelimb parameter table. In Results_Function.m, tendon-projected force F0 = 2.3 × 9.806 × PCSA × cos(PA), with PCSA in cm², PA the pennation angle and F0 in N. Tendon slack length is taken from the source table. Data/Original_Study_Data/forelimb/forelimb_9groups_parameters.json |
+
+</details>
+
+<details>
+<summary>FR_ElbowFlexor · max_isometric_tendon_force_N</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FR_ElbowFlexor |
+| Parameter | max_isometric_tendon_force_N |
+| Unit | N |
+| Meaning | Maximum isometric force projected along the tendon; do not multiply by pennation cosine twice. |
+| Source value | 55.534105 |
+| Value used in this model | 61.029495 |
+| What changed and why | Different from the verified source value. Change relative to source: +9.9%. Force capacity was calibrated with motor inputs to improve mechanical agreement; the fit does not uniquely identify it. |
+| Source / evidence | Author’s nine-group forelimb parameter table. In Results_Function.m, tendon-projected force F0 = 2.3 × 9.806 × PCSA × cos(PA), with PCSA in cm², PA the pennation angle and F0 in N. Tendon slack length is taken from the source table. Data/Original_Study_Data/forelimb/forelimb_9groups_parameters.json |
+
+</details>
+
+<details>
+<summary>FR_ElbowFlexor · optimal_fiber_length_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FR_ElbowFlexor |
+| Parameter | optimal_fiber_length_m |
+| Unit | m |
+| Meaning | Optimal fascicle/fiber length, not whole muscle-tendon length. |
+| Source value | 0.04448412 |
+| Value used in this model | 0.047153167 |
+| What changed and why | Different from the verified source value. Change relative to source: +6%. Fiber length and shortening speed were calibrated to set the force-length and force-velocity operating ranges. Physical maximum fiber speed is optimal_fiber_length_m multiplied by max_fiber_speed_optimal_lengths_per_s. The source and applied numbers are given in this row; these are not new tissue measurements. |
+| Source / evidence | Author’s nine-group forelimb parameter table. In Results_Function.m, tendon-projected force F0 = 2.3 × 9.806 × PCSA × cos(PA), with PCSA in cm², PA the pennation angle and F0 in N. Tendon slack length is taken from the source table. Data/Original_Study_Data/forelimb/forelimb_9groups_parameters.json |
+
+</details>
+
+<details>
+<summary>FR_ElbowFlexor · tendon_slack_length_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FR_ElbowFlexor |
+| Parameter | tendon_slack_length_m |
+| Unit | m |
+| Meaning | Unloaded series tendon length. |
+| Source value | Not established |
+| Value used in this model | 0.026006177 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Author’s nine-group forelimb parameter table. In Results_Function.m, tendon-projected force F0 = 2.3 × 9.806 × PCSA × cos(PA), with PCSA in cm², PA the pennation angle and F0 in N. Tendon slack length is taken from the source table. Data/Original_Study_Data/forelimb/forelimb_9groups_parameters.json |
+
+</details>
+
+<details>
+<summary>FR_ElbowFlexor · pennation_cosine</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FR_ElbowFlexor |
+| Parameter | pennation_cosine |
+| Unit | 1 |
+| Meaning | Cosine of the constant fiber-to-tendon pennation angle. |
+| Source value | 0.98360646 |
+| Value used in this model | 0.98360646 |
+| What changed and why | Retained the verified source value; no numerical change from that source. |
+| Source / evidence | Author’s nine-group forelimb parameter table. In Results_Function.m, tendon-projected force F0 = 2.3 × 9.806 × PCSA × cos(PA), with PCSA in cm², PA the pennation angle and F0 in N. Tendon slack length is taken from the source table. Data/Original_Study_Data/forelimb/forelimb_9groups_parameters.json |
+
+</details>
+
+<details>
+<summary>FR_ElbowFlexor · tendon_strain_at_max_force</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FR_ElbowFlexor |
+| Parameter | tendon_strain_at_max_force |
+| Unit | 1 |
+| Meaning | Tendon extension/slack length at one maximum isometric tendon force. |
+| Source value | Not established |
+| Value used in this model | 0.04 |
+| What changed and why | No verified source value is available for direct comparison. Assumed elastic-tendon compliance; not a measured tendon strain for this animal. |
+| Source / evidence | Author’s nine-group forelimb parameter table. In Results_Function.m, tendon-projected force F0 = 2.3 × 9.806 × PCSA × cos(PA), with PCSA in cm², PA the pennation angle and F0 in N. Tendon slack length is taken from the source table. Data/Original_Study_Data/forelimb/forelimb_9groups_parameters.json |
+
+</details>
+
+<details>
+<summary>FR_ElbowFlexor · max_fiber_speed_optimal_lengths_per_s</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FR_ElbowFlexor |
+| Parameter | max_fiber_speed_optimal_lengths_per_s |
+| Unit | 1/s |
+| Meaning | Positive maximum-shortening speed magnitude, measured in optimal fiber lengths per second. |
+| Source value | 12.159742 |
+| Value used in this model | 11.471455 |
+| What changed and why | Different from the verified source value. Change relative to source: -5.66%. Fiber length and shortening speed were calibrated to set the force-length and force-velocity operating ranges. Physical maximum fiber speed is optimal_fiber_length_m multiplied by max_fiber_speed_optimal_lengths_per_s. The source and applied numbers are given in this row; these are not new tissue measurements. |
+| Source / evidence | Author’s nine-group forelimb parameter table. In Results_Function.m, tendon-projected force F0 = 2.3 × 9.806 × PCSA × cos(PA), with PCSA in cm², PA the pennation angle and F0 in N. Tendon slack length is taken from the source table. Data/Original_Study_Data/forelimb/forelimb_9groups_parameters.json |
+
+</details>
+
+<details>
+<summary>FR_ElbowFlexor · normalized_fiber_damping</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FR_ElbowFlexor |
+| Parameter | normalized_fiber_damping |
+| Unit | 1 |
+| Meaning | Coefficient of normalized fiber velocity in the normalized tendon-direction force balance. |
+| Source value | Not established |
+| Value used in this model | 0.010818309 |
+| What changed and why | No verified source value is available for direct comparison. Effective muscle force-balance coefficient; source-law conversion and calibration are described in the methods. |
+| Source / evidence | Author’s nine-group forelimb parameter table. In Results_Function.m, tendon-projected force F0 = 2.3 × 9.806 × PCSA × cos(PA), with PCSA in cm², PA the pennation angle and F0 in N. Tendon slack length is taken from the source table. Data/Original_Study_Data/forelimb/forelimb_9groups_parameters.json |
+
+</details>
+
+<details>
+<summary>FR_ElbowFlexor · MT_path_length_offset_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FR_ElbowFlexor |
+| Parameter | MT_path_length_offset_m |
+| Unit | m |
+| Meaning | Constant offset added to the routed path to define muscle-tendon length. |
+| Source value | Not established |
+| Value used in this model | 0 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Author’s nine-group forelimb parameter table. In Results_Function.m, tendon-projected force F0 = 2.3 × 9.806 × PCSA × cos(PA), with PCSA in cm², PA the pennation angle and F0 in N. Tendon slack length is taken from the source table. Data/Original_Study_Data/forelimb/forelimb_9groups_parameters.json |
+
+</details>
+
+<details>
+<summary>FR_ElbowFlexor · active_force_length_exponent</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FR_ElbowFlexor |
+| Parameter | active_force_length_exponent |
+| Unit | 1 |
+| Meaning | Exponent rho in the source active force-length curve. |
+| Source value | Not established |
+| Value used in this model | 6 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Author’s nine-group forelimb parameter table. In Results_Function.m, tendon-projected force F0 = 2.3 × 9.806 × PCSA × cos(PA), with PCSA in cm², PA the pennation angle and F0 in N. Tendon slack length is taken from the source table. Data/Original_Study_Data/forelimb/forelimb_9groups_parameters.json |
+
+</details>
+
+<details>
+<summary>FR_ElbowFlexor · source_shortening_curvature</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FR_ElbowFlexor |
+| Parameter | source_shortening_curvature |
+| Unit | 1 |
+| Meaning | Source shortening-curve coefficient; inactive when De Groote force-velocity mode is selected. |
+| Source value | Not established |
+| Value used in this model | 0.146305 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Author’s nine-group forelimb parameter table. In Results_Function.m, tendon-projected force F0 = 2.3 × 9.806 × PCSA × cos(PA), with PCSA in cm², PA the pennation angle and F0 in N. Tendon slack length is taken from the source table. Data/Original_Study_Data/forelimb/forelimb_9groups_parameters.json |
+
+</details>
+
+<details>
+<summary>FR_ElbowFlexor · source_lengthening_curvature</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FR_ElbowFlexor |
+| Parameter | source_lengthening_curvature |
+| Unit | 1 |
+| Meaning | Source lengthening-curve coefficient; inactive when De Groote force-velocity mode is selected. |
+| Source value | Not established |
+| Value used in this model | 0.086389978 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Author’s nine-group forelimb parameter table. In Results_Function.m, tendon-projected force F0 = 2.3 × 9.806 × PCSA × cos(PA), with PCSA in cm², PA the pennation angle and F0 in N. Tendon slack length is taken from the source table. Data/Original_Study_Data/forelimb/forelimb_9groups_parameters.json |
+
+</details>
+
+<details>
+<summary>FR_ElbowFlexor · passive_fiber_enabled</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FR_ElbowFlexor |
+| Parameter | passive_fiber_enabled |
+| Unit | 0/1 |
+| Meaning | 1 enables passive fiber tension within the elastic equilibrium; zero force below l_f/l_opt=1 does not mean it is disabled. |
+| Source value | Not established |
+| Value used in this model | 1 |
+| What changed and why | No verified source value is available for direct comparison. The published passive force-length law is included in every muscle channel. Its coefficients are from Prilutsky et al. (2016), Table 10.3, and Rahmati et al. (2025), Table 3. Applying the same normalized law to added muscle channels is a modeling assumption. |
+| Source / evidence | Published parallel elastic architecture: Prilutsky et al. 2016 Table 10.3 (10.1007/978-1-4939-3267-2_10); Rahmati et al. 2025 Table 3 (10.1113/JP287448). Common normalized curve extended to all model channels; no muscle-specific passive calibration is claimed. |
+
+</details>
+
+<details>
+<summary>FR_ElbowFlexor · degroote_force_velocity_enabled</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FR_ElbowFlexor |
+| Parameter | degroote_force_velocity_enabled |
+| Unit | 0/1 |
+| Meaning | 1 uses the documented De Groote/OpenSim velocity curve; 0 uses the source curve. |
+| Source value | Not established |
+| Value used in this model | 1 |
+| What changed and why | No verified source value is available for direct comparison. Model-law choice: 1 enables the smooth De Groote force-velocity relation; 0 selects the alternative implemented law. |
+| Source / evidence | Author’s nine-group forelimb parameter table. In Results_Function.m, tendon-projected force F0 = 2.3 × 9.806 × PCSA × cos(PA), with PCSA in cm², PA the pennation angle and F0 in N. Tendon slack length is taken from the source table. Data/Original_Study_Data/forelimb/forelimb_9groups_parameters.json |
+
+</details>
+
+<details>
+<summary>FR_ElbowFlexorWristFlexor · max_isometric_tendon_force_N</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FR_ElbowFlexorWristFlexor |
+| Parameter | max_isometric_tendon_force_N |
+| Unit | N |
+| Meaning | Maximum isometric force projected along the tendon; do not multiply by pennation cosine twice. |
+| Source value | 97.321038 |
+| Value used in this model | 21.357654 |
+| What changed and why | Different from the verified source value. Change relative to source: -78.1%. Force capacity was calibrated with motor inputs to improve mechanical agreement; the fit does not uniquely identify it. |
+| Source / evidence | Author’s nine-group forelimb parameter table. In Results_Function.m, tendon-projected force F0 = 2.3 × 9.806 × PCSA × cos(PA), with PCSA in cm², PA the pennation angle and F0 in N. Tendon slack length is taken from the source table. Data/Original_Study_Data/forelimb/forelimb_9groups_parameters.json |
+
+</details>
+
+<details>
+<summary>FR_ElbowFlexorWristFlexor · optimal_fiber_length_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FR_ElbowFlexorWristFlexor |
+| Parameter | optimal_fiber_length_m |
+| Unit | m |
+| Meaning | Optimal fascicle/fiber length, not whole muscle-tendon length. |
+| Source value | 0.027434457 |
+| Value used in this model | 0.029080524 |
+| What changed and why | Different from the verified source value. Change relative to source: +6%. Fiber length and shortening speed were calibrated to set the force-length and force-velocity operating ranges. Physical maximum fiber speed is optimal_fiber_length_m multiplied by max_fiber_speed_optimal_lengths_per_s. The source and applied numbers are given in this row; these are not new tissue measurements. |
+| Source / evidence | Author’s nine-group forelimb parameter table. In Results_Function.m, tendon-projected force F0 = 2.3 × 9.806 × PCSA × cos(PA), with PCSA in cm², PA the pennation angle and F0 in N. Tendon slack length is taken from the source table. Data/Original_Study_Data/forelimb/forelimb_9groups_parameters.json |
+
+</details>
+
+<details>
+<summary>FR_ElbowFlexorWristFlexor · tendon_slack_length_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FR_ElbowFlexorWristFlexor |
+| Parameter | tendon_slack_length_m |
+| Unit | m |
+| Meaning | Unloaded series tendon length. |
+| Source value | Not established |
+| Value used in this model | 0.11113157 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Author’s nine-group forelimb parameter table. In Results_Function.m, tendon-projected force F0 = 2.3 × 9.806 × PCSA × cos(PA), with PCSA in cm², PA the pennation angle and F0 in N. Tendon slack length is taken from the source table. Data/Original_Study_Data/forelimb/forelimb_9groups_parameters.json |
+
+</details>
+
+<details>
+<summary>FR_ElbowFlexorWristFlexor · pennation_cosine</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FR_ElbowFlexorWristFlexor |
+| Parameter | pennation_cosine |
+| Unit | 1 |
+| Meaning | Cosine of the constant fiber-to-tendon pennation angle. |
+| Source value | 0.9919682 |
+| Value used in this model | 0.9919682 |
+| What changed and why | Retained the verified source value; no numerical change from that source. |
+| Source / evidence | Author’s nine-group forelimb parameter table. In Results_Function.m, tendon-projected force F0 = 2.3 × 9.806 × PCSA × cos(PA), with PCSA in cm², PA the pennation angle and F0 in N. Tendon slack length is taken from the source table. Data/Original_Study_Data/forelimb/forelimb_9groups_parameters.json |
+
+</details>
+
+<details>
+<summary>FR_ElbowFlexorWristFlexor · tendon_strain_at_max_force</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FR_ElbowFlexorWristFlexor |
+| Parameter | tendon_strain_at_max_force |
+| Unit | 1 |
+| Meaning | Tendon extension/slack length at one maximum isometric tendon force. |
+| Source value | Not established |
+| Value used in this model | 0.04 |
+| What changed and why | No verified source value is available for direct comparison. Assumed elastic-tendon compliance; not a measured tendon strain for this animal. |
+| Source / evidence | Author’s nine-group forelimb parameter table. In Results_Function.m, tendon-projected force F0 = 2.3 × 9.806 × PCSA × cos(PA), with PCSA in cm², PA the pennation angle and F0 in N. Tendon slack length is taken from the source table. Data/Original_Study_Data/forelimb/forelimb_9groups_parameters.json |
+
+</details>
+
+<details>
+<summary>FR_ElbowFlexorWristFlexor · max_fiber_speed_optimal_lengths_per_s</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FR_ElbowFlexorWristFlexor |
+| Parameter | max_fiber_speed_optimal_lengths_per_s |
+| Unit | 1/s |
+| Meaning | Positive maximum-shortening speed magnitude, measured in optimal fiber lengths per second. |
+| Source value | 13.256289 |
+| Value used in this model | 12.505933 |
+| What changed and why | Different from the verified source value. Change relative to source: -5.66%. Fiber length and shortening speed were calibrated to set the force-length and force-velocity operating ranges. Physical maximum fiber speed is optimal_fiber_length_m multiplied by max_fiber_speed_optimal_lengths_per_s. The source and applied numbers are given in this row; these are not new tissue measurements. |
+| Source / evidence | Author’s nine-group forelimb parameter table. In Results_Function.m, tendon-projected force F0 = 2.3 × 9.806 × PCSA × cos(PA), with PCSA in cm², PA the pennation angle and F0 in N. Tendon slack length is taken from the source table. Data/Original_Study_Data/forelimb/forelimb_9groups_parameters.json |
+
+</details>
+
+<details>
+<summary>FR_ElbowFlexorWristFlexor · normalized_fiber_damping</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FR_ElbowFlexorWristFlexor |
+| Parameter | normalized_fiber_damping |
+| Unit | 1 |
+| Meaning | Coefficient of normalized fiber velocity in the normalized tendon-direction force balance. |
+| Source value | Not established |
+| Value used in this model | 0.0072735816 |
+| What changed and why | No verified source value is available for direct comparison. Effective muscle force-balance coefficient; source-law conversion and calibration are described in the methods. |
+| Source / evidence | Author’s nine-group forelimb parameter table. In Results_Function.m, tendon-projected force F0 = 2.3 × 9.806 × PCSA × cos(PA), with PCSA in cm², PA the pennation angle and F0 in N. Tendon slack length is taken from the source table. Data/Original_Study_Data/forelimb/forelimb_9groups_parameters.json |
+
+</details>
+
+<details>
+<summary>FR_ElbowFlexorWristFlexor · MT_path_length_offset_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FR_ElbowFlexorWristFlexor |
+| Parameter | MT_path_length_offset_m |
+| Unit | m |
+| Meaning | Constant offset added to the routed path to define muscle-tendon length. |
+| Source value | Not established |
+| Value used in this model | 0 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Author’s nine-group forelimb parameter table. In Results_Function.m, tendon-projected force F0 = 2.3 × 9.806 × PCSA × cos(PA), with PCSA in cm², PA the pennation angle and F0 in N. Tendon slack length is taken from the source table. Data/Original_Study_Data/forelimb/forelimb_9groups_parameters.json |
+
+</details>
+
+<details>
+<summary>FR_ElbowFlexorWristFlexor · active_force_length_exponent</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FR_ElbowFlexorWristFlexor |
+| Parameter | active_force_length_exponent |
+| Unit | 1 |
+| Meaning | Exponent rho in the source active force-length curve. |
+| Source value | Not established |
+| Value used in this model | 3 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Author’s nine-group forelimb parameter table. In Results_Function.m, tendon-projected force F0 = 2.3 × 9.806 × PCSA × cos(PA), with PCSA in cm², PA the pennation angle and F0 in N. Tendon slack length is taken from the source table. Data/Original_Study_Data/forelimb/forelimb_9groups_parameters.json |
+
+</details>
+
+<details>
+<summary>FR_ElbowFlexorWristFlexor · source_shortening_curvature</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FR_ElbowFlexorWristFlexor |
+| Parameter | source_shortening_curvature |
+| Unit | 1 |
+| Meaning | Source shortening-curve coefficient; inactive when De Groote force-velocity mode is selected. |
+| Source value | Not established |
+| Value used in this model | 0.03193 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Author’s nine-group forelimb parameter table. In Results_Function.m, tendon-projected force F0 = 2.3 × 9.806 × PCSA × cos(PA), with PCSA in cm², PA the pennation angle and F0 in N. Tendon slack length is taken from the source table. Data/Original_Study_Data/forelimb/forelimb_9groups_parameters.json |
+
+</details>
+
+<details>
+<summary>FR_ElbowFlexorWristFlexor · source_lengthening_curvature</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FR_ElbowFlexorWristFlexor |
+| Parameter | source_lengthening_curvature |
+| Unit | 1 |
+| Meaning | Source lengthening-curve coefficient; inactive when De Groote force-velocity mode is selected. |
+| Source value | Not established |
+| Value used in this model | 0.19358173 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Author’s nine-group forelimb parameter table. In Results_Function.m, tendon-projected force F0 = 2.3 × 9.806 × PCSA × cos(PA), with PCSA in cm², PA the pennation angle and F0 in N. Tendon slack length is taken from the source table. Data/Original_Study_Data/forelimb/forelimb_9groups_parameters.json |
+
+</details>
+
+<details>
+<summary>FR_ElbowFlexorWristFlexor · passive_fiber_enabled</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FR_ElbowFlexorWristFlexor |
+| Parameter | passive_fiber_enabled |
+| Unit | 0/1 |
+| Meaning | 1 enables passive fiber tension within the elastic equilibrium; zero force below l_f/l_opt=1 does not mean it is disabled. |
+| Source value | Not established |
+| Value used in this model | 1 |
+| What changed and why | No verified source value is available for direct comparison. The published passive force-length law is included in every muscle channel. Its coefficients are from Prilutsky et al. (2016), Table 10.3, and Rahmati et al. (2025), Table 3. Applying the same normalized law to added muscle channels is a modeling assumption. |
+| Source / evidence | Published parallel elastic architecture: Prilutsky et al. 2016 Table 10.3 (10.1007/978-1-4939-3267-2_10); Rahmati et al. 2025 Table 3 (10.1113/JP287448). Common normalized curve extended to all model channels; no muscle-specific passive calibration is claimed. |
+
+</details>
+
+<details>
+<summary>FR_ElbowFlexorWristFlexor · degroote_force_velocity_enabled</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FR_ElbowFlexorWristFlexor |
+| Parameter | degroote_force_velocity_enabled |
+| Unit | 0/1 |
+| Meaning | 1 uses the documented De Groote/OpenSim velocity curve; 0 uses the source curve. |
+| Source value | Not established |
+| Value used in this model | 1 |
+| What changed and why | No verified source value is available for direct comparison. Model-law choice: 1 enables the smooth De Groote force-velocity relation; 0 selects the alternative implemented law. |
+| Source / evidence | Author’s nine-group forelimb parameter table. In Results_Function.m, tendon-projected force F0 = 2.3 × 9.806 × PCSA × cos(PA), with PCSA in cm², PA the pennation angle and F0 in N. Tendon slack length is taken from the source table. Data/Original_Study_Data/forelimb/forelimb_9groups_parameters.json |
+
+</details>
+
+<details>
+<summary>FR_WristFlexor · max_isometric_tendon_force_N</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FR_WristFlexor |
+| Parameter | max_isometric_tendon_force_N |
+| Unit | N |
+| Meaning | Maximum isometric force projected along the tendon; do not multiply by pennation cosine twice. |
+| Source value | 11.388898 |
+| Value used in this model | 11.387723 |
+| What changed and why | Different from the verified source value. Change relative to source: -0.0103%. Force capacity was calibrated with motor inputs to improve mechanical agreement; the fit does not uniquely identify it. |
+| Source / evidence | Author’s nine-group forelimb parameter table. In Results_Function.m, tendon-projected force F0 = 2.3 × 9.806 × PCSA × cos(PA), with PCSA in cm², PA the pennation angle and F0 in N. Tendon slack length is taken from the source table. Data/Original_Study_Data/forelimb/forelimb_9groups_parameters.json |
+
+</details>
+
+<details>
+<summary>FR_WristFlexor · optimal_fiber_length_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FR_WristFlexor |
+| Parameter | optimal_fiber_length_m |
+| Unit | m |
+| Meaning | Optimal fascicle/fiber length, not whole muscle-tendon length. |
+| Source value | 0.02098791 |
+| Value used in this model | 0.022247185 |
+| What changed and why | Different from the verified source value. Change relative to source: +6%. Fiber length and shortening speed were calibrated to set the force-length and force-velocity operating ranges. Physical maximum fiber speed is optimal_fiber_length_m multiplied by max_fiber_speed_optimal_lengths_per_s. The source and applied numbers are given in this row; these are not new tissue measurements. |
+| Source / evidence | Author’s nine-group forelimb parameter table. In Results_Function.m, tendon-projected force F0 = 2.3 × 9.806 × PCSA × cos(PA), with PCSA in cm², PA the pennation angle and F0 in N. Tendon slack length is taken from the source table. Data/Original_Study_Data/forelimb/forelimb_9groups_parameters.json |
+
+</details>
+
+<details>
+<summary>FR_WristFlexor · tendon_slack_length_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FR_WristFlexor |
+| Parameter | tendon_slack_length_m |
+| Unit | m |
+| Meaning | Unloaded series tendon length. |
+| Source value | Not established |
+| Value used in this model | 0.086397541 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Author’s nine-group forelimb parameter table. In Results_Function.m, tendon-projected force F0 = 2.3 × 9.806 × PCSA × cos(PA), with PCSA in cm², PA the pennation angle and F0 in N. Tendon slack length is taken from the source table. Data/Original_Study_Data/forelimb/forelimb_9groups_parameters.json |
+
+</details>
+
+<details>
+<summary>FR_WristFlexor · pennation_cosine</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FR_WristFlexor |
+| Parameter | pennation_cosine |
+| Unit | 1 |
+| Meaning | Cosine of the constant fiber-to-tendon pennation angle. |
+| Source value | 0.99993231 |
+| Value used in this model | 0.99993231 |
+| What changed and why | Retained the verified source value; no numerical change from that source. |
+| Source / evidence | Author’s nine-group forelimb parameter table. In Results_Function.m, tendon-projected force F0 = 2.3 × 9.806 × PCSA × cos(PA), with PCSA in cm², PA the pennation angle and F0 in N. Tendon slack length is taken from the source table. Data/Original_Study_Data/forelimb/forelimb_9groups_parameters.json |
+
+</details>
+
+<details>
+<summary>FR_WristFlexor · tendon_strain_at_max_force</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FR_WristFlexor |
+| Parameter | tendon_strain_at_max_force |
+| Unit | 1 |
+| Meaning | Tendon extension/slack length at one maximum isometric tendon force. |
+| Source value | Not established |
+| Value used in this model | 0.04 |
+| What changed and why | No verified source value is available for direct comparison. Assumed elastic-tendon compliance; not a measured tendon strain for this animal. |
+| Source / evidence | Author’s nine-group forelimb parameter table. In Results_Function.m, tendon-projected force F0 = 2.3 × 9.806 × PCSA × cos(PA), with PCSA in cm², PA the pennation angle and F0 in N. Tendon slack length is taken from the source table. Data/Original_Study_Data/forelimb/forelimb_9groups_parameters.json |
+
+</details>
+
+<details>
+<summary>FR_WristFlexor · max_fiber_speed_optimal_lengths_per_s</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FR_WristFlexor |
+| Parameter | max_fiber_speed_optimal_lengths_per_s |
+| Unit | 1/s |
+| Meaning | Positive maximum-shortening speed magnitude, measured in optimal fiber lengths per second. |
+| Source value | 13.153 |
+| Value used in this model | 12.408491 |
+| What changed and why | Different from the verified source value. Change relative to source: -5.66%. Fiber length and shortening speed were calibrated to set the force-length and force-velocity operating ranges. Physical maximum fiber speed is optimal_fiber_length_m multiplied by max_fiber_speed_optimal_lengths_per_s. The source and applied numbers are given in this row; these are not new tissue measurements. |
+| Source / evidence | Author’s nine-group forelimb parameter table. In Results_Function.m, tendon-projected force F0 = 2.3 × 9.806 × PCSA × cos(PA), with PCSA in cm², PA the pennation angle and F0 in N. Tendon slack length is taken from the source table. Data/Original_Study_Data/forelimb/forelimb_9groups_parameters.json |
+
+</details>
+
+<details>
+<summary>FR_WristFlexor · normalized_fiber_damping</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FR_WristFlexor |
+| Parameter | normalized_fiber_damping |
+| Unit | 1 |
+| Meaning | Coefficient of normalized fiber velocity in the normalized tendon-direction force balance. |
+| Source value | Not established |
+| Value used in this model | 0.0055210796 |
+| What changed and why | No verified source value is available for direct comparison. Effective muscle force-balance coefficient; source-law conversion and calibration are described in the methods. |
+| Source / evidence | Author’s nine-group forelimb parameter table. In Results_Function.m, tendon-projected force F0 = 2.3 × 9.806 × PCSA × cos(PA), with PCSA in cm², PA the pennation angle and F0 in N. Tendon slack length is taken from the source table. Data/Original_Study_Data/forelimb/forelimb_9groups_parameters.json |
+
+</details>
+
+<details>
+<summary>FR_WristFlexor · MT_path_length_offset_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FR_WristFlexor |
+| Parameter | MT_path_length_offset_m |
+| Unit | m |
+| Meaning | Constant offset added to the routed path to define muscle-tendon length. |
+| Source value | Not established |
+| Value used in this model | 0 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Author’s nine-group forelimb parameter table. In Results_Function.m, tendon-projected force F0 = 2.3 × 9.806 × PCSA × cos(PA), with PCSA in cm², PA the pennation angle and F0 in N. Tendon slack length is taken from the source table. Data/Original_Study_Data/forelimb/forelimb_9groups_parameters.json |
+
+</details>
+
+<details>
+<summary>FR_WristFlexor · active_force_length_exponent</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FR_WristFlexor |
+| Parameter | active_force_length_exponent |
+| Unit | 1 |
+| Meaning | Exponent rho in the source active force-length curve. |
+| Source value | Not established |
+| Value used in this model | 3 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Author’s nine-group forelimb parameter table. In Results_Function.m, tendon-projected force F0 = 2.3 × 9.806 × PCSA × cos(PA), with PCSA in cm², PA the pennation angle and F0 in N. Tendon slack length is taken from the source table. Data/Original_Study_Data/forelimb/forelimb_9groups_parameters.json |
+
+</details>
+
+<details>
+<summary>FR_WristFlexor · source_shortening_curvature</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FR_WristFlexor |
+| Parameter | source_shortening_curvature |
+| Unit | 1 |
+| Meaning | Source shortening-curve coefficient; inactive when De Groote force-velocity mode is selected. |
+| Source value | Not established |
+| Value used in this model | 0.01363 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Author’s nine-group forelimb parameter table. In Results_Function.m, tendon-projected force F0 = 2.3 × 9.806 × PCSA × cos(PA), with PCSA in cm², PA the pennation angle and F0 in N. Tendon slack length is taken from the source table. Data/Original_Study_Data/forelimb/forelimb_9groups_parameters.json |
+
+</details>
+
+<details>
+<summary>FR_WristFlexor · source_lengthening_curvature</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FR_WristFlexor |
+| Parameter | source_lengthening_curvature |
+| Unit | 1 |
+| Meaning | Source lengthening-curve coefficient; inactive when De Groote force-velocity mode is selected. |
+| Source value | Not established |
+| Value used in this model | 0.69249608 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Author’s nine-group forelimb parameter table. In Results_Function.m, tendon-projected force F0 = 2.3 × 9.806 × PCSA × cos(PA), with PCSA in cm², PA the pennation angle and F0 in N. Tendon slack length is taken from the source table. Data/Original_Study_Data/forelimb/forelimb_9groups_parameters.json |
+
+</details>
+
+<details>
+<summary>FR_WristFlexor · passive_fiber_enabled</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FR_WristFlexor |
+| Parameter | passive_fiber_enabled |
+| Unit | 0/1 |
+| Meaning | 1 enables passive fiber tension within the elastic equilibrium; zero force below l_f/l_opt=1 does not mean it is disabled. |
+| Source value | Not established |
+| Value used in this model | 1 |
+| What changed and why | No verified source value is available for direct comparison. The published passive force-length law is included in every muscle channel. Its coefficients are from Prilutsky et al. (2016), Table 10.3, and Rahmati et al. (2025), Table 3. Applying the same normalized law to added muscle channels is a modeling assumption. |
+| Source / evidence | Published parallel elastic architecture: Prilutsky et al. 2016 Table 10.3 (10.1007/978-1-4939-3267-2_10); Rahmati et al. 2025 Table 3 (10.1113/JP287448). Common normalized curve extended to all model channels; no muscle-specific passive calibration is claimed. |
+
+</details>
+
+<details>
+<summary>FR_WristFlexor · degroote_force_velocity_enabled</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FR_WristFlexor |
+| Parameter | degroote_force_velocity_enabled |
+| Unit | 0/1 |
+| Meaning | 1 uses the documented De Groote/OpenSim velocity curve; 0 uses the source curve. |
+| Source value | Not established |
+| Value used in this model | 1 |
+| What changed and why | No verified source value is available for direct comparison. Model-law choice: 1 enables the smooth De Groote force-velocity relation; 0 selects the alternative implemented law. |
+| Source / evidence | Author’s nine-group forelimb parameter table. In Results_Function.m, tendon-projected force F0 = 2.3 × 9.806 × PCSA × cos(PA), with PCSA in cm², PA the pennation angle and F0 in N. Tendon slack length is taken from the source table. Data/Original_Study_Data/forelimb/forelimb_9groups_parameters.json |
+
+</details>
+
+<details>
+<summary>FR_WristExtensor · max_isometric_tendon_force_N</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FR_WristExtensor |
+| Parameter | max_isometric_tendon_force_N |
+| Unit | N |
+| Meaning | Maximum isometric force projected along the tendon; do not multiply by pennation cosine twice. |
+| Source value | 825.3025 |
+| Value used in this model | 93.484274 |
+| What changed and why | Different from the verified source value. Change relative to source: -88.7%. Force capacity was calibrated with motor inputs to improve mechanical agreement; the fit does not uniquely identify it. |
+| Source / evidence | Author’s nine-group forelimb parameter table. In Results_Function.m, tendon-projected force F0 = 2.3 × 9.806 × PCSA × cos(PA), with PCSA in cm², PA the pennation angle and F0 in N. Tendon slack length is taken from the source table. Data/Original_Study_Data/forelimb/forelimb_9groups_parameters.json |
+
+</details>
+
+<details>
+<summary>FR_WristExtensor · optimal_fiber_length_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FR_WristExtensor |
+| Parameter | optimal_fiber_length_m |
+| Unit | m |
+| Meaning | Optimal fascicle/fiber length, not whole muscle-tendon length. |
+| Source value | 0.013195799 |
+| Value used in this model | 0.013987547 |
+| What changed and why | Different from the verified source value. Change relative to source: +6%. Fiber length and shortening speed were calibrated to set the force-length and force-velocity operating ranges. Physical maximum fiber speed is optimal_fiber_length_m multiplied by max_fiber_speed_optimal_lengths_per_s. The source and applied numbers are given in this row; these are not new tissue measurements. |
+| Source / evidence | Author’s nine-group forelimb parameter table. In Results_Function.m, tendon-projected force F0 = 2.3 × 9.806 × PCSA × cos(PA), with PCSA in cm², PA the pennation angle and F0 in N. Tendon slack length is taken from the source table. Data/Original_Study_Data/forelimb/forelimb_9groups_parameters.json |
+
+</details>
+
+<details>
+<summary>FR_WristExtensor · tendon_slack_length_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FR_WristExtensor |
+| Parameter | tendon_slack_length_m |
+| Unit | m |
+| Meaning | Unloaded series tendon length. |
+| Source value | Not established |
+| Value used in this model | 0.10741379 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Author’s nine-group forelimb parameter table. In Results_Function.m, tendon-projected force F0 = 2.3 × 9.806 × PCSA × cos(PA), with PCSA in cm², PA the pennation angle and F0 in N. Tendon slack length is taken from the source table. Data/Original_Study_Data/forelimb/forelimb_9groups_parameters.json |
+
+</details>
+
+<details>
+<summary>FR_WristExtensor · pennation_cosine</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FR_WristExtensor |
+| Parameter | pennation_cosine |
+| Unit | 1 |
+| Meaning | Cosine of the constant fiber-to-tendon pennation angle. |
+| Source value | 0.98985904 |
+| Value used in this model | 0.98985904 |
+| What changed and why | Retained the verified source value; no numerical change from that source. |
+| Source / evidence | Author’s nine-group forelimb parameter table. In Results_Function.m, tendon-projected force F0 = 2.3 × 9.806 × PCSA × cos(PA), with PCSA in cm², PA the pennation angle and F0 in N. Tendon slack length is taken from the source table. Data/Original_Study_Data/forelimb/forelimb_9groups_parameters.json |
+
+</details>
+
+<details>
+<summary>FR_WristExtensor · tendon_strain_at_max_force</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FR_WristExtensor |
+| Parameter | tendon_strain_at_max_force |
+| Unit | 1 |
+| Meaning | Tendon extension/slack length at one maximum isometric tendon force. |
+| Source value | Not established |
+| Value used in this model | 0.04 |
+| What changed and why | No verified source value is available for direct comparison. Assumed elastic-tendon compliance; not a measured tendon strain for this animal. |
+| Source / evidence | Author’s nine-group forelimb parameter table. In Results_Function.m, tendon-projected force F0 = 2.3 × 9.806 × PCSA × cos(PA), with PCSA in cm², PA the pennation angle and F0 in N. Tendon slack length is taken from the source table. Data/Original_Study_Data/forelimb/forelimb_9groups_parameters.json |
+
+</details>
+
+<details>
+<summary>FR_WristExtensor · max_fiber_speed_optimal_lengths_per_s</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FR_WristExtensor |
+| Parameter | max_fiber_speed_optimal_lengths_per_s |
+| Unit | 1/s |
+| Meaning | Positive maximum-shortening speed magnitude, measured in optimal fiber lengths per second. |
+| Source value | 11.741004 |
+| Value used in this model | 11.076419 |
+| What changed and why | Different from the verified source value. Change relative to source: -5.66%. Fiber length and shortening speed were calibrated to set the force-length and force-velocity operating ranges. Physical maximum fiber speed is optimal_fiber_length_m multiplied by max_fiber_speed_optimal_lengths_per_s. The source and applied numbers are given in this row; these are not new tissue measurements. |
+| Source / evidence | Author’s nine-group forelimb parameter table. In Results_Function.m, tendon-projected force F0 = 2.3 × 9.806 × PCSA × cos(PA), with PCSA in cm², PA the pennation angle and F0 in N. Tendon slack length is taken from the source table. Data/Original_Study_Data/forelimb/forelimb_9groups_parameters.json |
+
+</details>
+
+<details>
+<summary>FR_WristExtensor · normalized_fiber_damping</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FR_WristExtensor |
+| Parameter | normalized_fiber_damping |
+| Unit | 1 |
+| Meaning | Coefficient of normalized fiber velocity in the normalized tendon-direction force balance. |
+| Source value | Not established |
+| Value used in this model | 0.0030986385 |
+| What changed and why | No verified source value is available for direct comparison. Effective muscle force-balance coefficient; source-law conversion and calibration are described in the methods. |
+| Source / evidence | Author’s nine-group forelimb parameter table. In Results_Function.m, tendon-projected force F0 = 2.3 × 9.806 × PCSA × cos(PA), with PCSA in cm², PA the pennation angle and F0 in N. Tendon slack length is taken from the source table. Data/Original_Study_Data/forelimb/forelimb_9groups_parameters.json |
+
+</details>
+
+<details>
+<summary>FR_WristExtensor · MT_path_length_offset_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FR_WristExtensor |
+| Parameter | MT_path_length_offset_m |
+| Unit | m |
+| Meaning | Constant offset added to the routed path to define muscle-tendon length. |
+| Source value | Not established |
+| Value used in this model | 0 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Author’s nine-group forelimb parameter table. In Results_Function.m, tendon-projected force F0 = 2.3 × 9.806 × PCSA × cos(PA), with PCSA in cm², PA the pennation angle and F0 in N. Tendon slack length is taken from the source table. Data/Original_Study_Data/forelimb/forelimb_9groups_parameters.json |
+
+</details>
+
+<details>
+<summary>FR_WristExtensor · active_force_length_exponent</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FR_WristExtensor |
+| Parameter | active_force_length_exponent |
+| Unit | 1 |
+| Meaning | Exponent rho in the source active force-length curve. |
+| Source value | Not established |
+| Value used in this model | 3 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Author’s nine-group forelimb parameter table. In Results_Function.m, tendon-projected force F0 = 2.3 × 9.806 × PCSA × cos(PA), with PCSA in cm², PA the pennation angle and F0 in N. Tendon slack length is taken from the source table. Data/Original_Study_Data/forelimb/forelimb_9groups_parameters.json |
+
+</details>
+
+<details>
+<summary>FR_WristExtensor · source_shortening_curvature</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FR_WristExtensor |
+| Parameter | source_shortening_curvature |
+| Unit | 1 |
+| Meaning | Source shortening-curve coefficient; inactive when De Groote force-velocity mode is selected. |
+| Source value | Not established |
+| Value used in this model | 0.17935937 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Author’s nine-group forelimb parameter table. In Results_Function.m, tendon-projected force F0 = 2.3 × 9.806 × PCSA × cos(PA), with PCSA in cm², PA the pennation angle and F0 in N. Tendon slack length is taken from the source table. Data/Original_Study_Data/forelimb/forelimb_9groups_parameters.json |
+
+</details>
+
+<details>
+<summary>FR_WristExtensor · source_lengthening_curvature</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FR_WristExtensor |
+| Parameter | source_lengthening_curvature |
+| Unit | 1 |
+| Meaning | Source lengthening-curve coefficient; inactive when De Groote force-velocity mode is selected. |
+| Source value | Not established |
+| Value used in this model | 0.0053141231 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Author’s nine-group forelimb parameter table. In Results_Function.m, tendon-projected force F0 = 2.3 × 9.806 × PCSA × cos(PA), with PCSA in cm², PA the pennation angle and F0 in N. Tendon slack length is taken from the source table. Data/Original_Study_Data/forelimb/forelimb_9groups_parameters.json |
+
+</details>
+
+<details>
+<summary>FR_WristExtensor · passive_fiber_enabled</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FR_WristExtensor |
+| Parameter | passive_fiber_enabled |
+| Unit | 0/1 |
+| Meaning | 1 enables passive fiber tension within the elastic equilibrium; zero force below l_f/l_opt=1 does not mean it is disabled. |
+| Source value | Not established |
+| Value used in this model | 1 |
+| What changed and why | No verified source value is available for direct comparison. The published passive force-length law is included in every muscle channel. Its coefficients are from Prilutsky et al. (2016), Table 10.3, and Rahmati et al. (2025), Table 3. Applying the same normalized law to added muscle channels is a modeling assumption. |
+| Source / evidence | Published parallel elastic architecture: Prilutsky et al. 2016 Table 10.3 (10.1007/978-1-4939-3267-2_10); Rahmati et al. 2025 Table 3 (10.1113/JP287448). Common normalized curve extended to all model channels; no muscle-specific passive calibration is claimed. |
+
+</details>
+
+<details>
+<summary>FR_WristExtensor · degroote_force_velocity_enabled</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FR_WristExtensor |
+| Parameter | degroote_force_velocity_enabled |
+| Unit | 0/1 |
+| Meaning | 1 uses the documented De Groote/OpenSim velocity curve; 0 uses the source curve. |
+| Source value | Not established |
+| Value used in this model | 1 |
+| What changed and why | No verified source value is available for direct comparison. Model-law choice: 1 enables the smooth De Groote force-velocity relation; 0 selects the alternative implemented law. |
+| Source / evidence | Author’s nine-group forelimb parameter table. In Results_Function.m, tendon-projected force F0 = 2.3 × 9.806 × PCSA × cos(PA), with PCSA in cm², PA the pennation angle and F0 in N. Tendon slack length is taken from the source table. Data/Original_Study_Data/forelimb/forelimb_9groups_parameters.json |
+
+</details>
+
+<details>
+<summary>FR_ShoulderFlexor · max_isometric_tendon_force_N</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FR_ShoulderFlexor |
+| Parameter | max_isometric_tendon_force_N |
+| Unit | N |
+| Meaning | Maximum isometric force projected along the tendon; do not multiply by pennation cosine twice. |
+| Source value | 60.746922 |
+| Value used in this model | 69.411418 |
+| What changed and why | Different from the verified source value. Change relative to source: +14.3%. Force capacity was calibrated with motor inputs to improve mechanical agreement; the fit does not uniquely identify it. |
+| Source / evidence | Author’s nine-group forelimb parameter table. In Results_Function.m, tendon-projected force F0 = 2.3 × 9.806 × PCSA × cos(PA), with PCSA in cm², PA the pennation angle and F0 in N. Tendon slack length is taken from the source table. Data/Original_Study_Data/forelimb/forelimb_9groups_parameters.json |
+
+</details>
+
+<details>
+<summary>FR_ShoulderFlexor · optimal_fiber_length_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FR_ShoulderFlexor |
+| Parameter | optimal_fiber_length_m |
+| Unit | m |
+| Meaning | Optimal fascicle/fiber length, not whole muscle-tendon length. |
+| Source value | 0.039496916 |
+| Value used in this model | 0.041866731 |
+| What changed and why | Different from the verified source value. Change relative to source: +6%. Fiber length and shortening speed were calibrated to set the force-length and force-velocity operating ranges. Physical maximum fiber speed is optimal_fiber_length_m multiplied by max_fiber_speed_optimal_lengths_per_s. The source and applied numbers are given in this row; these are not new tissue measurements. |
+| Source / evidence | Author’s nine-group forelimb parameter table. In Results_Function.m, tendon-projected force F0 = 2.3 × 9.806 × PCSA × cos(PA), with PCSA in cm², PA the pennation angle and F0 in N. Tendon slack length is taken from the source table. Data/Original_Study_Data/forelimb/forelimb_9groups_parameters.json |
+
+</details>
+
+<details>
+<summary>FR_ShoulderFlexor · tendon_slack_length_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FR_ShoulderFlexor |
+| Parameter | tendon_slack_length_m |
+| Unit | m |
+| Meaning | Unloaded series tendon length. |
+| Source value | Not established |
+| Value used in this model | 0.024504272 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Author’s nine-group forelimb parameter table. In Results_Function.m, tendon-projected force F0 = 2.3 × 9.806 × PCSA × cos(PA), with PCSA in cm², PA the pennation angle and F0 in N. Tendon slack length is taken from the source table. Data/Original_Study_Data/forelimb/forelimb_9groups_parameters.json |
+
+</details>
+
+<details>
+<summary>FR_ShoulderFlexor · pennation_cosine</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FR_ShoulderFlexor |
+| Parameter | pennation_cosine |
+| Unit | 1 |
+| Meaning | Cosine of the constant fiber-to-tendon pennation angle. |
+| Source value | 0.99756405 |
+| Value used in this model | 0.99756405 |
+| What changed and why | Retained the verified source value; no numerical change from that source. |
+| Source / evidence | Author’s nine-group forelimb parameter table. In Results_Function.m, tendon-projected force F0 = 2.3 × 9.806 × PCSA × cos(PA), with PCSA in cm², PA the pennation angle and F0 in N. Tendon slack length is taken from the source table. Data/Original_Study_Data/forelimb/forelimb_9groups_parameters.json |
+
+</details>
+
+<details>
+<summary>FR_ShoulderFlexor · tendon_strain_at_max_force</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FR_ShoulderFlexor |
+| Parameter | tendon_strain_at_max_force |
+| Unit | 1 |
+| Meaning | Tendon extension/slack length at one maximum isometric tendon force. |
+| Source value | Not established |
+| Value used in this model | 0.04 |
+| What changed and why | No verified source value is available for direct comparison. Assumed elastic-tendon compliance; not a measured tendon strain for this animal. |
+| Source / evidence | Author’s nine-group forelimb parameter table. In Results_Function.m, tendon-projected force F0 = 2.3 × 9.806 × PCSA × cos(PA), with PCSA in cm², PA the pennation angle and F0 in N. Tendon slack length is taken from the source table. Data/Original_Study_Data/forelimb/forelimb_9groups_parameters.json |
+
+</details>
+
+<details>
+<summary>FR_ShoulderFlexor · max_fiber_speed_optimal_lengths_per_s</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FR_ShoulderFlexor |
+| Parameter | max_fiber_speed_optimal_lengths_per_s |
+| Unit | 1/s |
+| Meaning | Positive maximum-shortening speed magnitude, measured in optimal fiber lengths per second. |
+| Source value | 11 |
+| Value used in this model | 10.377358 |
+| What changed and why | Different from the verified source value. Change relative to source: -5.66%. Fiber length and shortening speed were calibrated to set the force-length and force-velocity operating ranges. Physical maximum fiber speed is optimal_fiber_length_m multiplied by max_fiber_speed_optimal_lengths_per_s. The source and applied numbers are given in this row; these are not new tissue measurements. |
+| Source / evidence | Author’s nine-group forelimb parameter table. In Results_Function.m, tendon-projected force F0 = 2.3 × 9.806 × PCSA × cos(PA), with PCSA in cm², PA the pennation angle and F0 in N. Tendon slack length is taken from the source table. Data/Original_Study_Data/forelimb/forelimb_9groups_parameters.json |
+
+</details>
+
+<details>
+<summary>FR_ShoulderFlexor · normalized_fiber_damping</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FR_ShoulderFlexor |
+| Parameter | normalized_fiber_damping |
+| Unit | 1 |
+| Meaning | Coefficient of normalized fiber velocity in the normalized tendon-direction force balance. |
+| Source value | Not established |
+| Value used in this model | 0.0086893216 |
+| What changed and why | No verified source value is available for direct comparison. Effective muscle force-balance coefficient; source-law conversion and calibration are described in the methods. |
+| Source / evidence | Author’s nine-group forelimb parameter table. In Results_Function.m, tendon-projected force F0 = 2.3 × 9.806 × PCSA × cos(PA), with PCSA in cm², PA the pennation angle and F0 in N. Tendon slack length is taken from the source table. Data/Original_Study_Data/forelimb/forelimb_9groups_parameters.json |
+
+</details>
+
+<details>
+<summary>FR_ShoulderFlexor · MT_path_length_offset_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FR_ShoulderFlexor |
+| Parameter | MT_path_length_offset_m |
+| Unit | m |
+| Meaning | Constant offset added to the routed path to define muscle-tendon length. |
+| Source value | Not established |
+| Value used in this model | 0 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Author’s nine-group forelimb parameter table. In Results_Function.m, tendon-projected force F0 = 2.3 × 9.806 × PCSA × cos(PA), with PCSA in cm², PA the pennation angle and F0 in N. Tendon slack length is taken from the source table. Data/Original_Study_Data/forelimb/forelimb_9groups_parameters.json |
+
+</details>
+
+<details>
+<summary>FR_ShoulderFlexor · active_force_length_exponent</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FR_ShoulderFlexor |
+| Parameter | active_force_length_exponent |
+| Unit | 1 |
+| Meaning | Exponent rho in the source active force-length curve. |
+| Source value | Not established |
+| Value used in this model | 6 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Author’s nine-group forelimb parameter table. In Results_Function.m, tendon-projected force F0 = 2.3 × 9.806 × PCSA × cos(PA), with PCSA in cm², PA the pennation angle and F0 in N. Tendon slack length is taken from the source table. Data/Original_Study_Data/forelimb/forelimb_9groups_parameters.json |
+
+</details>
+
+<details>
+<summary>FR_ShoulderFlexor · source_shortening_curvature</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FR_ShoulderFlexor |
+| Parameter | source_shortening_curvature |
+| Unit | 1 |
+| Meaning | Source shortening-curve coefficient; inactive when De Groote force-velocity mode is selected. |
+| Source value | Not established |
+| Value used in this model | 0.195715 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Author’s nine-group forelimb parameter table. In Results_Function.m, tendon-projected force F0 = 2.3 × 9.806 × PCSA × cos(PA), with PCSA in cm², PA the pennation angle and F0 in N. Tendon slack length is taken from the source table. Data/Original_Study_Data/forelimb/forelimb_9groups_parameters.json |
+
+</details>
+
+<details>
+<summary>FR_ShoulderFlexor · source_lengthening_curvature</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FR_ShoulderFlexor |
+| Parameter | source_lengthening_curvature |
+| Unit | 1 |
+| Meaning | Source lengthening-curve coefficient; inactive when De Groote force-velocity mode is selected. |
+| Source value | Not established |
+| Value used in this model | 0.061928536 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Author’s nine-group forelimb parameter table. In Results_Function.m, tendon-projected force F0 = 2.3 × 9.806 × PCSA × cos(PA), with PCSA in cm², PA the pennation angle and F0 in N. Tendon slack length is taken from the source table. Data/Original_Study_Data/forelimb/forelimb_9groups_parameters.json |
+
+</details>
+
+<details>
+<summary>FR_ShoulderFlexor · passive_fiber_enabled</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FR_ShoulderFlexor |
+| Parameter | passive_fiber_enabled |
+| Unit | 0/1 |
+| Meaning | 1 enables passive fiber tension within the elastic equilibrium; zero force below l_f/l_opt=1 does not mean it is disabled. |
+| Source value | Not established |
+| Value used in this model | 1 |
+| What changed and why | No verified source value is available for direct comparison. The published passive force-length law is included in every muscle channel. Its coefficients are from Prilutsky et al. (2016), Table 10.3, and Rahmati et al. (2025), Table 3. Applying the same normalized law to added muscle channels is a modeling assumption. |
+| Source / evidence | Published parallel elastic architecture: Prilutsky et al. 2016 Table 10.3 (10.1007/978-1-4939-3267-2_10); Rahmati et al. 2025 Table 3 (10.1113/JP287448). Common normalized curve extended to all model channels; no muscle-specific passive calibration is claimed. |
+
+</details>
+
+<details>
+<summary>FR_ShoulderFlexor · degroote_force_velocity_enabled</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FR_ShoulderFlexor |
+| Parameter | degroote_force_velocity_enabled |
+| Unit | 0/1 |
+| Meaning | 1 uses the documented De Groote/OpenSim velocity curve; 0 uses the source curve. |
+| Source value | Not established |
+| Value used in this model | 1 |
+| What changed and why | No verified source value is available for direct comparison. Model-law choice: 1 enables the smooth De Groote force-velocity relation; 0 selects the alternative implemented law. |
+| Source / evidence | Author’s nine-group forelimb parameter table. In Results_Function.m, tendon-projected force F0 = 2.3 × 9.806 × PCSA × cos(PA), with PCSA in cm², PA the pennation angle and F0 in N. Tendon slack length is taken from the source table. Data/Original_Study_Data/forelimb/forelimb_9groups_parameters.json |
+
+</details>
+
+<details>
+<summary>FR_TricepsBrachiiLong · max_isometric_tendon_force_N</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FR_TricepsBrachiiLong |
+| Parameter | max_isometric_tendon_force_N |
+| Unit | N |
+| Meaning | Maximum isometric force projected along the tendon; do not multiply by pennation cosine twice. |
+| Source value | 201.95677 |
+| Value used in this model | 189.10697 |
+| What changed and why | Different from the verified source value. Change relative to source: -6.36%. Force capacity was calibrated with motor inputs to improve mechanical agreement; the fit does not uniquely identify it. |
+| Source / evidence | Author’s nine-group forelimb parameter table. In Results_Function.m, tendon-projected force F0 = 2.3 × 9.806 × PCSA × cos(PA), with PCSA in cm², PA the pennation angle and F0 in N. Tendon slack length is taken from the source table. Data/Original_Study_Data/forelimb/forelimb_9groups_parameters.json |
+
+</details>
+
+<details>
+<summary>FR_TricepsBrachiiLong · optimal_fiber_length_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FR_TricepsBrachiiLong |
+| Parameter | optimal_fiber_length_m |
+| Unit | m |
+| Meaning | Optimal fascicle/fiber length, not whole muscle-tendon length. |
+| Source value | 0.023863208 |
+| Value used in this model | 0.025295 |
+| What changed and why | Different from the verified source value. Change relative to source: +6%. Fiber length and shortening speed were calibrated to set the force-length and force-velocity operating ranges. Physical maximum fiber speed is optimal_fiber_length_m multiplied by max_fiber_speed_optimal_lengths_per_s. The source and applied numbers are given in this row; these are not new tissue measurements. |
+| Source / evidence | Author’s nine-group forelimb parameter table. In Results_Function.m, tendon-projected force F0 = 2.3 × 9.806 × PCSA × cos(PA), with PCSA in cm², PA the pennation angle and F0 in N. Tendon slack length is taken from the source table. Data/Original_Study_Data/forelimb/forelimb_9groups_parameters.json |
+
+</details>
+
+<details>
+<summary>FR_TricepsBrachiiLong · tendon_slack_length_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FR_TricepsBrachiiLong |
+| Parameter | tendon_slack_length_m |
+| Unit | m |
+| Meaning | Unloaded series tendon length. |
+| Source value | Not established |
+| Value used in this model | 0.078117496 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Author’s nine-group forelimb parameter table. In Results_Function.m, tendon-projected force F0 = 2.3 × 9.806 × PCSA × cos(PA), with PCSA in cm², PA the pennation angle and F0 in N. Tendon slack length is taken from the source table. Data/Original_Study_Data/forelimb/forelimb_9groups_parameters.json |
+
+</details>
+
+<details>
+<summary>FR_TricepsBrachiiLong · pennation_cosine</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FR_TricepsBrachiiLong |
+| Parameter | pennation_cosine |
+| Unit | 1 |
+| Meaning | Cosine of the constant fiber-to-tendon pennation angle. |
+| Source value | 0.97304487 |
+| Value used in this model | 0.97304487 |
+| What changed and why | Retained the verified source value; no numerical change from that source. |
+| Source / evidence | Author’s nine-group forelimb parameter table. In Results_Function.m, tendon-projected force F0 = 2.3 × 9.806 × PCSA × cos(PA), with PCSA in cm², PA the pennation angle and F0 in N. Tendon slack length is taken from the source table. Data/Original_Study_Data/forelimb/forelimb_9groups_parameters.json |
+
+</details>
+
+<details>
+<summary>FR_TricepsBrachiiLong · tendon_strain_at_max_force</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FR_TricepsBrachiiLong |
+| Parameter | tendon_strain_at_max_force |
+| Unit | 1 |
+| Meaning | Tendon extension/slack length at one maximum isometric tendon force. |
+| Source value | Not established |
+| Value used in this model | 0.04 |
+| What changed and why | No verified source value is available for direct comparison. Assumed elastic-tendon compliance; not a measured tendon strain for this animal. |
+| Source / evidence | Author’s nine-group forelimb parameter table. In Results_Function.m, tendon-projected force F0 = 2.3 × 9.806 × PCSA × cos(PA), with PCSA in cm², PA the pennation angle and F0 in N. Tendon slack length is taken from the source table. Data/Original_Study_Data/forelimb/forelimb_9groups_parameters.json |
+
+</details>
+
+<details>
+<summary>FR_TricepsBrachiiLong · max_fiber_speed_optimal_lengths_per_s</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FR_TricepsBrachiiLong |
+| Parameter | max_fiber_speed_optimal_lengths_per_s |
+| Unit | 1/s |
+| Meaning | Positive maximum-shortening speed magnitude, measured in optimal fiber lengths per second. |
+| Source value | 11.365 |
+| Value used in this model | 10.721698 |
+| What changed and why | Different from the verified source value. Change relative to source: -5.66%. Fiber length and shortening speed were calibrated to set the force-length and force-velocity operating ranges. Physical maximum fiber speed is optimal_fiber_length_m multiplied by max_fiber_speed_optimal_lengths_per_s. The source and applied numbers are given in this row; these are not new tissue measurements. |
+| Source / evidence | Author’s nine-group forelimb parameter table. In Results_Function.m, tendon-projected force F0 = 2.3 × 9.806 × PCSA × cos(PA), with PCSA in cm², PA the pennation angle and F0 in N. Tendon slack length is taken from the source table. Data/Original_Study_Data/forelimb/forelimb_9groups_parameters.json |
+
+</details>
+
+<details>
+<summary>FR_TricepsBrachiiLong · normalized_fiber_damping</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FR_TricepsBrachiiLong |
+| Parameter | normalized_fiber_damping |
+| Unit | 1 |
+| Meaning | Coefficient of normalized fiber velocity in the normalized tendon-direction force balance. |
+| Source value | Not established |
+| Value used in this model | 0.0054241071 |
+| What changed and why | No verified source value is available for direct comparison. Effective muscle force-balance coefficient; source-law conversion and calibration are described in the methods. |
+| Source / evidence | Author’s nine-group forelimb parameter table. In Results_Function.m, tendon-projected force F0 = 2.3 × 9.806 × PCSA × cos(PA), with PCSA in cm², PA the pennation angle and F0 in N. Tendon slack length is taken from the source table. Data/Original_Study_Data/forelimb/forelimb_9groups_parameters.json |
+
+</details>
+
+<details>
+<summary>FR_TricepsBrachiiLong · MT_path_length_offset_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FR_TricepsBrachiiLong |
+| Parameter | MT_path_length_offset_m |
+| Unit | m |
+| Meaning | Constant offset added to the routed path to define muscle-tendon length. |
+| Source value | Not established |
+| Value used in this model | 0 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Author’s nine-group forelimb parameter table. In Results_Function.m, tendon-projected force F0 = 2.3 × 9.806 × PCSA × cos(PA), with PCSA in cm², PA the pennation angle and F0 in N. Tendon slack length is taken from the source table. Data/Original_Study_Data/forelimb/forelimb_9groups_parameters.json |
+
+</details>
+
+<details>
+<summary>FR_TricepsBrachiiLong · active_force_length_exponent</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FR_TricepsBrachiiLong |
+| Parameter | active_force_length_exponent |
+| Unit | 1 |
+| Meaning | Exponent rho in the source active force-length curve. |
+| Source value | Not established |
+| Value used in this model | 3 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Author’s nine-group forelimb parameter table. In Results_Function.m, tendon-projected force F0 = 2.3 × 9.806 × PCSA × cos(PA), with PCSA in cm², PA the pennation angle and F0 in N. Tendon slack length is taken from the source table. Data/Original_Study_Data/forelimb/forelimb_9groups_parameters.json |
+
+</details>
+
+<details>
+<summary>FR_TricepsBrachiiLong · source_shortening_curvature</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FR_TricepsBrachiiLong |
+| Parameter | source_shortening_curvature |
+| Unit | 1 |
+| Meaning | Source shortening-curve coefficient; inactive when De Groote force-velocity mode is selected. |
+| Source value | Not established |
+| Value used in this model | 0.23323 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Author’s nine-group forelimb parameter table. In Results_Function.m, tendon-projected force F0 = 2.3 × 9.806 × PCSA × cos(PA), with PCSA in cm², PA the pennation angle and F0 in N. Tendon slack length is taken from the source table. Data/Original_Study_Data/forelimb/forelimb_9groups_parameters.json |
+
+</details>
+
+<details>
+<summary>FR_TricepsBrachiiLong · source_lengthening_curvature</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FR_TricepsBrachiiLong |
+| Parameter | source_lengthening_curvature |
+| Unit | 1 |
+| Meaning | Source lengthening-curve coefficient; inactive when De Groote force-velocity mode is selected. |
+| Source value | Not established |
+| Value used in this model | 0.016191972 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Author’s nine-group forelimb parameter table. In Results_Function.m, tendon-projected force F0 = 2.3 × 9.806 × PCSA × cos(PA), with PCSA in cm², PA the pennation angle and F0 in N. Tendon slack length is taken from the source table. Data/Original_Study_Data/forelimb/forelimb_9groups_parameters.json |
+
+</details>
+
+<details>
+<summary>FR_TricepsBrachiiLong · passive_fiber_enabled</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FR_TricepsBrachiiLong |
+| Parameter | passive_fiber_enabled |
+| Unit | 0/1 |
+| Meaning | 1 enables passive fiber tension within the elastic equilibrium; zero force below l_f/l_opt=1 does not mean it is disabled. |
+| Source value | Not established |
+| Value used in this model | 1 |
+| What changed and why | No verified source value is available for direct comparison. The published passive force-length law is included in every muscle channel. Its coefficients are from Prilutsky et al. (2016), Table 10.3, and Rahmati et al. (2025), Table 3. Applying the same normalized law to added muscle channels is a modeling assumption. |
+| Source / evidence | Published parallel elastic architecture: Prilutsky et al. 2016 Table 10.3 (10.1007/978-1-4939-3267-2_10); Rahmati et al. 2025 Table 3 (10.1113/JP287448). Common normalized curve extended to all model channels; no muscle-specific passive calibration is claimed. |
+
+</details>
+
+<details>
+<summary>FR_TricepsBrachiiLong · degroote_force_velocity_enabled</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FR_TricepsBrachiiLong |
+| Parameter | degroote_force_velocity_enabled |
+| Unit | 0/1 |
+| Meaning | 1 uses the documented De Groote/OpenSim velocity curve; 0 uses the source curve. |
+| Source value | Not established |
+| Value used in this model | 1 |
+| What changed and why | No verified source value is available for direct comparison. Model-law choice: 1 enables the smooth De Groote force-velocity relation; 0 selects the alternative implemented law. |
+| Source / evidence | Author’s nine-group forelimb parameter table. In Results_Function.m, tendon-projected force F0 = 2.3 × 9.806 × PCSA × cos(PA), with PCSA in cm², PA the pennation angle and F0 in N. Tendon slack length is taken from the source table. Data/Original_Study_Data/forelimb/forelimb_9groups_parameters.json |
+
+</details>
+
+<details>
+<summary>FL_S_C3 · max_isometric_tendon_force_N</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_S_C3 |
+| Parameter | max_isometric_tendon_force_N |
+| Unit | N |
+| Meaning | Maximum isometric force projected along the tendon; do not multiply by pennation cosine twice. |
+| Source value | Not established |
+| Value used in this model | 3.8436556 |
+| What changed and why | No verified source value is available for direct comparison. Force capacity was calibrated with motor inputs to improve mechanical agreement; the fit does not uniquely identify it. |
+| Source / evidence | No verified one-to-one numerical source is established for this added channel. Applied estimates are in Data/Model_Parameters/muscle_tendon.py; anatomical source records are in Data/Original_Study_Data/additional_muscles/. |
+
+</details>
+
+<details>
+<summary>FL_S_C3 · optimal_fiber_length_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_S_C3 |
+| Parameter | optimal_fiber_length_m |
+| Unit | m |
+| Meaning | Optimal fascicle/fiber length, not whole muscle-tendon length. |
+| Source value | Not established |
+| Value used in this model | 0.051569882 |
+| What changed and why | No verified source value is available for direct comparison. Fiber length and shortening speed were calibrated to set the force-length and force-velocity operating ranges. Physical maximum fiber speed is optimal_fiber_length_m multiplied by max_fiber_speed_optimal_lengths_per_s. The source and applied numbers are given in this row; these are not new tissue measurements. |
+| Source / evidence | No verified one-to-one numerical source is established for this added channel. Applied estimates are in Data/Model_Parameters/muscle_tendon.py; anatomical source records are in Data/Original_Study_Data/additional_muscles/. |
+
+</details>

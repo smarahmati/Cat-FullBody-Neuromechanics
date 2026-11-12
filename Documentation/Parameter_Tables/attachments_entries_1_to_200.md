@@ -4,205 +4,3204 @@
 
 [Back to parameter guide](../parameter_tables.md)
 
-| Object | Parameter | Unit | Meaning | Source value | Value used in this model | What changed and why | Source / evidence |
-| --- | --- | --- | --- | --- | --- | --- | --- |
-| L_IP_origin | position_in_body_m | m | Fixed site in owning body frame; dynamic routing sites are configured separately. | Not established | [0.0465, 0.0, 0.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| L_IP_origin | orientation_in_body_wxyz | 1 | Fixed site in owning body frame; dynamic routing sites are configured separately. | Not established | [1.0, 0.0, 0.0, 0.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| L_IP_side0 | position_in_body_m | m | Fixed site in owning body frame; dynamic routing sites are configured separately. | Not established | [0.0, -0.005028361385832787, 0.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| L_IP_side0 | orientation_in_body_wxyz | 1 | Fixed site in owning body frame; dynamic routing sites are configured separately. | Not established | [1.0, 0.0, 0.0, 0.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| L_BFA_origin | position_in_body_m | m | Fixed site in owning body frame; dynamic routing sites are configured separately. | Not established | [-0.006582361197662642, 0.005330337267324761, 0.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| L_BFA_origin | orientation_in_body_wxyz | 1 | Fixed site in owning body frame; dynamic routing sites are configured separately. | Not established | [1.0, 0.0, 0.0, 0.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| L_BFA_side0 | position_in_body_m | m | Fixed site in owning body frame; dynamic routing sites are configured separately. | Not established | [0.0, 0.005028361385832787, 0.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| L_BFA_side0 | orientation_in_body_wxyz | 1 | Fixed site in owning body frame; dynamic routing sites are configured separately. | Not established | [1.0, 0.0, 0.0, 0.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| L_RF_origin | position_in_body_m | m | Fixed site in owning body frame; dynamic routing sites are configured separately. | Not established | [0.005420765027322405, 0.0, 0.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| L_RF_origin | orientation_in_body_wxyz | 1 | Fixed site in owning body frame; dynamic routing sites are configured separately. | Not established | [1.0, 0.0, 0.0, 0.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| L_RF_side0 | position_in_body_m | m | Fixed site in owning body frame; dynamic routing sites are configured separately. | Not established | [0.0, -0.005240210582433694, 0.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| L_RF_side0 | orientation_in_body_wxyz | 1 | Fixed site in owning body frame; dynamic routing sites are configured separately. | Not established | [1.0, 0.0, 0.0, 0.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| L_BFP_origin | position_in_body_m | m | Fixed site in owning body frame; dynamic routing sites are configured separately. | Not established | [-0.006582361197662642, 0.005330337267324761, 0.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| L_BFP_origin | orientation_in_body_wxyz | 1 | Fixed site in owning body frame; dynamic routing sites are configured separately. | Not established | [1.0, 0.0, 0.0, 0.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| L_BFP_side0 | position_in_body_m | m | Fixed site in owning body frame; dynamic routing sites are configured separately. | Not established | [0.0, 0.005240210582433694, 0.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| L_BFP_side0 | orientation_in_body_wxyz | 1 | Fixed site in owning body frame; dynamic routing sites are configured separately. | Not established | [1.0, 0.0, 0.0, 0.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| L_SAM_origin | position_in_body_m | m | Fixed site in owning body frame; dynamic routing sites are configured separately. | Not established | [0.013551912568306013, 0.0, 0.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| L_SAM_origin | orientation_in_body_wxyz | 1 | Fixed site in owning body frame; dynamic routing sites are configured separately. | Not established | [1.0, 0.0, 0.0, 0.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| L_SAM_side0 | position_in_body_m | m | Fixed site in owning body frame; dynamic routing sites are configured separately. | Not established | [0.0, -0.005240210582433694, 0.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| L_SAM_side0 | orientation_in_body_wxyz | 1 | Fixed site in owning body frame; dynamic routing sites are configured separately. | Not established | [1.0, 0.0, 0.0, 0.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| L_IP_insert | position_in_body_m | m | Fixed site in owning body frame; dynamic routing sites are configured separately. | Not established | [0.012366906474820145, 0.0, 0.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| L_IP_insert | orientation_in_body_wxyz | 1 | Fixed site in owning body frame; dynamic routing sites are configured separately. | Not established | [1.0, 0.0, 0.0, 0.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| L_BFA_insert | position_in_body_m | m | Fixed site in owning body frame; dynamic routing sites are configured separately. | Not established | [0.049075025693730734, 0.0, 0.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| L_BFA_insert | orientation_in_body_wxyz | 1 | Fixed site in owning body frame; dynamic routing sites are configured separately. | Not established | [1.0, 0.0, 0.0, 0.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| L_VL_origin | position_in_body_m | m | Fixed site in owning body frame; dynamic routing sites are configured separately. | Not established | [0.0, 1.1695376931857223e-17, 0.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| L_VL_origin | orientation_in_body_wxyz | 1 | Fixed site in owning body frame; dynamic routing sites are configured separately. | Not established | [1.0, 0.0, 0.0, 0.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| L_VL_side0 | position_in_body_m | m | Fixed site in owning body frame; dynamic routing sites are configured separately. | Not established | [0.0955, 0.011643902439024393, 0.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| L_VL_side0 | orientation_in_body_wxyz | 1 | Fixed site in owning body frame; dynamic routing sites are configured separately. | Not established | [1.0, 0.0, 0.0, 0.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| L_VM_origin | position_in_body_m | m | Fixed site in owning body frame; dynamic routing sites are configured separately. | Not established | [0.0, 1.1695376931857223e-17, 0.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| L_VM_origin | orientation_in_body_wxyz | 1 | Fixed site in owning body frame; dynamic routing sites are configured separately. | Not established | [1.0, 0.0, 0.0, 0.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| L_VM_side0 | position_in_body_m | m | Fixed site in owning body frame; dynamic routing sites are configured separately. | Not established | [0.0955, 0.011643902439024393, 0.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| L_VM_side0 | orientation_in_body_wxyz | 1 | Fixed site in owning body frame; dynamic routing sites are configured separately. | Not established | [1.0, 0.0, 0.0, 0.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| L_RF_side1 | position_in_body_m | m | Fixed site in owning body frame; dynamic routing sites are configured separately. | Not established | [0.0955, 0.011643902439024393, 0.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| L_RF_side1 | orientation_in_body_wxyz | 1 | Fixed site in owning body frame; dynamic routing sites are configured separately. | Not established | [1.0, 0.0, 0.0, 0.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| L_BFP_side1 | position_in_body_m | m | Fixed site in owning body frame; dynamic routing sites are configured separately. | Not established | [0.0955, -0.006288252698920432, 0.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| L_BFP_side1 | orientation_in_body_wxyz | 1 | Fixed site in owning body frame; dynamic routing sites are configured separately. | Not established | [1.0, 0.0, 0.0, 0.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| L_SAM_side1 | position_in_body_m | m | Fixed site in owning body frame; dynamic routing sites are configured separately. | Not established | [0.0955, -0.006288252698920432, 0.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| L_SAM_side1 | orientation_in_body_wxyz | 1 | Fixed site in owning body frame; dynamic routing sites are configured separately. | Not established | [1.0, 0.0, 0.0, 0.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| L_LG_origin | position_in_body_m | m | Fixed site in owning body frame; dynamic routing sites are configured separately. | Not established | [0.08961099691675231, 7.211948776068176e-19, 0.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| L_LG_origin | orientation_in_body_wxyz | 1 | Fixed site in owning body frame; dynamic routing sites are configured separately. | Not established | [1.0, 0.0, 0.0, 0.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| L_LG_side0 | position_in_body_m | m | Fixed site in owning body frame; dynamic routing sites are configured separately. | Not established | [0.0955, -0.006477903391572458, 0.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| L_LG_side0 | orientation_in_body_wxyz | 1 | Fixed site in owning body frame; dynamic routing sites are configured separately. | Not established | [1.0, 0.0, 0.0, 0.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| L_MG_origin | position_in_body_m | m | Fixed site in owning body frame; dynamic routing sites are configured separately. | Not established | [0.08961099691675231, 7.211948776068176e-19, 0.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| L_MG_origin | orientation_in_body_wxyz | 1 | Fixed site in owning body frame; dynamic routing sites are configured separately. | Not established | [1.0, 0.0, 0.0, 0.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| L_MG_side0 | position_in_body_m | m | Fixed site in owning body frame; dynamic routing sites are configured separately. | Not established | [0.0955, -0.006477903391572458, 0.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| L_MG_side0 | orientation_in_body_wxyz | 1 | Fixed site in owning body frame; dynamic routing sites are configured separately. | Not established | [1.0, 0.0, 0.0, 0.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| L_VL_insert | position_in_body_m | m | Fixed site in owning body frame; dynamic routing sites are configured separately. | Not established | [-0.008671039771033588, 0.006071494012593104, 0.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| L_VL_insert | orientation_in_body_wxyz | 1 | Fixed site in owning body frame; dynamic routing sites are configured separately. | Not established | [1.0, 0.0, 0.0, 0.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| L_VM_insert | position_in_body_m | m | Fixed site in owning body frame; dynamic routing sites are configured separately. | Not established | [-0.008671039771033588, 0.006071494012593104, 0.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| L_VM_insert | orientation_in_body_wxyz | 1 | Fixed site in owning body frame; dynamic routing sites are configured separately. | Not established | [1.0, 0.0, 0.0, 0.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| L_TA_origin | position_in_body_m | m | Fixed site in owning body frame; dynamic routing sites are configured separately. | Not established | [0.0926219512195122, 1.9445001615729926e-18, 0.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| L_TA_origin | orientation_in_body_wxyz | 1 | Fixed site in owning body frame; dynamic routing sites are configured separately. | Not established | [1.0, 0.0, 0.0, 0.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| L_TA_side0 | position_in_body_m | m | Fixed site in owning body frame; dynamic routing sites are configured separately. | Not established | [0.1085, 0.005585141066940424, 0.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| L_TA_side0 | orientation_in_body_wxyz | 1 | Fixed site in owning body frame; dynamic routing sites are configured separately. | Not established | [1.0, 0.0, 0.0, 0.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| L_SO_origin | position_in_body_m | m | Fixed site in owning body frame; dynamic routing sites are configured separately. | Not established | [0.0037048780487804744, 1.2833701066381752e-17, 0.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| L_SO_origin | orientation_in_body_wxyz | 1 | Fixed site in owning body frame; dynamic routing sites are configured separately. | Not established | [1.0, 0.0, 0.0, 0.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| L_SO_side0 | position_in_body_m | m | Fixed site in owning body frame; dynamic routing sites are configured separately. | Not established | [0.1085, -0.005585141066940424, 0.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| L_SO_side0 | orientation_in_body_wxyz | 1 | Fixed site in owning body frame; dynamic routing sites are configured separately. | Not established | [1.0, 0.0, 0.0, 0.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| L_RF_insert | position_in_body_m | m | Fixed site in owning body frame; dynamic routing sites are configured separately. | Not established | [-0.008671039771033588, 0.006071494012593104, 0.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| L_RF_insert | orientation_in_body_wxyz | 1 | Fixed site in owning body frame; dynamic routing sites are configured separately. | Not established | [1.0, 0.0, 0.0, 0.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| L_BFP_insert | position_in_body_m | m | Fixed site in owning body frame; dynamic routing sites are configured separately. | Not established | [0.03175609756097561, 0.0, 0.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| L_BFP_insert | orientation_in_body_wxyz | 1 | Fixed site in owning body frame; dynamic routing sites are configured separately. | Not established | [1.0, 0.0, 0.0, 0.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| L_SAM_insert | position_in_body_m | m | Fixed site in owning body frame; dynamic routing sites are configured separately. | Not established | [0.010585365853658537, 0.0, 0.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| L_SAM_insert | orientation_in_body_wxyz | 1 | Fixed site in owning body frame; dynamic routing sites are configured separately. | Not established | [1.0, 0.0, 0.0, 0.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| L_LG_side1 | position_in_body_m | m | Fixed site in owning body frame; dynamic routing sites are configured separately. | Not established | [0.1085, -0.005373291870339516, 0.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| L_LG_side1 | orientation_in_body_wxyz | 1 | Fixed site in owning body frame; dynamic routing sites are configured separately. | Not established | [1.0, 0.0, 0.0, 0.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| L_MG_side1 | position_in_body_m | m | Fixed site in owning body frame; dynamic routing sites are configured separately. | Not established | [0.1085, -0.005373291870339516, 0.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| L_MG_side1 | orientation_in_body_wxyz | 1 | Fixed site in owning body frame; dynamic routing sites are configured separately. | Not established | [1.0, 0.0, 0.0, 0.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| L_EDL_attachment0 | position_in_body_m | m | Fixed site in owning body frame; dynamic routing sites are configured separately. | Not established | [0.07361713995943205, -0.0, -0.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| L_EDL_attachment0 | orientation_in_body_wxyz | 1 | Fixed site in owning body frame; dynamic routing sites are configured separately. | Not established | [1.0, 0.0, 0.0, 0.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| L_EDL_attachment1 | position_in_body_m | m | Fixed site in owning body frame; dynamic routing sites are configured separately. | Not established | [0.1085, 0.0033012170385395534, -0.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| L_EDL_attachment1 | orientation_in_body_wxyz | 1 | Fixed site in owning body frame; dynamic routing sites are configured separately. | Not established | [1.0, 0.0, 0.0, 0.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| L_FDL_attachment0 | position_in_body_m | m | Fixed site in owning body frame; dynamic routing sites are configured separately. | Not established | [0.08495131845841784, -0.0, -0.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| L_FDL_attachment0 | orientation_in_body_wxyz | 1 | Fixed site in owning body frame; dynamic routing sites are configured separately. | Not established | [1.0, 0.0, 0.0, 0.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| L_FDL_attachment1 | position_in_body_m | m | Fixed site in owning body frame; dynamic routing sites are configured separately. | Not established | [0.1085, -0.0033012170385395534, -0.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| L_FDL_attachment1 | orientation_in_body_wxyz | 1 | Fixed site in owning body frame; dynamic routing sites are configured separately. | Not established | [1.0, 0.0, 0.0, 0.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| L_FHL_attachment0 | position_in_body_m | m | Fixed site in owning body frame; dynamic routing sites are configured separately. | Not established | [0.03343969641973272, 7.163194222020616e-05, -0.0028831705983929467] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| L_FHL_attachment0 | orientation_in_body_wxyz | 1 | Fixed site in owning body frame; dynamic routing sites are configured separately. | Not established | [1.0, 0.0, 0.0, 0.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| L_FHL_attachment1 | position_in_body_m | m | Fixed site in owning body frame; dynamic routing sites are configured separately. | Not established | [0.10655770499917504, -0.0031338974721341725, -0.00980539873286808] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| L_FHL_attachment1 | orientation_in_body_wxyz | 1 | Fixed site in owning body frame; dynamic routing sites are configured separately. | Not established | [1.0, 0.0, 0.0, 0.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| L_EDL_osim_0 | position_in_body_m | m | Fixed site in owning body frame; dynamic routing sites are configured separately. | Not established | [0.007115781224220425, 0.00946437036584518, -0.004137299386552081] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| L_EDL_osim_0 | orientation_in_body_wxyz | 1 | Fixed site in owning body frame; dynamic routing sites are configured separately. | Not established | [1.0, 0.0, 0.0, 0.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| L_EDL_osim_1 | position_in_body_m | m | Fixed site in owning body frame; dynamic routing sites are configured separately. | Not established | [0.015395149315294506, 0.012786301686307396, -0.004362979134113302] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| L_EDL_osim_1 | orientation_in_body_wxyz | 1 | Fixed site in owning body frame; dynamic routing sites are configured separately. | Not established | [1.0, 0.0, 0.0, 0.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| L_FDL_osim_0 | position_in_body_m | m | Fixed site in owning body frame; dynamic routing sites are configured separately. | Not established | [0.03338599241049331, 7.163194222020615e-05, -0.0048533751261112005] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| L_FDL_osim_0 | orientation_in_body_wxyz | 1 | Fixed site in owning body frame; dynamic routing sites are configured separately. | Not established | [1.0, 0.0, 0.0, 0.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| L_FDL_osim_1 | position_in_body_m | m | Fixed site in owning body frame; dynamic routing sites are configured separately. | Not established | [0.10562683550569212, -0.0013968228732940935, -0.009780025009899034] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| L_FDL_osim_1 | orientation_in_body_wxyz | 1 | Fixed site in owning body frame; dynamic routing sites are configured separately. | Not established | [1.0, 0.0, 0.0, 0.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| L_TA_insert | position_in_body_m | m | Fixed site in owning body frame; dynamic routing sites are configured separately. | Not established | [0.014586357039187228, 0.0, 0.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| L_TA_insert | orientation_in_body_wxyz | 1 | Fixed site in owning body frame; dynamic routing sites are configured separately. | Not established | [1.0, 0.0, 0.0, 0.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| L_SO_insert | position_in_body_m | m | Fixed site in owning body frame; dynamic routing sites are configured separately. | Not established | [-0.015473543498456494, -0.0016263803013220528, 0.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| L_SO_insert | orientation_in_body_wxyz | 1 | Fixed site in owning body frame; dynamic routing sites are configured separately. | Not established | [1.0, 0.0, 0.0, 0.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| L_LG_insert | position_in_body_m | m | Fixed site in owning body frame; dynamic routing sites are configured separately. | Not established | [-0.015473543498456494, -0.0016263803013220528, 0.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| L_LG_insert | orientation_in_body_wxyz | 1 | Fixed site in owning body frame; dynamic routing sites are configured separately. | Not established | [1.0, 0.0, 0.0, 0.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| L_MG_insert | position_in_body_m | m | Fixed site in owning body frame; dynamic routing sites are configured separately. | Not established | [-0.015473543498456494, -0.0016263803013220528, 0.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| L_MG_insert | orientation_in_body_wxyz | 1 | Fixed site in owning body frame; dynamic routing sites are configured separately. | Not established | [1.0, 0.0, 0.0, 0.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| L_EDL_attachment2 | position_in_body_m | m | Fixed site in owning body frame; dynamic routing sites are configured separately. | Not established | [0.067, 0.001694772344013491, -0.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| L_EDL_attachment2 | orientation_in_body_wxyz | 1 | Fixed site in owning body frame; dynamic routing sites are configured separately. | Not established | [1.0, 0.0, 0.0, 0.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| L_FDL_attachment2 | position_in_body_m | m | Fixed site in owning body frame; dynamic routing sites are configured separately. | Not established | [0.067, -0.001694772344013491, -0.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| L_FDL_attachment2 | orientation_in_body_wxyz | 1 | Fixed site in owning body frame; dynamic routing sites are configured separately. | Not established | [1.0, 0.0, 0.0, 0.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| L_FHL_attachment2 | position_in_body_m | m | Fixed site in owning body frame; dynamic routing sites are configured separately. | Not established | [0.011526881720430107, -0.009193881041317593, -0.010005253738280926] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| L_FHL_attachment2 | orientation_in_body_wxyz | 1 | Fixed site in owning body frame; dynamic routing sites are configured separately. | Not established | [1.0, 0.0, 0.0, 0.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| L_FHL_attachment3 | position_in_body_m | m | Fixed site in owning body frame; dynamic routing sites are configured separately. | Not established | [0.028464994026284343, -0.009722449115121563, -0.00844516703189864] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| L_FHL_attachment3 | orientation_in_body_wxyz | 1 | Fixed site in owning body frame; dynamic routing sites are configured separately. | Not established | [1.0, 0.0, 0.0, 0.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| L_EDL_osim_2 | position_in_body_m | m | Fixed site in owning body frame; dynamic routing sites are configured separately. | Not established | [0.01331995221027479, -0.00016017214357696066, -0.0016603620779240757] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| L_EDL_osim_2 | orientation_in_body_wxyz | 1 | Fixed site in owning body frame; dynamic routing sites are configured separately. | Not established | [1.0, 0.0, 0.0, 0.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| L_EDL_osim_3 | position_in_body_m | m | Fixed site in owning body frame; dynamic routing sites are configured separately. | Not established | [0.02643178016726403, 0.0011372222193964286, -0.0012548039085772762] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| L_EDL_osim_3 | orientation_in_body_wxyz | 1 | Fixed site in owning body frame; dynamic routing sites are configured separately. | Not established | [1.0, 0.0, 0.0, 0.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| L_EDL_osim_4 | position_in_body_m | m | Fixed site in owning body frame; dynamic routing sites are configured separately. | Not established | [0.04063225806451612, 0.0069514710312401345, -0.002887930700403582] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| L_EDL_osim_4 | orientation_in_body_wxyz | 1 | Fixed site in owning body frame; dynamic routing sites are configured separately. | Not established | [1.0, 0.0, 0.0, 0.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| L_EDL_osim_5 | position_in_body_m | m | Fixed site in owning body frame; dynamic routing sites are configured separately. | Not established | [0.06258136200716845, 0.009113794969529111, -0.005317565813834683] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| L_EDL_osim_5 | orientation_in_body_wxyz | 1 | Fixed site in owning body frame; dynamic routing sites are configured separately. | Not established | [1.0, 0.0, 0.0, 0.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| L_FDL_osim_2 | position_in_body_m | m | Fixed site in owning body frame; dynamic routing sites are configured separately. | Not established | [0.012183273596176821, -0.008393020323432785, -0.009984951070462588] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| L_FDL_osim_2 | orientation_in_body_wxyz | 1 | Fixed site in owning body frame; dynamic routing sites are configured separately. | Not established | [1.0, 0.0, 0.0, 0.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| L_FDL_osim_3 | position_in_body_m | m | Fixed site in owning body frame; dynamic routing sites are configured separately. | Not established | [0.026896057347670248, -0.008409037537790478, -0.009529874199119843] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| L_FDL_osim_3 | orientation_in_body_wxyz | 1 | Fixed site in owning body frame; dynamic routing sites are configured separately. | Not established | [1.0, 0.0, 0.0, 0.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| L_paw | position_in_body_m | m | Fixed site in owning body frame; dynamic routing sites are configured separately. | Not established | [0.027058823529411764, 0.0, 0.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| L_paw | orientation_in_body_wxyz | 1 | Fixed site in owning body frame; dynamic routing sites are configured separately. | Not established | [1.0, 0.0, 0.0, 0.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| L_EDL_attachment3 | position_in_body_m | m | Fixed site in owning body frame; dynamic routing sites are configured separately. | Not established | [0.0119952, -0.0, -0.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| L_EDL_attachment3 | orientation_in_body_wxyz | 1 | Fixed site in owning body frame; dynamic routing sites are configured separately. | Not established | [1.0, 0.0, 0.0, 0.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| L_FDL_attachment3 | position_in_body_m | m | Fixed site in owning body frame; dynamic routing sites are configured separately. | Not established | [0.0119952, -0.0, -0.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| L_FDL_attachment3 | orientation_in_body_wxyz | 1 | Fixed site in owning body frame; dynamic routing sites are configured separately. | Not established | [1.0, 0.0, 0.0, 0.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| L_FHL_attachment4 | position_in_body_m | m | Fixed site in owning body frame; dynamic routing sites are configured separately. | Not established | [-0.0030827285921625532, -0.0038664731494920165, -0.0027429815439340534] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| L_FHL_attachment4 | orientation_in_body_wxyz | 1 | Fixed site in owning body frame; dynamic routing sites are configured separately. | Not established | [1.0, 0.0, 0.0, 0.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| L_EDL_osim_6 | position_in_body_m | m | Fixed site in owning body frame; dynamic routing sites are configured separately. | Not established | [0.008725689404934686, 0.004232220609579099, -0.009600435403769187] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| L_EDL_osim_6 | orientation_in_body_wxyz | 1 | Fixed site in owning body frame; dynamic routing sites are configured separately. | Not established | [1.0, 0.0, 0.0, 0.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| L_FDL_osim_4 | position_in_body_m | m | Fixed site in owning body frame; dynamic routing sites are configured separately. | Not established | [-0.0030827285921625532, -0.0038664731494920165, -0.013714907719670266] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| L_FDL_osim_4 | orientation_in_body_wxyz | 1 | Fixed site in owning body frame; dynamic routing sites are configured separately. | Not established | [1.0, 0.0, 0.0, 0.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| R_IP_origin | position_in_body_m | m | Fixed site in owning body frame; dynamic routing sites are configured separately. | Not established | [0.0465, 0.0, 0.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| R_IP_origin | orientation_in_body_wxyz | 1 | Fixed site in owning body frame; dynamic routing sites are configured separately. | Not established | [1.0, 0.0, 0.0, 0.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| R_IP_side0 | position_in_body_m | m | Fixed site in owning body frame; dynamic routing sites are configured separately. | Not established | [0.0, -0.005028361385832787, 0.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| R_IP_side0 | orientation_in_body_wxyz | 1 | Fixed site in owning body frame; dynamic routing sites are configured separately. | Not established | [1.0, 0.0, 0.0, 0.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| R_BFA_origin | position_in_body_m | m | Fixed site in owning body frame; dynamic routing sites are configured separately. | Not established | [-0.006582361197662642, 0.005330337267324761, 0.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| R_BFA_origin | orientation_in_body_wxyz | 1 | Fixed site in owning body frame; dynamic routing sites are configured separately. | Not established | [1.0, 0.0, 0.0, 0.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| R_BFA_side0 | position_in_body_m | m | Fixed site in owning body frame; dynamic routing sites are configured separately. | Not established | [0.0, 0.005028361385832787, 0.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| R_BFA_side0 | orientation_in_body_wxyz | 1 | Fixed site in owning body frame; dynamic routing sites are configured separately. | Not established | [1.0, 0.0, 0.0, 0.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| R_RF_origin | position_in_body_m | m | Fixed site in owning body frame; dynamic routing sites are configured separately. | Not established | [0.005420765027322405, 0.0, 0.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| R_RF_origin | orientation_in_body_wxyz | 1 | Fixed site in owning body frame; dynamic routing sites are configured separately. | Not established | [1.0, 0.0, 0.0, 0.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| R_RF_side0 | position_in_body_m | m | Fixed site in owning body frame; dynamic routing sites are configured separately. | Not established | [0.0, -0.005240210582433694, 0.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| R_RF_side0 | orientation_in_body_wxyz | 1 | Fixed site in owning body frame; dynamic routing sites are configured separately. | Not established | [1.0, 0.0, 0.0, 0.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| R_BFP_origin | position_in_body_m | m | Fixed site in owning body frame; dynamic routing sites are configured separately. | Not established | [-0.006582361197662642, 0.005330337267324761, 0.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| R_BFP_origin | orientation_in_body_wxyz | 1 | Fixed site in owning body frame; dynamic routing sites are configured separately. | Not established | [1.0, 0.0, 0.0, 0.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| R_BFP_side0 | position_in_body_m | m | Fixed site in owning body frame; dynamic routing sites are configured separately. | Not established | [0.0, 0.005240210582433694, 0.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| R_BFP_side0 | orientation_in_body_wxyz | 1 | Fixed site in owning body frame; dynamic routing sites are configured separately. | Not established | [1.0, 0.0, 0.0, 0.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| R_SAM_origin | position_in_body_m | m | Fixed site in owning body frame; dynamic routing sites are configured separately. | Not established | [0.013551912568306013, 0.0, 0.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| R_SAM_origin | orientation_in_body_wxyz | 1 | Fixed site in owning body frame; dynamic routing sites are configured separately. | Not established | [1.0, 0.0, 0.0, 0.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| R_SAM_side0 | position_in_body_m | m | Fixed site in owning body frame; dynamic routing sites are configured separately. | Not established | [0.0, -0.005240210582433694, 0.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| R_SAM_side0 | orientation_in_body_wxyz | 1 | Fixed site in owning body frame; dynamic routing sites are configured separately. | Not established | [1.0, 0.0, 0.0, 0.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| R_IP_insert | position_in_body_m | m | Fixed site in owning body frame; dynamic routing sites are configured separately. | Not established | [0.012366906474820145, 0.0, 0.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| R_IP_insert | orientation_in_body_wxyz | 1 | Fixed site in owning body frame; dynamic routing sites are configured separately. | Not established | [1.0, 0.0, 0.0, 0.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| R_BFA_insert | position_in_body_m | m | Fixed site in owning body frame; dynamic routing sites are configured separately. | Not established | [0.049075025693730734, 0.0, 0.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| R_BFA_insert | orientation_in_body_wxyz | 1 | Fixed site in owning body frame; dynamic routing sites are configured separately. | Not established | [1.0, 0.0, 0.0, 0.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| R_VL_origin | position_in_body_m | m | Fixed site in owning body frame; dynamic routing sites are configured separately. | Not established | [0.0, 1.1695376931857223e-17, 0.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| R_VL_origin | orientation_in_body_wxyz | 1 | Fixed site in owning body frame; dynamic routing sites are configured separately. | Not established | [1.0, 0.0, 0.0, 0.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| R_VL_side0 | position_in_body_m | m | Fixed site in owning body frame; dynamic routing sites are configured separately. | Not established | [0.0955, 0.011643902439024393, 0.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| R_VL_side0 | orientation_in_body_wxyz | 1 | Fixed site in owning body frame; dynamic routing sites are configured separately. | Not established | [1.0, 0.0, 0.0, 0.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| R_VM_origin | position_in_body_m | m | Fixed site in owning body frame; dynamic routing sites are configured separately. | Not established | [0.0, 1.1695376931857223e-17, 0.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| R_VM_origin | orientation_in_body_wxyz | 1 | Fixed site in owning body frame; dynamic routing sites are configured separately. | Not established | [1.0, 0.0, 0.0, 0.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| R_VM_side0 | position_in_body_m | m | Fixed site in owning body frame; dynamic routing sites are configured separately. | Not established | [0.0955, 0.011643902439024393, 0.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| R_VM_side0 | orientation_in_body_wxyz | 1 | Fixed site in owning body frame; dynamic routing sites are configured separately. | Not established | [1.0, 0.0, 0.0, 0.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| R_RF_side1 | position_in_body_m | m | Fixed site in owning body frame; dynamic routing sites are configured separately. | Not established | [0.0955, 0.011643902439024393, 0.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| R_RF_side1 | orientation_in_body_wxyz | 1 | Fixed site in owning body frame; dynamic routing sites are configured separately. | Not established | [1.0, 0.0, 0.0, 0.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| R_BFP_side1 | position_in_body_m | m | Fixed site in owning body frame; dynamic routing sites are configured separately. | Not established | [0.0955, -0.006288252698920432, 0.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| R_BFP_side1 | orientation_in_body_wxyz | 1 | Fixed site in owning body frame; dynamic routing sites are configured separately. | Not established | [1.0, 0.0, 0.0, 0.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| R_SAM_side1 | position_in_body_m | m | Fixed site in owning body frame; dynamic routing sites are configured separately. | Not established | [0.0955, -0.006288252698920432, 0.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| R_SAM_side1 | orientation_in_body_wxyz | 1 | Fixed site in owning body frame; dynamic routing sites are configured separately. | Not established | [1.0, 0.0, 0.0, 0.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| R_LG_origin | position_in_body_m | m | Fixed site in owning body frame; dynamic routing sites are configured separately. | Not established | [0.08961099691675231, 7.211948776068176e-19, 0.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| R_LG_origin | orientation_in_body_wxyz | 1 | Fixed site in owning body frame; dynamic routing sites are configured separately. | Not established | [1.0, 0.0, 0.0, 0.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| R_LG_side0 | position_in_body_m | m | Fixed site in owning body frame; dynamic routing sites are configured separately. | Not established | [0.0955, -0.006477903391572458, 0.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| R_LG_side0 | orientation_in_body_wxyz | 1 | Fixed site in owning body frame; dynamic routing sites are configured separately. | Not established | [1.0, 0.0, 0.0, 0.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| R_MG_origin | position_in_body_m | m | Fixed site in owning body frame; dynamic routing sites are configured separately. | Not established | [0.08961099691675231, 7.211948776068176e-19, 0.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| R_MG_origin | orientation_in_body_wxyz | 1 | Fixed site in owning body frame; dynamic routing sites are configured separately. | Not established | [1.0, 0.0, 0.0, 0.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| R_MG_side0 | position_in_body_m | m | Fixed site in owning body frame; dynamic routing sites are configured separately. | Not established | [0.0955, -0.006477903391572458, 0.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| R_MG_side0 | orientation_in_body_wxyz | 1 | Fixed site in owning body frame; dynamic routing sites are configured separately. | Not established | [1.0, 0.0, 0.0, 0.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| R_VL_insert | position_in_body_m | m | Fixed site in owning body frame; dynamic routing sites are configured separately. | Not established | [-0.008671039771033588, 0.006071494012593104, 0.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| R_VL_insert | orientation_in_body_wxyz | 1 | Fixed site in owning body frame; dynamic routing sites are configured separately. | Not established | [1.0, 0.0, 0.0, 0.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| R_VM_insert | position_in_body_m | m | Fixed site in owning body frame; dynamic routing sites are configured separately. | Not established | [-0.008671039771033588, 0.006071494012593104, 0.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| R_VM_insert | orientation_in_body_wxyz | 1 | Fixed site in owning body frame; dynamic routing sites are configured separately. | Not established | [1.0, 0.0, 0.0, 0.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| R_TA_origin | position_in_body_m | m | Fixed site in owning body frame; dynamic routing sites are configured separately. | Not established | [0.0926219512195122, 1.9445001615729926e-18, 0.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| R_TA_origin | orientation_in_body_wxyz | 1 | Fixed site in owning body frame; dynamic routing sites are configured separately. | Not established | [1.0, 0.0, 0.0, 0.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| R_TA_side0 | position_in_body_m | m | Fixed site in owning body frame; dynamic routing sites are configured separately. | Not established | [0.1085, 0.005585141066940424, 0.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| R_TA_side0 | orientation_in_body_wxyz | 1 | Fixed site in owning body frame; dynamic routing sites are configured separately. | Not established | [1.0, 0.0, 0.0, 0.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| R_SO_origin | position_in_body_m | m | Fixed site in owning body frame; dynamic routing sites are configured separately. | Not established | [0.0037048780487804744, 1.2833701066381752e-17, 0.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| R_SO_origin | orientation_in_body_wxyz | 1 | Fixed site in owning body frame; dynamic routing sites are configured separately. | Not established | [1.0, 0.0, 0.0, 0.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| R_SO_side0 | position_in_body_m | m | Fixed site in owning body frame; dynamic routing sites are configured separately. | Not established | [0.1085, -0.005585141066940424, 0.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| R_SO_side0 | orientation_in_body_wxyz | 1 | Fixed site in owning body frame; dynamic routing sites are configured separately. | Not established | [1.0, 0.0, 0.0, 0.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| R_RF_insert | position_in_body_m | m | Fixed site in owning body frame; dynamic routing sites are configured separately. | Not established | [-0.008671039771033588, 0.006071494012593104, 0.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| R_RF_insert | orientation_in_body_wxyz | 1 | Fixed site in owning body frame; dynamic routing sites are configured separately. | Not established | [1.0, 0.0, 0.0, 0.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| R_BFP_insert | position_in_body_m | m | Fixed site in owning body frame; dynamic routing sites are configured separately. | Not established | [0.03175609756097561, 0.0, 0.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| R_BFP_insert | orientation_in_body_wxyz | 1 | Fixed site in owning body frame; dynamic routing sites are configured separately. | Not established | [1.0, 0.0, 0.0, 0.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| R_SAM_insert | position_in_body_m | m | Fixed site in owning body frame; dynamic routing sites are configured separately. | Not established | [0.010585365853658537, 0.0, 0.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| R_SAM_insert | orientation_in_body_wxyz | 1 | Fixed site in owning body frame; dynamic routing sites are configured separately. | Not established | [1.0, 0.0, 0.0, 0.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| R_LG_side1 | position_in_body_m | m | Fixed site in owning body frame; dynamic routing sites are configured separately. | Not established | [0.1085, -0.005373291870339516, 0.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| R_LG_side1 | orientation_in_body_wxyz | 1 | Fixed site in owning body frame; dynamic routing sites are configured separately. | Not established | [1.0, 0.0, 0.0, 0.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| R_MG_side1 | position_in_body_m | m | Fixed site in owning body frame; dynamic routing sites are configured separately. | Not established | [0.1085, -0.005373291870339516, 0.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| R_MG_side1 | orientation_in_body_wxyz | 1 | Fixed site in owning body frame; dynamic routing sites are configured separately. | Not established | [1.0, 0.0, 0.0, 0.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| R_EDL_attachment0 | position_in_body_m | m | Fixed site in owning body frame; dynamic routing sites are configured separately. | Not established | [0.07361713995943205, -0.0, 0.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| R_EDL_attachment0 | orientation_in_body_wxyz | 1 | Fixed site in owning body frame; dynamic routing sites are configured separately. | Not established | [1.0, 0.0, 0.0, 0.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| R_EDL_attachment1 | position_in_body_m | m | Fixed site in owning body frame; dynamic routing sites are configured separately. | Not established | [0.1085, 0.0033012170385395534, 0.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| R_EDL_attachment1 | orientation_in_body_wxyz | 1 | Fixed site in owning body frame; dynamic routing sites are configured separately. | Not established | [1.0, 0.0, 0.0, 0.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+Each entry contains its values, units, meaning and source information. Select an entry to read all fields.
+
+<details>
+<summary>L_IP_origin · position_in_body_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | L_IP_origin |
+| Parameter | position_in_body_m |
+| Unit | m |
+| Meaning | Fixed site in owning body frame; dynamic routing sites are configured separately. |
+| Source value | Not established |
+| Value used in this model | [0.0465, 0.0, 0.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>L_IP_origin · orientation_in_body_wxyz</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | L_IP_origin |
+| Parameter | orientation_in_body_wxyz |
+| Unit | 1 |
+| Meaning | Fixed site in owning body frame; dynamic routing sites are configured separately. |
+| Source value | Not established |
+| Value used in this model | [1.0, 0.0, 0.0, 0.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>L_IP_side0 · position_in_body_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | L_IP_side0 |
+| Parameter | position_in_body_m |
+| Unit | m |
+| Meaning | Fixed site in owning body frame; dynamic routing sites are configured separately. |
+| Source value | Not established |
+| Value used in this model | [0.0, -0.005028361385832787, 0.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>L_IP_side0 · orientation_in_body_wxyz</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | L_IP_side0 |
+| Parameter | orientation_in_body_wxyz |
+| Unit | 1 |
+| Meaning | Fixed site in owning body frame; dynamic routing sites are configured separately. |
+| Source value | Not established |
+| Value used in this model | [1.0, 0.0, 0.0, 0.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>L_BFA_origin · position_in_body_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | L_BFA_origin |
+| Parameter | position_in_body_m |
+| Unit | m |
+| Meaning | Fixed site in owning body frame; dynamic routing sites are configured separately. |
+| Source value | Not established |
+| Value used in this model | [-0.006582361197662642, 0.005330337267324761, 0.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>L_BFA_origin · orientation_in_body_wxyz</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | L_BFA_origin |
+| Parameter | orientation_in_body_wxyz |
+| Unit | 1 |
+| Meaning | Fixed site in owning body frame; dynamic routing sites are configured separately. |
+| Source value | Not established |
+| Value used in this model | [1.0, 0.0, 0.0, 0.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>L_BFA_side0 · position_in_body_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | L_BFA_side0 |
+| Parameter | position_in_body_m |
+| Unit | m |
+| Meaning | Fixed site in owning body frame; dynamic routing sites are configured separately. |
+| Source value | Not established |
+| Value used in this model | [0.0, 0.005028361385832787, 0.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>L_BFA_side0 · orientation_in_body_wxyz</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | L_BFA_side0 |
+| Parameter | orientation_in_body_wxyz |
+| Unit | 1 |
+| Meaning | Fixed site in owning body frame; dynamic routing sites are configured separately. |
+| Source value | Not established |
+| Value used in this model | [1.0, 0.0, 0.0, 0.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>L_RF_origin · position_in_body_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | L_RF_origin |
+| Parameter | position_in_body_m |
+| Unit | m |
+| Meaning | Fixed site in owning body frame; dynamic routing sites are configured separately. |
+| Source value | Not established |
+| Value used in this model | [0.005420765027322405, 0.0, 0.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>L_RF_origin · orientation_in_body_wxyz</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | L_RF_origin |
+| Parameter | orientation_in_body_wxyz |
+| Unit | 1 |
+| Meaning | Fixed site in owning body frame; dynamic routing sites are configured separately. |
+| Source value | Not established |
+| Value used in this model | [1.0, 0.0, 0.0, 0.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>L_RF_side0 · position_in_body_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | L_RF_side0 |
+| Parameter | position_in_body_m |
+| Unit | m |
+| Meaning | Fixed site in owning body frame; dynamic routing sites are configured separately. |
+| Source value | Not established |
+| Value used in this model | [0.0, -0.005240210582433694, 0.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>L_RF_side0 · orientation_in_body_wxyz</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | L_RF_side0 |
+| Parameter | orientation_in_body_wxyz |
+| Unit | 1 |
+| Meaning | Fixed site in owning body frame; dynamic routing sites are configured separately. |
+| Source value | Not established |
+| Value used in this model | [1.0, 0.0, 0.0, 0.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>L_BFP_origin · position_in_body_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | L_BFP_origin |
+| Parameter | position_in_body_m |
+| Unit | m |
+| Meaning | Fixed site in owning body frame; dynamic routing sites are configured separately. |
+| Source value | Not established |
+| Value used in this model | [-0.006582361197662642, 0.005330337267324761, 0.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>L_BFP_origin · orientation_in_body_wxyz</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | L_BFP_origin |
+| Parameter | orientation_in_body_wxyz |
+| Unit | 1 |
+| Meaning | Fixed site in owning body frame; dynamic routing sites are configured separately. |
+| Source value | Not established |
+| Value used in this model | [1.0, 0.0, 0.0, 0.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>L_BFP_side0 · position_in_body_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | L_BFP_side0 |
+| Parameter | position_in_body_m |
+| Unit | m |
+| Meaning | Fixed site in owning body frame; dynamic routing sites are configured separately. |
+| Source value | Not established |
+| Value used in this model | [0.0, 0.005240210582433694, 0.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>L_BFP_side0 · orientation_in_body_wxyz</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | L_BFP_side0 |
+| Parameter | orientation_in_body_wxyz |
+| Unit | 1 |
+| Meaning | Fixed site in owning body frame; dynamic routing sites are configured separately. |
+| Source value | Not established |
+| Value used in this model | [1.0, 0.0, 0.0, 0.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>L_SAM_origin · position_in_body_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | L_SAM_origin |
+| Parameter | position_in_body_m |
+| Unit | m |
+| Meaning | Fixed site in owning body frame; dynamic routing sites are configured separately. |
+| Source value | Not established |
+| Value used in this model | [0.013551912568306013, 0.0, 0.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>L_SAM_origin · orientation_in_body_wxyz</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | L_SAM_origin |
+| Parameter | orientation_in_body_wxyz |
+| Unit | 1 |
+| Meaning | Fixed site in owning body frame; dynamic routing sites are configured separately. |
+| Source value | Not established |
+| Value used in this model | [1.0, 0.0, 0.0, 0.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>L_SAM_side0 · position_in_body_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | L_SAM_side0 |
+| Parameter | position_in_body_m |
+| Unit | m |
+| Meaning | Fixed site in owning body frame; dynamic routing sites are configured separately. |
+| Source value | Not established |
+| Value used in this model | [0.0, -0.005240210582433694, 0.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>L_SAM_side0 · orientation_in_body_wxyz</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | L_SAM_side0 |
+| Parameter | orientation_in_body_wxyz |
+| Unit | 1 |
+| Meaning | Fixed site in owning body frame; dynamic routing sites are configured separately. |
+| Source value | Not established |
+| Value used in this model | [1.0, 0.0, 0.0, 0.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>L_IP_insert · position_in_body_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | L_IP_insert |
+| Parameter | position_in_body_m |
+| Unit | m |
+| Meaning | Fixed site in owning body frame; dynamic routing sites are configured separately. |
+| Source value | Not established |
+| Value used in this model | [0.012366906474820145, 0.0, 0.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>L_IP_insert · orientation_in_body_wxyz</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | L_IP_insert |
+| Parameter | orientation_in_body_wxyz |
+| Unit | 1 |
+| Meaning | Fixed site in owning body frame; dynamic routing sites are configured separately. |
+| Source value | Not established |
+| Value used in this model | [1.0, 0.0, 0.0, 0.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>L_BFA_insert · position_in_body_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | L_BFA_insert |
+| Parameter | position_in_body_m |
+| Unit | m |
+| Meaning | Fixed site in owning body frame; dynamic routing sites are configured separately. |
+| Source value | Not established |
+| Value used in this model | [0.049075025693730734, 0.0, 0.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>L_BFA_insert · orientation_in_body_wxyz</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | L_BFA_insert |
+| Parameter | orientation_in_body_wxyz |
+| Unit | 1 |
+| Meaning | Fixed site in owning body frame; dynamic routing sites are configured separately. |
+| Source value | Not established |
+| Value used in this model | [1.0, 0.0, 0.0, 0.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>L_VL_origin · position_in_body_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | L_VL_origin |
+| Parameter | position_in_body_m |
+| Unit | m |
+| Meaning | Fixed site in owning body frame; dynamic routing sites are configured separately. |
+| Source value | Not established |
+| Value used in this model | [0.0, 1.1695376931857223e-17, 0.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>L_VL_origin · orientation_in_body_wxyz</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | L_VL_origin |
+| Parameter | orientation_in_body_wxyz |
+| Unit | 1 |
+| Meaning | Fixed site in owning body frame; dynamic routing sites are configured separately. |
+| Source value | Not established |
+| Value used in this model | [1.0, 0.0, 0.0, 0.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>L_VL_side0 · position_in_body_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | L_VL_side0 |
+| Parameter | position_in_body_m |
+| Unit | m |
+| Meaning | Fixed site in owning body frame; dynamic routing sites are configured separately. |
+| Source value | Not established |
+| Value used in this model | [0.0955, 0.011643902439024393, 0.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>L_VL_side0 · orientation_in_body_wxyz</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | L_VL_side0 |
+| Parameter | orientation_in_body_wxyz |
+| Unit | 1 |
+| Meaning | Fixed site in owning body frame; dynamic routing sites are configured separately. |
+| Source value | Not established |
+| Value used in this model | [1.0, 0.0, 0.0, 0.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>L_VM_origin · position_in_body_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | L_VM_origin |
+| Parameter | position_in_body_m |
+| Unit | m |
+| Meaning | Fixed site in owning body frame; dynamic routing sites are configured separately. |
+| Source value | Not established |
+| Value used in this model | [0.0, 1.1695376931857223e-17, 0.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>L_VM_origin · orientation_in_body_wxyz</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | L_VM_origin |
+| Parameter | orientation_in_body_wxyz |
+| Unit | 1 |
+| Meaning | Fixed site in owning body frame; dynamic routing sites are configured separately. |
+| Source value | Not established |
+| Value used in this model | [1.0, 0.0, 0.0, 0.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>L_VM_side0 · position_in_body_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | L_VM_side0 |
+| Parameter | position_in_body_m |
+| Unit | m |
+| Meaning | Fixed site in owning body frame; dynamic routing sites are configured separately. |
+| Source value | Not established |
+| Value used in this model | [0.0955, 0.011643902439024393, 0.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>L_VM_side0 · orientation_in_body_wxyz</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | L_VM_side0 |
+| Parameter | orientation_in_body_wxyz |
+| Unit | 1 |
+| Meaning | Fixed site in owning body frame; dynamic routing sites are configured separately. |
+| Source value | Not established |
+| Value used in this model | [1.0, 0.0, 0.0, 0.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>L_RF_side1 · position_in_body_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | L_RF_side1 |
+| Parameter | position_in_body_m |
+| Unit | m |
+| Meaning | Fixed site in owning body frame; dynamic routing sites are configured separately. |
+| Source value | Not established |
+| Value used in this model | [0.0955, 0.011643902439024393, 0.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>L_RF_side1 · orientation_in_body_wxyz</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | L_RF_side1 |
+| Parameter | orientation_in_body_wxyz |
+| Unit | 1 |
+| Meaning | Fixed site in owning body frame; dynamic routing sites are configured separately. |
+| Source value | Not established |
+| Value used in this model | [1.0, 0.0, 0.0, 0.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>L_BFP_side1 · position_in_body_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | L_BFP_side1 |
+| Parameter | position_in_body_m |
+| Unit | m |
+| Meaning | Fixed site in owning body frame; dynamic routing sites are configured separately. |
+| Source value | Not established |
+| Value used in this model | [0.0955, -0.006288252698920432, 0.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>L_BFP_side1 · orientation_in_body_wxyz</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | L_BFP_side1 |
+| Parameter | orientation_in_body_wxyz |
+| Unit | 1 |
+| Meaning | Fixed site in owning body frame; dynamic routing sites are configured separately. |
+| Source value | Not established |
+| Value used in this model | [1.0, 0.0, 0.0, 0.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>L_SAM_side1 · position_in_body_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | L_SAM_side1 |
+| Parameter | position_in_body_m |
+| Unit | m |
+| Meaning | Fixed site in owning body frame; dynamic routing sites are configured separately. |
+| Source value | Not established |
+| Value used in this model | [0.0955, -0.006288252698920432, 0.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>L_SAM_side1 · orientation_in_body_wxyz</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | L_SAM_side1 |
+| Parameter | orientation_in_body_wxyz |
+| Unit | 1 |
+| Meaning | Fixed site in owning body frame; dynamic routing sites are configured separately. |
+| Source value | Not established |
+| Value used in this model | [1.0, 0.0, 0.0, 0.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>L_LG_origin · position_in_body_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | L_LG_origin |
+| Parameter | position_in_body_m |
+| Unit | m |
+| Meaning | Fixed site in owning body frame; dynamic routing sites are configured separately. |
+| Source value | Not established |
+| Value used in this model | [0.08961099691675231, 7.211948776068176e-19, 0.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>L_LG_origin · orientation_in_body_wxyz</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | L_LG_origin |
+| Parameter | orientation_in_body_wxyz |
+| Unit | 1 |
+| Meaning | Fixed site in owning body frame; dynamic routing sites are configured separately. |
+| Source value | Not established |
+| Value used in this model | [1.0, 0.0, 0.0, 0.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>L_LG_side0 · position_in_body_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | L_LG_side0 |
+| Parameter | position_in_body_m |
+| Unit | m |
+| Meaning | Fixed site in owning body frame; dynamic routing sites are configured separately. |
+| Source value | Not established |
+| Value used in this model | [0.0955, -0.006477903391572458, 0.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>L_LG_side0 · orientation_in_body_wxyz</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | L_LG_side0 |
+| Parameter | orientation_in_body_wxyz |
+| Unit | 1 |
+| Meaning | Fixed site in owning body frame; dynamic routing sites are configured separately. |
+| Source value | Not established |
+| Value used in this model | [1.0, 0.0, 0.0, 0.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>L_MG_origin · position_in_body_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | L_MG_origin |
+| Parameter | position_in_body_m |
+| Unit | m |
+| Meaning | Fixed site in owning body frame; dynamic routing sites are configured separately. |
+| Source value | Not established |
+| Value used in this model | [0.08961099691675231, 7.211948776068176e-19, 0.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>L_MG_origin · orientation_in_body_wxyz</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | L_MG_origin |
+| Parameter | orientation_in_body_wxyz |
+| Unit | 1 |
+| Meaning | Fixed site in owning body frame; dynamic routing sites are configured separately. |
+| Source value | Not established |
+| Value used in this model | [1.0, 0.0, 0.0, 0.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>L_MG_side0 · position_in_body_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | L_MG_side0 |
+| Parameter | position_in_body_m |
+| Unit | m |
+| Meaning | Fixed site in owning body frame; dynamic routing sites are configured separately. |
+| Source value | Not established |
+| Value used in this model | [0.0955, -0.006477903391572458, 0.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>L_MG_side0 · orientation_in_body_wxyz</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | L_MG_side0 |
+| Parameter | orientation_in_body_wxyz |
+| Unit | 1 |
+| Meaning | Fixed site in owning body frame; dynamic routing sites are configured separately. |
+| Source value | Not established |
+| Value used in this model | [1.0, 0.0, 0.0, 0.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>L_VL_insert · position_in_body_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | L_VL_insert |
+| Parameter | position_in_body_m |
+| Unit | m |
+| Meaning | Fixed site in owning body frame; dynamic routing sites are configured separately. |
+| Source value | Not established |
+| Value used in this model | [-0.008671039771033588, 0.006071494012593104, 0.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>L_VL_insert · orientation_in_body_wxyz</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | L_VL_insert |
+| Parameter | orientation_in_body_wxyz |
+| Unit | 1 |
+| Meaning | Fixed site in owning body frame; dynamic routing sites are configured separately. |
+| Source value | Not established |
+| Value used in this model | [1.0, 0.0, 0.0, 0.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>L_VM_insert · position_in_body_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | L_VM_insert |
+| Parameter | position_in_body_m |
+| Unit | m |
+| Meaning | Fixed site in owning body frame; dynamic routing sites are configured separately. |
+| Source value | Not established |
+| Value used in this model | [-0.008671039771033588, 0.006071494012593104, 0.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>L_VM_insert · orientation_in_body_wxyz</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | L_VM_insert |
+| Parameter | orientation_in_body_wxyz |
+| Unit | 1 |
+| Meaning | Fixed site in owning body frame; dynamic routing sites are configured separately. |
+| Source value | Not established |
+| Value used in this model | [1.0, 0.0, 0.0, 0.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>L_TA_origin · position_in_body_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | L_TA_origin |
+| Parameter | position_in_body_m |
+| Unit | m |
+| Meaning | Fixed site in owning body frame; dynamic routing sites are configured separately. |
+| Source value | Not established |
+| Value used in this model | [0.0926219512195122, 1.9445001615729926e-18, 0.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>L_TA_origin · orientation_in_body_wxyz</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | L_TA_origin |
+| Parameter | orientation_in_body_wxyz |
+| Unit | 1 |
+| Meaning | Fixed site in owning body frame; dynamic routing sites are configured separately. |
+| Source value | Not established |
+| Value used in this model | [1.0, 0.0, 0.0, 0.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>L_TA_side0 · position_in_body_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | L_TA_side0 |
+| Parameter | position_in_body_m |
+| Unit | m |
+| Meaning | Fixed site in owning body frame; dynamic routing sites are configured separately. |
+| Source value | Not established |
+| Value used in this model | [0.1085, 0.005585141066940424, 0.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>L_TA_side0 · orientation_in_body_wxyz</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | L_TA_side0 |
+| Parameter | orientation_in_body_wxyz |
+| Unit | 1 |
+| Meaning | Fixed site in owning body frame; dynamic routing sites are configured separately. |
+| Source value | Not established |
+| Value used in this model | [1.0, 0.0, 0.0, 0.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>L_SO_origin · position_in_body_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | L_SO_origin |
+| Parameter | position_in_body_m |
+| Unit | m |
+| Meaning | Fixed site in owning body frame; dynamic routing sites are configured separately. |
+| Source value | Not established |
+| Value used in this model | [0.0037048780487804744, 1.2833701066381752e-17, 0.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>L_SO_origin · orientation_in_body_wxyz</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | L_SO_origin |
+| Parameter | orientation_in_body_wxyz |
+| Unit | 1 |
+| Meaning | Fixed site in owning body frame; dynamic routing sites are configured separately. |
+| Source value | Not established |
+| Value used in this model | [1.0, 0.0, 0.0, 0.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>L_SO_side0 · position_in_body_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | L_SO_side0 |
+| Parameter | position_in_body_m |
+| Unit | m |
+| Meaning | Fixed site in owning body frame; dynamic routing sites are configured separately. |
+| Source value | Not established |
+| Value used in this model | [0.1085, -0.005585141066940424, 0.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>L_SO_side0 · orientation_in_body_wxyz</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | L_SO_side0 |
+| Parameter | orientation_in_body_wxyz |
+| Unit | 1 |
+| Meaning | Fixed site in owning body frame; dynamic routing sites are configured separately. |
+| Source value | Not established |
+| Value used in this model | [1.0, 0.0, 0.0, 0.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>L_RF_insert · position_in_body_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | L_RF_insert |
+| Parameter | position_in_body_m |
+| Unit | m |
+| Meaning | Fixed site in owning body frame; dynamic routing sites are configured separately. |
+| Source value | Not established |
+| Value used in this model | [-0.008671039771033588, 0.006071494012593104, 0.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>L_RF_insert · orientation_in_body_wxyz</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | L_RF_insert |
+| Parameter | orientation_in_body_wxyz |
+| Unit | 1 |
+| Meaning | Fixed site in owning body frame; dynamic routing sites are configured separately. |
+| Source value | Not established |
+| Value used in this model | [1.0, 0.0, 0.0, 0.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>L_BFP_insert · position_in_body_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | L_BFP_insert |
+| Parameter | position_in_body_m |
+| Unit | m |
+| Meaning | Fixed site in owning body frame; dynamic routing sites are configured separately. |
+| Source value | Not established |
+| Value used in this model | [0.03175609756097561, 0.0, 0.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>L_BFP_insert · orientation_in_body_wxyz</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | L_BFP_insert |
+| Parameter | orientation_in_body_wxyz |
+| Unit | 1 |
+| Meaning | Fixed site in owning body frame; dynamic routing sites are configured separately. |
+| Source value | Not established |
+| Value used in this model | [1.0, 0.0, 0.0, 0.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>L_SAM_insert · position_in_body_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | L_SAM_insert |
+| Parameter | position_in_body_m |
+| Unit | m |
+| Meaning | Fixed site in owning body frame; dynamic routing sites are configured separately. |
+| Source value | Not established |
+| Value used in this model | [0.010585365853658537, 0.0, 0.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>L_SAM_insert · orientation_in_body_wxyz</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | L_SAM_insert |
+| Parameter | orientation_in_body_wxyz |
+| Unit | 1 |
+| Meaning | Fixed site in owning body frame; dynamic routing sites are configured separately. |
+| Source value | Not established |
+| Value used in this model | [1.0, 0.0, 0.0, 0.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>L_LG_side1 · position_in_body_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | L_LG_side1 |
+| Parameter | position_in_body_m |
+| Unit | m |
+| Meaning | Fixed site in owning body frame; dynamic routing sites are configured separately. |
+| Source value | Not established |
+| Value used in this model | [0.1085, -0.005373291870339516, 0.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>L_LG_side1 · orientation_in_body_wxyz</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | L_LG_side1 |
+| Parameter | orientation_in_body_wxyz |
+| Unit | 1 |
+| Meaning | Fixed site in owning body frame; dynamic routing sites are configured separately. |
+| Source value | Not established |
+| Value used in this model | [1.0, 0.0, 0.0, 0.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>L_MG_side1 · position_in_body_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | L_MG_side1 |
+| Parameter | position_in_body_m |
+| Unit | m |
+| Meaning | Fixed site in owning body frame; dynamic routing sites are configured separately. |
+| Source value | Not established |
+| Value used in this model | [0.1085, -0.005373291870339516, 0.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>L_MG_side1 · orientation_in_body_wxyz</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | L_MG_side1 |
+| Parameter | orientation_in_body_wxyz |
+| Unit | 1 |
+| Meaning | Fixed site in owning body frame; dynamic routing sites are configured separately. |
+| Source value | Not established |
+| Value used in this model | [1.0, 0.0, 0.0, 0.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>L_EDL_attachment0 · position_in_body_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | L_EDL_attachment0 |
+| Parameter | position_in_body_m |
+| Unit | m |
+| Meaning | Fixed site in owning body frame; dynamic routing sites are configured separately. |
+| Source value | Not established |
+| Value used in this model | [0.07361713995943205, -0.0, -0.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>L_EDL_attachment0 · orientation_in_body_wxyz</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | L_EDL_attachment0 |
+| Parameter | orientation_in_body_wxyz |
+| Unit | 1 |
+| Meaning | Fixed site in owning body frame; dynamic routing sites are configured separately. |
+| Source value | Not established |
+| Value used in this model | [1.0, 0.0, 0.0, 0.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>L_EDL_attachment1 · position_in_body_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | L_EDL_attachment1 |
+| Parameter | position_in_body_m |
+| Unit | m |
+| Meaning | Fixed site in owning body frame; dynamic routing sites are configured separately. |
+| Source value | Not established |
+| Value used in this model | [0.1085, 0.0033012170385395534, -0.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>L_EDL_attachment1 · orientation_in_body_wxyz</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | L_EDL_attachment1 |
+| Parameter | orientation_in_body_wxyz |
+| Unit | 1 |
+| Meaning | Fixed site in owning body frame; dynamic routing sites are configured separately. |
+| Source value | Not established |
+| Value used in this model | [1.0, 0.0, 0.0, 0.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>L_FDL_attachment0 · position_in_body_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | L_FDL_attachment0 |
+| Parameter | position_in_body_m |
+| Unit | m |
+| Meaning | Fixed site in owning body frame; dynamic routing sites are configured separately. |
+| Source value | Not established |
+| Value used in this model | [0.08495131845841784, -0.0, -0.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>L_FDL_attachment0 · orientation_in_body_wxyz</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | L_FDL_attachment0 |
+| Parameter | orientation_in_body_wxyz |
+| Unit | 1 |
+| Meaning | Fixed site in owning body frame; dynamic routing sites are configured separately. |
+| Source value | Not established |
+| Value used in this model | [1.0, 0.0, 0.0, 0.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>L_FDL_attachment1 · position_in_body_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | L_FDL_attachment1 |
+| Parameter | position_in_body_m |
+| Unit | m |
+| Meaning | Fixed site in owning body frame; dynamic routing sites are configured separately. |
+| Source value | Not established |
+| Value used in this model | [0.1085, -0.0033012170385395534, -0.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>L_FDL_attachment1 · orientation_in_body_wxyz</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | L_FDL_attachment1 |
+| Parameter | orientation_in_body_wxyz |
+| Unit | 1 |
+| Meaning | Fixed site in owning body frame; dynamic routing sites are configured separately. |
+| Source value | Not established |
+| Value used in this model | [1.0, 0.0, 0.0, 0.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>L_FHL_attachment0 · position_in_body_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | L_FHL_attachment0 |
+| Parameter | position_in_body_m |
+| Unit | m |
+| Meaning | Fixed site in owning body frame; dynamic routing sites are configured separately. |
+| Source value | Not established |
+| Value used in this model | [0.03343969641973272, 7.163194222020616e-05, -0.0028831705983929467] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>L_FHL_attachment0 · orientation_in_body_wxyz</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | L_FHL_attachment0 |
+| Parameter | orientation_in_body_wxyz |
+| Unit | 1 |
+| Meaning | Fixed site in owning body frame; dynamic routing sites are configured separately. |
+| Source value | Not established |
+| Value used in this model | [1.0, 0.0, 0.0, 0.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>L_FHL_attachment1 · position_in_body_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | L_FHL_attachment1 |
+| Parameter | position_in_body_m |
+| Unit | m |
+| Meaning | Fixed site in owning body frame; dynamic routing sites are configured separately. |
+| Source value | Not established |
+| Value used in this model | [0.10655770499917504, -0.0031338974721341725, -0.00980539873286808] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>L_FHL_attachment1 · orientation_in_body_wxyz</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | L_FHL_attachment1 |
+| Parameter | orientation_in_body_wxyz |
+| Unit | 1 |
+| Meaning | Fixed site in owning body frame; dynamic routing sites are configured separately. |
+| Source value | Not established |
+| Value used in this model | [1.0, 0.0, 0.0, 0.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>L_EDL_osim_0 · position_in_body_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | L_EDL_osim_0 |
+| Parameter | position_in_body_m |
+| Unit | m |
+| Meaning | Fixed site in owning body frame; dynamic routing sites are configured separately. |
+| Source value | Not established |
+| Value used in this model | [0.007115781224220425, 0.00946437036584518, -0.004137299386552081] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>L_EDL_osim_0 · orientation_in_body_wxyz</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | L_EDL_osim_0 |
+| Parameter | orientation_in_body_wxyz |
+| Unit | 1 |
+| Meaning | Fixed site in owning body frame; dynamic routing sites are configured separately. |
+| Source value | Not established |
+| Value used in this model | [1.0, 0.0, 0.0, 0.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>L_EDL_osim_1 · position_in_body_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | L_EDL_osim_1 |
+| Parameter | position_in_body_m |
+| Unit | m |
+| Meaning | Fixed site in owning body frame; dynamic routing sites are configured separately. |
+| Source value | Not established |
+| Value used in this model | [0.015395149315294506, 0.012786301686307396, -0.004362979134113302] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>L_EDL_osim_1 · orientation_in_body_wxyz</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | L_EDL_osim_1 |
+| Parameter | orientation_in_body_wxyz |
+| Unit | 1 |
+| Meaning | Fixed site in owning body frame; dynamic routing sites are configured separately. |
+| Source value | Not established |
+| Value used in this model | [1.0, 0.0, 0.0, 0.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>L_FDL_osim_0 · position_in_body_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | L_FDL_osim_0 |
+| Parameter | position_in_body_m |
+| Unit | m |
+| Meaning | Fixed site in owning body frame; dynamic routing sites are configured separately. |
+| Source value | Not established |
+| Value used in this model | [0.03338599241049331, 7.163194222020615e-05, -0.0048533751261112005] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>L_FDL_osim_0 · orientation_in_body_wxyz</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | L_FDL_osim_0 |
+| Parameter | orientation_in_body_wxyz |
+| Unit | 1 |
+| Meaning | Fixed site in owning body frame; dynamic routing sites are configured separately. |
+| Source value | Not established |
+| Value used in this model | [1.0, 0.0, 0.0, 0.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>L_FDL_osim_1 · position_in_body_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | L_FDL_osim_1 |
+| Parameter | position_in_body_m |
+| Unit | m |
+| Meaning | Fixed site in owning body frame; dynamic routing sites are configured separately. |
+| Source value | Not established |
+| Value used in this model | [0.10562683550569212, -0.0013968228732940935, -0.009780025009899034] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>L_FDL_osim_1 · orientation_in_body_wxyz</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | L_FDL_osim_1 |
+| Parameter | orientation_in_body_wxyz |
+| Unit | 1 |
+| Meaning | Fixed site in owning body frame; dynamic routing sites are configured separately. |
+| Source value | Not established |
+| Value used in this model | [1.0, 0.0, 0.0, 0.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>L_TA_insert · position_in_body_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | L_TA_insert |
+| Parameter | position_in_body_m |
+| Unit | m |
+| Meaning | Fixed site in owning body frame; dynamic routing sites are configured separately. |
+| Source value | Not established |
+| Value used in this model | [0.014586357039187228, 0.0, 0.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>L_TA_insert · orientation_in_body_wxyz</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | L_TA_insert |
+| Parameter | orientation_in_body_wxyz |
+| Unit | 1 |
+| Meaning | Fixed site in owning body frame; dynamic routing sites are configured separately. |
+| Source value | Not established |
+| Value used in this model | [1.0, 0.0, 0.0, 0.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>L_SO_insert · position_in_body_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | L_SO_insert |
+| Parameter | position_in_body_m |
+| Unit | m |
+| Meaning | Fixed site in owning body frame; dynamic routing sites are configured separately. |
+| Source value | Not established |
+| Value used in this model | [-0.015473543498456494, -0.0016263803013220528, 0.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>L_SO_insert · orientation_in_body_wxyz</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | L_SO_insert |
+| Parameter | orientation_in_body_wxyz |
+| Unit | 1 |
+| Meaning | Fixed site in owning body frame; dynamic routing sites are configured separately. |
+| Source value | Not established |
+| Value used in this model | [1.0, 0.0, 0.0, 0.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>L_LG_insert · position_in_body_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | L_LG_insert |
+| Parameter | position_in_body_m |
+| Unit | m |
+| Meaning | Fixed site in owning body frame; dynamic routing sites are configured separately. |
+| Source value | Not established |
+| Value used in this model | [-0.015473543498456494, -0.0016263803013220528, 0.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>L_LG_insert · orientation_in_body_wxyz</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | L_LG_insert |
+| Parameter | orientation_in_body_wxyz |
+| Unit | 1 |
+| Meaning | Fixed site in owning body frame; dynamic routing sites are configured separately. |
+| Source value | Not established |
+| Value used in this model | [1.0, 0.0, 0.0, 0.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>L_MG_insert · position_in_body_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | L_MG_insert |
+| Parameter | position_in_body_m |
+| Unit | m |
+| Meaning | Fixed site in owning body frame; dynamic routing sites are configured separately. |
+| Source value | Not established |
+| Value used in this model | [-0.015473543498456494, -0.0016263803013220528, 0.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>L_MG_insert · orientation_in_body_wxyz</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | L_MG_insert |
+| Parameter | orientation_in_body_wxyz |
+| Unit | 1 |
+| Meaning | Fixed site in owning body frame; dynamic routing sites are configured separately. |
+| Source value | Not established |
+| Value used in this model | [1.0, 0.0, 0.0, 0.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>L_EDL_attachment2 · position_in_body_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | L_EDL_attachment2 |
+| Parameter | position_in_body_m |
+| Unit | m |
+| Meaning | Fixed site in owning body frame; dynamic routing sites are configured separately. |
+| Source value | Not established |
+| Value used in this model | [0.067, 0.001694772344013491, -0.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>L_EDL_attachment2 · orientation_in_body_wxyz</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | L_EDL_attachment2 |
+| Parameter | orientation_in_body_wxyz |
+| Unit | 1 |
+| Meaning | Fixed site in owning body frame; dynamic routing sites are configured separately. |
+| Source value | Not established |
+| Value used in this model | [1.0, 0.0, 0.0, 0.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>L_FDL_attachment2 · position_in_body_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | L_FDL_attachment2 |
+| Parameter | position_in_body_m |
+| Unit | m |
+| Meaning | Fixed site in owning body frame; dynamic routing sites are configured separately. |
+| Source value | Not established |
+| Value used in this model | [0.067, -0.001694772344013491, -0.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>L_FDL_attachment2 · orientation_in_body_wxyz</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | L_FDL_attachment2 |
+| Parameter | orientation_in_body_wxyz |
+| Unit | 1 |
+| Meaning | Fixed site in owning body frame; dynamic routing sites are configured separately. |
+| Source value | Not established |
+| Value used in this model | [1.0, 0.0, 0.0, 0.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>L_FHL_attachment2 · position_in_body_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | L_FHL_attachment2 |
+| Parameter | position_in_body_m |
+| Unit | m |
+| Meaning | Fixed site in owning body frame; dynamic routing sites are configured separately. |
+| Source value | Not established |
+| Value used in this model | [0.011526881720430107, -0.009193881041317593, -0.010005253738280926] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>L_FHL_attachment2 · orientation_in_body_wxyz</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | L_FHL_attachment2 |
+| Parameter | orientation_in_body_wxyz |
+| Unit | 1 |
+| Meaning | Fixed site in owning body frame; dynamic routing sites are configured separately. |
+| Source value | Not established |
+| Value used in this model | [1.0, 0.0, 0.0, 0.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>L_FHL_attachment3 · position_in_body_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | L_FHL_attachment3 |
+| Parameter | position_in_body_m |
+| Unit | m |
+| Meaning | Fixed site in owning body frame; dynamic routing sites are configured separately. |
+| Source value | Not established |
+| Value used in this model | [0.028464994026284343, -0.009722449115121563, -0.00844516703189864] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>L_FHL_attachment3 · orientation_in_body_wxyz</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | L_FHL_attachment3 |
+| Parameter | orientation_in_body_wxyz |
+| Unit | 1 |
+| Meaning | Fixed site in owning body frame; dynamic routing sites are configured separately. |
+| Source value | Not established |
+| Value used in this model | [1.0, 0.0, 0.0, 0.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>L_EDL_osim_2 · position_in_body_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | L_EDL_osim_2 |
+| Parameter | position_in_body_m |
+| Unit | m |
+| Meaning | Fixed site in owning body frame; dynamic routing sites are configured separately. |
+| Source value | Not established |
+| Value used in this model | [0.01331995221027479, -0.00016017214357696066, -0.0016603620779240757] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>L_EDL_osim_2 · orientation_in_body_wxyz</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | L_EDL_osim_2 |
+| Parameter | orientation_in_body_wxyz |
+| Unit | 1 |
+| Meaning | Fixed site in owning body frame; dynamic routing sites are configured separately. |
+| Source value | Not established |
+| Value used in this model | [1.0, 0.0, 0.0, 0.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>L_EDL_osim_3 · position_in_body_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | L_EDL_osim_3 |
+| Parameter | position_in_body_m |
+| Unit | m |
+| Meaning | Fixed site in owning body frame; dynamic routing sites are configured separately. |
+| Source value | Not established |
+| Value used in this model | [0.02643178016726403, 0.0011372222193964286, -0.0012548039085772762] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>L_EDL_osim_3 · orientation_in_body_wxyz</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | L_EDL_osim_3 |
+| Parameter | orientation_in_body_wxyz |
+| Unit | 1 |
+| Meaning | Fixed site in owning body frame; dynamic routing sites are configured separately. |
+| Source value | Not established |
+| Value used in this model | [1.0, 0.0, 0.0, 0.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>L_EDL_osim_4 · position_in_body_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | L_EDL_osim_4 |
+| Parameter | position_in_body_m |
+| Unit | m |
+| Meaning | Fixed site in owning body frame; dynamic routing sites are configured separately. |
+| Source value | Not established |
+| Value used in this model | [0.04063225806451612, 0.0069514710312401345, -0.002887930700403582] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>L_EDL_osim_4 · orientation_in_body_wxyz</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | L_EDL_osim_4 |
+| Parameter | orientation_in_body_wxyz |
+| Unit | 1 |
+| Meaning | Fixed site in owning body frame; dynamic routing sites are configured separately. |
+| Source value | Not established |
+| Value used in this model | [1.0, 0.0, 0.0, 0.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>L_EDL_osim_5 · position_in_body_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | L_EDL_osim_5 |
+| Parameter | position_in_body_m |
+| Unit | m |
+| Meaning | Fixed site in owning body frame; dynamic routing sites are configured separately. |
+| Source value | Not established |
+| Value used in this model | [0.06258136200716845, 0.009113794969529111, -0.005317565813834683] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>L_EDL_osim_5 · orientation_in_body_wxyz</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | L_EDL_osim_5 |
+| Parameter | orientation_in_body_wxyz |
+| Unit | 1 |
+| Meaning | Fixed site in owning body frame; dynamic routing sites are configured separately. |
+| Source value | Not established |
+| Value used in this model | [1.0, 0.0, 0.0, 0.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>L_FDL_osim_2 · position_in_body_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | L_FDL_osim_2 |
+| Parameter | position_in_body_m |
+| Unit | m |
+| Meaning | Fixed site in owning body frame; dynamic routing sites are configured separately. |
+| Source value | Not established |
+| Value used in this model | [0.012183273596176821, -0.008393020323432785, -0.009984951070462588] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>L_FDL_osim_2 · orientation_in_body_wxyz</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | L_FDL_osim_2 |
+| Parameter | orientation_in_body_wxyz |
+| Unit | 1 |
+| Meaning | Fixed site in owning body frame; dynamic routing sites are configured separately. |
+| Source value | Not established |
+| Value used in this model | [1.0, 0.0, 0.0, 0.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>L_FDL_osim_3 · position_in_body_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | L_FDL_osim_3 |
+| Parameter | position_in_body_m |
+| Unit | m |
+| Meaning | Fixed site in owning body frame; dynamic routing sites are configured separately. |
+| Source value | Not established |
+| Value used in this model | [0.026896057347670248, -0.008409037537790478, -0.009529874199119843] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>L_FDL_osim_3 · orientation_in_body_wxyz</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | L_FDL_osim_3 |
+| Parameter | orientation_in_body_wxyz |
+| Unit | 1 |
+| Meaning | Fixed site in owning body frame; dynamic routing sites are configured separately. |
+| Source value | Not established |
+| Value used in this model | [1.0, 0.0, 0.0, 0.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>L_paw · position_in_body_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | L_paw |
+| Parameter | position_in_body_m |
+| Unit | m |
+| Meaning | Fixed site in owning body frame; dynamic routing sites are configured separately. |
+| Source value | Not established |
+| Value used in this model | [0.027058823529411764, 0.0, 0.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>L_paw · orientation_in_body_wxyz</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | L_paw |
+| Parameter | orientation_in_body_wxyz |
+| Unit | 1 |
+| Meaning | Fixed site in owning body frame; dynamic routing sites are configured separately. |
+| Source value | Not established |
+| Value used in this model | [1.0, 0.0, 0.0, 0.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>L_EDL_attachment3 · position_in_body_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | L_EDL_attachment3 |
+| Parameter | position_in_body_m |
+| Unit | m |
+| Meaning | Fixed site in owning body frame; dynamic routing sites are configured separately. |
+| Source value | Not established |
+| Value used in this model | [0.0119952, -0.0, -0.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>L_EDL_attachment3 · orientation_in_body_wxyz</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | L_EDL_attachment3 |
+| Parameter | orientation_in_body_wxyz |
+| Unit | 1 |
+| Meaning | Fixed site in owning body frame; dynamic routing sites are configured separately. |
+| Source value | Not established |
+| Value used in this model | [1.0, 0.0, 0.0, 0.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>L_FDL_attachment3 · position_in_body_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | L_FDL_attachment3 |
+| Parameter | position_in_body_m |
+| Unit | m |
+| Meaning | Fixed site in owning body frame; dynamic routing sites are configured separately. |
+| Source value | Not established |
+| Value used in this model | [0.0119952, -0.0, -0.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>L_FDL_attachment3 · orientation_in_body_wxyz</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | L_FDL_attachment3 |
+| Parameter | orientation_in_body_wxyz |
+| Unit | 1 |
+| Meaning | Fixed site in owning body frame; dynamic routing sites are configured separately. |
+| Source value | Not established |
+| Value used in this model | [1.0, 0.0, 0.0, 0.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>L_FHL_attachment4 · position_in_body_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | L_FHL_attachment4 |
+| Parameter | position_in_body_m |
+| Unit | m |
+| Meaning | Fixed site in owning body frame; dynamic routing sites are configured separately. |
+| Source value | Not established |
+| Value used in this model | [-0.0030827285921625532, -0.0038664731494920165, -0.0027429815439340534] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>L_FHL_attachment4 · orientation_in_body_wxyz</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | L_FHL_attachment4 |
+| Parameter | orientation_in_body_wxyz |
+| Unit | 1 |
+| Meaning | Fixed site in owning body frame; dynamic routing sites are configured separately. |
+| Source value | Not established |
+| Value used in this model | [1.0, 0.0, 0.0, 0.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>L_EDL_osim_6 · position_in_body_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | L_EDL_osim_6 |
+| Parameter | position_in_body_m |
+| Unit | m |
+| Meaning | Fixed site in owning body frame; dynamic routing sites are configured separately. |
+| Source value | Not established |
+| Value used in this model | [0.008725689404934686, 0.004232220609579099, -0.009600435403769187] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>L_EDL_osim_6 · orientation_in_body_wxyz</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | L_EDL_osim_6 |
+| Parameter | orientation_in_body_wxyz |
+| Unit | 1 |
+| Meaning | Fixed site in owning body frame; dynamic routing sites are configured separately. |
+| Source value | Not established |
+| Value used in this model | [1.0, 0.0, 0.0, 0.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>L_FDL_osim_4 · position_in_body_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | L_FDL_osim_4 |
+| Parameter | position_in_body_m |
+| Unit | m |
+| Meaning | Fixed site in owning body frame; dynamic routing sites are configured separately. |
+| Source value | Not established |
+| Value used in this model | [-0.0030827285921625532, -0.0038664731494920165, -0.013714907719670266] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>L_FDL_osim_4 · orientation_in_body_wxyz</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | L_FDL_osim_4 |
+| Parameter | orientation_in_body_wxyz |
+| Unit | 1 |
+| Meaning | Fixed site in owning body frame; dynamic routing sites are configured separately. |
+| Source value | Not established |
+| Value used in this model | [1.0, 0.0, 0.0, 0.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>R_IP_origin · position_in_body_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | R_IP_origin |
+| Parameter | position_in_body_m |
+| Unit | m |
+| Meaning | Fixed site in owning body frame; dynamic routing sites are configured separately. |
+| Source value | Not established |
+| Value used in this model | [0.0465, 0.0, 0.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>R_IP_origin · orientation_in_body_wxyz</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | R_IP_origin |
+| Parameter | orientation_in_body_wxyz |
+| Unit | 1 |
+| Meaning | Fixed site in owning body frame; dynamic routing sites are configured separately. |
+| Source value | Not established |
+| Value used in this model | [1.0, 0.0, 0.0, 0.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>R_IP_side0 · position_in_body_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | R_IP_side0 |
+| Parameter | position_in_body_m |
+| Unit | m |
+| Meaning | Fixed site in owning body frame; dynamic routing sites are configured separately. |
+| Source value | Not established |
+| Value used in this model | [0.0, -0.005028361385832787, 0.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>R_IP_side0 · orientation_in_body_wxyz</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | R_IP_side0 |
+| Parameter | orientation_in_body_wxyz |
+| Unit | 1 |
+| Meaning | Fixed site in owning body frame; dynamic routing sites are configured separately. |
+| Source value | Not established |
+| Value used in this model | [1.0, 0.0, 0.0, 0.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>R_BFA_origin · position_in_body_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | R_BFA_origin |
+| Parameter | position_in_body_m |
+| Unit | m |
+| Meaning | Fixed site in owning body frame; dynamic routing sites are configured separately. |
+| Source value | Not established |
+| Value used in this model | [-0.006582361197662642, 0.005330337267324761, 0.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>R_BFA_origin · orientation_in_body_wxyz</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | R_BFA_origin |
+| Parameter | orientation_in_body_wxyz |
+| Unit | 1 |
+| Meaning | Fixed site in owning body frame; dynamic routing sites are configured separately. |
+| Source value | Not established |
+| Value used in this model | [1.0, 0.0, 0.0, 0.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>R_BFA_side0 · position_in_body_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | R_BFA_side0 |
+| Parameter | position_in_body_m |
+| Unit | m |
+| Meaning | Fixed site in owning body frame; dynamic routing sites are configured separately. |
+| Source value | Not established |
+| Value used in this model | [0.0, 0.005028361385832787, 0.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>R_BFA_side0 · orientation_in_body_wxyz</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | R_BFA_side0 |
+| Parameter | orientation_in_body_wxyz |
+| Unit | 1 |
+| Meaning | Fixed site in owning body frame; dynamic routing sites are configured separately. |
+| Source value | Not established |
+| Value used in this model | [1.0, 0.0, 0.0, 0.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>R_RF_origin · position_in_body_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | R_RF_origin |
+| Parameter | position_in_body_m |
+| Unit | m |
+| Meaning | Fixed site in owning body frame; dynamic routing sites are configured separately. |
+| Source value | Not established |
+| Value used in this model | [0.005420765027322405, 0.0, 0.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>R_RF_origin · orientation_in_body_wxyz</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | R_RF_origin |
+| Parameter | orientation_in_body_wxyz |
+| Unit | 1 |
+| Meaning | Fixed site in owning body frame; dynamic routing sites are configured separately. |
+| Source value | Not established |
+| Value used in this model | [1.0, 0.0, 0.0, 0.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>R_RF_side0 · position_in_body_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | R_RF_side0 |
+| Parameter | position_in_body_m |
+| Unit | m |
+| Meaning | Fixed site in owning body frame; dynamic routing sites are configured separately. |
+| Source value | Not established |
+| Value used in this model | [0.0, -0.005240210582433694, 0.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>R_RF_side0 · orientation_in_body_wxyz</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | R_RF_side0 |
+| Parameter | orientation_in_body_wxyz |
+| Unit | 1 |
+| Meaning | Fixed site in owning body frame; dynamic routing sites are configured separately. |
+| Source value | Not established |
+| Value used in this model | [1.0, 0.0, 0.0, 0.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>R_BFP_origin · position_in_body_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | R_BFP_origin |
+| Parameter | position_in_body_m |
+| Unit | m |
+| Meaning | Fixed site in owning body frame; dynamic routing sites are configured separately. |
+| Source value | Not established |
+| Value used in this model | [-0.006582361197662642, 0.005330337267324761, 0.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>R_BFP_origin · orientation_in_body_wxyz</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | R_BFP_origin |
+| Parameter | orientation_in_body_wxyz |
+| Unit | 1 |
+| Meaning | Fixed site in owning body frame; dynamic routing sites are configured separately. |
+| Source value | Not established |
+| Value used in this model | [1.0, 0.0, 0.0, 0.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>R_BFP_side0 · position_in_body_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | R_BFP_side0 |
+| Parameter | position_in_body_m |
+| Unit | m |
+| Meaning | Fixed site in owning body frame; dynamic routing sites are configured separately. |
+| Source value | Not established |
+| Value used in this model | [0.0, 0.005240210582433694, 0.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>R_BFP_side0 · orientation_in_body_wxyz</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | R_BFP_side0 |
+| Parameter | orientation_in_body_wxyz |
+| Unit | 1 |
+| Meaning | Fixed site in owning body frame; dynamic routing sites are configured separately. |
+| Source value | Not established |
+| Value used in this model | [1.0, 0.0, 0.0, 0.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>R_SAM_origin · position_in_body_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | R_SAM_origin |
+| Parameter | position_in_body_m |
+| Unit | m |
+| Meaning | Fixed site in owning body frame; dynamic routing sites are configured separately. |
+| Source value | Not established |
+| Value used in this model | [0.013551912568306013, 0.0, 0.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>R_SAM_origin · orientation_in_body_wxyz</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | R_SAM_origin |
+| Parameter | orientation_in_body_wxyz |
+| Unit | 1 |
+| Meaning | Fixed site in owning body frame; dynamic routing sites are configured separately. |
+| Source value | Not established |
+| Value used in this model | [1.0, 0.0, 0.0, 0.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>R_SAM_side0 · position_in_body_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | R_SAM_side0 |
+| Parameter | position_in_body_m |
+| Unit | m |
+| Meaning | Fixed site in owning body frame; dynamic routing sites are configured separately. |
+| Source value | Not established |
+| Value used in this model | [0.0, -0.005240210582433694, 0.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>R_SAM_side0 · orientation_in_body_wxyz</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | R_SAM_side0 |
+| Parameter | orientation_in_body_wxyz |
+| Unit | 1 |
+| Meaning | Fixed site in owning body frame; dynamic routing sites are configured separately. |
+| Source value | Not established |
+| Value used in this model | [1.0, 0.0, 0.0, 0.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>R_IP_insert · position_in_body_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | R_IP_insert |
+| Parameter | position_in_body_m |
+| Unit | m |
+| Meaning | Fixed site in owning body frame; dynamic routing sites are configured separately. |
+| Source value | Not established |
+| Value used in this model | [0.012366906474820145, 0.0, 0.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>R_IP_insert · orientation_in_body_wxyz</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | R_IP_insert |
+| Parameter | orientation_in_body_wxyz |
+| Unit | 1 |
+| Meaning | Fixed site in owning body frame; dynamic routing sites are configured separately. |
+| Source value | Not established |
+| Value used in this model | [1.0, 0.0, 0.0, 0.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>R_BFA_insert · position_in_body_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | R_BFA_insert |
+| Parameter | position_in_body_m |
+| Unit | m |
+| Meaning | Fixed site in owning body frame; dynamic routing sites are configured separately. |
+| Source value | Not established |
+| Value used in this model | [0.049075025693730734, 0.0, 0.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>R_BFA_insert · orientation_in_body_wxyz</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | R_BFA_insert |
+| Parameter | orientation_in_body_wxyz |
+| Unit | 1 |
+| Meaning | Fixed site in owning body frame; dynamic routing sites are configured separately. |
+| Source value | Not established |
+| Value used in this model | [1.0, 0.0, 0.0, 0.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>R_VL_origin · position_in_body_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | R_VL_origin |
+| Parameter | position_in_body_m |
+| Unit | m |
+| Meaning | Fixed site in owning body frame; dynamic routing sites are configured separately. |
+| Source value | Not established |
+| Value used in this model | [0.0, 1.1695376931857223e-17, 0.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>R_VL_origin · orientation_in_body_wxyz</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | R_VL_origin |
+| Parameter | orientation_in_body_wxyz |
+| Unit | 1 |
+| Meaning | Fixed site in owning body frame; dynamic routing sites are configured separately. |
+| Source value | Not established |
+| Value used in this model | [1.0, 0.0, 0.0, 0.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>R_VL_side0 · position_in_body_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | R_VL_side0 |
+| Parameter | position_in_body_m |
+| Unit | m |
+| Meaning | Fixed site in owning body frame; dynamic routing sites are configured separately. |
+| Source value | Not established |
+| Value used in this model | [0.0955, 0.011643902439024393, 0.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>R_VL_side0 · orientation_in_body_wxyz</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | R_VL_side0 |
+| Parameter | orientation_in_body_wxyz |
+| Unit | 1 |
+| Meaning | Fixed site in owning body frame; dynamic routing sites are configured separately. |
+| Source value | Not established |
+| Value used in this model | [1.0, 0.0, 0.0, 0.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>R_VM_origin · position_in_body_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | R_VM_origin |
+| Parameter | position_in_body_m |
+| Unit | m |
+| Meaning | Fixed site in owning body frame; dynamic routing sites are configured separately. |
+| Source value | Not established |
+| Value used in this model | [0.0, 1.1695376931857223e-17, 0.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>R_VM_origin · orientation_in_body_wxyz</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | R_VM_origin |
+| Parameter | orientation_in_body_wxyz |
+| Unit | 1 |
+| Meaning | Fixed site in owning body frame; dynamic routing sites are configured separately. |
+| Source value | Not established |
+| Value used in this model | [1.0, 0.0, 0.0, 0.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>R_VM_side0 · position_in_body_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | R_VM_side0 |
+| Parameter | position_in_body_m |
+| Unit | m |
+| Meaning | Fixed site in owning body frame; dynamic routing sites are configured separately. |
+| Source value | Not established |
+| Value used in this model | [0.0955, 0.011643902439024393, 0.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>R_VM_side0 · orientation_in_body_wxyz</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | R_VM_side0 |
+| Parameter | orientation_in_body_wxyz |
+| Unit | 1 |
+| Meaning | Fixed site in owning body frame; dynamic routing sites are configured separately. |
+| Source value | Not established |
+| Value used in this model | [1.0, 0.0, 0.0, 0.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>R_RF_side1 · position_in_body_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | R_RF_side1 |
+| Parameter | position_in_body_m |
+| Unit | m |
+| Meaning | Fixed site in owning body frame; dynamic routing sites are configured separately. |
+| Source value | Not established |
+| Value used in this model | [0.0955, 0.011643902439024393, 0.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>R_RF_side1 · orientation_in_body_wxyz</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | R_RF_side1 |
+| Parameter | orientation_in_body_wxyz |
+| Unit | 1 |
+| Meaning | Fixed site in owning body frame; dynamic routing sites are configured separately. |
+| Source value | Not established |
+| Value used in this model | [1.0, 0.0, 0.0, 0.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>R_BFP_side1 · position_in_body_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | R_BFP_side1 |
+| Parameter | position_in_body_m |
+| Unit | m |
+| Meaning | Fixed site in owning body frame; dynamic routing sites are configured separately. |
+| Source value | Not established |
+| Value used in this model | [0.0955, -0.006288252698920432, 0.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>R_BFP_side1 · orientation_in_body_wxyz</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | R_BFP_side1 |
+| Parameter | orientation_in_body_wxyz |
+| Unit | 1 |
+| Meaning | Fixed site in owning body frame; dynamic routing sites are configured separately. |
+| Source value | Not established |
+| Value used in this model | [1.0, 0.0, 0.0, 0.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>R_SAM_side1 · position_in_body_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | R_SAM_side1 |
+| Parameter | position_in_body_m |
+| Unit | m |
+| Meaning | Fixed site in owning body frame; dynamic routing sites are configured separately. |
+| Source value | Not established |
+| Value used in this model | [0.0955, -0.006288252698920432, 0.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>R_SAM_side1 · orientation_in_body_wxyz</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | R_SAM_side1 |
+| Parameter | orientation_in_body_wxyz |
+| Unit | 1 |
+| Meaning | Fixed site in owning body frame; dynamic routing sites are configured separately. |
+| Source value | Not established |
+| Value used in this model | [1.0, 0.0, 0.0, 0.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>R_LG_origin · position_in_body_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | R_LG_origin |
+| Parameter | position_in_body_m |
+| Unit | m |
+| Meaning | Fixed site in owning body frame; dynamic routing sites are configured separately. |
+| Source value | Not established |
+| Value used in this model | [0.08961099691675231, 7.211948776068176e-19, 0.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>R_LG_origin · orientation_in_body_wxyz</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | R_LG_origin |
+| Parameter | orientation_in_body_wxyz |
+| Unit | 1 |
+| Meaning | Fixed site in owning body frame; dynamic routing sites are configured separately. |
+| Source value | Not established |
+| Value used in this model | [1.0, 0.0, 0.0, 0.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>R_LG_side0 · position_in_body_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | R_LG_side0 |
+| Parameter | position_in_body_m |
+| Unit | m |
+| Meaning | Fixed site in owning body frame; dynamic routing sites are configured separately. |
+| Source value | Not established |
+| Value used in this model | [0.0955, -0.006477903391572458, 0.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>R_LG_side0 · orientation_in_body_wxyz</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | R_LG_side0 |
+| Parameter | orientation_in_body_wxyz |
+| Unit | 1 |
+| Meaning | Fixed site in owning body frame; dynamic routing sites are configured separately. |
+| Source value | Not established |
+| Value used in this model | [1.0, 0.0, 0.0, 0.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>R_MG_origin · position_in_body_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | R_MG_origin |
+| Parameter | position_in_body_m |
+| Unit | m |
+| Meaning | Fixed site in owning body frame; dynamic routing sites are configured separately. |
+| Source value | Not established |
+| Value used in this model | [0.08961099691675231, 7.211948776068176e-19, 0.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>R_MG_origin · orientation_in_body_wxyz</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | R_MG_origin |
+| Parameter | orientation_in_body_wxyz |
+| Unit | 1 |
+| Meaning | Fixed site in owning body frame; dynamic routing sites are configured separately. |
+| Source value | Not established |
+| Value used in this model | [1.0, 0.0, 0.0, 0.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>R_MG_side0 · position_in_body_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | R_MG_side0 |
+| Parameter | position_in_body_m |
+| Unit | m |
+| Meaning | Fixed site in owning body frame; dynamic routing sites are configured separately. |
+| Source value | Not established |
+| Value used in this model | [0.0955, -0.006477903391572458, 0.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>R_MG_side0 · orientation_in_body_wxyz</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | R_MG_side0 |
+| Parameter | orientation_in_body_wxyz |
+| Unit | 1 |
+| Meaning | Fixed site in owning body frame; dynamic routing sites are configured separately. |
+| Source value | Not established |
+| Value used in this model | [1.0, 0.0, 0.0, 0.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>R_VL_insert · position_in_body_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | R_VL_insert |
+| Parameter | position_in_body_m |
+| Unit | m |
+| Meaning | Fixed site in owning body frame; dynamic routing sites are configured separately. |
+| Source value | Not established |
+| Value used in this model | [-0.008671039771033588, 0.006071494012593104, 0.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>R_VL_insert · orientation_in_body_wxyz</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | R_VL_insert |
+| Parameter | orientation_in_body_wxyz |
+| Unit | 1 |
+| Meaning | Fixed site in owning body frame; dynamic routing sites are configured separately. |
+| Source value | Not established |
+| Value used in this model | [1.0, 0.0, 0.0, 0.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>R_VM_insert · position_in_body_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | R_VM_insert |
+| Parameter | position_in_body_m |
+| Unit | m |
+| Meaning | Fixed site in owning body frame; dynamic routing sites are configured separately. |
+| Source value | Not established |
+| Value used in this model | [-0.008671039771033588, 0.006071494012593104, 0.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>R_VM_insert · orientation_in_body_wxyz</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | R_VM_insert |
+| Parameter | orientation_in_body_wxyz |
+| Unit | 1 |
+| Meaning | Fixed site in owning body frame; dynamic routing sites are configured separately. |
+| Source value | Not established |
+| Value used in this model | [1.0, 0.0, 0.0, 0.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>R_TA_origin · position_in_body_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | R_TA_origin |
+| Parameter | position_in_body_m |
+| Unit | m |
+| Meaning | Fixed site in owning body frame; dynamic routing sites are configured separately. |
+| Source value | Not established |
+| Value used in this model | [0.0926219512195122, 1.9445001615729926e-18, 0.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>R_TA_origin · orientation_in_body_wxyz</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | R_TA_origin |
+| Parameter | orientation_in_body_wxyz |
+| Unit | 1 |
+| Meaning | Fixed site in owning body frame; dynamic routing sites are configured separately. |
+| Source value | Not established |
+| Value used in this model | [1.0, 0.0, 0.0, 0.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>R_TA_side0 · position_in_body_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | R_TA_side0 |
+| Parameter | position_in_body_m |
+| Unit | m |
+| Meaning | Fixed site in owning body frame; dynamic routing sites are configured separately. |
+| Source value | Not established |
+| Value used in this model | [0.1085, 0.005585141066940424, 0.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>R_TA_side0 · orientation_in_body_wxyz</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | R_TA_side0 |
+| Parameter | orientation_in_body_wxyz |
+| Unit | 1 |
+| Meaning | Fixed site in owning body frame; dynamic routing sites are configured separately. |
+| Source value | Not established |
+| Value used in this model | [1.0, 0.0, 0.0, 0.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>R_SO_origin · position_in_body_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | R_SO_origin |
+| Parameter | position_in_body_m |
+| Unit | m |
+| Meaning | Fixed site in owning body frame; dynamic routing sites are configured separately. |
+| Source value | Not established |
+| Value used in this model | [0.0037048780487804744, 1.2833701066381752e-17, 0.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>R_SO_origin · orientation_in_body_wxyz</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | R_SO_origin |
+| Parameter | orientation_in_body_wxyz |
+| Unit | 1 |
+| Meaning | Fixed site in owning body frame; dynamic routing sites are configured separately. |
+| Source value | Not established |
+| Value used in this model | [1.0, 0.0, 0.0, 0.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>R_SO_side0 · position_in_body_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | R_SO_side0 |
+| Parameter | position_in_body_m |
+| Unit | m |
+| Meaning | Fixed site in owning body frame; dynamic routing sites are configured separately. |
+| Source value | Not established |
+| Value used in this model | [0.1085, -0.005585141066940424, 0.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>R_SO_side0 · orientation_in_body_wxyz</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | R_SO_side0 |
+| Parameter | orientation_in_body_wxyz |
+| Unit | 1 |
+| Meaning | Fixed site in owning body frame; dynamic routing sites are configured separately. |
+| Source value | Not established |
+| Value used in this model | [1.0, 0.0, 0.0, 0.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>R_RF_insert · position_in_body_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | R_RF_insert |
+| Parameter | position_in_body_m |
+| Unit | m |
+| Meaning | Fixed site in owning body frame; dynamic routing sites are configured separately. |
+| Source value | Not established |
+| Value used in this model | [-0.008671039771033588, 0.006071494012593104, 0.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>R_RF_insert · orientation_in_body_wxyz</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | R_RF_insert |
+| Parameter | orientation_in_body_wxyz |
+| Unit | 1 |
+| Meaning | Fixed site in owning body frame; dynamic routing sites are configured separately. |
+| Source value | Not established |
+| Value used in this model | [1.0, 0.0, 0.0, 0.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>R_BFP_insert · position_in_body_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | R_BFP_insert |
+| Parameter | position_in_body_m |
+| Unit | m |
+| Meaning | Fixed site in owning body frame; dynamic routing sites are configured separately. |
+| Source value | Not established |
+| Value used in this model | [0.03175609756097561, 0.0, 0.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>R_BFP_insert · orientation_in_body_wxyz</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | R_BFP_insert |
+| Parameter | orientation_in_body_wxyz |
+| Unit | 1 |
+| Meaning | Fixed site in owning body frame; dynamic routing sites are configured separately. |
+| Source value | Not established |
+| Value used in this model | [1.0, 0.0, 0.0, 0.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>R_SAM_insert · position_in_body_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | R_SAM_insert |
+| Parameter | position_in_body_m |
+| Unit | m |
+| Meaning | Fixed site in owning body frame; dynamic routing sites are configured separately. |
+| Source value | Not established |
+| Value used in this model | [0.010585365853658537, 0.0, 0.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>R_SAM_insert · orientation_in_body_wxyz</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | R_SAM_insert |
+| Parameter | orientation_in_body_wxyz |
+| Unit | 1 |
+| Meaning | Fixed site in owning body frame; dynamic routing sites are configured separately. |
+| Source value | Not established |
+| Value used in this model | [1.0, 0.0, 0.0, 0.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>R_LG_side1 · position_in_body_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | R_LG_side1 |
+| Parameter | position_in_body_m |
+| Unit | m |
+| Meaning | Fixed site in owning body frame; dynamic routing sites are configured separately. |
+| Source value | Not established |
+| Value used in this model | [0.1085, -0.005373291870339516, 0.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>R_LG_side1 · orientation_in_body_wxyz</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | R_LG_side1 |
+| Parameter | orientation_in_body_wxyz |
+| Unit | 1 |
+| Meaning | Fixed site in owning body frame; dynamic routing sites are configured separately. |
+| Source value | Not established |
+| Value used in this model | [1.0, 0.0, 0.0, 0.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>R_MG_side1 · position_in_body_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | R_MG_side1 |
+| Parameter | position_in_body_m |
+| Unit | m |
+| Meaning | Fixed site in owning body frame; dynamic routing sites are configured separately. |
+| Source value | Not established |
+| Value used in this model | [0.1085, -0.005373291870339516, 0.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>R_MG_side1 · orientation_in_body_wxyz</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | R_MG_side1 |
+| Parameter | orientation_in_body_wxyz |
+| Unit | 1 |
+| Meaning | Fixed site in owning body frame; dynamic routing sites are configured separately. |
+| Source value | Not established |
+| Value used in this model | [1.0, 0.0, 0.0, 0.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>R_EDL_attachment0 · position_in_body_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | R_EDL_attachment0 |
+| Parameter | position_in_body_m |
+| Unit | m |
+| Meaning | Fixed site in owning body frame; dynamic routing sites are configured separately. |
+| Source value | Not established |
+| Value used in this model | [0.07361713995943205, -0.0, 0.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>R_EDL_attachment0 · orientation_in_body_wxyz</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | R_EDL_attachment0 |
+| Parameter | orientation_in_body_wxyz |
+| Unit | 1 |
+| Meaning | Fixed site in owning body frame; dynamic routing sites are configured separately. |
+| Source value | Not established |
+| Value used in this model | [1.0, 0.0, 0.0, 0.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>R_EDL_attachment1 · position_in_body_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | R_EDL_attachment1 |
+| Parameter | position_in_body_m |
+| Unit | m |
+| Meaning | Fixed site in owning body frame; dynamic routing sites are configured separately. |
+| Source value | Not established |
+| Value used in this model | [0.1085, 0.0033012170385395534, 0.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>R_EDL_attachment1 · orientation_in_body_wxyz</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | R_EDL_attachment1 |
+| Parameter | orientation_in_body_wxyz |
+| Unit | 1 |
+| Meaning | Fixed site in owning body frame; dynamic routing sites are configured separately. |
+| Source value | Not established |
+| Value used in this model | [1.0, 0.0, 0.0, 0.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>

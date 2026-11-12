@@ -4,9 +4,68 @@
 
 [Back to parameter guide](../parameter_tables.md)
 
-| Object | Parameter | Unit | Meaning | Source value | Value used in this model | What changed and why | Source / evidence |
-| --- | --- | --- | --- | --- | --- | --- | --- |
-| gravity_m_s2 | gravity_m_s2 | see equation definitions | Environment/engine parameter. | Not established | [0.0, 0.0, -9.81] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Specified simulation initialization or engine configuration; inspect Data/Model_Parameters/initial_state.py and environment.py. |
-| solver_iterations | solver_iterations | see equation definitions | Environment/engine parameter. | Not established | 80 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Specified simulation initialization or engine configuration; inspect Data/Model_Parameters/initial_state.py and environment.py. |
-| solver_tolerance | solver_tolerance | see equation definitions | Environment/engine parameter. | Not established | 1e-08 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Specified simulation initialization or engine configuration; inspect Data/Model_Parameters/initial_state.py and environment.py. |
-| integrator | integrator | engine enum | Native integration method: 0 Euler, 1 RK4, 2 implicit, 3 implicitfast. Retest any change for this partitioned scheme. | Not established | 3 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Numerical integration setting: MuJoCo implicitfast; not a biological tissue property. |
+Each entry contains its values, units, meaning and source information. Select an entry to read all fields.
+
+<details>
+<summary>gravity_m_s2 · gravity_m_s2</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | gravity_m_s2 |
+| Parameter | gravity_m_s2 |
+| Unit | see equation definitions |
+| Meaning | Environment/engine parameter. |
+| Source value | Not established |
+| Value used in this model | [0.0, 0.0, -9.81] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Specified simulation initialization or engine configuration; inspect Data/Model_Parameters/initial_state.py and environment.py. |
+
+</details>
+
+<details>
+<summary>solver_iterations · solver_iterations</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | solver_iterations |
+| Parameter | solver_iterations |
+| Unit | see equation definitions |
+| Meaning | Environment/engine parameter. |
+| Source value | Not established |
+| Value used in this model | 80 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Specified simulation initialization or engine configuration; inspect Data/Model_Parameters/initial_state.py and environment.py. |
+
+</details>
+
+<details>
+<summary>solver_tolerance · solver_tolerance</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | solver_tolerance |
+| Parameter | solver_tolerance |
+| Unit | see equation definitions |
+| Meaning | Environment/engine parameter. |
+| Source value | Not established |
+| Value used in this model | 1e-08 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Specified simulation initialization or engine configuration; inspect Data/Model_Parameters/initial_state.py and environment.py. |
+
+</details>
+
+<details>
+<summary>integrator · integrator</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | integrator |
+| Parameter | integrator |
+| Unit | engine enum |
+| Meaning | Native integration method: 0 Euler, 1 RK4, 2 implicit, 3 implicitfast. Retest any change for this partitioned scheme. |
+| Source value | Not established |
+| Value used in this model | 3 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Numerical integration setting: MuJoCo implicitfast; not a biological tissue property. |
+
+</details>

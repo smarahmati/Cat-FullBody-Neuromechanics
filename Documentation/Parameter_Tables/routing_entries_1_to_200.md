@@ -4,205 +4,3204 @@
 
 [Back to parameter guide](../parameter_tables.md)
 
-| Object | Parameter | Unit | Meaning | Source value | Value used in this model | What changed and why | Source / evidence |
-| --- | --- | --- | --- | --- | --- | --- | --- |
-| L_RF_tangent | origin_radius_m | m | Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. | Not established | 0.005420765 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| L_RF_tangent | insertion_radius_m | m | Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. | Not established | 0.010585366 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| L_RF_tangent | origin_angle_rad | rad | Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. | Not established | 0 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| L_RF_tangent | insertion_angle_rad | rad | Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. | Not established | 2.53073 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| L_RF_tangent | proximal_wrap_radius_m | m | Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. | Not established | 0.0047638278 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| L_RF_tangent | proximal_wrap_sign | 1 | Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. | Not established | -1 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| L_RF_tangent | proximal_joint_sign | 1 | Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. | Not established | -1 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| L_RF_tangent | distal_wrap_radius_m | m | Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. | Not established | 0.010585366 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| L_RF_tangent | distal_wrap_sign | 1 | Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. | Not established | -1 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| L_RF_tangent | distal_joint_sign | 1 | Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. | Not established | 1 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| L_RF_tangent | joint_spacing_m | m | Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. | Not established | 0.0955 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| L_BFP_tangent | origin_radius_m | m | Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. | Not established | 0.0084699454 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| L_BFP_tangent | insertion_radius_m | m | Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. | Not established | 0.031756098 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| L_BFP_tangent | origin_angle_rad | rad | Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. | Not established | 2.46091 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| L_BFP_tangent | insertion_angle_rad | rad | Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. | Not established | 0 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| L_BFP_tangent | proximal_wrap_radius_m | m | Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. | Not established | 0.0047638278 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| L_BFP_tangent | proximal_wrap_sign | 1 | Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. | Not established | 1 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| L_BFP_tangent | proximal_joint_sign | 1 | Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. | Not established | -1 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| L_BFP_tangent | distal_wrap_radius_m | m | Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. | Not established | 0.0057165934 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| L_BFP_tangent | distal_wrap_sign | 1 | Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. | Not established | 1 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| L_BFP_tangent | distal_joint_sign | 1 | Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. | Not established | 1 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| L_BFP_tangent | joint_spacing_m | m | Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. | Not established | 0.0955 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| L_SAM_tangent | origin_radius_m | m | Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. | Not established | 0.013551913 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| L_SAM_tangent | insertion_radius_m | m | Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. | Not established | 0.010585366 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| L_SAM_tangent | origin_angle_rad | rad | Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. | Not established | 0 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| L_SAM_tangent | insertion_angle_rad | rad | Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. | Not established | 0 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| L_SAM_tangent | proximal_wrap_radius_m | m | Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. | Not established | 0.0047638278 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| L_SAM_tangent | proximal_wrap_sign | 1 | Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. | Not established | -1 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| L_SAM_tangent | proximal_joint_sign | 1 | Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. | Not established | -1 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| L_SAM_tangent | distal_wrap_radius_m | m | Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. | Not established | 0.0057165934 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| L_SAM_tangent | distal_wrap_sign | 1 | Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. | Not established | 1 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| L_SAM_tangent | distal_joint_sign | 1 | Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. | Not established | 1 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| L_SAM_tangent | joint_spacing_m | m | Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. | Not established | 0.0955 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| L_LG_tangent | origin_radius_m | m | Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. | Not established | 0.0058890031 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| L_LG_tangent | insertion_radius_m | m | Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. | Not established | 0.015558781 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| L_LG_tangent | origin_angle_rad | rad | Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. | Not established | 0 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| L_LG_tangent | insertion_angle_rad | rad | Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. | Not established | -3.03687 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| L_LG_tangent | proximal_wrap_radius_m | m | Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. | Not established | 0.0058890031 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| L_LG_tangent | proximal_wrap_sign | 1 | Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. | Not established | 1 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| L_LG_tangent | proximal_joint_sign | 1 | Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. | Not established | 1 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| L_LG_tangent | distal_wrap_radius_m | m | Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. | Not established | 0.0048848108 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| L_LG_tangent | distal_wrap_sign | 1 | Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. | Not established | 1 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| L_LG_tangent | distal_joint_sign | 1 | Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. | Not established | -1 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| L_LG_tangent | joint_spacing_m | m | Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. | Not established | 0.1085 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| L_MG_tangent | origin_radius_m | m | Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. | Not established | 0.0058890031 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| L_MG_tangent | insertion_radius_m | m | Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. | Not established | 0.015558781 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| L_MG_tangent | origin_angle_rad | rad | Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. | Not established | 0 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| L_MG_tangent | insertion_angle_rad | rad | Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. | Not established | -3.03687 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| L_MG_tangent | proximal_wrap_radius_m | m | Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. | Not established | 0.0058890031 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| L_MG_tangent | proximal_wrap_sign | 1 | Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. | Not established | 1 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| L_MG_tangent | proximal_joint_sign | 1 | Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. | Not established | 1 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| L_MG_tangent | distal_wrap_radius_m | m | Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. | Not established | 0.0048848108 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| L_MG_tangent | distal_wrap_sign | 1 | Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. | Not established | 1 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| L_MG_tangent | distal_joint_sign | 1 | Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. | Not established | -1 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| L_MG_tangent | joint_spacing_m | m | Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. | Not established | 0.1085 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| R_RF_tangent | origin_radius_m | m | Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. | Not established | 0.005420765 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| R_RF_tangent | insertion_radius_m | m | Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. | Not established | 0.010585366 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| R_RF_tangent | origin_angle_rad | rad | Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. | Not established | 0 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| R_RF_tangent | insertion_angle_rad | rad | Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. | Not established | 2.53073 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| R_RF_tangent | proximal_wrap_radius_m | m | Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. | Not established | 0.0047638278 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| R_RF_tangent | proximal_wrap_sign | 1 | Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. | Not established | -1 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| R_RF_tangent | proximal_joint_sign | 1 | Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. | Not established | -1 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| R_RF_tangent | distal_wrap_radius_m | m | Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. | Not established | 0.010585366 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| R_RF_tangent | distal_wrap_sign | 1 | Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. | Not established | -1 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| R_RF_tangent | distal_joint_sign | 1 | Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. | Not established | 1 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| R_RF_tangent | joint_spacing_m | m | Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. | Not established | 0.0955 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| R_BFP_tangent | origin_radius_m | m | Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. | Not established | 0.0084699454 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| R_BFP_tangent | insertion_radius_m | m | Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. | Not established | 0.031756098 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| R_BFP_tangent | origin_angle_rad | rad | Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. | Not established | 2.46091 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| R_BFP_tangent | insertion_angle_rad | rad | Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. | Not established | 0 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| R_BFP_tangent | proximal_wrap_radius_m | m | Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. | Not established | 0.0047638278 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| R_BFP_tangent | proximal_wrap_sign | 1 | Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. | Not established | 1 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| R_BFP_tangent | proximal_joint_sign | 1 | Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. | Not established | -1 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| R_BFP_tangent | distal_wrap_radius_m | m | Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. | Not established | 0.0057165934 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| R_BFP_tangent | distal_wrap_sign | 1 | Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. | Not established | 1 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| R_BFP_tangent | distal_joint_sign | 1 | Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. | Not established | 1 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| R_BFP_tangent | joint_spacing_m | m | Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. | Not established | 0.0955 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| R_SAM_tangent | origin_radius_m | m | Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. | Not established | 0.013551913 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| R_SAM_tangent | insertion_radius_m | m | Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. | Not established | 0.010585366 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| R_SAM_tangent | origin_angle_rad | rad | Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. | Not established | 0 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| R_SAM_tangent | insertion_angle_rad | rad | Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. | Not established | 0 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| R_SAM_tangent | proximal_wrap_radius_m | m | Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. | Not established | 0.0047638278 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| R_SAM_tangent | proximal_wrap_sign | 1 | Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. | Not established | -1 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| R_SAM_tangent | proximal_joint_sign | 1 | Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. | Not established | -1 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| R_SAM_tangent | distal_wrap_radius_m | m | Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. | Not established | 0.0057165934 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| R_SAM_tangent | distal_wrap_sign | 1 | Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. | Not established | 1 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| R_SAM_tangent | distal_joint_sign | 1 | Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. | Not established | 1 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| R_SAM_tangent | joint_spacing_m | m | Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. | Not established | 0.0955 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| R_LG_tangent | origin_radius_m | m | Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. | Not established | 0.0058890031 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| R_LG_tangent | insertion_radius_m | m | Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. | Not established | 0.015558781 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| R_LG_tangent | origin_angle_rad | rad | Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. | Not established | 0 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| R_LG_tangent | insertion_angle_rad | rad | Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. | Not established | -3.03687 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| R_LG_tangent | proximal_wrap_radius_m | m | Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. | Not established | 0.0058890031 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| R_LG_tangent | proximal_wrap_sign | 1 | Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. | Not established | 1 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| R_LG_tangent | proximal_joint_sign | 1 | Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. | Not established | 1 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| R_LG_tangent | distal_wrap_radius_m | m | Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. | Not established | 0.0048848108 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| R_LG_tangent | distal_wrap_sign | 1 | Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. | Not established | 1 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| R_LG_tangent | distal_joint_sign | 1 | Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. | Not established | -1 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| R_LG_tangent | joint_spacing_m | m | Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. | Not established | 0.1085 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| R_MG_tangent | origin_radius_m | m | Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. | Not established | 0.0058890031 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| R_MG_tangent | insertion_radius_m | m | Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. | Not established | 0.015558781 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| R_MG_tangent | origin_angle_rad | rad | Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. | Not established | 0 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| R_MG_tangent | insertion_angle_rad | rad | Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. | Not established | -3.03687 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| R_MG_tangent | proximal_wrap_radius_m | m | Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. | Not established | 0.0058890031 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| R_MG_tangent | proximal_wrap_sign | 1 | Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. | Not established | 1 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| R_MG_tangent | proximal_joint_sign | 1 | Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. | Not established | 1 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| R_MG_tangent | distal_wrap_radius_m | m | Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. | Not established | 0.0048848108 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| R_MG_tangent | distal_wrap_sign | 1 | Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. | Not established | 1 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| R_MG_tangent | distal_joint_sign | 1 | Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. | Not established | -1 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| R_MG_tangent | joint_spacing_m | m | Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. | Not established | 0.1085 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| FL_ShoulderExtensor_s0_preferred | origin_radius_m | m | Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. | Not established | 0.056400201 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| FL_ShoulderExtensor_s0_preferred | insertion_radius_m | m | Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. | Not established | 0.007945482 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| FL_ShoulderExtensor_s0_preferred | origin_angle_rad | rad | Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. | Not established | -0.27701001 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| FL_ShoulderExtensor_s0_preferred | insertion_angle_rad | rad | Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. | Not established | 2.3916018 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| FL_ShoulderExtensor_s0_preferred | proximal_wrap_radius_m | m | Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. | Not established | 0.0079448512 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| FL_ShoulderExtensor_s0_preferred | proximal_wrap_sign | 1 | Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. | Not established | -1 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| FL_ShoulderExtensor_s0_preferred | proximal_joint_sign | 1 | Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. | Not established | 1 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| FL_ShoulderExtensor_s0_preferred | distal_wrap_radius_m | m | Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. | Not established | 0 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| FL_ShoulderExtensor_s0_preferred | distal_wrap_sign | 1 | Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. | Not established | 0 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| FL_ShoulderExtensor_s0_preferred | distal_joint_sign | 1 | Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. | Not established | 0 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| FL_ShoulderExtensor_s0_preferred | joint_spacing_m | m | Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. | Not established | 0.057714286 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| FL_ElbowExtensor_s0_preferred | origin_radius_m | m | Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. | Not established | 0.060001647 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| FL_ElbowExtensor_s0_preferred | insertion_radius_m | m | Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. | Not established | 0.005580204 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| FL_ElbowExtensor_s0_preferred | origin_angle_rad | rad | Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. | Not established | 0.15527521 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| FL_ElbowExtensor_s0_preferred | insertion_angle_rad | rad | Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. | Not established | -2.6913015 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| FL_ElbowExtensor_s0_preferred | proximal_wrap_radius_m | m | Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. | Not established | 0.0021176766 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| FL_ElbowExtensor_s0_preferred | proximal_wrap_sign | 1 | Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. | Not established | 1 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| FL_ElbowExtensor_s0_preferred | proximal_joint_sign | 1 | Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. | Not established | -1 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| FL_ElbowExtensor_s0_preferred | distal_wrap_radius_m | m | Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. | Not established | 0 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| FL_ElbowExtensor_s0_preferred | distal_wrap_sign | 1 | Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. | Not established | 0 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| FL_ElbowExtensor_s0_preferred | distal_joint_sign | 1 | Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. | Not established | 0 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| FL_ElbowExtensor_s0_preferred | joint_spacing_m | m | Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. | Not established | 0.092757143 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| FL_BicepsBrachii_s0_tangent | origin_radius_m | m | Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. | Not established | 0.012186834 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| FL_BicepsBrachii_s0_tangent | insertion_radius_m | m | Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. | Not established | 0.011134867 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| FL_BicepsBrachii_s0_tangent | origin_angle_rad | rad | Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. | Not established | -1.9686494 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| FL_BicepsBrachii_s0_tangent | insertion_angle_rad | rad | Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. | Not established | -0.40005001 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| FL_BicepsBrachii_s0_tangent | proximal_wrap_radius_m | m | Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. | Not established | 0.0099469286 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| FL_BicepsBrachii_s0_tangent | proximal_wrap_sign | 1 | Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. | Not established | -1 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| FL_BicepsBrachii_s0_tangent | proximal_joint_sign | 1 | Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. | Not established | 1 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| FL_BicepsBrachii_s0_tangent | distal_wrap_radius_m | m | Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. | Not established | 0.0052591454 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| FL_BicepsBrachii_s0_tangent | distal_wrap_sign | 1 | Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. | Not established | -1 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| FL_BicepsBrachii_s0_tangent | distal_joint_sign | 1 | Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. | Not established | -1 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| FL_BicepsBrachii_s0_tangent | joint_spacing_m | m | Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. | Not established | 0.092757143 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| FL_ElbowFlexor_s0_preferred | origin_radius_m | m | Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. | Not established | 0.071503751 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| FL_ElbowFlexor_s0_preferred | insertion_radius_m | m | Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. | Not established | 0.0074004393 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| FL_ElbowFlexor_s0_preferred | origin_angle_rad | rad | Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. | Not established | -0.069736681 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| FL_ElbowFlexor_s0_preferred | insertion_angle_rad | rad | Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. | Not established | 0.89872907 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| FL_ElbowFlexor_s0_preferred | proximal_wrap_radius_m | m | Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. | Not established | 0.0032 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| FL_ElbowFlexor_s0_preferred | proximal_wrap_sign | 1 | Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. | Not established | -1 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| FL_ElbowFlexor_s0_preferred | proximal_joint_sign | 1 | Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. | Not established | -1 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| FL_ElbowFlexor_s0_preferred | distal_wrap_radius_m | m | Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. | Not established | 0 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| FL_ElbowFlexor_s0_preferred | distal_wrap_sign | 1 | Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. | Not established | 0 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| FL_ElbowFlexor_s0_preferred | distal_joint_sign | 1 | Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. | Not established | 0 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| FL_ElbowFlexor_s0_preferred | joint_spacing_m | m | Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. | Not established | 0.092757143 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| FL_ElbowFlexorWristFlexor_s0_preferred | origin_radius_m | m | Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. | Not established | 0.011400001 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| FL_ElbowFlexorWristFlexor_s0_preferred | insertion_radius_m | m | Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. | Not established | 0.0951 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| FL_ElbowFlexorWristFlexor_s0_preferred | origin_angle_rad | rad | Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. | Not established | 0.28668737 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| FL_ElbowFlexorWristFlexor_s0_preferred | insertion_angle_rad | rad | Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. | Not established | 0.06450056 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| FL_ElbowFlexorWristFlexor_s0_preferred | proximal_wrap_radius_m | m | Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. | Not established | 0.0053646541 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| FL_ElbowFlexorWristFlexor_s0_preferred | proximal_wrap_sign | 1 | Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. | Not established | -1 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| FL_ElbowFlexorWristFlexor_s0_preferred | proximal_joint_sign | 1 | Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. | Not established | -1 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| FL_ElbowFlexorWristFlexor_s0_preferred | distal_wrap_radius_m | m | Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. | Not established | 0 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| FL_ElbowFlexorWristFlexor_s0_preferred | distal_wrap_sign | 1 | Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. | Not established | 0 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| FL_ElbowFlexorWristFlexor_s0_preferred | distal_joint_sign | 1 | Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. | Not established | 0 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| FL_ElbowFlexorWristFlexor_s0_preferred | joint_spacing_m | m | Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. | Not established | 0.092757143 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| FL_ElbowFlexorWristFlexor_s1_preferred | origin_radius_m | m | Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. | Not established | 0.0061346493 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| FL_ElbowFlexorWristFlexor_s1_preferred | insertion_radius_m | m | Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. | Not established | 0.033299993 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| FL_ElbowFlexorWristFlexor_s1_preferred | origin_angle_rad | rad | Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. | Not established | -1.5308319 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| FL_ElbowFlexorWristFlexor_s1_preferred | insertion_angle_rad | rad | Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. | Not established | 0.1258382 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| FL_ElbowFlexorWristFlexor_s1_preferred | proximal_wrap_radius_m | m | Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. | Not established | 0.0035074959 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| FL_ElbowFlexorWristFlexor_s1_preferred | proximal_wrap_sign | 1 | Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. | Not established | -1 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| FL_ElbowFlexorWristFlexor_s1_preferred | proximal_joint_sign | 1 | Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. | Not established | -1 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| FL_ElbowFlexorWristFlexor_s1_preferred | distal_wrap_radius_m | m | Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. | Not established | 0 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| FL_ElbowFlexorWristFlexor_s1_preferred | distal_wrap_sign | 1 | Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. | Not established | 0 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| FL_ElbowFlexorWristFlexor_s1_preferred | distal_joint_sign | 1 | Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. | Not established | 0 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| FL_ElbowFlexorWristFlexor_s1_preferred | joint_spacing_m | m | Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. | Not established | 0.094657143 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| FL_WristFlexor_s1_preferred | origin_radius_m | m | Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. | Not established | 0.0060090247 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| FL_WristFlexor_s1_preferred | insertion_radius_m | m | Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. | Not established | 0.017111545 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| FL_WristFlexor_s1_preferred | origin_angle_rad | rad | Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. | Not established | -2.3325124 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| FL_WristFlexor_s1_preferred | insertion_angle_rad | rad | Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. | Not established | 0.11480056 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| FL_WristFlexor_s1_preferred | proximal_wrap_radius_m | m | Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. | Not established | 0.0024 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| FL_WristFlexor_s1_preferred | proximal_wrap_sign | 1 | Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. | Not established | -1 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| FL_WristFlexor_s1_preferred | proximal_joint_sign | 1 | Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. | Not established | -1 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| FL_WristFlexor_s1_preferred | distal_wrap_radius_m | m | Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. | Not established | 0 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| FL_WristFlexor_s1_preferred | distal_wrap_sign | 1 | Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. | Not established | 0 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| FL_WristFlexor_s1_preferred | distal_joint_sign | 1 | Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. | Not established | 0 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| FL_WristFlexor_s1_preferred | joint_spacing_m | m | Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. | Not established | 0.094657143 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| FL_WristExtensor_s1_preferred | origin_radius_m | m | Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. | Not established | 0.0051865289 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| FL_WristExtensor_s1_preferred | insertion_radius_m | m | Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. | Not established | 0.028858779 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| FL_WristExtensor_s1_preferred | origin_angle_rad | rad | Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. | Not established | 1.2822922 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| FL_WristExtensor_s1_preferred | insertion_angle_rad | rad | Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. | Not established | -0.16317575 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| FL_WristExtensor_s1_preferred | proximal_wrap_radius_m | m | Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. | Not established | 0.002710443 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| FL_WristExtensor_s1_preferred | proximal_wrap_sign | 1 | Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. | Not established | 1 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| FL_WristExtensor_s1_preferred | proximal_joint_sign | 1 | Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. | Not established | -1 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| FL_WristExtensor_s1_preferred | distal_wrap_radius_m | m | Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. | Not established | 0 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| FL_WristExtensor_s1_preferred | distal_wrap_sign | 1 | Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. | Not established | 0 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| FL_WristExtensor_s1_preferred | distal_joint_sign | 1 | Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. | Not established | 0 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| FL_WristExtensor_s1_preferred | joint_spacing_m | m | Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. | Not established | 0.094657143 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| FL_ShoulderFlexor_s0_preferred | origin_radius_m | m | Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. | Not established | 0.050760952 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| FL_ShoulderFlexor_s0_preferred | insertion_radius_m | m | Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. | Not established | 0.01670003 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+Each entry contains its values, units, meaning and source information. Select an entry to read all fields.
+
+<details>
+<summary>L_RF_tangent · origin_radius_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | L_RF_tangent |
+| Parameter | origin_radius_m |
+| Unit | m |
+| Meaning | Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. |
+| Source value | Not established |
+| Value used in this model | 0.005420765 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>L_RF_tangent · insertion_radius_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | L_RF_tangent |
+| Parameter | insertion_radius_m |
+| Unit | m |
+| Meaning | Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. |
+| Source value | Not established |
+| Value used in this model | 0.010585366 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>L_RF_tangent · origin_angle_rad</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | L_RF_tangent |
+| Parameter | origin_angle_rad |
+| Unit | rad |
+| Meaning | Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. |
+| Source value | Not established |
+| Value used in this model | 0 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>L_RF_tangent · insertion_angle_rad</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | L_RF_tangent |
+| Parameter | insertion_angle_rad |
+| Unit | rad |
+| Meaning | Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. |
+| Source value | Not established |
+| Value used in this model | 2.53073 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>L_RF_tangent · proximal_wrap_radius_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | L_RF_tangent |
+| Parameter | proximal_wrap_radius_m |
+| Unit | m |
+| Meaning | Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. |
+| Source value | Not established |
+| Value used in this model | 0.0047638278 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>L_RF_tangent · proximal_wrap_sign</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | L_RF_tangent |
+| Parameter | proximal_wrap_sign |
+| Unit | 1 |
+| Meaning | Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. |
+| Source value | Not established |
+| Value used in this model | -1 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>L_RF_tangent · proximal_joint_sign</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | L_RF_tangent |
+| Parameter | proximal_joint_sign |
+| Unit | 1 |
+| Meaning | Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. |
+| Source value | Not established |
+| Value used in this model | -1 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>L_RF_tangent · distal_wrap_radius_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | L_RF_tangent |
+| Parameter | distal_wrap_radius_m |
+| Unit | m |
+| Meaning | Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. |
+| Source value | Not established |
+| Value used in this model | 0.010585366 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>L_RF_tangent · distal_wrap_sign</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | L_RF_tangent |
+| Parameter | distal_wrap_sign |
+| Unit | 1 |
+| Meaning | Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. |
+| Source value | Not established |
+| Value used in this model | -1 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>L_RF_tangent · distal_joint_sign</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | L_RF_tangent |
+| Parameter | distal_joint_sign |
+| Unit | 1 |
+| Meaning | Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. |
+| Source value | Not established |
+| Value used in this model | 1 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>L_RF_tangent · joint_spacing_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | L_RF_tangent |
+| Parameter | joint_spacing_m |
+| Unit | m |
+| Meaning | Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. |
+| Source value | Not established |
+| Value used in this model | 0.0955 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>L_BFP_tangent · origin_radius_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | L_BFP_tangent |
+| Parameter | origin_radius_m |
+| Unit | m |
+| Meaning | Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. |
+| Source value | Not established |
+| Value used in this model | 0.0084699454 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>L_BFP_tangent · insertion_radius_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | L_BFP_tangent |
+| Parameter | insertion_radius_m |
+| Unit | m |
+| Meaning | Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. |
+| Source value | Not established |
+| Value used in this model | 0.031756098 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>L_BFP_tangent · origin_angle_rad</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | L_BFP_tangent |
+| Parameter | origin_angle_rad |
+| Unit | rad |
+| Meaning | Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. |
+| Source value | Not established |
+| Value used in this model | 2.46091 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>L_BFP_tangent · insertion_angle_rad</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | L_BFP_tangent |
+| Parameter | insertion_angle_rad |
+| Unit | rad |
+| Meaning | Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. |
+| Source value | Not established |
+| Value used in this model | 0 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>L_BFP_tangent · proximal_wrap_radius_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | L_BFP_tangent |
+| Parameter | proximal_wrap_radius_m |
+| Unit | m |
+| Meaning | Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. |
+| Source value | Not established |
+| Value used in this model | 0.0047638278 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>L_BFP_tangent · proximal_wrap_sign</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | L_BFP_tangent |
+| Parameter | proximal_wrap_sign |
+| Unit | 1 |
+| Meaning | Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. |
+| Source value | Not established |
+| Value used in this model | 1 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>L_BFP_tangent · proximal_joint_sign</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | L_BFP_tangent |
+| Parameter | proximal_joint_sign |
+| Unit | 1 |
+| Meaning | Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. |
+| Source value | Not established |
+| Value used in this model | -1 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>L_BFP_tangent · distal_wrap_radius_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | L_BFP_tangent |
+| Parameter | distal_wrap_radius_m |
+| Unit | m |
+| Meaning | Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. |
+| Source value | Not established |
+| Value used in this model | 0.0057165934 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>L_BFP_tangent · distal_wrap_sign</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | L_BFP_tangent |
+| Parameter | distal_wrap_sign |
+| Unit | 1 |
+| Meaning | Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. |
+| Source value | Not established |
+| Value used in this model | 1 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>L_BFP_tangent · distal_joint_sign</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | L_BFP_tangent |
+| Parameter | distal_joint_sign |
+| Unit | 1 |
+| Meaning | Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. |
+| Source value | Not established |
+| Value used in this model | 1 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>L_BFP_tangent · joint_spacing_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | L_BFP_tangent |
+| Parameter | joint_spacing_m |
+| Unit | m |
+| Meaning | Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. |
+| Source value | Not established |
+| Value used in this model | 0.0955 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>L_SAM_tangent · origin_radius_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | L_SAM_tangent |
+| Parameter | origin_radius_m |
+| Unit | m |
+| Meaning | Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. |
+| Source value | Not established |
+| Value used in this model | 0.013551913 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>L_SAM_tangent · insertion_radius_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | L_SAM_tangent |
+| Parameter | insertion_radius_m |
+| Unit | m |
+| Meaning | Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. |
+| Source value | Not established |
+| Value used in this model | 0.010585366 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>L_SAM_tangent · origin_angle_rad</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | L_SAM_tangent |
+| Parameter | origin_angle_rad |
+| Unit | rad |
+| Meaning | Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. |
+| Source value | Not established |
+| Value used in this model | 0 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>L_SAM_tangent · insertion_angle_rad</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | L_SAM_tangent |
+| Parameter | insertion_angle_rad |
+| Unit | rad |
+| Meaning | Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. |
+| Source value | Not established |
+| Value used in this model | 0 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>L_SAM_tangent · proximal_wrap_radius_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | L_SAM_tangent |
+| Parameter | proximal_wrap_radius_m |
+| Unit | m |
+| Meaning | Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. |
+| Source value | Not established |
+| Value used in this model | 0.0047638278 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>L_SAM_tangent · proximal_wrap_sign</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | L_SAM_tangent |
+| Parameter | proximal_wrap_sign |
+| Unit | 1 |
+| Meaning | Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. |
+| Source value | Not established |
+| Value used in this model | -1 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>L_SAM_tangent · proximal_joint_sign</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | L_SAM_tangent |
+| Parameter | proximal_joint_sign |
+| Unit | 1 |
+| Meaning | Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. |
+| Source value | Not established |
+| Value used in this model | -1 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>L_SAM_tangent · distal_wrap_radius_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | L_SAM_tangent |
+| Parameter | distal_wrap_radius_m |
+| Unit | m |
+| Meaning | Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. |
+| Source value | Not established |
+| Value used in this model | 0.0057165934 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>L_SAM_tangent · distal_wrap_sign</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | L_SAM_tangent |
+| Parameter | distal_wrap_sign |
+| Unit | 1 |
+| Meaning | Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. |
+| Source value | Not established |
+| Value used in this model | 1 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>L_SAM_tangent · distal_joint_sign</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | L_SAM_tangent |
+| Parameter | distal_joint_sign |
+| Unit | 1 |
+| Meaning | Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. |
+| Source value | Not established |
+| Value used in this model | 1 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>L_SAM_tangent · joint_spacing_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | L_SAM_tangent |
+| Parameter | joint_spacing_m |
+| Unit | m |
+| Meaning | Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. |
+| Source value | Not established |
+| Value used in this model | 0.0955 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>L_LG_tangent · origin_radius_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | L_LG_tangent |
+| Parameter | origin_radius_m |
+| Unit | m |
+| Meaning | Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. |
+| Source value | Not established |
+| Value used in this model | 0.0058890031 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>L_LG_tangent · insertion_radius_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | L_LG_tangent |
+| Parameter | insertion_radius_m |
+| Unit | m |
+| Meaning | Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. |
+| Source value | Not established |
+| Value used in this model | 0.015558781 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>L_LG_tangent · origin_angle_rad</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | L_LG_tangent |
+| Parameter | origin_angle_rad |
+| Unit | rad |
+| Meaning | Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. |
+| Source value | Not established |
+| Value used in this model | 0 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>L_LG_tangent · insertion_angle_rad</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | L_LG_tangent |
+| Parameter | insertion_angle_rad |
+| Unit | rad |
+| Meaning | Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. |
+| Source value | Not established |
+| Value used in this model | -3.03687 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>L_LG_tangent · proximal_wrap_radius_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | L_LG_tangent |
+| Parameter | proximal_wrap_radius_m |
+| Unit | m |
+| Meaning | Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. |
+| Source value | Not established |
+| Value used in this model | 0.0058890031 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>L_LG_tangent · proximal_wrap_sign</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | L_LG_tangent |
+| Parameter | proximal_wrap_sign |
+| Unit | 1 |
+| Meaning | Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. |
+| Source value | Not established |
+| Value used in this model | 1 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>L_LG_tangent · proximal_joint_sign</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | L_LG_tangent |
+| Parameter | proximal_joint_sign |
+| Unit | 1 |
+| Meaning | Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. |
+| Source value | Not established |
+| Value used in this model | 1 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>L_LG_tangent · distal_wrap_radius_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | L_LG_tangent |
+| Parameter | distal_wrap_radius_m |
+| Unit | m |
+| Meaning | Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. |
+| Source value | Not established |
+| Value used in this model | 0.0048848108 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>L_LG_tangent · distal_wrap_sign</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | L_LG_tangent |
+| Parameter | distal_wrap_sign |
+| Unit | 1 |
+| Meaning | Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. |
+| Source value | Not established |
+| Value used in this model | 1 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>L_LG_tangent · distal_joint_sign</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | L_LG_tangent |
+| Parameter | distal_joint_sign |
+| Unit | 1 |
+| Meaning | Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. |
+| Source value | Not established |
+| Value used in this model | -1 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>L_LG_tangent · joint_spacing_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | L_LG_tangent |
+| Parameter | joint_spacing_m |
+| Unit | m |
+| Meaning | Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. |
+| Source value | Not established |
+| Value used in this model | 0.1085 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>L_MG_tangent · origin_radius_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | L_MG_tangent |
+| Parameter | origin_radius_m |
+| Unit | m |
+| Meaning | Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. |
+| Source value | Not established |
+| Value used in this model | 0.0058890031 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>L_MG_tangent · insertion_radius_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | L_MG_tangent |
+| Parameter | insertion_radius_m |
+| Unit | m |
+| Meaning | Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. |
+| Source value | Not established |
+| Value used in this model | 0.015558781 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>L_MG_tangent · origin_angle_rad</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | L_MG_tangent |
+| Parameter | origin_angle_rad |
+| Unit | rad |
+| Meaning | Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. |
+| Source value | Not established |
+| Value used in this model | 0 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>L_MG_tangent · insertion_angle_rad</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | L_MG_tangent |
+| Parameter | insertion_angle_rad |
+| Unit | rad |
+| Meaning | Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. |
+| Source value | Not established |
+| Value used in this model | -3.03687 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>L_MG_tangent · proximal_wrap_radius_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | L_MG_tangent |
+| Parameter | proximal_wrap_radius_m |
+| Unit | m |
+| Meaning | Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. |
+| Source value | Not established |
+| Value used in this model | 0.0058890031 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>L_MG_tangent · proximal_wrap_sign</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | L_MG_tangent |
+| Parameter | proximal_wrap_sign |
+| Unit | 1 |
+| Meaning | Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. |
+| Source value | Not established |
+| Value used in this model | 1 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>L_MG_tangent · proximal_joint_sign</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | L_MG_tangent |
+| Parameter | proximal_joint_sign |
+| Unit | 1 |
+| Meaning | Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. |
+| Source value | Not established |
+| Value used in this model | 1 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>L_MG_tangent · distal_wrap_radius_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | L_MG_tangent |
+| Parameter | distal_wrap_radius_m |
+| Unit | m |
+| Meaning | Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. |
+| Source value | Not established |
+| Value used in this model | 0.0048848108 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>L_MG_tangent · distal_wrap_sign</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | L_MG_tangent |
+| Parameter | distal_wrap_sign |
+| Unit | 1 |
+| Meaning | Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. |
+| Source value | Not established |
+| Value used in this model | 1 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>L_MG_tangent · distal_joint_sign</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | L_MG_tangent |
+| Parameter | distal_joint_sign |
+| Unit | 1 |
+| Meaning | Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. |
+| Source value | Not established |
+| Value used in this model | -1 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>L_MG_tangent · joint_spacing_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | L_MG_tangent |
+| Parameter | joint_spacing_m |
+| Unit | m |
+| Meaning | Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. |
+| Source value | Not established |
+| Value used in this model | 0.1085 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>R_RF_tangent · origin_radius_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | R_RF_tangent |
+| Parameter | origin_radius_m |
+| Unit | m |
+| Meaning | Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. |
+| Source value | Not established |
+| Value used in this model | 0.005420765 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>R_RF_tangent · insertion_radius_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | R_RF_tangent |
+| Parameter | insertion_radius_m |
+| Unit | m |
+| Meaning | Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. |
+| Source value | Not established |
+| Value used in this model | 0.010585366 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>R_RF_tangent · origin_angle_rad</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | R_RF_tangent |
+| Parameter | origin_angle_rad |
+| Unit | rad |
+| Meaning | Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. |
+| Source value | Not established |
+| Value used in this model | 0 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>R_RF_tangent · insertion_angle_rad</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | R_RF_tangent |
+| Parameter | insertion_angle_rad |
+| Unit | rad |
+| Meaning | Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. |
+| Source value | Not established |
+| Value used in this model | 2.53073 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>R_RF_tangent · proximal_wrap_radius_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | R_RF_tangent |
+| Parameter | proximal_wrap_radius_m |
+| Unit | m |
+| Meaning | Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. |
+| Source value | Not established |
+| Value used in this model | 0.0047638278 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>R_RF_tangent · proximal_wrap_sign</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | R_RF_tangent |
+| Parameter | proximal_wrap_sign |
+| Unit | 1 |
+| Meaning | Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. |
+| Source value | Not established |
+| Value used in this model | -1 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>R_RF_tangent · proximal_joint_sign</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | R_RF_tangent |
+| Parameter | proximal_joint_sign |
+| Unit | 1 |
+| Meaning | Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. |
+| Source value | Not established |
+| Value used in this model | -1 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>R_RF_tangent · distal_wrap_radius_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | R_RF_tangent |
+| Parameter | distal_wrap_radius_m |
+| Unit | m |
+| Meaning | Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. |
+| Source value | Not established |
+| Value used in this model | 0.010585366 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>R_RF_tangent · distal_wrap_sign</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | R_RF_tangent |
+| Parameter | distal_wrap_sign |
+| Unit | 1 |
+| Meaning | Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. |
+| Source value | Not established |
+| Value used in this model | -1 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>R_RF_tangent · distal_joint_sign</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | R_RF_tangent |
+| Parameter | distal_joint_sign |
+| Unit | 1 |
+| Meaning | Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. |
+| Source value | Not established |
+| Value used in this model | 1 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>R_RF_tangent · joint_spacing_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | R_RF_tangent |
+| Parameter | joint_spacing_m |
+| Unit | m |
+| Meaning | Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. |
+| Source value | Not established |
+| Value used in this model | 0.0955 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>R_BFP_tangent · origin_radius_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | R_BFP_tangent |
+| Parameter | origin_radius_m |
+| Unit | m |
+| Meaning | Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. |
+| Source value | Not established |
+| Value used in this model | 0.0084699454 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>R_BFP_tangent · insertion_radius_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | R_BFP_tangent |
+| Parameter | insertion_radius_m |
+| Unit | m |
+| Meaning | Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. |
+| Source value | Not established |
+| Value used in this model | 0.031756098 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>R_BFP_tangent · origin_angle_rad</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | R_BFP_tangent |
+| Parameter | origin_angle_rad |
+| Unit | rad |
+| Meaning | Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. |
+| Source value | Not established |
+| Value used in this model | 2.46091 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>R_BFP_tangent · insertion_angle_rad</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | R_BFP_tangent |
+| Parameter | insertion_angle_rad |
+| Unit | rad |
+| Meaning | Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. |
+| Source value | Not established |
+| Value used in this model | 0 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>R_BFP_tangent · proximal_wrap_radius_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | R_BFP_tangent |
+| Parameter | proximal_wrap_radius_m |
+| Unit | m |
+| Meaning | Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. |
+| Source value | Not established |
+| Value used in this model | 0.0047638278 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>R_BFP_tangent · proximal_wrap_sign</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | R_BFP_tangent |
+| Parameter | proximal_wrap_sign |
+| Unit | 1 |
+| Meaning | Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. |
+| Source value | Not established |
+| Value used in this model | 1 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>R_BFP_tangent · proximal_joint_sign</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | R_BFP_tangent |
+| Parameter | proximal_joint_sign |
+| Unit | 1 |
+| Meaning | Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. |
+| Source value | Not established |
+| Value used in this model | -1 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>R_BFP_tangent · distal_wrap_radius_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | R_BFP_tangent |
+| Parameter | distal_wrap_radius_m |
+| Unit | m |
+| Meaning | Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. |
+| Source value | Not established |
+| Value used in this model | 0.0057165934 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>R_BFP_tangent · distal_wrap_sign</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | R_BFP_tangent |
+| Parameter | distal_wrap_sign |
+| Unit | 1 |
+| Meaning | Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. |
+| Source value | Not established |
+| Value used in this model | 1 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>R_BFP_tangent · distal_joint_sign</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | R_BFP_tangent |
+| Parameter | distal_joint_sign |
+| Unit | 1 |
+| Meaning | Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. |
+| Source value | Not established |
+| Value used in this model | 1 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>R_BFP_tangent · joint_spacing_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | R_BFP_tangent |
+| Parameter | joint_spacing_m |
+| Unit | m |
+| Meaning | Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. |
+| Source value | Not established |
+| Value used in this model | 0.0955 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>R_SAM_tangent · origin_radius_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | R_SAM_tangent |
+| Parameter | origin_radius_m |
+| Unit | m |
+| Meaning | Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. |
+| Source value | Not established |
+| Value used in this model | 0.013551913 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>R_SAM_tangent · insertion_radius_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | R_SAM_tangent |
+| Parameter | insertion_radius_m |
+| Unit | m |
+| Meaning | Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. |
+| Source value | Not established |
+| Value used in this model | 0.010585366 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>R_SAM_tangent · origin_angle_rad</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | R_SAM_tangent |
+| Parameter | origin_angle_rad |
+| Unit | rad |
+| Meaning | Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. |
+| Source value | Not established |
+| Value used in this model | 0 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>R_SAM_tangent · insertion_angle_rad</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | R_SAM_tangent |
+| Parameter | insertion_angle_rad |
+| Unit | rad |
+| Meaning | Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. |
+| Source value | Not established |
+| Value used in this model | 0 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>R_SAM_tangent · proximal_wrap_radius_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | R_SAM_tangent |
+| Parameter | proximal_wrap_radius_m |
+| Unit | m |
+| Meaning | Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. |
+| Source value | Not established |
+| Value used in this model | 0.0047638278 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>R_SAM_tangent · proximal_wrap_sign</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | R_SAM_tangent |
+| Parameter | proximal_wrap_sign |
+| Unit | 1 |
+| Meaning | Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. |
+| Source value | Not established |
+| Value used in this model | -1 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>R_SAM_tangent · proximal_joint_sign</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | R_SAM_tangent |
+| Parameter | proximal_joint_sign |
+| Unit | 1 |
+| Meaning | Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. |
+| Source value | Not established |
+| Value used in this model | -1 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>R_SAM_tangent · distal_wrap_radius_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | R_SAM_tangent |
+| Parameter | distal_wrap_radius_m |
+| Unit | m |
+| Meaning | Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. |
+| Source value | Not established |
+| Value used in this model | 0.0057165934 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>R_SAM_tangent · distal_wrap_sign</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | R_SAM_tangent |
+| Parameter | distal_wrap_sign |
+| Unit | 1 |
+| Meaning | Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. |
+| Source value | Not established |
+| Value used in this model | 1 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>R_SAM_tangent · distal_joint_sign</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | R_SAM_tangent |
+| Parameter | distal_joint_sign |
+| Unit | 1 |
+| Meaning | Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. |
+| Source value | Not established |
+| Value used in this model | 1 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>R_SAM_tangent · joint_spacing_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | R_SAM_tangent |
+| Parameter | joint_spacing_m |
+| Unit | m |
+| Meaning | Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. |
+| Source value | Not established |
+| Value used in this model | 0.0955 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>R_LG_tangent · origin_radius_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | R_LG_tangent |
+| Parameter | origin_radius_m |
+| Unit | m |
+| Meaning | Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. |
+| Source value | Not established |
+| Value used in this model | 0.0058890031 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>R_LG_tangent · insertion_radius_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | R_LG_tangent |
+| Parameter | insertion_radius_m |
+| Unit | m |
+| Meaning | Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. |
+| Source value | Not established |
+| Value used in this model | 0.015558781 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>R_LG_tangent · origin_angle_rad</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | R_LG_tangent |
+| Parameter | origin_angle_rad |
+| Unit | rad |
+| Meaning | Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. |
+| Source value | Not established |
+| Value used in this model | 0 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>R_LG_tangent · insertion_angle_rad</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | R_LG_tangent |
+| Parameter | insertion_angle_rad |
+| Unit | rad |
+| Meaning | Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. |
+| Source value | Not established |
+| Value used in this model | -3.03687 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>R_LG_tangent · proximal_wrap_radius_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | R_LG_tangent |
+| Parameter | proximal_wrap_radius_m |
+| Unit | m |
+| Meaning | Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. |
+| Source value | Not established |
+| Value used in this model | 0.0058890031 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>R_LG_tangent · proximal_wrap_sign</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | R_LG_tangent |
+| Parameter | proximal_wrap_sign |
+| Unit | 1 |
+| Meaning | Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. |
+| Source value | Not established |
+| Value used in this model | 1 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>R_LG_tangent · proximal_joint_sign</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | R_LG_tangent |
+| Parameter | proximal_joint_sign |
+| Unit | 1 |
+| Meaning | Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. |
+| Source value | Not established |
+| Value used in this model | 1 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>R_LG_tangent · distal_wrap_radius_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | R_LG_tangent |
+| Parameter | distal_wrap_radius_m |
+| Unit | m |
+| Meaning | Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. |
+| Source value | Not established |
+| Value used in this model | 0.0048848108 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>R_LG_tangent · distal_wrap_sign</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | R_LG_tangent |
+| Parameter | distal_wrap_sign |
+| Unit | 1 |
+| Meaning | Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. |
+| Source value | Not established |
+| Value used in this model | 1 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>R_LG_tangent · distal_joint_sign</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | R_LG_tangent |
+| Parameter | distal_joint_sign |
+| Unit | 1 |
+| Meaning | Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. |
+| Source value | Not established |
+| Value used in this model | -1 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>R_LG_tangent · joint_spacing_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | R_LG_tangent |
+| Parameter | joint_spacing_m |
+| Unit | m |
+| Meaning | Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. |
+| Source value | Not established |
+| Value used in this model | 0.1085 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>R_MG_tangent · origin_radius_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | R_MG_tangent |
+| Parameter | origin_radius_m |
+| Unit | m |
+| Meaning | Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. |
+| Source value | Not established |
+| Value used in this model | 0.0058890031 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>R_MG_tangent · insertion_radius_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | R_MG_tangent |
+| Parameter | insertion_radius_m |
+| Unit | m |
+| Meaning | Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. |
+| Source value | Not established |
+| Value used in this model | 0.015558781 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>R_MG_tangent · origin_angle_rad</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | R_MG_tangent |
+| Parameter | origin_angle_rad |
+| Unit | rad |
+| Meaning | Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. |
+| Source value | Not established |
+| Value used in this model | 0 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>R_MG_tangent · insertion_angle_rad</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | R_MG_tangent |
+| Parameter | insertion_angle_rad |
+| Unit | rad |
+| Meaning | Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. |
+| Source value | Not established |
+| Value used in this model | -3.03687 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>R_MG_tangent · proximal_wrap_radius_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | R_MG_tangent |
+| Parameter | proximal_wrap_radius_m |
+| Unit | m |
+| Meaning | Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. |
+| Source value | Not established |
+| Value used in this model | 0.0058890031 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>R_MG_tangent · proximal_wrap_sign</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | R_MG_tangent |
+| Parameter | proximal_wrap_sign |
+| Unit | 1 |
+| Meaning | Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. |
+| Source value | Not established |
+| Value used in this model | 1 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>R_MG_tangent · proximal_joint_sign</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | R_MG_tangent |
+| Parameter | proximal_joint_sign |
+| Unit | 1 |
+| Meaning | Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. |
+| Source value | Not established |
+| Value used in this model | 1 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>R_MG_tangent · distal_wrap_radius_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | R_MG_tangent |
+| Parameter | distal_wrap_radius_m |
+| Unit | m |
+| Meaning | Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. |
+| Source value | Not established |
+| Value used in this model | 0.0048848108 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>R_MG_tangent · distal_wrap_sign</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | R_MG_tangent |
+| Parameter | distal_wrap_sign |
+| Unit | 1 |
+| Meaning | Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. |
+| Source value | Not established |
+| Value used in this model | 1 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>R_MG_tangent · distal_joint_sign</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | R_MG_tangent |
+| Parameter | distal_joint_sign |
+| Unit | 1 |
+| Meaning | Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. |
+| Source value | Not established |
+| Value used in this model | -1 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>R_MG_tangent · joint_spacing_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | R_MG_tangent |
+| Parameter | joint_spacing_m |
+| Unit | m |
+| Meaning | Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. |
+| Source value | Not established |
+| Value used in this model | 0.1085 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>FL_ShoulderExtensor_s0_preferred · origin_radius_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_ShoulderExtensor_s0_preferred |
+| Parameter | origin_radius_m |
+| Unit | m |
+| Meaning | Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. |
+| Source value | Not established |
+| Value used in this model | 0.056400201 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>FL_ShoulderExtensor_s0_preferred · insertion_radius_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_ShoulderExtensor_s0_preferred |
+| Parameter | insertion_radius_m |
+| Unit | m |
+| Meaning | Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. |
+| Source value | Not established |
+| Value used in this model | 0.007945482 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>FL_ShoulderExtensor_s0_preferred · origin_angle_rad</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_ShoulderExtensor_s0_preferred |
+| Parameter | origin_angle_rad |
+| Unit | rad |
+| Meaning | Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. |
+| Source value | Not established |
+| Value used in this model | -0.27701001 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>FL_ShoulderExtensor_s0_preferred · insertion_angle_rad</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_ShoulderExtensor_s0_preferred |
+| Parameter | insertion_angle_rad |
+| Unit | rad |
+| Meaning | Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. |
+| Source value | Not established |
+| Value used in this model | 2.3916018 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>FL_ShoulderExtensor_s0_preferred · proximal_wrap_radius_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_ShoulderExtensor_s0_preferred |
+| Parameter | proximal_wrap_radius_m |
+| Unit | m |
+| Meaning | Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. |
+| Source value | Not established |
+| Value used in this model | 0.0079448512 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>FL_ShoulderExtensor_s0_preferred · proximal_wrap_sign</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_ShoulderExtensor_s0_preferred |
+| Parameter | proximal_wrap_sign |
+| Unit | 1 |
+| Meaning | Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. |
+| Source value | Not established |
+| Value used in this model | -1 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>FL_ShoulderExtensor_s0_preferred · proximal_joint_sign</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_ShoulderExtensor_s0_preferred |
+| Parameter | proximal_joint_sign |
+| Unit | 1 |
+| Meaning | Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. |
+| Source value | Not established |
+| Value used in this model | 1 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>FL_ShoulderExtensor_s0_preferred · distal_wrap_radius_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_ShoulderExtensor_s0_preferred |
+| Parameter | distal_wrap_radius_m |
+| Unit | m |
+| Meaning | Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. |
+| Source value | Not established |
+| Value used in this model | 0 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>FL_ShoulderExtensor_s0_preferred · distal_wrap_sign</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_ShoulderExtensor_s0_preferred |
+| Parameter | distal_wrap_sign |
+| Unit | 1 |
+| Meaning | Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. |
+| Source value | Not established |
+| Value used in this model | 0 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>FL_ShoulderExtensor_s0_preferred · distal_joint_sign</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_ShoulderExtensor_s0_preferred |
+| Parameter | distal_joint_sign |
+| Unit | 1 |
+| Meaning | Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. |
+| Source value | Not established |
+| Value used in this model | 0 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>FL_ShoulderExtensor_s0_preferred · joint_spacing_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_ShoulderExtensor_s0_preferred |
+| Parameter | joint_spacing_m |
+| Unit | m |
+| Meaning | Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. |
+| Source value | Not established |
+| Value used in this model | 0.057714286 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>FL_ElbowExtensor_s0_preferred · origin_radius_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_ElbowExtensor_s0_preferred |
+| Parameter | origin_radius_m |
+| Unit | m |
+| Meaning | Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. |
+| Source value | Not established |
+| Value used in this model | 0.060001647 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>FL_ElbowExtensor_s0_preferred · insertion_radius_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_ElbowExtensor_s0_preferred |
+| Parameter | insertion_radius_m |
+| Unit | m |
+| Meaning | Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. |
+| Source value | Not established |
+| Value used in this model | 0.005580204 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>FL_ElbowExtensor_s0_preferred · origin_angle_rad</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_ElbowExtensor_s0_preferred |
+| Parameter | origin_angle_rad |
+| Unit | rad |
+| Meaning | Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. |
+| Source value | Not established |
+| Value used in this model | 0.15527521 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>FL_ElbowExtensor_s0_preferred · insertion_angle_rad</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_ElbowExtensor_s0_preferred |
+| Parameter | insertion_angle_rad |
+| Unit | rad |
+| Meaning | Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. |
+| Source value | Not established |
+| Value used in this model | -2.6913015 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>FL_ElbowExtensor_s0_preferred · proximal_wrap_radius_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_ElbowExtensor_s0_preferred |
+| Parameter | proximal_wrap_radius_m |
+| Unit | m |
+| Meaning | Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. |
+| Source value | Not established |
+| Value used in this model | 0.0021176766 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>FL_ElbowExtensor_s0_preferred · proximal_wrap_sign</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_ElbowExtensor_s0_preferred |
+| Parameter | proximal_wrap_sign |
+| Unit | 1 |
+| Meaning | Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. |
+| Source value | Not established |
+| Value used in this model | 1 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>FL_ElbowExtensor_s0_preferred · proximal_joint_sign</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_ElbowExtensor_s0_preferred |
+| Parameter | proximal_joint_sign |
+| Unit | 1 |
+| Meaning | Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. |
+| Source value | Not established |
+| Value used in this model | -1 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>FL_ElbowExtensor_s0_preferred · distal_wrap_radius_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_ElbowExtensor_s0_preferred |
+| Parameter | distal_wrap_radius_m |
+| Unit | m |
+| Meaning | Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. |
+| Source value | Not established |
+| Value used in this model | 0 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>FL_ElbowExtensor_s0_preferred · distal_wrap_sign</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_ElbowExtensor_s0_preferred |
+| Parameter | distal_wrap_sign |
+| Unit | 1 |
+| Meaning | Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. |
+| Source value | Not established |
+| Value used in this model | 0 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>FL_ElbowExtensor_s0_preferred · distal_joint_sign</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_ElbowExtensor_s0_preferred |
+| Parameter | distal_joint_sign |
+| Unit | 1 |
+| Meaning | Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. |
+| Source value | Not established |
+| Value used in this model | 0 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>FL_ElbowExtensor_s0_preferred · joint_spacing_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_ElbowExtensor_s0_preferred |
+| Parameter | joint_spacing_m |
+| Unit | m |
+| Meaning | Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. |
+| Source value | Not established |
+| Value used in this model | 0.092757143 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>FL_BicepsBrachii_s0_tangent · origin_radius_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_BicepsBrachii_s0_tangent |
+| Parameter | origin_radius_m |
+| Unit | m |
+| Meaning | Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. |
+| Source value | Not established |
+| Value used in this model | 0.012186834 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>FL_BicepsBrachii_s0_tangent · insertion_radius_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_BicepsBrachii_s0_tangent |
+| Parameter | insertion_radius_m |
+| Unit | m |
+| Meaning | Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. |
+| Source value | Not established |
+| Value used in this model | 0.011134867 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>FL_BicepsBrachii_s0_tangent · origin_angle_rad</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_BicepsBrachii_s0_tangent |
+| Parameter | origin_angle_rad |
+| Unit | rad |
+| Meaning | Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. |
+| Source value | Not established |
+| Value used in this model | -1.9686494 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>FL_BicepsBrachii_s0_tangent · insertion_angle_rad</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_BicepsBrachii_s0_tangent |
+| Parameter | insertion_angle_rad |
+| Unit | rad |
+| Meaning | Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. |
+| Source value | Not established |
+| Value used in this model | -0.40005001 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>FL_BicepsBrachii_s0_tangent · proximal_wrap_radius_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_BicepsBrachii_s0_tangent |
+| Parameter | proximal_wrap_radius_m |
+| Unit | m |
+| Meaning | Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. |
+| Source value | Not established |
+| Value used in this model | 0.0099469286 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>FL_BicepsBrachii_s0_tangent · proximal_wrap_sign</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_BicepsBrachii_s0_tangent |
+| Parameter | proximal_wrap_sign |
+| Unit | 1 |
+| Meaning | Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. |
+| Source value | Not established |
+| Value used in this model | -1 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>FL_BicepsBrachii_s0_tangent · proximal_joint_sign</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_BicepsBrachii_s0_tangent |
+| Parameter | proximal_joint_sign |
+| Unit | 1 |
+| Meaning | Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. |
+| Source value | Not established |
+| Value used in this model | 1 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>FL_BicepsBrachii_s0_tangent · distal_wrap_radius_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_BicepsBrachii_s0_tangent |
+| Parameter | distal_wrap_radius_m |
+| Unit | m |
+| Meaning | Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. |
+| Source value | Not established |
+| Value used in this model | 0.0052591454 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>FL_BicepsBrachii_s0_tangent · distal_wrap_sign</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_BicepsBrachii_s0_tangent |
+| Parameter | distal_wrap_sign |
+| Unit | 1 |
+| Meaning | Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. |
+| Source value | Not established |
+| Value used in this model | -1 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>FL_BicepsBrachii_s0_tangent · distal_joint_sign</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_BicepsBrachii_s0_tangent |
+| Parameter | distal_joint_sign |
+| Unit | 1 |
+| Meaning | Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. |
+| Source value | Not established |
+| Value used in this model | -1 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>FL_BicepsBrachii_s0_tangent · joint_spacing_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_BicepsBrachii_s0_tangent |
+| Parameter | joint_spacing_m |
+| Unit | m |
+| Meaning | Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. |
+| Source value | Not established |
+| Value used in this model | 0.092757143 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>FL_ElbowFlexor_s0_preferred · origin_radius_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_ElbowFlexor_s0_preferred |
+| Parameter | origin_radius_m |
+| Unit | m |
+| Meaning | Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. |
+| Source value | Not established |
+| Value used in this model | 0.071503751 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>FL_ElbowFlexor_s0_preferred · insertion_radius_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_ElbowFlexor_s0_preferred |
+| Parameter | insertion_radius_m |
+| Unit | m |
+| Meaning | Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. |
+| Source value | Not established |
+| Value used in this model | 0.0074004393 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>FL_ElbowFlexor_s0_preferred · origin_angle_rad</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_ElbowFlexor_s0_preferred |
+| Parameter | origin_angle_rad |
+| Unit | rad |
+| Meaning | Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. |
+| Source value | Not established |
+| Value used in this model | -0.069736681 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>FL_ElbowFlexor_s0_preferred · insertion_angle_rad</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_ElbowFlexor_s0_preferred |
+| Parameter | insertion_angle_rad |
+| Unit | rad |
+| Meaning | Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. |
+| Source value | Not established |
+| Value used in this model | 0.89872907 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>FL_ElbowFlexor_s0_preferred · proximal_wrap_radius_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_ElbowFlexor_s0_preferred |
+| Parameter | proximal_wrap_radius_m |
+| Unit | m |
+| Meaning | Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. |
+| Source value | Not established |
+| Value used in this model | 0.0032 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>FL_ElbowFlexor_s0_preferred · proximal_wrap_sign</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_ElbowFlexor_s0_preferred |
+| Parameter | proximal_wrap_sign |
+| Unit | 1 |
+| Meaning | Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. |
+| Source value | Not established |
+| Value used in this model | -1 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>FL_ElbowFlexor_s0_preferred · proximal_joint_sign</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_ElbowFlexor_s0_preferred |
+| Parameter | proximal_joint_sign |
+| Unit | 1 |
+| Meaning | Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. |
+| Source value | Not established |
+| Value used in this model | -1 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>FL_ElbowFlexor_s0_preferred · distal_wrap_radius_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_ElbowFlexor_s0_preferred |
+| Parameter | distal_wrap_radius_m |
+| Unit | m |
+| Meaning | Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. |
+| Source value | Not established |
+| Value used in this model | 0 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>FL_ElbowFlexor_s0_preferred · distal_wrap_sign</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_ElbowFlexor_s0_preferred |
+| Parameter | distal_wrap_sign |
+| Unit | 1 |
+| Meaning | Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. |
+| Source value | Not established |
+| Value used in this model | 0 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>FL_ElbowFlexor_s0_preferred · distal_joint_sign</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_ElbowFlexor_s0_preferred |
+| Parameter | distal_joint_sign |
+| Unit | 1 |
+| Meaning | Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. |
+| Source value | Not established |
+| Value used in this model | 0 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>FL_ElbowFlexor_s0_preferred · joint_spacing_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_ElbowFlexor_s0_preferred |
+| Parameter | joint_spacing_m |
+| Unit | m |
+| Meaning | Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. |
+| Source value | Not established |
+| Value used in this model | 0.092757143 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>FL_ElbowFlexorWristFlexor_s0_preferred · origin_radius_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_ElbowFlexorWristFlexor_s0_preferred |
+| Parameter | origin_radius_m |
+| Unit | m |
+| Meaning | Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. |
+| Source value | Not established |
+| Value used in this model | 0.011400001 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>FL_ElbowFlexorWristFlexor_s0_preferred · insertion_radius_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_ElbowFlexorWristFlexor_s0_preferred |
+| Parameter | insertion_radius_m |
+| Unit | m |
+| Meaning | Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. |
+| Source value | Not established |
+| Value used in this model | 0.0951 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>FL_ElbowFlexorWristFlexor_s0_preferred · origin_angle_rad</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_ElbowFlexorWristFlexor_s0_preferred |
+| Parameter | origin_angle_rad |
+| Unit | rad |
+| Meaning | Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. |
+| Source value | Not established |
+| Value used in this model | 0.28668737 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>FL_ElbowFlexorWristFlexor_s0_preferred · insertion_angle_rad</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_ElbowFlexorWristFlexor_s0_preferred |
+| Parameter | insertion_angle_rad |
+| Unit | rad |
+| Meaning | Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. |
+| Source value | Not established |
+| Value used in this model | 0.06450056 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>FL_ElbowFlexorWristFlexor_s0_preferred · proximal_wrap_radius_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_ElbowFlexorWristFlexor_s0_preferred |
+| Parameter | proximal_wrap_radius_m |
+| Unit | m |
+| Meaning | Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. |
+| Source value | Not established |
+| Value used in this model | 0.0053646541 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>FL_ElbowFlexorWristFlexor_s0_preferred · proximal_wrap_sign</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_ElbowFlexorWristFlexor_s0_preferred |
+| Parameter | proximal_wrap_sign |
+| Unit | 1 |
+| Meaning | Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. |
+| Source value | Not established |
+| Value used in this model | -1 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>FL_ElbowFlexorWristFlexor_s0_preferred · proximal_joint_sign</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_ElbowFlexorWristFlexor_s0_preferred |
+| Parameter | proximal_joint_sign |
+| Unit | 1 |
+| Meaning | Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. |
+| Source value | Not established |
+| Value used in this model | -1 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>FL_ElbowFlexorWristFlexor_s0_preferred · distal_wrap_radius_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_ElbowFlexorWristFlexor_s0_preferred |
+| Parameter | distal_wrap_radius_m |
+| Unit | m |
+| Meaning | Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. |
+| Source value | Not established |
+| Value used in this model | 0 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>FL_ElbowFlexorWristFlexor_s0_preferred · distal_wrap_sign</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_ElbowFlexorWristFlexor_s0_preferred |
+| Parameter | distal_wrap_sign |
+| Unit | 1 |
+| Meaning | Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. |
+| Source value | Not established |
+| Value used in this model | 0 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>FL_ElbowFlexorWristFlexor_s0_preferred · distal_joint_sign</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_ElbowFlexorWristFlexor_s0_preferred |
+| Parameter | distal_joint_sign |
+| Unit | 1 |
+| Meaning | Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. |
+| Source value | Not established |
+| Value used in this model | 0 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>FL_ElbowFlexorWristFlexor_s0_preferred · joint_spacing_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_ElbowFlexorWristFlexor_s0_preferred |
+| Parameter | joint_spacing_m |
+| Unit | m |
+| Meaning | Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. |
+| Source value | Not established |
+| Value used in this model | 0.092757143 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>FL_ElbowFlexorWristFlexor_s1_preferred · origin_radius_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_ElbowFlexorWristFlexor_s1_preferred |
+| Parameter | origin_radius_m |
+| Unit | m |
+| Meaning | Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. |
+| Source value | Not established |
+| Value used in this model | 0.0061346493 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>FL_ElbowFlexorWristFlexor_s1_preferred · insertion_radius_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_ElbowFlexorWristFlexor_s1_preferred |
+| Parameter | insertion_radius_m |
+| Unit | m |
+| Meaning | Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. |
+| Source value | Not established |
+| Value used in this model | 0.033299993 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>FL_ElbowFlexorWristFlexor_s1_preferred · origin_angle_rad</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_ElbowFlexorWristFlexor_s1_preferred |
+| Parameter | origin_angle_rad |
+| Unit | rad |
+| Meaning | Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. |
+| Source value | Not established |
+| Value used in this model | -1.5308319 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>FL_ElbowFlexorWristFlexor_s1_preferred · insertion_angle_rad</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_ElbowFlexorWristFlexor_s1_preferred |
+| Parameter | insertion_angle_rad |
+| Unit | rad |
+| Meaning | Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. |
+| Source value | Not established |
+| Value used in this model | 0.1258382 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>FL_ElbowFlexorWristFlexor_s1_preferred · proximal_wrap_radius_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_ElbowFlexorWristFlexor_s1_preferred |
+| Parameter | proximal_wrap_radius_m |
+| Unit | m |
+| Meaning | Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. |
+| Source value | Not established |
+| Value used in this model | 0.0035074959 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>FL_ElbowFlexorWristFlexor_s1_preferred · proximal_wrap_sign</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_ElbowFlexorWristFlexor_s1_preferred |
+| Parameter | proximal_wrap_sign |
+| Unit | 1 |
+| Meaning | Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. |
+| Source value | Not established |
+| Value used in this model | -1 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>FL_ElbowFlexorWristFlexor_s1_preferred · proximal_joint_sign</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_ElbowFlexorWristFlexor_s1_preferred |
+| Parameter | proximal_joint_sign |
+| Unit | 1 |
+| Meaning | Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. |
+| Source value | Not established |
+| Value used in this model | -1 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>FL_ElbowFlexorWristFlexor_s1_preferred · distal_wrap_radius_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_ElbowFlexorWristFlexor_s1_preferred |
+| Parameter | distal_wrap_radius_m |
+| Unit | m |
+| Meaning | Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. |
+| Source value | Not established |
+| Value used in this model | 0 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>FL_ElbowFlexorWristFlexor_s1_preferred · distal_wrap_sign</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_ElbowFlexorWristFlexor_s1_preferred |
+| Parameter | distal_wrap_sign |
+| Unit | 1 |
+| Meaning | Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. |
+| Source value | Not established |
+| Value used in this model | 0 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>FL_ElbowFlexorWristFlexor_s1_preferred · distal_joint_sign</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_ElbowFlexorWristFlexor_s1_preferred |
+| Parameter | distal_joint_sign |
+| Unit | 1 |
+| Meaning | Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. |
+| Source value | Not established |
+| Value used in this model | 0 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>FL_ElbowFlexorWristFlexor_s1_preferred · joint_spacing_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_ElbowFlexorWristFlexor_s1_preferred |
+| Parameter | joint_spacing_m |
+| Unit | m |
+| Meaning | Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. |
+| Source value | Not established |
+| Value used in this model | 0.094657143 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>FL_WristFlexor_s1_preferred · origin_radius_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_WristFlexor_s1_preferred |
+| Parameter | origin_radius_m |
+| Unit | m |
+| Meaning | Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. |
+| Source value | Not established |
+| Value used in this model | 0.0060090247 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>FL_WristFlexor_s1_preferred · insertion_radius_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_WristFlexor_s1_preferred |
+| Parameter | insertion_radius_m |
+| Unit | m |
+| Meaning | Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. |
+| Source value | Not established |
+| Value used in this model | 0.017111545 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>FL_WristFlexor_s1_preferred · origin_angle_rad</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_WristFlexor_s1_preferred |
+| Parameter | origin_angle_rad |
+| Unit | rad |
+| Meaning | Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. |
+| Source value | Not established |
+| Value used in this model | -2.3325124 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>FL_WristFlexor_s1_preferred · insertion_angle_rad</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_WristFlexor_s1_preferred |
+| Parameter | insertion_angle_rad |
+| Unit | rad |
+| Meaning | Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. |
+| Source value | Not established |
+| Value used in this model | 0.11480056 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>FL_WristFlexor_s1_preferred · proximal_wrap_radius_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_WristFlexor_s1_preferred |
+| Parameter | proximal_wrap_radius_m |
+| Unit | m |
+| Meaning | Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. |
+| Source value | Not established |
+| Value used in this model | 0.0024 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>FL_WristFlexor_s1_preferred · proximal_wrap_sign</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_WristFlexor_s1_preferred |
+| Parameter | proximal_wrap_sign |
+| Unit | 1 |
+| Meaning | Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. |
+| Source value | Not established |
+| Value used in this model | -1 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>FL_WristFlexor_s1_preferred · proximal_joint_sign</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_WristFlexor_s1_preferred |
+| Parameter | proximal_joint_sign |
+| Unit | 1 |
+| Meaning | Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. |
+| Source value | Not established |
+| Value used in this model | -1 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>FL_WristFlexor_s1_preferred · distal_wrap_radius_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_WristFlexor_s1_preferred |
+| Parameter | distal_wrap_radius_m |
+| Unit | m |
+| Meaning | Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. |
+| Source value | Not established |
+| Value used in this model | 0 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>FL_WristFlexor_s1_preferred · distal_wrap_sign</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_WristFlexor_s1_preferred |
+| Parameter | distal_wrap_sign |
+| Unit | 1 |
+| Meaning | Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. |
+| Source value | Not established |
+| Value used in this model | 0 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>FL_WristFlexor_s1_preferred · distal_joint_sign</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_WristFlexor_s1_preferred |
+| Parameter | distal_joint_sign |
+| Unit | 1 |
+| Meaning | Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. |
+| Source value | Not established |
+| Value used in this model | 0 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>FL_WristFlexor_s1_preferred · joint_spacing_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_WristFlexor_s1_preferred |
+| Parameter | joint_spacing_m |
+| Unit | m |
+| Meaning | Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. |
+| Source value | Not established |
+| Value used in this model | 0.094657143 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>FL_WristExtensor_s1_preferred · origin_radius_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_WristExtensor_s1_preferred |
+| Parameter | origin_radius_m |
+| Unit | m |
+| Meaning | Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. |
+| Source value | Not established |
+| Value used in this model | 0.0051865289 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>FL_WristExtensor_s1_preferred · insertion_radius_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_WristExtensor_s1_preferred |
+| Parameter | insertion_radius_m |
+| Unit | m |
+| Meaning | Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. |
+| Source value | Not established |
+| Value used in this model | 0.028858779 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>FL_WristExtensor_s1_preferred · origin_angle_rad</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_WristExtensor_s1_preferred |
+| Parameter | origin_angle_rad |
+| Unit | rad |
+| Meaning | Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. |
+| Source value | Not established |
+| Value used in this model | 1.2822922 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>FL_WristExtensor_s1_preferred · insertion_angle_rad</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_WristExtensor_s1_preferred |
+| Parameter | insertion_angle_rad |
+| Unit | rad |
+| Meaning | Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. |
+| Source value | Not established |
+| Value used in this model | -0.16317575 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>FL_WristExtensor_s1_preferred · proximal_wrap_radius_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_WristExtensor_s1_preferred |
+| Parameter | proximal_wrap_radius_m |
+| Unit | m |
+| Meaning | Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. |
+| Source value | Not established |
+| Value used in this model | 0.002710443 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>FL_WristExtensor_s1_preferred · proximal_wrap_sign</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_WristExtensor_s1_preferred |
+| Parameter | proximal_wrap_sign |
+| Unit | 1 |
+| Meaning | Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. |
+| Source value | Not established |
+| Value used in this model | 1 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>FL_WristExtensor_s1_preferred · proximal_joint_sign</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_WristExtensor_s1_preferred |
+| Parameter | proximal_joint_sign |
+| Unit | 1 |
+| Meaning | Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. |
+| Source value | Not established |
+| Value used in this model | -1 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>FL_WristExtensor_s1_preferred · distal_wrap_radius_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_WristExtensor_s1_preferred |
+| Parameter | distal_wrap_radius_m |
+| Unit | m |
+| Meaning | Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. |
+| Source value | Not established |
+| Value used in this model | 0 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>FL_WristExtensor_s1_preferred · distal_wrap_sign</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_WristExtensor_s1_preferred |
+| Parameter | distal_wrap_sign |
+| Unit | 1 |
+| Meaning | Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. |
+| Source value | Not established |
+| Value used in this model | 0 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>FL_WristExtensor_s1_preferred · distal_joint_sign</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_WristExtensor_s1_preferred |
+| Parameter | distal_joint_sign |
+| Unit | 1 |
+| Meaning | Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. |
+| Source value | Not established |
+| Value used in this model | 0 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>FL_WristExtensor_s1_preferred · joint_spacing_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_WristExtensor_s1_preferred |
+| Parameter | joint_spacing_m |
+| Unit | m |
+| Meaning | Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. |
+| Source value | Not established |
+| Value used in this model | 0.094657143 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>FL_ShoulderFlexor_s0_preferred · origin_radius_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_ShoulderFlexor_s0_preferred |
+| Parameter | origin_radius_m |
+| Unit | m |
+| Meaning | Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. |
+| Source value | Not established |
+| Value used in this model | 0.050760952 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>FL_ShoulderFlexor_s0_preferred · insertion_radius_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_ShoulderFlexor_s0_preferred |
+| Parameter | insertion_radius_m |
+| Unit | m |
+| Meaning | Analytical moving-via routing parameter; see update_routing.py and route_biarticular.py. |
+| Source value | Not established |
+| Value used in this model | 0.01670003 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>

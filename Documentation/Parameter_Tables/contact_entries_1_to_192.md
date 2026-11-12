@@ -4,197 +4,3076 @@
 
 [Back to parameter guide](../parameter_tables.md)
 
-| Object | Parameter | Unit | Meaning | Source value | Value used in this model | What changed and why | Source / evidence |
-| --- | --- | --- | --- | --- | --- | --- | --- |
-| L_paw_pad0 | radius_m | m | radius m | Not established | 0.006944518 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| L_paw_pad0 | position_in_body_m | m | position in body m | Not established | [0.006928842727548444, 0.0, -0.005] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| L_paw_pad0 | normal_stiffness_N_m32 | N/m^(3/2) | Hunt-Crossley normal stiffness coefficient. | Not established | 11296.508 | No verified source value is available for direct comparison. Effective paw-contact parameter from model calibration; not an independently measured paw-material constant. | Effective paw-contact law calibrated to force and motion references; parameters are not independently measured pad-material constants. Effective material parameters, not measured cat tissue constants. |
-| L_paw_pad0 | normal_dissipation_s_m | s/m | Velocity multiplier in the normal contact law. | Not established | 1.1713311 | No verified source value is available for direct comparison. Effective paw-contact parameter from model calibration; not an independently measured paw-material constant. | Effective paw-contact law calibrated to force and motion references; parameters are not independently measured pad-material constants. Effective material parameters, not measured cat tissue constants. |
-| L_paw_pad0 | shear_stiffness_N_m | N/m | Elastic tangential/shear stiffness. | Not established | 2412.5242 | No verified source value is available for direct comparison. Effective paw-contact parameter from model calibration; not an independently measured paw-material constant. | Effective paw-contact law calibrated to force and motion references; parameters are not independently measured pad-material constants. Effective material parameters, not measured cat tissue constants. |
-| L_paw_pad0 | shear_damping_Ns_m | N s/m | Tangential dashpot coefficient, reduced at shallow contact. | Not established | 16.12305 | No verified source value is available for direct comparison. Effective paw-contact parameter from model calibration; not an independently measured paw-material constant. | Effective paw-contact law calibrated to force and motion references; parameters are not independently measured pad-material constants. Effective material parameters, not measured cat tissue constants. |
-| L_paw_pad0 | friction_coefficient | 1 | Coulomb limiting shear/normal force ratio. | Not established | 0.32866719 | No verified source value is available for direct comparison. Effective paw-contact parameter from model calibration; not an independently measured paw-material constant. | Effective paw-contact law calibrated to force and motion references; parameters are not independently measured pad-material constants. Effective material parameters, not measured cat tissue constants. |
-| L_paw_pad0 | progressive_stiffening_depth_m | m | Optional finite-depth stiffening scale; zero disables the extension. | Not established | 0 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Effective paw-contact law calibrated to force and motion references; parameters are not independently measured pad-material constants. Effective material parameters, not measured cat tissue constants. |
-| L_paw_pad1 | radius_m | m | radius m | Not established | 0.006944518 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| L_paw_pad1 | position_in_body_m | m | position in body m | Not established | [0.006928842727548444, 0.0, 0.005] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| L_paw_pad1 | normal_stiffness_N_m32 | N/m^(3/2) | Hunt-Crossley normal stiffness coefficient. | Not established | 11296.508 | No verified source value is available for direct comparison. Effective paw-contact parameter from model calibration; not an independently measured paw-material constant. | Effective paw-contact law calibrated to force and motion references; parameters are not independently measured pad-material constants. Effective material parameters, not measured cat tissue constants. |
-| L_paw_pad1 | normal_dissipation_s_m | s/m | Velocity multiplier in the normal contact law. | Not established | 1.1713311 | No verified source value is available for direct comparison. Effective paw-contact parameter from model calibration; not an independently measured paw-material constant. | Effective paw-contact law calibrated to force and motion references; parameters are not independently measured pad-material constants. Effective material parameters, not measured cat tissue constants. |
-| L_paw_pad1 | shear_stiffness_N_m | N/m | Elastic tangential/shear stiffness. | Not established | 2412.5242 | No verified source value is available for direct comparison. Effective paw-contact parameter from model calibration; not an independently measured paw-material constant. | Effective paw-contact law calibrated to force and motion references; parameters are not independently measured pad-material constants. Effective material parameters, not measured cat tissue constants. |
-| L_paw_pad1 | shear_damping_Ns_m | N s/m | Tangential dashpot coefficient, reduced at shallow contact. | Not established | 16.12305 | No verified source value is available for direct comparison. Effective paw-contact parameter from model calibration; not an independently measured paw-material constant. | Effective paw-contact law calibrated to force and motion references; parameters are not independently measured pad-material constants. Effective material parameters, not measured cat tissue constants. |
-| L_paw_pad1 | friction_coefficient | 1 | Coulomb limiting shear/normal force ratio. | Not established | 0.32866719 | No verified source value is available for direct comparison. Effective paw-contact parameter from model calibration; not an independently measured paw-material constant. | Effective paw-contact law calibrated to force and motion references; parameters are not independently measured pad-material constants. Effective material parameters, not measured cat tissue constants. |
-| L_paw_pad1 | progressive_stiffening_depth_m | m | Optional finite-depth stiffening scale; zero disables the extension. | Not established | 0 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Effective paw-contact law calibrated to force and motion references; parameters are not independently measured pad-material constants. Effective material parameters, not measured cat tissue constants. |
-| L_paw_pad2 | radius_m | m | radius m | Not established | 0.0071395132 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| L_paw_pad2 | position_in_body_m | m | position in body m | Not established | [0.019298430645675463, 0.0, -0.005] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| L_paw_pad2 | normal_stiffness_N_m32 | N/m^(3/2) | Hunt-Crossley normal stiffness coefficient. | Not established | 11296.508 | No verified source value is available for direct comparison. Effective paw-contact parameter from model calibration; not an independently measured paw-material constant. | Effective paw-contact law calibrated to force and motion references; parameters are not independently measured pad-material constants. Effective material parameters, not measured cat tissue constants. |
-| L_paw_pad2 | normal_dissipation_s_m | s/m | Velocity multiplier in the normal contact law. | Not established | 1.1713311 | No verified source value is available for direct comparison. Effective paw-contact parameter from model calibration; not an independently measured paw-material constant. | Effective paw-contact law calibrated to force and motion references; parameters are not independently measured pad-material constants. Effective material parameters, not measured cat tissue constants. |
-| L_paw_pad2 | shear_stiffness_N_m | N/m | Elastic tangential/shear stiffness. | Not established | 2412.5242 | No verified source value is available for direct comparison. Effective paw-contact parameter from model calibration; not an independently measured paw-material constant. | Effective paw-contact law calibrated to force and motion references; parameters are not independently measured pad-material constants. Effective material parameters, not measured cat tissue constants. |
-| L_paw_pad2 | shear_damping_Ns_m | N s/m | Tangential dashpot coefficient, reduced at shallow contact. | Not established | 16.12305 | No verified source value is available for direct comparison. Effective paw-contact parameter from model calibration; not an independently measured paw-material constant. | Effective paw-contact law calibrated to force and motion references; parameters are not independently measured pad-material constants. Effective material parameters, not measured cat tissue constants. |
-| L_paw_pad2 | friction_coefficient | 1 | Coulomb limiting shear/normal force ratio. | Not established | 0.32866719 | No verified source value is available for direct comparison. Effective paw-contact parameter from model calibration; not an independently measured paw-material constant. | Effective paw-contact law calibrated to force and motion references; parameters are not independently measured pad-material constants. Effective material parameters, not measured cat tissue constants. |
-| L_paw_pad2 | progressive_stiffening_depth_m | m | Optional finite-depth stiffening scale; zero disables the extension. | Not established | 0 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Effective paw-contact law calibrated to force and motion references; parameters are not independently measured pad-material constants. Effective material parameters, not measured cat tissue constants. |
-| L_paw_pad3 | radius_m | m | radius m | Not established | 0.0071395132 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| L_paw_pad3 | position_in_body_m | m | position in body m | Not established | [0.019298430645675463, 0.0, 0.005] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| L_paw_pad3 | normal_stiffness_N_m32 | N/m^(3/2) | Hunt-Crossley normal stiffness coefficient. | Not established | 11296.508 | No verified source value is available for direct comparison. Effective paw-contact parameter from model calibration; not an independently measured paw-material constant. | Effective paw-contact law calibrated to force and motion references; parameters are not independently measured pad-material constants. Effective material parameters, not measured cat tissue constants. |
-| L_paw_pad3 | normal_dissipation_s_m | s/m | Velocity multiplier in the normal contact law. | Not established | 1.1713311 | No verified source value is available for direct comparison. Effective paw-contact parameter from model calibration; not an independently measured paw-material constant. | Effective paw-contact law calibrated to force and motion references; parameters are not independently measured pad-material constants. Effective material parameters, not measured cat tissue constants. |
-| L_paw_pad3 | shear_stiffness_N_m | N/m | Elastic tangential/shear stiffness. | Not established | 2412.5242 | No verified source value is available for direct comparison. Effective paw-contact parameter from model calibration; not an independently measured paw-material constant. | Effective paw-contact law calibrated to force and motion references; parameters are not independently measured pad-material constants. Effective material parameters, not measured cat tissue constants. |
-| L_paw_pad3 | shear_damping_Ns_m | N s/m | Tangential dashpot coefficient, reduced at shallow contact. | Not established | 16.12305 | No verified source value is available for direct comparison. Effective paw-contact parameter from model calibration; not an independently measured paw-material constant. | Effective paw-contact law calibrated to force and motion references; parameters are not independently measured pad-material constants. Effective material parameters, not measured cat tissue constants. |
-| L_paw_pad3 | friction_coefficient | 1 | Coulomb limiting shear/normal force ratio. | Not established | 0.32866719 | No verified source value is available for direct comparison. Effective paw-contact parameter from model calibration; not an independently measured paw-material constant. | Effective paw-contact law calibrated to force and motion references; parameters are not independently measured pad-material constants. Effective material parameters, not measured cat tissue constants. |
-| L_paw_pad3 | progressive_stiffening_depth_m | m | Optional finite-depth stiffening scale; zero disables the extension. | Not established | 0 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Effective paw-contact law calibrated to force and motion references; parameters are not independently measured pad-material constants. Effective material parameters, not measured cat tissue constants. |
-| L_paw_pad4 | radius_m | m | radius m | Not established | 0.0076999996 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| L_paw_pad4 | position_in_body_m | m | position in body m | Not established | [0.03137865992484085, 0.0, -0.005] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| L_paw_pad4 | normal_stiffness_N_m32 | N/m^(3/2) | Hunt-Crossley normal stiffness coefficient. | Not established | 11296.508 | No verified source value is available for direct comparison. Effective paw-contact parameter from model calibration; not an independently measured paw-material constant. | Effective paw-contact law calibrated to force and motion references; parameters are not independently measured pad-material constants. Effective material parameters, not measured cat tissue constants. |
-| L_paw_pad4 | normal_dissipation_s_m | s/m | Velocity multiplier in the normal contact law. | Not established | 1.1713311 | No verified source value is available for direct comparison. Effective paw-contact parameter from model calibration; not an independently measured paw-material constant. | Effective paw-contact law calibrated to force and motion references; parameters are not independently measured pad-material constants. Effective material parameters, not measured cat tissue constants. |
-| L_paw_pad4 | shear_stiffness_N_m | N/m | Elastic tangential/shear stiffness. | Not established | 2412.5242 | No verified source value is available for direct comparison. Effective paw-contact parameter from model calibration; not an independently measured paw-material constant. | Effective paw-contact law calibrated to force and motion references; parameters are not independently measured pad-material constants. Effective material parameters, not measured cat tissue constants. |
-| L_paw_pad4 | shear_damping_Ns_m | N s/m | Tangential dashpot coefficient, reduced at shallow contact. | Not established | 16.12305 | No verified source value is available for direct comparison. Effective paw-contact parameter from model calibration; not an independently measured paw-material constant. | Effective paw-contact law calibrated to force and motion references; parameters are not independently measured pad-material constants. Effective material parameters, not measured cat tissue constants. |
-| L_paw_pad4 | friction_coefficient | 1 | Coulomb limiting shear/normal force ratio. | Not established | 0.32866719 | No verified source value is available for direct comparison. Effective paw-contact parameter from model calibration; not an independently measured paw-material constant. | Effective paw-contact law calibrated to force and motion references; parameters are not independently measured pad-material constants. Effective material parameters, not measured cat tissue constants. |
-| L_paw_pad4 | progressive_stiffening_depth_m | m | Optional finite-depth stiffening scale; zero disables the extension. | Not established | 0 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Effective paw-contact law calibrated to force and motion references; parameters are not independently measured pad-material constants. Effective material parameters, not measured cat tissue constants. |
-| L_paw_pad5 | radius_m | m | radius m | Not established | 0.0076999996 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| L_paw_pad5 | position_in_body_m | m | position in body m | Not established | [0.03137865992484085, 0.0, 0.005] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| L_paw_pad5 | normal_stiffness_N_m32 | N/m^(3/2) | Hunt-Crossley normal stiffness coefficient. | Not established | 11296.508 | No verified source value is available for direct comparison. Effective paw-contact parameter from model calibration; not an independently measured paw-material constant. | Effective paw-contact law calibrated to force and motion references; parameters are not independently measured pad-material constants. Effective material parameters, not measured cat tissue constants. |
-| L_paw_pad5 | normal_dissipation_s_m | s/m | Velocity multiplier in the normal contact law. | Not established | 1.1713311 | No verified source value is available for direct comparison. Effective paw-contact parameter from model calibration; not an independently measured paw-material constant. | Effective paw-contact law calibrated to force and motion references; parameters are not independently measured pad-material constants. Effective material parameters, not measured cat tissue constants. |
-| L_paw_pad5 | shear_stiffness_N_m | N/m | Elastic tangential/shear stiffness. | Not established | 2412.5242 | No verified source value is available for direct comparison. Effective paw-contact parameter from model calibration; not an independently measured paw-material constant. | Effective paw-contact law calibrated to force and motion references; parameters are not independently measured pad-material constants. Effective material parameters, not measured cat tissue constants. |
-| L_paw_pad5 | shear_damping_Ns_m | N s/m | Tangential dashpot coefficient, reduced at shallow contact. | Not established | 16.12305 | No verified source value is available for direct comparison. Effective paw-contact parameter from model calibration; not an independently measured paw-material constant. | Effective paw-contact law calibrated to force and motion references; parameters are not independently measured pad-material constants. Effective material parameters, not measured cat tissue constants. |
-| L_paw_pad5 | friction_coefficient | 1 | Coulomb limiting shear/normal force ratio. | Not established | 0.32866719 | No verified source value is available for direct comparison. Effective paw-contact parameter from model calibration; not an independently measured paw-material constant. | Effective paw-contact law calibrated to force and motion references; parameters are not independently measured pad-material constants. Effective material parameters, not measured cat tissue constants. |
-| L_paw_pad5 | progressive_stiffening_depth_m | m | Optional finite-depth stiffening scale; zero disables the extension. | Not established | 0 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Effective paw-contact law calibrated to force and motion references; parameters are not independently measured pad-material constants. Effective material parameters, not measured cat tissue constants. |
-| R_paw_pad0 | radius_m | m | radius m | Not established | 0.006944518 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| R_paw_pad0 | position_in_body_m | m | position in body m | Not established | [0.006928842727548444, 0.0, -0.005] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| R_paw_pad0 | normal_stiffness_N_m32 | N/m^(3/2) | Hunt-Crossley normal stiffness coefficient. | Not established | 11296.508 | No verified source value is available for direct comparison. Effective paw-contact parameter from model calibration; not an independently measured paw-material constant. | Effective paw-contact law calibrated to force and motion references; parameters are not independently measured pad-material constants. Effective material parameters, not measured cat tissue constants. |
-| R_paw_pad0 | normal_dissipation_s_m | s/m | Velocity multiplier in the normal contact law. | Not established | 1.1713311 | No verified source value is available for direct comparison. Effective paw-contact parameter from model calibration; not an independently measured paw-material constant. | Effective paw-contact law calibrated to force and motion references; parameters are not independently measured pad-material constants. Effective material parameters, not measured cat tissue constants. |
-| R_paw_pad0 | shear_stiffness_N_m | N/m | Elastic tangential/shear stiffness. | Not established | 2412.5242 | No verified source value is available for direct comparison. Effective paw-contact parameter from model calibration; not an independently measured paw-material constant. | Effective paw-contact law calibrated to force and motion references; parameters are not independently measured pad-material constants. Effective material parameters, not measured cat tissue constants. |
-| R_paw_pad0 | shear_damping_Ns_m | N s/m | Tangential dashpot coefficient, reduced at shallow contact. | Not established | 16.12305 | No verified source value is available for direct comparison. Effective paw-contact parameter from model calibration; not an independently measured paw-material constant. | Effective paw-contact law calibrated to force and motion references; parameters are not independently measured pad-material constants. Effective material parameters, not measured cat tissue constants. |
-| R_paw_pad0 | friction_coefficient | 1 | Coulomb limiting shear/normal force ratio. | Not established | 0.32866719 | No verified source value is available for direct comparison. Effective paw-contact parameter from model calibration; not an independently measured paw-material constant. | Effective paw-contact law calibrated to force and motion references; parameters are not independently measured pad-material constants. Effective material parameters, not measured cat tissue constants. |
-| R_paw_pad0 | progressive_stiffening_depth_m | m | Optional finite-depth stiffening scale; zero disables the extension. | Not established | 0 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Effective paw-contact law calibrated to force and motion references; parameters are not independently measured pad-material constants. Effective material parameters, not measured cat tissue constants. |
-| R_paw_pad1 | radius_m | m | radius m | Not established | 0.006944518 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| R_paw_pad1 | position_in_body_m | m | position in body m | Not established | [0.006928842727548444, 0.0, 0.005] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| R_paw_pad1 | normal_stiffness_N_m32 | N/m^(3/2) | Hunt-Crossley normal stiffness coefficient. | Not established | 11296.508 | No verified source value is available for direct comparison. Effective paw-contact parameter from model calibration; not an independently measured paw-material constant. | Effective paw-contact law calibrated to force and motion references; parameters are not independently measured pad-material constants. Effective material parameters, not measured cat tissue constants. |
-| R_paw_pad1 | normal_dissipation_s_m | s/m | Velocity multiplier in the normal contact law. | Not established | 1.1713311 | No verified source value is available for direct comparison. Effective paw-contact parameter from model calibration; not an independently measured paw-material constant. | Effective paw-contact law calibrated to force and motion references; parameters are not independently measured pad-material constants. Effective material parameters, not measured cat tissue constants. |
-| R_paw_pad1 | shear_stiffness_N_m | N/m | Elastic tangential/shear stiffness. | Not established | 2412.5242 | No verified source value is available for direct comparison. Effective paw-contact parameter from model calibration; not an independently measured paw-material constant. | Effective paw-contact law calibrated to force and motion references; parameters are not independently measured pad-material constants. Effective material parameters, not measured cat tissue constants. |
-| R_paw_pad1 | shear_damping_Ns_m | N s/m | Tangential dashpot coefficient, reduced at shallow contact. | Not established | 16.12305 | No verified source value is available for direct comparison. Effective paw-contact parameter from model calibration; not an independently measured paw-material constant. | Effective paw-contact law calibrated to force and motion references; parameters are not independently measured pad-material constants. Effective material parameters, not measured cat tissue constants. |
-| R_paw_pad1 | friction_coefficient | 1 | Coulomb limiting shear/normal force ratio. | Not established | 0.32866719 | No verified source value is available for direct comparison. Effective paw-contact parameter from model calibration; not an independently measured paw-material constant. | Effective paw-contact law calibrated to force and motion references; parameters are not independently measured pad-material constants. Effective material parameters, not measured cat tissue constants. |
-| R_paw_pad1 | progressive_stiffening_depth_m | m | Optional finite-depth stiffening scale; zero disables the extension. | Not established | 0 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Effective paw-contact law calibrated to force and motion references; parameters are not independently measured pad-material constants. Effective material parameters, not measured cat tissue constants. |
-| R_paw_pad2 | radius_m | m | radius m | Not established | 0.0071395132 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| R_paw_pad2 | position_in_body_m | m | position in body m | Not established | [0.019298430645675463, 0.0, -0.005] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| R_paw_pad2 | normal_stiffness_N_m32 | N/m^(3/2) | Hunt-Crossley normal stiffness coefficient. | Not established | 11296.508 | No verified source value is available for direct comparison. Effective paw-contact parameter from model calibration; not an independently measured paw-material constant. | Effective paw-contact law calibrated to force and motion references; parameters are not independently measured pad-material constants. Effective material parameters, not measured cat tissue constants. |
-| R_paw_pad2 | normal_dissipation_s_m | s/m | Velocity multiplier in the normal contact law. | Not established | 1.1713311 | No verified source value is available for direct comparison. Effective paw-contact parameter from model calibration; not an independently measured paw-material constant. | Effective paw-contact law calibrated to force and motion references; parameters are not independently measured pad-material constants. Effective material parameters, not measured cat tissue constants. |
-| R_paw_pad2 | shear_stiffness_N_m | N/m | Elastic tangential/shear stiffness. | Not established | 2412.5242 | No verified source value is available for direct comparison. Effective paw-contact parameter from model calibration; not an independently measured paw-material constant. | Effective paw-contact law calibrated to force and motion references; parameters are not independently measured pad-material constants. Effective material parameters, not measured cat tissue constants. |
-| R_paw_pad2 | shear_damping_Ns_m | N s/m | Tangential dashpot coefficient, reduced at shallow contact. | Not established | 16.12305 | No verified source value is available for direct comparison. Effective paw-contact parameter from model calibration; not an independently measured paw-material constant. | Effective paw-contact law calibrated to force and motion references; parameters are not independently measured pad-material constants. Effective material parameters, not measured cat tissue constants. |
-| R_paw_pad2 | friction_coefficient | 1 | Coulomb limiting shear/normal force ratio. | Not established | 0.32866719 | No verified source value is available for direct comparison. Effective paw-contact parameter from model calibration; not an independently measured paw-material constant. | Effective paw-contact law calibrated to force and motion references; parameters are not independently measured pad-material constants. Effective material parameters, not measured cat tissue constants. |
-| R_paw_pad2 | progressive_stiffening_depth_m | m | Optional finite-depth stiffening scale; zero disables the extension. | Not established | 0 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Effective paw-contact law calibrated to force and motion references; parameters are not independently measured pad-material constants. Effective material parameters, not measured cat tissue constants. |
-| R_paw_pad3 | radius_m | m | radius m | Not established | 0.0071395132 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| R_paw_pad3 | position_in_body_m | m | position in body m | Not established | [0.019298430645675463, 0.0, 0.005] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| R_paw_pad3 | normal_stiffness_N_m32 | N/m^(3/2) | Hunt-Crossley normal stiffness coefficient. | Not established | 11296.508 | No verified source value is available for direct comparison. Effective paw-contact parameter from model calibration; not an independently measured paw-material constant. | Effective paw-contact law calibrated to force and motion references; parameters are not independently measured pad-material constants. Effective material parameters, not measured cat tissue constants. |
-| R_paw_pad3 | normal_dissipation_s_m | s/m | Velocity multiplier in the normal contact law. | Not established | 1.1713311 | No verified source value is available for direct comparison. Effective paw-contact parameter from model calibration; not an independently measured paw-material constant. | Effective paw-contact law calibrated to force and motion references; parameters are not independently measured pad-material constants. Effective material parameters, not measured cat tissue constants. |
-| R_paw_pad3 | shear_stiffness_N_m | N/m | Elastic tangential/shear stiffness. | Not established | 2412.5242 | No verified source value is available for direct comparison. Effective paw-contact parameter from model calibration; not an independently measured paw-material constant. | Effective paw-contact law calibrated to force and motion references; parameters are not independently measured pad-material constants. Effective material parameters, not measured cat tissue constants. |
-| R_paw_pad3 | shear_damping_Ns_m | N s/m | Tangential dashpot coefficient, reduced at shallow contact. | Not established | 16.12305 | No verified source value is available for direct comparison. Effective paw-contact parameter from model calibration; not an independently measured paw-material constant. | Effective paw-contact law calibrated to force and motion references; parameters are not independently measured pad-material constants. Effective material parameters, not measured cat tissue constants. |
-| R_paw_pad3 | friction_coefficient | 1 | Coulomb limiting shear/normal force ratio. | Not established | 0.32866719 | No verified source value is available for direct comparison. Effective paw-contact parameter from model calibration; not an independently measured paw-material constant. | Effective paw-contact law calibrated to force and motion references; parameters are not independently measured pad-material constants. Effective material parameters, not measured cat tissue constants. |
-| R_paw_pad3 | progressive_stiffening_depth_m | m | Optional finite-depth stiffening scale; zero disables the extension. | Not established | 0 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Effective paw-contact law calibrated to force and motion references; parameters are not independently measured pad-material constants. Effective material parameters, not measured cat tissue constants. |
-| R_paw_pad4 | radius_m | m | radius m | Not established | 0.0076999996 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| R_paw_pad4 | position_in_body_m | m | position in body m | Not established | [0.03137865992484085, 0.0, -0.005] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| R_paw_pad4 | normal_stiffness_N_m32 | N/m^(3/2) | Hunt-Crossley normal stiffness coefficient. | Not established | 11296.508 | No verified source value is available for direct comparison. Effective paw-contact parameter from model calibration; not an independently measured paw-material constant. | Effective paw-contact law calibrated to force and motion references; parameters are not independently measured pad-material constants. Effective material parameters, not measured cat tissue constants. |
-| R_paw_pad4 | normal_dissipation_s_m | s/m | Velocity multiplier in the normal contact law. | Not established | 1.1713311 | No verified source value is available for direct comparison. Effective paw-contact parameter from model calibration; not an independently measured paw-material constant. | Effective paw-contact law calibrated to force and motion references; parameters are not independently measured pad-material constants. Effective material parameters, not measured cat tissue constants. |
-| R_paw_pad4 | shear_stiffness_N_m | N/m | Elastic tangential/shear stiffness. | Not established | 2412.5242 | No verified source value is available for direct comparison. Effective paw-contact parameter from model calibration; not an independently measured paw-material constant. | Effective paw-contact law calibrated to force and motion references; parameters are not independently measured pad-material constants. Effective material parameters, not measured cat tissue constants. |
-| R_paw_pad4 | shear_damping_Ns_m | N s/m | Tangential dashpot coefficient, reduced at shallow contact. | Not established | 16.12305 | No verified source value is available for direct comparison. Effective paw-contact parameter from model calibration; not an independently measured paw-material constant. | Effective paw-contact law calibrated to force and motion references; parameters are not independently measured pad-material constants. Effective material parameters, not measured cat tissue constants. |
-| R_paw_pad4 | friction_coefficient | 1 | Coulomb limiting shear/normal force ratio. | Not established | 0.32866719 | No verified source value is available for direct comparison. Effective paw-contact parameter from model calibration; not an independently measured paw-material constant. | Effective paw-contact law calibrated to force and motion references; parameters are not independently measured pad-material constants. Effective material parameters, not measured cat tissue constants. |
-| R_paw_pad4 | progressive_stiffening_depth_m | m | Optional finite-depth stiffening scale; zero disables the extension. | Not established | 0 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Effective paw-contact law calibrated to force and motion references; parameters are not independently measured pad-material constants. Effective material parameters, not measured cat tissue constants. |
-| R_paw_pad5 | radius_m | m | radius m | Not established | 0.0076999996 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| R_paw_pad5 | position_in_body_m | m | position in body m | Not established | [0.03137865992484085, 0.0, 0.005] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| R_paw_pad5 | normal_stiffness_N_m32 | N/m^(3/2) | Hunt-Crossley normal stiffness coefficient. | Not established | 11296.508 | No verified source value is available for direct comparison. Effective paw-contact parameter from model calibration; not an independently measured paw-material constant. | Effective paw-contact law calibrated to force and motion references; parameters are not independently measured pad-material constants. Effective material parameters, not measured cat tissue constants. |
-| R_paw_pad5 | normal_dissipation_s_m | s/m | Velocity multiplier in the normal contact law. | Not established | 1.1713311 | No verified source value is available for direct comparison. Effective paw-contact parameter from model calibration; not an independently measured paw-material constant. | Effective paw-contact law calibrated to force and motion references; parameters are not independently measured pad-material constants. Effective material parameters, not measured cat tissue constants. |
-| R_paw_pad5 | shear_stiffness_N_m | N/m | Elastic tangential/shear stiffness. | Not established | 2412.5242 | No verified source value is available for direct comparison. Effective paw-contact parameter from model calibration; not an independently measured paw-material constant. | Effective paw-contact law calibrated to force and motion references; parameters are not independently measured pad-material constants. Effective material parameters, not measured cat tissue constants. |
-| R_paw_pad5 | shear_damping_Ns_m | N s/m | Tangential dashpot coefficient, reduced at shallow contact. | Not established | 16.12305 | No verified source value is available for direct comparison. Effective paw-contact parameter from model calibration; not an independently measured paw-material constant. | Effective paw-contact law calibrated to force and motion references; parameters are not independently measured pad-material constants. Effective material parameters, not measured cat tissue constants. |
-| R_paw_pad5 | friction_coefficient | 1 | Coulomb limiting shear/normal force ratio. | Not established | 0.32866719 | No verified source value is available for direct comparison. Effective paw-contact parameter from model calibration; not an independently measured paw-material constant. | Effective paw-contact law calibrated to force and motion references; parameters are not independently measured pad-material constants. Effective material parameters, not measured cat tissue constants. |
-| R_paw_pad5 | progressive_stiffening_depth_m | m | Optional finite-depth stiffening scale; zero disables the extension. | Not established | 0 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Effective paw-contact law calibrated to force and motion references; parameters are not independently measured pad-material constants. Effective material parameters, not measured cat tissue constants. |
-| FL_contactpad0 | radius_m | m | radius m | Not established | 0.006 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| FL_contactpad0 | position_in_body_m | m | position in body m | Not established | [0.004, 0.0, -0.005] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| FL_contactpad0 | normal_stiffness_N_m32 | N/m^(3/2) | Hunt-Crossley normal stiffness coefficient. | Not established | 11296.508 | No verified source value is available for direct comparison. Effective paw-contact parameter from model calibration; not an independently measured paw-material constant. | Effective paw-contact law calibrated to force and motion references; parameters are not independently measured pad-material constants. Effective material parameters, not measured cat tissue constants. |
-| FL_contactpad0 | normal_dissipation_s_m | s/m | Velocity multiplier in the normal contact law. | Not established | 1.1713311 | No verified source value is available for direct comparison. Effective paw-contact parameter from model calibration; not an independently measured paw-material constant. | Effective paw-contact law calibrated to force and motion references; parameters are not independently measured pad-material constants. Effective material parameters, not measured cat tissue constants. |
-| FL_contactpad0 | shear_stiffness_N_m | N/m | Elastic tangential/shear stiffness. | Not established | 2412.5242 | No verified source value is available for direct comparison. Effective paw-contact parameter from model calibration; not an independently measured paw-material constant. | Effective paw-contact law calibrated to force and motion references; parameters are not independently measured pad-material constants. Effective material parameters, not measured cat tissue constants. |
-| FL_contactpad0 | shear_damping_Ns_m | N s/m | Tangential dashpot coefficient, reduced at shallow contact. | Not established | 16.12305 | No verified source value is available for direct comparison. Effective paw-contact parameter from model calibration; not an independently measured paw-material constant. | Effective paw-contact law calibrated to force and motion references; parameters are not independently measured pad-material constants. Effective material parameters, not measured cat tissue constants. |
-| FL_contactpad0 | friction_coefficient | 1 | Coulomb limiting shear/normal force ratio. | Not established | 0.32866719 | No verified source value is available for direct comparison. Effective paw-contact parameter from model calibration; not an independently measured paw-material constant. | Effective paw-contact law calibrated to force and motion references; parameters are not independently measured pad-material constants. Effective material parameters, not measured cat tissue constants. |
-| FL_contactpad0 | progressive_stiffening_depth_m | m | Optional finite-depth stiffening scale; zero disables the extension. | Not established | 0 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Effective paw-contact law calibrated to force and motion references; parameters are not independently measured pad-material constants. Effective material parameters, not measured cat tissue constants. |
-| FL_contactpad1 | radius_m | m | radius m | Not established | 0.006 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| FL_contactpad1 | position_in_body_m | m | position in body m | Not established | [0.004, 0.0, 0.005] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| FL_contactpad1 | normal_stiffness_N_m32 | N/m^(3/2) | Hunt-Crossley normal stiffness coefficient. | Not established | 11296.508 | No verified source value is available for direct comparison. Effective paw-contact parameter from model calibration; not an independently measured paw-material constant. | Effective paw-contact law calibrated to force and motion references; parameters are not independently measured pad-material constants. Effective material parameters, not measured cat tissue constants. |
-| FL_contactpad1 | normal_dissipation_s_m | s/m | Velocity multiplier in the normal contact law. | Not established | 1.1713311 | No verified source value is available for direct comparison. Effective paw-contact parameter from model calibration; not an independently measured paw-material constant. | Effective paw-contact law calibrated to force and motion references; parameters are not independently measured pad-material constants. Effective material parameters, not measured cat tissue constants. |
-| FL_contactpad1 | shear_stiffness_N_m | N/m | Elastic tangential/shear stiffness. | Not established | 2412.5242 | No verified source value is available for direct comparison. Effective paw-contact parameter from model calibration; not an independently measured paw-material constant. | Effective paw-contact law calibrated to force and motion references; parameters are not independently measured pad-material constants. Effective material parameters, not measured cat tissue constants. |
-| FL_contactpad1 | shear_damping_Ns_m | N s/m | Tangential dashpot coefficient, reduced at shallow contact. | Not established | 16.12305 | No verified source value is available for direct comparison. Effective paw-contact parameter from model calibration; not an independently measured paw-material constant. | Effective paw-contact law calibrated to force and motion references; parameters are not independently measured pad-material constants. Effective material parameters, not measured cat tissue constants. |
-| FL_contactpad1 | friction_coefficient | 1 | Coulomb limiting shear/normal force ratio. | Not established | 0.32866719 | No verified source value is available for direct comparison. Effective paw-contact parameter from model calibration; not an independently measured paw-material constant. | Effective paw-contact law calibrated to force and motion references; parameters are not independently measured pad-material constants. Effective material parameters, not measured cat tissue constants. |
-| FL_contactpad1 | progressive_stiffening_depth_m | m | Optional finite-depth stiffening scale; zero disables the extension. | Not established | 0 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Effective paw-contact law calibrated to force and motion references; parameters are not independently measured pad-material constants. Effective material parameters, not measured cat tissue constants. |
-| FL_contactpad2 | radius_m | m | radius m | Not established | 0.006 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| FL_contactpad2 | position_in_body_m | m | position in body m | Not established | [0.013, 0.0, -0.005] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| FL_contactpad2 | normal_stiffness_N_m32 | N/m^(3/2) | Hunt-Crossley normal stiffness coefficient. | Not established | 11296.508 | No verified source value is available for direct comparison. Effective paw-contact parameter from model calibration; not an independently measured paw-material constant. | Effective paw-contact law calibrated to force and motion references; parameters are not independently measured pad-material constants. Effective material parameters, not measured cat tissue constants. |
-| FL_contactpad2 | normal_dissipation_s_m | s/m | Velocity multiplier in the normal contact law. | Not established | 1.1713311 | No verified source value is available for direct comparison. Effective paw-contact parameter from model calibration; not an independently measured paw-material constant. | Effective paw-contact law calibrated to force and motion references; parameters are not independently measured pad-material constants. Effective material parameters, not measured cat tissue constants. |
-| FL_contactpad2 | shear_stiffness_N_m | N/m | Elastic tangential/shear stiffness. | Not established | 2412.5242 | No verified source value is available for direct comparison. Effective paw-contact parameter from model calibration; not an independently measured paw-material constant. | Effective paw-contact law calibrated to force and motion references; parameters are not independently measured pad-material constants. Effective material parameters, not measured cat tissue constants. |
-| FL_contactpad2 | shear_damping_Ns_m | N s/m | Tangential dashpot coefficient, reduced at shallow contact. | Not established | 16.12305 | No verified source value is available for direct comparison. Effective paw-contact parameter from model calibration; not an independently measured paw-material constant. | Effective paw-contact law calibrated to force and motion references; parameters are not independently measured pad-material constants. Effective material parameters, not measured cat tissue constants. |
-| FL_contactpad2 | friction_coefficient | 1 | Coulomb limiting shear/normal force ratio. | Not established | 0.32866719 | No verified source value is available for direct comparison. Effective paw-contact parameter from model calibration; not an independently measured paw-material constant. | Effective paw-contact law calibrated to force and motion references; parameters are not independently measured pad-material constants. Effective material parameters, not measured cat tissue constants. |
-| FL_contactpad2 | progressive_stiffening_depth_m | m | Optional finite-depth stiffening scale; zero disables the extension. | Not established | 0 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Effective paw-contact law calibrated to force and motion references; parameters are not independently measured pad-material constants. Effective material parameters, not measured cat tissue constants. |
-| FL_contactpad3 | radius_m | m | radius m | Not established | 0.006 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| FL_contactpad3 | position_in_body_m | m | position in body m | Not established | [0.013, 0.0, 0.005] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| FL_contactpad3 | normal_stiffness_N_m32 | N/m^(3/2) | Hunt-Crossley normal stiffness coefficient. | Not established | 11296.508 | No verified source value is available for direct comparison. Effective paw-contact parameter from model calibration; not an independently measured paw-material constant. | Effective paw-contact law calibrated to force and motion references; parameters are not independently measured pad-material constants. Effective material parameters, not measured cat tissue constants. |
-| FL_contactpad3 | normal_dissipation_s_m | s/m | Velocity multiplier in the normal contact law. | Not established | 1.1713311 | No verified source value is available for direct comparison. Effective paw-contact parameter from model calibration; not an independently measured paw-material constant. | Effective paw-contact law calibrated to force and motion references; parameters are not independently measured pad-material constants. Effective material parameters, not measured cat tissue constants. |
-| FL_contactpad3 | shear_stiffness_N_m | N/m | Elastic tangential/shear stiffness. | Not established | 2412.5242 | No verified source value is available for direct comparison. Effective paw-contact parameter from model calibration; not an independently measured paw-material constant. | Effective paw-contact law calibrated to force and motion references; parameters are not independently measured pad-material constants. Effective material parameters, not measured cat tissue constants. |
-| FL_contactpad3 | shear_damping_Ns_m | N s/m | Tangential dashpot coefficient, reduced at shallow contact. | Not established | 16.12305 | No verified source value is available for direct comparison. Effective paw-contact parameter from model calibration; not an independently measured paw-material constant. | Effective paw-contact law calibrated to force and motion references; parameters are not independently measured pad-material constants. Effective material parameters, not measured cat tissue constants. |
-| FL_contactpad3 | friction_coefficient | 1 | Coulomb limiting shear/normal force ratio. | Not established | 0.32866719 | No verified source value is available for direct comparison. Effective paw-contact parameter from model calibration; not an independently measured paw-material constant. | Effective paw-contact law calibrated to force and motion references; parameters are not independently measured pad-material constants. Effective material parameters, not measured cat tissue constants. |
-| FL_contactpad3 | progressive_stiffening_depth_m | m | Optional finite-depth stiffening scale; zero disables the extension. | Not established | 0 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Effective paw-contact law calibrated to force and motion references; parameters are not independently measured pad-material constants. Effective material parameters, not measured cat tissue constants. |
-| FL_contactpad4 | radius_m | m | radius m | Not established | 0.006 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| FL_contactpad4 | position_in_body_m | m | position in body m | Not established | [0.022, 0.0, -0.005] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| FL_contactpad4 | normal_stiffness_N_m32 | N/m^(3/2) | Hunt-Crossley normal stiffness coefficient. | Not established | 11296.508 | No verified source value is available for direct comparison. Effective paw-contact parameter from model calibration; not an independently measured paw-material constant. | Effective paw-contact law calibrated to force and motion references; parameters are not independently measured pad-material constants. Effective material parameters, not measured cat tissue constants. |
-| FL_contactpad4 | normal_dissipation_s_m | s/m | Velocity multiplier in the normal contact law. | Not established | 1.1713311 | No verified source value is available for direct comparison. Effective paw-contact parameter from model calibration; not an independently measured paw-material constant. | Effective paw-contact law calibrated to force and motion references; parameters are not independently measured pad-material constants. Effective material parameters, not measured cat tissue constants. |
-| FL_contactpad4 | shear_stiffness_N_m | N/m | Elastic tangential/shear stiffness. | Not established | 2412.5242 | No verified source value is available for direct comparison. Effective paw-contact parameter from model calibration; not an independently measured paw-material constant. | Effective paw-contact law calibrated to force and motion references; parameters are not independently measured pad-material constants. Effective material parameters, not measured cat tissue constants. |
-| FL_contactpad4 | shear_damping_Ns_m | N s/m | Tangential dashpot coefficient, reduced at shallow contact. | Not established | 16.12305 | No verified source value is available for direct comparison. Effective paw-contact parameter from model calibration; not an independently measured paw-material constant. | Effective paw-contact law calibrated to force and motion references; parameters are not independently measured pad-material constants. Effective material parameters, not measured cat tissue constants. |
-| FL_contactpad4 | friction_coefficient | 1 | Coulomb limiting shear/normal force ratio. | Not established | 0.32866719 | No verified source value is available for direct comparison. Effective paw-contact parameter from model calibration; not an independently measured paw-material constant. | Effective paw-contact law calibrated to force and motion references; parameters are not independently measured pad-material constants. Effective material parameters, not measured cat tissue constants. |
-| FL_contactpad4 | progressive_stiffening_depth_m | m | Optional finite-depth stiffening scale; zero disables the extension. | Not established | 0 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Effective paw-contact law calibrated to force and motion references; parameters are not independently measured pad-material constants. Effective material parameters, not measured cat tissue constants. |
-| FL_contactpad5 | radius_m | m | radius m | Not established | 0.006 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| FL_contactpad5 | position_in_body_m | m | position in body m | Not established | [0.022, 0.0, 0.005] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| FL_contactpad5 | normal_stiffness_N_m32 | N/m^(3/2) | Hunt-Crossley normal stiffness coefficient. | Not established | 11296.508 | No verified source value is available for direct comparison. Effective paw-contact parameter from model calibration; not an independently measured paw-material constant. | Effective paw-contact law calibrated to force and motion references; parameters are not independently measured pad-material constants. Effective material parameters, not measured cat tissue constants. |
-| FL_contactpad5 | normal_dissipation_s_m | s/m | Velocity multiplier in the normal contact law. | Not established | 1.1713311 | No verified source value is available for direct comparison. Effective paw-contact parameter from model calibration; not an independently measured paw-material constant. | Effective paw-contact law calibrated to force and motion references; parameters are not independently measured pad-material constants. Effective material parameters, not measured cat tissue constants. |
-| FL_contactpad5 | shear_stiffness_N_m | N/m | Elastic tangential/shear stiffness. | Not established | 2412.5242 | No verified source value is available for direct comparison. Effective paw-contact parameter from model calibration; not an independently measured paw-material constant. | Effective paw-contact law calibrated to force and motion references; parameters are not independently measured pad-material constants. Effective material parameters, not measured cat tissue constants. |
-| FL_contactpad5 | shear_damping_Ns_m | N s/m | Tangential dashpot coefficient, reduced at shallow contact. | Not established | 16.12305 | No verified source value is available for direct comparison. Effective paw-contact parameter from model calibration; not an independently measured paw-material constant. | Effective paw-contact law calibrated to force and motion references; parameters are not independently measured pad-material constants. Effective material parameters, not measured cat tissue constants. |
-| FL_contactpad5 | friction_coefficient | 1 | Coulomb limiting shear/normal force ratio. | Not established | 0.32866719 | No verified source value is available for direct comparison. Effective paw-contact parameter from model calibration; not an independently measured paw-material constant. | Effective paw-contact law calibrated to force and motion references; parameters are not independently measured pad-material constants. Effective material parameters, not measured cat tissue constants. |
-| FL_contactpad5 | progressive_stiffening_depth_m | m | Optional finite-depth stiffening scale; zero disables the extension. | Not established | 0 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Effective paw-contact law calibrated to force and motion references; parameters are not independently measured pad-material constants. Effective material parameters, not measured cat tissue constants. |
-| FR_contactpad0 | radius_m | m | radius m | Not established | 0.006 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| FR_contactpad0 | position_in_body_m | m | position in body m | Not established | [0.004, 0.0, -0.005] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| FR_contactpad0 | normal_stiffness_N_m32 | N/m^(3/2) | Hunt-Crossley normal stiffness coefficient. | Not established | 11296.508 | No verified source value is available for direct comparison. Effective paw-contact parameter from model calibration; not an independently measured paw-material constant. | Effective paw-contact law calibrated to force and motion references; parameters are not independently measured pad-material constants. Effective material parameters, not measured cat tissue constants. |
-| FR_contactpad0 | normal_dissipation_s_m | s/m | Velocity multiplier in the normal contact law. | Not established | 1.1713311 | No verified source value is available for direct comparison. Effective paw-contact parameter from model calibration; not an independently measured paw-material constant. | Effective paw-contact law calibrated to force and motion references; parameters are not independently measured pad-material constants. Effective material parameters, not measured cat tissue constants. |
-| FR_contactpad0 | shear_stiffness_N_m | N/m | Elastic tangential/shear stiffness. | Not established | 2412.5242 | No verified source value is available for direct comparison. Effective paw-contact parameter from model calibration; not an independently measured paw-material constant. | Effective paw-contact law calibrated to force and motion references; parameters are not independently measured pad-material constants. Effective material parameters, not measured cat tissue constants. |
-| FR_contactpad0 | shear_damping_Ns_m | N s/m | Tangential dashpot coefficient, reduced at shallow contact. | Not established | 16.12305 | No verified source value is available for direct comparison. Effective paw-contact parameter from model calibration; not an independently measured paw-material constant. | Effective paw-contact law calibrated to force and motion references; parameters are not independently measured pad-material constants. Effective material parameters, not measured cat tissue constants. |
-| FR_contactpad0 | friction_coefficient | 1 | Coulomb limiting shear/normal force ratio. | Not established | 0.32866719 | No verified source value is available for direct comparison. Effective paw-contact parameter from model calibration; not an independently measured paw-material constant. | Effective paw-contact law calibrated to force and motion references; parameters are not independently measured pad-material constants. Effective material parameters, not measured cat tissue constants. |
-| FR_contactpad0 | progressive_stiffening_depth_m | m | Optional finite-depth stiffening scale; zero disables the extension. | Not established | 0 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Effective paw-contact law calibrated to force and motion references; parameters are not independently measured pad-material constants. Effective material parameters, not measured cat tissue constants. |
-| FR_contactpad1 | radius_m | m | radius m | Not established | 0.006 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| FR_contactpad1 | position_in_body_m | m | position in body m | Not established | [0.004, 0.0, 0.005] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| FR_contactpad1 | normal_stiffness_N_m32 | N/m^(3/2) | Hunt-Crossley normal stiffness coefficient. | Not established | 11296.508 | No verified source value is available for direct comparison. Effective paw-contact parameter from model calibration; not an independently measured paw-material constant. | Effective paw-contact law calibrated to force and motion references; parameters are not independently measured pad-material constants. Effective material parameters, not measured cat tissue constants. |
-| FR_contactpad1 | normal_dissipation_s_m | s/m | Velocity multiplier in the normal contact law. | Not established | 1.1713311 | No verified source value is available for direct comparison. Effective paw-contact parameter from model calibration; not an independently measured paw-material constant. | Effective paw-contact law calibrated to force and motion references; parameters are not independently measured pad-material constants. Effective material parameters, not measured cat tissue constants. |
-| FR_contactpad1 | shear_stiffness_N_m | N/m | Elastic tangential/shear stiffness. | Not established | 2412.5242 | No verified source value is available for direct comparison. Effective paw-contact parameter from model calibration; not an independently measured paw-material constant. | Effective paw-contact law calibrated to force and motion references; parameters are not independently measured pad-material constants. Effective material parameters, not measured cat tissue constants. |
-| FR_contactpad1 | shear_damping_Ns_m | N s/m | Tangential dashpot coefficient, reduced at shallow contact. | Not established | 16.12305 | No verified source value is available for direct comparison. Effective paw-contact parameter from model calibration; not an independently measured paw-material constant. | Effective paw-contact law calibrated to force and motion references; parameters are not independently measured pad-material constants. Effective material parameters, not measured cat tissue constants. |
-| FR_contactpad1 | friction_coefficient | 1 | Coulomb limiting shear/normal force ratio. | Not established | 0.32866719 | No verified source value is available for direct comparison. Effective paw-contact parameter from model calibration; not an independently measured paw-material constant. | Effective paw-contact law calibrated to force and motion references; parameters are not independently measured pad-material constants. Effective material parameters, not measured cat tissue constants. |
-| FR_contactpad1 | progressive_stiffening_depth_m | m | Optional finite-depth stiffening scale; zero disables the extension. | Not established | 0 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Effective paw-contact law calibrated to force and motion references; parameters are not independently measured pad-material constants. Effective material parameters, not measured cat tissue constants. |
-| FR_contactpad2 | radius_m | m | radius m | Not established | 0.006 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| FR_contactpad2 | position_in_body_m | m | position in body m | Not established | [0.013, 0.0, -0.005] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| FR_contactpad2 | normal_stiffness_N_m32 | N/m^(3/2) | Hunt-Crossley normal stiffness coefficient. | Not established | 11296.508 | No verified source value is available for direct comparison. Effective paw-contact parameter from model calibration; not an independently measured paw-material constant. | Effective paw-contact law calibrated to force and motion references; parameters are not independently measured pad-material constants. Effective material parameters, not measured cat tissue constants. |
-| FR_contactpad2 | normal_dissipation_s_m | s/m | Velocity multiplier in the normal contact law. | Not established | 1.1713311 | No verified source value is available for direct comparison. Effective paw-contact parameter from model calibration; not an independently measured paw-material constant. | Effective paw-contact law calibrated to force and motion references; parameters are not independently measured pad-material constants. Effective material parameters, not measured cat tissue constants. |
-| FR_contactpad2 | shear_stiffness_N_m | N/m | Elastic tangential/shear stiffness. | Not established | 2412.5242 | No verified source value is available for direct comparison. Effective paw-contact parameter from model calibration; not an independently measured paw-material constant. | Effective paw-contact law calibrated to force and motion references; parameters are not independently measured pad-material constants. Effective material parameters, not measured cat tissue constants. |
-| FR_contactpad2 | shear_damping_Ns_m | N s/m | Tangential dashpot coefficient, reduced at shallow contact. | Not established | 16.12305 | No verified source value is available for direct comparison. Effective paw-contact parameter from model calibration; not an independently measured paw-material constant. | Effective paw-contact law calibrated to force and motion references; parameters are not independently measured pad-material constants. Effective material parameters, not measured cat tissue constants. |
-| FR_contactpad2 | friction_coefficient | 1 | Coulomb limiting shear/normal force ratio. | Not established | 0.32866719 | No verified source value is available for direct comparison. Effective paw-contact parameter from model calibration; not an independently measured paw-material constant. | Effective paw-contact law calibrated to force and motion references; parameters are not independently measured pad-material constants. Effective material parameters, not measured cat tissue constants. |
-| FR_contactpad2 | progressive_stiffening_depth_m | m | Optional finite-depth stiffening scale; zero disables the extension. | Not established | 0 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Effective paw-contact law calibrated to force and motion references; parameters are not independently measured pad-material constants. Effective material parameters, not measured cat tissue constants. |
-| FR_contactpad3 | radius_m | m | radius m | Not established | 0.006 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| FR_contactpad3 | position_in_body_m | m | position in body m | Not established | [0.013, 0.0, 0.005] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| FR_contactpad3 | normal_stiffness_N_m32 | N/m^(3/2) | Hunt-Crossley normal stiffness coefficient. | Not established | 11296.508 | No verified source value is available for direct comparison. Effective paw-contact parameter from model calibration; not an independently measured paw-material constant. | Effective paw-contact law calibrated to force and motion references; parameters are not independently measured pad-material constants. Effective material parameters, not measured cat tissue constants. |
-| FR_contactpad3 | normal_dissipation_s_m | s/m | Velocity multiplier in the normal contact law. | Not established | 1.1713311 | No verified source value is available for direct comparison. Effective paw-contact parameter from model calibration; not an independently measured paw-material constant. | Effective paw-contact law calibrated to force and motion references; parameters are not independently measured pad-material constants. Effective material parameters, not measured cat tissue constants. |
-| FR_contactpad3 | shear_stiffness_N_m | N/m | Elastic tangential/shear stiffness. | Not established | 2412.5242 | No verified source value is available for direct comparison. Effective paw-contact parameter from model calibration; not an independently measured paw-material constant. | Effective paw-contact law calibrated to force and motion references; parameters are not independently measured pad-material constants. Effective material parameters, not measured cat tissue constants. |
-| FR_contactpad3 | shear_damping_Ns_m | N s/m | Tangential dashpot coefficient, reduced at shallow contact. | Not established | 16.12305 | No verified source value is available for direct comparison. Effective paw-contact parameter from model calibration; not an independently measured paw-material constant. | Effective paw-contact law calibrated to force and motion references; parameters are not independently measured pad-material constants. Effective material parameters, not measured cat tissue constants. |
-| FR_contactpad3 | friction_coefficient | 1 | Coulomb limiting shear/normal force ratio. | Not established | 0.32866719 | No verified source value is available for direct comparison. Effective paw-contact parameter from model calibration; not an independently measured paw-material constant. | Effective paw-contact law calibrated to force and motion references; parameters are not independently measured pad-material constants. Effective material parameters, not measured cat tissue constants. |
-| FR_contactpad3 | progressive_stiffening_depth_m | m | Optional finite-depth stiffening scale; zero disables the extension. | Not established | 0 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Effective paw-contact law calibrated to force and motion references; parameters are not independently measured pad-material constants. Effective material parameters, not measured cat tissue constants. |
-| FR_contactpad4 | radius_m | m | radius m | Not established | 0.006 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| FR_contactpad4 | position_in_body_m | m | position in body m | Not established | [0.022, 0.0, -0.005] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| FR_contactpad4 | normal_stiffness_N_m32 | N/m^(3/2) | Hunt-Crossley normal stiffness coefficient. | Not established | 11296.508 | No verified source value is available for direct comparison. Effective paw-contact parameter from model calibration; not an independently measured paw-material constant. | Effective paw-contact law calibrated to force and motion references; parameters are not independently measured pad-material constants. Effective material parameters, not measured cat tissue constants. |
-| FR_contactpad4 | normal_dissipation_s_m | s/m | Velocity multiplier in the normal contact law. | Not established | 1.1713311 | No verified source value is available for direct comparison. Effective paw-contact parameter from model calibration; not an independently measured paw-material constant. | Effective paw-contact law calibrated to force and motion references; parameters are not independently measured pad-material constants. Effective material parameters, not measured cat tissue constants. |
-| FR_contactpad4 | shear_stiffness_N_m | N/m | Elastic tangential/shear stiffness. | Not established | 2412.5242 | No verified source value is available for direct comparison. Effective paw-contact parameter from model calibration; not an independently measured paw-material constant. | Effective paw-contact law calibrated to force and motion references; parameters are not independently measured pad-material constants. Effective material parameters, not measured cat tissue constants. |
-| FR_contactpad4 | shear_damping_Ns_m | N s/m | Tangential dashpot coefficient, reduced at shallow contact. | Not established | 16.12305 | No verified source value is available for direct comparison. Effective paw-contact parameter from model calibration; not an independently measured paw-material constant. | Effective paw-contact law calibrated to force and motion references; parameters are not independently measured pad-material constants. Effective material parameters, not measured cat tissue constants. |
-| FR_contactpad4 | friction_coefficient | 1 | Coulomb limiting shear/normal force ratio. | Not established | 0.32866719 | No verified source value is available for direct comparison. Effective paw-contact parameter from model calibration; not an independently measured paw-material constant. | Effective paw-contact law calibrated to force and motion references; parameters are not independently measured pad-material constants. Effective material parameters, not measured cat tissue constants. |
-| FR_contactpad4 | progressive_stiffening_depth_m | m | Optional finite-depth stiffening scale; zero disables the extension. | Not established | 0 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Effective paw-contact law calibrated to force and motion references; parameters are not independently measured pad-material constants. Effective material parameters, not measured cat tissue constants. |
-| FR_contactpad5 | radius_m | m | radius m | Not established | 0.006 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| FR_contactpad5 | position_in_body_m | m | position in body m | Not established | [0.022, 0.0, 0.005] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| FR_contactpad5 | normal_stiffness_N_m32 | N/m^(3/2) | Hunt-Crossley normal stiffness coefficient. | Not established | 11296.508 | No verified source value is available for direct comparison. Effective paw-contact parameter from model calibration; not an independently measured paw-material constant. | Effective paw-contact law calibrated to force and motion references; parameters are not independently measured pad-material constants. Effective material parameters, not measured cat tissue constants. |
-| FR_contactpad5 | normal_dissipation_s_m | s/m | Velocity multiplier in the normal contact law. | Not established | 1.1713311 | No verified source value is available for direct comparison. Effective paw-contact parameter from model calibration; not an independently measured paw-material constant. | Effective paw-contact law calibrated to force and motion references; parameters are not independently measured pad-material constants. Effective material parameters, not measured cat tissue constants. |
-| FR_contactpad5 | shear_stiffness_N_m | N/m | Elastic tangential/shear stiffness. | Not established | 2412.5242 | No verified source value is available for direct comparison. Effective paw-contact parameter from model calibration; not an independently measured paw-material constant. | Effective paw-contact law calibrated to force and motion references; parameters are not independently measured pad-material constants. Effective material parameters, not measured cat tissue constants. |
-| FR_contactpad5 | shear_damping_Ns_m | N s/m | Tangential dashpot coefficient, reduced at shallow contact. | Not established | 16.12305 | No verified source value is available for direct comparison. Effective paw-contact parameter from model calibration; not an independently measured paw-material constant. | Effective paw-contact law calibrated to force and motion references; parameters are not independently measured pad-material constants. Effective material parameters, not measured cat tissue constants. |
-| FR_contactpad5 | friction_coefficient | 1 | Coulomb limiting shear/normal force ratio. | Not established | 0.32866719 | No verified source value is available for direct comparison. Effective paw-contact parameter from model calibration; not an independently measured paw-material constant. | Effective paw-contact law calibrated to force and motion references; parameters are not independently measured pad-material constants. Effective material parameters, not measured cat tissue constants. |
-| FR_contactpad5 | progressive_stiffening_depth_m | m | Optional finite-depth stiffening scale; zero disables the extension. | Not established | 0 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Effective paw-contact law calibrated to force and motion references; parameters are not independently measured pad-material constants. Effective material parameters, not measured cat tissue constants. |
+Each entry contains its values, units, meaning and source information. Select an entry to read all fields.
+
+<details>
+<summary>L_paw_pad0 · radius_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | L_paw_pad0 |
+| Parameter | radius_m |
+| Unit | m |
+| Meaning | radius m |
+| Source value | Not established |
+| Value used in this model | 0.006944518 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>L_paw_pad0 · position_in_body_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | L_paw_pad0 |
+| Parameter | position_in_body_m |
+| Unit | m |
+| Meaning | position in body m |
+| Source value | Not established |
+| Value used in this model | [0.006928842727548444, 0.0, -0.005] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>L_paw_pad0 · normal_stiffness_N_m32</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | L_paw_pad0 |
+| Parameter | normal_stiffness_N_m32 |
+| Unit | N/m^(3/2) |
+| Meaning | Hunt-Crossley normal stiffness coefficient. |
+| Source value | Not established |
+| Value used in this model | 11296.508 |
+| What changed and why | No verified source value is available for direct comparison. Effective paw-contact parameter from model calibration; not an independently measured paw-material constant. |
+| Source / evidence | Effective paw-contact law calibrated to force and motion references; parameters are not independently measured pad-material constants. Effective material parameters, not measured cat tissue constants. |
+
+</details>
+
+<details>
+<summary>L_paw_pad0 · normal_dissipation_s_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | L_paw_pad0 |
+| Parameter | normal_dissipation_s_m |
+| Unit | s/m |
+| Meaning | Velocity multiplier in the normal contact law. |
+| Source value | Not established |
+| Value used in this model | 1.1713311 |
+| What changed and why | No verified source value is available for direct comparison. Effective paw-contact parameter from model calibration; not an independently measured paw-material constant. |
+| Source / evidence | Effective paw-contact law calibrated to force and motion references; parameters are not independently measured pad-material constants. Effective material parameters, not measured cat tissue constants. |
+
+</details>
+
+<details>
+<summary>L_paw_pad0 · shear_stiffness_N_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | L_paw_pad0 |
+| Parameter | shear_stiffness_N_m |
+| Unit | N/m |
+| Meaning | Elastic tangential/shear stiffness. |
+| Source value | Not established |
+| Value used in this model | 2412.5242 |
+| What changed and why | No verified source value is available for direct comparison. Effective paw-contact parameter from model calibration; not an independently measured paw-material constant. |
+| Source / evidence | Effective paw-contact law calibrated to force and motion references; parameters are not independently measured pad-material constants. Effective material parameters, not measured cat tissue constants. |
+
+</details>
+
+<details>
+<summary>L_paw_pad0 · shear_damping_Ns_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | L_paw_pad0 |
+| Parameter | shear_damping_Ns_m |
+| Unit | N s/m |
+| Meaning | Tangential dashpot coefficient, reduced at shallow contact. |
+| Source value | Not established |
+| Value used in this model | 16.12305 |
+| What changed and why | No verified source value is available for direct comparison. Effective paw-contact parameter from model calibration; not an independently measured paw-material constant. |
+| Source / evidence | Effective paw-contact law calibrated to force and motion references; parameters are not independently measured pad-material constants. Effective material parameters, not measured cat tissue constants. |
+
+</details>
+
+<details>
+<summary>L_paw_pad0 · friction_coefficient</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | L_paw_pad0 |
+| Parameter | friction_coefficient |
+| Unit | 1 |
+| Meaning | Coulomb limiting shear/normal force ratio. |
+| Source value | Not established |
+| Value used in this model | 0.32866719 |
+| What changed and why | No verified source value is available for direct comparison. Effective paw-contact parameter from model calibration; not an independently measured paw-material constant. |
+| Source / evidence | Effective paw-contact law calibrated to force and motion references; parameters are not independently measured pad-material constants. Effective material parameters, not measured cat tissue constants. |
+
+</details>
+
+<details>
+<summary>L_paw_pad0 · progressive_stiffening_depth_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | L_paw_pad0 |
+| Parameter | progressive_stiffening_depth_m |
+| Unit | m |
+| Meaning | Optional finite-depth stiffening scale; zero disables the extension. |
+| Source value | Not established |
+| Value used in this model | 0 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Effective paw-contact law calibrated to force and motion references; parameters are not independently measured pad-material constants. Effective material parameters, not measured cat tissue constants. |
+
+</details>
+
+<details>
+<summary>L_paw_pad1 · radius_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | L_paw_pad1 |
+| Parameter | radius_m |
+| Unit | m |
+| Meaning | radius m |
+| Source value | Not established |
+| Value used in this model | 0.006944518 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>L_paw_pad1 · position_in_body_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | L_paw_pad1 |
+| Parameter | position_in_body_m |
+| Unit | m |
+| Meaning | position in body m |
+| Source value | Not established |
+| Value used in this model | [0.006928842727548444, 0.0, 0.005] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>L_paw_pad1 · normal_stiffness_N_m32</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | L_paw_pad1 |
+| Parameter | normal_stiffness_N_m32 |
+| Unit | N/m^(3/2) |
+| Meaning | Hunt-Crossley normal stiffness coefficient. |
+| Source value | Not established |
+| Value used in this model | 11296.508 |
+| What changed and why | No verified source value is available for direct comparison. Effective paw-contact parameter from model calibration; not an independently measured paw-material constant. |
+| Source / evidence | Effective paw-contact law calibrated to force and motion references; parameters are not independently measured pad-material constants. Effective material parameters, not measured cat tissue constants. |
+
+</details>
+
+<details>
+<summary>L_paw_pad1 · normal_dissipation_s_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | L_paw_pad1 |
+| Parameter | normal_dissipation_s_m |
+| Unit | s/m |
+| Meaning | Velocity multiplier in the normal contact law. |
+| Source value | Not established |
+| Value used in this model | 1.1713311 |
+| What changed and why | No verified source value is available for direct comparison. Effective paw-contact parameter from model calibration; not an independently measured paw-material constant. |
+| Source / evidence | Effective paw-contact law calibrated to force and motion references; parameters are not independently measured pad-material constants. Effective material parameters, not measured cat tissue constants. |
+
+</details>
+
+<details>
+<summary>L_paw_pad1 · shear_stiffness_N_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | L_paw_pad1 |
+| Parameter | shear_stiffness_N_m |
+| Unit | N/m |
+| Meaning | Elastic tangential/shear stiffness. |
+| Source value | Not established |
+| Value used in this model | 2412.5242 |
+| What changed and why | No verified source value is available for direct comparison. Effective paw-contact parameter from model calibration; not an independently measured paw-material constant. |
+| Source / evidence | Effective paw-contact law calibrated to force and motion references; parameters are not independently measured pad-material constants. Effective material parameters, not measured cat tissue constants. |
+
+</details>
+
+<details>
+<summary>L_paw_pad1 · shear_damping_Ns_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | L_paw_pad1 |
+| Parameter | shear_damping_Ns_m |
+| Unit | N s/m |
+| Meaning | Tangential dashpot coefficient, reduced at shallow contact. |
+| Source value | Not established |
+| Value used in this model | 16.12305 |
+| What changed and why | No verified source value is available for direct comparison. Effective paw-contact parameter from model calibration; not an independently measured paw-material constant. |
+| Source / evidence | Effective paw-contact law calibrated to force and motion references; parameters are not independently measured pad-material constants. Effective material parameters, not measured cat tissue constants. |
+
+</details>
+
+<details>
+<summary>L_paw_pad1 · friction_coefficient</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | L_paw_pad1 |
+| Parameter | friction_coefficient |
+| Unit | 1 |
+| Meaning | Coulomb limiting shear/normal force ratio. |
+| Source value | Not established |
+| Value used in this model | 0.32866719 |
+| What changed and why | No verified source value is available for direct comparison. Effective paw-contact parameter from model calibration; not an independently measured paw-material constant. |
+| Source / evidence | Effective paw-contact law calibrated to force and motion references; parameters are not independently measured pad-material constants. Effective material parameters, not measured cat tissue constants. |
+
+</details>
+
+<details>
+<summary>L_paw_pad1 · progressive_stiffening_depth_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | L_paw_pad1 |
+| Parameter | progressive_stiffening_depth_m |
+| Unit | m |
+| Meaning | Optional finite-depth stiffening scale; zero disables the extension. |
+| Source value | Not established |
+| Value used in this model | 0 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Effective paw-contact law calibrated to force and motion references; parameters are not independently measured pad-material constants. Effective material parameters, not measured cat tissue constants. |
+
+</details>
+
+<details>
+<summary>L_paw_pad2 · radius_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | L_paw_pad2 |
+| Parameter | radius_m |
+| Unit | m |
+| Meaning | radius m |
+| Source value | Not established |
+| Value used in this model | 0.0071395132 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>L_paw_pad2 · position_in_body_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | L_paw_pad2 |
+| Parameter | position_in_body_m |
+| Unit | m |
+| Meaning | position in body m |
+| Source value | Not established |
+| Value used in this model | [0.019298430645675463, 0.0, -0.005] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>L_paw_pad2 · normal_stiffness_N_m32</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | L_paw_pad2 |
+| Parameter | normal_stiffness_N_m32 |
+| Unit | N/m^(3/2) |
+| Meaning | Hunt-Crossley normal stiffness coefficient. |
+| Source value | Not established |
+| Value used in this model | 11296.508 |
+| What changed and why | No verified source value is available for direct comparison. Effective paw-contact parameter from model calibration; not an independently measured paw-material constant. |
+| Source / evidence | Effective paw-contact law calibrated to force and motion references; parameters are not independently measured pad-material constants. Effective material parameters, not measured cat tissue constants. |
+
+</details>
+
+<details>
+<summary>L_paw_pad2 · normal_dissipation_s_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | L_paw_pad2 |
+| Parameter | normal_dissipation_s_m |
+| Unit | s/m |
+| Meaning | Velocity multiplier in the normal contact law. |
+| Source value | Not established |
+| Value used in this model | 1.1713311 |
+| What changed and why | No verified source value is available for direct comparison. Effective paw-contact parameter from model calibration; not an independently measured paw-material constant. |
+| Source / evidence | Effective paw-contact law calibrated to force and motion references; parameters are not independently measured pad-material constants. Effective material parameters, not measured cat tissue constants. |
+
+</details>
+
+<details>
+<summary>L_paw_pad2 · shear_stiffness_N_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | L_paw_pad2 |
+| Parameter | shear_stiffness_N_m |
+| Unit | N/m |
+| Meaning | Elastic tangential/shear stiffness. |
+| Source value | Not established |
+| Value used in this model | 2412.5242 |
+| What changed and why | No verified source value is available for direct comparison. Effective paw-contact parameter from model calibration; not an independently measured paw-material constant. |
+| Source / evidence | Effective paw-contact law calibrated to force and motion references; parameters are not independently measured pad-material constants. Effective material parameters, not measured cat tissue constants. |
+
+</details>
+
+<details>
+<summary>L_paw_pad2 · shear_damping_Ns_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | L_paw_pad2 |
+| Parameter | shear_damping_Ns_m |
+| Unit | N s/m |
+| Meaning | Tangential dashpot coefficient, reduced at shallow contact. |
+| Source value | Not established |
+| Value used in this model | 16.12305 |
+| What changed and why | No verified source value is available for direct comparison. Effective paw-contact parameter from model calibration; not an independently measured paw-material constant. |
+| Source / evidence | Effective paw-contact law calibrated to force and motion references; parameters are not independently measured pad-material constants. Effective material parameters, not measured cat tissue constants. |
+
+</details>
+
+<details>
+<summary>L_paw_pad2 · friction_coefficient</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | L_paw_pad2 |
+| Parameter | friction_coefficient |
+| Unit | 1 |
+| Meaning | Coulomb limiting shear/normal force ratio. |
+| Source value | Not established |
+| Value used in this model | 0.32866719 |
+| What changed and why | No verified source value is available for direct comparison. Effective paw-contact parameter from model calibration; not an independently measured paw-material constant. |
+| Source / evidence | Effective paw-contact law calibrated to force and motion references; parameters are not independently measured pad-material constants. Effective material parameters, not measured cat tissue constants. |
+
+</details>
+
+<details>
+<summary>L_paw_pad2 · progressive_stiffening_depth_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | L_paw_pad2 |
+| Parameter | progressive_stiffening_depth_m |
+| Unit | m |
+| Meaning | Optional finite-depth stiffening scale; zero disables the extension. |
+| Source value | Not established |
+| Value used in this model | 0 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Effective paw-contact law calibrated to force and motion references; parameters are not independently measured pad-material constants. Effective material parameters, not measured cat tissue constants. |
+
+</details>
+
+<details>
+<summary>L_paw_pad3 · radius_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | L_paw_pad3 |
+| Parameter | radius_m |
+| Unit | m |
+| Meaning | radius m |
+| Source value | Not established |
+| Value used in this model | 0.0071395132 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>L_paw_pad3 · position_in_body_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | L_paw_pad3 |
+| Parameter | position_in_body_m |
+| Unit | m |
+| Meaning | position in body m |
+| Source value | Not established |
+| Value used in this model | [0.019298430645675463, 0.0, 0.005] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>L_paw_pad3 · normal_stiffness_N_m32</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | L_paw_pad3 |
+| Parameter | normal_stiffness_N_m32 |
+| Unit | N/m^(3/2) |
+| Meaning | Hunt-Crossley normal stiffness coefficient. |
+| Source value | Not established |
+| Value used in this model | 11296.508 |
+| What changed and why | No verified source value is available for direct comparison. Effective paw-contact parameter from model calibration; not an independently measured paw-material constant. |
+| Source / evidence | Effective paw-contact law calibrated to force and motion references; parameters are not independently measured pad-material constants. Effective material parameters, not measured cat tissue constants. |
+
+</details>
+
+<details>
+<summary>L_paw_pad3 · normal_dissipation_s_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | L_paw_pad3 |
+| Parameter | normal_dissipation_s_m |
+| Unit | s/m |
+| Meaning | Velocity multiplier in the normal contact law. |
+| Source value | Not established |
+| Value used in this model | 1.1713311 |
+| What changed and why | No verified source value is available for direct comparison. Effective paw-contact parameter from model calibration; not an independently measured paw-material constant. |
+| Source / evidence | Effective paw-contact law calibrated to force and motion references; parameters are not independently measured pad-material constants. Effective material parameters, not measured cat tissue constants. |
+
+</details>
+
+<details>
+<summary>L_paw_pad3 · shear_stiffness_N_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | L_paw_pad3 |
+| Parameter | shear_stiffness_N_m |
+| Unit | N/m |
+| Meaning | Elastic tangential/shear stiffness. |
+| Source value | Not established |
+| Value used in this model | 2412.5242 |
+| What changed and why | No verified source value is available for direct comparison. Effective paw-contact parameter from model calibration; not an independently measured paw-material constant. |
+| Source / evidence | Effective paw-contact law calibrated to force and motion references; parameters are not independently measured pad-material constants. Effective material parameters, not measured cat tissue constants. |
+
+</details>
+
+<details>
+<summary>L_paw_pad3 · shear_damping_Ns_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | L_paw_pad3 |
+| Parameter | shear_damping_Ns_m |
+| Unit | N s/m |
+| Meaning | Tangential dashpot coefficient, reduced at shallow contact. |
+| Source value | Not established |
+| Value used in this model | 16.12305 |
+| What changed and why | No verified source value is available for direct comparison. Effective paw-contact parameter from model calibration; not an independently measured paw-material constant. |
+| Source / evidence | Effective paw-contact law calibrated to force and motion references; parameters are not independently measured pad-material constants. Effective material parameters, not measured cat tissue constants. |
+
+</details>
+
+<details>
+<summary>L_paw_pad3 · friction_coefficient</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | L_paw_pad3 |
+| Parameter | friction_coefficient |
+| Unit | 1 |
+| Meaning | Coulomb limiting shear/normal force ratio. |
+| Source value | Not established |
+| Value used in this model | 0.32866719 |
+| What changed and why | No verified source value is available for direct comparison. Effective paw-contact parameter from model calibration; not an independently measured paw-material constant. |
+| Source / evidence | Effective paw-contact law calibrated to force and motion references; parameters are not independently measured pad-material constants. Effective material parameters, not measured cat tissue constants. |
+
+</details>
+
+<details>
+<summary>L_paw_pad3 · progressive_stiffening_depth_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | L_paw_pad3 |
+| Parameter | progressive_stiffening_depth_m |
+| Unit | m |
+| Meaning | Optional finite-depth stiffening scale; zero disables the extension. |
+| Source value | Not established |
+| Value used in this model | 0 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Effective paw-contact law calibrated to force and motion references; parameters are not independently measured pad-material constants. Effective material parameters, not measured cat tissue constants. |
+
+</details>
+
+<details>
+<summary>L_paw_pad4 · radius_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | L_paw_pad4 |
+| Parameter | radius_m |
+| Unit | m |
+| Meaning | radius m |
+| Source value | Not established |
+| Value used in this model | 0.0076999996 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>L_paw_pad4 · position_in_body_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | L_paw_pad4 |
+| Parameter | position_in_body_m |
+| Unit | m |
+| Meaning | position in body m |
+| Source value | Not established |
+| Value used in this model | [0.03137865992484085, 0.0, -0.005] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>L_paw_pad4 · normal_stiffness_N_m32</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | L_paw_pad4 |
+| Parameter | normal_stiffness_N_m32 |
+| Unit | N/m^(3/2) |
+| Meaning | Hunt-Crossley normal stiffness coefficient. |
+| Source value | Not established |
+| Value used in this model | 11296.508 |
+| What changed and why | No verified source value is available for direct comparison. Effective paw-contact parameter from model calibration; not an independently measured paw-material constant. |
+| Source / evidence | Effective paw-contact law calibrated to force and motion references; parameters are not independently measured pad-material constants. Effective material parameters, not measured cat tissue constants. |
+
+</details>
+
+<details>
+<summary>L_paw_pad4 · normal_dissipation_s_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | L_paw_pad4 |
+| Parameter | normal_dissipation_s_m |
+| Unit | s/m |
+| Meaning | Velocity multiplier in the normal contact law. |
+| Source value | Not established |
+| Value used in this model | 1.1713311 |
+| What changed and why | No verified source value is available for direct comparison. Effective paw-contact parameter from model calibration; not an independently measured paw-material constant. |
+| Source / evidence | Effective paw-contact law calibrated to force and motion references; parameters are not independently measured pad-material constants. Effective material parameters, not measured cat tissue constants. |
+
+</details>
+
+<details>
+<summary>L_paw_pad4 · shear_stiffness_N_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | L_paw_pad4 |
+| Parameter | shear_stiffness_N_m |
+| Unit | N/m |
+| Meaning | Elastic tangential/shear stiffness. |
+| Source value | Not established |
+| Value used in this model | 2412.5242 |
+| What changed and why | No verified source value is available for direct comparison. Effective paw-contact parameter from model calibration; not an independently measured paw-material constant. |
+| Source / evidence | Effective paw-contact law calibrated to force and motion references; parameters are not independently measured pad-material constants. Effective material parameters, not measured cat tissue constants. |
+
+</details>
+
+<details>
+<summary>L_paw_pad4 · shear_damping_Ns_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | L_paw_pad4 |
+| Parameter | shear_damping_Ns_m |
+| Unit | N s/m |
+| Meaning | Tangential dashpot coefficient, reduced at shallow contact. |
+| Source value | Not established |
+| Value used in this model | 16.12305 |
+| What changed and why | No verified source value is available for direct comparison. Effective paw-contact parameter from model calibration; not an independently measured paw-material constant. |
+| Source / evidence | Effective paw-contact law calibrated to force and motion references; parameters are not independently measured pad-material constants. Effective material parameters, not measured cat tissue constants. |
+
+</details>
+
+<details>
+<summary>L_paw_pad4 · friction_coefficient</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | L_paw_pad4 |
+| Parameter | friction_coefficient |
+| Unit | 1 |
+| Meaning | Coulomb limiting shear/normal force ratio. |
+| Source value | Not established |
+| Value used in this model | 0.32866719 |
+| What changed and why | No verified source value is available for direct comparison. Effective paw-contact parameter from model calibration; not an independently measured paw-material constant. |
+| Source / evidence | Effective paw-contact law calibrated to force and motion references; parameters are not independently measured pad-material constants. Effective material parameters, not measured cat tissue constants. |
+
+</details>
+
+<details>
+<summary>L_paw_pad4 · progressive_stiffening_depth_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | L_paw_pad4 |
+| Parameter | progressive_stiffening_depth_m |
+| Unit | m |
+| Meaning | Optional finite-depth stiffening scale; zero disables the extension. |
+| Source value | Not established |
+| Value used in this model | 0 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Effective paw-contact law calibrated to force and motion references; parameters are not independently measured pad-material constants. Effective material parameters, not measured cat tissue constants. |
+
+</details>
+
+<details>
+<summary>L_paw_pad5 · radius_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | L_paw_pad5 |
+| Parameter | radius_m |
+| Unit | m |
+| Meaning | radius m |
+| Source value | Not established |
+| Value used in this model | 0.0076999996 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>L_paw_pad5 · position_in_body_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | L_paw_pad5 |
+| Parameter | position_in_body_m |
+| Unit | m |
+| Meaning | position in body m |
+| Source value | Not established |
+| Value used in this model | [0.03137865992484085, 0.0, 0.005] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>L_paw_pad5 · normal_stiffness_N_m32</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | L_paw_pad5 |
+| Parameter | normal_stiffness_N_m32 |
+| Unit | N/m^(3/2) |
+| Meaning | Hunt-Crossley normal stiffness coefficient. |
+| Source value | Not established |
+| Value used in this model | 11296.508 |
+| What changed and why | No verified source value is available for direct comparison. Effective paw-contact parameter from model calibration; not an independently measured paw-material constant. |
+| Source / evidence | Effective paw-contact law calibrated to force and motion references; parameters are not independently measured pad-material constants. Effective material parameters, not measured cat tissue constants. |
+
+</details>
+
+<details>
+<summary>L_paw_pad5 · normal_dissipation_s_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | L_paw_pad5 |
+| Parameter | normal_dissipation_s_m |
+| Unit | s/m |
+| Meaning | Velocity multiplier in the normal contact law. |
+| Source value | Not established |
+| Value used in this model | 1.1713311 |
+| What changed and why | No verified source value is available for direct comparison. Effective paw-contact parameter from model calibration; not an independently measured paw-material constant. |
+| Source / evidence | Effective paw-contact law calibrated to force and motion references; parameters are not independently measured pad-material constants. Effective material parameters, not measured cat tissue constants. |
+
+</details>
+
+<details>
+<summary>L_paw_pad5 · shear_stiffness_N_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | L_paw_pad5 |
+| Parameter | shear_stiffness_N_m |
+| Unit | N/m |
+| Meaning | Elastic tangential/shear stiffness. |
+| Source value | Not established |
+| Value used in this model | 2412.5242 |
+| What changed and why | No verified source value is available for direct comparison. Effective paw-contact parameter from model calibration; not an independently measured paw-material constant. |
+| Source / evidence | Effective paw-contact law calibrated to force and motion references; parameters are not independently measured pad-material constants. Effective material parameters, not measured cat tissue constants. |
+
+</details>
+
+<details>
+<summary>L_paw_pad5 · shear_damping_Ns_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | L_paw_pad5 |
+| Parameter | shear_damping_Ns_m |
+| Unit | N s/m |
+| Meaning | Tangential dashpot coefficient, reduced at shallow contact. |
+| Source value | Not established |
+| Value used in this model | 16.12305 |
+| What changed and why | No verified source value is available for direct comparison. Effective paw-contact parameter from model calibration; not an independently measured paw-material constant. |
+| Source / evidence | Effective paw-contact law calibrated to force and motion references; parameters are not independently measured pad-material constants. Effective material parameters, not measured cat tissue constants. |
+
+</details>
+
+<details>
+<summary>L_paw_pad5 · friction_coefficient</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | L_paw_pad5 |
+| Parameter | friction_coefficient |
+| Unit | 1 |
+| Meaning | Coulomb limiting shear/normal force ratio. |
+| Source value | Not established |
+| Value used in this model | 0.32866719 |
+| What changed and why | No verified source value is available for direct comparison. Effective paw-contact parameter from model calibration; not an independently measured paw-material constant. |
+| Source / evidence | Effective paw-contact law calibrated to force and motion references; parameters are not independently measured pad-material constants. Effective material parameters, not measured cat tissue constants. |
+
+</details>
+
+<details>
+<summary>L_paw_pad5 · progressive_stiffening_depth_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | L_paw_pad5 |
+| Parameter | progressive_stiffening_depth_m |
+| Unit | m |
+| Meaning | Optional finite-depth stiffening scale; zero disables the extension. |
+| Source value | Not established |
+| Value used in this model | 0 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Effective paw-contact law calibrated to force and motion references; parameters are not independently measured pad-material constants. Effective material parameters, not measured cat tissue constants. |
+
+</details>
+
+<details>
+<summary>R_paw_pad0 · radius_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | R_paw_pad0 |
+| Parameter | radius_m |
+| Unit | m |
+| Meaning | radius m |
+| Source value | Not established |
+| Value used in this model | 0.006944518 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>R_paw_pad0 · position_in_body_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | R_paw_pad0 |
+| Parameter | position_in_body_m |
+| Unit | m |
+| Meaning | position in body m |
+| Source value | Not established |
+| Value used in this model | [0.006928842727548444, 0.0, -0.005] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>R_paw_pad0 · normal_stiffness_N_m32</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | R_paw_pad0 |
+| Parameter | normal_stiffness_N_m32 |
+| Unit | N/m^(3/2) |
+| Meaning | Hunt-Crossley normal stiffness coefficient. |
+| Source value | Not established |
+| Value used in this model | 11296.508 |
+| What changed and why | No verified source value is available for direct comparison. Effective paw-contact parameter from model calibration; not an independently measured paw-material constant. |
+| Source / evidence | Effective paw-contact law calibrated to force and motion references; parameters are not independently measured pad-material constants. Effective material parameters, not measured cat tissue constants. |
+
+</details>
+
+<details>
+<summary>R_paw_pad0 · normal_dissipation_s_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | R_paw_pad0 |
+| Parameter | normal_dissipation_s_m |
+| Unit | s/m |
+| Meaning | Velocity multiplier in the normal contact law. |
+| Source value | Not established |
+| Value used in this model | 1.1713311 |
+| What changed and why | No verified source value is available for direct comparison. Effective paw-contact parameter from model calibration; not an independently measured paw-material constant. |
+| Source / evidence | Effective paw-contact law calibrated to force and motion references; parameters are not independently measured pad-material constants. Effective material parameters, not measured cat tissue constants. |
+
+</details>
+
+<details>
+<summary>R_paw_pad0 · shear_stiffness_N_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | R_paw_pad0 |
+| Parameter | shear_stiffness_N_m |
+| Unit | N/m |
+| Meaning | Elastic tangential/shear stiffness. |
+| Source value | Not established |
+| Value used in this model | 2412.5242 |
+| What changed and why | No verified source value is available for direct comparison. Effective paw-contact parameter from model calibration; not an independently measured paw-material constant. |
+| Source / evidence | Effective paw-contact law calibrated to force and motion references; parameters are not independently measured pad-material constants. Effective material parameters, not measured cat tissue constants. |
+
+</details>
+
+<details>
+<summary>R_paw_pad0 · shear_damping_Ns_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | R_paw_pad0 |
+| Parameter | shear_damping_Ns_m |
+| Unit | N s/m |
+| Meaning | Tangential dashpot coefficient, reduced at shallow contact. |
+| Source value | Not established |
+| Value used in this model | 16.12305 |
+| What changed and why | No verified source value is available for direct comparison. Effective paw-contact parameter from model calibration; not an independently measured paw-material constant. |
+| Source / evidence | Effective paw-contact law calibrated to force and motion references; parameters are not independently measured pad-material constants. Effective material parameters, not measured cat tissue constants. |
+
+</details>
+
+<details>
+<summary>R_paw_pad0 · friction_coefficient</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | R_paw_pad0 |
+| Parameter | friction_coefficient |
+| Unit | 1 |
+| Meaning | Coulomb limiting shear/normal force ratio. |
+| Source value | Not established |
+| Value used in this model | 0.32866719 |
+| What changed and why | No verified source value is available for direct comparison. Effective paw-contact parameter from model calibration; not an independently measured paw-material constant. |
+| Source / evidence | Effective paw-contact law calibrated to force and motion references; parameters are not independently measured pad-material constants. Effective material parameters, not measured cat tissue constants. |
+
+</details>
+
+<details>
+<summary>R_paw_pad0 · progressive_stiffening_depth_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | R_paw_pad0 |
+| Parameter | progressive_stiffening_depth_m |
+| Unit | m |
+| Meaning | Optional finite-depth stiffening scale; zero disables the extension. |
+| Source value | Not established |
+| Value used in this model | 0 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Effective paw-contact law calibrated to force and motion references; parameters are not independently measured pad-material constants. Effective material parameters, not measured cat tissue constants. |
+
+</details>
+
+<details>
+<summary>R_paw_pad1 · radius_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | R_paw_pad1 |
+| Parameter | radius_m |
+| Unit | m |
+| Meaning | radius m |
+| Source value | Not established |
+| Value used in this model | 0.006944518 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>R_paw_pad1 · position_in_body_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | R_paw_pad1 |
+| Parameter | position_in_body_m |
+| Unit | m |
+| Meaning | position in body m |
+| Source value | Not established |
+| Value used in this model | [0.006928842727548444, 0.0, 0.005] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>R_paw_pad1 · normal_stiffness_N_m32</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | R_paw_pad1 |
+| Parameter | normal_stiffness_N_m32 |
+| Unit | N/m^(3/2) |
+| Meaning | Hunt-Crossley normal stiffness coefficient. |
+| Source value | Not established |
+| Value used in this model | 11296.508 |
+| What changed and why | No verified source value is available for direct comparison. Effective paw-contact parameter from model calibration; not an independently measured paw-material constant. |
+| Source / evidence | Effective paw-contact law calibrated to force and motion references; parameters are not independently measured pad-material constants. Effective material parameters, not measured cat tissue constants. |
+
+</details>
+
+<details>
+<summary>R_paw_pad1 · normal_dissipation_s_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | R_paw_pad1 |
+| Parameter | normal_dissipation_s_m |
+| Unit | s/m |
+| Meaning | Velocity multiplier in the normal contact law. |
+| Source value | Not established |
+| Value used in this model | 1.1713311 |
+| What changed and why | No verified source value is available for direct comparison. Effective paw-contact parameter from model calibration; not an independently measured paw-material constant. |
+| Source / evidence | Effective paw-contact law calibrated to force and motion references; parameters are not independently measured pad-material constants. Effective material parameters, not measured cat tissue constants. |
+
+</details>
+
+<details>
+<summary>R_paw_pad1 · shear_stiffness_N_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | R_paw_pad1 |
+| Parameter | shear_stiffness_N_m |
+| Unit | N/m |
+| Meaning | Elastic tangential/shear stiffness. |
+| Source value | Not established |
+| Value used in this model | 2412.5242 |
+| What changed and why | No verified source value is available for direct comparison. Effective paw-contact parameter from model calibration; not an independently measured paw-material constant. |
+| Source / evidence | Effective paw-contact law calibrated to force and motion references; parameters are not independently measured pad-material constants. Effective material parameters, not measured cat tissue constants. |
+
+</details>
+
+<details>
+<summary>R_paw_pad1 · shear_damping_Ns_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | R_paw_pad1 |
+| Parameter | shear_damping_Ns_m |
+| Unit | N s/m |
+| Meaning | Tangential dashpot coefficient, reduced at shallow contact. |
+| Source value | Not established |
+| Value used in this model | 16.12305 |
+| What changed and why | No verified source value is available for direct comparison. Effective paw-contact parameter from model calibration; not an independently measured paw-material constant. |
+| Source / evidence | Effective paw-contact law calibrated to force and motion references; parameters are not independently measured pad-material constants. Effective material parameters, not measured cat tissue constants. |
+
+</details>
+
+<details>
+<summary>R_paw_pad1 · friction_coefficient</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | R_paw_pad1 |
+| Parameter | friction_coefficient |
+| Unit | 1 |
+| Meaning | Coulomb limiting shear/normal force ratio. |
+| Source value | Not established |
+| Value used in this model | 0.32866719 |
+| What changed and why | No verified source value is available for direct comparison. Effective paw-contact parameter from model calibration; not an independently measured paw-material constant. |
+| Source / evidence | Effective paw-contact law calibrated to force and motion references; parameters are not independently measured pad-material constants. Effective material parameters, not measured cat tissue constants. |
+
+</details>
+
+<details>
+<summary>R_paw_pad1 · progressive_stiffening_depth_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | R_paw_pad1 |
+| Parameter | progressive_stiffening_depth_m |
+| Unit | m |
+| Meaning | Optional finite-depth stiffening scale; zero disables the extension. |
+| Source value | Not established |
+| Value used in this model | 0 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Effective paw-contact law calibrated to force and motion references; parameters are not independently measured pad-material constants. Effective material parameters, not measured cat tissue constants. |
+
+</details>
+
+<details>
+<summary>R_paw_pad2 · radius_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | R_paw_pad2 |
+| Parameter | radius_m |
+| Unit | m |
+| Meaning | radius m |
+| Source value | Not established |
+| Value used in this model | 0.0071395132 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>R_paw_pad2 · position_in_body_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | R_paw_pad2 |
+| Parameter | position_in_body_m |
+| Unit | m |
+| Meaning | position in body m |
+| Source value | Not established |
+| Value used in this model | [0.019298430645675463, 0.0, -0.005] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>R_paw_pad2 · normal_stiffness_N_m32</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | R_paw_pad2 |
+| Parameter | normal_stiffness_N_m32 |
+| Unit | N/m^(3/2) |
+| Meaning | Hunt-Crossley normal stiffness coefficient. |
+| Source value | Not established |
+| Value used in this model | 11296.508 |
+| What changed and why | No verified source value is available for direct comparison. Effective paw-contact parameter from model calibration; not an independently measured paw-material constant. |
+| Source / evidence | Effective paw-contact law calibrated to force and motion references; parameters are not independently measured pad-material constants. Effective material parameters, not measured cat tissue constants. |
+
+</details>
+
+<details>
+<summary>R_paw_pad2 · normal_dissipation_s_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | R_paw_pad2 |
+| Parameter | normal_dissipation_s_m |
+| Unit | s/m |
+| Meaning | Velocity multiplier in the normal contact law. |
+| Source value | Not established |
+| Value used in this model | 1.1713311 |
+| What changed and why | No verified source value is available for direct comparison. Effective paw-contact parameter from model calibration; not an independently measured paw-material constant. |
+| Source / evidence | Effective paw-contact law calibrated to force and motion references; parameters are not independently measured pad-material constants. Effective material parameters, not measured cat tissue constants. |
+
+</details>
+
+<details>
+<summary>R_paw_pad2 · shear_stiffness_N_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | R_paw_pad2 |
+| Parameter | shear_stiffness_N_m |
+| Unit | N/m |
+| Meaning | Elastic tangential/shear stiffness. |
+| Source value | Not established |
+| Value used in this model | 2412.5242 |
+| What changed and why | No verified source value is available for direct comparison. Effective paw-contact parameter from model calibration; not an independently measured paw-material constant. |
+| Source / evidence | Effective paw-contact law calibrated to force and motion references; parameters are not independently measured pad-material constants. Effective material parameters, not measured cat tissue constants. |
+
+</details>
+
+<details>
+<summary>R_paw_pad2 · shear_damping_Ns_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | R_paw_pad2 |
+| Parameter | shear_damping_Ns_m |
+| Unit | N s/m |
+| Meaning | Tangential dashpot coefficient, reduced at shallow contact. |
+| Source value | Not established |
+| Value used in this model | 16.12305 |
+| What changed and why | No verified source value is available for direct comparison. Effective paw-contact parameter from model calibration; not an independently measured paw-material constant. |
+| Source / evidence | Effective paw-contact law calibrated to force and motion references; parameters are not independently measured pad-material constants. Effective material parameters, not measured cat tissue constants. |
+
+</details>
+
+<details>
+<summary>R_paw_pad2 · friction_coefficient</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | R_paw_pad2 |
+| Parameter | friction_coefficient |
+| Unit | 1 |
+| Meaning | Coulomb limiting shear/normal force ratio. |
+| Source value | Not established |
+| Value used in this model | 0.32866719 |
+| What changed and why | No verified source value is available for direct comparison. Effective paw-contact parameter from model calibration; not an independently measured paw-material constant. |
+| Source / evidence | Effective paw-contact law calibrated to force and motion references; parameters are not independently measured pad-material constants. Effective material parameters, not measured cat tissue constants. |
+
+</details>
+
+<details>
+<summary>R_paw_pad2 · progressive_stiffening_depth_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | R_paw_pad2 |
+| Parameter | progressive_stiffening_depth_m |
+| Unit | m |
+| Meaning | Optional finite-depth stiffening scale; zero disables the extension. |
+| Source value | Not established |
+| Value used in this model | 0 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Effective paw-contact law calibrated to force and motion references; parameters are not independently measured pad-material constants. Effective material parameters, not measured cat tissue constants. |
+
+</details>
+
+<details>
+<summary>R_paw_pad3 · radius_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | R_paw_pad3 |
+| Parameter | radius_m |
+| Unit | m |
+| Meaning | radius m |
+| Source value | Not established |
+| Value used in this model | 0.0071395132 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>R_paw_pad3 · position_in_body_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | R_paw_pad3 |
+| Parameter | position_in_body_m |
+| Unit | m |
+| Meaning | position in body m |
+| Source value | Not established |
+| Value used in this model | [0.019298430645675463, 0.0, 0.005] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>R_paw_pad3 · normal_stiffness_N_m32</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | R_paw_pad3 |
+| Parameter | normal_stiffness_N_m32 |
+| Unit | N/m^(3/2) |
+| Meaning | Hunt-Crossley normal stiffness coefficient. |
+| Source value | Not established |
+| Value used in this model | 11296.508 |
+| What changed and why | No verified source value is available for direct comparison. Effective paw-contact parameter from model calibration; not an independently measured paw-material constant. |
+| Source / evidence | Effective paw-contact law calibrated to force and motion references; parameters are not independently measured pad-material constants. Effective material parameters, not measured cat tissue constants. |
+
+</details>
+
+<details>
+<summary>R_paw_pad3 · normal_dissipation_s_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | R_paw_pad3 |
+| Parameter | normal_dissipation_s_m |
+| Unit | s/m |
+| Meaning | Velocity multiplier in the normal contact law. |
+| Source value | Not established |
+| Value used in this model | 1.1713311 |
+| What changed and why | No verified source value is available for direct comparison. Effective paw-contact parameter from model calibration; not an independently measured paw-material constant. |
+| Source / evidence | Effective paw-contact law calibrated to force and motion references; parameters are not independently measured pad-material constants. Effective material parameters, not measured cat tissue constants. |
+
+</details>
+
+<details>
+<summary>R_paw_pad3 · shear_stiffness_N_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | R_paw_pad3 |
+| Parameter | shear_stiffness_N_m |
+| Unit | N/m |
+| Meaning | Elastic tangential/shear stiffness. |
+| Source value | Not established |
+| Value used in this model | 2412.5242 |
+| What changed and why | No verified source value is available for direct comparison. Effective paw-contact parameter from model calibration; not an independently measured paw-material constant. |
+| Source / evidence | Effective paw-contact law calibrated to force and motion references; parameters are not independently measured pad-material constants. Effective material parameters, not measured cat tissue constants. |
+
+</details>
+
+<details>
+<summary>R_paw_pad3 · shear_damping_Ns_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | R_paw_pad3 |
+| Parameter | shear_damping_Ns_m |
+| Unit | N s/m |
+| Meaning | Tangential dashpot coefficient, reduced at shallow contact. |
+| Source value | Not established |
+| Value used in this model | 16.12305 |
+| What changed and why | No verified source value is available for direct comparison. Effective paw-contact parameter from model calibration; not an independently measured paw-material constant. |
+| Source / evidence | Effective paw-contact law calibrated to force and motion references; parameters are not independently measured pad-material constants. Effective material parameters, not measured cat tissue constants. |
+
+</details>
+
+<details>
+<summary>R_paw_pad3 · friction_coefficient</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | R_paw_pad3 |
+| Parameter | friction_coefficient |
+| Unit | 1 |
+| Meaning | Coulomb limiting shear/normal force ratio. |
+| Source value | Not established |
+| Value used in this model | 0.32866719 |
+| What changed and why | No verified source value is available for direct comparison. Effective paw-contact parameter from model calibration; not an independently measured paw-material constant. |
+| Source / evidence | Effective paw-contact law calibrated to force and motion references; parameters are not independently measured pad-material constants. Effective material parameters, not measured cat tissue constants. |
+
+</details>
+
+<details>
+<summary>R_paw_pad3 · progressive_stiffening_depth_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | R_paw_pad3 |
+| Parameter | progressive_stiffening_depth_m |
+| Unit | m |
+| Meaning | Optional finite-depth stiffening scale; zero disables the extension. |
+| Source value | Not established |
+| Value used in this model | 0 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Effective paw-contact law calibrated to force and motion references; parameters are not independently measured pad-material constants. Effective material parameters, not measured cat tissue constants. |
+
+</details>
+
+<details>
+<summary>R_paw_pad4 · radius_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | R_paw_pad4 |
+| Parameter | radius_m |
+| Unit | m |
+| Meaning | radius m |
+| Source value | Not established |
+| Value used in this model | 0.0076999996 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>R_paw_pad4 · position_in_body_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | R_paw_pad4 |
+| Parameter | position_in_body_m |
+| Unit | m |
+| Meaning | position in body m |
+| Source value | Not established |
+| Value used in this model | [0.03137865992484085, 0.0, -0.005] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>R_paw_pad4 · normal_stiffness_N_m32</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | R_paw_pad4 |
+| Parameter | normal_stiffness_N_m32 |
+| Unit | N/m^(3/2) |
+| Meaning | Hunt-Crossley normal stiffness coefficient. |
+| Source value | Not established |
+| Value used in this model | 11296.508 |
+| What changed and why | No verified source value is available for direct comparison. Effective paw-contact parameter from model calibration; not an independently measured paw-material constant. |
+| Source / evidence | Effective paw-contact law calibrated to force and motion references; parameters are not independently measured pad-material constants. Effective material parameters, not measured cat tissue constants. |
+
+</details>
+
+<details>
+<summary>R_paw_pad4 · normal_dissipation_s_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | R_paw_pad4 |
+| Parameter | normal_dissipation_s_m |
+| Unit | s/m |
+| Meaning | Velocity multiplier in the normal contact law. |
+| Source value | Not established |
+| Value used in this model | 1.1713311 |
+| What changed and why | No verified source value is available for direct comparison. Effective paw-contact parameter from model calibration; not an independently measured paw-material constant. |
+| Source / evidence | Effective paw-contact law calibrated to force and motion references; parameters are not independently measured pad-material constants. Effective material parameters, not measured cat tissue constants. |
+
+</details>
+
+<details>
+<summary>R_paw_pad4 · shear_stiffness_N_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | R_paw_pad4 |
+| Parameter | shear_stiffness_N_m |
+| Unit | N/m |
+| Meaning | Elastic tangential/shear stiffness. |
+| Source value | Not established |
+| Value used in this model | 2412.5242 |
+| What changed and why | No verified source value is available for direct comparison. Effective paw-contact parameter from model calibration; not an independently measured paw-material constant. |
+| Source / evidence | Effective paw-contact law calibrated to force and motion references; parameters are not independently measured pad-material constants. Effective material parameters, not measured cat tissue constants. |
+
+</details>
+
+<details>
+<summary>R_paw_pad4 · shear_damping_Ns_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | R_paw_pad4 |
+| Parameter | shear_damping_Ns_m |
+| Unit | N s/m |
+| Meaning | Tangential dashpot coefficient, reduced at shallow contact. |
+| Source value | Not established |
+| Value used in this model | 16.12305 |
+| What changed and why | No verified source value is available for direct comparison. Effective paw-contact parameter from model calibration; not an independently measured paw-material constant. |
+| Source / evidence | Effective paw-contact law calibrated to force and motion references; parameters are not independently measured pad-material constants. Effective material parameters, not measured cat tissue constants. |
+
+</details>
+
+<details>
+<summary>R_paw_pad4 · friction_coefficient</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | R_paw_pad4 |
+| Parameter | friction_coefficient |
+| Unit | 1 |
+| Meaning | Coulomb limiting shear/normal force ratio. |
+| Source value | Not established |
+| Value used in this model | 0.32866719 |
+| What changed and why | No verified source value is available for direct comparison. Effective paw-contact parameter from model calibration; not an independently measured paw-material constant. |
+| Source / evidence | Effective paw-contact law calibrated to force and motion references; parameters are not independently measured pad-material constants. Effective material parameters, not measured cat tissue constants. |
+
+</details>
+
+<details>
+<summary>R_paw_pad4 · progressive_stiffening_depth_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | R_paw_pad4 |
+| Parameter | progressive_stiffening_depth_m |
+| Unit | m |
+| Meaning | Optional finite-depth stiffening scale; zero disables the extension. |
+| Source value | Not established |
+| Value used in this model | 0 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Effective paw-contact law calibrated to force and motion references; parameters are not independently measured pad-material constants. Effective material parameters, not measured cat tissue constants. |
+
+</details>
+
+<details>
+<summary>R_paw_pad5 · radius_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | R_paw_pad5 |
+| Parameter | radius_m |
+| Unit | m |
+| Meaning | radius m |
+| Source value | Not established |
+| Value used in this model | 0.0076999996 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>R_paw_pad5 · position_in_body_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | R_paw_pad5 |
+| Parameter | position_in_body_m |
+| Unit | m |
+| Meaning | position in body m |
+| Source value | Not established |
+| Value used in this model | [0.03137865992484085, 0.0, 0.005] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>R_paw_pad5 · normal_stiffness_N_m32</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | R_paw_pad5 |
+| Parameter | normal_stiffness_N_m32 |
+| Unit | N/m^(3/2) |
+| Meaning | Hunt-Crossley normal stiffness coefficient. |
+| Source value | Not established |
+| Value used in this model | 11296.508 |
+| What changed and why | No verified source value is available for direct comparison. Effective paw-contact parameter from model calibration; not an independently measured paw-material constant. |
+| Source / evidence | Effective paw-contact law calibrated to force and motion references; parameters are not independently measured pad-material constants. Effective material parameters, not measured cat tissue constants. |
+
+</details>
+
+<details>
+<summary>R_paw_pad5 · normal_dissipation_s_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | R_paw_pad5 |
+| Parameter | normal_dissipation_s_m |
+| Unit | s/m |
+| Meaning | Velocity multiplier in the normal contact law. |
+| Source value | Not established |
+| Value used in this model | 1.1713311 |
+| What changed and why | No verified source value is available for direct comparison. Effective paw-contact parameter from model calibration; not an independently measured paw-material constant. |
+| Source / evidence | Effective paw-contact law calibrated to force and motion references; parameters are not independently measured pad-material constants. Effective material parameters, not measured cat tissue constants. |
+
+</details>
+
+<details>
+<summary>R_paw_pad5 · shear_stiffness_N_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | R_paw_pad5 |
+| Parameter | shear_stiffness_N_m |
+| Unit | N/m |
+| Meaning | Elastic tangential/shear stiffness. |
+| Source value | Not established |
+| Value used in this model | 2412.5242 |
+| What changed and why | No verified source value is available for direct comparison. Effective paw-contact parameter from model calibration; not an independently measured paw-material constant. |
+| Source / evidence | Effective paw-contact law calibrated to force and motion references; parameters are not independently measured pad-material constants. Effective material parameters, not measured cat tissue constants. |
+
+</details>
+
+<details>
+<summary>R_paw_pad5 · shear_damping_Ns_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | R_paw_pad5 |
+| Parameter | shear_damping_Ns_m |
+| Unit | N s/m |
+| Meaning | Tangential dashpot coefficient, reduced at shallow contact. |
+| Source value | Not established |
+| Value used in this model | 16.12305 |
+| What changed and why | No verified source value is available for direct comparison. Effective paw-contact parameter from model calibration; not an independently measured paw-material constant. |
+| Source / evidence | Effective paw-contact law calibrated to force and motion references; parameters are not independently measured pad-material constants. Effective material parameters, not measured cat tissue constants. |
+
+</details>
+
+<details>
+<summary>R_paw_pad5 · friction_coefficient</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | R_paw_pad5 |
+| Parameter | friction_coefficient |
+| Unit | 1 |
+| Meaning | Coulomb limiting shear/normal force ratio. |
+| Source value | Not established |
+| Value used in this model | 0.32866719 |
+| What changed and why | No verified source value is available for direct comparison. Effective paw-contact parameter from model calibration; not an independently measured paw-material constant. |
+| Source / evidence | Effective paw-contact law calibrated to force and motion references; parameters are not independently measured pad-material constants. Effective material parameters, not measured cat tissue constants. |
+
+</details>
+
+<details>
+<summary>R_paw_pad5 · progressive_stiffening_depth_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | R_paw_pad5 |
+| Parameter | progressive_stiffening_depth_m |
+| Unit | m |
+| Meaning | Optional finite-depth stiffening scale; zero disables the extension. |
+| Source value | Not established |
+| Value used in this model | 0 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Effective paw-contact law calibrated to force and motion references; parameters are not independently measured pad-material constants. Effective material parameters, not measured cat tissue constants. |
+
+</details>
+
+<details>
+<summary>FL_contactpad0 · radius_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_contactpad0 |
+| Parameter | radius_m |
+| Unit | m |
+| Meaning | radius m |
+| Source value | Not established |
+| Value used in this model | 0.006 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>FL_contactpad0 · position_in_body_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_contactpad0 |
+| Parameter | position_in_body_m |
+| Unit | m |
+| Meaning | position in body m |
+| Source value | Not established |
+| Value used in this model | [0.004, 0.0, -0.005] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>FL_contactpad0 · normal_stiffness_N_m32</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_contactpad0 |
+| Parameter | normal_stiffness_N_m32 |
+| Unit | N/m^(3/2) |
+| Meaning | Hunt-Crossley normal stiffness coefficient. |
+| Source value | Not established |
+| Value used in this model | 11296.508 |
+| What changed and why | No verified source value is available for direct comparison. Effective paw-contact parameter from model calibration; not an independently measured paw-material constant. |
+| Source / evidence | Effective paw-contact law calibrated to force and motion references; parameters are not independently measured pad-material constants. Effective material parameters, not measured cat tissue constants. |
+
+</details>
+
+<details>
+<summary>FL_contactpad0 · normal_dissipation_s_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_contactpad0 |
+| Parameter | normal_dissipation_s_m |
+| Unit | s/m |
+| Meaning | Velocity multiplier in the normal contact law. |
+| Source value | Not established |
+| Value used in this model | 1.1713311 |
+| What changed and why | No verified source value is available for direct comparison. Effective paw-contact parameter from model calibration; not an independently measured paw-material constant. |
+| Source / evidence | Effective paw-contact law calibrated to force and motion references; parameters are not independently measured pad-material constants. Effective material parameters, not measured cat tissue constants. |
+
+</details>
+
+<details>
+<summary>FL_contactpad0 · shear_stiffness_N_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_contactpad0 |
+| Parameter | shear_stiffness_N_m |
+| Unit | N/m |
+| Meaning | Elastic tangential/shear stiffness. |
+| Source value | Not established |
+| Value used in this model | 2412.5242 |
+| What changed and why | No verified source value is available for direct comparison. Effective paw-contact parameter from model calibration; not an independently measured paw-material constant. |
+| Source / evidence | Effective paw-contact law calibrated to force and motion references; parameters are not independently measured pad-material constants. Effective material parameters, not measured cat tissue constants. |
+
+</details>
+
+<details>
+<summary>FL_contactpad0 · shear_damping_Ns_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_contactpad0 |
+| Parameter | shear_damping_Ns_m |
+| Unit | N s/m |
+| Meaning | Tangential dashpot coefficient, reduced at shallow contact. |
+| Source value | Not established |
+| Value used in this model | 16.12305 |
+| What changed and why | No verified source value is available for direct comparison. Effective paw-contact parameter from model calibration; not an independently measured paw-material constant. |
+| Source / evidence | Effective paw-contact law calibrated to force and motion references; parameters are not independently measured pad-material constants. Effective material parameters, not measured cat tissue constants. |
+
+</details>
+
+<details>
+<summary>FL_contactpad0 · friction_coefficient</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_contactpad0 |
+| Parameter | friction_coefficient |
+| Unit | 1 |
+| Meaning | Coulomb limiting shear/normal force ratio. |
+| Source value | Not established |
+| Value used in this model | 0.32866719 |
+| What changed and why | No verified source value is available for direct comparison. Effective paw-contact parameter from model calibration; not an independently measured paw-material constant. |
+| Source / evidence | Effective paw-contact law calibrated to force and motion references; parameters are not independently measured pad-material constants. Effective material parameters, not measured cat tissue constants. |
+
+</details>
+
+<details>
+<summary>FL_contactpad0 · progressive_stiffening_depth_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_contactpad0 |
+| Parameter | progressive_stiffening_depth_m |
+| Unit | m |
+| Meaning | Optional finite-depth stiffening scale; zero disables the extension. |
+| Source value | Not established |
+| Value used in this model | 0 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Effective paw-contact law calibrated to force and motion references; parameters are not independently measured pad-material constants. Effective material parameters, not measured cat tissue constants. |
+
+</details>
+
+<details>
+<summary>FL_contactpad1 · radius_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_contactpad1 |
+| Parameter | radius_m |
+| Unit | m |
+| Meaning | radius m |
+| Source value | Not established |
+| Value used in this model | 0.006 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>FL_contactpad1 · position_in_body_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_contactpad1 |
+| Parameter | position_in_body_m |
+| Unit | m |
+| Meaning | position in body m |
+| Source value | Not established |
+| Value used in this model | [0.004, 0.0, 0.005] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>FL_contactpad1 · normal_stiffness_N_m32</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_contactpad1 |
+| Parameter | normal_stiffness_N_m32 |
+| Unit | N/m^(3/2) |
+| Meaning | Hunt-Crossley normal stiffness coefficient. |
+| Source value | Not established |
+| Value used in this model | 11296.508 |
+| What changed and why | No verified source value is available for direct comparison. Effective paw-contact parameter from model calibration; not an independently measured paw-material constant. |
+| Source / evidence | Effective paw-contact law calibrated to force and motion references; parameters are not independently measured pad-material constants. Effective material parameters, not measured cat tissue constants. |
+
+</details>
+
+<details>
+<summary>FL_contactpad1 · normal_dissipation_s_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_contactpad1 |
+| Parameter | normal_dissipation_s_m |
+| Unit | s/m |
+| Meaning | Velocity multiplier in the normal contact law. |
+| Source value | Not established |
+| Value used in this model | 1.1713311 |
+| What changed and why | No verified source value is available for direct comparison. Effective paw-contact parameter from model calibration; not an independently measured paw-material constant. |
+| Source / evidence | Effective paw-contact law calibrated to force and motion references; parameters are not independently measured pad-material constants. Effective material parameters, not measured cat tissue constants. |
+
+</details>
+
+<details>
+<summary>FL_contactpad1 · shear_stiffness_N_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_contactpad1 |
+| Parameter | shear_stiffness_N_m |
+| Unit | N/m |
+| Meaning | Elastic tangential/shear stiffness. |
+| Source value | Not established |
+| Value used in this model | 2412.5242 |
+| What changed and why | No verified source value is available for direct comparison. Effective paw-contact parameter from model calibration; not an independently measured paw-material constant. |
+| Source / evidence | Effective paw-contact law calibrated to force and motion references; parameters are not independently measured pad-material constants. Effective material parameters, not measured cat tissue constants. |
+
+</details>
+
+<details>
+<summary>FL_contactpad1 · shear_damping_Ns_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_contactpad1 |
+| Parameter | shear_damping_Ns_m |
+| Unit | N s/m |
+| Meaning | Tangential dashpot coefficient, reduced at shallow contact. |
+| Source value | Not established |
+| Value used in this model | 16.12305 |
+| What changed and why | No verified source value is available for direct comparison. Effective paw-contact parameter from model calibration; not an independently measured paw-material constant. |
+| Source / evidence | Effective paw-contact law calibrated to force and motion references; parameters are not independently measured pad-material constants. Effective material parameters, not measured cat tissue constants. |
+
+</details>
+
+<details>
+<summary>FL_contactpad1 · friction_coefficient</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_contactpad1 |
+| Parameter | friction_coefficient |
+| Unit | 1 |
+| Meaning | Coulomb limiting shear/normal force ratio. |
+| Source value | Not established |
+| Value used in this model | 0.32866719 |
+| What changed and why | No verified source value is available for direct comparison. Effective paw-contact parameter from model calibration; not an independently measured paw-material constant. |
+| Source / evidence | Effective paw-contact law calibrated to force and motion references; parameters are not independently measured pad-material constants. Effective material parameters, not measured cat tissue constants. |
+
+</details>
+
+<details>
+<summary>FL_contactpad1 · progressive_stiffening_depth_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_contactpad1 |
+| Parameter | progressive_stiffening_depth_m |
+| Unit | m |
+| Meaning | Optional finite-depth stiffening scale; zero disables the extension. |
+| Source value | Not established |
+| Value used in this model | 0 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Effective paw-contact law calibrated to force and motion references; parameters are not independently measured pad-material constants. Effective material parameters, not measured cat tissue constants. |
+
+</details>
+
+<details>
+<summary>FL_contactpad2 · radius_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_contactpad2 |
+| Parameter | radius_m |
+| Unit | m |
+| Meaning | radius m |
+| Source value | Not established |
+| Value used in this model | 0.006 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>FL_contactpad2 · position_in_body_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_contactpad2 |
+| Parameter | position_in_body_m |
+| Unit | m |
+| Meaning | position in body m |
+| Source value | Not established |
+| Value used in this model | [0.013, 0.0, -0.005] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>FL_contactpad2 · normal_stiffness_N_m32</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_contactpad2 |
+| Parameter | normal_stiffness_N_m32 |
+| Unit | N/m^(3/2) |
+| Meaning | Hunt-Crossley normal stiffness coefficient. |
+| Source value | Not established |
+| Value used in this model | 11296.508 |
+| What changed and why | No verified source value is available for direct comparison. Effective paw-contact parameter from model calibration; not an independently measured paw-material constant. |
+| Source / evidence | Effective paw-contact law calibrated to force and motion references; parameters are not independently measured pad-material constants. Effective material parameters, not measured cat tissue constants. |
+
+</details>
+
+<details>
+<summary>FL_contactpad2 · normal_dissipation_s_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_contactpad2 |
+| Parameter | normal_dissipation_s_m |
+| Unit | s/m |
+| Meaning | Velocity multiplier in the normal contact law. |
+| Source value | Not established |
+| Value used in this model | 1.1713311 |
+| What changed and why | No verified source value is available for direct comparison. Effective paw-contact parameter from model calibration; not an independently measured paw-material constant. |
+| Source / evidence | Effective paw-contact law calibrated to force and motion references; parameters are not independently measured pad-material constants. Effective material parameters, not measured cat tissue constants. |
+
+</details>
+
+<details>
+<summary>FL_contactpad2 · shear_stiffness_N_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_contactpad2 |
+| Parameter | shear_stiffness_N_m |
+| Unit | N/m |
+| Meaning | Elastic tangential/shear stiffness. |
+| Source value | Not established |
+| Value used in this model | 2412.5242 |
+| What changed and why | No verified source value is available for direct comparison. Effective paw-contact parameter from model calibration; not an independently measured paw-material constant. |
+| Source / evidence | Effective paw-contact law calibrated to force and motion references; parameters are not independently measured pad-material constants. Effective material parameters, not measured cat tissue constants. |
+
+</details>
+
+<details>
+<summary>FL_contactpad2 · shear_damping_Ns_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_contactpad2 |
+| Parameter | shear_damping_Ns_m |
+| Unit | N s/m |
+| Meaning | Tangential dashpot coefficient, reduced at shallow contact. |
+| Source value | Not established |
+| Value used in this model | 16.12305 |
+| What changed and why | No verified source value is available for direct comparison. Effective paw-contact parameter from model calibration; not an independently measured paw-material constant. |
+| Source / evidence | Effective paw-contact law calibrated to force and motion references; parameters are not independently measured pad-material constants. Effective material parameters, not measured cat tissue constants. |
+
+</details>
+
+<details>
+<summary>FL_contactpad2 · friction_coefficient</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_contactpad2 |
+| Parameter | friction_coefficient |
+| Unit | 1 |
+| Meaning | Coulomb limiting shear/normal force ratio. |
+| Source value | Not established |
+| Value used in this model | 0.32866719 |
+| What changed and why | No verified source value is available for direct comparison. Effective paw-contact parameter from model calibration; not an independently measured paw-material constant. |
+| Source / evidence | Effective paw-contact law calibrated to force and motion references; parameters are not independently measured pad-material constants. Effective material parameters, not measured cat tissue constants. |
+
+</details>
+
+<details>
+<summary>FL_contactpad2 · progressive_stiffening_depth_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_contactpad2 |
+| Parameter | progressive_stiffening_depth_m |
+| Unit | m |
+| Meaning | Optional finite-depth stiffening scale; zero disables the extension. |
+| Source value | Not established |
+| Value used in this model | 0 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Effective paw-contact law calibrated to force and motion references; parameters are not independently measured pad-material constants. Effective material parameters, not measured cat tissue constants. |
+
+</details>
+
+<details>
+<summary>FL_contactpad3 · radius_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_contactpad3 |
+| Parameter | radius_m |
+| Unit | m |
+| Meaning | radius m |
+| Source value | Not established |
+| Value used in this model | 0.006 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>FL_contactpad3 · position_in_body_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_contactpad3 |
+| Parameter | position_in_body_m |
+| Unit | m |
+| Meaning | position in body m |
+| Source value | Not established |
+| Value used in this model | [0.013, 0.0, 0.005] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>FL_contactpad3 · normal_stiffness_N_m32</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_contactpad3 |
+| Parameter | normal_stiffness_N_m32 |
+| Unit | N/m^(3/2) |
+| Meaning | Hunt-Crossley normal stiffness coefficient. |
+| Source value | Not established |
+| Value used in this model | 11296.508 |
+| What changed and why | No verified source value is available for direct comparison. Effective paw-contact parameter from model calibration; not an independently measured paw-material constant. |
+| Source / evidence | Effective paw-contact law calibrated to force and motion references; parameters are not independently measured pad-material constants. Effective material parameters, not measured cat tissue constants. |
+
+</details>
+
+<details>
+<summary>FL_contactpad3 · normal_dissipation_s_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_contactpad3 |
+| Parameter | normal_dissipation_s_m |
+| Unit | s/m |
+| Meaning | Velocity multiplier in the normal contact law. |
+| Source value | Not established |
+| Value used in this model | 1.1713311 |
+| What changed and why | No verified source value is available for direct comparison. Effective paw-contact parameter from model calibration; not an independently measured paw-material constant. |
+| Source / evidence | Effective paw-contact law calibrated to force and motion references; parameters are not independently measured pad-material constants. Effective material parameters, not measured cat tissue constants. |
+
+</details>
+
+<details>
+<summary>FL_contactpad3 · shear_stiffness_N_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_contactpad3 |
+| Parameter | shear_stiffness_N_m |
+| Unit | N/m |
+| Meaning | Elastic tangential/shear stiffness. |
+| Source value | Not established |
+| Value used in this model | 2412.5242 |
+| What changed and why | No verified source value is available for direct comparison. Effective paw-contact parameter from model calibration; not an independently measured paw-material constant. |
+| Source / evidence | Effective paw-contact law calibrated to force and motion references; parameters are not independently measured pad-material constants. Effective material parameters, not measured cat tissue constants. |
+
+</details>
+
+<details>
+<summary>FL_contactpad3 · shear_damping_Ns_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_contactpad3 |
+| Parameter | shear_damping_Ns_m |
+| Unit | N s/m |
+| Meaning | Tangential dashpot coefficient, reduced at shallow contact. |
+| Source value | Not established |
+| Value used in this model | 16.12305 |
+| What changed and why | No verified source value is available for direct comparison. Effective paw-contact parameter from model calibration; not an independently measured paw-material constant. |
+| Source / evidence | Effective paw-contact law calibrated to force and motion references; parameters are not independently measured pad-material constants. Effective material parameters, not measured cat tissue constants. |
+
+</details>
+
+<details>
+<summary>FL_contactpad3 · friction_coefficient</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_contactpad3 |
+| Parameter | friction_coefficient |
+| Unit | 1 |
+| Meaning | Coulomb limiting shear/normal force ratio. |
+| Source value | Not established |
+| Value used in this model | 0.32866719 |
+| What changed and why | No verified source value is available for direct comparison. Effective paw-contact parameter from model calibration; not an independently measured paw-material constant. |
+| Source / evidence | Effective paw-contact law calibrated to force and motion references; parameters are not independently measured pad-material constants. Effective material parameters, not measured cat tissue constants. |
+
+</details>
+
+<details>
+<summary>FL_contactpad3 · progressive_stiffening_depth_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_contactpad3 |
+| Parameter | progressive_stiffening_depth_m |
+| Unit | m |
+| Meaning | Optional finite-depth stiffening scale; zero disables the extension. |
+| Source value | Not established |
+| Value used in this model | 0 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Effective paw-contact law calibrated to force and motion references; parameters are not independently measured pad-material constants. Effective material parameters, not measured cat tissue constants. |
+
+</details>
+
+<details>
+<summary>FL_contactpad4 · radius_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_contactpad4 |
+| Parameter | radius_m |
+| Unit | m |
+| Meaning | radius m |
+| Source value | Not established |
+| Value used in this model | 0.006 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>FL_contactpad4 · position_in_body_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_contactpad4 |
+| Parameter | position_in_body_m |
+| Unit | m |
+| Meaning | position in body m |
+| Source value | Not established |
+| Value used in this model | [0.022, 0.0, -0.005] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>FL_contactpad4 · normal_stiffness_N_m32</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_contactpad4 |
+| Parameter | normal_stiffness_N_m32 |
+| Unit | N/m^(3/2) |
+| Meaning | Hunt-Crossley normal stiffness coefficient. |
+| Source value | Not established |
+| Value used in this model | 11296.508 |
+| What changed and why | No verified source value is available for direct comparison. Effective paw-contact parameter from model calibration; not an independently measured paw-material constant. |
+| Source / evidence | Effective paw-contact law calibrated to force and motion references; parameters are not independently measured pad-material constants. Effective material parameters, not measured cat tissue constants. |
+
+</details>
+
+<details>
+<summary>FL_contactpad4 · normal_dissipation_s_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_contactpad4 |
+| Parameter | normal_dissipation_s_m |
+| Unit | s/m |
+| Meaning | Velocity multiplier in the normal contact law. |
+| Source value | Not established |
+| Value used in this model | 1.1713311 |
+| What changed and why | No verified source value is available for direct comparison. Effective paw-contact parameter from model calibration; not an independently measured paw-material constant. |
+| Source / evidence | Effective paw-contact law calibrated to force and motion references; parameters are not independently measured pad-material constants. Effective material parameters, not measured cat tissue constants. |
+
+</details>
+
+<details>
+<summary>FL_contactpad4 · shear_stiffness_N_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_contactpad4 |
+| Parameter | shear_stiffness_N_m |
+| Unit | N/m |
+| Meaning | Elastic tangential/shear stiffness. |
+| Source value | Not established |
+| Value used in this model | 2412.5242 |
+| What changed and why | No verified source value is available for direct comparison. Effective paw-contact parameter from model calibration; not an independently measured paw-material constant. |
+| Source / evidence | Effective paw-contact law calibrated to force and motion references; parameters are not independently measured pad-material constants. Effective material parameters, not measured cat tissue constants. |
+
+</details>
+
+<details>
+<summary>FL_contactpad4 · shear_damping_Ns_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_contactpad4 |
+| Parameter | shear_damping_Ns_m |
+| Unit | N s/m |
+| Meaning | Tangential dashpot coefficient, reduced at shallow contact. |
+| Source value | Not established |
+| Value used in this model | 16.12305 |
+| What changed and why | No verified source value is available for direct comparison. Effective paw-contact parameter from model calibration; not an independently measured paw-material constant. |
+| Source / evidence | Effective paw-contact law calibrated to force and motion references; parameters are not independently measured pad-material constants. Effective material parameters, not measured cat tissue constants. |
+
+</details>
+
+<details>
+<summary>FL_contactpad4 · friction_coefficient</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_contactpad4 |
+| Parameter | friction_coefficient |
+| Unit | 1 |
+| Meaning | Coulomb limiting shear/normal force ratio. |
+| Source value | Not established |
+| Value used in this model | 0.32866719 |
+| What changed and why | No verified source value is available for direct comparison. Effective paw-contact parameter from model calibration; not an independently measured paw-material constant. |
+| Source / evidence | Effective paw-contact law calibrated to force and motion references; parameters are not independently measured pad-material constants. Effective material parameters, not measured cat tissue constants. |
+
+</details>
+
+<details>
+<summary>FL_contactpad4 · progressive_stiffening_depth_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_contactpad4 |
+| Parameter | progressive_stiffening_depth_m |
+| Unit | m |
+| Meaning | Optional finite-depth stiffening scale; zero disables the extension. |
+| Source value | Not established |
+| Value used in this model | 0 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Effective paw-contact law calibrated to force and motion references; parameters are not independently measured pad-material constants. Effective material parameters, not measured cat tissue constants. |
+
+</details>
+
+<details>
+<summary>FL_contactpad5 · radius_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_contactpad5 |
+| Parameter | radius_m |
+| Unit | m |
+| Meaning | radius m |
+| Source value | Not established |
+| Value used in this model | 0.006 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>FL_contactpad5 · position_in_body_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_contactpad5 |
+| Parameter | position_in_body_m |
+| Unit | m |
+| Meaning | position in body m |
+| Source value | Not established |
+| Value used in this model | [0.022, 0.0, 0.005] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>FL_contactpad5 · normal_stiffness_N_m32</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_contactpad5 |
+| Parameter | normal_stiffness_N_m32 |
+| Unit | N/m^(3/2) |
+| Meaning | Hunt-Crossley normal stiffness coefficient. |
+| Source value | Not established |
+| Value used in this model | 11296.508 |
+| What changed and why | No verified source value is available for direct comparison. Effective paw-contact parameter from model calibration; not an independently measured paw-material constant. |
+| Source / evidence | Effective paw-contact law calibrated to force and motion references; parameters are not independently measured pad-material constants. Effective material parameters, not measured cat tissue constants. |
+
+</details>
+
+<details>
+<summary>FL_contactpad5 · normal_dissipation_s_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_contactpad5 |
+| Parameter | normal_dissipation_s_m |
+| Unit | s/m |
+| Meaning | Velocity multiplier in the normal contact law. |
+| Source value | Not established |
+| Value used in this model | 1.1713311 |
+| What changed and why | No verified source value is available for direct comparison. Effective paw-contact parameter from model calibration; not an independently measured paw-material constant. |
+| Source / evidence | Effective paw-contact law calibrated to force and motion references; parameters are not independently measured pad-material constants. Effective material parameters, not measured cat tissue constants. |
+
+</details>
+
+<details>
+<summary>FL_contactpad5 · shear_stiffness_N_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_contactpad5 |
+| Parameter | shear_stiffness_N_m |
+| Unit | N/m |
+| Meaning | Elastic tangential/shear stiffness. |
+| Source value | Not established |
+| Value used in this model | 2412.5242 |
+| What changed and why | No verified source value is available for direct comparison. Effective paw-contact parameter from model calibration; not an independently measured paw-material constant. |
+| Source / evidence | Effective paw-contact law calibrated to force and motion references; parameters are not independently measured pad-material constants. Effective material parameters, not measured cat tissue constants. |
+
+</details>
+
+<details>
+<summary>FL_contactpad5 · shear_damping_Ns_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_contactpad5 |
+| Parameter | shear_damping_Ns_m |
+| Unit | N s/m |
+| Meaning | Tangential dashpot coefficient, reduced at shallow contact. |
+| Source value | Not established |
+| Value used in this model | 16.12305 |
+| What changed and why | No verified source value is available for direct comparison. Effective paw-contact parameter from model calibration; not an independently measured paw-material constant. |
+| Source / evidence | Effective paw-contact law calibrated to force and motion references; parameters are not independently measured pad-material constants. Effective material parameters, not measured cat tissue constants. |
+
+</details>
+
+<details>
+<summary>FL_contactpad5 · friction_coefficient</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_contactpad5 |
+| Parameter | friction_coefficient |
+| Unit | 1 |
+| Meaning | Coulomb limiting shear/normal force ratio. |
+| Source value | Not established |
+| Value used in this model | 0.32866719 |
+| What changed and why | No verified source value is available for direct comparison. Effective paw-contact parameter from model calibration; not an independently measured paw-material constant. |
+| Source / evidence | Effective paw-contact law calibrated to force and motion references; parameters are not independently measured pad-material constants. Effective material parameters, not measured cat tissue constants. |
+
+</details>
+
+<details>
+<summary>FL_contactpad5 · progressive_stiffening_depth_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_contactpad5 |
+| Parameter | progressive_stiffening_depth_m |
+| Unit | m |
+| Meaning | Optional finite-depth stiffening scale; zero disables the extension. |
+| Source value | Not established |
+| Value used in this model | 0 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Effective paw-contact law calibrated to force and motion references; parameters are not independently measured pad-material constants. Effective material parameters, not measured cat tissue constants. |
+
+</details>
+
+<details>
+<summary>FR_contactpad0 · radius_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FR_contactpad0 |
+| Parameter | radius_m |
+| Unit | m |
+| Meaning | radius m |
+| Source value | Not established |
+| Value used in this model | 0.006 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>FR_contactpad0 · position_in_body_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FR_contactpad0 |
+| Parameter | position_in_body_m |
+| Unit | m |
+| Meaning | position in body m |
+| Source value | Not established |
+| Value used in this model | [0.004, 0.0, -0.005] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>FR_contactpad0 · normal_stiffness_N_m32</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FR_contactpad0 |
+| Parameter | normal_stiffness_N_m32 |
+| Unit | N/m^(3/2) |
+| Meaning | Hunt-Crossley normal stiffness coefficient. |
+| Source value | Not established |
+| Value used in this model | 11296.508 |
+| What changed and why | No verified source value is available for direct comparison. Effective paw-contact parameter from model calibration; not an independently measured paw-material constant. |
+| Source / evidence | Effective paw-contact law calibrated to force and motion references; parameters are not independently measured pad-material constants. Effective material parameters, not measured cat tissue constants. |
+
+</details>
+
+<details>
+<summary>FR_contactpad0 · normal_dissipation_s_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FR_contactpad0 |
+| Parameter | normal_dissipation_s_m |
+| Unit | s/m |
+| Meaning | Velocity multiplier in the normal contact law. |
+| Source value | Not established |
+| Value used in this model | 1.1713311 |
+| What changed and why | No verified source value is available for direct comparison. Effective paw-contact parameter from model calibration; not an independently measured paw-material constant. |
+| Source / evidence | Effective paw-contact law calibrated to force and motion references; parameters are not independently measured pad-material constants. Effective material parameters, not measured cat tissue constants. |
+
+</details>
+
+<details>
+<summary>FR_contactpad0 · shear_stiffness_N_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FR_contactpad0 |
+| Parameter | shear_stiffness_N_m |
+| Unit | N/m |
+| Meaning | Elastic tangential/shear stiffness. |
+| Source value | Not established |
+| Value used in this model | 2412.5242 |
+| What changed and why | No verified source value is available for direct comparison. Effective paw-contact parameter from model calibration; not an independently measured paw-material constant. |
+| Source / evidence | Effective paw-contact law calibrated to force and motion references; parameters are not independently measured pad-material constants. Effective material parameters, not measured cat tissue constants. |
+
+</details>
+
+<details>
+<summary>FR_contactpad0 · shear_damping_Ns_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FR_contactpad0 |
+| Parameter | shear_damping_Ns_m |
+| Unit | N s/m |
+| Meaning | Tangential dashpot coefficient, reduced at shallow contact. |
+| Source value | Not established |
+| Value used in this model | 16.12305 |
+| What changed and why | No verified source value is available for direct comparison. Effective paw-contact parameter from model calibration; not an independently measured paw-material constant. |
+| Source / evidence | Effective paw-contact law calibrated to force and motion references; parameters are not independently measured pad-material constants. Effective material parameters, not measured cat tissue constants. |
+
+</details>
+
+<details>
+<summary>FR_contactpad0 · friction_coefficient</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FR_contactpad0 |
+| Parameter | friction_coefficient |
+| Unit | 1 |
+| Meaning | Coulomb limiting shear/normal force ratio. |
+| Source value | Not established |
+| Value used in this model | 0.32866719 |
+| What changed and why | No verified source value is available for direct comparison. Effective paw-contact parameter from model calibration; not an independently measured paw-material constant. |
+| Source / evidence | Effective paw-contact law calibrated to force and motion references; parameters are not independently measured pad-material constants. Effective material parameters, not measured cat tissue constants. |
+
+</details>
+
+<details>
+<summary>FR_contactpad0 · progressive_stiffening_depth_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FR_contactpad0 |
+| Parameter | progressive_stiffening_depth_m |
+| Unit | m |
+| Meaning | Optional finite-depth stiffening scale; zero disables the extension. |
+| Source value | Not established |
+| Value used in this model | 0 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Effective paw-contact law calibrated to force and motion references; parameters are not independently measured pad-material constants. Effective material parameters, not measured cat tissue constants. |
+
+</details>
+
+<details>
+<summary>FR_contactpad1 · radius_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FR_contactpad1 |
+| Parameter | radius_m |
+| Unit | m |
+| Meaning | radius m |
+| Source value | Not established |
+| Value used in this model | 0.006 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>FR_contactpad1 · position_in_body_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FR_contactpad1 |
+| Parameter | position_in_body_m |
+| Unit | m |
+| Meaning | position in body m |
+| Source value | Not established |
+| Value used in this model | [0.004, 0.0, 0.005] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>FR_contactpad1 · normal_stiffness_N_m32</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FR_contactpad1 |
+| Parameter | normal_stiffness_N_m32 |
+| Unit | N/m^(3/2) |
+| Meaning | Hunt-Crossley normal stiffness coefficient. |
+| Source value | Not established |
+| Value used in this model | 11296.508 |
+| What changed and why | No verified source value is available for direct comparison. Effective paw-contact parameter from model calibration; not an independently measured paw-material constant. |
+| Source / evidence | Effective paw-contact law calibrated to force and motion references; parameters are not independently measured pad-material constants. Effective material parameters, not measured cat tissue constants. |
+
+</details>
+
+<details>
+<summary>FR_contactpad1 · normal_dissipation_s_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FR_contactpad1 |
+| Parameter | normal_dissipation_s_m |
+| Unit | s/m |
+| Meaning | Velocity multiplier in the normal contact law. |
+| Source value | Not established |
+| Value used in this model | 1.1713311 |
+| What changed and why | No verified source value is available for direct comparison. Effective paw-contact parameter from model calibration; not an independently measured paw-material constant. |
+| Source / evidence | Effective paw-contact law calibrated to force and motion references; parameters are not independently measured pad-material constants. Effective material parameters, not measured cat tissue constants. |
+
+</details>
+
+<details>
+<summary>FR_contactpad1 · shear_stiffness_N_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FR_contactpad1 |
+| Parameter | shear_stiffness_N_m |
+| Unit | N/m |
+| Meaning | Elastic tangential/shear stiffness. |
+| Source value | Not established |
+| Value used in this model | 2412.5242 |
+| What changed and why | No verified source value is available for direct comparison. Effective paw-contact parameter from model calibration; not an independently measured paw-material constant. |
+| Source / evidence | Effective paw-contact law calibrated to force and motion references; parameters are not independently measured pad-material constants. Effective material parameters, not measured cat tissue constants. |
+
+</details>
+
+<details>
+<summary>FR_contactpad1 · shear_damping_Ns_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FR_contactpad1 |
+| Parameter | shear_damping_Ns_m |
+| Unit | N s/m |
+| Meaning | Tangential dashpot coefficient, reduced at shallow contact. |
+| Source value | Not established |
+| Value used in this model | 16.12305 |
+| What changed and why | No verified source value is available for direct comparison. Effective paw-contact parameter from model calibration; not an independently measured paw-material constant. |
+| Source / evidence | Effective paw-contact law calibrated to force and motion references; parameters are not independently measured pad-material constants. Effective material parameters, not measured cat tissue constants. |
+
+</details>
+
+<details>
+<summary>FR_contactpad1 · friction_coefficient</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FR_contactpad1 |
+| Parameter | friction_coefficient |
+| Unit | 1 |
+| Meaning | Coulomb limiting shear/normal force ratio. |
+| Source value | Not established |
+| Value used in this model | 0.32866719 |
+| What changed and why | No verified source value is available for direct comparison. Effective paw-contact parameter from model calibration; not an independently measured paw-material constant. |
+| Source / evidence | Effective paw-contact law calibrated to force and motion references; parameters are not independently measured pad-material constants. Effective material parameters, not measured cat tissue constants. |
+
+</details>
+
+<details>
+<summary>FR_contactpad1 · progressive_stiffening_depth_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FR_contactpad1 |
+| Parameter | progressive_stiffening_depth_m |
+| Unit | m |
+| Meaning | Optional finite-depth stiffening scale; zero disables the extension. |
+| Source value | Not established |
+| Value used in this model | 0 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Effective paw-contact law calibrated to force and motion references; parameters are not independently measured pad-material constants. Effective material parameters, not measured cat tissue constants. |
+
+</details>
+
+<details>
+<summary>FR_contactpad2 · radius_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FR_contactpad2 |
+| Parameter | radius_m |
+| Unit | m |
+| Meaning | radius m |
+| Source value | Not established |
+| Value used in this model | 0.006 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>FR_contactpad2 · position_in_body_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FR_contactpad2 |
+| Parameter | position_in_body_m |
+| Unit | m |
+| Meaning | position in body m |
+| Source value | Not established |
+| Value used in this model | [0.013, 0.0, -0.005] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>FR_contactpad2 · normal_stiffness_N_m32</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FR_contactpad2 |
+| Parameter | normal_stiffness_N_m32 |
+| Unit | N/m^(3/2) |
+| Meaning | Hunt-Crossley normal stiffness coefficient. |
+| Source value | Not established |
+| Value used in this model | 11296.508 |
+| What changed and why | No verified source value is available for direct comparison. Effective paw-contact parameter from model calibration; not an independently measured paw-material constant. |
+| Source / evidence | Effective paw-contact law calibrated to force and motion references; parameters are not independently measured pad-material constants. Effective material parameters, not measured cat tissue constants. |
+
+</details>
+
+<details>
+<summary>FR_contactpad2 · normal_dissipation_s_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FR_contactpad2 |
+| Parameter | normal_dissipation_s_m |
+| Unit | s/m |
+| Meaning | Velocity multiplier in the normal contact law. |
+| Source value | Not established |
+| Value used in this model | 1.1713311 |
+| What changed and why | No verified source value is available for direct comparison. Effective paw-contact parameter from model calibration; not an independently measured paw-material constant. |
+| Source / evidence | Effective paw-contact law calibrated to force and motion references; parameters are not independently measured pad-material constants. Effective material parameters, not measured cat tissue constants. |
+
+</details>
+
+<details>
+<summary>FR_contactpad2 · shear_stiffness_N_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FR_contactpad2 |
+| Parameter | shear_stiffness_N_m |
+| Unit | N/m |
+| Meaning | Elastic tangential/shear stiffness. |
+| Source value | Not established |
+| Value used in this model | 2412.5242 |
+| What changed and why | No verified source value is available for direct comparison. Effective paw-contact parameter from model calibration; not an independently measured paw-material constant. |
+| Source / evidence | Effective paw-contact law calibrated to force and motion references; parameters are not independently measured pad-material constants. Effective material parameters, not measured cat tissue constants. |
+
+</details>
+
+<details>
+<summary>FR_contactpad2 · shear_damping_Ns_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FR_contactpad2 |
+| Parameter | shear_damping_Ns_m |
+| Unit | N s/m |
+| Meaning | Tangential dashpot coefficient, reduced at shallow contact. |
+| Source value | Not established |
+| Value used in this model | 16.12305 |
+| What changed and why | No verified source value is available for direct comparison. Effective paw-contact parameter from model calibration; not an independently measured paw-material constant. |
+| Source / evidence | Effective paw-contact law calibrated to force and motion references; parameters are not independently measured pad-material constants. Effective material parameters, not measured cat tissue constants. |
+
+</details>
+
+<details>
+<summary>FR_contactpad2 · friction_coefficient</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FR_contactpad2 |
+| Parameter | friction_coefficient |
+| Unit | 1 |
+| Meaning | Coulomb limiting shear/normal force ratio. |
+| Source value | Not established |
+| Value used in this model | 0.32866719 |
+| What changed and why | No verified source value is available for direct comparison. Effective paw-contact parameter from model calibration; not an independently measured paw-material constant. |
+| Source / evidence | Effective paw-contact law calibrated to force and motion references; parameters are not independently measured pad-material constants. Effective material parameters, not measured cat tissue constants. |
+
+</details>
+
+<details>
+<summary>FR_contactpad2 · progressive_stiffening_depth_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FR_contactpad2 |
+| Parameter | progressive_stiffening_depth_m |
+| Unit | m |
+| Meaning | Optional finite-depth stiffening scale; zero disables the extension. |
+| Source value | Not established |
+| Value used in this model | 0 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Effective paw-contact law calibrated to force and motion references; parameters are not independently measured pad-material constants. Effective material parameters, not measured cat tissue constants. |
+
+</details>
+
+<details>
+<summary>FR_contactpad3 · radius_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FR_contactpad3 |
+| Parameter | radius_m |
+| Unit | m |
+| Meaning | radius m |
+| Source value | Not established |
+| Value used in this model | 0.006 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>FR_contactpad3 · position_in_body_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FR_contactpad3 |
+| Parameter | position_in_body_m |
+| Unit | m |
+| Meaning | position in body m |
+| Source value | Not established |
+| Value used in this model | [0.013, 0.0, 0.005] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>FR_contactpad3 · normal_stiffness_N_m32</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FR_contactpad3 |
+| Parameter | normal_stiffness_N_m32 |
+| Unit | N/m^(3/2) |
+| Meaning | Hunt-Crossley normal stiffness coefficient. |
+| Source value | Not established |
+| Value used in this model | 11296.508 |
+| What changed and why | No verified source value is available for direct comparison. Effective paw-contact parameter from model calibration; not an independently measured paw-material constant. |
+| Source / evidence | Effective paw-contact law calibrated to force and motion references; parameters are not independently measured pad-material constants. Effective material parameters, not measured cat tissue constants. |
+
+</details>
+
+<details>
+<summary>FR_contactpad3 · normal_dissipation_s_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FR_contactpad3 |
+| Parameter | normal_dissipation_s_m |
+| Unit | s/m |
+| Meaning | Velocity multiplier in the normal contact law. |
+| Source value | Not established |
+| Value used in this model | 1.1713311 |
+| What changed and why | No verified source value is available for direct comparison. Effective paw-contact parameter from model calibration; not an independently measured paw-material constant. |
+| Source / evidence | Effective paw-contact law calibrated to force and motion references; parameters are not independently measured pad-material constants. Effective material parameters, not measured cat tissue constants. |
+
+</details>
+
+<details>
+<summary>FR_contactpad3 · shear_stiffness_N_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FR_contactpad3 |
+| Parameter | shear_stiffness_N_m |
+| Unit | N/m |
+| Meaning | Elastic tangential/shear stiffness. |
+| Source value | Not established |
+| Value used in this model | 2412.5242 |
+| What changed and why | No verified source value is available for direct comparison. Effective paw-contact parameter from model calibration; not an independently measured paw-material constant. |
+| Source / evidence | Effective paw-contact law calibrated to force and motion references; parameters are not independently measured pad-material constants. Effective material parameters, not measured cat tissue constants. |
+
+</details>
+
+<details>
+<summary>FR_contactpad3 · shear_damping_Ns_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FR_contactpad3 |
+| Parameter | shear_damping_Ns_m |
+| Unit | N s/m |
+| Meaning | Tangential dashpot coefficient, reduced at shallow contact. |
+| Source value | Not established |
+| Value used in this model | 16.12305 |
+| What changed and why | No verified source value is available for direct comparison. Effective paw-contact parameter from model calibration; not an independently measured paw-material constant. |
+| Source / evidence | Effective paw-contact law calibrated to force and motion references; parameters are not independently measured pad-material constants. Effective material parameters, not measured cat tissue constants. |
+
+</details>
+
+<details>
+<summary>FR_contactpad3 · friction_coefficient</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FR_contactpad3 |
+| Parameter | friction_coefficient |
+| Unit | 1 |
+| Meaning | Coulomb limiting shear/normal force ratio. |
+| Source value | Not established |
+| Value used in this model | 0.32866719 |
+| What changed and why | No verified source value is available for direct comparison. Effective paw-contact parameter from model calibration; not an independently measured paw-material constant. |
+| Source / evidence | Effective paw-contact law calibrated to force and motion references; parameters are not independently measured pad-material constants. Effective material parameters, not measured cat tissue constants. |
+
+</details>
+
+<details>
+<summary>FR_contactpad3 · progressive_stiffening_depth_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FR_contactpad3 |
+| Parameter | progressive_stiffening_depth_m |
+| Unit | m |
+| Meaning | Optional finite-depth stiffening scale; zero disables the extension. |
+| Source value | Not established |
+| Value used in this model | 0 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Effective paw-contact law calibrated to force and motion references; parameters are not independently measured pad-material constants. Effective material parameters, not measured cat tissue constants. |
+
+</details>
+
+<details>
+<summary>FR_contactpad4 · radius_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FR_contactpad4 |
+| Parameter | radius_m |
+| Unit | m |
+| Meaning | radius m |
+| Source value | Not established |
+| Value used in this model | 0.006 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>FR_contactpad4 · position_in_body_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FR_contactpad4 |
+| Parameter | position_in_body_m |
+| Unit | m |
+| Meaning | position in body m |
+| Source value | Not established |
+| Value used in this model | [0.022, 0.0, -0.005] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>FR_contactpad4 · normal_stiffness_N_m32</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FR_contactpad4 |
+| Parameter | normal_stiffness_N_m32 |
+| Unit | N/m^(3/2) |
+| Meaning | Hunt-Crossley normal stiffness coefficient. |
+| Source value | Not established |
+| Value used in this model | 11296.508 |
+| What changed and why | No verified source value is available for direct comparison. Effective paw-contact parameter from model calibration; not an independently measured paw-material constant. |
+| Source / evidence | Effective paw-contact law calibrated to force and motion references; parameters are not independently measured pad-material constants. Effective material parameters, not measured cat tissue constants. |
+
+</details>
+
+<details>
+<summary>FR_contactpad4 · normal_dissipation_s_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FR_contactpad4 |
+| Parameter | normal_dissipation_s_m |
+| Unit | s/m |
+| Meaning | Velocity multiplier in the normal contact law. |
+| Source value | Not established |
+| Value used in this model | 1.1713311 |
+| What changed and why | No verified source value is available for direct comparison. Effective paw-contact parameter from model calibration; not an independently measured paw-material constant. |
+| Source / evidence | Effective paw-contact law calibrated to force and motion references; parameters are not independently measured pad-material constants. Effective material parameters, not measured cat tissue constants. |
+
+</details>
+
+<details>
+<summary>FR_contactpad4 · shear_stiffness_N_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FR_contactpad4 |
+| Parameter | shear_stiffness_N_m |
+| Unit | N/m |
+| Meaning | Elastic tangential/shear stiffness. |
+| Source value | Not established |
+| Value used in this model | 2412.5242 |
+| What changed and why | No verified source value is available for direct comparison. Effective paw-contact parameter from model calibration; not an independently measured paw-material constant. |
+| Source / evidence | Effective paw-contact law calibrated to force and motion references; parameters are not independently measured pad-material constants. Effective material parameters, not measured cat tissue constants. |
+
+</details>
+
+<details>
+<summary>FR_contactpad4 · shear_damping_Ns_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FR_contactpad4 |
+| Parameter | shear_damping_Ns_m |
+| Unit | N s/m |
+| Meaning | Tangential dashpot coefficient, reduced at shallow contact. |
+| Source value | Not established |
+| Value used in this model | 16.12305 |
+| What changed and why | No verified source value is available for direct comparison. Effective paw-contact parameter from model calibration; not an independently measured paw-material constant. |
+| Source / evidence | Effective paw-contact law calibrated to force and motion references; parameters are not independently measured pad-material constants. Effective material parameters, not measured cat tissue constants. |
+
+</details>
+
+<details>
+<summary>FR_contactpad4 · friction_coefficient</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FR_contactpad4 |
+| Parameter | friction_coefficient |
+| Unit | 1 |
+| Meaning | Coulomb limiting shear/normal force ratio. |
+| Source value | Not established |
+| Value used in this model | 0.32866719 |
+| What changed and why | No verified source value is available for direct comparison. Effective paw-contact parameter from model calibration; not an independently measured paw-material constant. |
+| Source / evidence | Effective paw-contact law calibrated to force and motion references; parameters are not independently measured pad-material constants. Effective material parameters, not measured cat tissue constants. |
+
+</details>
+
+<details>
+<summary>FR_contactpad4 · progressive_stiffening_depth_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FR_contactpad4 |
+| Parameter | progressive_stiffening_depth_m |
+| Unit | m |
+| Meaning | Optional finite-depth stiffening scale; zero disables the extension. |
+| Source value | Not established |
+| Value used in this model | 0 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Effective paw-contact law calibrated to force and motion references; parameters are not independently measured pad-material constants. Effective material parameters, not measured cat tissue constants. |
+
+</details>
+
+<details>
+<summary>FR_contactpad5 · radius_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FR_contactpad5 |
+| Parameter | radius_m |
+| Unit | m |
+| Meaning | radius m |
+| Source value | Not established |
+| Value used in this model | 0.006 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>FR_contactpad5 · position_in_body_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FR_contactpad5 |
+| Parameter | position_in_body_m |
+| Unit | m |
+| Meaning | position in body m |
+| Source value | Not established |
+| Value used in this model | [0.022, 0.0, 0.005] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>FR_contactpad5 · normal_stiffness_N_m32</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FR_contactpad5 |
+| Parameter | normal_stiffness_N_m32 |
+| Unit | N/m^(3/2) |
+| Meaning | Hunt-Crossley normal stiffness coefficient. |
+| Source value | Not established |
+| Value used in this model | 11296.508 |
+| What changed and why | No verified source value is available for direct comparison. Effective paw-contact parameter from model calibration; not an independently measured paw-material constant. |
+| Source / evidence | Effective paw-contact law calibrated to force and motion references; parameters are not independently measured pad-material constants. Effective material parameters, not measured cat tissue constants. |
+
+</details>
+
+<details>
+<summary>FR_contactpad5 · normal_dissipation_s_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FR_contactpad5 |
+| Parameter | normal_dissipation_s_m |
+| Unit | s/m |
+| Meaning | Velocity multiplier in the normal contact law. |
+| Source value | Not established |
+| Value used in this model | 1.1713311 |
+| What changed and why | No verified source value is available for direct comparison. Effective paw-contact parameter from model calibration; not an independently measured paw-material constant. |
+| Source / evidence | Effective paw-contact law calibrated to force and motion references; parameters are not independently measured pad-material constants. Effective material parameters, not measured cat tissue constants. |
+
+</details>
+
+<details>
+<summary>FR_contactpad5 · shear_stiffness_N_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FR_contactpad5 |
+| Parameter | shear_stiffness_N_m |
+| Unit | N/m |
+| Meaning | Elastic tangential/shear stiffness. |
+| Source value | Not established |
+| Value used in this model | 2412.5242 |
+| What changed and why | No verified source value is available for direct comparison. Effective paw-contact parameter from model calibration; not an independently measured paw-material constant. |
+| Source / evidence | Effective paw-contact law calibrated to force and motion references; parameters are not independently measured pad-material constants. Effective material parameters, not measured cat tissue constants. |
+
+</details>
+
+<details>
+<summary>FR_contactpad5 · shear_damping_Ns_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FR_contactpad5 |
+| Parameter | shear_damping_Ns_m |
+| Unit | N s/m |
+| Meaning | Tangential dashpot coefficient, reduced at shallow contact. |
+| Source value | Not established |
+| Value used in this model | 16.12305 |
+| What changed and why | No verified source value is available for direct comparison. Effective paw-contact parameter from model calibration; not an independently measured paw-material constant. |
+| Source / evidence | Effective paw-contact law calibrated to force and motion references; parameters are not independently measured pad-material constants. Effective material parameters, not measured cat tissue constants. |
+
+</details>
+
+<details>
+<summary>FR_contactpad5 · friction_coefficient</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FR_contactpad5 |
+| Parameter | friction_coefficient |
+| Unit | 1 |
+| Meaning | Coulomb limiting shear/normal force ratio. |
+| Source value | Not established |
+| Value used in this model | 0.32866719 |
+| What changed and why | No verified source value is available for direct comparison. Effective paw-contact parameter from model calibration; not an independently measured paw-material constant. |
+| Source / evidence | Effective paw-contact law calibrated to force and motion references; parameters are not independently measured pad-material constants. Effective material parameters, not measured cat tissue constants. |
+
+</details>
+
+<details>
+<summary>FR_contactpad5 · progressive_stiffening_depth_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FR_contactpad5 |
+| Parameter | progressive_stiffening_depth_m |
+| Unit | m |
+| Meaning | Optional finite-depth stiffening scale; zero disables the extension. |
+| Source value | Not established |
+| Value used in this model | 0 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Effective paw-contact law calibrated to force and motion references; parameters are not independently measured pad-material constants. Effective material parameters, not measured cat tissue constants. |
+
+</details>

@@ -1,0 +1,6 @@
+{
+  "name": "cat-documentation-equations",
+  "private": true,
+  "description": "Optional renderer for scientific equation figures",
+  "dependencies": {"mathjax-full": "3.2.2"}
+}

@@ -6,109 +6,1668 @@
 
 These are 104 modeled paths/groups, not 104 distinct whole muscles. Locations below describe anatomy broadly; the [attachment map](../Data/Model_Parameters/ATTACHMENT_MAP.md) gives the exact body-local coordinates used in the equations. Directional actions vary with posture. Legacy wrist names are retained to avoid changing channel identities.
 
-| Channel | Limb | Anatomical name | Region | Function | Reference | Input | Exact coordinates |
-| --- | --- | --- | --- | --- | --- | --- | --- |
-| L_IP | LH | Iliopsoas | Pelvis/lumbar region → proximal femur | Hip flexion | assumed_LH_from_recorded_RH | Input U(t) further calibrated offline; not raw EMG | Data/Model_Parameters/ATTACHMENT_MAP.json |
-| L_BFA | LH | Anterior biceps femoris group | Pelvis → lateral thigh/knee | Predominantly hip extension in this grouping | No direct EMG; inverse/fitted fixed input | Input U(t) further calibrated offline; not raw EMG | Data/Model_Parameters/ATTACHMENT_MAP.json |
-| L_VL | LH | Vastus lateralis | Lateral femur → patellar mechanism/tibia | Knee extension | assumed_LH_from_recorded_RH | Input U(t) further calibrated offline; not raw EMG | Data/Model_Parameters/ATTACHMENT_MAP.json |
-| L_VM | LH | Vastus medialis | Medial femur → patellar mechanism/tibia | Knee extension | No direct EMG; inverse/fitted fixed input | Input U(t) further calibrated offline; not raw EMG | Data/Model_Parameters/ATTACHMENT_MAP.json |
-| L_TA | LH | Tibialis anterior | Anterior tibia → medial foot | Ankle dorsiflexion | assumed_LH_from_recorded_RH | Input U(t) further calibrated offline; not raw EMG | Data/Model_Parameters/ATTACHMENT_MAP.json |
-| L_SO | LH | Soleus | Proximal fibula → calcaneus | Ankle plantarflexion | assumed_LH_from_recorded_RH | Input U(t) further calibrated offline; not raw EMG | Data/Model_Parameters/ATTACHMENT_MAP.json |
-| L_RF | LH | Rectus femoris | Pelvis → patellar mechanism/tibia | Hip flexion and knee extension | No direct EMG; inverse/fitted fixed input | Input U(t) further calibrated offline; not raw EMG | Data/Model_Parameters/ATTACHMENT_MAP.json |
-| L_BFP | LH | Posterior biceps femoris group | Pelvis → proximal shank | Hip extension and knee flexion | assumed_LH_from_recorded_RH | Input U(t) further calibrated offline; not raw EMG | Data/Model_Parameters/ATTACHMENT_MAP.json |
-| L_SAM | LH | Medial sartorius (SRTm) | Pelvis → medial proximal tibia | Hip and knee flexion | assumed_LH_from_recorded_RH | Input U(t) further calibrated offline; not raw EMG | Data/Model_Parameters/ATTACHMENT_MAP.json |
-| L_LG | LH | Lateral gastrocnemius | Lateral distal femur → calcaneus | Ankle plantarflexion and knee flexion | No direct EMG; inverse/fitted fixed input | Input U(t) further calibrated offline; not raw EMG | Data/Model_Parameters/ATTACHMENT_MAP.json |
-| L_MG | LH | Medial gastrocnemius | Medial distal femur → calcaneus | Ankle plantarflexion and knee flexion | assumed_LH_from_recorded_RH | Input U(t) further calibrated offline; not raw EMG | Data/Model_Parameters/ATTACHMENT_MAP.json |
-| R_IP | RH | Iliopsoas | Pelvis/lumbar region → proximal femur | Hip flexion | recorded_RH_EMG | Input U(t) further calibrated offline; not raw EMG | Data/Model_Parameters/ATTACHMENT_MAP.json |
-| R_BFA | RH | Anterior biceps femoris group | Pelvis → lateral thigh/knee | Predominantly hip extension in this grouping | No direct EMG; inverse/fitted fixed input | Input U(t) further calibrated offline; not raw EMG | Data/Model_Parameters/ATTACHMENT_MAP.json |
-| R_VL | RH | Vastus lateralis | Lateral femur → patellar mechanism/tibia | Knee extension | recorded_RH_EMG | Input U(t) further calibrated offline; not raw EMG | Data/Model_Parameters/ATTACHMENT_MAP.json |
-| R_VM | RH | Vastus medialis | Medial femur → patellar mechanism/tibia | Knee extension | No direct EMG; inverse/fitted fixed input | Input U(t) further calibrated offline; not raw EMG | Data/Model_Parameters/ATTACHMENT_MAP.json |
-| R_TA | RH | Tibialis anterior | Anterior tibia → medial foot | Ankle dorsiflexion | recorded_RH_EMG | Input U(t) further calibrated offline; not raw EMG | Data/Model_Parameters/ATTACHMENT_MAP.json |
-| R_SO | RH | Soleus | Proximal fibula → calcaneus | Ankle plantarflexion | recorded_RH_EMG | Input U(t) further calibrated offline; not raw EMG | Data/Model_Parameters/ATTACHMENT_MAP.json |
-| R_RF | RH | Rectus femoris | Pelvis → patellar mechanism/tibia | Hip flexion and knee extension | No direct EMG; inverse/fitted fixed input | Input U(t) further calibrated offline; not raw EMG | Data/Model_Parameters/ATTACHMENT_MAP.json |
-| R_BFP | RH | Posterior biceps femoris group | Pelvis → proximal shank | Hip extension and knee flexion | recorded_RH_EMG | Input U(t) further calibrated offline; not raw EMG | Data/Model_Parameters/ATTACHMENT_MAP.json |
-| R_SAM | RH | Medial sartorius (SRTm) | Pelvis → medial proximal tibia | Hip and knee flexion | recorded_RH_EMG | Input U(t) further calibrated offline; not raw EMG | Data/Model_Parameters/ATTACHMENT_MAP.json |
-| R_LG | RH | Lateral gastrocnemius | Lateral distal femur → calcaneus | Ankle plantarflexion and knee flexion | No direct EMG; inverse/fitted fixed input | Input U(t) further calibrated offline; not raw EMG | Data/Model_Parameters/ATTACHMENT_MAP.json |
-| R_MG | RH | Medial gastrocnemius | Medial distal femur → calcaneus | Ankle plantarflexion and knee flexion | recorded_RH_EMG | Input U(t) further calibrated offline; not raw EMG | Data/Model_Parameters/ATTACHMENT_MAP.json |
-| L_EDL | LH | Extensor digitorum longus | Distal femur/proximal shank → dorsal digits | Digital extension, ankle dorsiflexion | No direct EMG; inverse/fitted fixed input | Input U(t) further calibrated offline; not raw EMG | Data/Model_Parameters/ATTACHMENT_MAP.json |
-| R_EDL | RH | Extensor digitorum longus | Distal femur/proximal shank → dorsal digits | Digital extension, ankle dorsiflexion | No direct EMG; inverse/fitted fixed input | Input U(t) further calibrated offline; not raw EMG | Data/Model_Parameters/ATTACHMENT_MAP.json |
-| L_FDL | LH | Flexor digitorum longus | Posterior shank → plantar digits | Digital flexion, ankle plantarflexion | No direct EMG; inverse/fitted fixed input | Input U(t) further calibrated offline; not raw EMG | Data/Model_Parameters/ATTACHMENT_MAP.json |
-| R_FDL | RH | Flexor digitorum longus | Posterior shank → plantar digits | Digital flexion, ankle plantarflexion | No direct EMG; inverse/fitted fixed input | Input U(t) further calibrated offline; not raw EMG | Data/Model_Parameters/ATTACHMENT_MAP.json |
-| L_FHL | LH | Flexor hallucis longus group | Posterior shank/fibula → plantar digital tendons | Digital flexion, ankle plantarflexion | assumed_LH_from_recorded_RH | Input U(t) further calibrated offline; not raw EMG | Data/Model_Parameters/ATTACHMENT_MAP.json |
-| R_FHL | RH | Flexor hallucis longus group | Posterior shank/fibula → plantar digital tendons | Digital flexion, ankle plantarflexion | recorded_RH_EMG | Input U(t) further calibrated offline; not raw EMG | Data/Model_Parameters/ATTACHMENT_MAP.json |
-| FL_ShoulderExtensor | LF | Shoulder protractor group (legacy ShoulderExtensor) | Scapula → humerus | Shoulder protraction/extension; 6 source muscles | pooled_forelimb_EMG_representative_group | Input U(t) further calibrated offline; not raw EMG | Data/Model_Parameters/ATTACHMENT_MAP.json |
-| FL_ElbowExtensor | LF | Monoarticular elbow extensor group | Humerus → ulna | Elbow extension | pooled_forelimb_EMG_representative_group | Input U(t) further calibrated offline; not raw EMG | Data/Model_Parameters/ATTACHMENT_MAP.json |
-| FL_BicepsBrachii | LF | Biceps brachii | Scapula → proximal radius | Shoulder action and elbow flexion | pooled_forelimb_EMG_representative_group | Input U(t) further calibrated offline; not raw EMG | Data/Model_Parameters/ATTACHMENT_MAP.json |
-| FL_ElbowFlexor | LF | Elbow flexor group | Humerus → radius/ulna | Elbow flexion | pooled_forelimb_EMG_representative_group | Input U(t) further calibrated offline; not raw EMG | Data/Model_Parameters/ATTACHMENT_MAP.json |
-| FL_ElbowFlexorWristFlexor | LF | Elbow flexor + wrist dorsiflexor group | Distal humerus → dorsal metacarpal/digital structures | Legacy name; source ECR/EDC membership, not a palmar flexor | pooled_forelimb_EMG_representative_group | Input U(t) further calibrated offline; not raw EMG | Data/Model_Parameters/ATTACHMENT_MAP.json |
-| FL_WristFlexor | LF | Extensor pollicis longus group | Forearm → dorsal digits | Legacy WristFlexor label; anatomical digital/wrist extension | No direct EMG; inverse/fitted fixed input | Input U(t) further calibrated offline; not raw EMG | Data/Model_Parameters/ATTACHMENT_MAP.json |
-| FL_WristExtensor | LF | Wrist palmarflexor group | Humerus/forearm → palmar paw/digits | Legacy WristExtensor label; source FCU/FCR/FDP/FDS/PL membership | pooled_forelimb_EMG_representative_group | Input U(t) further calibrated offline; not raw EMG | Data/Model_Parameters/ATTACHMENT_MAP.json |
-| FL_ShoulderFlexor | LF | Shoulder retractor group | Scapula → humerus | Shoulder retraction/flexion | pooled_forelimb_EMG_representative_group | Input U(t) further calibrated offline; not raw EMG | Data/Model_Parameters/ATTACHMENT_MAP.json |
-| FL_TricepsBrachiiLong | LF | Long head triceps brachii | Scapula → olecranon | Elbow extension and shoulder action | pooled_forelimb_EMG_representative_group | Input U(t) further calibrated offline; not raw EMG | Data/Model_Parameters/ATTACHMENT_MAP.json |
-| FR_ShoulderExtensor | RF | Shoulder protractor group (legacy ShoulderExtensor) | Scapula → humerus | Shoulder protraction/extension; 6 source muscles | pooled_forelimb_EMG_representative_group | Input U(t) further calibrated offline; not raw EMG | Data/Model_Parameters/ATTACHMENT_MAP.json |
-| FR_ElbowExtensor | RF | Monoarticular elbow extensor group | Humerus → ulna | Elbow extension | pooled_forelimb_EMG_representative_group | Input U(t) further calibrated offline; not raw EMG | Data/Model_Parameters/ATTACHMENT_MAP.json |
-| FR_BicepsBrachii | RF | Biceps brachii | Scapula → proximal radius | Shoulder action and elbow flexion | pooled_forelimb_EMG_representative_group | Input U(t) further calibrated offline; not raw EMG | Data/Model_Parameters/ATTACHMENT_MAP.json |
-| FR_ElbowFlexor | RF | Elbow flexor group | Humerus → radius/ulna | Elbow flexion | pooled_forelimb_EMG_representative_group | Input U(t) further calibrated offline; not raw EMG | Data/Model_Parameters/ATTACHMENT_MAP.json |
-| FR_ElbowFlexorWristFlexor | RF | Elbow flexor + wrist dorsiflexor group | Distal humerus → dorsal metacarpal/digital structures | Legacy name; source ECR/EDC membership, not a palmar flexor | pooled_forelimb_EMG_representative_group | Input U(t) further calibrated offline; not raw EMG | Data/Model_Parameters/ATTACHMENT_MAP.json |
-| FR_WristFlexor | RF | Extensor pollicis longus group | Forearm → dorsal digits | Legacy WristFlexor label; anatomical digital/wrist extension | No direct EMG; inverse/fitted fixed input | Input U(t) further calibrated offline; not raw EMG | Data/Model_Parameters/ATTACHMENT_MAP.json |
-| FR_WristExtensor | RF | Wrist palmarflexor group | Humerus/forearm → palmar paw/digits | Legacy WristExtensor label; source FCU/FCR/FDP/FDS/PL membership | pooled_forelimb_EMG_representative_group | Input U(t) further calibrated offline; not raw EMG | Data/Model_Parameters/ATTACHMENT_MAP.json |
-| FR_ShoulderFlexor | RF | Shoulder retractor group | Scapula → humerus | Shoulder retraction/flexion | pooled_forelimb_EMG_representative_group | Input U(t) further calibrated offline; not raw EMG | Data/Model_Parameters/ATTACHMENT_MAP.json |
-| FR_TricepsBrachiiLong | RF | Long head triceps brachii | Scapula → olecranon | Elbow extension and shoulder action | pooled_forelimb_EMG_representative_group | Input U(t) further calibrated offline; not raw EMG | Data/Model_Parameters/ATTACHMENT_MAP.json |
-| FL_S_C3 | LF | Serratus path C3 | Cervical vertebra/rib C3 → scapula | Thoracic sling support; segment-specific line of action | No direct EMG; inverse/fitted fixed input | Input U(t) further calibrated offline; not raw EMG | Data/Model_Parameters/ATTACHMENT_MAP.json |
-| FR_S_C3 | RF | Serratus path C3 | Cervical vertebra/rib C3 → scapula | Thoracic sling support; segment-specific line of action | No direct EMG; inverse/fitted fixed input | Input U(t) further calibrated offline; not raw EMG | Data/Model_Parameters/ATTACHMENT_MAP.json |
-| FL_S_C4 | LF | Serratus path C4 | Cervical vertebra/rib C4 → scapula | Thoracic sling support; segment-specific line of action | No direct EMG; inverse/fitted fixed input | Input U(t) further calibrated offline; not raw EMG | Data/Model_Parameters/ATTACHMENT_MAP.json |
-| FR_S_C4 | RF | Serratus path C4 | Cervical vertebra/rib C4 → scapula | Thoracic sling support; segment-specific line of action | No direct EMG; inverse/fitted fixed input | Input U(t) further calibrated offline; not raw EMG | Data/Model_Parameters/ATTACHMENT_MAP.json |
-| FL_S_C5 | LF | Serratus path C5 | Cervical vertebra/rib C5 → scapula | Thoracic sling support; segment-specific line of action | No direct EMG; inverse/fitted fixed input | Input U(t) further calibrated offline; not raw EMG | Data/Model_Parameters/ATTACHMENT_MAP.json |
-| FR_S_C5 | RF | Serratus path C5 | Cervical vertebra/rib C5 → scapula | Thoracic sling support; segment-specific line of action | No direct EMG; inverse/fitted fixed input | Input U(t) further calibrated offline; not raw EMG | Data/Model_Parameters/ATTACHMENT_MAP.json |
-| FL_S_C6 | LF | Serratus path C6 | Cervical vertebra/rib C6 → scapula | Thoracic sling support; segment-specific line of action | No direct EMG; inverse/fitted fixed input | Input U(t) further calibrated offline; not raw EMG | Data/Model_Parameters/ATTACHMENT_MAP.json |
-| FR_S_C6 | RF | Serratus path C6 | Cervical vertebra/rib C6 → scapula | Thoracic sling support; segment-specific line of action | No direct EMG; inverse/fitted fixed input | Input U(t) further calibrated offline; not raw EMG | Data/Model_Parameters/ATTACHMENT_MAP.json |
-| FL_S_C7 | LF | Serratus path C7 | Cervical vertebra/rib C7 → scapula | Thoracic sling support; segment-specific line of action | No direct EMG; inverse/fitted fixed input | Input U(t) further calibrated offline; not raw EMG | Data/Model_Parameters/ATTACHMENT_MAP.json |
-| FR_S_C7 | RF | Serratus path C7 | Cervical vertebra/rib C7 → scapula | Thoracic sling support; segment-specific line of action | No direct EMG; inverse/fitted fixed input | Input U(t) further calibrated offline; not raw EMG | Data/Model_Parameters/ATTACHMENT_MAP.json |
-| FL_S_T1 | LF | Serratus path T1 | Cervical vertebra/rib T1 → scapula | Thoracic sling support; segment-specific line of action | No direct EMG; inverse/fitted fixed input | Input U(t) further calibrated offline; not raw EMG | Data/Model_Parameters/ATTACHMENT_MAP.json |
-| FR_S_T1 | RF | Serratus path T1 | Cervical vertebra/rib T1 → scapula | Thoracic sling support; segment-specific line of action | No direct EMG; inverse/fitted fixed input | Input U(t) further calibrated offline; not raw EMG | Data/Model_Parameters/ATTACHMENT_MAP.json |
-| FL_S_T2 | LF | Serratus path T2 | Cervical vertebra/rib T2 → scapula | Thoracic sling support; segment-specific line of action | No direct EMG; inverse/fitted fixed input | Input U(t) further calibrated offline; not raw EMG | Data/Model_Parameters/ATTACHMENT_MAP.json |
-| FR_S_T2 | RF | Serratus path T2 | Cervical vertebra/rib T2 → scapula | Thoracic sling support; segment-specific line of action | No direct EMG; inverse/fitted fixed input | Input U(t) further calibrated offline; not raw EMG | Data/Model_Parameters/ATTACHMENT_MAP.json |
-| FL_S_T3 | LF | Serratus path T3 | Cervical vertebra/rib T3 → scapula | Thoracic sling support; segment-specific line of action | No direct EMG; inverse/fitted fixed input | Input U(t) further calibrated offline; not raw EMG | Data/Model_Parameters/ATTACHMENT_MAP.json |
-| FR_S_T3 | RF | Serratus path T3 | Cervical vertebra/rib T3 → scapula | Thoracic sling support; segment-specific line of action | No direct EMG; inverse/fitted fixed input | Input U(t) further calibrated offline; not raw EMG | Data/Model_Parameters/ATTACHMENT_MAP.json |
-| FL_S_T4 | LF | Serratus path T4 | Cervical vertebra/rib T4 → scapula | Thoracic sling support; segment-specific line of action | No direct EMG; inverse/fitted fixed input | Input U(t) further calibrated offline; not raw EMG | Data/Model_Parameters/ATTACHMENT_MAP.json |
-| FR_S_T4 | RF | Serratus path T4 | Cervical vertebra/rib T4 → scapula | Thoracic sling support; segment-specific line of action | No direct EMG; inverse/fitted fixed input | Input U(t) further calibrated offline; not raw EMG | Data/Model_Parameters/ATTACHMENT_MAP.json |
-| FL_S_T5 | LF | Serratus path T5 | Cervical vertebra/rib T5 → scapula | Thoracic sling support; segment-specific line of action | No direct EMG; inverse/fitted fixed input | Input U(t) further calibrated offline; not raw EMG | Data/Model_Parameters/ATTACHMENT_MAP.json |
-| FR_S_T5 | RF | Serratus path T5 | Cervical vertebra/rib T5 → scapula | Thoracic sling support; segment-specific line of action | No direct EMG; inverse/fitted fixed input | Input U(t) further calibrated offline; not raw EMG | Data/Model_Parameters/ATTACHMENT_MAP.json |
-| FL_S_T6 | LF | Serratus path T6 | Cervical vertebra/rib T6 → scapula | Thoracic sling support; segment-specific line of action | No direct EMG; inverse/fitted fixed input | Input U(t) further calibrated offline; not raw EMG | Data/Model_Parameters/ATTACHMENT_MAP.json |
-| FR_S_T6 | RF | Serratus path T6 | Cervical vertebra/rib T6 → scapula | Thoracic sling support; segment-specific line of action | No direct EMG; inverse/fitted fixed input | Input U(t) further calibrated offline; not raw EMG | Data/Model_Parameters/ATTACHMENT_MAP.json |
-| FL_S_T7 | LF | Serratus path T7 | Cervical vertebra/rib T7 → scapula | Thoracic sling support; segment-specific line of action | No direct EMG; inverse/fitted fixed input | Input U(t) further calibrated offline; not raw EMG | Data/Model_Parameters/ATTACHMENT_MAP.json |
-| FR_S_T7 | RF | Serratus path T7 | Cervical vertebra/rib T7 → scapula | Thoracic sling support; segment-specific line of action | No direct EMG; inverse/fitted fixed input | Input U(t) further calibrated offline; not raw EMG | Data/Model_Parameters/ATTACHMENT_MAP.json |
-| FL_S_T8 | LF | Serratus path T8 | Cervical vertebra/rib T8 → scapula | Thoracic sling support; segment-specific line of action | No direct EMG; inverse/fitted fixed input | Input U(t) further calibrated offline; not raw EMG | Data/Model_Parameters/ATTACHMENT_MAP.json |
-| FR_S_T8 | RF | Serratus path T8 | Cervical vertebra/rib T8 → scapula | Thoracic sling support; segment-specific line of action | No direct EMG; inverse/fitted fixed input | Input U(t) further calibrated offline; not raw EMG | Data/Model_Parameters/ATTACHMENT_MAP.json |
-| FL_S_T9 | LF | Serratus path T9 | Cervical vertebra/rib T9 → scapula | Thoracic sling support; segment-specific line of action | No direct EMG; inverse/fitted fixed input | Input U(t) further calibrated offline; not raw EMG | Data/Model_Parameters/ATTACHMENT_MAP.json |
-| FR_S_T9 | RF | Serratus path T9 | Cervical vertebra/rib T9 → scapula | Thoracic sling support; segment-specific line of action | No direct EMG; inverse/fitted fixed input | Input U(t) further calibrated offline; not raw EMG | Data/Model_Parameters/ATTACHMENT_MAP.json |
-| FL_R_C2 | LF | Rhomboid path C2 | Axial region C2 → scapula | Scapular support and positioning | No direct EMG; inverse/fitted fixed input | Input U(t) further calibrated offline; not raw EMG | Data/Model_Parameters/ATTACHMENT_MAP.json |
-| FR_R_C2 | RF | Rhomboid path C2 | Axial region C2 → scapula | Scapular support and positioning | No direct EMG; inverse/fitted fixed input | Input U(t) further calibrated offline; not raw EMG | Data/Model_Parameters/ATTACHMENT_MAP.json |
-| FL_R_C3-7 | LF | Rhomboid path C3-7 | Axial region C3-7 → scapula | Scapular support and positioning | No direct EMG; inverse/fitted fixed input | Input U(t) further calibrated offline; not raw EMG | Data/Model_Parameters/ATTACHMENT_MAP.json |
-| FR_R_C3-7 | RF | Rhomboid path C3-7 | Axial region C3-7 → scapula | Scapular support and positioning | No direct EMG; inverse/fitted fixed input | Input U(t) further calibrated offline; not raw EMG | Data/Model_Parameters/ATTACHMENT_MAP.json |
-| FL_R_T1 | LF | Rhomboid path T1 | Axial region T1 → scapula | Scapular support and positioning | No direct EMG; inverse/fitted fixed input | Input U(t) further calibrated offline; not raw EMG | Data/Model_Parameters/ATTACHMENT_MAP.json |
-| FR_R_T1 | RF | Rhomboid path T1 | Axial region T1 → scapula | Scapular support and positioning | No direct EMG; inverse/fitted fixed input | Input U(t) further calibrated offline; not raw EMG | Data/Model_Parameters/ATTACHMENT_MAP.json |
-| FL_R_T2 | LF | Rhomboid path T2 | Axial region T2 → scapula | Scapular support and positioning | No direct EMG; inverse/fitted fixed input | Input U(t) further calibrated offline; not raw EMG | Data/Model_Parameters/ATTACHMENT_MAP.json |
-| FR_R_T2 | RF | Rhomboid path T2 | Axial region T2 → scapula | Scapular support and positioning | No direct EMG; inverse/fitted fixed input | Input U(t) further calibrated offline; not raw EMG | Data/Model_Parameters/ATTACHMENT_MAP.json |
-| FL_R_T3 | LF | Rhomboid path T3 | Axial region T3 → scapula | Scapular support and positioning | No direct EMG; inverse/fitted fixed input | Input U(t) further calibrated offline; not raw EMG | Data/Model_Parameters/ATTACHMENT_MAP.json |
-| FR_R_T3 | RF | Rhomboid path T3 | Axial region T3 → scapula | Scapular support and positioning | No direct EMG; inverse/fitted fixed input | Input U(t) further calibrated offline; not raw EMG | Data/Model_Parameters/ATTACHMENT_MAP.json |
-| FL_R_T4 | LF | Rhomboid path T4 | Axial region T4 → scapula | Scapular support and positioning | No direct EMG; inverse/fitted fixed input | Input U(t) further calibrated offline; not raw EMG | Data/Model_Parameters/ATTACHMENT_MAP.json |
-| FR_R_T4 | RF | Rhomboid path T4 | Axial region T4 → scapula | Scapular support and positioning | No direct EMG; inverse/fitted fixed input | Input U(t) further calibrated offline; not raw EMG | Data/Model_Parameters/ATTACHMENT_MAP.json |
-| FL_R_T5 | LF | Rhomboid path T5 | Axial region T5 → scapula | Scapular support and positioning | No direct EMG; inverse/fitted fixed input | Input U(t) further calibrated offline; not raw EMG | Data/Model_Parameters/ATTACHMENT_MAP.json |
-| FR_R_T5 | RF | Rhomboid path T5 | Axial region T5 → scapula | Scapular support and positioning | No direct EMG; inverse/fitted fixed input | Input U(t) further calibrated offline; not raw EMG | Data/Model_Parameters/ATTACHMENT_MAP.json |
-| FL_DigitalExtensors | LF | Added digital extensor paths | Forearm → dorsal digits | Digital extension; parent capacity split | No direct EMG; inverse/fitted fixed input | Input U(t) further calibrated offline; not raw EMG | Data/Model_Parameters/ATTACHMENT_MAP.json |
-| FR_DigitalExtensors | RF | Added digital extensor paths | Forearm → dorsal digits | Digital extension; parent capacity split | No direct EMG; inverse/fitted fixed input | Input U(t) further calibrated offline; not raw EMG | Data/Model_Parameters/ATTACHMENT_MAP.json |
-| FL_DigitalFlexors | LF | Added digital flexor paths | Forearm → palmar digits | Digital flexion; parent capacity split | No direct EMG; inverse/fitted fixed input | Input U(t) further calibrated offline; not raw EMG | Data/Model_Parameters/ATTACHMENT_MAP.json |
-| FR_DigitalFlexors | RF | Added digital flexor paths | Forearm → palmar digits | Digital flexion; parent capacity split | No direct EMG; inverse/fitted fixed input | Input U(t) further calibrated offline; not raw EMG | Data/Model_Parameters/ATTACHMENT_MAP.json |
-| FL_TrapeziusCervical | LF | Cervical trapezius path | Cervical axial skeleton → scapula | Scapular positioning | No direct EMG; inverse/fitted fixed input | Input U(t) further calibrated offline; not raw EMG | Data/Model_Parameters/ATTACHMENT_MAP.json |
-| FR_TrapeziusCervical | RF | Cervical trapezius path | Cervical axial skeleton → scapula | Scapular positioning | No direct EMG; inverse/fitted fixed input | Input U(t) further calibrated offline; not raw EMG | Data/Model_Parameters/ATTACHMENT_MAP.json |
-| FL_TrapeziusThoracic | LF | Thoracic trapezius path | Thoracic axial skeleton → scapula | Scapular positioning | No direct EMG; inverse/fitted fixed input | Input U(t) further calibrated offline; not raw EMG | Data/Model_Parameters/ATTACHMENT_MAP.json |
-| FR_TrapeziusThoracic | RF | Thoracic trapezius path | Thoracic axial skeleton → scapula | Scapular positioning | No direct EMG; inverse/fitted fixed input | Input U(t) further calibrated offline; not raw EMG | Data/Model_Parameters/ATTACHMENT_MAP.json |
-| FL_LatissimusDorsi | LF | Latissimus dorsi path | Dorsal trunk → proximal humerus | Shoulder retraction | No direct EMG; inverse/fitted fixed input | Input U(t) further calibrated offline; not raw EMG | Data/Model_Parameters/ATTACHMENT_MAP.json |
-| FR_LatissimusDorsi | RF | Latissimus dorsi path | Dorsal trunk → proximal humerus | Shoulder retraction | No direct EMG; inverse/fitted fixed input | Input U(t) further calibrated offline; not raw EMG | Data/Model_Parameters/ATTACHMENT_MAP.json |
-| FL_PectoralisProfundus | LF | Deep pectoral path | Ventral trunk → proximal humerus | Shoulder support/retraction | No direct EMG; inverse/fitted fixed input | Input U(t) further calibrated offline; not raw EMG | Data/Model_Parameters/ATTACHMENT_MAP.json |
-| FR_PectoralisProfundus | RF | Deep pectoral path | Ventral trunk → proximal humerus | Shoulder support/retraction | No direct EMG; inverse/fitted fixed input | Input U(t) further calibrated offline; not raw EMG | Data/Model_Parameters/ATTACHMENT_MAP.json |
-| FL_PectoralisSuperficialis | LF | Superficial pectoral path | Sternum → proximal humerus | Shoulder support | No direct EMG; inverse/fitted fixed input | Input U(t) further calibrated offline; not raw EMG | Data/Model_Parameters/ATTACHMENT_MAP.json |
-| FR_PectoralisSuperficialis | RF | Superficial pectoral path | Sternum → proximal humerus | Shoulder support | No direct EMG; inverse/fitted fixed input | Input U(t) further calibrated offline; not raw EMG | Data/Model_Parameters/ATTACHMENT_MAP.json |
-| FL_Clavobrachialis | LF | Clavobrachialis path | Cranial shoulder girdle → humerus | Shoulder protraction | No direct EMG; inverse/fitted fixed input | Input U(t) further calibrated offline; not raw EMG | Data/Model_Parameters/ATTACHMENT_MAP.json |
-| FR_Clavobrachialis | RF | Clavobrachialis path | Cranial shoulder girdle → humerus | Shoulder protraction | No direct EMG; inverse/fitted fixed input | Input U(t) further calibrated offline; not raw EMG | Data/Model_Parameters/ATTACHMENT_MAP.json |
+Each entry contains its values, units, meaning and source information. Select an entry to read all fields.
+
+<details>
+<summary>L_IP</summary>
+
+| Field | Value |
+| --- | --- |
+| Channel | L_IP |
+| Limb | LH |
+| Anatomical name | Iliopsoas |
+| Region | Pelvis/lumbar region → proximal femur |
+| Function | Hip flexion |
+| Reference | assumed_LH_from_recorded_RH |
+| Input | Input U(t) further calibrated offline; not raw EMG |
+| Exact coordinates | Data/Model_Parameters/ATTACHMENT_MAP.json |
+
+</details>
+
+<details>
+<summary>L_BFA</summary>
+
+| Field | Value |
+| --- | --- |
+| Channel | L_BFA |
+| Limb | LH |
+| Anatomical name | Anterior biceps femoris group |
+| Region | Pelvis → lateral thigh/knee |
+| Function | Predominantly hip extension in this grouping |
+| Reference | No direct EMG; inverse/fitted fixed input |
+| Input | Input U(t) further calibrated offline; not raw EMG |
+| Exact coordinates | Data/Model_Parameters/ATTACHMENT_MAP.json |
+
+</details>
+
+<details>
+<summary>L_VL</summary>
+
+| Field | Value |
+| --- | --- |
+| Channel | L_VL |
+| Limb | LH |
+| Anatomical name | Vastus lateralis |
+| Region | Lateral femur → patellar mechanism/tibia |
+| Function | Knee extension |
+| Reference | assumed_LH_from_recorded_RH |
+| Input | Input U(t) further calibrated offline; not raw EMG |
+| Exact coordinates | Data/Model_Parameters/ATTACHMENT_MAP.json |
+
+</details>
+
+<details>
+<summary>L_VM</summary>
+
+| Field | Value |
+| --- | --- |
+| Channel | L_VM |
+| Limb | LH |
+| Anatomical name | Vastus medialis |
+| Region | Medial femur → patellar mechanism/tibia |
+| Function | Knee extension |
+| Reference | No direct EMG; inverse/fitted fixed input |
+| Input | Input U(t) further calibrated offline; not raw EMG |
+| Exact coordinates | Data/Model_Parameters/ATTACHMENT_MAP.json |
+
+</details>
+
+<details>
+<summary>L_TA</summary>
+
+| Field | Value |
+| --- | --- |
+| Channel | L_TA |
+| Limb | LH |
+| Anatomical name | Tibialis anterior |
+| Region | Anterior tibia → medial foot |
+| Function | Ankle dorsiflexion |
+| Reference | assumed_LH_from_recorded_RH |
+| Input | Input U(t) further calibrated offline; not raw EMG |
+| Exact coordinates | Data/Model_Parameters/ATTACHMENT_MAP.json |
+
+</details>
+
+<details>
+<summary>L_SO</summary>
+
+| Field | Value |
+| --- | --- |
+| Channel | L_SO |
+| Limb | LH |
+| Anatomical name | Soleus |
+| Region | Proximal fibula → calcaneus |
+| Function | Ankle plantarflexion |
+| Reference | assumed_LH_from_recorded_RH |
+| Input | Input U(t) further calibrated offline; not raw EMG |
+| Exact coordinates | Data/Model_Parameters/ATTACHMENT_MAP.json |
+
+</details>
+
+<details>
+<summary>L_RF</summary>
+
+| Field | Value |
+| --- | --- |
+| Channel | L_RF |
+| Limb | LH |
+| Anatomical name | Rectus femoris |
+| Region | Pelvis → patellar mechanism/tibia |
+| Function | Hip flexion and knee extension |
+| Reference | No direct EMG; inverse/fitted fixed input |
+| Input | Input U(t) further calibrated offline; not raw EMG |
+| Exact coordinates | Data/Model_Parameters/ATTACHMENT_MAP.json |
+
+</details>
+
+<details>
+<summary>L_BFP</summary>
+
+| Field | Value |
+| --- | --- |
+| Channel | L_BFP |
+| Limb | LH |
+| Anatomical name | Posterior biceps femoris group |
+| Region | Pelvis → proximal shank |
+| Function | Hip extension and knee flexion |
+| Reference | assumed_LH_from_recorded_RH |
+| Input | Input U(t) further calibrated offline; not raw EMG |
+| Exact coordinates | Data/Model_Parameters/ATTACHMENT_MAP.json |
+
+</details>
+
+<details>
+<summary>L_SAM</summary>
+
+| Field | Value |
+| --- | --- |
+| Channel | L_SAM |
+| Limb | LH |
+| Anatomical name | Medial sartorius (SRTm) |
+| Region | Pelvis → medial proximal tibia |
+| Function | Hip and knee flexion |
+| Reference | assumed_LH_from_recorded_RH |
+| Input | Input U(t) further calibrated offline; not raw EMG |
+| Exact coordinates | Data/Model_Parameters/ATTACHMENT_MAP.json |
+
+</details>
+
+<details>
+<summary>L_LG</summary>
+
+| Field | Value |
+| --- | --- |
+| Channel | L_LG |
+| Limb | LH |
+| Anatomical name | Lateral gastrocnemius |
+| Region | Lateral distal femur → calcaneus |
+| Function | Ankle plantarflexion and knee flexion |
+| Reference | No direct EMG; inverse/fitted fixed input |
+| Input | Input U(t) further calibrated offline; not raw EMG |
+| Exact coordinates | Data/Model_Parameters/ATTACHMENT_MAP.json |
+
+</details>
+
+<details>
+<summary>L_MG</summary>
+
+| Field | Value |
+| --- | --- |
+| Channel | L_MG |
+| Limb | LH |
+| Anatomical name | Medial gastrocnemius |
+| Region | Medial distal femur → calcaneus |
+| Function | Ankle plantarflexion and knee flexion |
+| Reference | assumed_LH_from_recorded_RH |
+| Input | Input U(t) further calibrated offline; not raw EMG |
+| Exact coordinates | Data/Model_Parameters/ATTACHMENT_MAP.json |
+
+</details>
+
+<details>
+<summary>R_IP</summary>
+
+| Field | Value |
+| --- | --- |
+| Channel | R_IP |
+| Limb | RH |
+| Anatomical name | Iliopsoas |
+| Region | Pelvis/lumbar region → proximal femur |
+| Function | Hip flexion |
+| Reference | recorded_RH_EMG |
+| Input | Input U(t) further calibrated offline; not raw EMG |
+| Exact coordinates | Data/Model_Parameters/ATTACHMENT_MAP.json |
+
+</details>
+
+<details>
+<summary>R_BFA</summary>
+
+| Field | Value |
+| --- | --- |
+| Channel | R_BFA |
+| Limb | RH |
+| Anatomical name | Anterior biceps femoris group |
+| Region | Pelvis → lateral thigh/knee |
+| Function | Predominantly hip extension in this grouping |
+| Reference | No direct EMG; inverse/fitted fixed input |
+| Input | Input U(t) further calibrated offline; not raw EMG |
+| Exact coordinates | Data/Model_Parameters/ATTACHMENT_MAP.json |
+
+</details>
+
+<details>
+<summary>R_VL</summary>
+
+| Field | Value |
+| --- | --- |
+| Channel | R_VL |
+| Limb | RH |
+| Anatomical name | Vastus lateralis |
+| Region | Lateral femur → patellar mechanism/tibia |
+| Function | Knee extension |
+| Reference | recorded_RH_EMG |
+| Input | Input U(t) further calibrated offline; not raw EMG |
+| Exact coordinates | Data/Model_Parameters/ATTACHMENT_MAP.json |
+
+</details>
+
+<details>
+<summary>R_VM</summary>
+
+| Field | Value |
+| --- | --- |
+| Channel | R_VM |
+| Limb | RH |
+| Anatomical name | Vastus medialis |
+| Region | Medial femur → patellar mechanism/tibia |
+| Function | Knee extension |
+| Reference | No direct EMG; inverse/fitted fixed input |
+| Input | Input U(t) further calibrated offline; not raw EMG |
+| Exact coordinates | Data/Model_Parameters/ATTACHMENT_MAP.json |
+
+</details>
+
+<details>
+<summary>R_TA</summary>
+
+| Field | Value |
+| --- | --- |
+| Channel | R_TA |
+| Limb | RH |
+| Anatomical name | Tibialis anterior |
+| Region | Anterior tibia → medial foot |
+| Function | Ankle dorsiflexion |
+| Reference | recorded_RH_EMG |
+| Input | Input U(t) further calibrated offline; not raw EMG |
+| Exact coordinates | Data/Model_Parameters/ATTACHMENT_MAP.json |
+
+</details>
+
+<details>
+<summary>R_SO</summary>
+
+| Field | Value |
+| --- | --- |
+| Channel | R_SO |
+| Limb | RH |
+| Anatomical name | Soleus |
+| Region | Proximal fibula → calcaneus |
+| Function | Ankle plantarflexion |
+| Reference | recorded_RH_EMG |
+| Input | Input U(t) further calibrated offline; not raw EMG |
+| Exact coordinates | Data/Model_Parameters/ATTACHMENT_MAP.json |
+
+</details>
+
+<details>
+<summary>R_RF</summary>
+
+| Field | Value |
+| --- | --- |
+| Channel | R_RF |
+| Limb | RH |
+| Anatomical name | Rectus femoris |
+| Region | Pelvis → patellar mechanism/tibia |
+| Function | Hip flexion and knee extension |
+| Reference | No direct EMG; inverse/fitted fixed input |
+| Input | Input U(t) further calibrated offline; not raw EMG |
+| Exact coordinates | Data/Model_Parameters/ATTACHMENT_MAP.json |
+
+</details>
+
+<details>
+<summary>R_BFP</summary>
+
+| Field | Value |
+| --- | --- |
+| Channel | R_BFP |
+| Limb | RH |
+| Anatomical name | Posterior biceps femoris group |
+| Region | Pelvis → proximal shank |
+| Function | Hip extension and knee flexion |
+| Reference | recorded_RH_EMG |
+| Input | Input U(t) further calibrated offline; not raw EMG |
+| Exact coordinates | Data/Model_Parameters/ATTACHMENT_MAP.json |
+
+</details>
+
+<details>
+<summary>R_SAM</summary>
+
+| Field | Value |
+| --- | --- |
+| Channel | R_SAM |
+| Limb | RH |
+| Anatomical name | Medial sartorius (SRTm) |
+| Region | Pelvis → medial proximal tibia |
+| Function | Hip and knee flexion |
+| Reference | recorded_RH_EMG |
+| Input | Input U(t) further calibrated offline; not raw EMG |
+| Exact coordinates | Data/Model_Parameters/ATTACHMENT_MAP.json |
+
+</details>
+
+<details>
+<summary>R_LG</summary>
+
+| Field | Value |
+| --- | --- |
+| Channel | R_LG |
+| Limb | RH |
+| Anatomical name | Lateral gastrocnemius |
+| Region | Lateral distal femur → calcaneus |
+| Function | Ankle plantarflexion and knee flexion |
+| Reference | No direct EMG; inverse/fitted fixed input |
+| Input | Input U(t) further calibrated offline; not raw EMG |
+| Exact coordinates | Data/Model_Parameters/ATTACHMENT_MAP.json |
+
+</details>
+
+<details>
+<summary>R_MG</summary>
+
+| Field | Value |
+| --- | --- |
+| Channel | R_MG |
+| Limb | RH |
+| Anatomical name | Medial gastrocnemius |
+| Region | Medial distal femur → calcaneus |
+| Function | Ankle plantarflexion and knee flexion |
+| Reference | recorded_RH_EMG |
+| Input | Input U(t) further calibrated offline; not raw EMG |
+| Exact coordinates | Data/Model_Parameters/ATTACHMENT_MAP.json |
+
+</details>
+
+<details>
+<summary>L_EDL</summary>
+
+| Field | Value |
+| --- | --- |
+| Channel | L_EDL |
+| Limb | LH |
+| Anatomical name | Extensor digitorum longus |
+| Region | Distal femur/proximal shank → dorsal digits |
+| Function | Digital extension, ankle dorsiflexion |
+| Reference | No direct EMG; inverse/fitted fixed input |
+| Input | Input U(t) further calibrated offline; not raw EMG |
+| Exact coordinates | Data/Model_Parameters/ATTACHMENT_MAP.json |
+
+</details>
+
+<details>
+<summary>R_EDL</summary>
+
+| Field | Value |
+| --- | --- |
+| Channel | R_EDL |
+| Limb | RH |
+| Anatomical name | Extensor digitorum longus |
+| Region | Distal femur/proximal shank → dorsal digits |
+| Function | Digital extension, ankle dorsiflexion |
+| Reference | No direct EMG; inverse/fitted fixed input |
+| Input | Input U(t) further calibrated offline; not raw EMG |
+| Exact coordinates | Data/Model_Parameters/ATTACHMENT_MAP.json |
+
+</details>
+
+<details>
+<summary>L_FDL</summary>
+
+| Field | Value |
+| --- | --- |
+| Channel | L_FDL |
+| Limb | LH |
+| Anatomical name | Flexor digitorum longus |
+| Region | Posterior shank → plantar digits |
+| Function | Digital flexion, ankle plantarflexion |
+| Reference | No direct EMG; inverse/fitted fixed input |
+| Input | Input U(t) further calibrated offline; not raw EMG |
+| Exact coordinates | Data/Model_Parameters/ATTACHMENT_MAP.json |
+
+</details>
+
+<details>
+<summary>R_FDL</summary>
+
+| Field | Value |
+| --- | --- |
+| Channel | R_FDL |
+| Limb | RH |
+| Anatomical name | Flexor digitorum longus |
+| Region | Posterior shank → plantar digits |
+| Function | Digital flexion, ankle plantarflexion |
+| Reference | No direct EMG; inverse/fitted fixed input |
+| Input | Input U(t) further calibrated offline; not raw EMG |
+| Exact coordinates | Data/Model_Parameters/ATTACHMENT_MAP.json |
+
+</details>
+
+<details>
+<summary>L_FHL</summary>
+
+| Field | Value |
+| --- | --- |
+| Channel | L_FHL |
+| Limb | LH |
+| Anatomical name | Flexor hallucis longus group |
+| Region | Posterior shank/fibula → plantar digital tendons |
+| Function | Digital flexion, ankle plantarflexion |
+| Reference | assumed_LH_from_recorded_RH |
+| Input | Input U(t) further calibrated offline; not raw EMG |
+| Exact coordinates | Data/Model_Parameters/ATTACHMENT_MAP.json |
+
+</details>
+
+<details>
+<summary>R_FHL</summary>
+
+| Field | Value |
+| --- | --- |
+| Channel | R_FHL |
+| Limb | RH |
+| Anatomical name | Flexor hallucis longus group |
+| Region | Posterior shank/fibula → plantar digital tendons |
+| Function | Digital flexion, ankle plantarflexion |
+| Reference | recorded_RH_EMG |
+| Input | Input U(t) further calibrated offline; not raw EMG |
+| Exact coordinates | Data/Model_Parameters/ATTACHMENT_MAP.json |
+
+</details>
+
+<details>
+<summary>FL_ShoulderExtensor</summary>
+
+| Field | Value |
+| --- | --- |
+| Channel | FL_ShoulderExtensor |
+| Limb | LF |
+| Anatomical name | Shoulder protractor group (legacy ShoulderExtensor) |
+| Region | Scapula → humerus |
+| Function | Shoulder protraction/extension; 6 source muscles |
+| Reference | pooled_forelimb_EMG_representative_group |
+| Input | Input U(t) further calibrated offline; not raw EMG |
+| Exact coordinates | Data/Model_Parameters/ATTACHMENT_MAP.json |
+
+</details>
+
+<details>
+<summary>FL_ElbowExtensor</summary>
+
+| Field | Value |
+| --- | --- |
+| Channel | FL_ElbowExtensor |
+| Limb | LF |
+| Anatomical name | Monoarticular elbow extensor group |
+| Region | Humerus → ulna |
+| Function | Elbow extension |
+| Reference | pooled_forelimb_EMG_representative_group |
+| Input | Input U(t) further calibrated offline; not raw EMG |
+| Exact coordinates | Data/Model_Parameters/ATTACHMENT_MAP.json |
+
+</details>
+
+<details>
+<summary>FL_BicepsBrachii</summary>
+
+| Field | Value |
+| --- | --- |
+| Channel | FL_BicepsBrachii |
+| Limb | LF |
+| Anatomical name | Biceps brachii |
+| Region | Scapula → proximal radius |
+| Function | Shoulder action and elbow flexion |
+| Reference | pooled_forelimb_EMG_representative_group |
+| Input | Input U(t) further calibrated offline; not raw EMG |
+| Exact coordinates | Data/Model_Parameters/ATTACHMENT_MAP.json |
+
+</details>
+
+<details>
+<summary>FL_ElbowFlexor</summary>
+
+| Field | Value |
+| --- | --- |
+| Channel | FL_ElbowFlexor |
+| Limb | LF |
+| Anatomical name | Elbow flexor group |
+| Region | Humerus → radius/ulna |
+| Function | Elbow flexion |
+| Reference | pooled_forelimb_EMG_representative_group |
+| Input | Input U(t) further calibrated offline; not raw EMG |
+| Exact coordinates | Data/Model_Parameters/ATTACHMENT_MAP.json |
+
+</details>
+
+<details>
+<summary>FL_ElbowFlexorWristFlexor</summary>
+
+| Field | Value |
+| --- | --- |
+| Channel | FL_ElbowFlexorWristFlexor |
+| Limb | LF |
+| Anatomical name | Elbow flexor + wrist dorsiflexor group |
+| Region | Distal humerus → dorsal metacarpal/digital structures |
+| Function | Legacy name; source ECR/EDC membership, not a palmar flexor |
+| Reference | pooled_forelimb_EMG_representative_group |
+| Input | Input U(t) further calibrated offline; not raw EMG |
+| Exact coordinates | Data/Model_Parameters/ATTACHMENT_MAP.json |
+
+</details>
+
+<details>
+<summary>FL_WristFlexor</summary>
+
+| Field | Value |
+| --- | --- |
+| Channel | FL_WristFlexor |
+| Limb | LF |
+| Anatomical name | Extensor pollicis longus group |
+| Region | Forearm → dorsal digits |
+| Function | Legacy WristFlexor label; anatomical digital/wrist extension |
+| Reference | No direct EMG; inverse/fitted fixed input |
+| Input | Input U(t) further calibrated offline; not raw EMG |
+| Exact coordinates | Data/Model_Parameters/ATTACHMENT_MAP.json |
+
+</details>
+
+<details>
+<summary>FL_WristExtensor</summary>
+
+| Field | Value |
+| --- | --- |
+| Channel | FL_WristExtensor |
+| Limb | LF |
+| Anatomical name | Wrist palmarflexor group |
+| Region | Humerus/forearm → palmar paw/digits |
+| Function | Legacy WristExtensor label; source FCU/FCR/FDP/FDS/PL membership |
+| Reference | pooled_forelimb_EMG_representative_group |
+| Input | Input U(t) further calibrated offline; not raw EMG |
+| Exact coordinates | Data/Model_Parameters/ATTACHMENT_MAP.json |
+
+</details>
+
+<details>
+<summary>FL_ShoulderFlexor</summary>
+
+| Field | Value |
+| --- | --- |
+| Channel | FL_ShoulderFlexor |
+| Limb | LF |
+| Anatomical name | Shoulder retractor group |
+| Region | Scapula → humerus |
+| Function | Shoulder retraction/flexion |
+| Reference | pooled_forelimb_EMG_representative_group |
+| Input | Input U(t) further calibrated offline; not raw EMG |
+| Exact coordinates | Data/Model_Parameters/ATTACHMENT_MAP.json |
+
+</details>
+
+<details>
+<summary>FL_TricepsBrachiiLong</summary>
+
+| Field | Value |
+| --- | --- |
+| Channel | FL_TricepsBrachiiLong |
+| Limb | LF |
+| Anatomical name | Long head triceps brachii |
+| Region | Scapula → olecranon |
+| Function | Elbow extension and shoulder action |
+| Reference | pooled_forelimb_EMG_representative_group |
+| Input | Input U(t) further calibrated offline; not raw EMG |
+| Exact coordinates | Data/Model_Parameters/ATTACHMENT_MAP.json |
+
+</details>
+
+<details>
+<summary>FR_ShoulderExtensor</summary>
+
+| Field | Value |
+| --- | --- |
+| Channel | FR_ShoulderExtensor |
+| Limb | RF |
+| Anatomical name | Shoulder protractor group (legacy ShoulderExtensor) |
+| Region | Scapula → humerus |
+| Function | Shoulder protraction/extension; 6 source muscles |
+| Reference | pooled_forelimb_EMG_representative_group |
+| Input | Input U(t) further calibrated offline; not raw EMG |
+| Exact coordinates | Data/Model_Parameters/ATTACHMENT_MAP.json |
+
+</details>
+
+<details>
+<summary>FR_ElbowExtensor</summary>
+
+| Field | Value |
+| --- | --- |
+| Channel | FR_ElbowExtensor |
+| Limb | RF |
+| Anatomical name | Monoarticular elbow extensor group |
+| Region | Humerus → ulna |
+| Function | Elbow extension |
+| Reference | pooled_forelimb_EMG_representative_group |
+| Input | Input U(t) further calibrated offline; not raw EMG |
+| Exact coordinates | Data/Model_Parameters/ATTACHMENT_MAP.json |
+
+</details>
+
+<details>
+<summary>FR_BicepsBrachii</summary>
+
+| Field | Value |
+| --- | --- |
+| Channel | FR_BicepsBrachii |
+| Limb | RF |
+| Anatomical name | Biceps brachii |
+| Region | Scapula → proximal radius |
+| Function | Shoulder action and elbow flexion |
+| Reference | pooled_forelimb_EMG_representative_group |
+| Input | Input U(t) further calibrated offline; not raw EMG |
+| Exact coordinates | Data/Model_Parameters/ATTACHMENT_MAP.json |
+
+</details>
+
+<details>
+<summary>FR_ElbowFlexor</summary>
+
+| Field | Value |
+| --- | --- |
+| Channel | FR_ElbowFlexor |
+| Limb | RF |
+| Anatomical name | Elbow flexor group |
+| Region | Humerus → radius/ulna |
+| Function | Elbow flexion |
+| Reference | pooled_forelimb_EMG_representative_group |
+| Input | Input U(t) further calibrated offline; not raw EMG |
+| Exact coordinates | Data/Model_Parameters/ATTACHMENT_MAP.json |
+
+</details>
+
+<details>
+<summary>FR_ElbowFlexorWristFlexor</summary>
+
+| Field | Value |
+| --- | --- |
+| Channel | FR_ElbowFlexorWristFlexor |
+| Limb | RF |
+| Anatomical name | Elbow flexor + wrist dorsiflexor group |
+| Region | Distal humerus → dorsal metacarpal/digital structures |
+| Function | Legacy name; source ECR/EDC membership, not a palmar flexor |
+| Reference | pooled_forelimb_EMG_representative_group |
+| Input | Input U(t) further calibrated offline; not raw EMG |
+| Exact coordinates | Data/Model_Parameters/ATTACHMENT_MAP.json |
+
+</details>
+
+<details>
+<summary>FR_WristFlexor</summary>
+
+| Field | Value |
+| --- | --- |
+| Channel | FR_WristFlexor |
+| Limb | RF |
+| Anatomical name | Extensor pollicis longus group |
+| Region | Forearm → dorsal digits |
+| Function | Legacy WristFlexor label; anatomical digital/wrist extension |
+| Reference | No direct EMG; inverse/fitted fixed input |
+| Input | Input U(t) further calibrated offline; not raw EMG |
+| Exact coordinates | Data/Model_Parameters/ATTACHMENT_MAP.json |
+
+</details>
+
+<details>
+<summary>FR_WristExtensor</summary>
+
+| Field | Value |
+| --- | --- |
+| Channel | FR_WristExtensor |
+| Limb | RF |
+| Anatomical name | Wrist palmarflexor group |
+| Region | Humerus/forearm → palmar paw/digits |
+| Function | Legacy WristExtensor label; source FCU/FCR/FDP/FDS/PL membership |
+| Reference | pooled_forelimb_EMG_representative_group |
+| Input | Input U(t) further calibrated offline; not raw EMG |
+| Exact coordinates | Data/Model_Parameters/ATTACHMENT_MAP.json |
+
+</details>
+
+<details>
+<summary>FR_ShoulderFlexor</summary>
+
+| Field | Value |
+| --- | --- |
+| Channel | FR_ShoulderFlexor |
+| Limb | RF |
+| Anatomical name | Shoulder retractor group |
+| Region | Scapula → humerus |
+| Function | Shoulder retraction/flexion |
+| Reference | pooled_forelimb_EMG_representative_group |
+| Input | Input U(t) further calibrated offline; not raw EMG |
+| Exact coordinates | Data/Model_Parameters/ATTACHMENT_MAP.json |
+
+</details>
+
+<details>
+<summary>FR_TricepsBrachiiLong</summary>
+
+| Field | Value |
+| --- | --- |
+| Channel | FR_TricepsBrachiiLong |
+| Limb | RF |
+| Anatomical name | Long head triceps brachii |
+| Region | Scapula → olecranon |
+| Function | Elbow extension and shoulder action |
+| Reference | pooled_forelimb_EMG_representative_group |
+| Input | Input U(t) further calibrated offline; not raw EMG |
+| Exact coordinates | Data/Model_Parameters/ATTACHMENT_MAP.json |
+
+</details>
+
+<details>
+<summary>FL_S_C3</summary>
+
+| Field | Value |
+| --- | --- |
+| Channel | FL_S_C3 |
+| Limb | LF |
+| Anatomical name | Serratus path C3 |
+| Region | Cervical vertebra/rib C3 → scapula |
+| Function | Thoracic sling support; segment-specific line of action |
+| Reference | No direct EMG; inverse/fitted fixed input |
+| Input | Input U(t) further calibrated offline; not raw EMG |
+| Exact coordinates | Data/Model_Parameters/ATTACHMENT_MAP.json |
+
+</details>
+
+<details>
+<summary>FR_S_C3</summary>
+
+| Field | Value |
+| --- | --- |
+| Channel | FR_S_C3 |
+| Limb | RF |
+| Anatomical name | Serratus path C3 |
+| Region | Cervical vertebra/rib C3 → scapula |
+| Function | Thoracic sling support; segment-specific line of action |
+| Reference | No direct EMG; inverse/fitted fixed input |
+| Input | Input U(t) further calibrated offline; not raw EMG |
+| Exact coordinates | Data/Model_Parameters/ATTACHMENT_MAP.json |
+
+</details>
+
+<details>
+<summary>FL_S_C4</summary>
+
+| Field | Value |
+| --- | --- |
+| Channel | FL_S_C4 |
+| Limb | LF |
+| Anatomical name | Serratus path C4 |
+| Region | Cervical vertebra/rib C4 → scapula |
+| Function | Thoracic sling support; segment-specific line of action |
+| Reference | No direct EMG; inverse/fitted fixed input |
+| Input | Input U(t) further calibrated offline; not raw EMG |
+| Exact coordinates | Data/Model_Parameters/ATTACHMENT_MAP.json |
+
+</details>
+
+<details>
+<summary>FR_S_C4</summary>
+
+| Field | Value |
+| --- | --- |
+| Channel | FR_S_C4 |
+| Limb | RF |
+| Anatomical name | Serratus path C4 |
+| Region | Cervical vertebra/rib C4 → scapula |
+| Function | Thoracic sling support; segment-specific line of action |
+| Reference | No direct EMG; inverse/fitted fixed input |
+| Input | Input U(t) further calibrated offline; not raw EMG |
+| Exact coordinates | Data/Model_Parameters/ATTACHMENT_MAP.json |
+
+</details>
+
+<details>
+<summary>FL_S_C5</summary>
+
+| Field | Value |
+| --- | --- |
+| Channel | FL_S_C5 |
+| Limb | LF |
+| Anatomical name | Serratus path C5 |
+| Region | Cervical vertebra/rib C5 → scapula |
+| Function | Thoracic sling support; segment-specific line of action |
+| Reference | No direct EMG; inverse/fitted fixed input |
+| Input | Input U(t) further calibrated offline; not raw EMG |
+| Exact coordinates | Data/Model_Parameters/ATTACHMENT_MAP.json |
+
+</details>
+
+<details>
+<summary>FR_S_C5</summary>
+
+| Field | Value |
+| --- | --- |
+| Channel | FR_S_C5 |
+| Limb | RF |
+| Anatomical name | Serratus path C5 |
+| Region | Cervical vertebra/rib C5 → scapula |
+| Function | Thoracic sling support; segment-specific line of action |
+| Reference | No direct EMG; inverse/fitted fixed input |
+| Input | Input U(t) further calibrated offline; not raw EMG |
+| Exact coordinates | Data/Model_Parameters/ATTACHMENT_MAP.json |
+
+</details>
+
+<details>
+<summary>FL_S_C6</summary>
+
+| Field | Value |
+| --- | --- |
+| Channel | FL_S_C6 |
+| Limb | LF |
+| Anatomical name | Serratus path C6 |
+| Region | Cervical vertebra/rib C6 → scapula |
+| Function | Thoracic sling support; segment-specific line of action |
+| Reference | No direct EMG; inverse/fitted fixed input |
+| Input | Input U(t) further calibrated offline; not raw EMG |
+| Exact coordinates | Data/Model_Parameters/ATTACHMENT_MAP.json |
+
+</details>
+
+<details>
+<summary>FR_S_C6</summary>
+
+| Field | Value |
+| --- | --- |
+| Channel | FR_S_C6 |
+| Limb | RF |
+| Anatomical name | Serratus path C6 |
+| Region | Cervical vertebra/rib C6 → scapula |
+| Function | Thoracic sling support; segment-specific line of action |
+| Reference | No direct EMG; inverse/fitted fixed input |
+| Input | Input U(t) further calibrated offline; not raw EMG |
+| Exact coordinates | Data/Model_Parameters/ATTACHMENT_MAP.json |
+
+</details>
+
+<details>
+<summary>FL_S_C7</summary>
+
+| Field | Value |
+| --- | --- |
+| Channel | FL_S_C7 |
+| Limb | LF |
+| Anatomical name | Serratus path C7 |
+| Region | Cervical vertebra/rib C7 → scapula |
+| Function | Thoracic sling support; segment-specific line of action |
+| Reference | No direct EMG; inverse/fitted fixed input |
+| Input | Input U(t) further calibrated offline; not raw EMG |
+| Exact coordinates | Data/Model_Parameters/ATTACHMENT_MAP.json |
+
+</details>
+
+<details>
+<summary>FR_S_C7</summary>
+
+| Field | Value |
+| --- | --- |
+| Channel | FR_S_C7 |
+| Limb | RF |
+| Anatomical name | Serratus path C7 |
+| Region | Cervical vertebra/rib C7 → scapula |
+| Function | Thoracic sling support; segment-specific line of action |
+| Reference | No direct EMG; inverse/fitted fixed input |
+| Input | Input U(t) further calibrated offline; not raw EMG |
+| Exact coordinates | Data/Model_Parameters/ATTACHMENT_MAP.json |
+
+</details>
+
+<details>
+<summary>FL_S_T1</summary>
+
+| Field | Value |
+| --- | --- |
+| Channel | FL_S_T1 |
+| Limb | LF |
+| Anatomical name | Serratus path T1 |
+| Region | Cervical vertebra/rib T1 → scapula |
+| Function | Thoracic sling support; segment-specific line of action |
+| Reference | No direct EMG; inverse/fitted fixed input |
+| Input | Input U(t) further calibrated offline; not raw EMG |
+| Exact coordinates | Data/Model_Parameters/ATTACHMENT_MAP.json |
+
+</details>
+
+<details>
+<summary>FR_S_T1</summary>
+
+| Field | Value |
+| --- | --- |
+| Channel | FR_S_T1 |
+| Limb | RF |
+| Anatomical name | Serratus path T1 |
+| Region | Cervical vertebra/rib T1 → scapula |
+| Function | Thoracic sling support; segment-specific line of action |
+| Reference | No direct EMG; inverse/fitted fixed input |
+| Input | Input U(t) further calibrated offline; not raw EMG |
+| Exact coordinates | Data/Model_Parameters/ATTACHMENT_MAP.json |
+
+</details>
+
+<details>
+<summary>FL_S_T2</summary>
+
+| Field | Value |
+| --- | --- |
+| Channel | FL_S_T2 |
+| Limb | LF |
+| Anatomical name | Serratus path T2 |
+| Region | Cervical vertebra/rib T2 → scapula |
+| Function | Thoracic sling support; segment-specific line of action |
+| Reference | No direct EMG; inverse/fitted fixed input |
+| Input | Input U(t) further calibrated offline; not raw EMG |
+| Exact coordinates | Data/Model_Parameters/ATTACHMENT_MAP.json |
+
+</details>
+
+<details>
+<summary>FR_S_T2</summary>
+
+| Field | Value |
+| --- | --- |
+| Channel | FR_S_T2 |
+| Limb | RF |
+| Anatomical name | Serratus path T2 |
+| Region | Cervical vertebra/rib T2 → scapula |
+| Function | Thoracic sling support; segment-specific line of action |
+| Reference | No direct EMG; inverse/fitted fixed input |
+| Input | Input U(t) further calibrated offline; not raw EMG |
+| Exact coordinates | Data/Model_Parameters/ATTACHMENT_MAP.json |
+
+</details>
+
+<details>
+<summary>FL_S_T3</summary>
+
+| Field | Value |
+| --- | --- |
+| Channel | FL_S_T3 |
+| Limb | LF |
+| Anatomical name | Serratus path T3 |
+| Region | Cervical vertebra/rib T3 → scapula |
+| Function | Thoracic sling support; segment-specific line of action |
+| Reference | No direct EMG; inverse/fitted fixed input |
+| Input | Input U(t) further calibrated offline; not raw EMG |
+| Exact coordinates | Data/Model_Parameters/ATTACHMENT_MAP.json |
+
+</details>
+
+<details>
+<summary>FR_S_T3</summary>
+
+| Field | Value |
+| --- | --- |
+| Channel | FR_S_T3 |
+| Limb | RF |
+| Anatomical name | Serratus path T3 |
+| Region | Cervical vertebra/rib T3 → scapula |
+| Function | Thoracic sling support; segment-specific line of action |
+| Reference | No direct EMG; inverse/fitted fixed input |
+| Input | Input U(t) further calibrated offline; not raw EMG |
+| Exact coordinates | Data/Model_Parameters/ATTACHMENT_MAP.json |
+
+</details>
+
+<details>
+<summary>FL_S_T4</summary>
+
+| Field | Value |
+| --- | --- |
+| Channel | FL_S_T4 |
+| Limb | LF |
+| Anatomical name | Serratus path T4 |
+| Region | Cervical vertebra/rib T4 → scapula |
+| Function | Thoracic sling support; segment-specific line of action |
+| Reference | No direct EMG; inverse/fitted fixed input |
+| Input | Input U(t) further calibrated offline; not raw EMG |
+| Exact coordinates | Data/Model_Parameters/ATTACHMENT_MAP.json |
+
+</details>
+
+<details>
+<summary>FR_S_T4</summary>
+
+| Field | Value |
+| --- | --- |
+| Channel | FR_S_T4 |
+| Limb | RF |
+| Anatomical name | Serratus path T4 |
+| Region | Cervical vertebra/rib T4 → scapula |
+| Function | Thoracic sling support; segment-specific line of action |
+| Reference | No direct EMG; inverse/fitted fixed input |
+| Input | Input U(t) further calibrated offline; not raw EMG |
+| Exact coordinates | Data/Model_Parameters/ATTACHMENT_MAP.json |
+
+</details>
+
+<details>
+<summary>FL_S_T5</summary>
+
+| Field | Value |
+| --- | --- |
+| Channel | FL_S_T5 |
+| Limb | LF |
+| Anatomical name | Serratus path T5 |
+| Region | Cervical vertebra/rib T5 → scapula |
+| Function | Thoracic sling support; segment-specific line of action |
+| Reference | No direct EMG; inverse/fitted fixed input |
+| Input | Input U(t) further calibrated offline; not raw EMG |
+| Exact coordinates | Data/Model_Parameters/ATTACHMENT_MAP.json |
+
+</details>
+
+<details>
+<summary>FR_S_T5</summary>
+
+| Field | Value |
+| --- | --- |
+| Channel | FR_S_T5 |
+| Limb | RF |
+| Anatomical name | Serratus path T5 |
+| Region | Cervical vertebra/rib T5 → scapula |
+| Function | Thoracic sling support; segment-specific line of action |
+| Reference | No direct EMG; inverse/fitted fixed input |
+| Input | Input U(t) further calibrated offline; not raw EMG |
+| Exact coordinates | Data/Model_Parameters/ATTACHMENT_MAP.json |
+
+</details>
+
+<details>
+<summary>FL_S_T6</summary>
+
+| Field | Value |
+| --- | --- |
+| Channel | FL_S_T6 |
+| Limb | LF |
+| Anatomical name | Serratus path T6 |
+| Region | Cervical vertebra/rib T6 → scapula |
+| Function | Thoracic sling support; segment-specific line of action |
+| Reference | No direct EMG; inverse/fitted fixed input |
+| Input | Input U(t) further calibrated offline; not raw EMG |
+| Exact coordinates | Data/Model_Parameters/ATTACHMENT_MAP.json |
+
+</details>
+
+<details>
+<summary>FR_S_T6</summary>
+
+| Field | Value |
+| --- | --- |
+| Channel | FR_S_T6 |
+| Limb | RF |
+| Anatomical name | Serratus path T6 |
+| Region | Cervical vertebra/rib T6 → scapula |
+| Function | Thoracic sling support; segment-specific line of action |
+| Reference | No direct EMG; inverse/fitted fixed input |
+| Input | Input U(t) further calibrated offline; not raw EMG |
+| Exact coordinates | Data/Model_Parameters/ATTACHMENT_MAP.json |
+
+</details>
+
+<details>
+<summary>FL_S_T7</summary>
+
+| Field | Value |
+| --- | --- |
+| Channel | FL_S_T7 |
+| Limb | LF |
+| Anatomical name | Serratus path T7 |
+| Region | Cervical vertebra/rib T7 → scapula |
+| Function | Thoracic sling support; segment-specific line of action |
+| Reference | No direct EMG; inverse/fitted fixed input |
+| Input | Input U(t) further calibrated offline; not raw EMG |
+| Exact coordinates | Data/Model_Parameters/ATTACHMENT_MAP.json |
+
+</details>
+
+<details>
+<summary>FR_S_T7</summary>
+
+| Field | Value |
+| --- | --- |
+| Channel | FR_S_T7 |
+| Limb | RF |
+| Anatomical name | Serratus path T7 |
+| Region | Cervical vertebra/rib T7 → scapula |
+| Function | Thoracic sling support; segment-specific line of action |
+| Reference | No direct EMG; inverse/fitted fixed input |
+| Input | Input U(t) further calibrated offline; not raw EMG |
+| Exact coordinates | Data/Model_Parameters/ATTACHMENT_MAP.json |
+
+</details>
+
+<details>
+<summary>FL_S_T8</summary>
+
+| Field | Value |
+| --- | --- |
+| Channel | FL_S_T8 |
+| Limb | LF |
+| Anatomical name | Serratus path T8 |
+| Region | Cervical vertebra/rib T8 → scapula |
+| Function | Thoracic sling support; segment-specific line of action |
+| Reference | No direct EMG; inverse/fitted fixed input |
+| Input | Input U(t) further calibrated offline; not raw EMG |
+| Exact coordinates | Data/Model_Parameters/ATTACHMENT_MAP.json |
+
+</details>
+
+<details>
+<summary>FR_S_T8</summary>
+
+| Field | Value |
+| --- | --- |
+| Channel | FR_S_T8 |
+| Limb | RF |
+| Anatomical name | Serratus path T8 |
+| Region | Cervical vertebra/rib T8 → scapula |
+| Function | Thoracic sling support; segment-specific line of action |
+| Reference | No direct EMG; inverse/fitted fixed input |
+| Input | Input U(t) further calibrated offline; not raw EMG |
+| Exact coordinates | Data/Model_Parameters/ATTACHMENT_MAP.json |
+
+</details>
+
+<details>
+<summary>FL_S_T9</summary>
+
+| Field | Value |
+| --- | --- |
+| Channel | FL_S_T9 |
+| Limb | LF |
+| Anatomical name | Serratus path T9 |
+| Region | Cervical vertebra/rib T9 → scapula |
+| Function | Thoracic sling support; segment-specific line of action |
+| Reference | No direct EMG; inverse/fitted fixed input |
+| Input | Input U(t) further calibrated offline; not raw EMG |
+| Exact coordinates | Data/Model_Parameters/ATTACHMENT_MAP.json |
+
+</details>
+
+<details>
+<summary>FR_S_T9</summary>
+
+| Field | Value |
+| --- | --- |
+| Channel | FR_S_T9 |
+| Limb | RF |
+| Anatomical name | Serratus path T9 |
+| Region | Cervical vertebra/rib T9 → scapula |
+| Function | Thoracic sling support; segment-specific line of action |
+| Reference | No direct EMG; inverse/fitted fixed input |
+| Input | Input U(t) further calibrated offline; not raw EMG |
+| Exact coordinates | Data/Model_Parameters/ATTACHMENT_MAP.json |
+
+</details>
+
+<details>
+<summary>FL_R_C2</summary>
+
+| Field | Value |
+| --- | --- |
+| Channel | FL_R_C2 |
+| Limb | LF |
+| Anatomical name | Rhomboid path C2 |
+| Region | Axial region C2 → scapula |
+| Function | Scapular support and positioning |
+| Reference | No direct EMG; inverse/fitted fixed input |
+| Input | Input U(t) further calibrated offline; not raw EMG |
+| Exact coordinates | Data/Model_Parameters/ATTACHMENT_MAP.json |
+
+</details>
+
+<details>
+<summary>FR_R_C2</summary>
+
+| Field | Value |
+| --- | --- |
+| Channel | FR_R_C2 |
+| Limb | RF |
+| Anatomical name | Rhomboid path C2 |
+| Region | Axial region C2 → scapula |
+| Function | Scapular support and positioning |
+| Reference | No direct EMG; inverse/fitted fixed input |
+| Input | Input U(t) further calibrated offline; not raw EMG |
+| Exact coordinates | Data/Model_Parameters/ATTACHMENT_MAP.json |
+
+</details>
+
+<details>
+<summary>FL_R_C3-7</summary>
+
+| Field | Value |
+| --- | --- |
+| Channel | FL_R_C3-7 |
+| Limb | LF |
+| Anatomical name | Rhomboid path C3-7 |
+| Region | Axial region C3-7 → scapula |
+| Function | Scapular support and positioning |
+| Reference | No direct EMG; inverse/fitted fixed input |
+| Input | Input U(t) further calibrated offline; not raw EMG |
+| Exact coordinates | Data/Model_Parameters/ATTACHMENT_MAP.json |
+
+</details>
+
+<details>
+<summary>FR_R_C3-7</summary>
+
+| Field | Value |
+| --- | --- |
+| Channel | FR_R_C3-7 |
+| Limb | RF |
+| Anatomical name | Rhomboid path C3-7 |
+| Region | Axial region C3-7 → scapula |
+| Function | Scapular support and positioning |
+| Reference | No direct EMG; inverse/fitted fixed input |
+| Input | Input U(t) further calibrated offline; not raw EMG |
+| Exact coordinates | Data/Model_Parameters/ATTACHMENT_MAP.json |
+
+</details>
+
+<details>
+<summary>FL_R_T1</summary>
+
+| Field | Value |
+| --- | --- |
+| Channel | FL_R_T1 |
+| Limb | LF |
+| Anatomical name | Rhomboid path T1 |
+| Region | Axial region T1 → scapula |
+| Function | Scapular support and positioning |
+| Reference | No direct EMG; inverse/fitted fixed input |
+| Input | Input U(t) further calibrated offline; not raw EMG |
+| Exact coordinates | Data/Model_Parameters/ATTACHMENT_MAP.json |
+
+</details>
+
+<details>
+<summary>FR_R_T1</summary>
+
+| Field | Value |
+| --- | --- |
+| Channel | FR_R_T1 |
+| Limb | RF |
+| Anatomical name | Rhomboid path T1 |
+| Region | Axial region T1 → scapula |
+| Function | Scapular support and positioning |
+| Reference | No direct EMG; inverse/fitted fixed input |
+| Input | Input U(t) further calibrated offline; not raw EMG |
+| Exact coordinates | Data/Model_Parameters/ATTACHMENT_MAP.json |
+
+</details>
+
+<details>
+<summary>FL_R_T2</summary>
+
+| Field | Value |
+| --- | --- |
+| Channel | FL_R_T2 |
+| Limb | LF |
+| Anatomical name | Rhomboid path T2 |
+| Region | Axial region T2 → scapula |
+| Function | Scapular support and positioning |
+| Reference | No direct EMG; inverse/fitted fixed input |
+| Input | Input U(t) further calibrated offline; not raw EMG |
+| Exact coordinates | Data/Model_Parameters/ATTACHMENT_MAP.json |
+
+</details>
+
+<details>
+<summary>FR_R_T2</summary>
+
+| Field | Value |
+| --- | --- |
+| Channel | FR_R_T2 |
+| Limb | RF |
+| Anatomical name | Rhomboid path T2 |
+| Region | Axial region T2 → scapula |
+| Function | Scapular support and positioning |
+| Reference | No direct EMG; inverse/fitted fixed input |
+| Input | Input U(t) further calibrated offline; not raw EMG |
+| Exact coordinates | Data/Model_Parameters/ATTACHMENT_MAP.json |
+
+</details>
+
+<details>
+<summary>FL_R_T3</summary>
+
+| Field | Value |
+| --- | --- |
+| Channel | FL_R_T3 |
+| Limb | LF |
+| Anatomical name | Rhomboid path T3 |
+| Region | Axial region T3 → scapula |
+| Function | Scapular support and positioning |
+| Reference | No direct EMG; inverse/fitted fixed input |
+| Input | Input U(t) further calibrated offline; not raw EMG |
+| Exact coordinates | Data/Model_Parameters/ATTACHMENT_MAP.json |
+
+</details>
+
+<details>
+<summary>FR_R_T3</summary>
+
+| Field | Value |
+| --- | --- |
+| Channel | FR_R_T3 |
+| Limb | RF |
+| Anatomical name | Rhomboid path T3 |
+| Region | Axial region T3 → scapula |
+| Function | Scapular support and positioning |
+| Reference | No direct EMG; inverse/fitted fixed input |
+| Input | Input U(t) further calibrated offline; not raw EMG |
+| Exact coordinates | Data/Model_Parameters/ATTACHMENT_MAP.json |
+
+</details>
+
+<details>
+<summary>FL_R_T4</summary>
+
+| Field | Value |
+| --- | --- |
+| Channel | FL_R_T4 |
+| Limb | LF |
+| Anatomical name | Rhomboid path T4 |
+| Region | Axial region T4 → scapula |
+| Function | Scapular support and positioning |
+| Reference | No direct EMG; inverse/fitted fixed input |
+| Input | Input U(t) further calibrated offline; not raw EMG |
+| Exact coordinates | Data/Model_Parameters/ATTACHMENT_MAP.json |
+
+</details>
+
+<details>
+<summary>FR_R_T4</summary>
+
+| Field | Value |
+| --- | --- |
+| Channel | FR_R_T4 |
+| Limb | RF |
+| Anatomical name | Rhomboid path T4 |
+| Region | Axial region T4 → scapula |
+| Function | Scapular support and positioning |
+| Reference | No direct EMG; inverse/fitted fixed input |
+| Input | Input U(t) further calibrated offline; not raw EMG |
+| Exact coordinates | Data/Model_Parameters/ATTACHMENT_MAP.json |
+
+</details>
+
+<details>
+<summary>FL_R_T5</summary>
+
+| Field | Value |
+| --- | --- |
+| Channel | FL_R_T5 |
+| Limb | LF |
+| Anatomical name | Rhomboid path T5 |
+| Region | Axial region T5 → scapula |
+| Function | Scapular support and positioning |
+| Reference | No direct EMG; inverse/fitted fixed input |
+| Input | Input U(t) further calibrated offline; not raw EMG |
+| Exact coordinates | Data/Model_Parameters/ATTACHMENT_MAP.json |
+
+</details>
+
+<details>
+<summary>FR_R_T5</summary>
+
+| Field | Value |
+| --- | --- |
+| Channel | FR_R_T5 |
+| Limb | RF |
+| Anatomical name | Rhomboid path T5 |
+| Region | Axial region T5 → scapula |
+| Function | Scapular support and positioning |
+| Reference | No direct EMG; inverse/fitted fixed input |
+| Input | Input U(t) further calibrated offline; not raw EMG |
+| Exact coordinates | Data/Model_Parameters/ATTACHMENT_MAP.json |
+
+</details>
+
+<details>
+<summary>FL_DigitalExtensors</summary>
+
+| Field | Value |
+| --- | --- |
+| Channel | FL_DigitalExtensors |
+| Limb | LF |
+| Anatomical name | Added digital extensor paths |
+| Region | Forearm → dorsal digits |
+| Function | Digital extension; parent capacity split |
+| Reference | No direct EMG; inverse/fitted fixed input |
+| Input | Input U(t) further calibrated offline; not raw EMG |
+| Exact coordinates | Data/Model_Parameters/ATTACHMENT_MAP.json |
+
+</details>
+
+<details>
+<summary>FR_DigitalExtensors</summary>
+
+| Field | Value |
+| --- | --- |
+| Channel | FR_DigitalExtensors |
+| Limb | RF |
+| Anatomical name | Added digital extensor paths |
+| Region | Forearm → dorsal digits |
+| Function | Digital extension; parent capacity split |
+| Reference | No direct EMG; inverse/fitted fixed input |
+| Input | Input U(t) further calibrated offline; not raw EMG |
+| Exact coordinates | Data/Model_Parameters/ATTACHMENT_MAP.json |
+
+</details>
+
+<details>
+<summary>FL_DigitalFlexors</summary>
+
+| Field | Value |
+| --- | --- |
+| Channel | FL_DigitalFlexors |
+| Limb | LF |
+| Anatomical name | Added digital flexor paths |
+| Region | Forearm → palmar digits |
+| Function | Digital flexion; parent capacity split |
+| Reference | No direct EMG; inverse/fitted fixed input |
+| Input | Input U(t) further calibrated offline; not raw EMG |
+| Exact coordinates | Data/Model_Parameters/ATTACHMENT_MAP.json |
+
+</details>
+
+<details>
+<summary>FR_DigitalFlexors</summary>
+
+| Field | Value |
+| --- | --- |
+| Channel | FR_DigitalFlexors |
+| Limb | RF |
+| Anatomical name | Added digital flexor paths |
+| Region | Forearm → palmar digits |
+| Function | Digital flexion; parent capacity split |
+| Reference | No direct EMG; inverse/fitted fixed input |
+| Input | Input U(t) further calibrated offline; not raw EMG |
+| Exact coordinates | Data/Model_Parameters/ATTACHMENT_MAP.json |
+
+</details>
+
+<details>
+<summary>FL_TrapeziusCervical</summary>
+
+| Field | Value |
+| --- | --- |
+| Channel | FL_TrapeziusCervical |
+| Limb | LF |
+| Anatomical name | Cervical trapezius path |
+| Region | Cervical axial skeleton → scapula |
+| Function | Scapular positioning |
+| Reference | No direct EMG; inverse/fitted fixed input |
+| Input | Input U(t) further calibrated offline; not raw EMG |
+| Exact coordinates | Data/Model_Parameters/ATTACHMENT_MAP.json |
+
+</details>
+
+<details>
+<summary>FR_TrapeziusCervical</summary>
+
+| Field | Value |
+| --- | --- |
+| Channel | FR_TrapeziusCervical |
+| Limb | RF |
+| Anatomical name | Cervical trapezius path |
+| Region | Cervical axial skeleton → scapula |
+| Function | Scapular positioning |
+| Reference | No direct EMG; inverse/fitted fixed input |
+| Input | Input U(t) further calibrated offline; not raw EMG |
+| Exact coordinates | Data/Model_Parameters/ATTACHMENT_MAP.json |
+
+</details>
+
+<details>
+<summary>FL_TrapeziusThoracic</summary>
+
+| Field | Value |
+| --- | --- |
+| Channel | FL_TrapeziusThoracic |
+| Limb | LF |
+| Anatomical name | Thoracic trapezius path |
+| Region | Thoracic axial skeleton → scapula |
+| Function | Scapular positioning |
+| Reference | No direct EMG; inverse/fitted fixed input |
+| Input | Input U(t) further calibrated offline; not raw EMG |
+| Exact coordinates | Data/Model_Parameters/ATTACHMENT_MAP.json |
+
+</details>
+
+<details>
+<summary>FR_TrapeziusThoracic</summary>
+
+| Field | Value |
+| --- | --- |
+| Channel | FR_TrapeziusThoracic |
+| Limb | RF |
+| Anatomical name | Thoracic trapezius path |
+| Region | Thoracic axial skeleton → scapula |
+| Function | Scapular positioning |
+| Reference | No direct EMG; inverse/fitted fixed input |
+| Input | Input U(t) further calibrated offline; not raw EMG |
+| Exact coordinates | Data/Model_Parameters/ATTACHMENT_MAP.json |
+
+</details>
+
+<details>
+<summary>FL_LatissimusDorsi</summary>
+
+| Field | Value |
+| --- | --- |
+| Channel | FL_LatissimusDorsi |
+| Limb | LF |
+| Anatomical name | Latissimus dorsi path |
+| Region | Dorsal trunk → proximal humerus |
+| Function | Shoulder retraction |
+| Reference | No direct EMG; inverse/fitted fixed input |
+| Input | Input U(t) further calibrated offline; not raw EMG |
+| Exact coordinates | Data/Model_Parameters/ATTACHMENT_MAP.json |
+
+</details>
+
+<details>
+<summary>FR_LatissimusDorsi</summary>
+
+| Field | Value |
+| --- | --- |
+| Channel | FR_LatissimusDorsi |
+| Limb | RF |
+| Anatomical name | Latissimus dorsi path |
+| Region | Dorsal trunk → proximal humerus |
+| Function | Shoulder retraction |
+| Reference | No direct EMG; inverse/fitted fixed input |
+| Input | Input U(t) further calibrated offline; not raw EMG |
+| Exact coordinates | Data/Model_Parameters/ATTACHMENT_MAP.json |
+
+</details>
+
+<details>
+<summary>FL_PectoralisProfundus</summary>
+
+| Field | Value |
+| --- | --- |
+| Channel | FL_PectoralisProfundus |
+| Limb | LF |
+| Anatomical name | Deep pectoral path |
+| Region | Ventral trunk → proximal humerus |
+| Function | Shoulder support/retraction |
+| Reference | No direct EMG; inverse/fitted fixed input |
+| Input | Input U(t) further calibrated offline; not raw EMG |
+| Exact coordinates | Data/Model_Parameters/ATTACHMENT_MAP.json |
+
+</details>
+
+<details>
+<summary>FR_PectoralisProfundus</summary>
+
+| Field | Value |
+| --- | --- |
+| Channel | FR_PectoralisProfundus |
+| Limb | RF |
+| Anatomical name | Deep pectoral path |
+| Region | Ventral trunk → proximal humerus |
+| Function | Shoulder support/retraction |
+| Reference | No direct EMG; inverse/fitted fixed input |
+| Input | Input U(t) further calibrated offline; not raw EMG |
+| Exact coordinates | Data/Model_Parameters/ATTACHMENT_MAP.json |
+
+</details>
+
+<details>
+<summary>FL_PectoralisSuperficialis</summary>
+
+| Field | Value |
+| --- | --- |
+| Channel | FL_PectoralisSuperficialis |
+| Limb | LF |
+| Anatomical name | Superficial pectoral path |
+| Region | Sternum → proximal humerus |
+| Function | Shoulder support |
+| Reference | No direct EMG; inverse/fitted fixed input |
+| Input | Input U(t) further calibrated offline; not raw EMG |
+| Exact coordinates | Data/Model_Parameters/ATTACHMENT_MAP.json |
+
+</details>
+
+<details>
+<summary>FR_PectoralisSuperficialis</summary>
+
+| Field | Value |
+| --- | --- |
+| Channel | FR_PectoralisSuperficialis |
+| Limb | RF |
+| Anatomical name | Superficial pectoral path |
+| Region | Sternum → proximal humerus |
+| Function | Shoulder support |
+| Reference | No direct EMG; inverse/fitted fixed input |
+| Input | Input U(t) further calibrated offline; not raw EMG |
+| Exact coordinates | Data/Model_Parameters/ATTACHMENT_MAP.json |
+
+</details>
+
+<details>
+<summary>FL_Clavobrachialis</summary>
+
+| Field | Value |
+| --- | --- |
+| Channel | FL_Clavobrachialis |
+| Limb | LF |
+| Anatomical name | Clavobrachialis path |
+| Region | Cranial shoulder girdle → humerus |
+| Function | Shoulder protraction |
+| Reference | No direct EMG; inverse/fitted fixed input |
+| Input | Input U(t) further calibrated offline; not raw EMG |
+| Exact coordinates | Data/Model_Parameters/ATTACHMENT_MAP.json |
+
+</details>
+
+<details>
+<summary>FR_Clavobrachialis</summary>
+
+| Field | Value |
+| --- | --- |
+| Channel | FR_Clavobrachialis |
+| Limb | RF |
+| Anatomical name | Clavobrachialis path |
+| Region | Cranial shoulder girdle → humerus |
+| Function | Shoulder protraction |
+| Reference | No direct EMG; inverse/fitted fixed input |
+| Input | Input U(t) further calibrated offline; not raw EMG |
+| Exact coordinates | Data/Model_Parameters/ATTACHMENT_MAP.json |
+
+</details>

@@ -47,9 +47,7 @@ The [parameter tables](parameter_tables.md) compare **Source value** directly wi
 
 Calibration used several objectives and tests. The following equation documents the uninterrupted-locomotion objective present in the included method records; it is not an optimizer executed by run.py or a claim that every fitted value was obtained in one search.
 
-$$
-J={J}_{\mathrm{fall}}+{J}_{\mathrm{angle}}+{J}_{\mathrm{GRF}}+{J}_{\mathrm{travel}}+{J}_{\mathrm{posture}}+{w}_{\mathrm{rhythm}}{J}_{\mathrm{rhythm}}+30{J}_{\mathrm{phase}}+{J}_{\mathrm{shape}}+{J}_{\mathrm{regularization}}+{J}_{\mathrm{bounds}}
-$$
+![4. How experimental agreement entered parameter estimation](Figures_and_Videos/Equations/calibration_summary_01.svg)
 
 J is the dimensionless score to minimize. Jfall penalizes falling; Jangle joint-angle error; JGRF ground-reaction-force error; Jtravel forward progress error; Jposture body-posture error; Jrhythm insufficient rhythmic paw contact; Jphase excitation during EMG-quiet phases or insufficient excitation during active phases; Jshape peak-normalized excitation/EMG shape error; Jregularization large fitted-variable changes; and Jbounds fiber-length bound events. wrhythm is the rhythm weight, 2 in the supplied estimation record; the phase weight is 30.
 
@@ -61,7 +59,7 @@ The forelimb input estimation also used an offline force-balance adjustment: act
 
 ### Offline force-balance adjustment
 
-${a}_{B}={clip}_{[0,1]}\,(\frac{{a}_{A}{f}_{L,A}{f}_{V,A}+{f}_{PE,A}-{f}_{PE,B}+{\beta }_{A}{\nu }_{A}-{\beta }_{B}{\nu }_{B}}{\max ({10}^{-5},{f}_{L,B}{f}_{V,B})})$
+![Offline force-balance adjustment](Figures_and_Videos/Equations/calibration_summary_02.svg)
 
 A and B denote two explicitly chosen muscle-parameter sets evaluated along the same nominal cycle during estimation. aA is activation for set A, and aB is the estimated activation for set B. fL and fV are active force–length and force–velocity factors; fPE is passive fiber force divided by the tendon-projected maximum isometric force; β is normalized fiber damping; ν is fiber lengthening velocity divided by the physical maximum fiber speed. All terms are dimensionless. clip[0,1] bounds activation to [0,1]; the denominator floor 10⁻⁵ prevents division by near-zero active force capacity.
 

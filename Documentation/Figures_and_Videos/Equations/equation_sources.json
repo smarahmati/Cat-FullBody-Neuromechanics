@@ -1,0 +1,308 @@
+{
+  "attachment_map_01": {
+    "latex": "{p}_{W,k}(q)={x}_{B}(q)+{R}_{B}(q){p}_{B,k}",
+    "rendered_latex": "{p}_{W,k}(q)={x}_{B}(q)+{R}_{B}(q){p}_{B,k}",
+    "label": "Where are these coordinates?",
+    "number": null,
+    "inline": false,
+    "file": "attachment_map_01.svg",
+    "render_hash": "e3a9622c209f945c4328b73574359cfff8da4bb33dc2ec9845bc8b2c3c0b31ff"
+  },
+  "attachment_map_02": {
+    "latex": "{L}_{MT,i}(q)={c}_{i}+{\\sum }_{b}\\frac{{L}_{path,ib}(q)}{{d}_{ib}}",
+    "rendered_latex": "{L}_{MT,i}(q)={c}_{i}+{\\sum }_{b}\\frac{{L}_{path,ib}(q)}{{d}_{ib}}",
+    "label": "How does a coordinate edit change MT length?",
+    "number": null,
+    "inline": false,
+    "file": "attachment_map_02.svg",
+    "render_hash": "4065a928daf832aa2717d9844ed14f61456b7222d673ed804b21115dc0534d8d"
+  },
+  "attachment_map_03": {
+    "latex": "{L}_{straight}={\\sum }_{k}\\Vert {p}_{W,k+1}-{p}_{W,k}\\Vert ",
+    "rendered_latex": "{L}_{straight}={\\sum }_{k}\\Vert {p}_{W,k+1}-{p}_{W,k}\\Vert ",
+    "label": "How does a coordinate edit change MT length?",
+    "number": null,
+    "inline": false,
+    "file": "attachment_map_03.svg",
+    "render_hash": "c6f9567b2ce4ea08091b4c0b382814226de866e10c5040c0ddff7ba4d95b7b0f"
+  },
+  "attachment_map_04": {
+    "latex": "\\Delta L\\simeq \\frac{{p}_{O}-{p}_{I}}{\\Vert {p}_{O}-{p}_{I}\\Vert }\\cdot {R}_{B}\\Delta {p}_{B,O}",
+    "rendered_latex": "\\Delta L\\simeq \\frac{{p}_{O}-{p}_{I}}{\\Vert {p}_{O}-{p}_{I}\\Vert }\\cdot {R}_{B}\\Delta {p}_{B,O}",
+    "label": "How does a coordinate edit change MT length?",
+    "number": null,
+    "inline": false,
+    "file": "attachment_map_04.svg",
+    "render_hash": "cbe0949541d2e7b25ef204afeb40bc2c060fc9f8dea52e1a2f3afdde9b438032"
+  },
+  "attachment_map_05": {
+    "latex": "{L}_{T}={L}_{MT}-{L}_{F}\\cos \\alpha ,\\,{\\epsilon }_{T}=\\frac{{L}_{T}-{L}_{T0}}{{L}_{T0}}",
+    "rendered_latex": "{L}_{T}={L}_{MT}-{L}_{F}\\cos \\alpha ,\\,{\\epsilon }_{T}=\\frac{{L}_{T}-{L}_{T0}}{{L}_{T0}}",
+    "label": "How does a coordinate edit change MT length?",
+    "number": null,
+    "inline": false,
+    "file": "attachment_map_05.svg",
+    "render_hash": "2007a047030eb85ab15cd6b606ff1012c31846a6ff977ecfa2054d259b3c81e8"
+  },
+  "calibration_summary_01": {
+    "latex": "J={J}_{\\mathrm{fall}}+{J}_{\\mathrm{angle}}+{J}_{\\mathrm{GRF}}+{J}_{\\mathrm{travel}}+{J}_{\\mathrm{posture}}+{w}_{\\mathrm{rhythm}}{J}_{\\mathrm{rhythm}}+30{J}_{\\mathrm{phase}}+{J}_{\\mathrm{shape}}+{J}_{\\mathrm{regularization}}+{J}_{\\mathrm{bounds}}",
+    "rendered_latex": "\\begin{gathered}J={J}_{\\mathrm{fall}}+{J}_{\\mathrm{angle}}+{J}_{\\mathrm{GRF}}+{J}_{\\mathrm{travel}}+{J}_{\\mathrm{posture}}+{w}_{\\mathrm{rhythm}}{J}_{\\mathrm{rhythm}} \\\\ {}+30{J}_{\\mathrm{phase}}+{J}_{\\mathrm{shape}}+{J}_{\\mathrm{regularization}}+{J}_{\\mathrm{bounds}}\\end{gathered}",
+    "label": "4. How experimental agreement entered parameter estimation",
+    "number": null,
+    "inline": false,
+    "file": "calibration_summary_01.svg",
+    "render_hash": "ec547f58d1fbbd064598a8e4896c66697540d094e15f24125be183eca9928a71"
+  },
+  "calibration_summary_02": {
+    "latex": "{a}_{B}={clip}_{[0,1]}\\,(\\frac{{a}_{A}{f}_{L,A}{f}_{V,A}+{f}_{PE,A}-{f}_{PE,B}+{\\beta }_{A}{\\nu }_{A}-{\\beta }_{B}{\\nu }_{B}}{\\max ({10}^{-5},{f}_{L,B}{f}_{V,B})})",
+    "rendered_latex": "{a}_{B}={clip}_{[0,1]}\\,(\\frac{{a}_{A}{f}_{L,A}{f}_{V,A}+{f}_{PE,A}-{f}_{PE,B}+{\\beta }_{A}{\\nu }_{A}-{\\beta }_{B}{\\nu }_{B}}{\\max ({10}^{-5},{f}_{L,B}{f}_{V,B})})",
+    "label": "Offline force-balance adjustment",
+    "number": null,
+    "inline": false,
+    "file": "calibration_summary_02.svg",
+    "render_hash": "12188c5ed155605e2d079286d0499708061c9880770bd5e4b850c824b61000e3"
+  },
+  "method_01_state_and_initialization": {
+    "latex": "\\mathbf{x}=(\\mathbf{q},\\dot{\\mathbf{q}},\\mathbf{a},\\mathbf{l}_f,\\boldsymbol{\\xi}),\\quad\\mathbf{x}(0)=\\mathbf{x}_0",
+    "rendered_latex": "\\mathbf{x}=(\\mathbf{q},\\dot{\\mathbf{q}},\\mathbf{a},\\mathbf{l}_f,\\boldsymbol{\\xi}),\\quad\\mathbf{x}(0)=\\mathbf{x}_0",
+    "label": "State and initialization",
+    "number": "1",
+    "inline": false,
+    "file": "method_01_state_and_initialization.svg",
+    "render_hash": "00402cb1dba2a32144cf2e2a5080c2c9616e3afabdef2a170db7d63f67e44440"
+  },
+  "method_02_prescribed_periodic_excitation": {
+    "latex": "u_i(t)=\\operatorname{clip}_{[0,1]}U_i\\!\\left(\\operatorname{frac}\\frac{t}{T}\\right)",
+    "rendered_latex": "u_i(t)=\\operatorname{clip}_{[0,1]}U_i\\left(\\operatorname{frac}\\frac{t}{T}\\right)",
+    "label": "Prescribed periodic excitation",
+    "number": "2",
+    "inline": false,
+    "file": "method_02_prescribed_periodic_excitation.svg",
+    "render_hash": "07c7b06fd442ede03652fa1f1e761f1fe88e2906e8972778abf9023cecb0c910"
+  },
+  "method_03_activation_dynamics": {
+    "latex": "\\dot a_i=\\frac{u_i-a_i}{\\tau_i},\\qquad \\tau_i=\\begin{cases}\\tau_{act,i}(0.5+1.5a_i)&u_i>a_i\\\\ \\tau_{deact,i}/(0.5+1.5a_i)&u_i\\leq a_i\\end{cases}",
+    "rendered_latex": "\\dot a_i=\\frac{u_i-a_i}{\\tau_i},\\qquad \\tau_i=\\begin{cases}\\tau_{act,i}(0.5+1.5a_i)&u_i>a_i\\\\ \\tau_{deact,i}/(0.5+1.5a_i)&u_i\\leq a_i\\end{cases}",
+    "label": "Activation dynamics",
+    "number": "3",
+    "inline": false,
+    "file": "method_03_activation_dynamics.svg",
+    "render_hash": "31e3a38234ab7741d164481476d57e91dc039191cf9ffec43e557268612ecd97"
+  },
+  "method_04_path_length_and_fiber_tendon_partition": {
+    "latex": "L_{MT,i}(\\mathbf q)=L_{path,i}(\\mathbf q)+\\Delta L_i,\\qquad l_{T,i}=L_{MT,i}-l_{f,i}\\cos\\alpha_i",
+    "rendered_latex": "L_{MT,i}(\\mathbf q)=L_{path,i}(\\mathbf q)+\\Delta L_i,\\qquad l_{T,i}=L_{MT,i}-l_{f,i}\\cos\\alpha_i",
+    "label": "Path length and fiber–tendon partition",
+    "number": "4",
+    "inline": false,
+    "file": "method_04_path_length_and_fiber_tendon_partition.svg",
+    "render_hash": "22cae4cef14a123fc5c9f2777481c5e027c7b29ce54cda2aa55ab4669f65d7c4"
+  },
+  "method_05_normalized_fiber_variables": {
+    "latex": "\\lambda_i=\\frac{l_{f,i}}{l_{opt,i}},\\qquad\\nu_i=\\frac{\\dot l_{f,i}}{l_{opt,i}v_{max,i}}",
+    "rendered_latex": "\\lambda_i=\\frac{l_{f,i}}{l_{opt,i}},\\qquad\\nu_i=\\frac{\\dot l_{f,i}}{l_{opt,i}v_{max,i}}",
+    "label": "Normalized fiber variables",
+    "number": "5",
+    "inline": false,
+    "file": "method_05_normalized_fiber_variables.svg",
+    "render_hash": "cbf2f419a1571f8e54fa2fa6b724de207e49dd0b10373a78ebdb62448297bf87"
+  },
+  "method_06_active_force_length_curve": {
+    "latex": "f_L(\\lambda_i)=\\exp\\left[-\\left|\\frac{\\lambda_i^{1.55}-1}{0.55}\\right|^{\\rho_i}\\right]",
+    "rendered_latex": "f_L(\\lambda_i)=\\exp\\left[-\\left|\\frac{\\lambda_i^{1.55}-1}{0.55}\\right|^{\\rho_i}\\right]",
+    "label": "Active force–length curve",
+    "number": "6",
+    "inline": false,
+    "file": "method_06_active_force_length_curve.svg",
+    "render_hash": "1a5cd84d69bd1bd9419d5d65ad5c4bdb3b05cbcbd1458809e0b7760ccf59ea01"
+  },
+  "method_07_applied_smooth_force_velocity_curve": {
+    "latex": "f_V(\\nu)=\\max\\{0,d_1\\operatorname{asinh}(d_2\\nu+d_3)+d_4\\}",
+    "rendered_latex": "f_V(\\nu)=\\max\\{0,d_1\\operatorname{asinh}(d_2\\nu+d_3)+d_4\\}",
+    "label": "Applied smooth force–velocity curve",
+    "number": "7",
+    "inline": false,
+    "file": "method_07_applied_smooth_force_velocity_curve.svg",
+    "render_hash": "e58a1470ed86996b91e94027f27004134a97cd1b6d4297e2465e03d9a54d3003"
+  },
+  "method_08_optional_source_velocity_curve": {
+    "latex": "f_V^{src}(\\nu)=\\begin{cases}\\max\\{0,c_i(1+\\nu)/(c_i-\\nu)\\}&\\nu<0\\\\ [e_i+(1.8+0.8e_i)\\nu]/(e_i+\\nu)&\\nu\\geq0\\end{cases}",
+    "rendered_latex": "f_V^{src}(\\nu)=\\begin{cases}\\max\\{0,c_i(1+\\nu)/(c_i-\\nu)\\}&\\nu<0\\\\ [e_i+(1.8+0.8e_i)\\nu]/(e_i+\\nu)&\\nu\\geq0\\end{cases}",
+    "label": "Optional source velocity curve",
+    "number": "8",
+    "inline": false,
+    "file": "method_08_optional_source_velocity_curve.svg",
+    "render_hash": "37776137937a62efef3aaa5633010dea175f40d4d2b02179355f4653b92a0b6f"
+  },
+  "method_09_passive_fiber_force": {
+    "latex": "f_{PE}(\\lambda)=\\begin{cases}\\dfrac{0.0075}{11.6}\\left[\\exp(11.6(\\lambda-1))-1\\right]&\\lambda>1\\ \\text{and enabled}\\\\0&\\text{otherwise}\\end{cases}",
+    "rendered_latex": "f_{PE}(\\lambda)=\\begin{cases}\\dfrac{0.0075}{11.6}\\left[\\exp(11.6(\\lambda-1))-1\\right]&\\lambda>1\\ \\text{and enabled}\\\\0&\\text{otherwise}\\end{cases}",
+    "label": "Passive fiber force",
+    "number": "9",
+    "inline": false,
+    "file": "method_09_passive_fiber_force.svg",
+    "render_hash": "6a50df430ad4f6b46191944009828c1fa31834c0892e2a7ea38f99deaff806de"
+  },
+  "method_10_elastic_tendon_law": {
+    "latex": "\\epsilon_i=\\frac{l_{T,i}-l_{s,i}}{l_{s,i}},\\quad f_T(\\epsilon)=\\begin{cases}0&\\epsilon\\leq0\\\\0.33\\dfrac{e^{k\\epsilon/\\epsilon_{toe}}-1}{e^k-1}&0<\\epsilon\\leq\\epsilon_{toe}\\\\0.33+\\dfrac{0.67(\\epsilon-\\epsilon_{toe})}{\\epsilon_0-\\epsilon_{toe}}&\\epsilon>\\epsilon_{toe}\\end{cases}",
+    "rendered_latex": "\\begin{gathered}\\epsilon_i=\\frac{l_{T,i}-l_{s,i}}{l_{s,i}}, \\\\  f_T(\\epsilon)=\\begin{cases}0&\\epsilon\\leq0\\\\0.33\\dfrac{e^{k\\epsilon/\\epsilon_{toe}}-1}{e^k-1}&0<\\epsilon\\leq\\epsilon_{toe}\\\\0.33+\\dfrac{0.67(\\epsilon-\\epsilon_{toe})}{\\epsilon_0-\\epsilon_{toe}}&\\epsilon>\\epsilon_{toe}\\end{cases}\\end{gathered}",
+    "label": "Elastic tendon law",
+    "number": "10",
+    "inline": false,
+    "file": "method_10_elastic_tendon_law.svg",
+    "render_hash": "53bfc405852673d2bb377a72215e251bb1596be85dd17e668f2aa09e9e71894d"
+  },
+  "method_11_continuous_tendon_transition": {
+    "latex": "\\epsilon_{toe}=\\epsilon_0\\frac{0.33ke^k}{0.33ke^k+0.67(e^k-1)},\\qquad F_{T,i}=F_{0,i}f_T(\\epsilon_i)",
+    "rendered_latex": "\\epsilon_{toe}=\\epsilon_0\\frac{0.33ke^k}{0.33ke^k+0.67(e^k-1)},\\qquad F_{T,i}=F_{0,i}f_T(\\epsilon_i)",
+    "label": "Continuous tendon transition",
+    "number": "11",
+    "inline": false,
+    "file": "method_11_continuous_tendon_transition.svg",
+    "render_hash": "5b6ecb63dd6328973d9ae3e22462e62836592dd51f6dd8ce7696f357c643fa3c"
+  },
+  "method_12_fiber_tendon_equilibrium_and_time_discretization": {
+    "latex": "f_T(\\epsilon_i)-a_i f_L(\\lambda_i)f_V(\\nu_i)-f_{PE}(\\lambda_i)-\\beta_i\\nu_i=0,\\qquad\\dot l_{f,i}^{n+1}=\\frac{l_{f,i}^{n+1}-l_{f,i}^{n}}{h}",
+    "rendered_latex": "f_T(\\epsilon_i)-a_i f_L(\\lambda_i)f_V(\\nu_i)-f_{PE}(\\lambda_i)-\\beta_i\\nu_i=0,\\qquad\\dot l_{f,i}^{n+1}=\\frac{l_{f,i}^{n+1}-l_{f,i}^{n}}{h}",
+    "label": "Fiber–tendon equilibrium and time discretization",
+    "number": "12",
+    "inline": false,
+    "file": "method_12_fiber_tendon_equilibrium_and_time_discretization.svg",
+    "render_hash": "732b22ffe80a4bb4dd7ad13c6569dea892804436813bbdcf5aa7413d703f4e36"
+  },
+  "method_13_generalized_muscle_force_and_moment_arms": {
+    "latex": "r_{ij}=-\\frac{\\partial L_{MT,i}}{\\partial q_j},\\qquad Q_{m,j}=\\sum_i r_{ij}F_{T,i}",
+    "rendered_latex": "r_{ij}=-\\frac{\\partial L_{MT,i}}{\\partial q_j},\\qquad Q_{m,j}=\\sum_i r_{ij}F_{T,i}",
+    "label": "Generalized muscle force and moment arms",
+    "number": "13",
+    "inline": false,
+    "file": "method_13_generalized_muscle_force_and_moment_arms.svg",
+    "render_hash": "801ee2f3d8663bf9fbe1e4ec66ddb7c805c8fa04ca67beb1e2cf9b1111582930"
+  },
+  "method_14_normal_contact_at_each_pad": {
+    "latex": "\\delta_p=\\max(0,R_p-z_p),\\qquad F_{z,p}=k_{n,p}\\delta_p^{3/2}\\max(0,1-c_{n,p}v_{z,p})",
+    "rendered_latex": "\\delta_p=\\max(0,R_p-z_p),\\qquad F_{z,p}=k_{n,p}\\delta_p^{3/2}\\max(0,1-c_{n,p}v_{z,p})",
+    "label": "Normal contact at each pad",
+    "number": "14",
+    "inline": false,
+    "file": "method_14_normal_contact_at_each_pad.svg",
+    "render_hash": "9821c322d3d7ba025cfdc0a8d1de50ff5b773352c3ef1c97d8d224a5adc99555"
+  },
+  "method_15_tangential_trial_force": {
+    "latex": "\\boldsymbol\\xi^*=\\boldsymbol\\xi^n+h\\mathbf v_t,\\quad b_{eff}=b_t\\min(1,\\delta/\\delta_d),\\quad\\mathbf T^*=k_t\\boldsymbol\\xi^*+b_{eff}\\mathbf v_t",
+    "rendered_latex": "\\boldsymbol\\xi^*=\\boldsymbol\\xi^n+h\\mathbf v_t,\\quad b_{eff}=b_t\\min(1,\\delta/\\delta_d),\\quad\\mathbf T^*=k_t\\boldsymbol\\xi^*+b_{eff}\\mathbf v_t",
+    "label": "Tangential trial force",
+    "number": "15",
+    "inline": false,
+    "file": "method_15_tangential_trial_force.svg",
+    "render_hash": "ed20d37e17ed3dbaee29c6da4366c2f7d126cb443ea86b46950677cef9f96066"
+  },
+  "method_16_friction_limit_and_slip_return": {
+    "latex": "\\mathbf F_t=-\\mathbf T^*\\min\\!\\left(1,\\frac{\\mu F_z}{\\|\\mathbf T^*\\|}\\right),\\quad\\gamma=\\frac{[\\|\\mathbf T^*\\|-\\mu F_z]_+}{k_t h+b_{eff}},\\quad\\boldsymbol\\xi^{n+1}=\\boldsymbol\\xi^*-h\\gamma\\frac{\\mathbf T^*}{\\|\\mathbf T^*\\|}",
+    "rendered_latex": "\\begin{gathered}\\mathbf F_t=-\\mathbf T^*\\min\\left(1,\\frac{\\mu F_z}{\\|\\mathbf T^*\\|}\\right), \\\\ \\gamma=\\frac{[\\|\\mathbf T^*\\|-\\mu F_z]_+}{k_t h+b_{eff}}, \\\\ \\boldsymbol\\xi^{n+1}=\\boldsymbol\\xi^*-h\\gamma\\frac{\\mathbf T^*}{\\|\\mathbf T^*\\|}\\end{gathered}",
+    "label": "Friction limit and slip return",
+    "number": "16",
+    "inline": false,
+    "file": "method_16_friction_limit_and_slip_return.svg",
+    "render_hash": "dac506a762298a9059a2f7742288be4a5dc0b5de74a2a30675b8f2f9699d5c75"
+  },
+  "method_17_paw_resultant_and_body_wrench": {
+    "latex": "\\mathbf F_{paw}=\\sum_{p\\in paw}\\mathbf F_p,\\qquad\\boldsymbol\\tau_b=\\sum_{p\\in b}(\\mathbf x_p-\\mathbf c_b)\\times\\mathbf F_p",
+    "rendered_latex": "\\mathbf F_{paw}=\\sum_{p\\in paw}\\mathbf F_p,\\qquad\\boldsymbol\\tau_b=\\sum_{p\\in b}(\\mathbf x_p-\\mathbf c_b)\\times\\mathbf F_p",
+    "label": "Paw resultant and body wrench",
+    "number": "17",
+    "inline": false,
+    "file": "method_17_paw_resultant_and_body_wrench.svg",
+    "render_hash": "8d7fb8c485d8cf88c62b2458fb3b7face94c2e7e249052bbf335d85036fd1aaa"
+  },
+  "method_18_coupled_multibody_dynamics": {
+    "latex": "\\mathbf M(\\mathbf q)\\ddot{\\mathbf q}+\\mathbf b(\\mathbf q,\\dot{\\mathbf q})=\\mathbf Q_m+\\mathbf Q_{passive}+\\mathbf J_c^T\\mathbf F_c+\\mathbf Q_{constraint}",
+    "rendered_latex": "\\mathbf M(\\mathbf q)\\ddot{\\mathbf q}+\\mathbf b(\\mathbf q,\\dot{\\mathbf q})=\\mathbf Q_m+\\mathbf Q_{passive}+\\mathbf J_c^T\\mathbf F_c+\\mathbf Q_{constraint}",
+    "label": "Coupled multibody dynamics",
+    "number": "18",
+    "inline": false,
+    "file": "method_18_coupled_multibody_dynamics.svg",
+    "render_hash": "50c50abd80ed5d3c5ce09e9546eeed661097b7dfabe5a4925b5dfac01e33133c"
+  },
+  "method_19_passive_joint_forces": {
+    "latex": "Q_{passive,j}=-k_j(q_j-q_{ref,j})-b_j\\dot q_j",
+    "rendered_latex": "Q_{passive,j}=-k_j(q_j-q_{ref,j})-b_j\\dot q_j",
+    "label": "Passive joint forces",
+    "number": "19",
+    "inline": false,
+    "file": "method_19_passive_joint_forces.svg",
+    "render_hash": "0fb620f47e7243a04720a4a6faa425107da283bd8914275a6e9bd8fa900377c9"
+  },
+  "method_20_anatomical_angle_conventions": {
+    "latex": "\\boldsymbol\\theta_H=( -q_{hip},\\ \\pi+q_{knee},\\ \\pi-q_{ankle},\\ \\pi-q_{MTP}),\\quad\\boldsymbol\\theta_F=(\\pi+q_{shoulder},\\ \\pi-q_{elbow},\\ \\pi-q_{wrist},\\ \\pi-q_{MCP})",
+    "rendered_latex": "\\begin{gathered}\\boldsymbol\\theta_H=( -q_{hip},\\ \\pi+q_{knee},\\ \\pi-q_{ankle},\\ \\pi-q_{MTP}), \\\\ \\boldsymbol\\theta_F=(\\pi+q_{shoulder},\\ \\pi-q_{elbow},\\ \\pi-q_{wrist},\\ \\pi-q_{MCP})\\end{gathered}",
+    "label": "Anatomical angle conventions",
+    "number": "20",
+    "inline": false,
+    "file": "method_20_anatomical_angle_conventions.svg",
+    "render_hash": "dd69cfd03f42a3e0a55323addb1efb1c2c0495d3d96ad38243c94cb1c9c66fe9"
+  },
+  "method_21_fixed_reference_clocks": {
+    "latex": "\\phi_s(t)=\\operatorname{frac}(t/T+\\Delta_s),\\qquad\\boldsymbol\\Delta=(1.0,0.5,0.75,1.25)",
+    "rendered_latex": "\\phi_s(t)=\\operatorname{frac}(t/T+\\Delta_s),\\qquad\\boldsymbol\\Delta=(1.0,0.5,0.75,1.25)",
+    "label": "Fixed reference clocks",
+    "number": "21",
+    "inline": false,
+    "file": "method_21_fixed_reference_clocks.svg",
+    "render_hash": "ad177a9697451b844c2e7abe4a5a461420aa44dc8eff853fe367cfe7cd26b88f"
+  },
+  "method_22_reported_errors_and_display_normalization": {
+    "latex": "RMSE_y=\\sqrt{\\frac1N\\sum_{n=1}^N(y_n-y_n^{ref})^2},\\quad\\widetilde u_i=u_i/u_{peak,i}^{intact},\\quad\\widetilde a_i=a_i/u_{peak,i}^{intact}",
+    "rendered_latex": "RMSE_y=\\sqrt{\\frac1N\\sum_{n=1}^N(y_n-y_n^{ref})^2},\\quad\\widetilde u_i=u_i/u_{peak,i}^{intact},\\quad\\widetilde a_i=a_i/u_{peak,i}^{intact}",
+    "label": "Reported errors and display normalization",
+    "number": "22",
+    "inline": false,
+    "file": "method_22_reported_errors_and_display_normalization.svg",
+    "render_hash": "3898b359999dff53da6239bd42e16c99a4f254755feb49282bd985b37281c905"
+  },
+  "passive_fiber_mechanics_01": {
+    "latex": "{F}_{PE,i}={F}_{0,i}\\,\\frac{0.0075}{11.6}{[\\exp \\,(\\min \\{50,11.6({\\lambda }_{i}-1)\\})-1]}_{+},\\,{\\lambda }_{i}=\\frac{{l}_{f,i}}{{l}_{opt,i}}",
+    "rendered_latex": "{F}_{PE,i}={F}_{0,i}\\,\\frac{0.0075}{11.6}{[\\exp \\,(\\min \\{50,11.6({\\lambda }_{i}-1)\\})-1]}_{+},\\,{\\lambda }_{i}=\\frac{{l}_{f,i}}{{l}_{opt,i}}",
+    "label": "Published passive law, included inside the forward solve",
+    "number": null,
+    "inline": false,
+    "file": "passive_fiber_mechanics_01.svg",
+    "render_hash": "900b94eaaa64f772fc9c9069a7a7ec87bb4f68bd6e0605c76270e3cabe1cd3e8"
+  },
+  "passive_fiber_mechanics_02": {
+    "latex": "{F}_{T,i}={F}_{0,i}[{a}_{i}{f}_{L}({\\lambda }_{i}){f}_{V}({\\nu }_{i})+{f}_{PE}({\\lambda }_{i})+{\\beta }_{i}{\\nu }_{i}],\\,{L}_{MT,i}={l}_{f,i}\\cos {\\alpha }_{i}+{l}_{T,i}",
+    "rendered_latex": "{F}_{T,i}={F}_{0,i}[{a}_{i}{f}_{L}({\\lambda }_{i}){f}_{V}({\\nu }_{i})+{f}_{PE}({\\lambda }_{i})+{\\beta }_{i}{\\nu }_{i}],\\,{L}_{MT,i}={l}_{f,i}\\cos {\\alpha }_{i}+{l}_{T,i}",
+    "label": "Published passive law, included inside the forward solve",
+    "number": null,
+    "inline": false,
+    "file": "passive_fiber_mechanics_02.svg",
+    "render_hash": "cea1da485001000c1968ea8da62c3665d562174724769d68e4a4ffa8e61802d2"
+  },
+  "readme_01": {
+    "latex": "\\dot a_i=(u_i-a_i)/\\tau_i,\\qquad L_{MT,i}=l_{f,i}\\cos\\alpha_i+l_{T,i}",
+    "rendered_latex": "\\dot a_i=(u_i-a_i)/\\tau_i,\\qquad L_{MT,i}=l_{f,i}\\cos\\alpha_i+l_{T,i}",
+    "label": "Activation and muscle–tendon length",
+    "number": null,
+    "inline": false,
+    "file": "readme_01.svg",
+    "render_hash": "4bbd29c205f054697e4f40f206b6c1405e7efb50bf8cc84fe73ee88986c2350e"
+  },
+  "readme_02": {
+    "latex": "F_{T,i}=F_{0,i}f_T\\left((l_{T,i}-l_{s,i})/l_{s,i}\\right),\\qquad Q_{m,j}=\\sum_i\\left(-\\frac{\\partial L_{MT,i}}{\\partial q_j}\\right)F_{T,i}",
+    "rendered_latex": "F_{T,i}=F_{0,i}f_T\\left((l_{T,i}-l_{s,i})/l_{s,i}\\right),\\qquad Q_{m,j}=\\sum_i\\left(-\\frac{\\partial L_{MT,i}}{\\partial q_j}\\right)F_{T,i}",
+    "label": "Tendon force and muscle moments",
+    "number": null,
+    "inline": false,
+    "file": "readme_02.svg",
+    "render_hash": "ca0270d9fd5edad0eab8b08bbf26f2d40dea6b9d50702ea65f04f8ee56c79198"
+  },
+  "readme_03": {
+    "latex": "M(q)\\ddot q+b(q,\\dot q)=Q_m+Q_{passive}+J_c^TF_c+Q_{constraint}",
+    "rendered_latex": "M(q)\\ddot q+b(q,\\dot q)=Q_m+Q_{passive}+J_c^TF_c+Q_{constraint}",
+    "label": "Coupled multibody dynamics",
+    "number": null,
+    "inline": false,
+    "file": "readme_03.svg",
+    "render_hash": "841b575f13490e81edddb76d5feb9d003755c659bd6d20e929f2f4616fa44c61"
+  }
+}

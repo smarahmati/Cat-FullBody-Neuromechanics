@@ -4,173 +4,2692 @@
 
 [Back to parameter guide](../parameter_tables.md)
 
-| Object | Parameter | Unit | Meaning | Source value | Value used in this model | What changed and why | Source / evidence |
-| --- | --- | --- | --- | --- | --- | --- | --- |
-| L_IP_wrap0 | position_in_body_m | m | Muscle wrap surface geometry in its owning body frame; not a visual bone or paw contact. | Not established | [0.0, 0.0, 0.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| L_IP_wrap0 | orientation_in_body_wxyz | 1 | Muscle wrap surface geometry in its owning body frame; not a visual bone or paw contact. | Not established | [1.0, 0.0, 0.0, 0.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| L_IP_wrap0 | radius_m | m | Muscle wrap surface geometry in its owning body frame; not a visual bone or paw contact. | Not established | 0.0045712376 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| L_BFA_wrap0 | position_in_body_m | m | Muscle wrap surface geometry in its owning body frame; not a visual bone or paw contact. | Not established | [0.0, 0.0, 0.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| L_BFA_wrap0 | orientation_in_body_wxyz | 1 | Muscle wrap surface geometry in its owning body frame; not a visual bone or paw contact. | Not established | [1.0, 0.0, 0.0, 0.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| L_BFA_wrap0 | radius_m | m | Muscle wrap surface geometry in its owning body frame; not a visual bone or paw contact. | Not established | 0.0045712376 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| L_RF_wrap0 | position_in_body_m | m | Muscle wrap surface geometry in its owning body frame; not a visual bone or paw contact. | Not established | [0.0, 0.0, 0.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| L_RF_wrap0 | orientation_in_body_wxyz | 1 | Muscle wrap surface geometry in its owning body frame; not a visual bone or paw contact. | Not established | [1.0, 0.0, 0.0, 0.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| L_RF_wrap0 | radius_m | m | Muscle wrap surface geometry in its owning body frame; not a visual bone or paw contact. | Not established | 0.0047638278 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| L_BFP_wrap0 | position_in_body_m | m | Muscle wrap surface geometry in its owning body frame; not a visual bone or paw contact. | Not established | [0.0, 0.0, 0.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| L_BFP_wrap0 | orientation_in_body_wxyz | 1 | Muscle wrap surface geometry in its owning body frame; not a visual bone or paw contact. | Not established | [1.0, 0.0, 0.0, 0.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| L_BFP_wrap0 | radius_m | m | Muscle wrap surface geometry in its owning body frame; not a visual bone or paw contact. | Not established | 0.0047638278 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| L_SAM_wrap0 | position_in_body_m | m | Muscle wrap surface geometry in its owning body frame; not a visual bone or paw contact. | Not established | [0.0, 0.0, 0.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| L_SAM_wrap0 | orientation_in_body_wxyz | 1 | Muscle wrap surface geometry in its owning body frame; not a visual bone or paw contact. | Not established | [1.0, 0.0, 0.0, 0.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| L_SAM_wrap0 | radius_m | m | Muscle wrap surface geometry in its owning body frame; not a visual bone or paw contact. | Not established | 0.0047638278 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| L_VL_wrap0 | position_in_body_m | m | Muscle wrap surface geometry in its owning body frame; not a visual bone or paw contact. | Not established | [0.0955, 0.0, 0.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| L_VL_wrap0 | orientation_in_body_wxyz | 1 | Muscle wrap surface geometry in its owning body frame; not a visual bone or paw contact. | Not established | [1.0, 0.0, 0.0, 0.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| L_VL_wrap0 | radius_m | m | Muscle wrap surface geometry in its owning body frame; not a visual bone or paw contact. | Not established | 0.010585366 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| L_VM_wrap0 | position_in_body_m | m | Muscle wrap surface geometry in its owning body frame; not a visual bone or paw contact. | Not established | [0.0955, 0.0, 0.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| L_VM_wrap0 | orientation_in_body_wxyz | 1 | Muscle wrap surface geometry in its owning body frame; not a visual bone or paw contact. | Not established | [1.0, 0.0, 0.0, 0.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| L_VM_wrap0 | radius_m | m | Muscle wrap surface geometry in its owning body frame; not a visual bone or paw contact. | Not established | 0.010585366 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| L_RF_wrap1 | position_in_body_m | m | Muscle wrap surface geometry in its owning body frame; not a visual bone or paw contact. | Not established | [0.0955, 0.0, 0.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| L_RF_wrap1 | orientation_in_body_wxyz | 1 | Muscle wrap surface geometry in its owning body frame; not a visual bone or paw contact. | Not established | [1.0, 0.0, 0.0, 0.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| L_RF_wrap1 | radius_m | m | Muscle wrap surface geometry in its owning body frame; not a visual bone or paw contact. | Not established | 0.010585366 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| L_BFP_wrap1 | position_in_body_m | m | Muscle wrap surface geometry in its owning body frame; not a visual bone or paw contact. | Not established | [0.0955, 0.0, 0.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| L_BFP_wrap1 | orientation_in_body_wxyz | 1 | Muscle wrap surface geometry in its owning body frame; not a visual bone or paw contact. | Not established | [1.0, 0.0, 0.0, 0.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| L_BFP_wrap1 | radius_m | m | Muscle wrap surface geometry in its owning body frame; not a visual bone or paw contact. | Not established | 0.0057165934 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| L_SAM_wrap1 | position_in_body_m | m | Muscle wrap surface geometry in its owning body frame; not a visual bone or paw contact. | Not established | [0.0955, 0.0, 0.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| L_SAM_wrap1 | orientation_in_body_wxyz | 1 | Muscle wrap surface geometry in its owning body frame; not a visual bone or paw contact. | Not established | [1.0, 0.0, 0.0, 0.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| L_SAM_wrap1 | radius_m | m | Muscle wrap surface geometry in its owning body frame; not a visual bone or paw contact. | Not established | 0.0057165934 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| L_LG_wrap0 | position_in_body_m | m | Muscle wrap surface geometry in its owning body frame; not a visual bone or paw contact. | Not established | [0.0955, 0.0, 0.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| L_LG_wrap0 | orientation_in_body_wxyz | 1 | Muscle wrap surface geometry in its owning body frame; not a visual bone or paw contact. | Not established | [1.0, 0.0, 0.0, 0.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| L_LG_wrap0 | radius_m | m | Muscle wrap surface geometry in its owning body frame; not a visual bone or paw contact. | Not established | 0.0058890031 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| L_MG_wrap0 | position_in_body_m | m | Muscle wrap surface geometry in its owning body frame; not a visual bone or paw contact. | Not established | [0.0955, 0.0, 0.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| L_MG_wrap0 | orientation_in_body_wxyz | 1 | Muscle wrap surface geometry in its owning body frame; not a visual bone or paw contact. | Not established | [1.0, 0.0, 0.0, 0.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| L_MG_wrap0 | radius_m | m | Muscle wrap surface geometry in its owning body frame; not a visual bone or paw contact. | Not established | 0.0058890031 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| L_TA_wrap0 | position_in_body_m | m | Muscle wrap surface geometry in its owning body frame; not a visual bone or paw contact. | Not established | [0.1085, 0.0, 0.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| L_TA_wrap0 | orientation_in_body_wxyz | 1 | Muscle wrap surface geometry in its owning body frame; not a visual bone or paw contact. | Not established | [1.0, 0.0, 0.0, 0.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| L_TA_wrap0 | radius_m | m | Muscle wrap surface geometry in its owning body frame; not a visual bone or paw contact. | Not established | 0.005077401 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| L_SO_wrap0 | position_in_body_m | m | Muscle wrap surface geometry in its owning body frame; not a visual bone or paw contact. | Not established | [0.1085, 0.0, 0.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| L_SO_wrap0 | orientation_in_body_wxyz | 1 | Muscle wrap surface geometry in its owning body frame; not a visual bone or paw contact. | Not established | [1.0, 0.0, 0.0, 0.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| L_SO_wrap0 | radius_m | m | Muscle wrap surface geometry in its owning body frame; not a visual bone or paw contact. | Not established | 0.005077401 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| L_LG_wrap1 | position_in_body_m | m | Muscle wrap surface geometry in its owning body frame; not a visual bone or paw contact. | Not established | [0.1085, 0.0, 0.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| L_LG_wrap1 | orientation_in_body_wxyz | 1 | Muscle wrap surface geometry in its owning body frame; not a visual bone or paw contact. | Not established | [1.0, 0.0, 0.0, 0.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| L_LG_wrap1 | radius_m | m | Muscle wrap surface geometry in its owning body frame; not a visual bone or paw contact. | Not established | 0.0048848108 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| L_MG_wrap1 | position_in_body_m | m | Muscle wrap surface geometry in its owning body frame; not a visual bone or paw contact. | Not established | [0.1085, 0.0, 0.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| L_MG_wrap1 | orientation_in_body_wxyz | 1 | Muscle wrap surface geometry in its owning body frame; not a visual bone or paw contact. | Not established | [1.0, 0.0, 0.0, 0.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| L_MG_wrap1 | radius_m | m | Muscle wrap surface geometry in its owning body frame; not a visual bone or paw contact. | Not established | 0.0048848108 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| R_IP_wrap0 | position_in_body_m | m | Muscle wrap surface geometry in its owning body frame; not a visual bone or paw contact. | Not established | [0.0, 0.0, 0.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| R_IP_wrap0 | orientation_in_body_wxyz | 1 | Muscle wrap surface geometry in its owning body frame; not a visual bone or paw contact. | Not established | [1.0, 0.0, 0.0, 0.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| R_IP_wrap0 | radius_m | m | Muscle wrap surface geometry in its owning body frame; not a visual bone or paw contact. | Not established | 0.0045712376 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| R_BFA_wrap0 | position_in_body_m | m | Muscle wrap surface geometry in its owning body frame; not a visual bone or paw contact. | Not established | [0.0, 0.0, 0.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| R_BFA_wrap0 | orientation_in_body_wxyz | 1 | Muscle wrap surface geometry in its owning body frame; not a visual bone or paw contact. | Not established | [1.0, 0.0, 0.0, 0.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| R_BFA_wrap0 | radius_m | m | Muscle wrap surface geometry in its owning body frame; not a visual bone or paw contact. | Not established | 0.0045712376 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| R_RF_wrap0 | position_in_body_m | m | Muscle wrap surface geometry in its owning body frame; not a visual bone or paw contact. | Not established | [0.0, 0.0, 0.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| R_RF_wrap0 | orientation_in_body_wxyz | 1 | Muscle wrap surface geometry in its owning body frame; not a visual bone or paw contact. | Not established | [1.0, 0.0, 0.0, 0.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| R_RF_wrap0 | radius_m | m | Muscle wrap surface geometry in its owning body frame; not a visual bone or paw contact. | Not established | 0.0047638278 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| R_BFP_wrap0 | position_in_body_m | m | Muscle wrap surface geometry in its owning body frame; not a visual bone or paw contact. | Not established | [0.0, 0.0, 0.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| R_BFP_wrap0 | orientation_in_body_wxyz | 1 | Muscle wrap surface geometry in its owning body frame; not a visual bone or paw contact. | Not established | [1.0, 0.0, 0.0, 0.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| R_BFP_wrap0 | radius_m | m | Muscle wrap surface geometry in its owning body frame; not a visual bone or paw contact. | Not established | 0.0047638278 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| R_SAM_wrap0 | position_in_body_m | m | Muscle wrap surface geometry in its owning body frame; not a visual bone or paw contact. | Not established | [0.0, 0.0, 0.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| R_SAM_wrap0 | orientation_in_body_wxyz | 1 | Muscle wrap surface geometry in its owning body frame; not a visual bone or paw contact. | Not established | [1.0, 0.0, 0.0, 0.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| R_SAM_wrap0 | radius_m | m | Muscle wrap surface geometry in its owning body frame; not a visual bone or paw contact. | Not established | 0.0047638278 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| R_VL_wrap0 | position_in_body_m | m | Muscle wrap surface geometry in its owning body frame; not a visual bone or paw contact. | Not established | [0.0955, 0.0, 0.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| R_VL_wrap0 | orientation_in_body_wxyz | 1 | Muscle wrap surface geometry in its owning body frame; not a visual bone or paw contact. | Not established | [1.0, 0.0, 0.0, 0.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| R_VL_wrap0 | radius_m | m | Muscle wrap surface geometry in its owning body frame; not a visual bone or paw contact. | Not established | 0.010585366 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| R_VM_wrap0 | position_in_body_m | m | Muscle wrap surface geometry in its owning body frame; not a visual bone or paw contact. | Not established | [0.0955, 0.0, 0.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| R_VM_wrap0 | orientation_in_body_wxyz | 1 | Muscle wrap surface geometry in its owning body frame; not a visual bone or paw contact. | Not established | [1.0, 0.0, 0.0, 0.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| R_VM_wrap0 | radius_m | m | Muscle wrap surface geometry in its owning body frame; not a visual bone or paw contact. | Not established | 0.010585366 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| R_RF_wrap1 | position_in_body_m | m | Muscle wrap surface geometry in its owning body frame; not a visual bone or paw contact. | Not established | [0.0955, 0.0, 0.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| R_RF_wrap1 | orientation_in_body_wxyz | 1 | Muscle wrap surface geometry in its owning body frame; not a visual bone or paw contact. | Not established | [1.0, 0.0, 0.0, 0.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| R_RF_wrap1 | radius_m | m | Muscle wrap surface geometry in its owning body frame; not a visual bone or paw contact. | Not established | 0.010585366 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| R_BFP_wrap1 | position_in_body_m | m | Muscle wrap surface geometry in its owning body frame; not a visual bone or paw contact. | Not established | [0.0955, 0.0, 0.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| R_BFP_wrap1 | orientation_in_body_wxyz | 1 | Muscle wrap surface geometry in its owning body frame; not a visual bone or paw contact. | Not established | [1.0, 0.0, 0.0, 0.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| R_BFP_wrap1 | radius_m | m | Muscle wrap surface geometry in its owning body frame; not a visual bone or paw contact. | Not established | 0.0057165934 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| R_SAM_wrap1 | position_in_body_m | m | Muscle wrap surface geometry in its owning body frame; not a visual bone or paw contact. | Not established | [0.0955, 0.0, 0.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| R_SAM_wrap1 | orientation_in_body_wxyz | 1 | Muscle wrap surface geometry in its owning body frame; not a visual bone or paw contact. | Not established | [1.0, 0.0, 0.0, 0.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| R_SAM_wrap1 | radius_m | m | Muscle wrap surface geometry in its owning body frame; not a visual bone or paw contact. | Not established | 0.0057165934 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| R_LG_wrap0 | position_in_body_m | m | Muscle wrap surface geometry in its owning body frame; not a visual bone or paw contact. | Not established | [0.0955, 0.0, 0.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| R_LG_wrap0 | orientation_in_body_wxyz | 1 | Muscle wrap surface geometry in its owning body frame; not a visual bone or paw contact. | Not established | [1.0, 0.0, 0.0, 0.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| R_LG_wrap0 | radius_m | m | Muscle wrap surface geometry in its owning body frame; not a visual bone or paw contact. | Not established | 0.0058890031 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| R_MG_wrap0 | position_in_body_m | m | Muscle wrap surface geometry in its owning body frame; not a visual bone or paw contact. | Not established | [0.0955, 0.0, 0.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| R_MG_wrap0 | orientation_in_body_wxyz | 1 | Muscle wrap surface geometry in its owning body frame; not a visual bone or paw contact. | Not established | [1.0, 0.0, 0.0, 0.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| R_MG_wrap0 | radius_m | m | Muscle wrap surface geometry in its owning body frame; not a visual bone or paw contact. | Not established | 0.0058890031 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| R_TA_wrap0 | position_in_body_m | m | Muscle wrap surface geometry in its owning body frame; not a visual bone or paw contact. | Not established | [0.1085, 0.0, 0.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| R_TA_wrap0 | orientation_in_body_wxyz | 1 | Muscle wrap surface geometry in its owning body frame; not a visual bone or paw contact. | Not established | [1.0, 0.0, 0.0, 0.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| R_TA_wrap0 | radius_m | m | Muscle wrap surface geometry in its owning body frame; not a visual bone or paw contact. | Not established | 0.005077401 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| R_SO_wrap0 | position_in_body_m | m | Muscle wrap surface geometry in its owning body frame; not a visual bone or paw contact. | Not established | [0.1085, 0.0, 0.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| R_SO_wrap0 | orientation_in_body_wxyz | 1 | Muscle wrap surface geometry in its owning body frame; not a visual bone or paw contact. | Not established | [1.0, 0.0, 0.0, 0.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| R_SO_wrap0 | radius_m | m | Muscle wrap surface geometry in its owning body frame; not a visual bone or paw contact. | Not established | 0.005077401 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| R_LG_wrap1 | position_in_body_m | m | Muscle wrap surface geometry in its owning body frame; not a visual bone or paw contact. | Not established | [0.1085, 0.0, 0.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| R_LG_wrap1 | orientation_in_body_wxyz | 1 | Muscle wrap surface geometry in its owning body frame; not a visual bone or paw contact. | Not established | [1.0, 0.0, 0.0, 0.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| R_LG_wrap1 | radius_m | m | Muscle wrap surface geometry in its owning body frame; not a visual bone or paw contact. | Not established | 0.0048848108 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| R_MG_wrap1 | position_in_body_m | m | Muscle wrap surface geometry in its owning body frame; not a visual bone or paw contact. | Not established | [0.1085, 0.0, 0.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| R_MG_wrap1 | orientation_in_body_wxyz | 1 | Muscle wrap surface geometry in its owning body frame; not a visual bone or paw contact. | Not established | [1.0, 0.0, 0.0, 0.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| R_MG_wrap1 | radius_m | m | Muscle wrap surface geometry in its owning body frame; not a visual bone or paw contact. | Not established | 0.0048848108 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| FL_ShoulderExtensor_s0_pulley0 | position_in_body_m | m | Muscle wrap surface geometry in its owning body frame; not a visual bone or paw contact. | Not established | [0.05771428571428572, 0.0, 0.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| FL_ShoulderExtensor_s0_pulley0 | orientation_in_body_wxyz | 1 | Muscle wrap surface geometry in its owning body frame; not a visual bone or paw contact. | Not established | [1.0, 0.0, 0.0, 0.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| FL_ShoulderExtensor_s0_pulley0 | radius_m | m | Muscle wrap surface geometry in its owning body frame; not a visual bone or paw contact. | Not established | 0.0079448512 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| FL_BicepsBrachii_s0_pulley0 | position_in_body_m | m | Muscle wrap surface geometry in its owning body frame; not a visual bone or paw contact. | Not established | [0.05771428571428572, 0.0, 0.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| FL_BicepsBrachii_s0_pulley0 | orientation_in_body_wxyz | 1 | Muscle wrap surface geometry in its owning body frame; not a visual bone or paw contact. | Not established | [1.0, 0.0, 0.0, 0.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| FL_BicepsBrachii_s0_pulley0 | radius_m | m | Muscle wrap surface geometry in its owning body frame; not a visual bone or paw contact. | Not established | 0.0099469286 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| FL_ShoulderFlexor_s0_pulley0 | position_in_body_m | m | Muscle wrap surface geometry in its owning body frame; not a visual bone or paw contact. | Not established | [0.05771428571428572, 0.0, 0.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| FL_ShoulderFlexor_s0_pulley0 | orientation_in_body_wxyz | 1 | Muscle wrap surface geometry in its owning body frame; not a visual bone or paw contact. | Not established | [1.0, 0.0, 0.0, 0.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| FL_ShoulderFlexor_s0_pulley0 | radius_m | m | Muscle wrap surface geometry in its owning body frame; not a visual bone or paw contact. | Not established | 0.0018427111 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| FL_TricepsBrachiiLong_s0_pulley0 | position_in_body_m | m | Muscle wrap surface geometry in its owning body frame; not a visual bone or paw contact. | Not established | [0.05771428571428572, 0.0, 0.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| FL_TricepsBrachiiLong_s0_pulley0 | orientation_in_body_wxyz | 1 | Muscle wrap surface geometry in its owning body frame; not a visual bone or paw contact. | Not established | [1.0, 0.0, 0.0, 0.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| FL_TricepsBrachiiLong_s0_pulley0 | radius_m | m | Muscle wrap surface geometry in its owning body frame; not a visual bone or paw contact. | Not established | 0.004419416 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| FL_ElbowExtensor_s0_pulley0 | position_in_body_m | m | Muscle wrap surface geometry in its owning body frame; not a visual bone or paw contact. | Not established | [0.09275714285714286, 0.0, 0.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| FL_ElbowExtensor_s0_pulley0 | orientation_in_body_wxyz | 1 | Muscle wrap surface geometry in its owning body frame; not a visual bone or paw contact. | Not established | [1.0, 0.0, 0.0, 0.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| FL_ElbowExtensor_s0_pulley0 | radius_m | m | Muscle wrap surface geometry in its owning body frame; not a visual bone or paw contact. | Not established | 0.0021176766 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| FL_BicepsBrachii_s0_pulley1 | position_in_body_m | m | Muscle wrap surface geometry in its owning body frame; not a visual bone or paw contact. | Not established | [0.09275714285714286, 0.0, 0.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| FL_BicepsBrachii_s0_pulley1 | orientation_in_body_wxyz | 1 | Muscle wrap surface geometry in its owning body frame; not a visual bone or paw contact. | Not established | [1.0, 0.0, 0.0, 0.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| FL_BicepsBrachii_s0_pulley1 | radius_m | m | Muscle wrap surface geometry in its owning body frame; not a visual bone or paw contact. | Not established | 0.0052591454 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| FL_ElbowFlexor_s0_pulley0 | position_in_body_m | m | Muscle wrap surface geometry in its owning body frame; not a visual bone or paw contact. | Not established | [0.09275714285714286, 0.0, 0.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| FL_ElbowFlexor_s0_pulley0 | orientation_in_body_wxyz | 1 | Muscle wrap surface geometry in its owning body frame; not a visual bone or paw contact. | Not established | [1.0, 0.0, 0.0, 0.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| FL_ElbowFlexor_s0_pulley0 | radius_m | m | Muscle wrap surface geometry in its owning body frame; not a visual bone or paw contact. | Not established | 0.0032 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| FL_ElbowFlexorWristFlexor_s0_pulley0 | position_in_body_m | m | Muscle wrap surface geometry in its owning body frame; not a visual bone or paw contact. | Not established | [0.09275714285714286, 0.0, 0.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| FL_ElbowFlexorWristFlexor_s0_pulley0 | orientation_in_body_wxyz | 1 | Muscle wrap surface geometry in its owning body frame; not a visual bone or paw contact. | Not established | [1.0, 0.0, 0.0, 0.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| FL_ElbowFlexorWristFlexor_s0_pulley0 | radius_m | m | Muscle wrap surface geometry in its owning body frame; not a visual bone or paw contact. | Not established | 0.0053646541 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| FL_TricepsBrachiiLong_s0_pulley1 | position_in_body_m | m | Muscle wrap surface geometry in its owning body frame; not a visual bone or paw contact. | Not established | [0.09275714285714286, 0.0, 0.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| FL_TricepsBrachiiLong_s0_pulley1 | orientation_in_body_wxyz | 1 | Muscle wrap surface geometry in its owning body frame; not a visual bone or paw contact. | Not established | [1.0, 0.0, 0.0, 0.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| FL_TricepsBrachiiLong_s0_pulley1 | radius_m | m | Muscle wrap surface geometry in its owning body frame; not a visual bone or paw contact. | Not established | 0.011883275 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| FL_ElbowFlexorWristFlexor_s1_pulley0 | position_in_body_m | m | Muscle wrap surface geometry in its owning body frame; not a visual bone or paw contact. | Not established | [0.09465714285714286, 0.0, 0.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| FL_ElbowFlexorWristFlexor_s1_pulley0 | orientation_in_body_wxyz | 1 | Muscle wrap surface geometry in its owning body frame; not a visual bone or paw contact. | Not established | [1.0, 0.0, 0.0, 0.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| FL_ElbowFlexorWristFlexor_s1_pulley0 | radius_m | m | Muscle wrap surface geometry in its owning body frame; not a visual bone or paw contact. | Not established | 0.0035074959 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| FL_WristFlexor_s1_pulley0 | position_in_body_m | m | Muscle wrap surface geometry in its owning body frame; not a visual bone or paw contact. | Not established | [0.09465714285714286, 0.0, 0.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| FL_WristFlexor_s1_pulley0 | orientation_in_body_wxyz | 1 | Muscle wrap surface geometry in its owning body frame; not a visual bone or paw contact. | Not established | [1.0, 0.0, 0.0, 0.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| FL_WristFlexor_s1_pulley0 | radius_m | m | Muscle wrap surface geometry in its owning body frame; not a visual bone or paw contact. | Not established | 0.0024 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| FL_WristExtensor_s1_pulley0 | position_in_body_m | m | Muscle wrap surface geometry in its owning body frame; not a visual bone or paw contact. | Not established | [0.09465714285714286, 0.0, 0.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| FL_WristExtensor_s1_pulley0 | orientation_in_body_wxyz | 1 | Muscle wrap surface geometry in its owning body frame; not a visual bone or paw contact. | Not established | [1.0, 0.0, 0.0, 0.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| FL_WristExtensor_s1_pulley0 | radius_m | m | Muscle wrap surface geometry in its owning body frame; not a visual bone or paw contact. | Not established | 0.002710443 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| FR_ShoulderExtensor_s0_pulley0 | position_in_body_m | m | Muscle wrap surface geometry in its owning body frame; not a visual bone or paw contact. | Not established | [0.05771428571428572, 0.0, 0.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| FR_ShoulderExtensor_s0_pulley0 | orientation_in_body_wxyz | 1 | Muscle wrap surface geometry in its owning body frame; not a visual bone or paw contact. | Not established | [1.0, 0.0, 0.0, 0.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| FR_ShoulderExtensor_s0_pulley0 | radius_m | m | Muscle wrap surface geometry in its owning body frame; not a visual bone or paw contact. | Not established | 0.0079448512 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| FR_BicepsBrachii_s0_pulley0 | position_in_body_m | m | Muscle wrap surface geometry in its owning body frame; not a visual bone or paw contact. | Not established | [0.05771428571428572, 0.0, 0.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| FR_BicepsBrachii_s0_pulley0 | orientation_in_body_wxyz | 1 | Muscle wrap surface geometry in its owning body frame; not a visual bone or paw contact. | Not established | [1.0, 0.0, 0.0, 0.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| FR_BicepsBrachii_s0_pulley0 | radius_m | m | Muscle wrap surface geometry in its owning body frame; not a visual bone or paw contact. | Not established | 0.0099469286 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| FR_ShoulderFlexor_s0_pulley0 | position_in_body_m | m | Muscle wrap surface geometry in its owning body frame; not a visual bone or paw contact. | Not established | [0.05771428571428572, 0.0, 0.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| FR_ShoulderFlexor_s0_pulley0 | orientation_in_body_wxyz | 1 | Muscle wrap surface geometry in its owning body frame; not a visual bone or paw contact. | Not established | [1.0, 0.0, 0.0, 0.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| FR_ShoulderFlexor_s0_pulley0 | radius_m | m | Muscle wrap surface geometry in its owning body frame; not a visual bone or paw contact. | Not established | 0.0018427111 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| FR_TricepsBrachiiLong_s0_pulley0 | position_in_body_m | m | Muscle wrap surface geometry in its owning body frame; not a visual bone or paw contact. | Not established | [0.05771428571428572, 0.0, 0.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| FR_TricepsBrachiiLong_s0_pulley0 | orientation_in_body_wxyz | 1 | Muscle wrap surface geometry in its owning body frame; not a visual bone or paw contact. | Not established | [1.0, 0.0, 0.0, 0.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| FR_TricepsBrachiiLong_s0_pulley0 | radius_m | m | Muscle wrap surface geometry in its owning body frame; not a visual bone or paw contact. | Not established | 0.004419416 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| FR_ElbowExtensor_s0_pulley0 | position_in_body_m | m | Muscle wrap surface geometry in its owning body frame; not a visual bone or paw contact. | Not established | [0.09275714285714286, 0.0, 0.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| FR_ElbowExtensor_s0_pulley0 | orientation_in_body_wxyz | 1 | Muscle wrap surface geometry in its owning body frame; not a visual bone or paw contact. | Not established | [1.0, 0.0, 0.0, 0.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| FR_ElbowExtensor_s0_pulley0 | radius_m | m | Muscle wrap surface geometry in its owning body frame; not a visual bone or paw contact. | Not established | 0.0021176766 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| FR_BicepsBrachii_s0_pulley1 | position_in_body_m | m | Muscle wrap surface geometry in its owning body frame; not a visual bone or paw contact. | Not established | [0.09275714285714286, 0.0, 0.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| FR_BicepsBrachii_s0_pulley1 | orientation_in_body_wxyz | 1 | Muscle wrap surface geometry in its owning body frame; not a visual bone or paw contact. | Not established | [1.0, 0.0, 0.0, 0.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| FR_BicepsBrachii_s0_pulley1 | radius_m | m | Muscle wrap surface geometry in its owning body frame; not a visual bone or paw contact. | Not established | 0.0052591454 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| FR_ElbowFlexor_s0_pulley0 | position_in_body_m | m | Muscle wrap surface geometry in its owning body frame; not a visual bone or paw contact. | Not established | [0.09275714285714286, 0.0, 0.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| FR_ElbowFlexor_s0_pulley0 | orientation_in_body_wxyz | 1 | Muscle wrap surface geometry in its owning body frame; not a visual bone or paw contact. | Not established | [1.0, 0.0, 0.0, 0.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| FR_ElbowFlexor_s0_pulley0 | radius_m | m | Muscle wrap surface geometry in its owning body frame; not a visual bone or paw contact. | Not established | 0.0032 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| FR_ElbowFlexorWristFlexor_s0_pulley0 | position_in_body_m | m | Muscle wrap surface geometry in its owning body frame; not a visual bone or paw contact. | Not established | [0.09275714285714286, 0.0, 0.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| FR_ElbowFlexorWristFlexor_s0_pulley0 | orientation_in_body_wxyz | 1 | Muscle wrap surface geometry in its owning body frame; not a visual bone or paw contact. | Not established | [1.0, 0.0, 0.0, 0.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| FR_ElbowFlexorWristFlexor_s0_pulley0 | radius_m | m | Muscle wrap surface geometry in its owning body frame; not a visual bone or paw contact. | Not established | 0.0053646541 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| FR_TricepsBrachiiLong_s0_pulley1 | position_in_body_m | m | Muscle wrap surface geometry in its owning body frame; not a visual bone or paw contact. | Not established | [0.09275714285714286, 0.0, 0.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| FR_TricepsBrachiiLong_s0_pulley1 | orientation_in_body_wxyz | 1 | Muscle wrap surface geometry in its owning body frame; not a visual bone or paw contact. | Not established | [1.0, 0.0, 0.0, 0.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| FR_TricepsBrachiiLong_s0_pulley1 | radius_m | m | Muscle wrap surface geometry in its owning body frame; not a visual bone or paw contact. | Not established | 0.011883275 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| FR_ElbowFlexorWristFlexor_s1_pulley0 | position_in_body_m | m | Muscle wrap surface geometry in its owning body frame; not a visual bone or paw contact. | Not established | [0.09465714285714286, 0.0, 0.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| FR_ElbowFlexorWristFlexor_s1_pulley0 | orientation_in_body_wxyz | 1 | Muscle wrap surface geometry in its owning body frame; not a visual bone or paw contact. | Not established | [1.0, 0.0, 0.0, 0.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| FR_ElbowFlexorWristFlexor_s1_pulley0 | radius_m | m | Muscle wrap surface geometry in its owning body frame; not a visual bone or paw contact. | Not established | 0.0035074959 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| FR_WristFlexor_s1_pulley0 | position_in_body_m | m | Muscle wrap surface geometry in its owning body frame; not a visual bone or paw contact. | Not established | [0.09465714285714286, 0.0, 0.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| FR_WristFlexor_s1_pulley0 | orientation_in_body_wxyz | 1 | Muscle wrap surface geometry in its owning body frame; not a visual bone or paw contact. | Not established | [1.0, 0.0, 0.0, 0.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| FR_WristFlexor_s1_pulley0 | radius_m | m | Muscle wrap surface geometry in its owning body frame; not a visual bone or paw contact. | Not established | 0.0024 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| FR_WristExtensor_s1_pulley0 | position_in_body_m | m | Muscle wrap surface geometry in its owning body frame; not a visual bone or paw contact. | Not established | [0.09465714285714286, 0.0, 0.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| FR_WristExtensor_s1_pulley0 | orientation_in_body_wxyz | 1 | Muscle wrap surface geometry in its owning body frame; not a visual bone or paw contact. | Not established | [1.0, 0.0, 0.0, 0.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| FR_WristExtensor_s1_pulley0 | radius_m | m | Muscle wrap surface geometry in its owning body frame; not a visual bone or paw contact. | Not established | 0.002710443 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+Each entry contains its values, units, meaning and source information. Select an entry to read all fields.
+
+<details>
+<summary>L_IP_wrap0 · position_in_body_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | L_IP_wrap0 |
+| Parameter | position_in_body_m |
+| Unit | m |
+| Meaning | Muscle wrap surface geometry in its owning body frame; not a visual bone or paw contact. |
+| Source value | Not established |
+| Value used in this model | [0.0, 0.0, 0.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>L_IP_wrap0 · orientation_in_body_wxyz</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | L_IP_wrap0 |
+| Parameter | orientation_in_body_wxyz |
+| Unit | 1 |
+| Meaning | Muscle wrap surface geometry in its owning body frame; not a visual bone or paw contact. |
+| Source value | Not established |
+| Value used in this model | [1.0, 0.0, 0.0, 0.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>L_IP_wrap0 · radius_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | L_IP_wrap0 |
+| Parameter | radius_m |
+| Unit | m |
+| Meaning | Muscle wrap surface geometry in its owning body frame; not a visual bone or paw contact. |
+| Source value | Not established |
+| Value used in this model | 0.0045712376 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>L_BFA_wrap0 · position_in_body_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | L_BFA_wrap0 |
+| Parameter | position_in_body_m |
+| Unit | m |
+| Meaning | Muscle wrap surface geometry in its owning body frame; not a visual bone or paw contact. |
+| Source value | Not established |
+| Value used in this model | [0.0, 0.0, 0.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>L_BFA_wrap0 · orientation_in_body_wxyz</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | L_BFA_wrap0 |
+| Parameter | orientation_in_body_wxyz |
+| Unit | 1 |
+| Meaning | Muscle wrap surface geometry in its owning body frame; not a visual bone or paw contact. |
+| Source value | Not established |
+| Value used in this model | [1.0, 0.0, 0.0, 0.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>L_BFA_wrap0 · radius_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | L_BFA_wrap0 |
+| Parameter | radius_m |
+| Unit | m |
+| Meaning | Muscle wrap surface geometry in its owning body frame; not a visual bone or paw contact. |
+| Source value | Not established |
+| Value used in this model | 0.0045712376 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>L_RF_wrap0 · position_in_body_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | L_RF_wrap0 |
+| Parameter | position_in_body_m |
+| Unit | m |
+| Meaning | Muscle wrap surface geometry in its owning body frame; not a visual bone or paw contact. |
+| Source value | Not established |
+| Value used in this model | [0.0, 0.0, 0.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>L_RF_wrap0 · orientation_in_body_wxyz</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | L_RF_wrap0 |
+| Parameter | orientation_in_body_wxyz |
+| Unit | 1 |
+| Meaning | Muscle wrap surface geometry in its owning body frame; not a visual bone or paw contact. |
+| Source value | Not established |
+| Value used in this model | [1.0, 0.0, 0.0, 0.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>L_RF_wrap0 · radius_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | L_RF_wrap0 |
+| Parameter | radius_m |
+| Unit | m |
+| Meaning | Muscle wrap surface geometry in its owning body frame; not a visual bone or paw contact. |
+| Source value | Not established |
+| Value used in this model | 0.0047638278 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>L_BFP_wrap0 · position_in_body_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | L_BFP_wrap0 |
+| Parameter | position_in_body_m |
+| Unit | m |
+| Meaning | Muscle wrap surface geometry in its owning body frame; not a visual bone or paw contact. |
+| Source value | Not established |
+| Value used in this model | [0.0, 0.0, 0.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>L_BFP_wrap0 · orientation_in_body_wxyz</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | L_BFP_wrap0 |
+| Parameter | orientation_in_body_wxyz |
+| Unit | 1 |
+| Meaning | Muscle wrap surface geometry in its owning body frame; not a visual bone or paw contact. |
+| Source value | Not established |
+| Value used in this model | [1.0, 0.0, 0.0, 0.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>L_BFP_wrap0 · radius_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | L_BFP_wrap0 |
+| Parameter | radius_m |
+| Unit | m |
+| Meaning | Muscle wrap surface geometry in its owning body frame; not a visual bone or paw contact. |
+| Source value | Not established |
+| Value used in this model | 0.0047638278 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>L_SAM_wrap0 · position_in_body_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | L_SAM_wrap0 |
+| Parameter | position_in_body_m |
+| Unit | m |
+| Meaning | Muscle wrap surface geometry in its owning body frame; not a visual bone or paw contact. |
+| Source value | Not established |
+| Value used in this model | [0.0, 0.0, 0.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>L_SAM_wrap0 · orientation_in_body_wxyz</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | L_SAM_wrap0 |
+| Parameter | orientation_in_body_wxyz |
+| Unit | 1 |
+| Meaning | Muscle wrap surface geometry in its owning body frame; not a visual bone or paw contact. |
+| Source value | Not established |
+| Value used in this model | [1.0, 0.0, 0.0, 0.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>L_SAM_wrap0 · radius_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | L_SAM_wrap0 |
+| Parameter | radius_m |
+| Unit | m |
+| Meaning | Muscle wrap surface geometry in its owning body frame; not a visual bone or paw contact. |
+| Source value | Not established |
+| Value used in this model | 0.0047638278 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>L_VL_wrap0 · position_in_body_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | L_VL_wrap0 |
+| Parameter | position_in_body_m |
+| Unit | m |
+| Meaning | Muscle wrap surface geometry in its owning body frame; not a visual bone or paw contact. |
+| Source value | Not established |
+| Value used in this model | [0.0955, 0.0, 0.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>L_VL_wrap0 · orientation_in_body_wxyz</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | L_VL_wrap0 |
+| Parameter | orientation_in_body_wxyz |
+| Unit | 1 |
+| Meaning | Muscle wrap surface geometry in its owning body frame; not a visual bone or paw contact. |
+| Source value | Not established |
+| Value used in this model | [1.0, 0.0, 0.0, 0.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>L_VL_wrap0 · radius_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | L_VL_wrap0 |
+| Parameter | radius_m |
+| Unit | m |
+| Meaning | Muscle wrap surface geometry in its owning body frame; not a visual bone or paw contact. |
+| Source value | Not established |
+| Value used in this model | 0.010585366 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>L_VM_wrap0 · position_in_body_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | L_VM_wrap0 |
+| Parameter | position_in_body_m |
+| Unit | m |
+| Meaning | Muscle wrap surface geometry in its owning body frame; not a visual bone or paw contact. |
+| Source value | Not established |
+| Value used in this model | [0.0955, 0.0, 0.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>L_VM_wrap0 · orientation_in_body_wxyz</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | L_VM_wrap0 |
+| Parameter | orientation_in_body_wxyz |
+| Unit | 1 |
+| Meaning | Muscle wrap surface geometry in its owning body frame; not a visual bone or paw contact. |
+| Source value | Not established |
+| Value used in this model | [1.0, 0.0, 0.0, 0.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>L_VM_wrap0 · radius_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | L_VM_wrap0 |
+| Parameter | radius_m |
+| Unit | m |
+| Meaning | Muscle wrap surface geometry in its owning body frame; not a visual bone or paw contact. |
+| Source value | Not established |
+| Value used in this model | 0.010585366 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>L_RF_wrap1 · position_in_body_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | L_RF_wrap1 |
+| Parameter | position_in_body_m |
+| Unit | m |
+| Meaning | Muscle wrap surface geometry in its owning body frame; not a visual bone or paw contact. |
+| Source value | Not established |
+| Value used in this model | [0.0955, 0.0, 0.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>L_RF_wrap1 · orientation_in_body_wxyz</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | L_RF_wrap1 |
+| Parameter | orientation_in_body_wxyz |
+| Unit | 1 |
+| Meaning | Muscle wrap surface geometry in its owning body frame; not a visual bone or paw contact. |
+| Source value | Not established |
+| Value used in this model | [1.0, 0.0, 0.0, 0.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>L_RF_wrap1 · radius_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | L_RF_wrap1 |
+| Parameter | radius_m |
+| Unit | m |
+| Meaning | Muscle wrap surface geometry in its owning body frame; not a visual bone or paw contact. |
+| Source value | Not established |
+| Value used in this model | 0.010585366 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>L_BFP_wrap1 · position_in_body_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | L_BFP_wrap1 |
+| Parameter | position_in_body_m |
+| Unit | m |
+| Meaning | Muscle wrap surface geometry in its owning body frame; not a visual bone or paw contact. |
+| Source value | Not established |
+| Value used in this model | [0.0955, 0.0, 0.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>L_BFP_wrap1 · orientation_in_body_wxyz</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | L_BFP_wrap1 |
+| Parameter | orientation_in_body_wxyz |
+| Unit | 1 |
+| Meaning | Muscle wrap surface geometry in its owning body frame; not a visual bone or paw contact. |
+| Source value | Not established |
+| Value used in this model | [1.0, 0.0, 0.0, 0.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>L_BFP_wrap1 · radius_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | L_BFP_wrap1 |
+| Parameter | radius_m |
+| Unit | m |
+| Meaning | Muscle wrap surface geometry in its owning body frame; not a visual bone or paw contact. |
+| Source value | Not established |
+| Value used in this model | 0.0057165934 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>L_SAM_wrap1 · position_in_body_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | L_SAM_wrap1 |
+| Parameter | position_in_body_m |
+| Unit | m |
+| Meaning | Muscle wrap surface geometry in its owning body frame; not a visual bone or paw contact. |
+| Source value | Not established |
+| Value used in this model | [0.0955, 0.0, 0.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>L_SAM_wrap1 · orientation_in_body_wxyz</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | L_SAM_wrap1 |
+| Parameter | orientation_in_body_wxyz |
+| Unit | 1 |
+| Meaning | Muscle wrap surface geometry in its owning body frame; not a visual bone or paw contact. |
+| Source value | Not established |
+| Value used in this model | [1.0, 0.0, 0.0, 0.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>L_SAM_wrap1 · radius_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | L_SAM_wrap1 |
+| Parameter | radius_m |
+| Unit | m |
+| Meaning | Muscle wrap surface geometry in its owning body frame; not a visual bone or paw contact. |
+| Source value | Not established |
+| Value used in this model | 0.0057165934 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>L_LG_wrap0 · position_in_body_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | L_LG_wrap0 |
+| Parameter | position_in_body_m |
+| Unit | m |
+| Meaning | Muscle wrap surface geometry in its owning body frame; not a visual bone or paw contact. |
+| Source value | Not established |
+| Value used in this model | [0.0955, 0.0, 0.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>L_LG_wrap0 · orientation_in_body_wxyz</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | L_LG_wrap0 |
+| Parameter | orientation_in_body_wxyz |
+| Unit | 1 |
+| Meaning | Muscle wrap surface geometry in its owning body frame; not a visual bone or paw contact. |
+| Source value | Not established |
+| Value used in this model | [1.0, 0.0, 0.0, 0.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>L_LG_wrap0 · radius_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | L_LG_wrap0 |
+| Parameter | radius_m |
+| Unit | m |
+| Meaning | Muscle wrap surface geometry in its owning body frame; not a visual bone or paw contact. |
+| Source value | Not established |
+| Value used in this model | 0.0058890031 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>L_MG_wrap0 · position_in_body_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | L_MG_wrap0 |
+| Parameter | position_in_body_m |
+| Unit | m |
+| Meaning | Muscle wrap surface geometry in its owning body frame; not a visual bone or paw contact. |
+| Source value | Not established |
+| Value used in this model | [0.0955, 0.0, 0.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>L_MG_wrap0 · orientation_in_body_wxyz</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | L_MG_wrap0 |
+| Parameter | orientation_in_body_wxyz |
+| Unit | 1 |
+| Meaning | Muscle wrap surface geometry in its owning body frame; not a visual bone or paw contact. |
+| Source value | Not established |
+| Value used in this model | [1.0, 0.0, 0.0, 0.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>L_MG_wrap0 · radius_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | L_MG_wrap0 |
+| Parameter | radius_m |
+| Unit | m |
+| Meaning | Muscle wrap surface geometry in its owning body frame; not a visual bone or paw contact. |
+| Source value | Not established |
+| Value used in this model | 0.0058890031 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>L_TA_wrap0 · position_in_body_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | L_TA_wrap0 |
+| Parameter | position_in_body_m |
+| Unit | m |
+| Meaning | Muscle wrap surface geometry in its owning body frame; not a visual bone or paw contact. |
+| Source value | Not established |
+| Value used in this model | [0.1085, 0.0, 0.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>L_TA_wrap0 · orientation_in_body_wxyz</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | L_TA_wrap0 |
+| Parameter | orientation_in_body_wxyz |
+| Unit | 1 |
+| Meaning | Muscle wrap surface geometry in its owning body frame; not a visual bone or paw contact. |
+| Source value | Not established |
+| Value used in this model | [1.0, 0.0, 0.0, 0.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>L_TA_wrap0 · radius_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | L_TA_wrap0 |
+| Parameter | radius_m |
+| Unit | m |
+| Meaning | Muscle wrap surface geometry in its owning body frame; not a visual bone or paw contact. |
+| Source value | Not established |
+| Value used in this model | 0.005077401 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>L_SO_wrap0 · position_in_body_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | L_SO_wrap0 |
+| Parameter | position_in_body_m |
+| Unit | m |
+| Meaning | Muscle wrap surface geometry in its owning body frame; not a visual bone or paw contact. |
+| Source value | Not established |
+| Value used in this model | [0.1085, 0.0, 0.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>L_SO_wrap0 · orientation_in_body_wxyz</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | L_SO_wrap0 |
+| Parameter | orientation_in_body_wxyz |
+| Unit | 1 |
+| Meaning | Muscle wrap surface geometry in its owning body frame; not a visual bone or paw contact. |
+| Source value | Not established |
+| Value used in this model | [1.0, 0.0, 0.0, 0.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>L_SO_wrap0 · radius_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | L_SO_wrap0 |
+| Parameter | radius_m |
+| Unit | m |
+| Meaning | Muscle wrap surface geometry in its owning body frame; not a visual bone or paw contact. |
+| Source value | Not established |
+| Value used in this model | 0.005077401 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>L_LG_wrap1 · position_in_body_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | L_LG_wrap1 |
+| Parameter | position_in_body_m |
+| Unit | m |
+| Meaning | Muscle wrap surface geometry in its owning body frame; not a visual bone or paw contact. |
+| Source value | Not established |
+| Value used in this model | [0.1085, 0.0, 0.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>L_LG_wrap1 · orientation_in_body_wxyz</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | L_LG_wrap1 |
+| Parameter | orientation_in_body_wxyz |
+| Unit | 1 |
+| Meaning | Muscle wrap surface geometry in its owning body frame; not a visual bone or paw contact. |
+| Source value | Not established |
+| Value used in this model | [1.0, 0.0, 0.0, 0.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>L_LG_wrap1 · radius_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | L_LG_wrap1 |
+| Parameter | radius_m |
+| Unit | m |
+| Meaning | Muscle wrap surface geometry in its owning body frame; not a visual bone or paw contact. |
+| Source value | Not established |
+| Value used in this model | 0.0048848108 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>L_MG_wrap1 · position_in_body_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | L_MG_wrap1 |
+| Parameter | position_in_body_m |
+| Unit | m |
+| Meaning | Muscle wrap surface geometry in its owning body frame; not a visual bone or paw contact. |
+| Source value | Not established |
+| Value used in this model | [0.1085, 0.0, 0.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>L_MG_wrap1 · orientation_in_body_wxyz</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | L_MG_wrap1 |
+| Parameter | orientation_in_body_wxyz |
+| Unit | 1 |
+| Meaning | Muscle wrap surface geometry in its owning body frame; not a visual bone or paw contact. |
+| Source value | Not established |
+| Value used in this model | [1.0, 0.0, 0.0, 0.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>L_MG_wrap1 · radius_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | L_MG_wrap1 |
+| Parameter | radius_m |
+| Unit | m |
+| Meaning | Muscle wrap surface geometry in its owning body frame; not a visual bone or paw contact. |
+| Source value | Not established |
+| Value used in this model | 0.0048848108 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>R_IP_wrap0 · position_in_body_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | R_IP_wrap0 |
+| Parameter | position_in_body_m |
+| Unit | m |
+| Meaning | Muscle wrap surface geometry in its owning body frame; not a visual bone or paw contact. |
+| Source value | Not established |
+| Value used in this model | [0.0, 0.0, 0.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>R_IP_wrap0 · orientation_in_body_wxyz</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | R_IP_wrap0 |
+| Parameter | orientation_in_body_wxyz |
+| Unit | 1 |
+| Meaning | Muscle wrap surface geometry in its owning body frame; not a visual bone or paw contact. |
+| Source value | Not established |
+| Value used in this model | [1.0, 0.0, 0.0, 0.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>R_IP_wrap0 · radius_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | R_IP_wrap0 |
+| Parameter | radius_m |
+| Unit | m |
+| Meaning | Muscle wrap surface geometry in its owning body frame; not a visual bone or paw contact. |
+| Source value | Not established |
+| Value used in this model | 0.0045712376 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>R_BFA_wrap0 · position_in_body_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | R_BFA_wrap0 |
+| Parameter | position_in_body_m |
+| Unit | m |
+| Meaning | Muscle wrap surface geometry in its owning body frame; not a visual bone or paw contact. |
+| Source value | Not established |
+| Value used in this model | [0.0, 0.0, 0.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>R_BFA_wrap0 · orientation_in_body_wxyz</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | R_BFA_wrap0 |
+| Parameter | orientation_in_body_wxyz |
+| Unit | 1 |
+| Meaning | Muscle wrap surface geometry in its owning body frame; not a visual bone or paw contact. |
+| Source value | Not established |
+| Value used in this model | [1.0, 0.0, 0.0, 0.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>R_BFA_wrap0 · radius_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | R_BFA_wrap0 |
+| Parameter | radius_m |
+| Unit | m |
+| Meaning | Muscle wrap surface geometry in its owning body frame; not a visual bone or paw contact. |
+| Source value | Not established |
+| Value used in this model | 0.0045712376 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>R_RF_wrap0 · position_in_body_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | R_RF_wrap0 |
+| Parameter | position_in_body_m |
+| Unit | m |
+| Meaning | Muscle wrap surface geometry in its owning body frame; not a visual bone or paw contact. |
+| Source value | Not established |
+| Value used in this model | [0.0, 0.0, 0.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>R_RF_wrap0 · orientation_in_body_wxyz</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | R_RF_wrap0 |
+| Parameter | orientation_in_body_wxyz |
+| Unit | 1 |
+| Meaning | Muscle wrap surface geometry in its owning body frame; not a visual bone or paw contact. |
+| Source value | Not established |
+| Value used in this model | [1.0, 0.0, 0.0, 0.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>R_RF_wrap0 · radius_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | R_RF_wrap0 |
+| Parameter | radius_m |
+| Unit | m |
+| Meaning | Muscle wrap surface geometry in its owning body frame; not a visual bone or paw contact. |
+| Source value | Not established |
+| Value used in this model | 0.0047638278 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>R_BFP_wrap0 · position_in_body_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | R_BFP_wrap0 |
+| Parameter | position_in_body_m |
+| Unit | m |
+| Meaning | Muscle wrap surface geometry in its owning body frame; not a visual bone or paw contact. |
+| Source value | Not established |
+| Value used in this model | [0.0, 0.0, 0.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>R_BFP_wrap0 · orientation_in_body_wxyz</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | R_BFP_wrap0 |
+| Parameter | orientation_in_body_wxyz |
+| Unit | 1 |
+| Meaning | Muscle wrap surface geometry in its owning body frame; not a visual bone or paw contact. |
+| Source value | Not established |
+| Value used in this model | [1.0, 0.0, 0.0, 0.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>R_BFP_wrap0 · radius_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | R_BFP_wrap0 |
+| Parameter | radius_m |
+| Unit | m |
+| Meaning | Muscle wrap surface geometry in its owning body frame; not a visual bone or paw contact. |
+| Source value | Not established |
+| Value used in this model | 0.0047638278 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>R_SAM_wrap0 · position_in_body_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | R_SAM_wrap0 |
+| Parameter | position_in_body_m |
+| Unit | m |
+| Meaning | Muscle wrap surface geometry in its owning body frame; not a visual bone or paw contact. |
+| Source value | Not established |
+| Value used in this model | [0.0, 0.0, 0.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>R_SAM_wrap0 · orientation_in_body_wxyz</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | R_SAM_wrap0 |
+| Parameter | orientation_in_body_wxyz |
+| Unit | 1 |
+| Meaning | Muscle wrap surface geometry in its owning body frame; not a visual bone or paw contact. |
+| Source value | Not established |
+| Value used in this model | [1.0, 0.0, 0.0, 0.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>R_SAM_wrap0 · radius_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | R_SAM_wrap0 |
+| Parameter | radius_m |
+| Unit | m |
+| Meaning | Muscle wrap surface geometry in its owning body frame; not a visual bone or paw contact. |
+| Source value | Not established |
+| Value used in this model | 0.0047638278 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>R_VL_wrap0 · position_in_body_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | R_VL_wrap0 |
+| Parameter | position_in_body_m |
+| Unit | m |
+| Meaning | Muscle wrap surface geometry in its owning body frame; not a visual bone or paw contact. |
+| Source value | Not established |
+| Value used in this model | [0.0955, 0.0, 0.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>R_VL_wrap0 · orientation_in_body_wxyz</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | R_VL_wrap0 |
+| Parameter | orientation_in_body_wxyz |
+| Unit | 1 |
+| Meaning | Muscle wrap surface geometry in its owning body frame; not a visual bone or paw contact. |
+| Source value | Not established |
+| Value used in this model | [1.0, 0.0, 0.0, 0.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>R_VL_wrap0 · radius_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | R_VL_wrap0 |
+| Parameter | radius_m |
+| Unit | m |
+| Meaning | Muscle wrap surface geometry in its owning body frame; not a visual bone or paw contact. |
+| Source value | Not established |
+| Value used in this model | 0.010585366 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>R_VM_wrap0 · position_in_body_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | R_VM_wrap0 |
+| Parameter | position_in_body_m |
+| Unit | m |
+| Meaning | Muscle wrap surface geometry in its owning body frame; not a visual bone or paw contact. |
+| Source value | Not established |
+| Value used in this model | [0.0955, 0.0, 0.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>R_VM_wrap0 · orientation_in_body_wxyz</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | R_VM_wrap0 |
+| Parameter | orientation_in_body_wxyz |
+| Unit | 1 |
+| Meaning | Muscle wrap surface geometry in its owning body frame; not a visual bone or paw contact. |
+| Source value | Not established |
+| Value used in this model | [1.0, 0.0, 0.0, 0.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>R_VM_wrap0 · radius_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | R_VM_wrap0 |
+| Parameter | radius_m |
+| Unit | m |
+| Meaning | Muscle wrap surface geometry in its owning body frame; not a visual bone or paw contact. |
+| Source value | Not established |
+| Value used in this model | 0.010585366 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>R_RF_wrap1 · position_in_body_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | R_RF_wrap1 |
+| Parameter | position_in_body_m |
+| Unit | m |
+| Meaning | Muscle wrap surface geometry in its owning body frame; not a visual bone or paw contact. |
+| Source value | Not established |
+| Value used in this model | [0.0955, 0.0, 0.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>R_RF_wrap1 · orientation_in_body_wxyz</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | R_RF_wrap1 |
+| Parameter | orientation_in_body_wxyz |
+| Unit | 1 |
+| Meaning | Muscle wrap surface geometry in its owning body frame; not a visual bone or paw contact. |
+| Source value | Not established |
+| Value used in this model | [1.0, 0.0, 0.0, 0.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>R_RF_wrap1 · radius_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | R_RF_wrap1 |
+| Parameter | radius_m |
+| Unit | m |
+| Meaning | Muscle wrap surface geometry in its owning body frame; not a visual bone or paw contact. |
+| Source value | Not established |
+| Value used in this model | 0.010585366 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>R_BFP_wrap1 · position_in_body_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | R_BFP_wrap1 |
+| Parameter | position_in_body_m |
+| Unit | m |
+| Meaning | Muscle wrap surface geometry in its owning body frame; not a visual bone or paw contact. |
+| Source value | Not established |
+| Value used in this model | [0.0955, 0.0, 0.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>R_BFP_wrap1 · orientation_in_body_wxyz</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | R_BFP_wrap1 |
+| Parameter | orientation_in_body_wxyz |
+| Unit | 1 |
+| Meaning | Muscle wrap surface geometry in its owning body frame; not a visual bone or paw contact. |
+| Source value | Not established |
+| Value used in this model | [1.0, 0.0, 0.0, 0.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>R_BFP_wrap1 · radius_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | R_BFP_wrap1 |
+| Parameter | radius_m |
+| Unit | m |
+| Meaning | Muscle wrap surface geometry in its owning body frame; not a visual bone or paw contact. |
+| Source value | Not established |
+| Value used in this model | 0.0057165934 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>R_SAM_wrap1 · position_in_body_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | R_SAM_wrap1 |
+| Parameter | position_in_body_m |
+| Unit | m |
+| Meaning | Muscle wrap surface geometry in its owning body frame; not a visual bone or paw contact. |
+| Source value | Not established |
+| Value used in this model | [0.0955, 0.0, 0.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>R_SAM_wrap1 · orientation_in_body_wxyz</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | R_SAM_wrap1 |
+| Parameter | orientation_in_body_wxyz |
+| Unit | 1 |
+| Meaning | Muscle wrap surface geometry in its owning body frame; not a visual bone or paw contact. |
+| Source value | Not established |
+| Value used in this model | [1.0, 0.0, 0.0, 0.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>R_SAM_wrap1 · radius_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | R_SAM_wrap1 |
+| Parameter | radius_m |
+| Unit | m |
+| Meaning | Muscle wrap surface geometry in its owning body frame; not a visual bone or paw contact. |
+| Source value | Not established |
+| Value used in this model | 0.0057165934 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>R_LG_wrap0 · position_in_body_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | R_LG_wrap0 |
+| Parameter | position_in_body_m |
+| Unit | m |
+| Meaning | Muscle wrap surface geometry in its owning body frame; not a visual bone or paw contact. |
+| Source value | Not established |
+| Value used in this model | [0.0955, 0.0, 0.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>R_LG_wrap0 · orientation_in_body_wxyz</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | R_LG_wrap0 |
+| Parameter | orientation_in_body_wxyz |
+| Unit | 1 |
+| Meaning | Muscle wrap surface geometry in its owning body frame; not a visual bone or paw contact. |
+| Source value | Not established |
+| Value used in this model | [1.0, 0.0, 0.0, 0.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>R_LG_wrap0 · radius_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | R_LG_wrap0 |
+| Parameter | radius_m |
+| Unit | m |
+| Meaning | Muscle wrap surface geometry in its owning body frame; not a visual bone or paw contact. |
+| Source value | Not established |
+| Value used in this model | 0.0058890031 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>R_MG_wrap0 · position_in_body_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | R_MG_wrap0 |
+| Parameter | position_in_body_m |
+| Unit | m |
+| Meaning | Muscle wrap surface geometry in its owning body frame; not a visual bone or paw contact. |
+| Source value | Not established |
+| Value used in this model | [0.0955, 0.0, 0.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>R_MG_wrap0 · orientation_in_body_wxyz</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | R_MG_wrap0 |
+| Parameter | orientation_in_body_wxyz |
+| Unit | 1 |
+| Meaning | Muscle wrap surface geometry in its owning body frame; not a visual bone or paw contact. |
+| Source value | Not established |
+| Value used in this model | [1.0, 0.0, 0.0, 0.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>R_MG_wrap0 · radius_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | R_MG_wrap0 |
+| Parameter | radius_m |
+| Unit | m |
+| Meaning | Muscle wrap surface geometry in its owning body frame; not a visual bone or paw contact. |
+| Source value | Not established |
+| Value used in this model | 0.0058890031 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>R_TA_wrap0 · position_in_body_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | R_TA_wrap0 |
+| Parameter | position_in_body_m |
+| Unit | m |
+| Meaning | Muscle wrap surface geometry in its owning body frame; not a visual bone or paw contact. |
+| Source value | Not established |
+| Value used in this model | [0.1085, 0.0, 0.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>R_TA_wrap0 · orientation_in_body_wxyz</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | R_TA_wrap0 |
+| Parameter | orientation_in_body_wxyz |
+| Unit | 1 |
+| Meaning | Muscle wrap surface geometry in its owning body frame; not a visual bone or paw contact. |
+| Source value | Not established |
+| Value used in this model | [1.0, 0.0, 0.0, 0.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>R_TA_wrap0 · radius_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | R_TA_wrap0 |
+| Parameter | radius_m |
+| Unit | m |
+| Meaning | Muscle wrap surface geometry in its owning body frame; not a visual bone or paw contact. |
+| Source value | Not established |
+| Value used in this model | 0.005077401 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>R_SO_wrap0 · position_in_body_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | R_SO_wrap0 |
+| Parameter | position_in_body_m |
+| Unit | m |
+| Meaning | Muscle wrap surface geometry in its owning body frame; not a visual bone or paw contact. |
+| Source value | Not established |
+| Value used in this model | [0.1085, 0.0, 0.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>R_SO_wrap0 · orientation_in_body_wxyz</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | R_SO_wrap0 |
+| Parameter | orientation_in_body_wxyz |
+| Unit | 1 |
+| Meaning | Muscle wrap surface geometry in its owning body frame; not a visual bone or paw contact. |
+| Source value | Not established |
+| Value used in this model | [1.0, 0.0, 0.0, 0.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>R_SO_wrap0 · radius_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | R_SO_wrap0 |
+| Parameter | radius_m |
+| Unit | m |
+| Meaning | Muscle wrap surface geometry in its owning body frame; not a visual bone or paw contact. |
+| Source value | Not established |
+| Value used in this model | 0.005077401 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>R_LG_wrap1 · position_in_body_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | R_LG_wrap1 |
+| Parameter | position_in_body_m |
+| Unit | m |
+| Meaning | Muscle wrap surface geometry in its owning body frame; not a visual bone or paw contact. |
+| Source value | Not established |
+| Value used in this model | [0.1085, 0.0, 0.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>R_LG_wrap1 · orientation_in_body_wxyz</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | R_LG_wrap1 |
+| Parameter | orientation_in_body_wxyz |
+| Unit | 1 |
+| Meaning | Muscle wrap surface geometry in its owning body frame; not a visual bone or paw contact. |
+| Source value | Not established |
+| Value used in this model | [1.0, 0.0, 0.0, 0.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>R_LG_wrap1 · radius_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | R_LG_wrap1 |
+| Parameter | radius_m |
+| Unit | m |
+| Meaning | Muscle wrap surface geometry in its owning body frame; not a visual bone or paw contact. |
+| Source value | Not established |
+| Value used in this model | 0.0048848108 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>R_MG_wrap1 · position_in_body_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | R_MG_wrap1 |
+| Parameter | position_in_body_m |
+| Unit | m |
+| Meaning | Muscle wrap surface geometry in its owning body frame; not a visual bone or paw contact. |
+| Source value | Not established |
+| Value used in this model | [0.1085, 0.0, 0.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>R_MG_wrap1 · orientation_in_body_wxyz</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | R_MG_wrap1 |
+| Parameter | orientation_in_body_wxyz |
+| Unit | 1 |
+| Meaning | Muscle wrap surface geometry in its owning body frame; not a visual bone or paw contact. |
+| Source value | Not established |
+| Value used in this model | [1.0, 0.0, 0.0, 0.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>R_MG_wrap1 · radius_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | R_MG_wrap1 |
+| Parameter | radius_m |
+| Unit | m |
+| Meaning | Muscle wrap surface geometry in its owning body frame; not a visual bone or paw contact. |
+| Source value | Not established |
+| Value used in this model | 0.0048848108 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>FL_ShoulderExtensor_s0_pulley0 · position_in_body_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_ShoulderExtensor_s0_pulley0 |
+| Parameter | position_in_body_m |
+| Unit | m |
+| Meaning | Muscle wrap surface geometry in its owning body frame; not a visual bone or paw contact. |
+| Source value | Not established |
+| Value used in this model | [0.05771428571428572, 0.0, 0.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>FL_ShoulderExtensor_s0_pulley0 · orientation_in_body_wxyz</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_ShoulderExtensor_s0_pulley0 |
+| Parameter | orientation_in_body_wxyz |
+| Unit | 1 |
+| Meaning | Muscle wrap surface geometry in its owning body frame; not a visual bone or paw contact. |
+| Source value | Not established |
+| Value used in this model | [1.0, 0.0, 0.0, 0.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>FL_ShoulderExtensor_s0_pulley0 · radius_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_ShoulderExtensor_s0_pulley0 |
+| Parameter | radius_m |
+| Unit | m |
+| Meaning | Muscle wrap surface geometry in its owning body frame; not a visual bone or paw contact. |
+| Source value | Not established |
+| Value used in this model | 0.0079448512 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>FL_BicepsBrachii_s0_pulley0 · position_in_body_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_BicepsBrachii_s0_pulley0 |
+| Parameter | position_in_body_m |
+| Unit | m |
+| Meaning | Muscle wrap surface geometry in its owning body frame; not a visual bone or paw contact. |
+| Source value | Not established |
+| Value used in this model | [0.05771428571428572, 0.0, 0.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>FL_BicepsBrachii_s0_pulley0 · orientation_in_body_wxyz</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_BicepsBrachii_s0_pulley0 |
+| Parameter | orientation_in_body_wxyz |
+| Unit | 1 |
+| Meaning | Muscle wrap surface geometry in its owning body frame; not a visual bone or paw contact. |
+| Source value | Not established |
+| Value used in this model | [1.0, 0.0, 0.0, 0.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>FL_BicepsBrachii_s0_pulley0 · radius_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_BicepsBrachii_s0_pulley0 |
+| Parameter | radius_m |
+| Unit | m |
+| Meaning | Muscle wrap surface geometry in its owning body frame; not a visual bone or paw contact. |
+| Source value | Not established |
+| Value used in this model | 0.0099469286 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>FL_ShoulderFlexor_s0_pulley0 · position_in_body_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_ShoulderFlexor_s0_pulley0 |
+| Parameter | position_in_body_m |
+| Unit | m |
+| Meaning | Muscle wrap surface geometry in its owning body frame; not a visual bone or paw contact. |
+| Source value | Not established |
+| Value used in this model | [0.05771428571428572, 0.0, 0.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>FL_ShoulderFlexor_s0_pulley0 · orientation_in_body_wxyz</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_ShoulderFlexor_s0_pulley0 |
+| Parameter | orientation_in_body_wxyz |
+| Unit | 1 |
+| Meaning | Muscle wrap surface geometry in its owning body frame; not a visual bone or paw contact. |
+| Source value | Not established |
+| Value used in this model | [1.0, 0.0, 0.0, 0.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>FL_ShoulderFlexor_s0_pulley0 · radius_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_ShoulderFlexor_s0_pulley0 |
+| Parameter | radius_m |
+| Unit | m |
+| Meaning | Muscle wrap surface geometry in its owning body frame; not a visual bone or paw contact. |
+| Source value | Not established |
+| Value used in this model | 0.0018427111 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>FL_TricepsBrachiiLong_s0_pulley0 · position_in_body_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_TricepsBrachiiLong_s0_pulley0 |
+| Parameter | position_in_body_m |
+| Unit | m |
+| Meaning | Muscle wrap surface geometry in its owning body frame; not a visual bone or paw contact. |
+| Source value | Not established |
+| Value used in this model | [0.05771428571428572, 0.0, 0.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>FL_TricepsBrachiiLong_s0_pulley0 · orientation_in_body_wxyz</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_TricepsBrachiiLong_s0_pulley0 |
+| Parameter | orientation_in_body_wxyz |
+| Unit | 1 |
+| Meaning | Muscle wrap surface geometry in its owning body frame; not a visual bone or paw contact. |
+| Source value | Not established |
+| Value used in this model | [1.0, 0.0, 0.0, 0.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>FL_TricepsBrachiiLong_s0_pulley0 · radius_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_TricepsBrachiiLong_s0_pulley0 |
+| Parameter | radius_m |
+| Unit | m |
+| Meaning | Muscle wrap surface geometry in its owning body frame; not a visual bone or paw contact. |
+| Source value | Not established |
+| Value used in this model | 0.004419416 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>FL_ElbowExtensor_s0_pulley0 · position_in_body_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_ElbowExtensor_s0_pulley0 |
+| Parameter | position_in_body_m |
+| Unit | m |
+| Meaning | Muscle wrap surface geometry in its owning body frame; not a visual bone or paw contact. |
+| Source value | Not established |
+| Value used in this model | [0.09275714285714286, 0.0, 0.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>FL_ElbowExtensor_s0_pulley0 · orientation_in_body_wxyz</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_ElbowExtensor_s0_pulley0 |
+| Parameter | orientation_in_body_wxyz |
+| Unit | 1 |
+| Meaning | Muscle wrap surface geometry in its owning body frame; not a visual bone or paw contact. |
+| Source value | Not established |
+| Value used in this model | [1.0, 0.0, 0.0, 0.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>FL_ElbowExtensor_s0_pulley0 · radius_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_ElbowExtensor_s0_pulley0 |
+| Parameter | radius_m |
+| Unit | m |
+| Meaning | Muscle wrap surface geometry in its owning body frame; not a visual bone or paw contact. |
+| Source value | Not established |
+| Value used in this model | 0.0021176766 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>FL_BicepsBrachii_s0_pulley1 · position_in_body_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_BicepsBrachii_s0_pulley1 |
+| Parameter | position_in_body_m |
+| Unit | m |
+| Meaning | Muscle wrap surface geometry in its owning body frame; not a visual bone or paw contact. |
+| Source value | Not established |
+| Value used in this model | [0.09275714285714286, 0.0, 0.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>FL_BicepsBrachii_s0_pulley1 · orientation_in_body_wxyz</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_BicepsBrachii_s0_pulley1 |
+| Parameter | orientation_in_body_wxyz |
+| Unit | 1 |
+| Meaning | Muscle wrap surface geometry in its owning body frame; not a visual bone or paw contact. |
+| Source value | Not established |
+| Value used in this model | [1.0, 0.0, 0.0, 0.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>FL_BicepsBrachii_s0_pulley1 · radius_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_BicepsBrachii_s0_pulley1 |
+| Parameter | radius_m |
+| Unit | m |
+| Meaning | Muscle wrap surface geometry in its owning body frame; not a visual bone or paw contact. |
+| Source value | Not established |
+| Value used in this model | 0.0052591454 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>FL_ElbowFlexor_s0_pulley0 · position_in_body_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_ElbowFlexor_s0_pulley0 |
+| Parameter | position_in_body_m |
+| Unit | m |
+| Meaning | Muscle wrap surface geometry in its owning body frame; not a visual bone or paw contact. |
+| Source value | Not established |
+| Value used in this model | [0.09275714285714286, 0.0, 0.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>FL_ElbowFlexor_s0_pulley0 · orientation_in_body_wxyz</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_ElbowFlexor_s0_pulley0 |
+| Parameter | orientation_in_body_wxyz |
+| Unit | 1 |
+| Meaning | Muscle wrap surface geometry in its owning body frame; not a visual bone or paw contact. |
+| Source value | Not established |
+| Value used in this model | [1.0, 0.0, 0.0, 0.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>FL_ElbowFlexor_s0_pulley0 · radius_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_ElbowFlexor_s0_pulley0 |
+| Parameter | radius_m |
+| Unit | m |
+| Meaning | Muscle wrap surface geometry in its owning body frame; not a visual bone or paw contact. |
+| Source value | Not established |
+| Value used in this model | 0.0032 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>FL_ElbowFlexorWristFlexor_s0_pulley0 · position_in_body_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_ElbowFlexorWristFlexor_s0_pulley0 |
+| Parameter | position_in_body_m |
+| Unit | m |
+| Meaning | Muscle wrap surface geometry in its owning body frame; not a visual bone or paw contact. |
+| Source value | Not established |
+| Value used in this model | [0.09275714285714286, 0.0, 0.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>FL_ElbowFlexorWristFlexor_s0_pulley0 · orientation_in_body_wxyz</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_ElbowFlexorWristFlexor_s0_pulley0 |
+| Parameter | orientation_in_body_wxyz |
+| Unit | 1 |
+| Meaning | Muscle wrap surface geometry in its owning body frame; not a visual bone or paw contact. |
+| Source value | Not established |
+| Value used in this model | [1.0, 0.0, 0.0, 0.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>FL_ElbowFlexorWristFlexor_s0_pulley0 · radius_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_ElbowFlexorWristFlexor_s0_pulley0 |
+| Parameter | radius_m |
+| Unit | m |
+| Meaning | Muscle wrap surface geometry in its owning body frame; not a visual bone or paw contact. |
+| Source value | Not established |
+| Value used in this model | 0.0053646541 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>FL_TricepsBrachiiLong_s0_pulley1 · position_in_body_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_TricepsBrachiiLong_s0_pulley1 |
+| Parameter | position_in_body_m |
+| Unit | m |
+| Meaning | Muscle wrap surface geometry in its owning body frame; not a visual bone or paw contact. |
+| Source value | Not established |
+| Value used in this model | [0.09275714285714286, 0.0, 0.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>FL_TricepsBrachiiLong_s0_pulley1 · orientation_in_body_wxyz</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_TricepsBrachiiLong_s0_pulley1 |
+| Parameter | orientation_in_body_wxyz |
+| Unit | 1 |
+| Meaning | Muscle wrap surface geometry in its owning body frame; not a visual bone or paw contact. |
+| Source value | Not established |
+| Value used in this model | [1.0, 0.0, 0.0, 0.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>FL_TricepsBrachiiLong_s0_pulley1 · radius_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_TricepsBrachiiLong_s0_pulley1 |
+| Parameter | radius_m |
+| Unit | m |
+| Meaning | Muscle wrap surface geometry in its owning body frame; not a visual bone or paw contact. |
+| Source value | Not established |
+| Value used in this model | 0.011883275 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>FL_ElbowFlexorWristFlexor_s1_pulley0 · position_in_body_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_ElbowFlexorWristFlexor_s1_pulley0 |
+| Parameter | position_in_body_m |
+| Unit | m |
+| Meaning | Muscle wrap surface geometry in its owning body frame; not a visual bone or paw contact. |
+| Source value | Not established |
+| Value used in this model | [0.09465714285714286, 0.0, 0.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>FL_ElbowFlexorWristFlexor_s1_pulley0 · orientation_in_body_wxyz</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_ElbowFlexorWristFlexor_s1_pulley0 |
+| Parameter | orientation_in_body_wxyz |
+| Unit | 1 |
+| Meaning | Muscle wrap surface geometry in its owning body frame; not a visual bone or paw contact. |
+| Source value | Not established |
+| Value used in this model | [1.0, 0.0, 0.0, 0.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>FL_ElbowFlexorWristFlexor_s1_pulley0 · radius_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_ElbowFlexorWristFlexor_s1_pulley0 |
+| Parameter | radius_m |
+| Unit | m |
+| Meaning | Muscle wrap surface geometry in its owning body frame; not a visual bone or paw contact. |
+| Source value | Not established |
+| Value used in this model | 0.0035074959 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>FL_WristFlexor_s1_pulley0 · position_in_body_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_WristFlexor_s1_pulley0 |
+| Parameter | position_in_body_m |
+| Unit | m |
+| Meaning | Muscle wrap surface geometry in its owning body frame; not a visual bone or paw contact. |
+| Source value | Not established |
+| Value used in this model | [0.09465714285714286, 0.0, 0.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>FL_WristFlexor_s1_pulley0 · orientation_in_body_wxyz</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_WristFlexor_s1_pulley0 |
+| Parameter | orientation_in_body_wxyz |
+| Unit | 1 |
+| Meaning | Muscle wrap surface geometry in its owning body frame; not a visual bone or paw contact. |
+| Source value | Not established |
+| Value used in this model | [1.0, 0.0, 0.0, 0.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>FL_WristFlexor_s1_pulley0 · radius_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_WristFlexor_s1_pulley0 |
+| Parameter | radius_m |
+| Unit | m |
+| Meaning | Muscle wrap surface geometry in its owning body frame; not a visual bone or paw contact. |
+| Source value | Not established |
+| Value used in this model | 0.0024 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>FL_WristExtensor_s1_pulley0 · position_in_body_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_WristExtensor_s1_pulley0 |
+| Parameter | position_in_body_m |
+| Unit | m |
+| Meaning | Muscle wrap surface geometry in its owning body frame; not a visual bone or paw contact. |
+| Source value | Not established |
+| Value used in this model | [0.09465714285714286, 0.0, 0.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>FL_WristExtensor_s1_pulley0 · orientation_in_body_wxyz</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_WristExtensor_s1_pulley0 |
+| Parameter | orientation_in_body_wxyz |
+| Unit | 1 |
+| Meaning | Muscle wrap surface geometry in its owning body frame; not a visual bone or paw contact. |
+| Source value | Not established |
+| Value used in this model | [1.0, 0.0, 0.0, 0.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>FL_WristExtensor_s1_pulley0 · radius_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_WristExtensor_s1_pulley0 |
+| Parameter | radius_m |
+| Unit | m |
+| Meaning | Muscle wrap surface geometry in its owning body frame; not a visual bone or paw contact. |
+| Source value | Not established |
+| Value used in this model | 0.002710443 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>FR_ShoulderExtensor_s0_pulley0 · position_in_body_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FR_ShoulderExtensor_s0_pulley0 |
+| Parameter | position_in_body_m |
+| Unit | m |
+| Meaning | Muscle wrap surface geometry in its owning body frame; not a visual bone or paw contact. |
+| Source value | Not established |
+| Value used in this model | [0.05771428571428572, 0.0, 0.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>FR_ShoulderExtensor_s0_pulley0 · orientation_in_body_wxyz</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FR_ShoulderExtensor_s0_pulley0 |
+| Parameter | orientation_in_body_wxyz |
+| Unit | 1 |
+| Meaning | Muscle wrap surface geometry in its owning body frame; not a visual bone or paw contact. |
+| Source value | Not established |
+| Value used in this model | [1.0, 0.0, 0.0, 0.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>FR_ShoulderExtensor_s0_pulley0 · radius_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FR_ShoulderExtensor_s0_pulley0 |
+| Parameter | radius_m |
+| Unit | m |
+| Meaning | Muscle wrap surface geometry in its owning body frame; not a visual bone or paw contact. |
+| Source value | Not established |
+| Value used in this model | 0.0079448512 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>FR_BicepsBrachii_s0_pulley0 · position_in_body_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FR_BicepsBrachii_s0_pulley0 |
+| Parameter | position_in_body_m |
+| Unit | m |
+| Meaning | Muscle wrap surface geometry in its owning body frame; not a visual bone or paw contact. |
+| Source value | Not established |
+| Value used in this model | [0.05771428571428572, 0.0, 0.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>FR_BicepsBrachii_s0_pulley0 · orientation_in_body_wxyz</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FR_BicepsBrachii_s0_pulley0 |
+| Parameter | orientation_in_body_wxyz |
+| Unit | 1 |
+| Meaning | Muscle wrap surface geometry in its owning body frame; not a visual bone or paw contact. |
+| Source value | Not established |
+| Value used in this model | [1.0, 0.0, 0.0, 0.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>FR_BicepsBrachii_s0_pulley0 · radius_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FR_BicepsBrachii_s0_pulley0 |
+| Parameter | radius_m |
+| Unit | m |
+| Meaning | Muscle wrap surface geometry in its owning body frame; not a visual bone or paw contact. |
+| Source value | Not established |
+| Value used in this model | 0.0099469286 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>FR_ShoulderFlexor_s0_pulley0 · position_in_body_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FR_ShoulderFlexor_s0_pulley0 |
+| Parameter | position_in_body_m |
+| Unit | m |
+| Meaning | Muscle wrap surface geometry in its owning body frame; not a visual bone or paw contact. |
+| Source value | Not established |
+| Value used in this model | [0.05771428571428572, 0.0, 0.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>FR_ShoulderFlexor_s0_pulley0 · orientation_in_body_wxyz</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FR_ShoulderFlexor_s0_pulley0 |
+| Parameter | orientation_in_body_wxyz |
+| Unit | 1 |
+| Meaning | Muscle wrap surface geometry in its owning body frame; not a visual bone or paw contact. |
+| Source value | Not established |
+| Value used in this model | [1.0, 0.0, 0.0, 0.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>FR_ShoulderFlexor_s0_pulley0 · radius_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FR_ShoulderFlexor_s0_pulley0 |
+| Parameter | radius_m |
+| Unit | m |
+| Meaning | Muscle wrap surface geometry in its owning body frame; not a visual bone or paw contact. |
+| Source value | Not established |
+| Value used in this model | 0.0018427111 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>FR_TricepsBrachiiLong_s0_pulley0 · position_in_body_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FR_TricepsBrachiiLong_s0_pulley0 |
+| Parameter | position_in_body_m |
+| Unit | m |
+| Meaning | Muscle wrap surface geometry in its owning body frame; not a visual bone or paw contact. |
+| Source value | Not established |
+| Value used in this model | [0.05771428571428572, 0.0, 0.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>FR_TricepsBrachiiLong_s0_pulley0 · orientation_in_body_wxyz</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FR_TricepsBrachiiLong_s0_pulley0 |
+| Parameter | orientation_in_body_wxyz |
+| Unit | 1 |
+| Meaning | Muscle wrap surface geometry in its owning body frame; not a visual bone or paw contact. |
+| Source value | Not established |
+| Value used in this model | [1.0, 0.0, 0.0, 0.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>FR_TricepsBrachiiLong_s0_pulley0 · radius_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FR_TricepsBrachiiLong_s0_pulley0 |
+| Parameter | radius_m |
+| Unit | m |
+| Meaning | Muscle wrap surface geometry in its owning body frame; not a visual bone or paw contact. |
+| Source value | Not established |
+| Value used in this model | 0.004419416 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>FR_ElbowExtensor_s0_pulley0 · position_in_body_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FR_ElbowExtensor_s0_pulley0 |
+| Parameter | position_in_body_m |
+| Unit | m |
+| Meaning | Muscle wrap surface geometry in its owning body frame; not a visual bone or paw contact. |
+| Source value | Not established |
+| Value used in this model | [0.09275714285714286, 0.0, 0.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>FR_ElbowExtensor_s0_pulley0 · orientation_in_body_wxyz</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FR_ElbowExtensor_s0_pulley0 |
+| Parameter | orientation_in_body_wxyz |
+| Unit | 1 |
+| Meaning | Muscle wrap surface geometry in its owning body frame; not a visual bone or paw contact. |
+| Source value | Not established |
+| Value used in this model | [1.0, 0.0, 0.0, 0.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>FR_ElbowExtensor_s0_pulley0 · radius_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FR_ElbowExtensor_s0_pulley0 |
+| Parameter | radius_m |
+| Unit | m |
+| Meaning | Muscle wrap surface geometry in its owning body frame; not a visual bone or paw contact. |
+| Source value | Not established |
+| Value used in this model | 0.0021176766 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>FR_BicepsBrachii_s0_pulley1 · position_in_body_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FR_BicepsBrachii_s0_pulley1 |
+| Parameter | position_in_body_m |
+| Unit | m |
+| Meaning | Muscle wrap surface geometry in its owning body frame; not a visual bone or paw contact. |
+| Source value | Not established |
+| Value used in this model | [0.09275714285714286, 0.0, 0.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>FR_BicepsBrachii_s0_pulley1 · orientation_in_body_wxyz</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FR_BicepsBrachii_s0_pulley1 |
+| Parameter | orientation_in_body_wxyz |
+| Unit | 1 |
+| Meaning | Muscle wrap surface geometry in its owning body frame; not a visual bone or paw contact. |
+| Source value | Not established |
+| Value used in this model | [1.0, 0.0, 0.0, 0.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>FR_BicepsBrachii_s0_pulley1 · radius_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FR_BicepsBrachii_s0_pulley1 |
+| Parameter | radius_m |
+| Unit | m |
+| Meaning | Muscle wrap surface geometry in its owning body frame; not a visual bone or paw contact. |
+| Source value | Not established |
+| Value used in this model | 0.0052591454 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>FR_ElbowFlexor_s0_pulley0 · position_in_body_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FR_ElbowFlexor_s0_pulley0 |
+| Parameter | position_in_body_m |
+| Unit | m |
+| Meaning | Muscle wrap surface geometry in its owning body frame; not a visual bone or paw contact. |
+| Source value | Not established |
+| Value used in this model | [0.09275714285714286, 0.0, 0.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>FR_ElbowFlexor_s0_pulley0 · orientation_in_body_wxyz</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FR_ElbowFlexor_s0_pulley0 |
+| Parameter | orientation_in_body_wxyz |
+| Unit | 1 |
+| Meaning | Muscle wrap surface geometry in its owning body frame; not a visual bone or paw contact. |
+| Source value | Not established |
+| Value used in this model | [1.0, 0.0, 0.0, 0.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>FR_ElbowFlexor_s0_pulley0 · radius_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FR_ElbowFlexor_s0_pulley0 |
+| Parameter | radius_m |
+| Unit | m |
+| Meaning | Muscle wrap surface geometry in its owning body frame; not a visual bone or paw contact. |
+| Source value | Not established |
+| Value used in this model | 0.0032 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>FR_ElbowFlexorWristFlexor_s0_pulley0 · position_in_body_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FR_ElbowFlexorWristFlexor_s0_pulley0 |
+| Parameter | position_in_body_m |
+| Unit | m |
+| Meaning | Muscle wrap surface geometry in its owning body frame; not a visual bone or paw contact. |
+| Source value | Not established |
+| Value used in this model | [0.09275714285714286, 0.0, 0.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>FR_ElbowFlexorWristFlexor_s0_pulley0 · orientation_in_body_wxyz</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FR_ElbowFlexorWristFlexor_s0_pulley0 |
+| Parameter | orientation_in_body_wxyz |
+| Unit | 1 |
+| Meaning | Muscle wrap surface geometry in its owning body frame; not a visual bone or paw contact. |
+| Source value | Not established |
+| Value used in this model | [1.0, 0.0, 0.0, 0.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>FR_ElbowFlexorWristFlexor_s0_pulley0 · radius_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FR_ElbowFlexorWristFlexor_s0_pulley0 |
+| Parameter | radius_m |
+| Unit | m |
+| Meaning | Muscle wrap surface geometry in its owning body frame; not a visual bone or paw contact. |
+| Source value | Not established |
+| Value used in this model | 0.0053646541 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>FR_TricepsBrachiiLong_s0_pulley1 · position_in_body_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FR_TricepsBrachiiLong_s0_pulley1 |
+| Parameter | position_in_body_m |
+| Unit | m |
+| Meaning | Muscle wrap surface geometry in its owning body frame; not a visual bone or paw contact. |
+| Source value | Not established |
+| Value used in this model | [0.09275714285714286, 0.0, 0.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>FR_TricepsBrachiiLong_s0_pulley1 · orientation_in_body_wxyz</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FR_TricepsBrachiiLong_s0_pulley1 |
+| Parameter | orientation_in_body_wxyz |
+| Unit | 1 |
+| Meaning | Muscle wrap surface geometry in its owning body frame; not a visual bone or paw contact. |
+| Source value | Not established |
+| Value used in this model | [1.0, 0.0, 0.0, 0.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>FR_TricepsBrachiiLong_s0_pulley1 · radius_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FR_TricepsBrachiiLong_s0_pulley1 |
+| Parameter | radius_m |
+| Unit | m |
+| Meaning | Muscle wrap surface geometry in its owning body frame; not a visual bone or paw contact. |
+| Source value | Not established |
+| Value used in this model | 0.011883275 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>FR_ElbowFlexorWristFlexor_s1_pulley0 · position_in_body_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FR_ElbowFlexorWristFlexor_s1_pulley0 |
+| Parameter | position_in_body_m |
+| Unit | m |
+| Meaning | Muscle wrap surface geometry in its owning body frame; not a visual bone or paw contact. |
+| Source value | Not established |
+| Value used in this model | [0.09465714285714286, 0.0, 0.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>FR_ElbowFlexorWristFlexor_s1_pulley0 · orientation_in_body_wxyz</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FR_ElbowFlexorWristFlexor_s1_pulley0 |
+| Parameter | orientation_in_body_wxyz |
+| Unit | 1 |
+| Meaning | Muscle wrap surface geometry in its owning body frame; not a visual bone or paw contact. |
+| Source value | Not established |
+| Value used in this model | [1.0, 0.0, 0.0, 0.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>FR_ElbowFlexorWristFlexor_s1_pulley0 · radius_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FR_ElbowFlexorWristFlexor_s1_pulley0 |
+| Parameter | radius_m |
+| Unit | m |
+| Meaning | Muscle wrap surface geometry in its owning body frame; not a visual bone or paw contact. |
+| Source value | Not established |
+| Value used in this model | 0.0035074959 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>FR_WristFlexor_s1_pulley0 · position_in_body_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FR_WristFlexor_s1_pulley0 |
+| Parameter | position_in_body_m |
+| Unit | m |
+| Meaning | Muscle wrap surface geometry in its owning body frame; not a visual bone or paw contact. |
+| Source value | Not established |
+| Value used in this model | [0.09465714285714286, 0.0, 0.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>FR_WristFlexor_s1_pulley0 · orientation_in_body_wxyz</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FR_WristFlexor_s1_pulley0 |
+| Parameter | orientation_in_body_wxyz |
+| Unit | 1 |
+| Meaning | Muscle wrap surface geometry in its owning body frame; not a visual bone or paw contact. |
+| Source value | Not established |
+| Value used in this model | [1.0, 0.0, 0.0, 0.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>FR_WristFlexor_s1_pulley0 · radius_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FR_WristFlexor_s1_pulley0 |
+| Parameter | radius_m |
+| Unit | m |
+| Meaning | Muscle wrap surface geometry in its owning body frame; not a visual bone or paw contact. |
+| Source value | Not established |
+| Value used in this model | 0.0024 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>FR_WristExtensor_s1_pulley0 · position_in_body_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FR_WristExtensor_s1_pulley0 |
+| Parameter | position_in_body_m |
+| Unit | m |
+| Meaning | Muscle wrap surface geometry in its owning body frame; not a visual bone or paw contact. |
+| Source value | Not established |
+| Value used in this model | [0.09465714285714286, 0.0, 0.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>FR_WristExtensor_s1_pulley0 · orientation_in_body_wxyz</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FR_WristExtensor_s1_pulley0 |
+| Parameter | orientation_in_body_wxyz |
+| Unit | 1 |
+| Meaning | Muscle wrap surface geometry in its owning body frame; not a visual bone or paw contact. |
+| Source value | Not established |
+| Value used in this model | [1.0, 0.0, 0.0, 0.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>FR_WristExtensor_s1_pulley0 · radius_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FR_WristExtensor_s1_pulley0 |
+| Parameter | radius_m |
+| Unit | m |
+| Meaning | Muscle wrap surface geometry in its owning body frame; not a visual bone or paw contact. |
+| Source value | Not established |
+| Value used in this model | 0.002710443 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>

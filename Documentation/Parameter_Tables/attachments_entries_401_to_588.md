@@ -4,193 +4,3012 @@
 
 [Back to parameter guide](../parameter_tables.md)
 
-| Object | Parameter | Unit | Meaning | Source value | Value used in this model | What changed and why | Source / evidence |
-| --- | --- | --- | --- | --- | --- | --- | --- |
-| FL_R_C2_attachment0 | position_in_body_m | m | Fixed site in owning body frame; dynamic routing sites are configured separately. | Not established | [0.00421427805669158, 0.009956284591736005, 0.009561283478607862] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| FL_R_C2_attachment0 | orientation_in_body_wxyz | 1 | Fixed site in owning body frame; dynamic routing sites are configured separately. | Not established | [1.0, 0.0, 0.0, 0.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| FL_R_C3-7_attachment0 | position_in_body_m | m | Fixed site in owning body frame; dynamic routing sites are configured separately. | Not established | [0.00310279235650825, 0.00868995824284304, 0.00941303408511365] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| FL_R_C3-7_attachment0 | orientation_in_body_wxyz | 1 | Fixed site in owning body frame; dynamic routing sites are configured separately. | Not established | [1.0, 0.0, 0.0, 0.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| FL_R_T1_attachment0 | position_in_body_m | m | Fixed site in owning body frame; dynamic routing sites are configured separately. | Not established | [0.0001555545282752785, 0.0008402433704696094, 0.007459435111583078] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| FL_R_T1_attachment0 | orientation_in_body_wxyz | 1 | Fixed site in owning body frame; dynamic routing sites are configured separately. | Not established | [1.0, 0.0, 0.0, 0.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| FL_R_T2_attachment0 | position_in_body_m | m | Fixed site in owning body frame; dynamic routing sites are configured separately. | Not established | [-0.0015068049132703429, -0.006988896045691723, 0.005639624166332163] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| FL_R_T2_attachment0 | orientation_in_body_wxyz | 1 | Fixed site in owning body frame; dynamic routing sites are configured separately. | Not established | [1.0, 0.0, 0.0, 0.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| FL_R_T3_attachment0 | position_in_body_m | m | Fixed site in owning body frame; dynamic routing sites are configured separately. | Not established | [-0.0013836213763926102, -0.01516450377661825, 0.0018174717400939522] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| FL_R_T3_attachment0 | orientation_in_body_wxyz | 1 | Fixed site in owning body frame; dynamic routing sites are configured separately. | Not established | [1.0, 0.0, 0.0, 0.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| FL_R_T4_attachment0 | position_in_body_m | m | Fixed site in owning body frame; dynamic routing sites are configured separately. | Not established | [-0.0006171901903821737, -0.01637267571851643, 0.001136500105504634] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| FL_R_T4_attachment0 | orientation_in_body_wxyz | 1 | Fixed site in owning body frame; dynamic routing sites are configured separately. | Not established | [1.0, 0.0, 0.0, 0.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| FL_R_T5_attachment0 | position_in_body_m | m | Fixed site in owning body frame; dynamic routing sites are configured separately. | Not established | [0.0002485759413340849, -0.016748131645748135, 0.0008106705871876146] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| FL_R_T5_attachment0 | orientation_in_body_wxyz | 1 | Fixed site in owning body frame; dynamic routing sites are configured separately. | Not established | [1.0, 0.0, 0.0, 0.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| FL_TrapeziusCervical_insertion | position_in_body_m | m | Fixed site in owning body frame; dynamic routing sites are configured separately. | Not established | [0.03, 0.002, 0.006] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| FL_TrapeziusCervical_insertion | orientation_in_body_wxyz | 1 | Fixed site in owning body frame; dynamic routing sites are configured separately. | Not established | [1.0, 0.0, 0.0, 0.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| FL_TrapeziusThoracic_insertion | position_in_body_m | m | Fixed site in owning body frame; dynamic routing sites are configured separately. | Not established | [0.018, -0.006, 0.006] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| FL_TrapeziusThoracic_insertion | orientation_in_body_wxyz | 1 | Fixed site in owning body frame; dynamic routing sites are configured separately. | Not established | [1.0, 0.0, 0.0, 0.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| FL_ShoulderExtensor_s0_insert | position_in_body_m | m | Fixed site in owning body frame; dynamic routing sites are configured separately. | Not established | [-0.005813670326445113, 0.0054158953170269945, 0.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| FL_ShoulderExtensor_s0_insert | orientation_in_body_wxyz | 1 | Fixed site in owning body frame; dynamic routing sites are configured separately. | Not established | [1.0, 0.0, 0.0, 0.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| FL_ElbowExtensor_s0_origin | position_in_body_m | m | Fixed site in owning body frame; dynamic routing sites are configured separately. | Not established | [0.03347737572796786, -0.009279374804372012, 0.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| FL_ElbowExtensor_s0_origin | orientation_in_body_wxyz | 1 | Fixed site in owning body frame; dynamic routing sites are configured separately. | Not established | [1.0, 0.0, 0.0, 0.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| FL_ElbowFlexor_s0_origin | position_in_body_m | m | Fixed site in owning body frame; dynamic routing sites are configured separately. | Not established | [0.021427190335922205, 0.004982393596393559, 0.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| FL_ElbowFlexor_s0_origin | orientation_in_body_wxyz | 1 | Fixed site in owning body frame; dynamic routing sites are configured separately. | Not established | [1.0, 0.0, 0.0, 0.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| FL_ElbowFlexorWristFlexor_s0_origin | position_in_body_m | m | Fixed site in owning body frame; dynamic routing sites are configured separately. | Not established | [0.08182242269299914, -0.0032236508291720372, 0.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| FL_ElbowFlexorWristFlexor_s0_origin | orientation_in_body_wxyz | 1 | Fixed site in owning body frame; dynamic routing sites are configured separately. | Not established | [1.0, 0.0, 0.0, 0.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| FL_ShoulderFlexor_s0_insert | position_in_body_m | m | Fixed site in owning body frame; dynamic routing sites are configured separately. | Not established | [0.013834023626670015, 0.00935472052307382, 0.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| FL_ShoulderFlexor_s0_insert | orientation_in_body_wxyz | 1 | Fixed site in owning body frame; dynamic routing sites are configured separately. | Not established | [1.0, 0.0, 0.0, 0.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| FL_LatissimusDorsi_insertion | position_in_body_m | m | Fixed site in owning body frame; dynamic routing sites are configured separately. | Not established | [0.013834, 0.00935472, -0.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| FL_LatissimusDorsi_insertion | orientation_in_body_wxyz | 1 | Fixed site in owning body frame; dynamic routing sites are configured separately. | Not established | [1.0, 0.0, 0.0, 0.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| FL_PectoralisProfundus_insertion | position_in_body_m | m | Fixed site in owning body frame; dynamic routing sites are configured separately. | Not established | [0.012, 0.01, -0.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| FL_PectoralisProfundus_insertion | orientation_in_body_wxyz | 1 | Fixed site in owning body frame; dynamic routing sites are configured separately. | Not established | [1.0, 0.0, 0.0, 0.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| FL_PectoralisSuperficialis_insertion | position_in_body_m | m | Fixed site in owning body frame; dynamic routing sites are configured separately. | Not established | [0.03, 0.005, -0.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| FL_PectoralisSuperficialis_insertion | orientation_in_body_wxyz | 1 | Fixed site in owning body frame; dynamic routing sites are configured separately. | Not established | [1.0, 0.0, 0.0, 0.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| FL_Clavobrachialis_insertion | position_in_body_m | m | Fixed site in owning body frame; dynamic routing sites are configured separately. | Not established | [0.025, 0.003, -0.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| FL_Clavobrachialis_insertion | orientation_in_body_wxyz | 1 | Fixed site in owning body frame; dynamic routing sites are configured separately. | Not established | [1.0, 0.0, 0.0, 0.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| FL_ElbowExtensor_s0_insert | position_in_body_m | m | Fixed site in owning body frame; dynamic routing sites are configured separately. | Not established | [-0.005023971663288653, -0.0024286591330201198, 0.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| FL_ElbowExtensor_s0_insert | orientation_in_body_wxyz | 1 | Fixed site in owning body frame; dynamic routing sites are configured separately. | Not established | [1.0, 0.0, 0.0, 0.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| FL_BicepsBrachii_s0_insert | position_in_body_m | m | Fixed site in owning body frame; dynamic routing sites are configured separately. | Not established | [0.010255675241405497, -0.004336634578383328, 0.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| FL_BicepsBrachii_s0_insert | orientation_in_body_wxyz | 1 | Fixed site in owning body frame; dynamic routing sites are configured separately. | Not established | [1.0, 0.0, 0.0, 0.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| FL_ElbowFlexor_s0_insert | position_in_body_m | m | Fixed site in owning body frame; dynamic routing sites are configured separately. | Not established | [0.004607550668827849, 0.0057911120794285845, 0.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| FL_ElbowFlexor_s0_insert | orientation_in_body_wxyz | 1 | Fixed site in owning body frame; dynamic routing sites are configured separately. | Not established | [1.0, 0.0, 0.0, 0.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| FL_ElbowFlexorWristFlexor_s0_insert | position_in_body_m | m | Fixed site in owning body frame; dynamic routing sites are configured separately. | Not established | [0.09490224546194542, 0.006129750944256109, 0.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| FL_ElbowFlexorWristFlexor_s0_insert | orientation_in_body_wxyz | 1 | Fixed site in owning body frame; dynamic routing sites are configured separately. | Not established | [1.0, 0.0, 0.0, 0.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| FL_ElbowFlexorWristFlexor_s1_origin | position_in_body_m | m | Fixed site in owning body frame; dynamic routing sites are configured separately. | Not established | [0.09441204025234055, 0.006129750944256109, 0.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| FL_ElbowFlexorWristFlexor_s1_origin | orientation_in_body_wxyz | 1 | Fixed site in owning body frame; dynamic routing sites are configured separately. | Not established | [1.0, 0.0, 0.0, 0.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| FL_WristFlexor_s0_origin | position_in_body_m | m | Fixed site in owning body frame; dynamic routing sites are configured separately. | Not established | [0.009341816153249752, -0.005995037194119982, 0.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| FL_WristFlexor_s0_origin | orientation_in_body_wxyz | 1 | Fixed site in owning body frame; dynamic routing sites are configured separately. | Not established | [1.0, 0.0, 0.0, 0.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| FL_WristFlexor_s0_insert | position_in_body_m | m | Fixed site in owning body frame; dynamic routing sites are configured separately. | Not established | [0.09880435723966653, 0.004348446901636839, 0.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| FL_WristFlexor_s0_insert | orientation_in_body_wxyz | 1 | Fixed site in owning body frame; dynamic routing sites are configured separately. | Not established | [1.0, 0.0, 0.0, 0.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| FL_WristFlexor_s1_origin | position_in_body_m | m | Fixed site in owning body frame; dynamic routing sites are configured separately. | Not established | [0.09880435723966685, 0.00434844690163684, 0.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| FL_WristFlexor_s1_origin | orientation_in_body_wxyz | 1 | Fixed site in owning body frame; dynamic routing sites are configured separately. | Not established | [1.0, 0.0, 0.0, 0.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| FL_WristExtensor_s0_origin | position_in_body_m | m | Fixed site in owning body frame; dynamic routing sites are configured separately. | Not established | [0.006369213062286766, -0.00029685234663381487, 0.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| FL_WristExtensor_s0_origin | orientation_in_body_wxyz | 1 | Fixed site in owning body frame; dynamic routing sites are configured separately. | Not established | [1.0, 0.0, 0.0, 0.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| FL_WristExtensor_s0_insert | position_in_body_m | m | Fixed site in owning body frame; dynamic routing sites are configured separately. | Not established | [0.09613280631579318, -0.004972172450585192, 0.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| FL_WristExtensor_s0_insert | orientation_in_body_wxyz | 1 | Fixed site in owning body frame; dynamic routing sites are configured separately. | Not established | [1.0, 0.0, 0.0, 0.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| FL_WristExtensor_s1_origin | position_in_body_m | m | Fixed site in owning body frame; dynamic routing sites are configured separately. | Not established | [0.0931814793984905, -0.004972172450585193, 0.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| FL_WristExtensor_s1_origin | orientation_in_body_wxyz | 1 | Fixed site in owning body frame; dynamic routing sites are configured separately. | Not established | [1.0, 0.0, 0.0, 0.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| FL_TricepsBrachiiLong_s0_insert | position_in_body_m | m | Fixed site in owning body frame; dynamic routing sites are configured separately. | Not established | [-0.014150059601265615, -0.004518838579248152, 0.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| FL_TricepsBrachiiLong_s0_insert | orientation_in_body_wxyz | 1 | Fixed site in owning body frame; dynamic routing sites are configured separately. | Not established | [1.0, 0.0, 0.0, 0.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| FL_ElbowFlexorWristFlexor_s1_insert | position_in_body_m | m | Fixed site in owning body frame; dynamic routing sites are configured separately. | Not established | [0.03303668349099529, 0.004179360662887023, 0.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| FL_ElbowFlexorWristFlexor_s1_insert | orientation_in_body_wxyz | 1 | Fixed site in owning body frame; dynamic routing sites are configured separately. | Not established | [1.0, 0.0, 0.0, 0.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| FL_WristFlexor_s1_insert | position_in_body_m | m | Fixed site in owning body frame; dynamic routing sites are configured separately. | Not established | [0.016998910517186643, 0.0019601027857303775, 0.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| FL_WristFlexor_s1_insert | orientation_in_body_wxyz | 1 | Fixed site in owning body frame; dynamic routing sites are configured separately. | Not established | [1.0, 0.0, 0.0, 0.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| FL_WristExtensor_s1_insert | position_in_body_m | m | Fixed site in owning body frame; dynamic routing sites are configured separately. | Not established | [0.02847542892267019, -0.004688183291220659, 0.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| FL_WristExtensor_s1_insert | orientation_in_body_wxyz | 1 | Fixed site in owning body frame; dynamic routing sites are configured separately. | Not established | [1.0, 0.0, 0.0, 0.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| FL_DigitalExtensors_attachment0 | position_in_body_m | m | Fixed site in owning body frame; dynamic routing sites are configured separately. | Not established | [-0.0005687001860839453, 0.005971577177090113, 0.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| FL_DigitalExtensors_attachment0 | orientation_in_body_wxyz | 1 | Fixed site in owning body frame; dynamic routing sites are configured separately. | Not established | [1.0, 0.0, 0.0, 0.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| FL_DigitalFlexors_attachment0 | position_in_body_m | m | Fixed site in owning body frame; dynamic routing sites are configured separately. | Not established | [0.0005376851212354235, -0.0054544472004418275, 0.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| FL_DigitalFlexors_attachment0 | orientation_in_body_wxyz | 1 | Fixed site in owning body frame; dynamic routing sites are configured separately. | Not established | [1.0, 0.0, 0.0, 0.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| FL_paw | position_in_body_m | m | Fixed site in owning body frame; dynamic routing sites are configured separately. | Not established | [0.017, 0.0, 0.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| FL_paw | orientation_in_body_wxyz | 1 | Fixed site in owning body frame; dynamic routing sites are configured separately. | Not established | [1.0, 0.0, 0.0, 0.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| FL_DigitalExtensors_attachment1 | position_in_body_m | m | Fixed site in owning body frame; dynamic routing sites are configured separately. | Not established | [0.004866957206077467, 0.0022584706445033056, 0.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| FL_DigitalExtensors_attachment1 | orientation_in_body_wxyz | 1 | Fixed site in owning body frame; dynamic routing sites are configured separately. | Not established | [1.0, 0.0, 0.0, 0.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| FL_DigitalFlexors_attachment1 | position_in_body_m | m | Fixed site in owning body frame; dynamic routing sites are configured separately. | Not established | [0.0011753936623770337, -0.006021532171048234, 0.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| FL_DigitalFlexors_attachment1 | orientation_in_body_wxyz | 1 | Fixed site in owning body frame; dynamic routing sites are configured separately. | Not established | [1.0, 0.0, 0.0, 0.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| FR_ShoulderExtensor_s0_origin | position_in_body_m | m | Fixed site in owning body frame; dynamic routing sites are configured separately. | Not established | [0.0034642043621170918, 0.015424375976162651, 0.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| FR_ShoulderExtensor_s0_origin | orientation_in_body_wxyz | 1 | Fixed site in owning body frame; dynamic routing sites are configured separately. | Not established | [1.0, 0.0, 0.0, 0.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| FR_BicepsBrachii_s0_origin | position_in_body_m | m | Fixed site in owning body frame; dynamic routing sites are configured separately. | Not established | [0.06243595326053015, 0.01123498044593019, 0.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| FR_BicepsBrachii_s0_origin | orientation_in_body_wxyz | 1 | Fixed site in owning body frame; dynamic routing sites are configured separately. | Not established | [1.0, 0.0, 0.0, 0.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| FR_ShoulderFlexor_s0_origin | position_in_body_m | m | Fixed site in owning body frame; dynamic routing sites are configured separately. | Not established | [0.007368130527692307, -0.006476028207096081, 0.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| FR_ShoulderFlexor_s0_origin | orientation_in_body_wxyz | 1 | Fixed site in owning body frame; dynamic routing sites are configured separately. | Not established | [1.0, 0.0, 0.0, 0.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| FR_TricepsBrachiiLong_s0_origin | position_in_body_m | m | Fixed site in owning body frame; dynamic routing sites are configured separately. | Not established | [0.047488676157244, 0.0004729577802118338, 0.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| FR_TricepsBrachiiLong_s0_origin | orientation_in_body_wxyz | 1 | Fixed site in owning body frame; dynamic routing sites are configured separately. | Not established | [1.0, 0.0, 0.0, 0.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| FR_S_C3_attachment0 | position_in_body_m | m | Fixed site in owning body frame; dynamic routing sites are configured separately. | Not established | [0.004795451228317586, 0.008940083297137217, -0.00891576258883919] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| FR_S_C3_attachment0 | orientation_in_body_wxyz | 1 | Fixed site in owning body frame; dynamic routing sites are configured separately. | Not established | [1.0, 0.0, 0.0, 0.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| FR_S_C4_attachment0 | position_in_body_m | m | Fixed site in owning body frame; dynamic routing sites are configured separately. | Not established | [0.004430780978705402, 0.006459493101114089, -0.008070203391403533] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| FR_S_C4_attachment0 | orientation_in_body_wxyz | 1 | Fixed site in owning body frame; dynamic routing sites are configured separately. | Not established | [1.0, 0.0, 0.0, 0.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| FR_S_C5_attachment0 | position_in_body_m | m | Fixed site in owning body frame; dynamic routing sites are configured separately. | Not established | [0.0012534713890847554, 0.0013103817769002965, -0.007253322123857315] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| FR_S_C5_attachment0 | orientation_in_body_wxyz | 1 | Fixed site in owning body frame; dynamic routing sites are configured separately. | Not established | [1.0, 0.0, 0.0, 0.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| FR_S_C6_attachment0 | position_in_body_m | m | Fixed site in owning body frame; dynamic routing sites are configured separately. | Not established | [0.00047624768861937665, -0.0030523202735862364, -0.0060980449102903895] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| FR_S_C6_attachment0 | orientation_in_body_wxyz | 1 | Fixed site in owning body frame; dynamic routing sites are configured separately. | Not established | [1.0, 0.0, 0.0, 0.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| FR_S_C7_attachment0 | position_in_body_m | m | Fixed site in owning body frame; dynamic routing sites are configured separately. | Not established | [8.232119588210429e-05, -0.006288899528980398, -0.005687478138496707] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| FR_S_C7_attachment0 | orientation_in_body_wxyz | 1 | Fixed site in owning body frame; dynamic routing sites are configured separately. | Not established | [1.0, 0.0, 0.0, 0.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| FR_S_T1_attachment0 | position_in_body_m | m | Fixed site in owning body frame; dynamic routing sites are configured separately. | Not established | [0.0016490221999717954, -0.007589861855873643, -0.004588559449176619] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| FR_S_T1_attachment0 | orientation_in_body_wxyz | 1 | Fixed site in owning body frame; dynamic routing sites are configured separately. | Not established | [1.0, 0.0, 0.0, 0.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| FR_S_T2_attachment0 | position_in_body_m | m | Fixed site in owning body frame; dynamic routing sites are configured separately. | Not established | [0.0015174427443237913, -0.00839971492314201, -0.004254624312990124] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| FR_S_T2_attachment0 | orientation_in_body_wxyz | 1 | Fixed site in owning body frame; dynamic routing sites are configured separately. | Not established | [1.0, 0.0, 0.0, 0.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| FR_S_T3_attachment0 | position_in_body_m | m | Fixed site in owning body frame; dynamic routing sites are configured separately. | Not established | [0.0013627636158510797, -0.009351782713298548, -0.003862063980893065] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| FR_S_T3_attachment0 | orientation_in_body_wxyz | 1 | Fixed site in owning body frame; dynamic routing sites are configured separately. | Not established | [1.0, 0.0, 0.0, 0.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| FR_S_T4_attachment0 | position_in_body_m | m | Fixed site in owning body frame; dynamic routing sites are configured separately. | Not established | [0.0011449220984346348, -0.010278000143844309, -0.0034667836427995377] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| FR_S_T4_attachment0 | orientation_in_body_wxyz | 1 | Fixed site in owning body frame; dynamic routing sites are configured separately. | Not established | [1.0, 0.0, 0.0, 0.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| FR_S_T5_attachment0 | position_in_body_m | m | Fixed site in owning body frame; dynamic routing sites are configured separately. | Not established | [0.0009797837512339586, -0.010980160234099564, -0.003167120582168551] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| FR_S_T5_attachment0 | orientation_in_body_wxyz | 1 | Fixed site in owning body frame; dynamic routing sites are configured separately. | Not established | [1.0, 0.0, 0.0, 0.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| FR_S_T6_attachment0 | position_in_body_m | m | Fixed site in owning body frame; dynamic routing sites are configured separately. | Not established | [0.0005560560626145822, -0.011881557103370471, -0.002839532126640481] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| FR_S_T6_attachment0 | orientation_in_body_wxyz | 1 | Fixed site in owning body frame; dynamic routing sites are configured separately. | Not established | [1.0, 0.0, 0.0, 0.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| FR_S_T7_attachment0 | position_in_body_m | m | Fixed site in owning body frame; dynamic routing sites are configured separately. | Not established | [0.0004800993907770405, -0.012594984013538289, -0.002528771441543901] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| FR_S_T7_attachment0 | orientation_in_body_wxyz | 1 | Fixed site in owning body frame; dynamic routing sites are configured separately. | Not established | [1.0, 0.0, 0.0, 0.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| FR_S_T8_attachment0 | position_in_body_m | m | Fixed site in owning body frame; dynamic routing sites are configured separately. | Not established | [0.0005598619010012685, -0.013343888402199973, -0.0021708911859018216] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| FR_S_T8_attachment0 | orientation_in_body_wxyz | 1 | Fixed site in owning body frame; dynamic routing sites are configured separately. | Not established | [1.0, 0.0, 0.0, 0.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| FR_S_T9_attachment0 | position_in_body_m | m | Fixed site in owning body frame; dynamic routing sites are configured separately. | Not established | [0.0006439999858976172, -0.014133865079678464, -0.0017933996870252023] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| FR_S_T9_attachment0 | orientation_in_body_wxyz | 1 | Fixed site in owning body frame; dynamic routing sites are configured separately. | Not established | [1.0, 0.0, 0.0, 0.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| FR_R_C2_attachment0 | position_in_body_m | m | Fixed site in owning body frame; dynamic routing sites are configured separately. | Not established | [0.00421427805669158, 0.009956284591736005, -0.009561283478607862] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| FR_R_C2_attachment0 | orientation_in_body_wxyz | 1 | Fixed site in owning body frame; dynamic routing sites are configured separately. | Not established | [1.0, 0.0, 0.0, 0.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| FR_R_C3-7_attachment0 | position_in_body_m | m | Fixed site in owning body frame; dynamic routing sites are configured separately. | Not established | [0.00310279235650825, 0.00868995824284304, -0.00941303408511365] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| FR_R_C3-7_attachment0 | orientation_in_body_wxyz | 1 | Fixed site in owning body frame; dynamic routing sites are configured separately. | Not established | [1.0, 0.0, 0.0, 0.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| FR_R_T1_attachment0 | position_in_body_m | m | Fixed site in owning body frame; dynamic routing sites are configured separately. | Not established | [0.0001555545282752785, 0.0008402433704696094, -0.007459435111583078] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| FR_R_T1_attachment0 | orientation_in_body_wxyz | 1 | Fixed site in owning body frame; dynamic routing sites are configured separately. | Not established | [1.0, 0.0, 0.0, 0.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| FR_R_T2_attachment0 | position_in_body_m | m | Fixed site in owning body frame; dynamic routing sites are configured separately. | Not established | [-0.0015068049132703429, -0.006988896045691723, -0.005639624166332163] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| FR_R_T2_attachment0 | orientation_in_body_wxyz | 1 | Fixed site in owning body frame; dynamic routing sites are configured separately. | Not established | [1.0, 0.0, 0.0, 0.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| FR_R_T3_attachment0 | position_in_body_m | m | Fixed site in owning body frame; dynamic routing sites are configured separately. | Not established | [-0.0013836213763926102, -0.01516450377661825, -0.0018174717400939522] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| FR_R_T3_attachment0 | orientation_in_body_wxyz | 1 | Fixed site in owning body frame; dynamic routing sites are configured separately. | Not established | [1.0, 0.0, 0.0, 0.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| FR_R_T4_attachment0 | position_in_body_m | m | Fixed site in owning body frame; dynamic routing sites are configured separately. | Not established | [-0.0006171901903821737, -0.01637267571851643, -0.001136500105504634] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| FR_R_T4_attachment0 | orientation_in_body_wxyz | 1 | Fixed site in owning body frame; dynamic routing sites are configured separately. | Not established | [1.0, 0.0, 0.0, 0.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| FR_R_T5_attachment0 | position_in_body_m | m | Fixed site in owning body frame; dynamic routing sites are configured separately. | Not established | [0.0002485759413340849, -0.016748131645748135, -0.0008106705871876146] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| FR_R_T5_attachment0 | orientation_in_body_wxyz | 1 | Fixed site in owning body frame; dynamic routing sites are configured separately. | Not established | [1.0, 0.0, 0.0, 0.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| FR_TrapeziusCervical_insertion | position_in_body_m | m | Fixed site in owning body frame; dynamic routing sites are configured separately. | Not established | [0.03, 0.002, -0.006] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| FR_TrapeziusCervical_insertion | orientation_in_body_wxyz | 1 | Fixed site in owning body frame; dynamic routing sites are configured separately. | Not established | [1.0, 0.0, 0.0, 0.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| FR_TrapeziusThoracic_insertion | position_in_body_m | m | Fixed site in owning body frame; dynamic routing sites are configured separately. | Not established | [0.018, -0.006, -0.006] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| FR_TrapeziusThoracic_insertion | orientation_in_body_wxyz | 1 | Fixed site in owning body frame; dynamic routing sites are configured separately. | Not established | [1.0, 0.0, 0.0, 0.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| FR_ShoulderExtensor_s0_insert | position_in_body_m | m | Fixed site in owning body frame; dynamic routing sites are configured separately. | Not established | [-0.005813670326445113, 0.0054158953170269945, 0.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| FR_ShoulderExtensor_s0_insert | orientation_in_body_wxyz | 1 | Fixed site in owning body frame; dynamic routing sites are configured separately. | Not established | [1.0, 0.0, 0.0, 0.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| FR_ElbowExtensor_s0_origin | position_in_body_m | m | Fixed site in owning body frame; dynamic routing sites are configured separately. | Not established | [0.03347737572796786, -0.009279374804372012, 0.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| FR_ElbowExtensor_s0_origin | orientation_in_body_wxyz | 1 | Fixed site in owning body frame; dynamic routing sites are configured separately. | Not established | [1.0, 0.0, 0.0, 0.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| FR_ElbowFlexor_s0_origin | position_in_body_m | m | Fixed site in owning body frame; dynamic routing sites are configured separately. | Not established | [0.021427190335922205, 0.004982393596393559, 0.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| FR_ElbowFlexor_s0_origin | orientation_in_body_wxyz | 1 | Fixed site in owning body frame; dynamic routing sites are configured separately. | Not established | [1.0, 0.0, 0.0, 0.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| FR_ElbowFlexorWristFlexor_s0_origin | position_in_body_m | m | Fixed site in owning body frame; dynamic routing sites are configured separately. | Not established | [0.08182242269299914, -0.0032236508291720372, 0.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| FR_ElbowFlexorWristFlexor_s0_origin | orientation_in_body_wxyz | 1 | Fixed site in owning body frame; dynamic routing sites are configured separately. | Not established | [1.0, 0.0, 0.0, 0.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| FR_ShoulderFlexor_s0_insert | position_in_body_m | m | Fixed site in owning body frame; dynamic routing sites are configured separately. | Not established | [0.013834023626670015, 0.00935472052307382, 0.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| FR_ShoulderFlexor_s0_insert | orientation_in_body_wxyz | 1 | Fixed site in owning body frame; dynamic routing sites are configured separately. | Not established | [1.0, 0.0, 0.0, 0.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| FR_LatissimusDorsi_insertion | position_in_body_m | m | Fixed site in owning body frame; dynamic routing sites are configured separately. | Not established | [0.013834, 0.00935472, 0.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| FR_LatissimusDorsi_insertion | orientation_in_body_wxyz | 1 | Fixed site in owning body frame; dynamic routing sites are configured separately. | Not established | [1.0, 0.0, 0.0, 0.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| FR_PectoralisProfundus_insertion | position_in_body_m | m | Fixed site in owning body frame; dynamic routing sites are configured separately. | Not established | [0.012, 0.01, 0.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| FR_PectoralisProfundus_insertion | orientation_in_body_wxyz | 1 | Fixed site in owning body frame; dynamic routing sites are configured separately. | Not established | [1.0, 0.0, 0.0, 0.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| FR_PectoralisSuperficialis_insertion | position_in_body_m | m | Fixed site in owning body frame; dynamic routing sites are configured separately. | Not established | [0.03, 0.005, 0.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| FR_PectoralisSuperficialis_insertion | orientation_in_body_wxyz | 1 | Fixed site in owning body frame; dynamic routing sites are configured separately. | Not established | [1.0, 0.0, 0.0, 0.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| FR_Clavobrachialis_insertion | position_in_body_m | m | Fixed site in owning body frame; dynamic routing sites are configured separately. | Not established | [0.025, 0.003, 0.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| FR_Clavobrachialis_insertion | orientation_in_body_wxyz | 1 | Fixed site in owning body frame; dynamic routing sites are configured separately. | Not established | [1.0, 0.0, 0.0, 0.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| FR_ElbowExtensor_s0_insert | position_in_body_m | m | Fixed site in owning body frame; dynamic routing sites are configured separately. | Not established | [-0.005023971663288653, -0.0024286591330201198, 0.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| FR_ElbowExtensor_s0_insert | orientation_in_body_wxyz | 1 | Fixed site in owning body frame; dynamic routing sites are configured separately. | Not established | [1.0, 0.0, 0.0, 0.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| FR_BicepsBrachii_s0_insert | position_in_body_m | m | Fixed site in owning body frame; dynamic routing sites are configured separately. | Not established | [0.010255675241405497, -0.004336634578383328, 0.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| FR_BicepsBrachii_s0_insert | orientation_in_body_wxyz | 1 | Fixed site in owning body frame; dynamic routing sites are configured separately. | Not established | [1.0, 0.0, 0.0, 0.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| FR_ElbowFlexor_s0_insert | position_in_body_m | m | Fixed site in owning body frame; dynamic routing sites are configured separately. | Not established | [0.004607550668827849, 0.0057911120794285845, 0.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| FR_ElbowFlexor_s0_insert | orientation_in_body_wxyz | 1 | Fixed site in owning body frame; dynamic routing sites are configured separately. | Not established | [1.0, 0.0, 0.0, 0.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| FR_ElbowFlexorWristFlexor_s0_insert | position_in_body_m | m | Fixed site in owning body frame; dynamic routing sites are configured separately. | Not established | [0.09490224546194542, 0.006129750944256109, 0.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| FR_ElbowFlexorWristFlexor_s0_insert | orientation_in_body_wxyz | 1 | Fixed site in owning body frame; dynamic routing sites are configured separately. | Not established | [1.0, 0.0, 0.0, 0.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| FR_ElbowFlexorWristFlexor_s1_origin | position_in_body_m | m | Fixed site in owning body frame; dynamic routing sites are configured separately. | Not established | [0.09441204025234055, 0.006129750944256109, 0.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| FR_ElbowFlexorWristFlexor_s1_origin | orientation_in_body_wxyz | 1 | Fixed site in owning body frame; dynamic routing sites are configured separately. | Not established | [1.0, 0.0, 0.0, 0.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| FR_WristFlexor_s0_origin | position_in_body_m | m | Fixed site in owning body frame; dynamic routing sites are configured separately. | Not established | [0.009341816153249752, -0.005995037194119982, 0.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| FR_WristFlexor_s0_origin | orientation_in_body_wxyz | 1 | Fixed site in owning body frame; dynamic routing sites are configured separately. | Not established | [1.0, 0.0, 0.0, 0.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| FR_WristFlexor_s0_insert | position_in_body_m | m | Fixed site in owning body frame; dynamic routing sites are configured separately. | Not established | [0.09880435723966653, 0.004348446901636839, 0.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| FR_WristFlexor_s0_insert | orientation_in_body_wxyz | 1 | Fixed site in owning body frame; dynamic routing sites are configured separately. | Not established | [1.0, 0.0, 0.0, 0.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| FR_WristFlexor_s1_origin | position_in_body_m | m | Fixed site in owning body frame; dynamic routing sites are configured separately. | Not established | [0.09880435723966685, 0.00434844690163684, 0.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| FR_WristFlexor_s1_origin | orientation_in_body_wxyz | 1 | Fixed site in owning body frame; dynamic routing sites are configured separately. | Not established | [1.0, 0.0, 0.0, 0.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| FR_WristExtensor_s0_origin | position_in_body_m | m | Fixed site in owning body frame; dynamic routing sites are configured separately. | Not established | [0.006369213062286766, -0.00029685234663381487, 0.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| FR_WristExtensor_s0_origin | orientation_in_body_wxyz | 1 | Fixed site in owning body frame; dynamic routing sites are configured separately. | Not established | [1.0, 0.0, 0.0, 0.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| FR_WristExtensor_s0_insert | position_in_body_m | m | Fixed site in owning body frame; dynamic routing sites are configured separately. | Not established | [0.09613280631579318, -0.004972172450585192, 0.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| FR_WristExtensor_s0_insert | orientation_in_body_wxyz | 1 | Fixed site in owning body frame; dynamic routing sites are configured separately. | Not established | [1.0, 0.0, 0.0, 0.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| FR_WristExtensor_s1_origin | position_in_body_m | m | Fixed site in owning body frame; dynamic routing sites are configured separately. | Not established | [0.0931814793984905, -0.004972172450585193, 0.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| FR_WristExtensor_s1_origin | orientation_in_body_wxyz | 1 | Fixed site in owning body frame; dynamic routing sites are configured separately. | Not established | [1.0, 0.0, 0.0, 0.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| FR_TricepsBrachiiLong_s0_insert | position_in_body_m | m | Fixed site in owning body frame; dynamic routing sites are configured separately. | Not established | [-0.014150059601265615, -0.004518838579248152, 0.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| FR_TricepsBrachiiLong_s0_insert | orientation_in_body_wxyz | 1 | Fixed site in owning body frame; dynamic routing sites are configured separately. | Not established | [1.0, 0.0, 0.0, 0.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| FR_ElbowFlexorWristFlexor_s1_insert | position_in_body_m | m | Fixed site in owning body frame; dynamic routing sites are configured separately. | Not established | [0.03303668349099529, 0.004179360662887023, 0.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| FR_ElbowFlexorWristFlexor_s1_insert | orientation_in_body_wxyz | 1 | Fixed site in owning body frame; dynamic routing sites are configured separately. | Not established | [1.0, 0.0, 0.0, 0.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| FR_WristFlexor_s1_insert | position_in_body_m | m | Fixed site in owning body frame; dynamic routing sites are configured separately. | Not established | [0.016998910517186643, 0.0019601027857303775, 0.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| FR_WristFlexor_s1_insert | orientation_in_body_wxyz | 1 | Fixed site in owning body frame; dynamic routing sites are configured separately. | Not established | [1.0, 0.0, 0.0, 0.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| FR_WristExtensor_s1_insert | position_in_body_m | m | Fixed site in owning body frame; dynamic routing sites are configured separately. | Not established | [0.02847542892267019, -0.004688183291220659, 0.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| FR_WristExtensor_s1_insert | orientation_in_body_wxyz | 1 | Fixed site in owning body frame; dynamic routing sites are configured separately. | Not established | [1.0, 0.0, 0.0, 0.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| FR_DigitalExtensors_attachment0 | position_in_body_m | m | Fixed site in owning body frame; dynamic routing sites are configured separately. | Not established | [-0.0005687001860839453, 0.005971577177090113, 0.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| FR_DigitalExtensors_attachment0 | orientation_in_body_wxyz | 1 | Fixed site in owning body frame; dynamic routing sites are configured separately. | Not established | [1.0, 0.0, 0.0, 0.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| FR_DigitalFlexors_attachment0 | position_in_body_m | m | Fixed site in owning body frame; dynamic routing sites are configured separately. | Not established | [0.0005376851212354235, -0.0054544472004418275, 0.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| FR_DigitalFlexors_attachment0 | orientation_in_body_wxyz | 1 | Fixed site in owning body frame; dynamic routing sites are configured separately. | Not established | [1.0, 0.0, 0.0, 0.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| FR_paw | position_in_body_m | m | Fixed site in owning body frame; dynamic routing sites are configured separately. | Not established | [0.017, 0.0, 0.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| FR_paw | orientation_in_body_wxyz | 1 | Fixed site in owning body frame; dynamic routing sites are configured separately. | Not established | [1.0, 0.0, 0.0, 0.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| FR_DigitalExtensors_attachment1 | position_in_body_m | m | Fixed site in owning body frame; dynamic routing sites are configured separately. | Not established | [0.004866957206077467, 0.0022584706445033056, 0.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| FR_DigitalExtensors_attachment1 | orientation_in_body_wxyz | 1 | Fixed site in owning body frame; dynamic routing sites are configured separately. | Not established | [1.0, 0.0, 0.0, 0.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| FR_DigitalFlexors_attachment1 | position_in_body_m | m | Fixed site in owning body frame; dynamic routing sites are configured separately. | Not established | [0.0011753936623770337, -0.006021532171048234, 0.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
-| FR_DigitalFlexors_attachment1 | orientation_in_body_wxyz | 1 | Fixed site in owning body frame; dynamic routing sites are configured separately. | Not established | [1.0, 0.0, 0.0, 0.0] | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+Each entry contains its values, units, meaning and source information. Select an entry to read all fields.
+
+<details>
+<summary>FL_R_C2_attachment0 · position_in_body_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_R_C2_attachment0 |
+| Parameter | position_in_body_m |
+| Unit | m |
+| Meaning | Fixed site in owning body frame; dynamic routing sites are configured separately. |
+| Source value | Not established |
+| Value used in this model | [0.00421427805669158, 0.009956284591736005, 0.009561283478607862] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>FL_R_C2_attachment0 · orientation_in_body_wxyz</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_R_C2_attachment0 |
+| Parameter | orientation_in_body_wxyz |
+| Unit | 1 |
+| Meaning | Fixed site in owning body frame; dynamic routing sites are configured separately. |
+| Source value | Not established |
+| Value used in this model | [1.0, 0.0, 0.0, 0.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>FL_R_C3-7_attachment0 · position_in_body_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_R_C3-7_attachment0 |
+| Parameter | position_in_body_m |
+| Unit | m |
+| Meaning | Fixed site in owning body frame; dynamic routing sites are configured separately. |
+| Source value | Not established |
+| Value used in this model | [0.00310279235650825, 0.00868995824284304, 0.00941303408511365] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>FL_R_C3-7_attachment0 · orientation_in_body_wxyz</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_R_C3-7_attachment0 |
+| Parameter | orientation_in_body_wxyz |
+| Unit | 1 |
+| Meaning | Fixed site in owning body frame; dynamic routing sites are configured separately. |
+| Source value | Not established |
+| Value used in this model | [1.0, 0.0, 0.0, 0.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>FL_R_T1_attachment0 · position_in_body_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_R_T1_attachment0 |
+| Parameter | position_in_body_m |
+| Unit | m |
+| Meaning | Fixed site in owning body frame; dynamic routing sites are configured separately. |
+| Source value | Not established |
+| Value used in this model | [0.0001555545282752785, 0.0008402433704696094, 0.007459435111583078] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>FL_R_T1_attachment0 · orientation_in_body_wxyz</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_R_T1_attachment0 |
+| Parameter | orientation_in_body_wxyz |
+| Unit | 1 |
+| Meaning | Fixed site in owning body frame; dynamic routing sites are configured separately. |
+| Source value | Not established |
+| Value used in this model | [1.0, 0.0, 0.0, 0.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>FL_R_T2_attachment0 · position_in_body_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_R_T2_attachment0 |
+| Parameter | position_in_body_m |
+| Unit | m |
+| Meaning | Fixed site in owning body frame; dynamic routing sites are configured separately. |
+| Source value | Not established |
+| Value used in this model | [-0.0015068049132703429, -0.006988896045691723, 0.005639624166332163] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>FL_R_T2_attachment0 · orientation_in_body_wxyz</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_R_T2_attachment0 |
+| Parameter | orientation_in_body_wxyz |
+| Unit | 1 |
+| Meaning | Fixed site in owning body frame; dynamic routing sites are configured separately. |
+| Source value | Not established |
+| Value used in this model | [1.0, 0.0, 0.0, 0.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>FL_R_T3_attachment0 · position_in_body_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_R_T3_attachment0 |
+| Parameter | position_in_body_m |
+| Unit | m |
+| Meaning | Fixed site in owning body frame; dynamic routing sites are configured separately. |
+| Source value | Not established |
+| Value used in this model | [-0.0013836213763926102, -0.01516450377661825, 0.0018174717400939522] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>FL_R_T3_attachment0 · orientation_in_body_wxyz</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_R_T3_attachment0 |
+| Parameter | orientation_in_body_wxyz |
+| Unit | 1 |
+| Meaning | Fixed site in owning body frame; dynamic routing sites are configured separately. |
+| Source value | Not established |
+| Value used in this model | [1.0, 0.0, 0.0, 0.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>FL_R_T4_attachment0 · position_in_body_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_R_T4_attachment0 |
+| Parameter | position_in_body_m |
+| Unit | m |
+| Meaning | Fixed site in owning body frame; dynamic routing sites are configured separately. |
+| Source value | Not established |
+| Value used in this model | [-0.0006171901903821737, -0.01637267571851643, 0.001136500105504634] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>FL_R_T4_attachment0 · orientation_in_body_wxyz</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_R_T4_attachment0 |
+| Parameter | orientation_in_body_wxyz |
+| Unit | 1 |
+| Meaning | Fixed site in owning body frame; dynamic routing sites are configured separately. |
+| Source value | Not established |
+| Value used in this model | [1.0, 0.0, 0.0, 0.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>FL_R_T5_attachment0 · position_in_body_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_R_T5_attachment0 |
+| Parameter | position_in_body_m |
+| Unit | m |
+| Meaning | Fixed site in owning body frame; dynamic routing sites are configured separately. |
+| Source value | Not established |
+| Value used in this model | [0.0002485759413340849, -0.016748131645748135, 0.0008106705871876146] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>FL_R_T5_attachment0 · orientation_in_body_wxyz</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_R_T5_attachment0 |
+| Parameter | orientation_in_body_wxyz |
+| Unit | 1 |
+| Meaning | Fixed site in owning body frame; dynamic routing sites are configured separately. |
+| Source value | Not established |
+| Value used in this model | [1.0, 0.0, 0.0, 0.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>FL_TrapeziusCervical_insertion · position_in_body_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_TrapeziusCervical_insertion |
+| Parameter | position_in_body_m |
+| Unit | m |
+| Meaning | Fixed site in owning body frame; dynamic routing sites are configured separately. |
+| Source value | Not established |
+| Value used in this model | [0.03, 0.002, 0.006] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>FL_TrapeziusCervical_insertion · orientation_in_body_wxyz</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_TrapeziusCervical_insertion |
+| Parameter | orientation_in_body_wxyz |
+| Unit | 1 |
+| Meaning | Fixed site in owning body frame; dynamic routing sites are configured separately. |
+| Source value | Not established |
+| Value used in this model | [1.0, 0.0, 0.0, 0.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>FL_TrapeziusThoracic_insertion · position_in_body_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_TrapeziusThoracic_insertion |
+| Parameter | position_in_body_m |
+| Unit | m |
+| Meaning | Fixed site in owning body frame; dynamic routing sites are configured separately. |
+| Source value | Not established |
+| Value used in this model | [0.018, -0.006, 0.006] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>FL_TrapeziusThoracic_insertion · orientation_in_body_wxyz</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_TrapeziusThoracic_insertion |
+| Parameter | orientation_in_body_wxyz |
+| Unit | 1 |
+| Meaning | Fixed site in owning body frame; dynamic routing sites are configured separately. |
+| Source value | Not established |
+| Value used in this model | [1.0, 0.0, 0.0, 0.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>FL_ShoulderExtensor_s0_insert · position_in_body_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_ShoulderExtensor_s0_insert |
+| Parameter | position_in_body_m |
+| Unit | m |
+| Meaning | Fixed site in owning body frame; dynamic routing sites are configured separately. |
+| Source value | Not established |
+| Value used in this model | [-0.005813670326445113, 0.0054158953170269945, 0.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>FL_ShoulderExtensor_s0_insert · orientation_in_body_wxyz</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_ShoulderExtensor_s0_insert |
+| Parameter | orientation_in_body_wxyz |
+| Unit | 1 |
+| Meaning | Fixed site in owning body frame; dynamic routing sites are configured separately. |
+| Source value | Not established |
+| Value used in this model | [1.0, 0.0, 0.0, 0.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>FL_ElbowExtensor_s0_origin · position_in_body_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_ElbowExtensor_s0_origin |
+| Parameter | position_in_body_m |
+| Unit | m |
+| Meaning | Fixed site in owning body frame; dynamic routing sites are configured separately. |
+| Source value | Not established |
+| Value used in this model | [0.03347737572796786, -0.009279374804372012, 0.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>FL_ElbowExtensor_s0_origin · orientation_in_body_wxyz</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_ElbowExtensor_s0_origin |
+| Parameter | orientation_in_body_wxyz |
+| Unit | 1 |
+| Meaning | Fixed site in owning body frame; dynamic routing sites are configured separately. |
+| Source value | Not established |
+| Value used in this model | [1.0, 0.0, 0.0, 0.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>FL_ElbowFlexor_s0_origin · position_in_body_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_ElbowFlexor_s0_origin |
+| Parameter | position_in_body_m |
+| Unit | m |
+| Meaning | Fixed site in owning body frame; dynamic routing sites are configured separately. |
+| Source value | Not established |
+| Value used in this model | [0.021427190335922205, 0.004982393596393559, 0.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>FL_ElbowFlexor_s0_origin · orientation_in_body_wxyz</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_ElbowFlexor_s0_origin |
+| Parameter | orientation_in_body_wxyz |
+| Unit | 1 |
+| Meaning | Fixed site in owning body frame; dynamic routing sites are configured separately. |
+| Source value | Not established |
+| Value used in this model | [1.0, 0.0, 0.0, 0.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>FL_ElbowFlexorWristFlexor_s0_origin · position_in_body_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_ElbowFlexorWristFlexor_s0_origin |
+| Parameter | position_in_body_m |
+| Unit | m |
+| Meaning | Fixed site in owning body frame; dynamic routing sites are configured separately. |
+| Source value | Not established |
+| Value used in this model | [0.08182242269299914, -0.0032236508291720372, 0.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>FL_ElbowFlexorWristFlexor_s0_origin · orientation_in_body_wxyz</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_ElbowFlexorWristFlexor_s0_origin |
+| Parameter | orientation_in_body_wxyz |
+| Unit | 1 |
+| Meaning | Fixed site in owning body frame; dynamic routing sites are configured separately. |
+| Source value | Not established |
+| Value used in this model | [1.0, 0.0, 0.0, 0.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>FL_ShoulderFlexor_s0_insert · position_in_body_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_ShoulderFlexor_s0_insert |
+| Parameter | position_in_body_m |
+| Unit | m |
+| Meaning | Fixed site in owning body frame; dynamic routing sites are configured separately. |
+| Source value | Not established |
+| Value used in this model | [0.013834023626670015, 0.00935472052307382, 0.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>FL_ShoulderFlexor_s0_insert · orientation_in_body_wxyz</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_ShoulderFlexor_s0_insert |
+| Parameter | orientation_in_body_wxyz |
+| Unit | 1 |
+| Meaning | Fixed site in owning body frame; dynamic routing sites are configured separately. |
+| Source value | Not established |
+| Value used in this model | [1.0, 0.0, 0.0, 0.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>FL_LatissimusDorsi_insertion · position_in_body_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_LatissimusDorsi_insertion |
+| Parameter | position_in_body_m |
+| Unit | m |
+| Meaning | Fixed site in owning body frame; dynamic routing sites are configured separately. |
+| Source value | Not established |
+| Value used in this model | [0.013834, 0.00935472, -0.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>FL_LatissimusDorsi_insertion · orientation_in_body_wxyz</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_LatissimusDorsi_insertion |
+| Parameter | orientation_in_body_wxyz |
+| Unit | 1 |
+| Meaning | Fixed site in owning body frame; dynamic routing sites are configured separately. |
+| Source value | Not established |
+| Value used in this model | [1.0, 0.0, 0.0, 0.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>FL_PectoralisProfundus_insertion · position_in_body_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_PectoralisProfundus_insertion |
+| Parameter | position_in_body_m |
+| Unit | m |
+| Meaning | Fixed site in owning body frame; dynamic routing sites are configured separately. |
+| Source value | Not established |
+| Value used in this model | [0.012, 0.01, -0.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>FL_PectoralisProfundus_insertion · orientation_in_body_wxyz</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_PectoralisProfundus_insertion |
+| Parameter | orientation_in_body_wxyz |
+| Unit | 1 |
+| Meaning | Fixed site in owning body frame; dynamic routing sites are configured separately. |
+| Source value | Not established |
+| Value used in this model | [1.0, 0.0, 0.0, 0.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>FL_PectoralisSuperficialis_insertion · position_in_body_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_PectoralisSuperficialis_insertion |
+| Parameter | position_in_body_m |
+| Unit | m |
+| Meaning | Fixed site in owning body frame; dynamic routing sites are configured separately. |
+| Source value | Not established |
+| Value used in this model | [0.03, 0.005, -0.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>FL_PectoralisSuperficialis_insertion · orientation_in_body_wxyz</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_PectoralisSuperficialis_insertion |
+| Parameter | orientation_in_body_wxyz |
+| Unit | 1 |
+| Meaning | Fixed site in owning body frame; dynamic routing sites are configured separately. |
+| Source value | Not established |
+| Value used in this model | [1.0, 0.0, 0.0, 0.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>FL_Clavobrachialis_insertion · position_in_body_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_Clavobrachialis_insertion |
+| Parameter | position_in_body_m |
+| Unit | m |
+| Meaning | Fixed site in owning body frame; dynamic routing sites are configured separately. |
+| Source value | Not established |
+| Value used in this model | [0.025, 0.003, -0.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>FL_Clavobrachialis_insertion · orientation_in_body_wxyz</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_Clavobrachialis_insertion |
+| Parameter | orientation_in_body_wxyz |
+| Unit | 1 |
+| Meaning | Fixed site in owning body frame; dynamic routing sites are configured separately. |
+| Source value | Not established |
+| Value used in this model | [1.0, 0.0, 0.0, 0.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>FL_ElbowExtensor_s0_insert · position_in_body_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_ElbowExtensor_s0_insert |
+| Parameter | position_in_body_m |
+| Unit | m |
+| Meaning | Fixed site in owning body frame; dynamic routing sites are configured separately. |
+| Source value | Not established |
+| Value used in this model | [-0.005023971663288653, -0.0024286591330201198, 0.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>FL_ElbowExtensor_s0_insert · orientation_in_body_wxyz</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_ElbowExtensor_s0_insert |
+| Parameter | orientation_in_body_wxyz |
+| Unit | 1 |
+| Meaning | Fixed site in owning body frame; dynamic routing sites are configured separately. |
+| Source value | Not established |
+| Value used in this model | [1.0, 0.0, 0.0, 0.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>FL_BicepsBrachii_s0_insert · position_in_body_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_BicepsBrachii_s0_insert |
+| Parameter | position_in_body_m |
+| Unit | m |
+| Meaning | Fixed site in owning body frame; dynamic routing sites are configured separately. |
+| Source value | Not established |
+| Value used in this model | [0.010255675241405497, -0.004336634578383328, 0.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>FL_BicepsBrachii_s0_insert · orientation_in_body_wxyz</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_BicepsBrachii_s0_insert |
+| Parameter | orientation_in_body_wxyz |
+| Unit | 1 |
+| Meaning | Fixed site in owning body frame; dynamic routing sites are configured separately. |
+| Source value | Not established |
+| Value used in this model | [1.0, 0.0, 0.0, 0.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>FL_ElbowFlexor_s0_insert · position_in_body_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_ElbowFlexor_s0_insert |
+| Parameter | position_in_body_m |
+| Unit | m |
+| Meaning | Fixed site in owning body frame; dynamic routing sites are configured separately. |
+| Source value | Not established |
+| Value used in this model | [0.004607550668827849, 0.0057911120794285845, 0.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>FL_ElbowFlexor_s0_insert · orientation_in_body_wxyz</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_ElbowFlexor_s0_insert |
+| Parameter | orientation_in_body_wxyz |
+| Unit | 1 |
+| Meaning | Fixed site in owning body frame; dynamic routing sites are configured separately. |
+| Source value | Not established |
+| Value used in this model | [1.0, 0.0, 0.0, 0.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>FL_ElbowFlexorWristFlexor_s0_insert · position_in_body_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_ElbowFlexorWristFlexor_s0_insert |
+| Parameter | position_in_body_m |
+| Unit | m |
+| Meaning | Fixed site in owning body frame; dynamic routing sites are configured separately. |
+| Source value | Not established |
+| Value used in this model | [0.09490224546194542, 0.006129750944256109, 0.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>FL_ElbowFlexorWristFlexor_s0_insert · orientation_in_body_wxyz</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_ElbowFlexorWristFlexor_s0_insert |
+| Parameter | orientation_in_body_wxyz |
+| Unit | 1 |
+| Meaning | Fixed site in owning body frame; dynamic routing sites are configured separately. |
+| Source value | Not established |
+| Value used in this model | [1.0, 0.0, 0.0, 0.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>FL_ElbowFlexorWristFlexor_s1_origin · position_in_body_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_ElbowFlexorWristFlexor_s1_origin |
+| Parameter | position_in_body_m |
+| Unit | m |
+| Meaning | Fixed site in owning body frame; dynamic routing sites are configured separately. |
+| Source value | Not established |
+| Value used in this model | [0.09441204025234055, 0.006129750944256109, 0.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>FL_ElbowFlexorWristFlexor_s1_origin · orientation_in_body_wxyz</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_ElbowFlexorWristFlexor_s1_origin |
+| Parameter | orientation_in_body_wxyz |
+| Unit | 1 |
+| Meaning | Fixed site in owning body frame; dynamic routing sites are configured separately. |
+| Source value | Not established |
+| Value used in this model | [1.0, 0.0, 0.0, 0.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>FL_WristFlexor_s0_origin · position_in_body_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_WristFlexor_s0_origin |
+| Parameter | position_in_body_m |
+| Unit | m |
+| Meaning | Fixed site in owning body frame; dynamic routing sites are configured separately. |
+| Source value | Not established |
+| Value used in this model | [0.009341816153249752, -0.005995037194119982, 0.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>FL_WristFlexor_s0_origin · orientation_in_body_wxyz</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_WristFlexor_s0_origin |
+| Parameter | orientation_in_body_wxyz |
+| Unit | 1 |
+| Meaning | Fixed site in owning body frame; dynamic routing sites are configured separately. |
+| Source value | Not established |
+| Value used in this model | [1.0, 0.0, 0.0, 0.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>FL_WristFlexor_s0_insert · position_in_body_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_WristFlexor_s0_insert |
+| Parameter | position_in_body_m |
+| Unit | m |
+| Meaning | Fixed site in owning body frame; dynamic routing sites are configured separately. |
+| Source value | Not established |
+| Value used in this model | [0.09880435723966653, 0.004348446901636839, 0.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>FL_WristFlexor_s0_insert · orientation_in_body_wxyz</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_WristFlexor_s0_insert |
+| Parameter | orientation_in_body_wxyz |
+| Unit | 1 |
+| Meaning | Fixed site in owning body frame; dynamic routing sites are configured separately. |
+| Source value | Not established |
+| Value used in this model | [1.0, 0.0, 0.0, 0.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>FL_WristFlexor_s1_origin · position_in_body_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_WristFlexor_s1_origin |
+| Parameter | position_in_body_m |
+| Unit | m |
+| Meaning | Fixed site in owning body frame; dynamic routing sites are configured separately. |
+| Source value | Not established |
+| Value used in this model | [0.09880435723966685, 0.00434844690163684, 0.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>FL_WristFlexor_s1_origin · orientation_in_body_wxyz</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_WristFlexor_s1_origin |
+| Parameter | orientation_in_body_wxyz |
+| Unit | 1 |
+| Meaning | Fixed site in owning body frame; dynamic routing sites are configured separately. |
+| Source value | Not established |
+| Value used in this model | [1.0, 0.0, 0.0, 0.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>FL_WristExtensor_s0_origin · position_in_body_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_WristExtensor_s0_origin |
+| Parameter | position_in_body_m |
+| Unit | m |
+| Meaning | Fixed site in owning body frame; dynamic routing sites are configured separately. |
+| Source value | Not established |
+| Value used in this model | [0.006369213062286766, -0.00029685234663381487, 0.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>FL_WristExtensor_s0_origin · orientation_in_body_wxyz</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_WristExtensor_s0_origin |
+| Parameter | orientation_in_body_wxyz |
+| Unit | 1 |
+| Meaning | Fixed site in owning body frame; dynamic routing sites are configured separately. |
+| Source value | Not established |
+| Value used in this model | [1.0, 0.0, 0.0, 0.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>FL_WristExtensor_s0_insert · position_in_body_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_WristExtensor_s0_insert |
+| Parameter | position_in_body_m |
+| Unit | m |
+| Meaning | Fixed site in owning body frame; dynamic routing sites are configured separately. |
+| Source value | Not established |
+| Value used in this model | [0.09613280631579318, -0.004972172450585192, 0.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>FL_WristExtensor_s0_insert · orientation_in_body_wxyz</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_WristExtensor_s0_insert |
+| Parameter | orientation_in_body_wxyz |
+| Unit | 1 |
+| Meaning | Fixed site in owning body frame; dynamic routing sites are configured separately. |
+| Source value | Not established |
+| Value used in this model | [1.0, 0.0, 0.0, 0.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>FL_WristExtensor_s1_origin · position_in_body_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_WristExtensor_s1_origin |
+| Parameter | position_in_body_m |
+| Unit | m |
+| Meaning | Fixed site in owning body frame; dynamic routing sites are configured separately. |
+| Source value | Not established |
+| Value used in this model | [0.0931814793984905, -0.004972172450585193, 0.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>FL_WristExtensor_s1_origin · orientation_in_body_wxyz</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_WristExtensor_s1_origin |
+| Parameter | orientation_in_body_wxyz |
+| Unit | 1 |
+| Meaning | Fixed site in owning body frame; dynamic routing sites are configured separately. |
+| Source value | Not established |
+| Value used in this model | [1.0, 0.0, 0.0, 0.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>FL_TricepsBrachiiLong_s0_insert · position_in_body_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_TricepsBrachiiLong_s0_insert |
+| Parameter | position_in_body_m |
+| Unit | m |
+| Meaning | Fixed site in owning body frame; dynamic routing sites are configured separately. |
+| Source value | Not established |
+| Value used in this model | [-0.014150059601265615, -0.004518838579248152, 0.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>FL_TricepsBrachiiLong_s0_insert · orientation_in_body_wxyz</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_TricepsBrachiiLong_s0_insert |
+| Parameter | orientation_in_body_wxyz |
+| Unit | 1 |
+| Meaning | Fixed site in owning body frame; dynamic routing sites are configured separately. |
+| Source value | Not established |
+| Value used in this model | [1.0, 0.0, 0.0, 0.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>FL_ElbowFlexorWristFlexor_s1_insert · position_in_body_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_ElbowFlexorWristFlexor_s1_insert |
+| Parameter | position_in_body_m |
+| Unit | m |
+| Meaning | Fixed site in owning body frame; dynamic routing sites are configured separately. |
+| Source value | Not established |
+| Value used in this model | [0.03303668349099529, 0.004179360662887023, 0.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>FL_ElbowFlexorWristFlexor_s1_insert · orientation_in_body_wxyz</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_ElbowFlexorWristFlexor_s1_insert |
+| Parameter | orientation_in_body_wxyz |
+| Unit | 1 |
+| Meaning | Fixed site in owning body frame; dynamic routing sites are configured separately. |
+| Source value | Not established |
+| Value used in this model | [1.0, 0.0, 0.0, 0.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>FL_WristFlexor_s1_insert · position_in_body_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_WristFlexor_s1_insert |
+| Parameter | position_in_body_m |
+| Unit | m |
+| Meaning | Fixed site in owning body frame; dynamic routing sites are configured separately. |
+| Source value | Not established |
+| Value used in this model | [0.016998910517186643, 0.0019601027857303775, 0.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>FL_WristFlexor_s1_insert · orientation_in_body_wxyz</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_WristFlexor_s1_insert |
+| Parameter | orientation_in_body_wxyz |
+| Unit | 1 |
+| Meaning | Fixed site in owning body frame; dynamic routing sites are configured separately. |
+| Source value | Not established |
+| Value used in this model | [1.0, 0.0, 0.0, 0.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>FL_WristExtensor_s1_insert · position_in_body_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_WristExtensor_s1_insert |
+| Parameter | position_in_body_m |
+| Unit | m |
+| Meaning | Fixed site in owning body frame; dynamic routing sites are configured separately. |
+| Source value | Not established |
+| Value used in this model | [0.02847542892267019, -0.004688183291220659, 0.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>FL_WristExtensor_s1_insert · orientation_in_body_wxyz</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_WristExtensor_s1_insert |
+| Parameter | orientation_in_body_wxyz |
+| Unit | 1 |
+| Meaning | Fixed site in owning body frame; dynamic routing sites are configured separately. |
+| Source value | Not established |
+| Value used in this model | [1.0, 0.0, 0.0, 0.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>FL_DigitalExtensors_attachment0 · position_in_body_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_DigitalExtensors_attachment0 |
+| Parameter | position_in_body_m |
+| Unit | m |
+| Meaning | Fixed site in owning body frame; dynamic routing sites are configured separately. |
+| Source value | Not established |
+| Value used in this model | [-0.0005687001860839453, 0.005971577177090113, 0.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>FL_DigitalExtensors_attachment0 · orientation_in_body_wxyz</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_DigitalExtensors_attachment0 |
+| Parameter | orientation_in_body_wxyz |
+| Unit | 1 |
+| Meaning | Fixed site in owning body frame; dynamic routing sites are configured separately. |
+| Source value | Not established |
+| Value used in this model | [1.0, 0.0, 0.0, 0.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>FL_DigitalFlexors_attachment0 · position_in_body_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_DigitalFlexors_attachment0 |
+| Parameter | position_in_body_m |
+| Unit | m |
+| Meaning | Fixed site in owning body frame; dynamic routing sites are configured separately. |
+| Source value | Not established |
+| Value used in this model | [0.0005376851212354235, -0.0054544472004418275, 0.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>FL_DigitalFlexors_attachment0 · orientation_in_body_wxyz</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_DigitalFlexors_attachment0 |
+| Parameter | orientation_in_body_wxyz |
+| Unit | 1 |
+| Meaning | Fixed site in owning body frame; dynamic routing sites are configured separately. |
+| Source value | Not established |
+| Value used in this model | [1.0, 0.0, 0.0, 0.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>FL_paw · position_in_body_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_paw |
+| Parameter | position_in_body_m |
+| Unit | m |
+| Meaning | Fixed site in owning body frame; dynamic routing sites are configured separately. |
+| Source value | Not established |
+| Value used in this model | [0.017, 0.0, 0.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>FL_paw · orientation_in_body_wxyz</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_paw |
+| Parameter | orientation_in_body_wxyz |
+| Unit | 1 |
+| Meaning | Fixed site in owning body frame; dynamic routing sites are configured separately. |
+| Source value | Not established |
+| Value used in this model | [1.0, 0.0, 0.0, 0.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>FL_DigitalExtensors_attachment1 · position_in_body_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_DigitalExtensors_attachment1 |
+| Parameter | position_in_body_m |
+| Unit | m |
+| Meaning | Fixed site in owning body frame; dynamic routing sites are configured separately. |
+| Source value | Not established |
+| Value used in this model | [0.004866957206077467, 0.0022584706445033056, 0.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>FL_DigitalExtensors_attachment1 · orientation_in_body_wxyz</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_DigitalExtensors_attachment1 |
+| Parameter | orientation_in_body_wxyz |
+| Unit | 1 |
+| Meaning | Fixed site in owning body frame; dynamic routing sites are configured separately. |
+| Source value | Not established |
+| Value used in this model | [1.0, 0.0, 0.0, 0.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>FL_DigitalFlexors_attachment1 · position_in_body_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_DigitalFlexors_attachment1 |
+| Parameter | position_in_body_m |
+| Unit | m |
+| Meaning | Fixed site in owning body frame; dynamic routing sites are configured separately. |
+| Source value | Not established |
+| Value used in this model | [0.0011753936623770337, -0.006021532171048234, 0.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>FL_DigitalFlexors_attachment1 · orientation_in_body_wxyz</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_DigitalFlexors_attachment1 |
+| Parameter | orientation_in_body_wxyz |
+| Unit | 1 |
+| Meaning | Fixed site in owning body frame; dynamic routing sites are configured separately. |
+| Source value | Not established |
+| Value used in this model | [1.0, 0.0, 0.0, 0.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>FR_ShoulderExtensor_s0_origin · position_in_body_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FR_ShoulderExtensor_s0_origin |
+| Parameter | position_in_body_m |
+| Unit | m |
+| Meaning | Fixed site in owning body frame; dynamic routing sites are configured separately. |
+| Source value | Not established |
+| Value used in this model | [0.0034642043621170918, 0.015424375976162651, 0.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>FR_ShoulderExtensor_s0_origin · orientation_in_body_wxyz</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FR_ShoulderExtensor_s0_origin |
+| Parameter | orientation_in_body_wxyz |
+| Unit | 1 |
+| Meaning | Fixed site in owning body frame; dynamic routing sites are configured separately. |
+| Source value | Not established |
+| Value used in this model | [1.0, 0.0, 0.0, 0.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>FR_BicepsBrachii_s0_origin · position_in_body_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FR_BicepsBrachii_s0_origin |
+| Parameter | position_in_body_m |
+| Unit | m |
+| Meaning | Fixed site in owning body frame; dynamic routing sites are configured separately. |
+| Source value | Not established |
+| Value used in this model | [0.06243595326053015, 0.01123498044593019, 0.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>FR_BicepsBrachii_s0_origin · orientation_in_body_wxyz</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FR_BicepsBrachii_s0_origin |
+| Parameter | orientation_in_body_wxyz |
+| Unit | 1 |
+| Meaning | Fixed site in owning body frame; dynamic routing sites are configured separately. |
+| Source value | Not established |
+| Value used in this model | [1.0, 0.0, 0.0, 0.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>FR_ShoulderFlexor_s0_origin · position_in_body_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FR_ShoulderFlexor_s0_origin |
+| Parameter | position_in_body_m |
+| Unit | m |
+| Meaning | Fixed site in owning body frame; dynamic routing sites are configured separately. |
+| Source value | Not established |
+| Value used in this model | [0.007368130527692307, -0.006476028207096081, 0.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>FR_ShoulderFlexor_s0_origin · orientation_in_body_wxyz</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FR_ShoulderFlexor_s0_origin |
+| Parameter | orientation_in_body_wxyz |
+| Unit | 1 |
+| Meaning | Fixed site in owning body frame; dynamic routing sites are configured separately. |
+| Source value | Not established |
+| Value used in this model | [1.0, 0.0, 0.0, 0.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>FR_TricepsBrachiiLong_s0_origin · position_in_body_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FR_TricepsBrachiiLong_s0_origin |
+| Parameter | position_in_body_m |
+| Unit | m |
+| Meaning | Fixed site in owning body frame; dynamic routing sites are configured separately. |
+| Source value | Not established |
+| Value used in this model | [0.047488676157244, 0.0004729577802118338, 0.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>FR_TricepsBrachiiLong_s0_origin · orientation_in_body_wxyz</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FR_TricepsBrachiiLong_s0_origin |
+| Parameter | orientation_in_body_wxyz |
+| Unit | 1 |
+| Meaning | Fixed site in owning body frame; dynamic routing sites are configured separately. |
+| Source value | Not established |
+| Value used in this model | [1.0, 0.0, 0.0, 0.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>FR_S_C3_attachment0 · position_in_body_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FR_S_C3_attachment0 |
+| Parameter | position_in_body_m |
+| Unit | m |
+| Meaning | Fixed site in owning body frame; dynamic routing sites are configured separately. |
+| Source value | Not established |
+| Value used in this model | [0.004795451228317586, 0.008940083297137217, -0.00891576258883919] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>FR_S_C3_attachment0 · orientation_in_body_wxyz</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FR_S_C3_attachment0 |
+| Parameter | orientation_in_body_wxyz |
+| Unit | 1 |
+| Meaning | Fixed site in owning body frame; dynamic routing sites are configured separately. |
+| Source value | Not established |
+| Value used in this model | [1.0, 0.0, 0.0, 0.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>FR_S_C4_attachment0 · position_in_body_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FR_S_C4_attachment0 |
+| Parameter | position_in_body_m |
+| Unit | m |
+| Meaning | Fixed site in owning body frame; dynamic routing sites are configured separately. |
+| Source value | Not established |
+| Value used in this model | [0.004430780978705402, 0.006459493101114089, -0.008070203391403533] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>FR_S_C4_attachment0 · orientation_in_body_wxyz</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FR_S_C4_attachment0 |
+| Parameter | orientation_in_body_wxyz |
+| Unit | 1 |
+| Meaning | Fixed site in owning body frame; dynamic routing sites are configured separately. |
+| Source value | Not established |
+| Value used in this model | [1.0, 0.0, 0.0, 0.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>FR_S_C5_attachment0 · position_in_body_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FR_S_C5_attachment0 |
+| Parameter | position_in_body_m |
+| Unit | m |
+| Meaning | Fixed site in owning body frame; dynamic routing sites are configured separately. |
+| Source value | Not established |
+| Value used in this model | [0.0012534713890847554, 0.0013103817769002965, -0.007253322123857315] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>FR_S_C5_attachment0 · orientation_in_body_wxyz</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FR_S_C5_attachment0 |
+| Parameter | orientation_in_body_wxyz |
+| Unit | 1 |
+| Meaning | Fixed site in owning body frame; dynamic routing sites are configured separately. |
+| Source value | Not established |
+| Value used in this model | [1.0, 0.0, 0.0, 0.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>FR_S_C6_attachment0 · position_in_body_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FR_S_C6_attachment0 |
+| Parameter | position_in_body_m |
+| Unit | m |
+| Meaning | Fixed site in owning body frame; dynamic routing sites are configured separately. |
+| Source value | Not established |
+| Value used in this model | [0.00047624768861937665, -0.0030523202735862364, -0.0060980449102903895] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>FR_S_C6_attachment0 · orientation_in_body_wxyz</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FR_S_C6_attachment0 |
+| Parameter | orientation_in_body_wxyz |
+| Unit | 1 |
+| Meaning | Fixed site in owning body frame; dynamic routing sites are configured separately. |
+| Source value | Not established |
+| Value used in this model | [1.0, 0.0, 0.0, 0.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>FR_S_C7_attachment0 · position_in_body_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FR_S_C7_attachment0 |
+| Parameter | position_in_body_m |
+| Unit | m |
+| Meaning | Fixed site in owning body frame; dynamic routing sites are configured separately. |
+| Source value | Not established |
+| Value used in this model | [8.232119588210429e-05, -0.006288899528980398, -0.005687478138496707] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>FR_S_C7_attachment0 · orientation_in_body_wxyz</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FR_S_C7_attachment0 |
+| Parameter | orientation_in_body_wxyz |
+| Unit | 1 |
+| Meaning | Fixed site in owning body frame; dynamic routing sites are configured separately. |
+| Source value | Not established |
+| Value used in this model | [1.0, 0.0, 0.0, 0.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>FR_S_T1_attachment0 · position_in_body_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FR_S_T1_attachment0 |
+| Parameter | position_in_body_m |
+| Unit | m |
+| Meaning | Fixed site in owning body frame; dynamic routing sites are configured separately. |
+| Source value | Not established |
+| Value used in this model | [0.0016490221999717954, -0.007589861855873643, -0.004588559449176619] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>FR_S_T1_attachment0 · orientation_in_body_wxyz</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FR_S_T1_attachment0 |
+| Parameter | orientation_in_body_wxyz |
+| Unit | 1 |
+| Meaning | Fixed site in owning body frame; dynamic routing sites are configured separately. |
+| Source value | Not established |
+| Value used in this model | [1.0, 0.0, 0.0, 0.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>FR_S_T2_attachment0 · position_in_body_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FR_S_T2_attachment0 |
+| Parameter | position_in_body_m |
+| Unit | m |
+| Meaning | Fixed site in owning body frame; dynamic routing sites are configured separately. |
+| Source value | Not established |
+| Value used in this model | [0.0015174427443237913, -0.00839971492314201, -0.004254624312990124] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>FR_S_T2_attachment0 · orientation_in_body_wxyz</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FR_S_T2_attachment0 |
+| Parameter | orientation_in_body_wxyz |
+| Unit | 1 |
+| Meaning | Fixed site in owning body frame; dynamic routing sites are configured separately. |
+| Source value | Not established |
+| Value used in this model | [1.0, 0.0, 0.0, 0.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>FR_S_T3_attachment0 · position_in_body_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FR_S_T3_attachment0 |
+| Parameter | position_in_body_m |
+| Unit | m |
+| Meaning | Fixed site in owning body frame; dynamic routing sites are configured separately. |
+| Source value | Not established |
+| Value used in this model | [0.0013627636158510797, -0.009351782713298548, -0.003862063980893065] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>FR_S_T3_attachment0 · orientation_in_body_wxyz</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FR_S_T3_attachment0 |
+| Parameter | orientation_in_body_wxyz |
+| Unit | 1 |
+| Meaning | Fixed site in owning body frame; dynamic routing sites are configured separately. |
+| Source value | Not established |
+| Value used in this model | [1.0, 0.0, 0.0, 0.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>FR_S_T4_attachment0 · position_in_body_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FR_S_T4_attachment0 |
+| Parameter | position_in_body_m |
+| Unit | m |
+| Meaning | Fixed site in owning body frame; dynamic routing sites are configured separately. |
+| Source value | Not established |
+| Value used in this model | [0.0011449220984346348, -0.010278000143844309, -0.0034667836427995377] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>FR_S_T4_attachment0 · orientation_in_body_wxyz</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FR_S_T4_attachment0 |
+| Parameter | orientation_in_body_wxyz |
+| Unit | 1 |
+| Meaning | Fixed site in owning body frame; dynamic routing sites are configured separately. |
+| Source value | Not established |
+| Value used in this model | [1.0, 0.0, 0.0, 0.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>FR_S_T5_attachment0 · position_in_body_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FR_S_T5_attachment0 |
+| Parameter | position_in_body_m |
+| Unit | m |
+| Meaning | Fixed site in owning body frame; dynamic routing sites are configured separately. |
+| Source value | Not established |
+| Value used in this model | [0.0009797837512339586, -0.010980160234099564, -0.003167120582168551] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>FR_S_T5_attachment0 · orientation_in_body_wxyz</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FR_S_T5_attachment0 |
+| Parameter | orientation_in_body_wxyz |
+| Unit | 1 |
+| Meaning | Fixed site in owning body frame; dynamic routing sites are configured separately. |
+| Source value | Not established |
+| Value used in this model | [1.0, 0.0, 0.0, 0.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>FR_S_T6_attachment0 · position_in_body_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FR_S_T6_attachment0 |
+| Parameter | position_in_body_m |
+| Unit | m |
+| Meaning | Fixed site in owning body frame; dynamic routing sites are configured separately. |
+| Source value | Not established |
+| Value used in this model | [0.0005560560626145822, -0.011881557103370471, -0.002839532126640481] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>FR_S_T6_attachment0 · orientation_in_body_wxyz</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FR_S_T6_attachment0 |
+| Parameter | orientation_in_body_wxyz |
+| Unit | 1 |
+| Meaning | Fixed site in owning body frame; dynamic routing sites are configured separately. |
+| Source value | Not established |
+| Value used in this model | [1.0, 0.0, 0.0, 0.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>FR_S_T7_attachment0 · position_in_body_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FR_S_T7_attachment0 |
+| Parameter | position_in_body_m |
+| Unit | m |
+| Meaning | Fixed site in owning body frame; dynamic routing sites are configured separately. |
+| Source value | Not established |
+| Value used in this model | [0.0004800993907770405, -0.012594984013538289, -0.002528771441543901] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>FR_S_T7_attachment0 · orientation_in_body_wxyz</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FR_S_T7_attachment0 |
+| Parameter | orientation_in_body_wxyz |
+| Unit | 1 |
+| Meaning | Fixed site in owning body frame; dynamic routing sites are configured separately. |
+| Source value | Not established |
+| Value used in this model | [1.0, 0.0, 0.0, 0.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>FR_S_T8_attachment0 · position_in_body_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FR_S_T8_attachment0 |
+| Parameter | position_in_body_m |
+| Unit | m |
+| Meaning | Fixed site in owning body frame; dynamic routing sites are configured separately. |
+| Source value | Not established |
+| Value used in this model | [0.0005598619010012685, -0.013343888402199973, -0.0021708911859018216] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>FR_S_T8_attachment0 · orientation_in_body_wxyz</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FR_S_T8_attachment0 |
+| Parameter | orientation_in_body_wxyz |
+| Unit | 1 |
+| Meaning | Fixed site in owning body frame; dynamic routing sites are configured separately. |
+| Source value | Not established |
+| Value used in this model | [1.0, 0.0, 0.0, 0.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>FR_S_T9_attachment0 · position_in_body_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FR_S_T9_attachment0 |
+| Parameter | position_in_body_m |
+| Unit | m |
+| Meaning | Fixed site in owning body frame; dynamic routing sites are configured separately. |
+| Source value | Not established |
+| Value used in this model | [0.0006439999858976172, -0.014133865079678464, -0.0017933996870252023] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>FR_S_T9_attachment0 · orientation_in_body_wxyz</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FR_S_T9_attachment0 |
+| Parameter | orientation_in_body_wxyz |
+| Unit | 1 |
+| Meaning | Fixed site in owning body frame; dynamic routing sites are configured separately. |
+| Source value | Not established |
+| Value used in this model | [1.0, 0.0, 0.0, 0.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>FR_R_C2_attachment0 · position_in_body_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FR_R_C2_attachment0 |
+| Parameter | position_in_body_m |
+| Unit | m |
+| Meaning | Fixed site in owning body frame; dynamic routing sites are configured separately. |
+| Source value | Not established |
+| Value used in this model | [0.00421427805669158, 0.009956284591736005, -0.009561283478607862] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>FR_R_C2_attachment0 · orientation_in_body_wxyz</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FR_R_C2_attachment0 |
+| Parameter | orientation_in_body_wxyz |
+| Unit | 1 |
+| Meaning | Fixed site in owning body frame; dynamic routing sites are configured separately. |
+| Source value | Not established |
+| Value used in this model | [1.0, 0.0, 0.0, 0.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>FR_R_C3-7_attachment0 · position_in_body_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FR_R_C3-7_attachment0 |
+| Parameter | position_in_body_m |
+| Unit | m |
+| Meaning | Fixed site in owning body frame; dynamic routing sites are configured separately. |
+| Source value | Not established |
+| Value used in this model | [0.00310279235650825, 0.00868995824284304, -0.00941303408511365] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>FR_R_C3-7_attachment0 · orientation_in_body_wxyz</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FR_R_C3-7_attachment0 |
+| Parameter | orientation_in_body_wxyz |
+| Unit | 1 |
+| Meaning | Fixed site in owning body frame; dynamic routing sites are configured separately. |
+| Source value | Not established |
+| Value used in this model | [1.0, 0.0, 0.0, 0.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>FR_R_T1_attachment0 · position_in_body_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FR_R_T1_attachment0 |
+| Parameter | position_in_body_m |
+| Unit | m |
+| Meaning | Fixed site in owning body frame; dynamic routing sites are configured separately. |
+| Source value | Not established |
+| Value used in this model | [0.0001555545282752785, 0.0008402433704696094, -0.007459435111583078] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>FR_R_T1_attachment0 · orientation_in_body_wxyz</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FR_R_T1_attachment0 |
+| Parameter | orientation_in_body_wxyz |
+| Unit | 1 |
+| Meaning | Fixed site in owning body frame; dynamic routing sites are configured separately. |
+| Source value | Not established |
+| Value used in this model | [1.0, 0.0, 0.0, 0.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>FR_R_T2_attachment0 · position_in_body_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FR_R_T2_attachment0 |
+| Parameter | position_in_body_m |
+| Unit | m |
+| Meaning | Fixed site in owning body frame; dynamic routing sites are configured separately. |
+| Source value | Not established |
+| Value used in this model | [-0.0015068049132703429, -0.006988896045691723, -0.005639624166332163] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>FR_R_T2_attachment0 · orientation_in_body_wxyz</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FR_R_T2_attachment0 |
+| Parameter | orientation_in_body_wxyz |
+| Unit | 1 |
+| Meaning | Fixed site in owning body frame; dynamic routing sites are configured separately. |
+| Source value | Not established |
+| Value used in this model | [1.0, 0.0, 0.0, 0.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>FR_R_T3_attachment0 · position_in_body_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FR_R_T3_attachment0 |
+| Parameter | position_in_body_m |
+| Unit | m |
+| Meaning | Fixed site in owning body frame; dynamic routing sites are configured separately. |
+| Source value | Not established |
+| Value used in this model | [-0.0013836213763926102, -0.01516450377661825, -0.0018174717400939522] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>FR_R_T3_attachment0 · orientation_in_body_wxyz</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FR_R_T3_attachment0 |
+| Parameter | orientation_in_body_wxyz |
+| Unit | 1 |
+| Meaning | Fixed site in owning body frame; dynamic routing sites are configured separately. |
+| Source value | Not established |
+| Value used in this model | [1.0, 0.0, 0.0, 0.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>FR_R_T4_attachment0 · position_in_body_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FR_R_T4_attachment0 |
+| Parameter | position_in_body_m |
+| Unit | m |
+| Meaning | Fixed site in owning body frame; dynamic routing sites are configured separately. |
+| Source value | Not established |
+| Value used in this model | [-0.0006171901903821737, -0.01637267571851643, -0.001136500105504634] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>FR_R_T4_attachment0 · orientation_in_body_wxyz</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FR_R_T4_attachment0 |
+| Parameter | orientation_in_body_wxyz |
+| Unit | 1 |
+| Meaning | Fixed site in owning body frame; dynamic routing sites are configured separately. |
+| Source value | Not established |
+| Value used in this model | [1.0, 0.0, 0.0, 0.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>FR_R_T5_attachment0 · position_in_body_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FR_R_T5_attachment0 |
+| Parameter | position_in_body_m |
+| Unit | m |
+| Meaning | Fixed site in owning body frame; dynamic routing sites are configured separately. |
+| Source value | Not established |
+| Value used in this model | [0.0002485759413340849, -0.016748131645748135, -0.0008106705871876146] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>FR_R_T5_attachment0 · orientation_in_body_wxyz</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FR_R_T5_attachment0 |
+| Parameter | orientation_in_body_wxyz |
+| Unit | 1 |
+| Meaning | Fixed site in owning body frame; dynamic routing sites are configured separately. |
+| Source value | Not established |
+| Value used in this model | [1.0, 0.0, 0.0, 0.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>FR_TrapeziusCervical_insertion · position_in_body_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FR_TrapeziusCervical_insertion |
+| Parameter | position_in_body_m |
+| Unit | m |
+| Meaning | Fixed site in owning body frame; dynamic routing sites are configured separately. |
+| Source value | Not established |
+| Value used in this model | [0.03, 0.002, -0.006] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>FR_TrapeziusCervical_insertion · orientation_in_body_wxyz</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FR_TrapeziusCervical_insertion |
+| Parameter | orientation_in_body_wxyz |
+| Unit | 1 |
+| Meaning | Fixed site in owning body frame; dynamic routing sites are configured separately. |
+| Source value | Not established |
+| Value used in this model | [1.0, 0.0, 0.0, 0.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>FR_TrapeziusThoracic_insertion · position_in_body_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FR_TrapeziusThoracic_insertion |
+| Parameter | position_in_body_m |
+| Unit | m |
+| Meaning | Fixed site in owning body frame; dynamic routing sites are configured separately. |
+| Source value | Not established |
+| Value used in this model | [0.018, -0.006, -0.006] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>FR_TrapeziusThoracic_insertion · orientation_in_body_wxyz</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FR_TrapeziusThoracic_insertion |
+| Parameter | orientation_in_body_wxyz |
+| Unit | 1 |
+| Meaning | Fixed site in owning body frame; dynamic routing sites are configured separately. |
+| Source value | Not established |
+| Value used in this model | [1.0, 0.0, 0.0, 0.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>FR_ShoulderExtensor_s0_insert · position_in_body_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FR_ShoulderExtensor_s0_insert |
+| Parameter | position_in_body_m |
+| Unit | m |
+| Meaning | Fixed site in owning body frame; dynamic routing sites are configured separately. |
+| Source value | Not established |
+| Value used in this model | [-0.005813670326445113, 0.0054158953170269945, 0.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>FR_ShoulderExtensor_s0_insert · orientation_in_body_wxyz</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FR_ShoulderExtensor_s0_insert |
+| Parameter | orientation_in_body_wxyz |
+| Unit | 1 |
+| Meaning | Fixed site in owning body frame; dynamic routing sites are configured separately. |
+| Source value | Not established |
+| Value used in this model | [1.0, 0.0, 0.0, 0.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>FR_ElbowExtensor_s0_origin · position_in_body_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FR_ElbowExtensor_s0_origin |
+| Parameter | position_in_body_m |
+| Unit | m |
+| Meaning | Fixed site in owning body frame; dynamic routing sites are configured separately. |
+| Source value | Not established |
+| Value used in this model | [0.03347737572796786, -0.009279374804372012, 0.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>FR_ElbowExtensor_s0_origin · orientation_in_body_wxyz</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FR_ElbowExtensor_s0_origin |
+| Parameter | orientation_in_body_wxyz |
+| Unit | 1 |
+| Meaning | Fixed site in owning body frame; dynamic routing sites are configured separately. |
+| Source value | Not established |
+| Value used in this model | [1.0, 0.0, 0.0, 0.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>FR_ElbowFlexor_s0_origin · position_in_body_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FR_ElbowFlexor_s0_origin |
+| Parameter | position_in_body_m |
+| Unit | m |
+| Meaning | Fixed site in owning body frame; dynamic routing sites are configured separately. |
+| Source value | Not established |
+| Value used in this model | [0.021427190335922205, 0.004982393596393559, 0.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>FR_ElbowFlexor_s0_origin · orientation_in_body_wxyz</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FR_ElbowFlexor_s0_origin |
+| Parameter | orientation_in_body_wxyz |
+| Unit | 1 |
+| Meaning | Fixed site in owning body frame; dynamic routing sites are configured separately. |
+| Source value | Not established |
+| Value used in this model | [1.0, 0.0, 0.0, 0.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>FR_ElbowFlexorWristFlexor_s0_origin · position_in_body_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FR_ElbowFlexorWristFlexor_s0_origin |
+| Parameter | position_in_body_m |
+| Unit | m |
+| Meaning | Fixed site in owning body frame; dynamic routing sites are configured separately. |
+| Source value | Not established |
+| Value used in this model | [0.08182242269299914, -0.0032236508291720372, 0.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>FR_ElbowFlexorWristFlexor_s0_origin · orientation_in_body_wxyz</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FR_ElbowFlexorWristFlexor_s0_origin |
+| Parameter | orientation_in_body_wxyz |
+| Unit | 1 |
+| Meaning | Fixed site in owning body frame; dynamic routing sites are configured separately. |
+| Source value | Not established |
+| Value used in this model | [1.0, 0.0, 0.0, 0.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>FR_ShoulderFlexor_s0_insert · position_in_body_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FR_ShoulderFlexor_s0_insert |
+| Parameter | position_in_body_m |
+| Unit | m |
+| Meaning | Fixed site in owning body frame; dynamic routing sites are configured separately. |
+| Source value | Not established |
+| Value used in this model | [0.013834023626670015, 0.00935472052307382, 0.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>FR_ShoulderFlexor_s0_insert · orientation_in_body_wxyz</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FR_ShoulderFlexor_s0_insert |
+| Parameter | orientation_in_body_wxyz |
+| Unit | 1 |
+| Meaning | Fixed site in owning body frame; dynamic routing sites are configured separately. |
+| Source value | Not established |
+| Value used in this model | [1.0, 0.0, 0.0, 0.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>FR_LatissimusDorsi_insertion · position_in_body_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FR_LatissimusDorsi_insertion |
+| Parameter | position_in_body_m |
+| Unit | m |
+| Meaning | Fixed site in owning body frame; dynamic routing sites are configured separately. |
+| Source value | Not established |
+| Value used in this model | [0.013834, 0.00935472, 0.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>FR_LatissimusDorsi_insertion · orientation_in_body_wxyz</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FR_LatissimusDorsi_insertion |
+| Parameter | orientation_in_body_wxyz |
+| Unit | 1 |
+| Meaning | Fixed site in owning body frame; dynamic routing sites are configured separately. |
+| Source value | Not established |
+| Value used in this model | [1.0, 0.0, 0.0, 0.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>FR_PectoralisProfundus_insertion · position_in_body_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FR_PectoralisProfundus_insertion |
+| Parameter | position_in_body_m |
+| Unit | m |
+| Meaning | Fixed site in owning body frame; dynamic routing sites are configured separately. |
+| Source value | Not established |
+| Value used in this model | [0.012, 0.01, 0.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>FR_PectoralisProfundus_insertion · orientation_in_body_wxyz</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FR_PectoralisProfundus_insertion |
+| Parameter | orientation_in_body_wxyz |
+| Unit | 1 |
+| Meaning | Fixed site in owning body frame; dynamic routing sites are configured separately. |
+| Source value | Not established |
+| Value used in this model | [1.0, 0.0, 0.0, 0.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>FR_PectoralisSuperficialis_insertion · position_in_body_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FR_PectoralisSuperficialis_insertion |
+| Parameter | position_in_body_m |
+| Unit | m |
+| Meaning | Fixed site in owning body frame; dynamic routing sites are configured separately. |
+| Source value | Not established |
+| Value used in this model | [0.03, 0.005, 0.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>FR_PectoralisSuperficialis_insertion · orientation_in_body_wxyz</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FR_PectoralisSuperficialis_insertion |
+| Parameter | orientation_in_body_wxyz |
+| Unit | 1 |
+| Meaning | Fixed site in owning body frame; dynamic routing sites are configured separately. |
+| Source value | Not established |
+| Value used in this model | [1.0, 0.0, 0.0, 0.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>FR_Clavobrachialis_insertion · position_in_body_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FR_Clavobrachialis_insertion |
+| Parameter | position_in_body_m |
+| Unit | m |
+| Meaning | Fixed site in owning body frame; dynamic routing sites are configured separately. |
+| Source value | Not established |
+| Value used in this model | [0.025, 0.003, 0.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>FR_Clavobrachialis_insertion · orientation_in_body_wxyz</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FR_Clavobrachialis_insertion |
+| Parameter | orientation_in_body_wxyz |
+| Unit | 1 |
+| Meaning | Fixed site in owning body frame; dynamic routing sites are configured separately. |
+| Source value | Not established |
+| Value used in this model | [1.0, 0.0, 0.0, 0.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>FR_ElbowExtensor_s0_insert · position_in_body_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FR_ElbowExtensor_s0_insert |
+| Parameter | position_in_body_m |
+| Unit | m |
+| Meaning | Fixed site in owning body frame; dynamic routing sites are configured separately. |
+| Source value | Not established |
+| Value used in this model | [-0.005023971663288653, -0.0024286591330201198, 0.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>FR_ElbowExtensor_s0_insert · orientation_in_body_wxyz</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FR_ElbowExtensor_s0_insert |
+| Parameter | orientation_in_body_wxyz |
+| Unit | 1 |
+| Meaning | Fixed site in owning body frame; dynamic routing sites are configured separately. |
+| Source value | Not established |
+| Value used in this model | [1.0, 0.0, 0.0, 0.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>FR_BicepsBrachii_s0_insert · position_in_body_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FR_BicepsBrachii_s0_insert |
+| Parameter | position_in_body_m |
+| Unit | m |
+| Meaning | Fixed site in owning body frame; dynamic routing sites are configured separately. |
+| Source value | Not established |
+| Value used in this model | [0.010255675241405497, -0.004336634578383328, 0.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>FR_BicepsBrachii_s0_insert · orientation_in_body_wxyz</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FR_BicepsBrachii_s0_insert |
+| Parameter | orientation_in_body_wxyz |
+| Unit | 1 |
+| Meaning | Fixed site in owning body frame; dynamic routing sites are configured separately. |
+| Source value | Not established |
+| Value used in this model | [1.0, 0.0, 0.0, 0.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>FR_ElbowFlexor_s0_insert · position_in_body_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FR_ElbowFlexor_s0_insert |
+| Parameter | position_in_body_m |
+| Unit | m |
+| Meaning | Fixed site in owning body frame; dynamic routing sites are configured separately. |
+| Source value | Not established |
+| Value used in this model | [0.004607550668827849, 0.0057911120794285845, 0.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>FR_ElbowFlexor_s0_insert · orientation_in_body_wxyz</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FR_ElbowFlexor_s0_insert |
+| Parameter | orientation_in_body_wxyz |
+| Unit | 1 |
+| Meaning | Fixed site in owning body frame; dynamic routing sites are configured separately. |
+| Source value | Not established |
+| Value used in this model | [1.0, 0.0, 0.0, 0.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>FR_ElbowFlexorWristFlexor_s0_insert · position_in_body_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FR_ElbowFlexorWristFlexor_s0_insert |
+| Parameter | position_in_body_m |
+| Unit | m |
+| Meaning | Fixed site in owning body frame; dynamic routing sites are configured separately. |
+| Source value | Not established |
+| Value used in this model | [0.09490224546194542, 0.006129750944256109, 0.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>FR_ElbowFlexorWristFlexor_s0_insert · orientation_in_body_wxyz</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FR_ElbowFlexorWristFlexor_s0_insert |
+| Parameter | orientation_in_body_wxyz |
+| Unit | 1 |
+| Meaning | Fixed site in owning body frame; dynamic routing sites are configured separately. |
+| Source value | Not established |
+| Value used in this model | [1.0, 0.0, 0.0, 0.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>FR_ElbowFlexorWristFlexor_s1_origin · position_in_body_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FR_ElbowFlexorWristFlexor_s1_origin |
+| Parameter | position_in_body_m |
+| Unit | m |
+| Meaning | Fixed site in owning body frame; dynamic routing sites are configured separately. |
+| Source value | Not established |
+| Value used in this model | [0.09441204025234055, 0.006129750944256109, 0.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>FR_ElbowFlexorWristFlexor_s1_origin · orientation_in_body_wxyz</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FR_ElbowFlexorWristFlexor_s1_origin |
+| Parameter | orientation_in_body_wxyz |
+| Unit | 1 |
+| Meaning | Fixed site in owning body frame; dynamic routing sites are configured separately. |
+| Source value | Not established |
+| Value used in this model | [1.0, 0.0, 0.0, 0.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>FR_WristFlexor_s0_origin · position_in_body_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FR_WristFlexor_s0_origin |
+| Parameter | position_in_body_m |
+| Unit | m |
+| Meaning | Fixed site in owning body frame; dynamic routing sites are configured separately. |
+| Source value | Not established |
+| Value used in this model | [0.009341816153249752, -0.005995037194119982, 0.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>FR_WristFlexor_s0_origin · orientation_in_body_wxyz</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FR_WristFlexor_s0_origin |
+| Parameter | orientation_in_body_wxyz |
+| Unit | 1 |
+| Meaning | Fixed site in owning body frame; dynamic routing sites are configured separately. |
+| Source value | Not established |
+| Value used in this model | [1.0, 0.0, 0.0, 0.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>FR_WristFlexor_s0_insert · position_in_body_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FR_WristFlexor_s0_insert |
+| Parameter | position_in_body_m |
+| Unit | m |
+| Meaning | Fixed site in owning body frame; dynamic routing sites are configured separately. |
+| Source value | Not established |
+| Value used in this model | [0.09880435723966653, 0.004348446901636839, 0.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>FR_WristFlexor_s0_insert · orientation_in_body_wxyz</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FR_WristFlexor_s0_insert |
+| Parameter | orientation_in_body_wxyz |
+| Unit | 1 |
+| Meaning | Fixed site in owning body frame; dynamic routing sites are configured separately. |
+| Source value | Not established |
+| Value used in this model | [1.0, 0.0, 0.0, 0.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>FR_WristFlexor_s1_origin · position_in_body_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FR_WristFlexor_s1_origin |
+| Parameter | position_in_body_m |
+| Unit | m |
+| Meaning | Fixed site in owning body frame; dynamic routing sites are configured separately. |
+| Source value | Not established |
+| Value used in this model | [0.09880435723966685, 0.00434844690163684, 0.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>FR_WristFlexor_s1_origin · orientation_in_body_wxyz</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FR_WristFlexor_s1_origin |
+| Parameter | orientation_in_body_wxyz |
+| Unit | 1 |
+| Meaning | Fixed site in owning body frame; dynamic routing sites are configured separately. |
+| Source value | Not established |
+| Value used in this model | [1.0, 0.0, 0.0, 0.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>FR_WristExtensor_s0_origin · position_in_body_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FR_WristExtensor_s0_origin |
+| Parameter | position_in_body_m |
+| Unit | m |
+| Meaning | Fixed site in owning body frame; dynamic routing sites are configured separately. |
+| Source value | Not established |
+| Value used in this model | [0.006369213062286766, -0.00029685234663381487, 0.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>FR_WristExtensor_s0_origin · orientation_in_body_wxyz</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FR_WristExtensor_s0_origin |
+| Parameter | orientation_in_body_wxyz |
+| Unit | 1 |
+| Meaning | Fixed site in owning body frame; dynamic routing sites are configured separately. |
+| Source value | Not established |
+| Value used in this model | [1.0, 0.0, 0.0, 0.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>FR_WristExtensor_s0_insert · position_in_body_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FR_WristExtensor_s0_insert |
+| Parameter | position_in_body_m |
+| Unit | m |
+| Meaning | Fixed site in owning body frame; dynamic routing sites are configured separately. |
+| Source value | Not established |
+| Value used in this model | [0.09613280631579318, -0.004972172450585192, 0.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>FR_WristExtensor_s0_insert · orientation_in_body_wxyz</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FR_WristExtensor_s0_insert |
+| Parameter | orientation_in_body_wxyz |
+| Unit | 1 |
+| Meaning | Fixed site in owning body frame; dynamic routing sites are configured separately. |
+| Source value | Not established |
+| Value used in this model | [1.0, 0.0, 0.0, 0.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>FR_WristExtensor_s1_origin · position_in_body_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FR_WristExtensor_s1_origin |
+| Parameter | position_in_body_m |
+| Unit | m |
+| Meaning | Fixed site in owning body frame; dynamic routing sites are configured separately. |
+| Source value | Not established |
+| Value used in this model | [0.0931814793984905, -0.004972172450585193, 0.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>FR_WristExtensor_s1_origin · orientation_in_body_wxyz</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FR_WristExtensor_s1_origin |
+| Parameter | orientation_in_body_wxyz |
+| Unit | 1 |
+| Meaning | Fixed site in owning body frame; dynamic routing sites are configured separately. |
+| Source value | Not established |
+| Value used in this model | [1.0, 0.0, 0.0, 0.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>FR_TricepsBrachiiLong_s0_insert · position_in_body_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FR_TricepsBrachiiLong_s0_insert |
+| Parameter | position_in_body_m |
+| Unit | m |
+| Meaning | Fixed site in owning body frame; dynamic routing sites are configured separately. |
+| Source value | Not established |
+| Value used in this model | [-0.014150059601265615, -0.004518838579248152, 0.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>FR_TricepsBrachiiLong_s0_insert · orientation_in_body_wxyz</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FR_TricepsBrachiiLong_s0_insert |
+| Parameter | orientation_in_body_wxyz |
+| Unit | 1 |
+| Meaning | Fixed site in owning body frame; dynamic routing sites are configured separately. |
+| Source value | Not established |
+| Value used in this model | [1.0, 0.0, 0.0, 0.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>FR_ElbowFlexorWristFlexor_s1_insert · position_in_body_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FR_ElbowFlexorWristFlexor_s1_insert |
+| Parameter | position_in_body_m |
+| Unit | m |
+| Meaning | Fixed site in owning body frame; dynamic routing sites are configured separately. |
+| Source value | Not established |
+| Value used in this model | [0.03303668349099529, 0.004179360662887023, 0.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>FR_ElbowFlexorWristFlexor_s1_insert · orientation_in_body_wxyz</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FR_ElbowFlexorWristFlexor_s1_insert |
+| Parameter | orientation_in_body_wxyz |
+| Unit | 1 |
+| Meaning | Fixed site in owning body frame; dynamic routing sites are configured separately. |
+| Source value | Not established |
+| Value used in this model | [1.0, 0.0, 0.0, 0.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>FR_WristFlexor_s1_insert · position_in_body_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FR_WristFlexor_s1_insert |
+| Parameter | position_in_body_m |
+| Unit | m |
+| Meaning | Fixed site in owning body frame; dynamic routing sites are configured separately. |
+| Source value | Not established |
+| Value used in this model | [0.016998910517186643, 0.0019601027857303775, 0.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>FR_WristFlexor_s1_insert · orientation_in_body_wxyz</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FR_WristFlexor_s1_insert |
+| Parameter | orientation_in_body_wxyz |
+| Unit | 1 |
+| Meaning | Fixed site in owning body frame; dynamic routing sites are configured separately. |
+| Source value | Not established |
+| Value used in this model | [1.0, 0.0, 0.0, 0.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>FR_WristExtensor_s1_insert · position_in_body_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FR_WristExtensor_s1_insert |
+| Parameter | position_in_body_m |
+| Unit | m |
+| Meaning | Fixed site in owning body frame; dynamic routing sites are configured separately. |
+| Source value | Not established |
+| Value used in this model | [0.02847542892267019, -0.004688183291220659, 0.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>FR_WristExtensor_s1_insert · orientation_in_body_wxyz</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FR_WristExtensor_s1_insert |
+| Parameter | orientation_in_body_wxyz |
+| Unit | 1 |
+| Meaning | Fixed site in owning body frame; dynamic routing sites are configured separately. |
+| Source value | Not established |
+| Value used in this model | [1.0, 0.0, 0.0, 0.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>FR_DigitalExtensors_attachment0 · position_in_body_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FR_DigitalExtensors_attachment0 |
+| Parameter | position_in_body_m |
+| Unit | m |
+| Meaning | Fixed site in owning body frame; dynamic routing sites are configured separately. |
+| Source value | Not established |
+| Value used in this model | [-0.0005687001860839453, 0.005971577177090113, 0.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>FR_DigitalExtensors_attachment0 · orientation_in_body_wxyz</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FR_DigitalExtensors_attachment0 |
+| Parameter | orientation_in_body_wxyz |
+| Unit | 1 |
+| Meaning | Fixed site in owning body frame; dynamic routing sites are configured separately. |
+| Source value | Not established |
+| Value used in this model | [1.0, 0.0, 0.0, 0.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>FR_DigitalFlexors_attachment0 · position_in_body_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FR_DigitalFlexors_attachment0 |
+| Parameter | position_in_body_m |
+| Unit | m |
+| Meaning | Fixed site in owning body frame; dynamic routing sites are configured separately. |
+| Source value | Not established |
+| Value used in this model | [0.0005376851212354235, -0.0054544472004418275, 0.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>FR_DigitalFlexors_attachment0 · orientation_in_body_wxyz</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FR_DigitalFlexors_attachment0 |
+| Parameter | orientation_in_body_wxyz |
+| Unit | 1 |
+| Meaning | Fixed site in owning body frame; dynamic routing sites are configured separately. |
+| Source value | Not established |
+| Value used in this model | [1.0, 0.0, 0.0, 0.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>FR_paw · position_in_body_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FR_paw |
+| Parameter | position_in_body_m |
+| Unit | m |
+| Meaning | Fixed site in owning body frame; dynamic routing sites are configured separately. |
+| Source value | Not established |
+| Value used in this model | [0.017, 0.0, 0.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>FR_paw · orientation_in_body_wxyz</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FR_paw |
+| Parameter | orientation_in_body_wxyz |
+| Unit | 1 |
+| Meaning | Fixed site in owning body frame; dynamic routing sites are configured separately. |
+| Source value | Not established |
+| Value used in this model | [1.0, 0.0, 0.0, 0.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>FR_DigitalExtensors_attachment1 · position_in_body_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FR_DigitalExtensors_attachment1 |
+| Parameter | position_in_body_m |
+| Unit | m |
+| Meaning | Fixed site in owning body frame; dynamic routing sites are configured separately. |
+| Source value | Not established |
+| Value used in this model | [0.004866957206077467, 0.0022584706445033056, 0.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>FR_DigitalExtensors_attachment1 · orientation_in_body_wxyz</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FR_DigitalExtensors_attachment1 |
+| Parameter | orientation_in_body_wxyz |
+| Unit | 1 |
+| Meaning | Fixed site in owning body frame; dynamic routing sites are configured separately. |
+| Source value | Not established |
+| Value used in this model | [1.0, 0.0, 0.0, 0.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>FR_DigitalFlexors_attachment1 · position_in_body_m</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FR_DigitalFlexors_attachment1 |
+| Parameter | position_in_body_m |
+| Unit | m |
+| Meaning | Fixed site in owning body frame; dynamic routing sites are configured separately. |
+| Source value | Not established |
+| Value used in this model | [0.0011753936623770337, -0.006021532171048234, 0.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>
+
+<details>
+<summary>FR_DigitalFlexors_attachment1 · orientation_in_body_wxyz</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FR_DigitalFlexors_attachment1 |
+| Parameter | orientation_in_body_wxyz |
+| Unit | 1 |
+| Meaning | Fixed site in owning body frame; dynamic routing sites are configured separately. |
+| Source value | Not established |
+| Value used in this model | [1.0, 0.0, 0.0, 0.0] |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Model specification or calibrated estimate; no verified numerical value from a primary source is available. |
+
+</details>

@@ -4,109 +4,1044 @@
 
 [Back to parameter guide](../parameter_tables.md)
 
-| Object | Applied initial value |
+Each entry contains its values, units, meaning and source information. Select an entry to read all fields.
+
+<details>
+<summary>L_IP · {&quot;activation_0_to_1&quot;: 0.870889478246264, &quot;fiber_length_m&quot;: 0.039459389117220744}</summary>
+
+| Field | Value |
 | --- | --- |
-| L_IP | {"activation_0_to_1": 0.870889478246264, "fiber_length_m": 0.039459389117220744} |
-| L_BFA | {"activation_0_to_1": 0.33693246493782775, "fiber_length_m": 0.01999658125733006} |
-| L_VL | {"activation_0_to_1": 0.3951463958189099, "fiber_length_m": 0.01598546639368841} |
-| L_VM | {"activation_0_to_1": 0.44248817183333095, "fiber_length_m": 0.015489368024201101} |
-| L_TA | {"activation_0_to_1": 0.7042631123533936, "fiber_length_m": 0.06007433191440371} |
-| L_SO | {"activation_0_to_1": 0.41423451954983714, "fiber_length_m": 0.02281079349454152} |
-| L_RF | {"activation_0_to_1": 0.8428922714381261, "fiber_length_m": 0.012711978826536503} |
-| L_BFP | {"activation_0_to_1": 0.7238784481010543, "fiber_length_m": 0.05093251618436455} |
-| L_SAM | {"activation_0_to_1": 0.6839514598755866, "fiber_length_m": 0.0808757932216231} |
-| L_LG | {"activation_0_to_1": 0.18879084432780802, "fiber_length_m": 0.016658169614306} |
-| L_MG | {"activation_0_to_1": 0.2870747663958547, "fiber_length_m": 0.015756030482443895} |
-| R_IP | {"activation_0_to_1": 0.44855715358602805, "fiber_length_m": 0.03198255855515641} |
-| R_BFA | {"activation_0_to_1": 0.8189344400897721, "fiber_length_m": 0.024554498211033268} |
-| R_VL | {"activation_0_to_1": 0.6896074649210291, "fiber_length_m": 0.01629905054946983} |
-| R_VM | {"activation_0_to_1": 0.8779689515493411, "fiber_length_m": 0.015736640474542884} |
-| R_TA | {"activation_0_to_1": 0.728821143364574, "fiber_length_m": 0.0573209153625423} |
-| R_SO | {"activation_0_to_1": 0.4804237717184429, "fiber_length_m": 0.02817751661427856} |
-| R_RF | {"activation_0_to_1": 0.7746316830147807, "fiber_length_m": 0.010193743799285913} |
-| R_BFP | {"activation_0_to_1": 0.3841549925181842, "fiber_length_m": 0.05558323243938858} |
-| R_SAM | {"activation_0_to_1": 0.529908388004167, "fiber_length_m": 0.07209592769202408} |
-| R_LG | {"activation_0_to_1": 0.47605841573645397, "fiber_length_m": 0.021134775744557927} |
-| R_MG | {"activation_0_to_1": 0.37804841124834615, "fiber_length_m": 0.02055712052121198} |
-| L_EDL | {"activation_0_to_1": 0.32007026552830325, "fiber_length_m": 0.031201538175173533} |
-| R_EDL | {"activation_0_to_1": 0.47464457639501473, "fiber_length_m": 0.024954205051821984} |
-| L_FDL | {"activation_0_to_1": 0.45453153738225355, "fiber_length_m": 0.015342914221368843} |
-| R_FDL | {"activation_0_to_1": 0.9876062307363418, "fiber_length_m": 0.015224822278158214} |
-| L_FHL | {"activation_0_to_1": 0.5691546170544115, "fiber_length_m": 0.011661573533581361} |
-| R_FHL | {"activation_0_to_1": 0.8306963826058645, "fiber_length_m": 0.012205974902971007} |
-| FL_ShoulderExtensor | {"activation_0_to_1": 0.43063291013457866, "fiber_length_m": 0.01281725001203047} |
-| FL_ElbowExtensor | {"activation_0_to_1": 0.9145343439565062, "fiber_length_m": 0.025610591218516367} |
-| FL_BicepsBrachii | {"activation_0_to_1": 0.29178214880918296, "fiber_length_m": 0.021807489743804954} |
-| FL_ElbowFlexor | {"activation_0_to_1": 0.37732246783215856, "fiber_length_m": 0.04251547778239118} |
-| FL_ElbowFlexorWristFlexor | {"activation_0_to_1": 0.8280355687777172, "fiber_length_m": 0.020747654241316544} |
-| FL_WristFlexor | {"activation_0_to_1": 0.6433008556980415, "fiber_length_m": 0.013797498621129648} |
-| FL_WristExtensor | {"activation_0_to_1": 0.2703704982605658, "fiber_length_m": 0.011151651183557288} |
-| FL_ShoulderFlexor | {"activation_0_to_1": 0.6767523945082969, "fiber_length_m": 0.03801547059163581} |
-| FL_TricepsBrachiiLong | {"activation_0_to_1": 0.8869850405266974, "fiber_length_m": 0.013958299916842547} |
-| FR_ShoulderExtensor | {"activation_0_to_1": 0.301707439802904, "fiber_length_m": 0.011020895425201835} |
-| FR_ElbowExtensor | {"activation_0_to_1": 0.4268164321845187, "fiber_length_m": 0.027428738731987607} |
-| FR_BicepsBrachii | {"activation_0_to_1": 0.6482470786584758, "fiber_length_m": 0.016841006526931677} |
-| FR_ElbowFlexor | {"activation_0_to_1": 0.7247089281622151, "fiber_length_m": 0.04054389076139881} |
-| FR_ElbowFlexorWristFlexor | {"activation_0_to_1": 0.35537596001213295, "fiber_length_m": 0.022476831628234568} |
-| FR_WristFlexor | {"activation_0_to_1": 0.40063667281026594, "fiber_length_m": 0.016932311341653846} |
-| FR_WristExtensor | {"activation_0_to_1": 0.9999997773125731, "fiber_length_m": 0.007894871266194769} |
-| FR_ShoulderFlexor | {"activation_0_to_1": 0.4983023784326215, "fiber_length_m": 0.04035880341714433} |
-| FR_TricepsBrachiiLong | {"activation_0_to_1": 0.6933628005641336, "fiber_length_m": 0.02025531568340672} |
-| FL_S_C3 | {"activation_0_to_1": 0.8066081491217026, "fiber_length_m": 0.04766798427958194} |
-| FR_S_C3 | {"activation_0_to_1": 0.6492382422071201, "fiber_length_m": 0.04881698938165903} |
-| FL_S_C4 | {"activation_0_to_1": 0.805824064245145, "fiber_length_m": 0.04276678897326946} |
-| FR_S_C4 | {"activation_0_to_1": 0.6495873248763039, "fiber_length_m": 0.043513500716507204} |
-| FL_S_C5 | {"activation_0_to_1": 0.8047254219573989, "fiber_length_m": 0.04152814621519471} |
-| FR_S_C5 | {"activation_0_to_1": 0.6502098859327915, "fiber_length_m": 0.041844089260979836} |
-| FL_S_C6 | {"activation_0_to_1": 0.802099108140442, "fiber_length_m": 0.04009188627793664} |
-| FR_S_C6 | {"activation_0_to_1": 0.6528287003917232, "fiber_length_m": 0.03916847827074793} |
-| FL_S_C7 | {"activation_0_to_1": 0.800600700876901, "fiber_length_m": 0.03709822271907364} |
-| FR_S_C7 | {"activation_0_to_1": 0.6560678976623533, "fiber_length_m": 0.03520350815217931} |
-| FL_S_T1 | {"activation_0_to_1": 0.7271579034932936, "fiber_length_m": 0.03193330040740165} |
-| FR_S_T1 | {"activation_0_to_1": 0.9387046902314893, "fiber_length_m": 0.02738812548245359} |
-| FL_S_T2 | {"activation_0_to_1": 0.7192702956560972, "fiber_length_m": 0.03003186000311795} |
-| FR_S_T2 | {"activation_0_to_1": 0.953439341617972, "fiber_length_m": 0.02445173427524605} |
-| FL_S_T3 | {"activation_0_to_1": 0.6910838555588741, "fiber_length_m": 0.024542073725324215} |
-| FR_S_T3 | {"activation_0_to_1": 0.9856712532022647, "fiber_length_m": 0.018073043037255147} |
-| FL_S_T4 | {"activation_0_to_1": 0.6749288191499689, "fiber_length_m": 0.021694420031772754} |
-| FR_S_T4 | {"activation_0_to_1": 1.0, "fiber_length_m": 0.01532101032315631} |
-| FL_S_T5 | {"activation_0_to_1": 0.7213261795587402, "fiber_length_m": 0.023017895477601573} |
-| FR_S_T5 | {"activation_0_to_1": 0.9520630792006299, "fiber_length_m": 0.018874494065113413} |
-| FL_S_T6 | {"activation_0_to_1": 0.7322305916202012, "fiber_length_m": 0.02560183712321325} |
-| FR_S_T6 | {"activation_0_to_1": 0.9200696533147289, "fiber_length_m": 0.02385443596083572} |
-| FL_S_T7 | {"activation_0_to_1": 0.7394718170818797, "fiber_length_m": 0.02758708960586381} |
-| FR_S_T7 | {"activation_0_to_1": 0.9061997489164333, "fiber_length_m": 0.02845481722398855} |
-| FL_S_T8 | {"activation_0_to_1": 0.7490953109338967, "fiber_length_m": 0.03100819670956552} |
-| FR_S_T8 | {"activation_0_to_1": 0.9028454739809326, "fiber_length_m": 0.03413692998463432} |
-| FL_S_T9 | {"activation_0_to_1": 0.7641624239057028, "fiber_length_m": 0.03230694304544618} |
-| FR_S_T9 | {"activation_0_to_1": 0.8947121688470366, "fiber_length_m": 0.03838176577411198} |
-| FL_R_C2 | {"activation_0_to_1": 0.6309120022392664, "fiber_length_m": 0.038771708507027276} |
-| FR_R_C2 | {"activation_0_to_1": 0.5558068110462022, "fiber_length_m": 0.03999777818962708} |
-| FL_R_C3-7 | {"activation_0_to_1": 0.632910105602216, "fiber_length_m": 0.0263639343118286} |
-| FR_R_C3-7 | {"activation_0_to_1": 0.555190027273887, "fiber_length_m": 0.02771328151854185} |
-| FL_R_T1 | {"activation_0_to_1": 0.7187978404483276, "fiber_length_m": 0.0302567885226062} |
-| FR_R_T1 | {"activation_0_to_1": 0.3416149866935868, "fiber_length_m": 0.032179828440175445} |
-| FL_R_T2 | {"activation_0_to_1": 0.7210398523708139, "fiber_length_m": 0.03359608922860226} |
-| FR_R_T2 | {"activation_0_to_1": 0.34138804786212945, "fiber_length_m": 0.036299484278712116} |
-| FL_R_T3 | {"activation_0_to_1": 0.7244780858933473, "fiber_length_m": 0.03724505676290237} |
-| FR_R_T3 | {"activation_0_to_1": 0.34102545862691186, "fiber_length_m": 0.04112495059230152} |
-| FL_R_T4 | {"activation_0_to_1": 0.7328847980699814, "fiber_length_m": 0.03417076634777539} |
-| FR_R_T4 | {"activation_0_to_1": 0.3395546807676321, "fiber_length_m": 0.039509586870092504} |
-| FL_R_T5 | {"activation_0_to_1": 0.7390484871793741, "fiber_length_m": 0.03343260018164973} |
-| FR_R_T5 | {"activation_0_to_1": 0.33773832163507506, "fiber_length_m": 0.03983142647253385} |
-| FL_DigitalExtensors | {"activation_0_to_1": 0.13003897649551047, "fiber_length_m": 0.017055430644364416} |
-| FR_DigitalExtensors | {"activation_0_to_1": 0.7225968465421075, "fiber_length_m": 0.01739462200914173} |
-| FL_DigitalFlexors | {"activation_0_to_1": 0.10778298789458943, "fiber_length_m": 0.015694696672205573} |
-| FR_DigitalFlexors | {"activation_0_to_1": 0.030855137478851703, "fiber_length_m": 0.010108712531143723} |
-| FL_TrapeziusCervical | {"activation_0_to_1": 0.8158144542587283, "fiber_length_m": 0.06628613647545409} |
-| FR_TrapeziusCervical | {"activation_0_to_1": 0.9139421016430548, "fiber_length_m": 0.057151230000366704} |
-| FL_TrapeziusThoracic | {"activation_0_to_1": 0.6407481804841275, "fiber_length_m": 0.05154216864635602} |
-| FR_TrapeziusThoracic | {"activation_0_to_1": 0.24026029228047824, "fiber_length_m": 0.056857006896382616} |
-| FL_LatissimusDorsi | {"activation_0_to_1": 0.4100605376422592, "fiber_length_m": 0.11476552393267118} |
-| FR_LatissimusDorsi | {"activation_0_to_1": 0.09239602871797474, "fiber_length_m": 0.13681561326713626} |
-| FL_PectoralisProfundus | {"activation_0_to_1": 0.5010229242307643, "fiber_length_m": 0.038251000461620645} |
-| FR_PectoralisProfundus | {"activation_0_to_1": 0.04887282220468061, "fiber_length_m": 0.06443379103520389} |
-| FL_PectoralisSuperficialis | {"activation_0_to_1": 0.7657904109014932, "fiber_length_m": 0.04527193394990888} |
-| FR_PectoralisSuperficialis | {"activation_0_to_1": 0.5290556722902369, "fiber_length_m": 0.029620609595436463} |
-| FL_Clavobrachialis | {"activation_0_to_1": 0.7590123734811056, "fiber_length_m": 0.0927788862620518} |
-| FR_Clavobrachialis | {"activation_0_to_1": 0.9999999945105883, "fiber_length_m": 0.06709306153434504} |
+| Object | L_IP |
+| Applied initial value | {"activation_0_to_1": 0.870889478246264, "fiber_length_m": 0.039459389117220744} |
+
+</details>
+
+<details>
+<summary>L_BFA · {&quot;activation_0_to_1&quot;: 0.33693246493782775, &quot;fiber_length_m&quot;: 0.01999658125733006}</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | L_BFA |
+| Applied initial value | {"activation_0_to_1": 0.33693246493782775, "fiber_length_m": 0.01999658125733006} |
+
+</details>
+
+<details>
+<summary>L_VL · {&quot;activation_0_to_1&quot;: 0.3951463958189099, &quot;fiber_length_m&quot;: 0.01598546639368841}</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | L_VL |
+| Applied initial value | {"activation_0_to_1": 0.3951463958189099, "fiber_length_m": 0.01598546639368841} |
+
+</details>
+
+<details>
+<summary>L_VM · {&quot;activation_0_to_1&quot;: 0.44248817183333095, &quot;fiber_length_m&quot;: 0.015489368024201101}</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | L_VM |
+| Applied initial value | {"activation_0_to_1": 0.44248817183333095, "fiber_length_m": 0.015489368024201101} |
+
+</details>
+
+<details>
+<summary>L_TA · {&quot;activation_0_to_1&quot;: 0.7042631123533936, &quot;fiber_length_m&quot;: 0.06007433191440371}</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | L_TA |
+| Applied initial value | {"activation_0_to_1": 0.7042631123533936, "fiber_length_m": 0.06007433191440371} |
+
+</details>
+
+<details>
+<summary>L_SO · {&quot;activation_0_to_1&quot;: 0.41423451954983714, &quot;fiber_length_m&quot;: 0.02281079349454152}</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | L_SO |
+| Applied initial value | {"activation_0_to_1": 0.41423451954983714, "fiber_length_m": 0.02281079349454152} |
+
+</details>
+
+<details>
+<summary>L_RF · {&quot;activation_0_to_1&quot;: 0.8428922714381261, &quot;fiber_length_m&quot;: 0.012711978826536503}</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | L_RF |
+| Applied initial value | {"activation_0_to_1": 0.8428922714381261, "fiber_length_m": 0.012711978826536503} |
+
+</details>
+
+<details>
+<summary>L_BFP · {&quot;activation_0_to_1&quot;: 0.7238784481010543, &quot;fiber_length_m&quot;: 0.05093251618436455}</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | L_BFP |
+| Applied initial value | {"activation_0_to_1": 0.7238784481010543, "fiber_length_m": 0.05093251618436455} |
+
+</details>
+
+<details>
+<summary>L_SAM · {&quot;activation_0_to_1&quot;: 0.6839514598755866, &quot;fiber_length_m&quot;: 0.0808757932216231}</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | L_SAM |
+| Applied initial value | {"activation_0_to_1": 0.6839514598755866, "fiber_length_m": 0.0808757932216231} |
+
+</details>
+
+<details>
+<summary>L_LG · {&quot;activation_0_to_1&quot;: 0.18879084432780802, &quot;fiber_length_m&quot;: 0.016658169614306}</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | L_LG |
+| Applied initial value | {"activation_0_to_1": 0.18879084432780802, "fiber_length_m": 0.016658169614306} |
+
+</details>
+
+<details>
+<summary>L_MG · {&quot;activation_0_to_1&quot;: 0.2870747663958547, &quot;fiber_length_m&quot;: 0.015756030482443895}</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | L_MG |
+| Applied initial value | {"activation_0_to_1": 0.2870747663958547, "fiber_length_m": 0.015756030482443895} |
+
+</details>
+
+<details>
+<summary>R_IP · {&quot;activation_0_to_1&quot;: 0.44855715358602805, &quot;fiber_length_m&quot;: 0.03198255855515641}</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | R_IP |
+| Applied initial value | {"activation_0_to_1": 0.44855715358602805, "fiber_length_m": 0.03198255855515641} |
+
+</details>
+
+<details>
+<summary>R_BFA · {&quot;activation_0_to_1&quot;: 0.8189344400897721, &quot;fiber_length_m&quot;: 0.024554498211033268}</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | R_BFA |
+| Applied initial value | {"activation_0_to_1": 0.8189344400897721, "fiber_length_m": 0.024554498211033268} |
+
+</details>
+
+<details>
+<summary>R_VL · {&quot;activation_0_to_1&quot;: 0.6896074649210291, &quot;fiber_length_m&quot;: 0.01629905054946983}</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | R_VL |
+| Applied initial value | {"activation_0_to_1": 0.6896074649210291, "fiber_length_m": 0.01629905054946983} |
+
+</details>
+
+<details>
+<summary>R_VM · {&quot;activation_0_to_1&quot;: 0.8779689515493411, &quot;fiber_length_m&quot;: 0.015736640474542884}</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | R_VM |
+| Applied initial value | {"activation_0_to_1": 0.8779689515493411, "fiber_length_m": 0.015736640474542884} |
+
+</details>
+
+<details>
+<summary>R_TA · {&quot;activation_0_to_1&quot;: 0.728821143364574, &quot;fiber_length_m&quot;: 0.0573209153625423}</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | R_TA |
+| Applied initial value | {"activation_0_to_1": 0.728821143364574, "fiber_length_m": 0.0573209153625423} |
+
+</details>
+
+<details>
+<summary>R_SO · {&quot;activation_0_to_1&quot;: 0.4804237717184429, &quot;fiber_length_m&quot;: 0.02817751661427856}</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | R_SO |
+| Applied initial value | {"activation_0_to_1": 0.4804237717184429, "fiber_length_m": 0.02817751661427856} |
+
+</details>
+
+<details>
+<summary>R_RF · {&quot;activation_0_to_1&quot;: 0.7746316830147807, &quot;fiber_length_m&quot;: 0.010193743799285913}</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | R_RF |
+| Applied initial value | {"activation_0_to_1": 0.7746316830147807, "fiber_length_m": 0.010193743799285913} |
+
+</details>
+
+<details>
+<summary>R_BFP · {&quot;activation_0_to_1&quot;: 0.3841549925181842, &quot;fiber_length_m&quot;: 0.05558323243938858}</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | R_BFP |
+| Applied initial value | {"activation_0_to_1": 0.3841549925181842, "fiber_length_m": 0.05558323243938858} |
+
+</details>
+
+<details>
+<summary>R_SAM · {&quot;activation_0_to_1&quot;: 0.529908388004167, &quot;fiber_length_m&quot;: 0.07209592769202408}</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | R_SAM |
+| Applied initial value | {"activation_0_to_1": 0.529908388004167, "fiber_length_m": 0.07209592769202408} |
+
+</details>
+
+<details>
+<summary>R_LG · {&quot;activation_0_to_1&quot;: 0.47605841573645397, &quot;fiber_length_m&quot;: 0.021134775744557927}</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | R_LG |
+| Applied initial value | {"activation_0_to_1": 0.47605841573645397, "fiber_length_m": 0.021134775744557927} |
+
+</details>
+
+<details>
+<summary>R_MG · {&quot;activation_0_to_1&quot;: 0.37804841124834615, &quot;fiber_length_m&quot;: 0.02055712052121198}</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | R_MG |
+| Applied initial value | {"activation_0_to_1": 0.37804841124834615, "fiber_length_m": 0.02055712052121198} |
+
+</details>
+
+<details>
+<summary>L_EDL · {&quot;activation_0_to_1&quot;: 0.32007026552830325, &quot;fiber_length_m&quot;: 0.031201538175173533}</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | L_EDL |
+| Applied initial value | {"activation_0_to_1": 0.32007026552830325, "fiber_length_m": 0.031201538175173533} |
+
+</details>
+
+<details>
+<summary>R_EDL · {&quot;activation_0_to_1&quot;: 0.47464457639501473, &quot;fiber_length_m&quot;: 0.024954205051821984}</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | R_EDL |
+| Applied initial value | {"activation_0_to_1": 0.47464457639501473, "fiber_length_m": 0.024954205051821984} |
+
+</details>
+
+<details>
+<summary>L_FDL · {&quot;activation_0_to_1&quot;: 0.45453153738225355, &quot;fiber_length_m&quot;: 0.015342914221368843}</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | L_FDL |
+| Applied initial value | {"activation_0_to_1": 0.45453153738225355, "fiber_length_m": 0.015342914221368843} |
+
+</details>
+
+<details>
+<summary>R_FDL · {&quot;activation_0_to_1&quot;: 0.9876062307363418, &quot;fiber_length_m&quot;: 0.015224822278158214}</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | R_FDL |
+| Applied initial value | {"activation_0_to_1": 0.9876062307363418, "fiber_length_m": 0.015224822278158214} |
+
+</details>
+
+<details>
+<summary>L_FHL · {&quot;activation_0_to_1&quot;: 0.5691546170544115, &quot;fiber_length_m&quot;: 0.011661573533581361}</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | L_FHL |
+| Applied initial value | {"activation_0_to_1": 0.5691546170544115, "fiber_length_m": 0.011661573533581361} |
+
+</details>
+
+<details>
+<summary>R_FHL · {&quot;activation_0_to_1&quot;: 0.8306963826058645, &quot;fiber_length_m&quot;: 0.012205974902971007}</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | R_FHL |
+| Applied initial value | {"activation_0_to_1": 0.8306963826058645, "fiber_length_m": 0.012205974902971007} |
+
+</details>
+
+<details>
+<summary>FL_ShoulderExtensor · {&quot;activation_0_to_1&quot;: 0.43063291013457866, &quot;fiber_length_m&quot;: 0.01281725001203047}</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_ShoulderExtensor |
+| Applied initial value | {"activation_0_to_1": 0.43063291013457866, "fiber_length_m": 0.01281725001203047} |
+
+</details>
+
+<details>
+<summary>FL_ElbowExtensor · {&quot;activation_0_to_1&quot;: 0.9145343439565062, &quot;fiber_length_m&quot;: 0.025610591218516367}</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_ElbowExtensor |
+| Applied initial value | {"activation_0_to_1": 0.9145343439565062, "fiber_length_m": 0.025610591218516367} |
+
+</details>
+
+<details>
+<summary>FL_BicepsBrachii · {&quot;activation_0_to_1&quot;: 0.29178214880918296, &quot;fiber_length_m&quot;: 0.021807489743804954}</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_BicepsBrachii |
+| Applied initial value | {"activation_0_to_1": 0.29178214880918296, "fiber_length_m": 0.021807489743804954} |
+
+</details>
+
+<details>
+<summary>FL_ElbowFlexor · {&quot;activation_0_to_1&quot;: 0.37732246783215856, &quot;fiber_length_m&quot;: 0.04251547778239118}</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_ElbowFlexor |
+| Applied initial value | {"activation_0_to_1": 0.37732246783215856, "fiber_length_m": 0.04251547778239118} |
+
+</details>
+
+<details>
+<summary>FL_ElbowFlexorWristFlexor · {&quot;activation_0_to_1&quot;: 0.8280355687777172, &quot;fiber_length_m&quot;: 0.020747654241316544}</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_ElbowFlexorWristFlexor |
+| Applied initial value | {"activation_0_to_1": 0.8280355687777172, "fiber_length_m": 0.020747654241316544} |
+
+</details>
+
+<details>
+<summary>FL_WristFlexor · {&quot;activation_0_to_1&quot;: 0.6433008556980415, &quot;fiber_length_m&quot;: 0.013797498621129648}</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_WristFlexor |
+| Applied initial value | {"activation_0_to_1": 0.6433008556980415, "fiber_length_m": 0.013797498621129648} |
+
+</details>
+
+<details>
+<summary>FL_WristExtensor · {&quot;activation_0_to_1&quot;: 0.2703704982605658, &quot;fiber_length_m&quot;: 0.011151651183557288}</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_WristExtensor |
+| Applied initial value | {"activation_0_to_1": 0.2703704982605658, "fiber_length_m": 0.011151651183557288} |
+
+</details>
+
+<details>
+<summary>FL_ShoulderFlexor · {&quot;activation_0_to_1&quot;: 0.6767523945082969, &quot;fiber_length_m&quot;: 0.03801547059163581}</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_ShoulderFlexor |
+| Applied initial value | {"activation_0_to_1": 0.6767523945082969, "fiber_length_m": 0.03801547059163581} |
+
+</details>
+
+<details>
+<summary>FL_TricepsBrachiiLong · {&quot;activation_0_to_1&quot;: 0.8869850405266974, &quot;fiber_length_m&quot;: 0.013958299916842547}</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_TricepsBrachiiLong |
+| Applied initial value | {"activation_0_to_1": 0.8869850405266974, "fiber_length_m": 0.013958299916842547} |
+
+</details>
+
+<details>
+<summary>FR_ShoulderExtensor · {&quot;activation_0_to_1&quot;: 0.301707439802904, &quot;fiber_length_m&quot;: 0.011020895425201835}</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FR_ShoulderExtensor |
+| Applied initial value | {"activation_0_to_1": 0.301707439802904, "fiber_length_m": 0.011020895425201835} |
+
+</details>
+
+<details>
+<summary>FR_ElbowExtensor · {&quot;activation_0_to_1&quot;: 0.4268164321845187, &quot;fiber_length_m&quot;: 0.027428738731987607}</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FR_ElbowExtensor |
+| Applied initial value | {"activation_0_to_1": 0.4268164321845187, "fiber_length_m": 0.027428738731987607} |
+
+</details>
+
+<details>
+<summary>FR_BicepsBrachii · {&quot;activation_0_to_1&quot;: 0.6482470786584758, &quot;fiber_length_m&quot;: 0.016841006526931677}</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FR_BicepsBrachii |
+| Applied initial value | {"activation_0_to_1": 0.6482470786584758, "fiber_length_m": 0.016841006526931677} |
+
+</details>
+
+<details>
+<summary>FR_ElbowFlexor · {&quot;activation_0_to_1&quot;: 0.7247089281622151, &quot;fiber_length_m&quot;: 0.04054389076139881}</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FR_ElbowFlexor |
+| Applied initial value | {"activation_0_to_1": 0.7247089281622151, "fiber_length_m": 0.04054389076139881} |
+
+</details>
+
+<details>
+<summary>FR_ElbowFlexorWristFlexor · {&quot;activation_0_to_1&quot;: 0.35537596001213295, &quot;fiber_length_m&quot;: 0.022476831628234568}</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FR_ElbowFlexorWristFlexor |
+| Applied initial value | {"activation_0_to_1": 0.35537596001213295, "fiber_length_m": 0.022476831628234568} |
+
+</details>
+
+<details>
+<summary>FR_WristFlexor · {&quot;activation_0_to_1&quot;: 0.40063667281026594, &quot;fiber_length_m&quot;: 0.016932311341653846}</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FR_WristFlexor |
+| Applied initial value | {"activation_0_to_1": 0.40063667281026594, "fiber_length_m": 0.016932311341653846} |
+
+</details>
+
+<details>
+<summary>FR_WristExtensor · {&quot;activation_0_to_1&quot;: 0.9999997773125731, &quot;fiber_length_m&quot;: 0.007894871266194769}</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FR_WristExtensor |
+| Applied initial value | {"activation_0_to_1": 0.9999997773125731, "fiber_length_m": 0.007894871266194769} |
+
+</details>
+
+<details>
+<summary>FR_ShoulderFlexor · {&quot;activation_0_to_1&quot;: 0.4983023784326215, &quot;fiber_length_m&quot;: 0.04035880341714433}</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FR_ShoulderFlexor |
+| Applied initial value | {"activation_0_to_1": 0.4983023784326215, "fiber_length_m": 0.04035880341714433} |
+
+</details>
+
+<details>
+<summary>FR_TricepsBrachiiLong · {&quot;activation_0_to_1&quot;: 0.6933628005641336, &quot;fiber_length_m&quot;: 0.02025531568340672}</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FR_TricepsBrachiiLong |
+| Applied initial value | {"activation_0_to_1": 0.6933628005641336, "fiber_length_m": 0.02025531568340672} |
+
+</details>
+
+<details>
+<summary>FL_S_C3 · {&quot;activation_0_to_1&quot;: 0.8066081491217026, &quot;fiber_length_m&quot;: 0.04766798427958194}</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_S_C3 |
+| Applied initial value | {"activation_0_to_1": 0.8066081491217026, "fiber_length_m": 0.04766798427958194} |
+
+</details>
+
+<details>
+<summary>FR_S_C3 · {&quot;activation_0_to_1&quot;: 0.6492382422071201, &quot;fiber_length_m&quot;: 0.04881698938165903}</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FR_S_C3 |
+| Applied initial value | {"activation_0_to_1": 0.6492382422071201, "fiber_length_m": 0.04881698938165903} |
+
+</details>
+
+<details>
+<summary>FL_S_C4 · {&quot;activation_0_to_1&quot;: 0.805824064245145, &quot;fiber_length_m&quot;: 0.04276678897326946}</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_S_C4 |
+| Applied initial value | {"activation_0_to_1": 0.805824064245145, "fiber_length_m": 0.04276678897326946} |
+
+</details>
+
+<details>
+<summary>FR_S_C4 · {&quot;activation_0_to_1&quot;: 0.6495873248763039, &quot;fiber_length_m&quot;: 0.043513500716507204}</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FR_S_C4 |
+| Applied initial value | {"activation_0_to_1": 0.6495873248763039, "fiber_length_m": 0.043513500716507204} |
+
+</details>
+
+<details>
+<summary>FL_S_C5 · {&quot;activation_0_to_1&quot;: 0.8047254219573989, &quot;fiber_length_m&quot;: 0.04152814621519471}</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_S_C5 |
+| Applied initial value | {"activation_0_to_1": 0.8047254219573989, "fiber_length_m": 0.04152814621519471} |
+
+</details>
+
+<details>
+<summary>FR_S_C5 · {&quot;activation_0_to_1&quot;: 0.6502098859327915, &quot;fiber_length_m&quot;: 0.041844089260979836}</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FR_S_C5 |
+| Applied initial value | {"activation_0_to_1": 0.6502098859327915, "fiber_length_m": 0.041844089260979836} |
+
+</details>
+
+<details>
+<summary>FL_S_C6 · {&quot;activation_0_to_1&quot;: 0.802099108140442, &quot;fiber_length_m&quot;: 0.04009188627793664}</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_S_C6 |
+| Applied initial value | {"activation_0_to_1": 0.802099108140442, "fiber_length_m": 0.04009188627793664} |
+
+</details>
+
+<details>
+<summary>FR_S_C6 · {&quot;activation_0_to_1&quot;: 0.6528287003917232, &quot;fiber_length_m&quot;: 0.03916847827074793}</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FR_S_C6 |
+| Applied initial value | {"activation_0_to_1": 0.6528287003917232, "fiber_length_m": 0.03916847827074793} |
+
+</details>
+
+<details>
+<summary>FL_S_C7 · {&quot;activation_0_to_1&quot;: 0.800600700876901, &quot;fiber_length_m&quot;: 0.03709822271907364}</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_S_C7 |
+| Applied initial value | {"activation_0_to_1": 0.800600700876901, "fiber_length_m": 0.03709822271907364} |
+
+</details>
+
+<details>
+<summary>FR_S_C7 · {&quot;activation_0_to_1&quot;: 0.6560678976623533, &quot;fiber_length_m&quot;: 0.03520350815217931}</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FR_S_C7 |
+| Applied initial value | {"activation_0_to_1": 0.6560678976623533, "fiber_length_m": 0.03520350815217931} |
+
+</details>
+
+<details>
+<summary>FL_S_T1 · {&quot;activation_0_to_1&quot;: 0.7271579034932936, &quot;fiber_length_m&quot;: 0.03193330040740165}</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_S_T1 |
+| Applied initial value | {"activation_0_to_1": 0.7271579034932936, "fiber_length_m": 0.03193330040740165} |
+
+</details>
+
+<details>
+<summary>FR_S_T1 · {&quot;activation_0_to_1&quot;: 0.9387046902314893, &quot;fiber_length_m&quot;: 0.02738812548245359}</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FR_S_T1 |
+| Applied initial value | {"activation_0_to_1": 0.9387046902314893, "fiber_length_m": 0.02738812548245359} |
+
+</details>
+
+<details>
+<summary>FL_S_T2 · {&quot;activation_0_to_1&quot;: 0.7192702956560972, &quot;fiber_length_m&quot;: 0.03003186000311795}</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_S_T2 |
+| Applied initial value | {"activation_0_to_1": 0.7192702956560972, "fiber_length_m": 0.03003186000311795} |
+
+</details>
+
+<details>
+<summary>FR_S_T2 · {&quot;activation_0_to_1&quot;: 0.953439341617972, &quot;fiber_length_m&quot;: 0.02445173427524605}</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FR_S_T2 |
+| Applied initial value | {"activation_0_to_1": 0.953439341617972, "fiber_length_m": 0.02445173427524605} |
+
+</details>
+
+<details>
+<summary>FL_S_T3 · {&quot;activation_0_to_1&quot;: 0.6910838555588741, &quot;fiber_length_m&quot;: 0.024542073725324215}</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_S_T3 |
+| Applied initial value | {"activation_0_to_1": 0.6910838555588741, "fiber_length_m": 0.024542073725324215} |
+
+</details>
+
+<details>
+<summary>FR_S_T3 · {&quot;activation_0_to_1&quot;: 0.9856712532022647, &quot;fiber_length_m&quot;: 0.018073043037255147}</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FR_S_T3 |
+| Applied initial value | {"activation_0_to_1": 0.9856712532022647, "fiber_length_m": 0.018073043037255147} |
+
+</details>
+
+<details>
+<summary>FL_S_T4 · {&quot;activation_0_to_1&quot;: 0.6749288191499689, &quot;fiber_length_m&quot;: 0.021694420031772754}</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_S_T4 |
+| Applied initial value | {"activation_0_to_1": 0.6749288191499689, "fiber_length_m": 0.021694420031772754} |
+
+</details>
+
+<details>
+<summary>FR_S_T4 · {&quot;activation_0_to_1&quot;: 1.0, &quot;fiber_length_m&quot;: 0.01532101032315631}</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FR_S_T4 |
+| Applied initial value | {"activation_0_to_1": 1.0, "fiber_length_m": 0.01532101032315631} |
+
+</details>
+
+<details>
+<summary>FL_S_T5 · {&quot;activation_0_to_1&quot;: 0.7213261795587402, &quot;fiber_length_m&quot;: 0.023017895477601573}</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_S_T5 |
+| Applied initial value | {"activation_0_to_1": 0.7213261795587402, "fiber_length_m": 0.023017895477601573} |
+
+</details>
+
+<details>
+<summary>FR_S_T5 · {&quot;activation_0_to_1&quot;: 0.9520630792006299, &quot;fiber_length_m&quot;: 0.018874494065113413}</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FR_S_T5 |
+| Applied initial value | {"activation_0_to_1": 0.9520630792006299, "fiber_length_m": 0.018874494065113413} |
+
+</details>
+
+<details>
+<summary>FL_S_T6 · {&quot;activation_0_to_1&quot;: 0.7322305916202012, &quot;fiber_length_m&quot;: 0.02560183712321325}</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_S_T6 |
+| Applied initial value | {"activation_0_to_1": 0.7322305916202012, "fiber_length_m": 0.02560183712321325} |
+
+</details>
+
+<details>
+<summary>FR_S_T6 · {&quot;activation_0_to_1&quot;: 0.9200696533147289, &quot;fiber_length_m&quot;: 0.02385443596083572}</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FR_S_T6 |
+| Applied initial value | {"activation_0_to_1": 0.9200696533147289, "fiber_length_m": 0.02385443596083572} |
+
+</details>
+
+<details>
+<summary>FL_S_T7 · {&quot;activation_0_to_1&quot;: 0.7394718170818797, &quot;fiber_length_m&quot;: 0.02758708960586381}</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_S_T7 |
+| Applied initial value | {"activation_0_to_1": 0.7394718170818797, "fiber_length_m": 0.02758708960586381} |
+
+</details>
+
+<details>
+<summary>FR_S_T7 · {&quot;activation_0_to_1&quot;: 0.9061997489164333, &quot;fiber_length_m&quot;: 0.02845481722398855}</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FR_S_T7 |
+| Applied initial value | {"activation_0_to_1": 0.9061997489164333, "fiber_length_m": 0.02845481722398855} |
+
+</details>
+
+<details>
+<summary>FL_S_T8 · {&quot;activation_0_to_1&quot;: 0.7490953109338967, &quot;fiber_length_m&quot;: 0.03100819670956552}</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_S_T8 |
+| Applied initial value | {"activation_0_to_1": 0.7490953109338967, "fiber_length_m": 0.03100819670956552} |
+
+</details>
+
+<details>
+<summary>FR_S_T8 · {&quot;activation_0_to_1&quot;: 0.9028454739809326, &quot;fiber_length_m&quot;: 0.03413692998463432}</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FR_S_T8 |
+| Applied initial value | {"activation_0_to_1": 0.9028454739809326, "fiber_length_m": 0.03413692998463432} |
+
+</details>
+
+<details>
+<summary>FL_S_T9 · {&quot;activation_0_to_1&quot;: 0.7641624239057028, &quot;fiber_length_m&quot;: 0.03230694304544618}</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_S_T9 |
+| Applied initial value | {"activation_0_to_1": 0.7641624239057028, "fiber_length_m": 0.03230694304544618} |
+
+</details>
+
+<details>
+<summary>FR_S_T9 · {&quot;activation_0_to_1&quot;: 0.8947121688470366, &quot;fiber_length_m&quot;: 0.03838176577411198}</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FR_S_T9 |
+| Applied initial value | {"activation_0_to_1": 0.8947121688470366, "fiber_length_m": 0.03838176577411198} |
+
+</details>
+
+<details>
+<summary>FL_R_C2 · {&quot;activation_0_to_1&quot;: 0.6309120022392664, &quot;fiber_length_m&quot;: 0.038771708507027276}</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_R_C2 |
+| Applied initial value | {"activation_0_to_1": 0.6309120022392664, "fiber_length_m": 0.038771708507027276} |
+
+</details>
+
+<details>
+<summary>FR_R_C2 · {&quot;activation_0_to_1&quot;: 0.5558068110462022, &quot;fiber_length_m&quot;: 0.03999777818962708}</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FR_R_C2 |
+| Applied initial value | {"activation_0_to_1": 0.5558068110462022, "fiber_length_m": 0.03999777818962708} |
+
+</details>
+
+<details>
+<summary>FL_R_C3-7 · {&quot;activation_0_to_1&quot;: 0.632910105602216, &quot;fiber_length_m&quot;: 0.0263639343118286}</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_R_C3-7 |
+| Applied initial value | {"activation_0_to_1": 0.632910105602216, "fiber_length_m": 0.0263639343118286} |
+
+</details>
+
+<details>
+<summary>FR_R_C3-7 · {&quot;activation_0_to_1&quot;: 0.555190027273887, &quot;fiber_length_m&quot;: 0.02771328151854185}</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FR_R_C3-7 |
+| Applied initial value | {"activation_0_to_1": 0.555190027273887, "fiber_length_m": 0.02771328151854185} |
+
+</details>
+
+<details>
+<summary>FL_R_T1 · {&quot;activation_0_to_1&quot;: 0.7187978404483276, &quot;fiber_length_m&quot;: 0.0302567885226062}</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_R_T1 |
+| Applied initial value | {"activation_0_to_1": 0.7187978404483276, "fiber_length_m": 0.0302567885226062} |
+
+</details>
+
+<details>
+<summary>FR_R_T1 · {&quot;activation_0_to_1&quot;: 0.3416149866935868, &quot;fiber_length_m&quot;: 0.032179828440175445}</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FR_R_T1 |
+| Applied initial value | {"activation_0_to_1": 0.3416149866935868, "fiber_length_m": 0.032179828440175445} |
+
+</details>
+
+<details>
+<summary>FL_R_T2 · {&quot;activation_0_to_1&quot;: 0.7210398523708139, &quot;fiber_length_m&quot;: 0.03359608922860226}</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_R_T2 |
+| Applied initial value | {"activation_0_to_1": 0.7210398523708139, "fiber_length_m": 0.03359608922860226} |
+
+</details>
+
+<details>
+<summary>FR_R_T2 · {&quot;activation_0_to_1&quot;: 0.34138804786212945, &quot;fiber_length_m&quot;: 0.036299484278712116}</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FR_R_T2 |
+| Applied initial value | {"activation_0_to_1": 0.34138804786212945, "fiber_length_m": 0.036299484278712116} |
+
+</details>
+
+<details>
+<summary>FL_R_T3 · {&quot;activation_0_to_1&quot;: 0.7244780858933473, &quot;fiber_length_m&quot;: 0.03724505676290237}</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_R_T3 |
+| Applied initial value | {"activation_0_to_1": 0.7244780858933473, "fiber_length_m": 0.03724505676290237} |
+
+</details>
+
+<details>
+<summary>FR_R_T3 · {&quot;activation_0_to_1&quot;: 0.34102545862691186, &quot;fiber_length_m&quot;: 0.04112495059230152}</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FR_R_T3 |
+| Applied initial value | {"activation_0_to_1": 0.34102545862691186, "fiber_length_m": 0.04112495059230152} |
+
+</details>
+
+<details>
+<summary>FL_R_T4 · {&quot;activation_0_to_1&quot;: 0.7328847980699814, &quot;fiber_length_m&quot;: 0.03417076634777539}</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_R_T4 |
+| Applied initial value | {"activation_0_to_1": 0.7328847980699814, "fiber_length_m": 0.03417076634777539} |
+
+</details>
+
+<details>
+<summary>FR_R_T4 · {&quot;activation_0_to_1&quot;: 0.3395546807676321, &quot;fiber_length_m&quot;: 0.039509586870092504}</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FR_R_T4 |
+| Applied initial value | {"activation_0_to_1": 0.3395546807676321, "fiber_length_m": 0.039509586870092504} |
+
+</details>
+
+<details>
+<summary>FL_R_T5 · {&quot;activation_0_to_1&quot;: 0.7390484871793741, &quot;fiber_length_m&quot;: 0.03343260018164973}</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_R_T5 |
+| Applied initial value | {"activation_0_to_1": 0.7390484871793741, "fiber_length_m": 0.03343260018164973} |
+
+</details>
+
+<details>
+<summary>FR_R_T5 · {&quot;activation_0_to_1&quot;: 0.33773832163507506, &quot;fiber_length_m&quot;: 0.03983142647253385}</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FR_R_T5 |
+| Applied initial value | {"activation_0_to_1": 0.33773832163507506, "fiber_length_m": 0.03983142647253385} |
+
+</details>
+
+<details>
+<summary>FL_DigitalExtensors · {&quot;activation_0_to_1&quot;: 0.13003897649551047, &quot;fiber_length_m&quot;: 0.017055430644364416}</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_DigitalExtensors |
+| Applied initial value | {"activation_0_to_1": 0.13003897649551047, "fiber_length_m": 0.017055430644364416} |
+
+</details>
+
+<details>
+<summary>FR_DigitalExtensors · {&quot;activation_0_to_1&quot;: 0.7225968465421075, &quot;fiber_length_m&quot;: 0.01739462200914173}</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FR_DigitalExtensors |
+| Applied initial value | {"activation_0_to_1": 0.7225968465421075, "fiber_length_m": 0.01739462200914173} |
+
+</details>
+
+<details>
+<summary>FL_DigitalFlexors · {&quot;activation_0_to_1&quot;: 0.10778298789458943, &quot;fiber_length_m&quot;: 0.015694696672205573}</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_DigitalFlexors |
+| Applied initial value | {"activation_0_to_1": 0.10778298789458943, "fiber_length_m": 0.015694696672205573} |
+
+</details>
+
+<details>
+<summary>FR_DigitalFlexors · {&quot;activation_0_to_1&quot;: 0.030855137478851703, &quot;fiber_length_m&quot;: 0.010108712531143723}</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FR_DigitalFlexors |
+| Applied initial value | {"activation_0_to_1": 0.030855137478851703, "fiber_length_m": 0.010108712531143723} |
+
+</details>
+
+<details>
+<summary>FL_TrapeziusCervical · {&quot;activation_0_to_1&quot;: 0.8158144542587283, &quot;fiber_length_m&quot;: 0.06628613647545409}</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_TrapeziusCervical |
+| Applied initial value | {"activation_0_to_1": 0.8158144542587283, "fiber_length_m": 0.06628613647545409} |
+
+</details>
+
+<details>
+<summary>FR_TrapeziusCervical · {&quot;activation_0_to_1&quot;: 0.9139421016430548, &quot;fiber_length_m&quot;: 0.057151230000366704}</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FR_TrapeziusCervical |
+| Applied initial value | {"activation_0_to_1": 0.9139421016430548, "fiber_length_m": 0.057151230000366704} |
+
+</details>
+
+<details>
+<summary>FL_TrapeziusThoracic · {&quot;activation_0_to_1&quot;: 0.6407481804841275, &quot;fiber_length_m&quot;: 0.05154216864635602}</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_TrapeziusThoracic |
+| Applied initial value | {"activation_0_to_1": 0.6407481804841275, "fiber_length_m": 0.05154216864635602} |
+
+</details>
+
+<details>
+<summary>FR_TrapeziusThoracic · {&quot;activation_0_to_1&quot;: 0.24026029228047824, &quot;fiber_length_m&quot;: 0.056857006896382616}</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FR_TrapeziusThoracic |
+| Applied initial value | {"activation_0_to_1": 0.24026029228047824, "fiber_length_m": 0.056857006896382616} |
+
+</details>
+
+<details>
+<summary>FL_LatissimusDorsi · {&quot;activation_0_to_1&quot;: 0.4100605376422592, &quot;fiber_length_m&quot;: 0.11476552393267118}</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_LatissimusDorsi |
+| Applied initial value | {"activation_0_to_1": 0.4100605376422592, "fiber_length_m": 0.11476552393267118} |
+
+</details>
+
+<details>
+<summary>FR_LatissimusDorsi · {&quot;activation_0_to_1&quot;: 0.09239602871797474, &quot;fiber_length_m&quot;: 0.13681561326713626}</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FR_LatissimusDorsi |
+| Applied initial value | {"activation_0_to_1": 0.09239602871797474, "fiber_length_m": 0.13681561326713626} |
+
+</details>
+
+<details>
+<summary>FL_PectoralisProfundus · {&quot;activation_0_to_1&quot;: 0.5010229242307643, &quot;fiber_length_m&quot;: 0.038251000461620645}</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_PectoralisProfundus |
+| Applied initial value | {"activation_0_to_1": 0.5010229242307643, "fiber_length_m": 0.038251000461620645} |
+
+</details>
+
+<details>
+<summary>FR_PectoralisProfundus · {&quot;activation_0_to_1&quot;: 0.04887282220468061, &quot;fiber_length_m&quot;: 0.06443379103520389}</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FR_PectoralisProfundus |
+| Applied initial value | {"activation_0_to_1": 0.04887282220468061, "fiber_length_m": 0.06443379103520389} |
+
+</details>
+
+<details>
+<summary>FL_PectoralisSuperficialis · {&quot;activation_0_to_1&quot;: 0.7657904109014932, &quot;fiber_length_m&quot;: 0.04527193394990888}</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_PectoralisSuperficialis |
+| Applied initial value | {"activation_0_to_1": 0.7657904109014932, "fiber_length_m": 0.04527193394990888} |
+
+</details>
+
+<details>
+<summary>FR_PectoralisSuperficialis · {&quot;activation_0_to_1&quot;: 0.5290556722902369, &quot;fiber_length_m&quot;: 0.029620609595436463}</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FR_PectoralisSuperficialis |
+| Applied initial value | {"activation_0_to_1": 0.5290556722902369, "fiber_length_m": 0.029620609595436463} |
+
+</details>
+
+<details>
+<summary>FL_Clavobrachialis · {&quot;activation_0_to_1&quot;: 0.7590123734811056, &quot;fiber_length_m&quot;: 0.0927788862620518}</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_Clavobrachialis |
+| Applied initial value | {"activation_0_to_1": 0.7590123734811056, "fiber_length_m": 0.0927788862620518} |
+
+</details>
+
+<details>
+<summary>FR_Clavobrachialis · {&quot;activation_0_to_1&quot;: 0.9999999945105883, &quot;fiber_length_m&quot;: 0.06709306153434504}</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FR_Clavobrachialis |
+| Applied initial value | {"activation_0_to_1": 0.9999999945105883, "fiber_length_m": 0.06709306153434504} |
+
+</details>

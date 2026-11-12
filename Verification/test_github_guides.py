@@ -10,6 +10,7 @@ import json
 import re
 import subprocess
 import unittest
+import xml.etree.ElementTree as ET
 
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -56,9 +57,42 @@ class GitHubGuideVerification(unittest.TestCase):
     def test_numbered_equations_retain_the_scientific_source(self):
         equations = json.loads((ROOT / 'Documentation/equations.json').read_text(encoding='utf-8'))
         methods = (ROOT / 'Documentation/model_methods.md').read_text(encoding='utf-8')
+        folder = ROOT / 'Documentation/Figures_and_Videos/Equations'
+        catalog = json.loads((folder / 'equation_sources.json').read_text(encoding='utf-8'))
         for equation in equations:
-            latex = equation['latex'].replace(r'\!', '')
-            self.assertIn(latex + r'\tag{' + str(equation['number']) + '}', methods)
+            matches = [entry for entry in catalog.values()
+                       if str(entry['number']) == str(equation['number'])]
+            self.assertEqual(len(matches), 1)
+            entry = matches[0]
+            self.assertEqual(entry['latex'], equation['latex'])
+            self.assertIn(entry['file'], methods)
+        for entry in catalog.values():
+            source = (folder / entry['file']).read_text(encoding='utf-8')
+            svg = ET.fromstring(source)
+            self.assertNotIn('data-mjx-error', source)
+            self.assertNotIn('merror', source)
+            self.assertNotIn('<script', source)
+            self.assertNotIn('foreignObject', source)
+            self.assertEqual(svg.find('{http://www.w3.org/2000/svg}desc').text, entry['latex'])
+            self.assertGreater(len(svg.findall('.//{http://www.w3.org/2000/svg}path')), 0)
+            self.assertGreater(float(svg.attrib['width']), 0)
+            self.assertGreater(float(svg.attrib['height']), 0)
+
+    def test_parameter_records_preserve_all_fields(self):
+        """Readable two-column layouts must not drop scientific source columns."""
+        for page in (ROOT / 'Documentation/Parameter_Tables').glob('*.md'):
+            if page.name == 'README.md':
+                continue
+            text = page.read_text(encoding='utf-8')
+            records = re.findall(r'<details>(.*?)</details>', text, re.S)
+            self.assertGreater(len(records), 0, str(page))
+            for record in records:
+                self.assertIn('| Field | Value |', record)
+                fields = (['Object', 'Parameter', 'Unit', 'Meaning', 'Source value',
+                           'Value used in this model', 'What changed and why', 'Source / evidence']
+                          if '| Parameter |' in record else ['Object', 'Applied initial value'])
+                for field in fields:
+                    self.assertIn('| ' + field + ' |', record)
 
     def test_guides_fit_github_and_avoid_unpublished_website_links(self):
         for page in markdown_files():
@@ -66,6 +100,7 @@ class GitHubGuideVerification(unittest.TestCase):
             self.assertLess(page.stat().st_size, 450000, str(page))
             self.assertNotIn('https://smarahmati.github.io/Cat-FullBody-Neuromechanics/', text, str(page))
             self.assertNotIn('The website is available after its first successful deployment.', text, str(page))
+            self.assertNotIn('$$', text, str(page))
         readme = (ROOT / 'README.md').read_text(encoding='utf-8')
         self.assertNotIn(r'\!', readme)
 

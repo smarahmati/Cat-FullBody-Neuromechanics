@@ -6,6 +6,7 @@ __pycache__/
 *.nbi
 .idea/
 .pytest_cache/
+node_modules/
 # New runs are local by default. Explicitly add a selected result to publish it.
 # Third-party visual assets require separate redistribution permission.
 Data/Skeletal_Geometry/Model/meshes/

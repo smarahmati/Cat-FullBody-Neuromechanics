@@ -4,117 +4,1796 @@
 
 [Back to parameter guide](../parameter_tables.md)
 
-| Object | Parameter | Unit | Meaning | Source value | Value used in this model | What changed and why | Source / evidence |
-| --- | --- | --- | --- | --- | --- | --- | --- |
-| FL_S_T6 | switch_smoothing_width | 1 | Width of native smooth switching between time constants; zero uses the piecewise equation. | Not established | 0 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Specified activation-dynamics constants in Data/Model_Parameters/activation.py; a verified primary numerical source is not established, and these constants are not independently identified by this fit. |
-| FR_S_T6 | activation_time_constant_s | s | Native activation/deactivation time constant. | Not established | 0.015 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Specified activation-dynamics constants in Data/Model_Parameters/activation.py; a verified primary numerical source is not established, and these constants are not independently identified by this fit. |
-| FR_S_T6 | deactivation_time_constant_s | s | Native activation/deactivation time constant. | Not established | 0.05 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Specified activation-dynamics constants in Data/Model_Parameters/activation.py; a verified primary numerical source is not established, and these constants are not independently identified by this fit. |
-| FR_S_T6 | switch_smoothing_width | 1 | Width of native smooth switching between time constants; zero uses the piecewise equation. | Not established | 0 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Specified activation-dynamics constants in Data/Model_Parameters/activation.py; a verified primary numerical source is not established, and these constants are not independently identified by this fit. |
-| FL_S_T7 | activation_time_constant_s | s | Native activation/deactivation time constant. | Not established | 0.015 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Specified activation-dynamics constants in Data/Model_Parameters/activation.py; a verified primary numerical source is not established, and these constants are not independently identified by this fit. |
-| FL_S_T7 | deactivation_time_constant_s | s | Native activation/deactivation time constant. | Not established | 0.05 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Specified activation-dynamics constants in Data/Model_Parameters/activation.py; a verified primary numerical source is not established, and these constants are not independently identified by this fit. |
-| FL_S_T7 | switch_smoothing_width | 1 | Width of native smooth switching between time constants; zero uses the piecewise equation. | Not established | 0 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Specified activation-dynamics constants in Data/Model_Parameters/activation.py; a verified primary numerical source is not established, and these constants are not independently identified by this fit. |
-| FR_S_T7 | activation_time_constant_s | s | Native activation/deactivation time constant. | Not established | 0.015 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Specified activation-dynamics constants in Data/Model_Parameters/activation.py; a verified primary numerical source is not established, and these constants are not independently identified by this fit. |
-| FR_S_T7 | deactivation_time_constant_s | s | Native activation/deactivation time constant. | Not established | 0.05 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Specified activation-dynamics constants in Data/Model_Parameters/activation.py; a verified primary numerical source is not established, and these constants are not independently identified by this fit. |
-| FR_S_T7 | switch_smoothing_width | 1 | Width of native smooth switching between time constants; zero uses the piecewise equation. | Not established | 0 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Specified activation-dynamics constants in Data/Model_Parameters/activation.py; a verified primary numerical source is not established, and these constants are not independently identified by this fit. |
-| FL_S_T8 | activation_time_constant_s | s | Native activation/deactivation time constant. | Not established | 0.015 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Specified activation-dynamics constants in Data/Model_Parameters/activation.py; a verified primary numerical source is not established, and these constants are not independently identified by this fit. |
-| FL_S_T8 | deactivation_time_constant_s | s | Native activation/deactivation time constant. | Not established | 0.05 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Specified activation-dynamics constants in Data/Model_Parameters/activation.py; a verified primary numerical source is not established, and these constants are not independently identified by this fit. |
-| FL_S_T8 | switch_smoothing_width | 1 | Width of native smooth switching between time constants; zero uses the piecewise equation. | Not established | 0 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Specified activation-dynamics constants in Data/Model_Parameters/activation.py; a verified primary numerical source is not established, and these constants are not independently identified by this fit. |
-| FR_S_T8 | activation_time_constant_s | s | Native activation/deactivation time constant. | Not established | 0.015 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Specified activation-dynamics constants in Data/Model_Parameters/activation.py; a verified primary numerical source is not established, and these constants are not independently identified by this fit. |
-| FR_S_T8 | deactivation_time_constant_s | s | Native activation/deactivation time constant. | Not established | 0.05 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Specified activation-dynamics constants in Data/Model_Parameters/activation.py; a verified primary numerical source is not established, and these constants are not independently identified by this fit. |
-| FR_S_T8 | switch_smoothing_width | 1 | Width of native smooth switching between time constants; zero uses the piecewise equation. | Not established | 0 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Specified activation-dynamics constants in Data/Model_Parameters/activation.py; a verified primary numerical source is not established, and these constants are not independently identified by this fit. |
-| FL_S_T9 | activation_time_constant_s | s | Native activation/deactivation time constant. | Not established | 0.015 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Specified activation-dynamics constants in Data/Model_Parameters/activation.py; a verified primary numerical source is not established, and these constants are not independently identified by this fit. |
-| FL_S_T9 | deactivation_time_constant_s | s | Native activation/deactivation time constant. | Not established | 0.05 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Specified activation-dynamics constants in Data/Model_Parameters/activation.py; a verified primary numerical source is not established, and these constants are not independently identified by this fit. |
-| FL_S_T9 | switch_smoothing_width | 1 | Width of native smooth switching between time constants; zero uses the piecewise equation. | Not established | 0 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Specified activation-dynamics constants in Data/Model_Parameters/activation.py; a verified primary numerical source is not established, and these constants are not independently identified by this fit. |
-| FR_S_T9 | activation_time_constant_s | s | Native activation/deactivation time constant. | Not established | 0.015 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Specified activation-dynamics constants in Data/Model_Parameters/activation.py; a verified primary numerical source is not established, and these constants are not independently identified by this fit. |
-| FR_S_T9 | deactivation_time_constant_s | s | Native activation/deactivation time constant. | Not established | 0.05 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Specified activation-dynamics constants in Data/Model_Parameters/activation.py; a verified primary numerical source is not established, and these constants are not independently identified by this fit. |
-| FR_S_T9 | switch_smoothing_width | 1 | Width of native smooth switching between time constants; zero uses the piecewise equation. | Not established | 0 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Specified activation-dynamics constants in Data/Model_Parameters/activation.py; a verified primary numerical source is not established, and these constants are not independently identified by this fit. |
-| FL_R_C2 | activation_time_constant_s | s | Native activation/deactivation time constant. | Not established | 0.015 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Specified activation-dynamics constants in Data/Model_Parameters/activation.py; a verified primary numerical source is not established, and these constants are not independently identified by this fit. |
-| FL_R_C2 | deactivation_time_constant_s | s | Native activation/deactivation time constant. | Not established | 0.05 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Specified activation-dynamics constants in Data/Model_Parameters/activation.py; a verified primary numerical source is not established, and these constants are not independently identified by this fit. |
-| FL_R_C2 | switch_smoothing_width | 1 | Width of native smooth switching between time constants; zero uses the piecewise equation. | Not established | 0 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Specified activation-dynamics constants in Data/Model_Parameters/activation.py; a verified primary numerical source is not established, and these constants are not independently identified by this fit. |
-| FR_R_C2 | activation_time_constant_s | s | Native activation/deactivation time constant. | Not established | 0.015 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Specified activation-dynamics constants in Data/Model_Parameters/activation.py; a verified primary numerical source is not established, and these constants are not independently identified by this fit. |
-| FR_R_C2 | deactivation_time_constant_s | s | Native activation/deactivation time constant. | Not established | 0.05 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Specified activation-dynamics constants in Data/Model_Parameters/activation.py; a verified primary numerical source is not established, and these constants are not independently identified by this fit. |
-| FR_R_C2 | switch_smoothing_width | 1 | Width of native smooth switching between time constants; zero uses the piecewise equation. | Not established | 0 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Specified activation-dynamics constants in Data/Model_Parameters/activation.py; a verified primary numerical source is not established, and these constants are not independently identified by this fit. |
-| FL_R_C3-7 | activation_time_constant_s | s | Native activation/deactivation time constant. | Not established | 0.015 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Specified activation-dynamics constants in Data/Model_Parameters/activation.py; a verified primary numerical source is not established, and these constants are not independently identified by this fit. |
-| FL_R_C3-7 | deactivation_time_constant_s | s | Native activation/deactivation time constant. | Not established | 0.05 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Specified activation-dynamics constants in Data/Model_Parameters/activation.py; a verified primary numerical source is not established, and these constants are not independently identified by this fit. |
-| FL_R_C3-7 | switch_smoothing_width | 1 | Width of native smooth switching between time constants; zero uses the piecewise equation. | Not established | 0 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Specified activation-dynamics constants in Data/Model_Parameters/activation.py; a verified primary numerical source is not established, and these constants are not independently identified by this fit. |
-| FR_R_C3-7 | activation_time_constant_s | s | Native activation/deactivation time constant. | Not established | 0.015 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Specified activation-dynamics constants in Data/Model_Parameters/activation.py; a verified primary numerical source is not established, and these constants are not independently identified by this fit. |
-| FR_R_C3-7 | deactivation_time_constant_s | s | Native activation/deactivation time constant. | Not established | 0.05 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Specified activation-dynamics constants in Data/Model_Parameters/activation.py; a verified primary numerical source is not established, and these constants are not independently identified by this fit. |
-| FR_R_C3-7 | switch_smoothing_width | 1 | Width of native smooth switching between time constants; zero uses the piecewise equation. | Not established | 0 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Specified activation-dynamics constants in Data/Model_Parameters/activation.py; a verified primary numerical source is not established, and these constants are not independently identified by this fit. |
-| FL_R_T1 | activation_time_constant_s | s | Native activation/deactivation time constant. | Not established | 0.015 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Specified activation-dynamics constants in Data/Model_Parameters/activation.py; a verified primary numerical source is not established, and these constants are not independently identified by this fit. |
-| FL_R_T1 | deactivation_time_constant_s | s | Native activation/deactivation time constant. | Not established | 0.05 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Specified activation-dynamics constants in Data/Model_Parameters/activation.py; a verified primary numerical source is not established, and these constants are not independently identified by this fit. |
-| FL_R_T1 | switch_smoothing_width | 1 | Width of native smooth switching between time constants; zero uses the piecewise equation. | Not established | 0 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Specified activation-dynamics constants in Data/Model_Parameters/activation.py; a verified primary numerical source is not established, and these constants are not independently identified by this fit. |
-| FR_R_T1 | activation_time_constant_s | s | Native activation/deactivation time constant. | Not established | 0.015 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Specified activation-dynamics constants in Data/Model_Parameters/activation.py; a verified primary numerical source is not established, and these constants are not independently identified by this fit. |
-| FR_R_T1 | deactivation_time_constant_s | s | Native activation/deactivation time constant. | Not established | 0.05 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Specified activation-dynamics constants in Data/Model_Parameters/activation.py; a verified primary numerical source is not established, and these constants are not independently identified by this fit. |
-| FR_R_T1 | switch_smoothing_width | 1 | Width of native smooth switching between time constants; zero uses the piecewise equation. | Not established | 0 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Specified activation-dynamics constants in Data/Model_Parameters/activation.py; a verified primary numerical source is not established, and these constants are not independently identified by this fit. |
-| FL_R_T2 | activation_time_constant_s | s | Native activation/deactivation time constant. | Not established | 0.015 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Specified activation-dynamics constants in Data/Model_Parameters/activation.py; a verified primary numerical source is not established, and these constants are not independently identified by this fit. |
-| FL_R_T2 | deactivation_time_constant_s | s | Native activation/deactivation time constant. | Not established | 0.05 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Specified activation-dynamics constants in Data/Model_Parameters/activation.py; a verified primary numerical source is not established, and these constants are not independently identified by this fit. |
-| FL_R_T2 | switch_smoothing_width | 1 | Width of native smooth switching between time constants; zero uses the piecewise equation. | Not established | 0 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Specified activation-dynamics constants in Data/Model_Parameters/activation.py; a verified primary numerical source is not established, and these constants are not independently identified by this fit. |
-| FR_R_T2 | activation_time_constant_s | s | Native activation/deactivation time constant. | Not established | 0.015 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Specified activation-dynamics constants in Data/Model_Parameters/activation.py; a verified primary numerical source is not established, and these constants are not independently identified by this fit. |
-| FR_R_T2 | deactivation_time_constant_s | s | Native activation/deactivation time constant. | Not established | 0.05 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Specified activation-dynamics constants in Data/Model_Parameters/activation.py; a verified primary numerical source is not established, and these constants are not independently identified by this fit. |
-| FR_R_T2 | switch_smoothing_width | 1 | Width of native smooth switching between time constants; zero uses the piecewise equation. | Not established | 0 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Specified activation-dynamics constants in Data/Model_Parameters/activation.py; a verified primary numerical source is not established, and these constants are not independently identified by this fit. |
-| FL_R_T3 | activation_time_constant_s | s | Native activation/deactivation time constant. | Not established | 0.015 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Specified activation-dynamics constants in Data/Model_Parameters/activation.py; a verified primary numerical source is not established, and these constants are not independently identified by this fit. |
-| FL_R_T3 | deactivation_time_constant_s | s | Native activation/deactivation time constant. | Not established | 0.05 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Specified activation-dynamics constants in Data/Model_Parameters/activation.py; a verified primary numerical source is not established, and these constants are not independently identified by this fit. |
-| FL_R_T3 | switch_smoothing_width | 1 | Width of native smooth switching between time constants; zero uses the piecewise equation. | Not established | 0 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Specified activation-dynamics constants in Data/Model_Parameters/activation.py; a verified primary numerical source is not established, and these constants are not independently identified by this fit. |
-| FR_R_T3 | activation_time_constant_s | s | Native activation/deactivation time constant. | Not established | 0.015 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Specified activation-dynamics constants in Data/Model_Parameters/activation.py; a verified primary numerical source is not established, and these constants are not independently identified by this fit. |
-| FR_R_T3 | deactivation_time_constant_s | s | Native activation/deactivation time constant. | Not established | 0.05 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Specified activation-dynamics constants in Data/Model_Parameters/activation.py; a verified primary numerical source is not established, and these constants are not independently identified by this fit. |
-| FR_R_T3 | switch_smoothing_width | 1 | Width of native smooth switching between time constants; zero uses the piecewise equation. | Not established | 0 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Specified activation-dynamics constants in Data/Model_Parameters/activation.py; a verified primary numerical source is not established, and these constants are not independently identified by this fit. |
-| FL_R_T4 | activation_time_constant_s | s | Native activation/deactivation time constant. | Not established | 0.015 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Specified activation-dynamics constants in Data/Model_Parameters/activation.py; a verified primary numerical source is not established, and these constants are not independently identified by this fit. |
-| FL_R_T4 | deactivation_time_constant_s | s | Native activation/deactivation time constant. | Not established | 0.05 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Specified activation-dynamics constants in Data/Model_Parameters/activation.py; a verified primary numerical source is not established, and these constants are not independently identified by this fit. |
-| FL_R_T4 | switch_smoothing_width | 1 | Width of native smooth switching between time constants; zero uses the piecewise equation. | Not established | 0 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Specified activation-dynamics constants in Data/Model_Parameters/activation.py; a verified primary numerical source is not established, and these constants are not independently identified by this fit. |
-| FR_R_T4 | activation_time_constant_s | s | Native activation/deactivation time constant. | Not established | 0.015 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Specified activation-dynamics constants in Data/Model_Parameters/activation.py; a verified primary numerical source is not established, and these constants are not independently identified by this fit. |
-| FR_R_T4 | deactivation_time_constant_s | s | Native activation/deactivation time constant. | Not established | 0.05 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Specified activation-dynamics constants in Data/Model_Parameters/activation.py; a verified primary numerical source is not established, and these constants are not independently identified by this fit. |
-| FR_R_T4 | switch_smoothing_width | 1 | Width of native smooth switching between time constants; zero uses the piecewise equation. | Not established | 0 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Specified activation-dynamics constants in Data/Model_Parameters/activation.py; a verified primary numerical source is not established, and these constants are not independently identified by this fit. |
-| FL_R_T5 | activation_time_constant_s | s | Native activation/deactivation time constant. | Not established | 0.015 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Specified activation-dynamics constants in Data/Model_Parameters/activation.py; a verified primary numerical source is not established, and these constants are not independently identified by this fit. |
-| FL_R_T5 | deactivation_time_constant_s | s | Native activation/deactivation time constant. | Not established | 0.05 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Specified activation-dynamics constants in Data/Model_Parameters/activation.py; a verified primary numerical source is not established, and these constants are not independently identified by this fit. |
-| FL_R_T5 | switch_smoothing_width | 1 | Width of native smooth switching between time constants; zero uses the piecewise equation. | Not established | 0 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Specified activation-dynamics constants in Data/Model_Parameters/activation.py; a verified primary numerical source is not established, and these constants are not independently identified by this fit. |
-| FR_R_T5 | activation_time_constant_s | s | Native activation/deactivation time constant. | Not established | 0.015 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Specified activation-dynamics constants in Data/Model_Parameters/activation.py; a verified primary numerical source is not established, and these constants are not independently identified by this fit. |
-| FR_R_T5 | deactivation_time_constant_s | s | Native activation/deactivation time constant. | Not established | 0.05 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Specified activation-dynamics constants in Data/Model_Parameters/activation.py; a verified primary numerical source is not established, and these constants are not independently identified by this fit. |
-| FR_R_T5 | switch_smoothing_width | 1 | Width of native smooth switching between time constants; zero uses the piecewise equation. | Not established | 0 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Specified activation-dynamics constants in Data/Model_Parameters/activation.py; a verified primary numerical source is not established, and these constants are not independently identified by this fit. |
-| FL_DigitalExtensors | activation_time_constant_s | s | Native activation/deactivation time constant. | Not established | 0.015 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Specified activation-dynamics constants in Data/Model_Parameters/activation.py; a verified primary numerical source is not established, and these constants are not independently identified by this fit. |
-| FL_DigitalExtensors | deactivation_time_constant_s | s | Native activation/deactivation time constant. | Not established | 0.05 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Specified activation-dynamics constants in Data/Model_Parameters/activation.py; a verified primary numerical source is not established, and these constants are not independently identified by this fit. |
-| FL_DigitalExtensors | switch_smoothing_width | 1 | Width of native smooth switching between time constants; zero uses the piecewise equation. | Not established | 0 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Specified activation-dynamics constants in Data/Model_Parameters/activation.py; a verified primary numerical source is not established, and these constants are not independently identified by this fit. |
-| FR_DigitalExtensors | activation_time_constant_s | s | Native activation/deactivation time constant. | Not established | 0.015 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Specified activation-dynamics constants in Data/Model_Parameters/activation.py; a verified primary numerical source is not established, and these constants are not independently identified by this fit. |
-| FR_DigitalExtensors | deactivation_time_constant_s | s | Native activation/deactivation time constant. | Not established | 0.05 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Specified activation-dynamics constants in Data/Model_Parameters/activation.py; a verified primary numerical source is not established, and these constants are not independently identified by this fit. |
-| FR_DigitalExtensors | switch_smoothing_width | 1 | Width of native smooth switching between time constants; zero uses the piecewise equation. | Not established | 0 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Specified activation-dynamics constants in Data/Model_Parameters/activation.py; a verified primary numerical source is not established, and these constants are not independently identified by this fit. |
-| FL_DigitalFlexors | activation_time_constant_s | s | Native activation/deactivation time constant. | Not established | 0.015 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Specified activation-dynamics constants in Data/Model_Parameters/activation.py; a verified primary numerical source is not established, and these constants are not independently identified by this fit. |
-| FL_DigitalFlexors | deactivation_time_constant_s | s | Native activation/deactivation time constant. | Not established | 0.05 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Specified activation-dynamics constants in Data/Model_Parameters/activation.py; a verified primary numerical source is not established, and these constants are not independently identified by this fit. |
-| FL_DigitalFlexors | switch_smoothing_width | 1 | Width of native smooth switching between time constants; zero uses the piecewise equation. | Not established | 0 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Specified activation-dynamics constants in Data/Model_Parameters/activation.py; a verified primary numerical source is not established, and these constants are not independently identified by this fit. |
-| FR_DigitalFlexors | activation_time_constant_s | s | Native activation/deactivation time constant. | Not established | 0.015 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Specified activation-dynamics constants in Data/Model_Parameters/activation.py; a verified primary numerical source is not established, and these constants are not independently identified by this fit. |
-| FR_DigitalFlexors | deactivation_time_constant_s | s | Native activation/deactivation time constant. | Not established | 0.05 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Specified activation-dynamics constants in Data/Model_Parameters/activation.py; a verified primary numerical source is not established, and these constants are not independently identified by this fit. |
-| FR_DigitalFlexors | switch_smoothing_width | 1 | Width of native smooth switching between time constants; zero uses the piecewise equation. | Not established | 0 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Specified activation-dynamics constants in Data/Model_Parameters/activation.py; a verified primary numerical source is not established, and these constants are not independently identified by this fit. |
-| FL_TrapeziusCervical | activation_time_constant_s | s | Native activation/deactivation time constant. | Not established | 0.015 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Specified activation-dynamics constants in Data/Model_Parameters/activation.py; a verified primary numerical source is not established, and these constants are not independently identified by this fit. |
-| FL_TrapeziusCervical | deactivation_time_constant_s | s | Native activation/deactivation time constant. | Not established | 0.05 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Specified activation-dynamics constants in Data/Model_Parameters/activation.py; a verified primary numerical source is not established, and these constants are not independently identified by this fit. |
-| FL_TrapeziusCervical | switch_smoothing_width | 1 | Width of native smooth switching between time constants; zero uses the piecewise equation. | Not established | 0 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Specified activation-dynamics constants in Data/Model_Parameters/activation.py; a verified primary numerical source is not established, and these constants are not independently identified by this fit. |
-| FR_TrapeziusCervical | activation_time_constant_s | s | Native activation/deactivation time constant. | Not established | 0.015 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Specified activation-dynamics constants in Data/Model_Parameters/activation.py; a verified primary numerical source is not established, and these constants are not independently identified by this fit. |
-| FR_TrapeziusCervical | deactivation_time_constant_s | s | Native activation/deactivation time constant. | Not established | 0.05 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Specified activation-dynamics constants in Data/Model_Parameters/activation.py; a verified primary numerical source is not established, and these constants are not independently identified by this fit. |
-| FR_TrapeziusCervical | switch_smoothing_width | 1 | Width of native smooth switching between time constants; zero uses the piecewise equation. | Not established | 0 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Specified activation-dynamics constants in Data/Model_Parameters/activation.py; a verified primary numerical source is not established, and these constants are not independently identified by this fit. |
-| FL_TrapeziusThoracic | activation_time_constant_s | s | Native activation/deactivation time constant. | Not established | 0.015 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Specified activation-dynamics constants in Data/Model_Parameters/activation.py; a verified primary numerical source is not established, and these constants are not independently identified by this fit. |
-| FL_TrapeziusThoracic | deactivation_time_constant_s | s | Native activation/deactivation time constant. | Not established | 0.05 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Specified activation-dynamics constants in Data/Model_Parameters/activation.py; a verified primary numerical source is not established, and these constants are not independently identified by this fit. |
-| FL_TrapeziusThoracic | switch_smoothing_width | 1 | Width of native smooth switching between time constants; zero uses the piecewise equation. | Not established | 0 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Specified activation-dynamics constants in Data/Model_Parameters/activation.py; a verified primary numerical source is not established, and these constants are not independently identified by this fit. |
-| FR_TrapeziusThoracic | activation_time_constant_s | s | Native activation/deactivation time constant. | Not established | 0.015 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Specified activation-dynamics constants in Data/Model_Parameters/activation.py; a verified primary numerical source is not established, and these constants are not independently identified by this fit. |
-| FR_TrapeziusThoracic | deactivation_time_constant_s | s | Native activation/deactivation time constant. | Not established | 0.05 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Specified activation-dynamics constants in Data/Model_Parameters/activation.py; a verified primary numerical source is not established, and these constants are not independently identified by this fit. |
-| FR_TrapeziusThoracic | switch_smoothing_width | 1 | Width of native smooth switching between time constants; zero uses the piecewise equation. | Not established | 0 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Specified activation-dynamics constants in Data/Model_Parameters/activation.py; a verified primary numerical source is not established, and these constants are not independently identified by this fit. |
-| FL_LatissimusDorsi | activation_time_constant_s | s | Native activation/deactivation time constant. | Not established | 0.015 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Specified activation-dynamics constants in Data/Model_Parameters/activation.py; a verified primary numerical source is not established, and these constants are not independently identified by this fit. |
-| FL_LatissimusDorsi | deactivation_time_constant_s | s | Native activation/deactivation time constant. | Not established | 0.05 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Specified activation-dynamics constants in Data/Model_Parameters/activation.py; a verified primary numerical source is not established, and these constants are not independently identified by this fit. |
-| FL_LatissimusDorsi | switch_smoothing_width | 1 | Width of native smooth switching between time constants; zero uses the piecewise equation. | Not established | 0 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Specified activation-dynamics constants in Data/Model_Parameters/activation.py; a verified primary numerical source is not established, and these constants are not independently identified by this fit. |
-| FR_LatissimusDorsi | activation_time_constant_s | s | Native activation/deactivation time constant. | Not established | 0.015 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Specified activation-dynamics constants in Data/Model_Parameters/activation.py; a verified primary numerical source is not established, and these constants are not independently identified by this fit. |
-| FR_LatissimusDorsi | deactivation_time_constant_s | s | Native activation/deactivation time constant. | Not established | 0.05 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Specified activation-dynamics constants in Data/Model_Parameters/activation.py; a verified primary numerical source is not established, and these constants are not independently identified by this fit. |
-| FR_LatissimusDorsi | switch_smoothing_width | 1 | Width of native smooth switching between time constants; zero uses the piecewise equation. | Not established | 0 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Specified activation-dynamics constants in Data/Model_Parameters/activation.py; a verified primary numerical source is not established, and these constants are not independently identified by this fit. |
-| FL_PectoralisProfundus | activation_time_constant_s | s | Native activation/deactivation time constant. | Not established | 0.015 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Specified activation-dynamics constants in Data/Model_Parameters/activation.py; a verified primary numerical source is not established, and these constants are not independently identified by this fit. |
-| FL_PectoralisProfundus | deactivation_time_constant_s | s | Native activation/deactivation time constant. | Not established | 0.05 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Specified activation-dynamics constants in Data/Model_Parameters/activation.py; a verified primary numerical source is not established, and these constants are not independently identified by this fit. |
-| FL_PectoralisProfundus | switch_smoothing_width | 1 | Width of native smooth switching between time constants; zero uses the piecewise equation. | Not established | 0 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Specified activation-dynamics constants in Data/Model_Parameters/activation.py; a verified primary numerical source is not established, and these constants are not independently identified by this fit. |
-| FR_PectoralisProfundus | activation_time_constant_s | s | Native activation/deactivation time constant. | Not established | 0.015 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Specified activation-dynamics constants in Data/Model_Parameters/activation.py; a verified primary numerical source is not established, and these constants are not independently identified by this fit. |
-| FR_PectoralisProfundus | deactivation_time_constant_s | s | Native activation/deactivation time constant. | Not established | 0.05 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Specified activation-dynamics constants in Data/Model_Parameters/activation.py; a verified primary numerical source is not established, and these constants are not independently identified by this fit. |
-| FR_PectoralisProfundus | switch_smoothing_width | 1 | Width of native smooth switching between time constants; zero uses the piecewise equation. | Not established | 0 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Specified activation-dynamics constants in Data/Model_Parameters/activation.py; a verified primary numerical source is not established, and these constants are not independently identified by this fit. |
-| FL_PectoralisSuperficialis | activation_time_constant_s | s | Native activation/deactivation time constant. | Not established | 0.015 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Specified activation-dynamics constants in Data/Model_Parameters/activation.py; a verified primary numerical source is not established, and these constants are not independently identified by this fit. |
-| FL_PectoralisSuperficialis | deactivation_time_constant_s | s | Native activation/deactivation time constant. | Not established | 0.05 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Specified activation-dynamics constants in Data/Model_Parameters/activation.py; a verified primary numerical source is not established, and these constants are not independently identified by this fit. |
-| FL_PectoralisSuperficialis | switch_smoothing_width | 1 | Width of native smooth switching between time constants; zero uses the piecewise equation. | Not established | 0 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Specified activation-dynamics constants in Data/Model_Parameters/activation.py; a verified primary numerical source is not established, and these constants are not independently identified by this fit. |
-| FR_PectoralisSuperficialis | activation_time_constant_s | s | Native activation/deactivation time constant. | Not established | 0.015 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Specified activation-dynamics constants in Data/Model_Parameters/activation.py; a verified primary numerical source is not established, and these constants are not independently identified by this fit. |
-| FR_PectoralisSuperficialis | deactivation_time_constant_s | s | Native activation/deactivation time constant. | Not established | 0.05 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Specified activation-dynamics constants in Data/Model_Parameters/activation.py; a verified primary numerical source is not established, and these constants are not independently identified by this fit. |
-| FR_PectoralisSuperficialis | switch_smoothing_width | 1 | Width of native smooth switching between time constants; zero uses the piecewise equation. | Not established | 0 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Specified activation-dynamics constants in Data/Model_Parameters/activation.py; a verified primary numerical source is not established, and these constants are not independently identified by this fit. |
-| FL_Clavobrachialis | activation_time_constant_s | s | Native activation/deactivation time constant. | Not established | 0.015 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Specified activation-dynamics constants in Data/Model_Parameters/activation.py; a verified primary numerical source is not established, and these constants are not independently identified by this fit. |
-| FL_Clavobrachialis | deactivation_time_constant_s | s | Native activation/deactivation time constant. | Not established | 0.05 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Specified activation-dynamics constants in Data/Model_Parameters/activation.py; a verified primary numerical source is not established, and these constants are not independently identified by this fit. |
-| FL_Clavobrachialis | switch_smoothing_width | 1 | Width of native smooth switching between time constants; zero uses the piecewise equation. | Not established | 0 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Specified activation-dynamics constants in Data/Model_Parameters/activation.py; a verified primary numerical source is not established, and these constants are not independently identified by this fit. |
-| FR_Clavobrachialis | activation_time_constant_s | s | Native activation/deactivation time constant. | Not established | 0.015 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Specified activation-dynamics constants in Data/Model_Parameters/activation.py; a verified primary numerical source is not established, and these constants are not independently identified by this fit. |
-| FR_Clavobrachialis | deactivation_time_constant_s | s | Native activation/deactivation time constant. | Not established | 0.05 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Specified activation-dynamics constants in Data/Model_Parameters/activation.py; a verified primary numerical source is not established, and these constants are not independently identified by this fit. |
-| FR_Clavobrachialis | switch_smoothing_width | 1 | Width of native smooth switching between time constants; zero uses the piecewise equation. | Not established | 0 | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. | Specified activation-dynamics constants in Data/Model_Parameters/activation.py; a verified primary numerical source is not established, and these constants are not independently identified by this fit. |
+Each entry contains its values, units, meaning and source information. Select an entry to read all fields.
+
+<details>
+<summary>FL_S_T6 · switch_smoothing_width</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_S_T6 |
+| Parameter | switch_smoothing_width |
+| Unit | 1 |
+| Meaning | Width of native smooth switching between time constants; zero uses the piecewise equation. |
+| Source value | Not established |
+| Value used in this model | 0 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Specified activation-dynamics constants in Data/Model_Parameters/activation.py; a verified primary numerical source is not established, and these constants are not independently identified by this fit. |
+
+</details>
+
+<details>
+<summary>FR_S_T6 · activation_time_constant_s</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FR_S_T6 |
+| Parameter | activation_time_constant_s |
+| Unit | s |
+| Meaning | Native activation/deactivation time constant. |
+| Source value | Not established |
+| Value used in this model | 0.015 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Specified activation-dynamics constants in Data/Model_Parameters/activation.py; a verified primary numerical source is not established, and these constants are not independently identified by this fit. |
+
+</details>
+
+<details>
+<summary>FR_S_T6 · deactivation_time_constant_s</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FR_S_T6 |
+| Parameter | deactivation_time_constant_s |
+| Unit | s |
+| Meaning | Native activation/deactivation time constant. |
+| Source value | Not established |
+| Value used in this model | 0.05 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Specified activation-dynamics constants in Data/Model_Parameters/activation.py; a verified primary numerical source is not established, and these constants are not independently identified by this fit. |
+
+</details>
+
+<details>
+<summary>FR_S_T6 · switch_smoothing_width</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FR_S_T6 |
+| Parameter | switch_smoothing_width |
+| Unit | 1 |
+| Meaning | Width of native smooth switching between time constants; zero uses the piecewise equation. |
+| Source value | Not established |
+| Value used in this model | 0 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Specified activation-dynamics constants in Data/Model_Parameters/activation.py; a verified primary numerical source is not established, and these constants are not independently identified by this fit. |
+
+</details>
+
+<details>
+<summary>FL_S_T7 · activation_time_constant_s</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_S_T7 |
+| Parameter | activation_time_constant_s |
+| Unit | s |
+| Meaning | Native activation/deactivation time constant. |
+| Source value | Not established |
+| Value used in this model | 0.015 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Specified activation-dynamics constants in Data/Model_Parameters/activation.py; a verified primary numerical source is not established, and these constants are not independently identified by this fit. |
+
+</details>
+
+<details>
+<summary>FL_S_T7 · deactivation_time_constant_s</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_S_T7 |
+| Parameter | deactivation_time_constant_s |
+| Unit | s |
+| Meaning | Native activation/deactivation time constant. |
+| Source value | Not established |
+| Value used in this model | 0.05 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Specified activation-dynamics constants in Data/Model_Parameters/activation.py; a verified primary numerical source is not established, and these constants are not independently identified by this fit. |
+
+</details>
+
+<details>
+<summary>FL_S_T7 · switch_smoothing_width</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_S_T7 |
+| Parameter | switch_smoothing_width |
+| Unit | 1 |
+| Meaning | Width of native smooth switching between time constants; zero uses the piecewise equation. |
+| Source value | Not established |
+| Value used in this model | 0 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Specified activation-dynamics constants in Data/Model_Parameters/activation.py; a verified primary numerical source is not established, and these constants are not independently identified by this fit. |
+
+</details>
+
+<details>
+<summary>FR_S_T7 · activation_time_constant_s</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FR_S_T7 |
+| Parameter | activation_time_constant_s |
+| Unit | s |
+| Meaning | Native activation/deactivation time constant. |
+| Source value | Not established |
+| Value used in this model | 0.015 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Specified activation-dynamics constants in Data/Model_Parameters/activation.py; a verified primary numerical source is not established, and these constants are not independently identified by this fit. |
+
+</details>
+
+<details>
+<summary>FR_S_T7 · deactivation_time_constant_s</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FR_S_T7 |
+| Parameter | deactivation_time_constant_s |
+| Unit | s |
+| Meaning | Native activation/deactivation time constant. |
+| Source value | Not established |
+| Value used in this model | 0.05 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Specified activation-dynamics constants in Data/Model_Parameters/activation.py; a verified primary numerical source is not established, and these constants are not independently identified by this fit. |
+
+</details>
+
+<details>
+<summary>FR_S_T7 · switch_smoothing_width</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FR_S_T7 |
+| Parameter | switch_smoothing_width |
+| Unit | 1 |
+| Meaning | Width of native smooth switching between time constants; zero uses the piecewise equation. |
+| Source value | Not established |
+| Value used in this model | 0 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Specified activation-dynamics constants in Data/Model_Parameters/activation.py; a verified primary numerical source is not established, and these constants are not independently identified by this fit. |
+
+</details>
+
+<details>
+<summary>FL_S_T8 · activation_time_constant_s</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_S_T8 |
+| Parameter | activation_time_constant_s |
+| Unit | s |
+| Meaning | Native activation/deactivation time constant. |
+| Source value | Not established |
+| Value used in this model | 0.015 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Specified activation-dynamics constants in Data/Model_Parameters/activation.py; a verified primary numerical source is not established, and these constants are not independently identified by this fit. |
+
+</details>
+
+<details>
+<summary>FL_S_T8 · deactivation_time_constant_s</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_S_T8 |
+| Parameter | deactivation_time_constant_s |
+| Unit | s |
+| Meaning | Native activation/deactivation time constant. |
+| Source value | Not established |
+| Value used in this model | 0.05 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Specified activation-dynamics constants in Data/Model_Parameters/activation.py; a verified primary numerical source is not established, and these constants are not independently identified by this fit. |
+
+</details>
+
+<details>
+<summary>FL_S_T8 · switch_smoothing_width</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_S_T8 |
+| Parameter | switch_smoothing_width |
+| Unit | 1 |
+| Meaning | Width of native smooth switching between time constants; zero uses the piecewise equation. |
+| Source value | Not established |
+| Value used in this model | 0 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Specified activation-dynamics constants in Data/Model_Parameters/activation.py; a verified primary numerical source is not established, and these constants are not independently identified by this fit. |
+
+</details>
+
+<details>
+<summary>FR_S_T8 · activation_time_constant_s</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FR_S_T8 |
+| Parameter | activation_time_constant_s |
+| Unit | s |
+| Meaning | Native activation/deactivation time constant. |
+| Source value | Not established |
+| Value used in this model | 0.015 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Specified activation-dynamics constants in Data/Model_Parameters/activation.py; a verified primary numerical source is not established, and these constants are not independently identified by this fit. |
+
+</details>
+
+<details>
+<summary>FR_S_T8 · deactivation_time_constant_s</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FR_S_T8 |
+| Parameter | deactivation_time_constant_s |
+| Unit | s |
+| Meaning | Native activation/deactivation time constant. |
+| Source value | Not established |
+| Value used in this model | 0.05 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Specified activation-dynamics constants in Data/Model_Parameters/activation.py; a verified primary numerical source is not established, and these constants are not independently identified by this fit. |
+
+</details>
+
+<details>
+<summary>FR_S_T8 · switch_smoothing_width</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FR_S_T8 |
+| Parameter | switch_smoothing_width |
+| Unit | 1 |
+| Meaning | Width of native smooth switching between time constants; zero uses the piecewise equation. |
+| Source value | Not established |
+| Value used in this model | 0 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Specified activation-dynamics constants in Data/Model_Parameters/activation.py; a verified primary numerical source is not established, and these constants are not independently identified by this fit. |
+
+</details>
+
+<details>
+<summary>FL_S_T9 · activation_time_constant_s</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_S_T9 |
+| Parameter | activation_time_constant_s |
+| Unit | s |
+| Meaning | Native activation/deactivation time constant. |
+| Source value | Not established |
+| Value used in this model | 0.015 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Specified activation-dynamics constants in Data/Model_Parameters/activation.py; a verified primary numerical source is not established, and these constants are not independently identified by this fit. |
+
+</details>
+
+<details>
+<summary>FL_S_T9 · deactivation_time_constant_s</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_S_T9 |
+| Parameter | deactivation_time_constant_s |
+| Unit | s |
+| Meaning | Native activation/deactivation time constant. |
+| Source value | Not established |
+| Value used in this model | 0.05 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Specified activation-dynamics constants in Data/Model_Parameters/activation.py; a verified primary numerical source is not established, and these constants are not independently identified by this fit. |
+
+</details>
+
+<details>
+<summary>FL_S_T9 · switch_smoothing_width</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_S_T9 |
+| Parameter | switch_smoothing_width |
+| Unit | 1 |
+| Meaning | Width of native smooth switching between time constants; zero uses the piecewise equation. |
+| Source value | Not established |
+| Value used in this model | 0 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Specified activation-dynamics constants in Data/Model_Parameters/activation.py; a verified primary numerical source is not established, and these constants are not independently identified by this fit. |
+
+</details>
+
+<details>
+<summary>FR_S_T9 · activation_time_constant_s</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FR_S_T9 |
+| Parameter | activation_time_constant_s |
+| Unit | s |
+| Meaning | Native activation/deactivation time constant. |
+| Source value | Not established |
+| Value used in this model | 0.015 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Specified activation-dynamics constants in Data/Model_Parameters/activation.py; a verified primary numerical source is not established, and these constants are not independently identified by this fit. |
+
+</details>
+
+<details>
+<summary>FR_S_T9 · deactivation_time_constant_s</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FR_S_T9 |
+| Parameter | deactivation_time_constant_s |
+| Unit | s |
+| Meaning | Native activation/deactivation time constant. |
+| Source value | Not established |
+| Value used in this model | 0.05 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Specified activation-dynamics constants in Data/Model_Parameters/activation.py; a verified primary numerical source is not established, and these constants are not independently identified by this fit. |
+
+</details>
+
+<details>
+<summary>FR_S_T9 · switch_smoothing_width</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FR_S_T9 |
+| Parameter | switch_smoothing_width |
+| Unit | 1 |
+| Meaning | Width of native smooth switching between time constants; zero uses the piecewise equation. |
+| Source value | Not established |
+| Value used in this model | 0 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Specified activation-dynamics constants in Data/Model_Parameters/activation.py; a verified primary numerical source is not established, and these constants are not independently identified by this fit. |
+
+</details>
+
+<details>
+<summary>FL_R_C2 · activation_time_constant_s</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_R_C2 |
+| Parameter | activation_time_constant_s |
+| Unit | s |
+| Meaning | Native activation/deactivation time constant. |
+| Source value | Not established |
+| Value used in this model | 0.015 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Specified activation-dynamics constants in Data/Model_Parameters/activation.py; a verified primary numerical source is not established, and these constants are not independently identified by this fit. |
+
+</details>
+
+<details>
+<summary>FL_R_C2 · deactivation_time_constant_s</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_R_C2 |
+| Parameter | deactivation_time_constant_s |
+| Unit | s |
+| Meaning | Native activation/deactivation time constant. |
+| Source value | Not established |
+| Value used in this model | 0.05 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Specified activation-dynamics constants in Data/Model_Parameters/activation.py; a verified primary numerical source is not established, and these constants are not independently identified by this fit. |
+
+</details>
+
+<details>
+<summary>FL_R_C2 · switch_smoothing_width</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_R_C2 |
+| Parameter | switch_smoothing_width |
+| Unit | 1 |
+| Meaning | Width of native smooth switching between time constants; zero uses the piecewise equation. |
+| Source value | Not established |
+| Value used in this model | 0 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Specified activation-dynamics constants in Data/Model_Parameters/activation.py; a verified primary numerical source is not established, and these constants are not independently identified by this fit. |
+
+</details>
+
+<details>
+<summary>FR_R_C2 · activation_time_constant_s</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FR_R_C2 |
+| Parameter | activation_time_constant_s |
+| Unit | s |
+| Meaning | Native activation/deactivation time constant. |
+| Source value | Not established |
+| Value used in this model | 0.015 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Specified activation-dynamics constants in Data/Model_Parameters/activation.py; a verified primary numerical source is not established, and these constants are not independently identified by this fit. |
+
+</details>
+
+<details>
+<summary>FR_R_C2 · deactivation_time_constant_s</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FR_R_C2 |
+| Parameter | deactivation_time_constant_s |
+| Unit | s |
+| Meaning | Native activation/deactivation time constant. |
+| Source value | Not established |
+| Value used in this model | 0.05 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Specified activation-dynamics constants in Data/Model_Parameters/activation.py; a verified primary numerical source is not established, and these constants are not independently identified by this fit. |
+
+</details>
+
+<details>
+<summary>FR_R_C2 · switch_smoothing_width</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FR_R_C2 |
+| Parameter | switch_smoothing_width |
+| Unit | 1 |
+| Meaning | Width of native smooth switching between time constants; zero uses the piecewise equation. |
+| Source value | Not established |
+| Value used in this model | 0 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Specified activation-dynamics constants in Data/Model_Parameters/activation.py; a verified primary numerical source is not established, and these constants are not independently identified by this fit. |
+
+</details>
+
+<details>
+<summary>FL_R_C3-7 · activation_time_constant_s</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_R_C3-7 |
+| Parameter | activation_time_constant_s |
+| Unit | s |
+| Meaning | Native activation/deactivation time constant. |
+| Source value | Not established |
+| Value used in this model | 0.015 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Specified activation-dynamics constants in Data/Model_Parameters/activation.py; a verified primary numerical source is not established, and these constants are not independently identified by this fit. |
+
+</details>
+
+<details>
+<summary>FL_R_C3-7 · deactivation_time_constant_s</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_R_C3-7 |
+| Parameter | deactivation_time_constant_s |
+| Unit | s |
+| Meaning | Native activation/deactivation time constant. |
+| Source value | Not established |
+| Value used in this model | 0.05 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Specified activation-dynamics constants in Data/Model_Parameters/activation.py; a verified primary numerical source is not established, and these constants are not independently identified by this fit. |
+
+</details>
+
+<details>
+<summary>FL_R_C3-7 · switch_smoothing_width</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_R_C3-7 |
+| Parameter | switch_smoothing_width |
+| Unit | 1 |
+| Meaning | Width of native smooth switching between time constants; zero uses the piecewise equation. |
+| Source value | Not established |
+| Value used in this model | 0 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Specified activation-dynamics constants in Data/Model_Parameters/activation.py; a verified primary numerical source is not established, and these constants are not independently identified by this fit. |
+
+</details>
+
+<details>
+<summary>FR_R_C3-7 · activation_time_constant_s</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FR_R_C3-7 |
+| Parameter | activation_time_constant_s |
+| Unit | s |
+| Meaning | Native activation/deactivation time constant. |
+| Source value | Not established |
+| Value used in this model | 0.015 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Specified activation-dynamics constants in Data/Model_Parameters/activation.py; a verified primary numerical source is not established, and these constants are not independently identified by this fit. |
+
+</details>
+
+<details>
+<summary>FR_R_C3-7 · deactivation_time_constant_s</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FR_R_C3-7 |
+| Parameter | deactivation_time_constant_s |
+| Unit | s |
+| Meaning | Native activation/deactivation time constant. |
+| Source value | Not established |
+| Value used in this model | 0.05 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Specified activation-dynamics constants in Data/Model_Parameters/activation.py; a verified primary numerical source is not established, and these constants are not independently identified by this fit. |
+
+</details>
+
+<details>
+<summary>FR_R_C3-7 · switch_smoothing_width</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FR_R_C3-7 |
+| Parameter | switch_smoothing_width |
+| Unit | 1 |
+| Meaning | Width of native smooth switching between time constants; zero uses the piecewise equation. |
+| Source value | Not established |
+| Value used in this model | 0 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Specified activation-dynamics constants in Data/Model_Parameters/activation.py; a verified primary numerical source is not established, and these constants are not independently identified by this fit. |
+
+</details>
+
+<details>
+<summary>FL_R_T1 · activation_time_constant_s</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_R_T1 |
+| Parameter | activation_time_constant_s |
+| Unit | s |
+| Meaning | Native activation/deactivation time constant. |
+| Source value | Not established |
+| Value used in this model | 0.015 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Specified activation-dynamics constants in Data/Model_Parameters/activation.py; a verified primary numerical source is not established, and these constants are not independently identified by this fit. |
+
+</details>
+
+<details>
+<summary>FL_R_T1 · deactivation_time_constant_s</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_R_T1 |
+| Parameter | deactivation_time_constant_s |
+| Unit | s |
+| Meaning | Native activation/deactivation time constant. |
+| Source value | Not established |
+| Value used in this model | 0.05 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Specified activation-dynamics constants in Data/Model_Parameters/activation.py; a verified primary numerical source is not established, and these constants are not independently identified by this fit. |
+
+</details>
+
+<details>
+<summary>FL_R_T1 · switch_smoothing_width</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_R_T1 |
+| Parameter | switch_smoothing_width |
+| Unit | 1 |
+| Meaning | Width of native smooth switching between time constants; zero uses the piecewise equation. |
+| Source value | Not established |
+| Value used in this model | 0 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Specified activation-dynamics constants in Data/Model_Parameters/activation.py; a verified primary numerical source is not established, and these constants are not independently identified by this fit. |
+
+</details>
+
+<details>
+<summary>FR_R_T1 · activation_time_constant_s</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FR_R_T1 |
+| Parameter | activation_time_constant_s |
+| Unit | s |
+| Meaning | Native activation/deactivation time constant. |
+| Source value | Not established |
+| Value used in this model | 0.015 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Specified activation-dynamics constants in Data/Model_Parameters/activation.py; a verified primary numerical source is not established, and these constants are not independently identified by this fit. |
+
+</details>
+
+<details>
+<summary>FR_R_T1 · deactivation_time_constant_s</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FR_R_T1 |
+| Parameter | deactivation_time_constant_s |
+| Unit | s |
+| Meaning | Native activation/deactivation time constant. |
+| Source value | Not established |
+| Value used in this model | 0.05 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Specified activation-dynamics constants in Data/Model_Parameters/activation.py; a verified primary numerical source is not established, and these constants are not independently identified by this fit. |
+
+</details>
+
+<details>
+<summary>FR_R_T1 · switch_smoothing_width</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FR_R_T1 |
+| Parameter | switch_smoothing_width |
+| Unit | 1 |
+| Meaning | Width of native smooth switching between time constants; zero uses the piecewise equation. |
+| Source value | Not established |
+| Value used in this model | 0 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Specified activation-dynamics constants in Data/Model_Parameters/activation.py; a verified primary numerical source is not established, and these constants are not independently identified by this fit. |
+
+</details>
+
+<details>
+<summary>FL_R_T2 · activation_time_constant_s</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_R_T2 |
+| Parameter | activation_time_constant_s |
+| Unit | s |
+| Meaning | Native activation/deactivation time constant. |
+| Source value | Not established |
+| Value used in this model | 0.015 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Specified activation-dynamics constants in Data/Model_Parameters/activation.py; a verified primary numerical source is not established, and these constants are not independently identified by this fit. |
+
+</details>
+
+<details>
+<summary>FL_R_T2 · deactivation_time_constant_s</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_R_T2 |
+| Parameter | deactivation_time_constant_s |
+| Unit | s |
+| Meaning | Native activation/deactivation time constant. |
+| Source value | Not established |
+| Value used in this model | 0.05 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Specified activation-dynamics constants in Data/Model_Parameters/activation.py; a verified primary numerical source is not established, and these constants are not independently identified by this fit. |
+
+</details>
+
+<details>
+<summary>FL_R_T2 · switch_smoothing_width</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_R_T2 |
+| Parameter | switch_smoothing_width |
+| Unit | 1 |
+| Meaning | Width of native smooth switching between time constants; zero uses the piecewise equation. |
+| Source value | Not established |
+| Value used in this model | 0 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Specified activation-dynamics constants in Data/Model_Parameters/activation.py; a verified primary numerical source is not established, and these constants are not independently identified by this fit. |
+
+</details>
+
+<details>
+<summary>FR_R_T2 · activation_time_constant_s</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FR_R_T2 |
+| Parameter | activation_time_constant_s |
+| Unit | s |
+| Meaning | Native activation/deactivation time constant. |
+| Source value | Not established |
+| Value used in this model | 0.015 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Specified activation-dynamics constants in Data/Model_Parameters/activation.py; a verified primary numerical source is not established, and these constants are not independently identified by this fit. |
+
+</details>
+
+<details>
+<summary>FR_R_T2 · deactivation_time_constant_s</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FR_R_T2 |
+| Parameter | deactivation_time_constant_s |
+| Unit | s |
+| Meaning | Native activation/deactivation time constant. |
+| Source value | Not established |
+| Value used in this model | 0.05 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Specified activation-dynamics constants in Data/Model_Parameters/activation.py; a verified primary numerical source is not established, and these constants are not independently identified by this fit. |
+
+</details>
+
+<details>
+<summary>FR_R_T2 · switch_smoothing_width</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FR_R_T2 |
+| Parameter | switch_smoothing_width |
+| Unit | 1 |
+| Meaning | Width of native smooth switching between time constants; zero uses the piecewise equation. |
+| Source value | Not established |
+| Value used in this model | 0 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Specified activation-dynamics constants in Data/Model_Parameters/activation.py; a verified primary numerical source is not established, and these constants are not independently identified by this fit. |
+
+</details>
+
+<details>
+<summary>FL_R_T3 · activation_time_constant_s</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_R_T3 |
+| Parameter | activation_time_constant_s |
+| Unit | s |
+| Meaning | Native activation/deactivation time constant. |
+| Source value | Not established |
+| Value used in this model | 0.015 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Specified activation-dynamics constants in Data/Model_Parameters/activation.py; a verified primary numerical source is not established, and these constants are not independently identified by this fit. |
+
+</details>
+
+<details>
+<summary>FL_R_T3 · deactivation_time_constant_s</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_R_T3 |
+| Parameter | deactivation_time_constant_s |
+| Unit | s |
+| Meaning | Native activation/deactivation time constant. |
+| Source value | Not established |
+| Value used in this model | 0.05 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Specified activation-dynamics constants in Data/Model_Parameters/activation.py; a verified primary numerical source is not established, and these constants are not independently identified by this fit. |
+
+</details>
+
+<details>
+<summary>FL_R_T3 · switch_smoothing_width</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_R_T3 |
+| Parameter | switch_smoothing_width |
+| Unit | 1 |
+| Meaning | Width of native smooth switching between time constants; zero uses the piecewise equation. |
+| Source value | Not established |
+| Value used in this model | 0 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Specified activation-dynamics constants in Data/Model_Parameters/activation.py; a verified primary numerical source is not established, and these constants are not independently identified by this fit. |
+
+</details>
+
+<details>
+<summary>FR_R_T3 · activation_time_constant_s</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FR_R_T3 |
+| Parameter | activation_time_constant_s |
+| Unit | s |
+| Meaning | Native activation/deactivation time constant. |
+| Source value | Not established |
+| Value used in this model | 0.015 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Specified activation-dynamics constants in Data/Model_Parameters/activation.py; a verified primary numerical source is not established, and these constants are not independently identified by this fit. |
+
+</details>
+
+<details>
+<summary>FR_R_T3 · deactivation_time_constant_s</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FR_R_T3 |
+| Parameter | deactivation_time_constant_s |
+| Unit | s |
+| Meaning | Native activation/deactivation time constant. |
+| Source value | Not established |
+| Value used in this model | 0.05 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Specified activation-dynamics constants in Data/Model_Parameters/activation.py; a verified primary numerical source is not established, and these constants are not independently identified by this fit. |
+
+</details>
+
+<details>
+<summary>FR_R_T3 · switch_smoothing_width</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FR_R_T3 |
+| Parameter | switch_smoothing_width |
+| Unit | 1 |
+| Meaning | Width of native smooth switching between time constants; zero uses the piecewise equation. |
+| Source value | Not established |
+| Value used in this model | 0 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Specified activation-dynamics constants in Data/Model_Parameters/activation.py; a verified primary numerical source is not established, and these constants are not independently identified by this fit. |
+
+</details>
+
+<details>
+<summary>FL_R_T4 · activation_time_constant_s</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_R_T4 |
+| Parameter | activation_time_constant_s |
+| Unit | s |
+| Meaning | Native activation/deactivation time constant. |
+| Source value | Not established |
+| Value used in this model | 0.015 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Specified activation-dynamics constants in Data/Model_Parameters/activation.py; a verified primary numerical source is not established, and these constants are not independently identified by this fit. |
+
+</details>
+
+<details>
+<summary>FL_R_T4 · deactivation_time_constant_s</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_R_T4 |
+| Parameter | deactivation_time_constant_s |
+| Unit | s |
+| Meaning | Native activation/deactivation time constant. |
+| Source value | Not established |
+| Value used in this model | 0.05 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Specified activation-dynamics constants in Data/Model_Parameters/activation.py; a verified primary numerical source is not established, and these constants are not independently identified by this fit. |
+
+</details>
+
+<details>
+<summary>FL_R_T4 · switch_smoothing_width</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_R_T4 |
+| Parameter | switch_smoothing_width |
+| Unit | 1 |
+| Meaning | Width of native smooth switching between time constants; zero uses the piecewise equation. |
+| Source value | Not established |
+| Value used in this model | 0 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Specified activation-dynamics constants in Data/Model_Parameters/activation.py; a verified primary numerical source is not established, and these constants are not independently identified by this fit. |
+
+</details>
+
+<details>
+<summary>FR_R_T4 · activation_time_constant_s</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FR_R_T4 |
+| Parameter | activation_time_constant_s |
+| Unit | s |
+| Meaning | Native activation/deactivation time constant. |
+| Source value | Not established |
+| Value used in this model | 0.015 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Specified activation-dynamics constants in Data/Model_Parameters/activation.py; a verified primary numerical source is not established, and these constants are not independently identified by this fit. |
+
+</details>
+
+<details>
+<summary>FR_R_T4 · deactivation_time_constant_s</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FR_R_T4 |
+| Parameter | deactivation_time_constant_s |
+| Unit | s |
+| Meaning | Native activation/deactivation time constant. |
+| Source value | Not established |
+| Value used in this model | 0.05 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Specified activation-dynamics constants in Data/Model_Parameters/activation.py; a verified primary numerical source is not established, and these constants are not independently identified by this fit. |
+
+</details>
+
+<details>
+<summary>FR_R_T4 · switch_smoothing_width</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FR_R_T4 |
+| Parameter | switch_smoothing_width |
+| Unit | 1 |
+| Meaning | Width of native smooth switching between time constants; zero uses the piecewise equation. |
+| Source value | Not established |
+| Value used in this model | 0 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Specified activation-dynamics constants in Data/Model_Parameters/activation.py; a verified primary numerical source is not established, and these constants are not independently identified by this fit. |
+
+</details>
+
+<details>
+<summary>FL_R_T5 · activation_time_constant_s</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_R_T5 |
+| Parameter | activation_time_constant_s |
+| Unit | s |
+| Meaning | Native activation/deactivation time constant. |
+| Source value | Not established |
+| Value used in this model | 0.015 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Specified activation-dynamics constants in Data/Model_Parameters/activation.py; a verified primary numerical source is not established, and these constants are not independently identified by this fit. |
+
+</details>
+
+<details>
+<summary>FL_R_T5 · deactivation_time_constant_s</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_R_T5 |
+| Parameter | deactivation_time_constant_s |
+| Unit | s |
+| Meaning | Native activation/deactivation time constant. |
+| Source value | Not established |
+| Value used in this model | 0.05 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Specified activation-dynamics constants in Data/Model_Parameters/activation.py; a verified primary numerical source is not established, and these constants are not independently identified by this fit. |
+
+</details>
+
+<details>
+<summary>FL_R_T5 · switch_smoothing_width</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_R_T5 |
+| Parameter | switch_smoothing_width |
+| Unit | 1 |
+| Meaning | Width of native smooth switching between time constants; zero uses the piecewise equation. |
+| Source value | Not established |
+| Value used in this model | 0 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Specified activation-dynamics constants in Data/Model_Parameters/activation.py; a verified primary numerical source is not established, and these constants are not independently identified by this fit. |
+
+</details>
+
+<details>
+<summary>FR_R_T5 · activation_time_constant_s</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FR_R_T5 |
+| Parameter | activation_time_constant_s |
+| Unit | s |
+| Meaning | Native activation/deactivation time constant. |
+| Source value | Not established |
+| Value used in this model | 0.015 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Specified activation-dynamics constants in Data/Model_Parameters/activation.py; a verified primary numerical source is not established, and these constants are not independently identified by this fit. |
+
+</details>
+
+<details>
+<summary>FR_R_T5 · deactivation_time_constant_s</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FR_R_T5 |
+| Parameter | deactivation_time_constant_s |
+| Unit | s |
+| Meaning | Native activation/deactivation time constant. |
+| Source value | Not established |
+| Value used in this model | 0.05 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Specified activation-dynamics constants in Data/Model_Parameters/activation.py; a verified primary numerical source is not established, and these constants are not independently identified by this fit. |
+
+</details>
+
+<details>
+<summary>FR_R_T5 · switch_smoothing_width</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FR_R_T5 |
+| Parameter | switch_smoothing_width |
+| Unit | 1 |
+| Meaning | Width of native smooth switching between time constants; zero uses the piecewise equation. |
+| Source value | Not established |
+| Value used in this model | 0 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Specified activation-dynamics constants in Data/Model_Parameters/activation.py; a verified primary numerical source is not established, and these constants are not independently identified by this fit. |
+
+</details>
+
+<details>
+<summary>FL_DigitalExtensors · activation_time_constant_s</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_DigitalExtensors |
+| Parameter | activation_time_constant_s |
+| Unit | s |
+| Meaning | Native activation/deactivation time constant. |
+| Source value | Not established |
+| Value used in this model | 0.015 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Specified activation-dynamics constants in Data/Model_Parameters/activation.py; a verified primary numerical source is not established, and these constants are not independently identified by this fit. |
+
+</details>
+
+<details>
+<summary>FL_DigitalExtensors · deactivation_time_constant_s</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_DigitalExtensors |
+| Parameter | deactivation_time_constant_s |
+| Unit | s |
+| Meaning | Native activation/deactivation time constant. |
+| Source value | Not established |
+| Value used in this model | 0.05 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Specified activation-dynamics constants in Data/Model_Parameters/activation.py; a verified primary numerical source is not established, and these constants are not independently identified by this fit. |
+
+</details>
+
+<details>
+<summary>FL_DigitalExtensors · switch_smoothing_width</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_DigitalExtensors |
+| Parameter | switch_smoothing_width |
+| Unit | 1 |
+| Meaning | Width of native smooth switching between time constants; zero uses the piecewise equation. |
+| Source value | Not established |
+| Value used in this model | 0 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Specified activation-dynamics constants in Data/Model_Parameters/activation.py; a verified primary numerical source is not established, and these constants are not independently identified by this fit. |
+
+</details>
+
+<details>
+<summary>FR_DigitalExtensors · activation_time_constant_s</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FR_DigitalExtensors |
+| Parameter | activation_time_constant_s |
+| Unit | s |
+| Meaning | Native activation/deactivation time constant. |
+| Source value | Not established |
+| Value used in this model | 0.015 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Specified activation-dynamics constants in Data/Model_Parameters/activation.py; a verified primary numerical source is not established, and these constants are not independently identified by this fit. |
+
+</details>
+
+<details>
+<summary>FR_DigitalExtensors · deactivation_time_constant_s</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FR_DigitalExtensors |
+| Parameter | deactivation_time_constant_s |
+| Unit | s |
+| Meaning | Native activation/deactivation time constant. |
+| Source value | Not established |
+| Value used in this model | 0.05 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Specified activation-dynamics constants in Data/Model_Parameters/activation.py; a verified primary numerical source is not established, and these constants are not independently identified by this fit. |
+
+</details>
+
+<details>
+<summary>FR_DigitalExtensors · switch_smoothing_width</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FR_DigitalExtensors |
+| Parameter | switch_smoothing_width |
+| Unit | 1 |
+| Meaning | Width of native smooth switching between time constants; zero uses the piecewise equation. |
+| Source value | Not established |
+| Value used in this model | 0 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Specified activation-dynamics constants in Data/Model_Parameters/activation.py; a verified primary numerical source is not established, and these constants are not independently identified by this fit. |
+
+</details>
+
+<details>
+<summary>FL_DigitalFlexors · activation_time_constant_s</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_DigitalFlexors |
+| Parameter | activation_time_constant_s |
+| Unit | s |
+| Meaning | Native activation/deactivation time constant. |
+| Source value | Not established |
+| Value used in this model | 0.015 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Specified activation-dynamics constants in Data/Model_Parameters/activation.py; a verified primary numerical source is not established, and these constants are not independently identified by this fit. |
+
+</details>
+
+<details>
+<summary>FL_DigitalFlexors · deactivation_time_constant_s</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_DigitalFlexors |
+| Parameter | deactivation_time_constant_s |
+| Unit | s |
+| Meaning | Native activation/deactivation time constant. |
+| Source value | Not established |
+| Value used in this model | 0.05 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Specified activation-dynamics constants in Data/Model_Parameters/activation.py; a verified primary numerical source is not established, and these constants are not independently identified by this fit. |
+
+</details>
+
+<details>
+<summary>FL_DigitalFlexors · switch_smoothing_width</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_DigitalFlexors |
+| Parameter | switch_smoothing_width |
+| Unit | 1 |
+| Meaning | Width of native smooth switching between time constants; zero uses the piecewise equation. |
+| Source value | Not established |
+| Value used in this model | 0 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Specified activation-dynamics constants in Data/Model_Parameters/activation.py; a verified primary numerical source is not established, and these constants are not independently identified by this fit. |
+
+</details>
+
+<details>
+<summary>FR_DigitalFlexors · activation_time_constant_s</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FR_DigitalFlexors |
+| Parameter | activation_time_constant_s |
+| Unit | s |
+| Meaning | Native activation/deactivation time constant. |
+| Source value | Not established |
+| Value used in this model | 0.015 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Specified activation-dynamics constants in Data/Model_Parameters/activation.py; a verified primary numerical source is not established, and these constants are not independently identified by this fit. |
+
+</details>
+
+<details>
+<summary>FR_DigitalFlexors · deactivation_time_constant_s</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FR_DigitalFlexors |
+| Parameter | deactivation_time_constant_s |
+| Unit | s |
+| Meaning | Native activation/deactivation time constant. |
+| Source value | Not established |
+| Value used in this model | 0.05 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Specified activation-dynamics constants in Data/Model_Parameters/activation.py; a verified primary numerical source is not established, and these constants are not independently identified by this fit. |
+
+</details>
+
+<details>
+<summary>FR_DigitalFlexors · switch_smoothing_width</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FR_DigitalFlexors |
+| Parameter | switch_smoothing_width |
+| Unit | 1 |
+| Meaning | Width of native smooth switching between time constants; zero uses the piecewise equation. |
+| Source value | Not established |
+| Value used in this model | 0 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Specified activation-dynamics constants in Data/Model_Parameters/activation.py; a verified primary numerical source is not established, and these constants are not independently identified by this fit. |
+
+</details>
+
+<details>
+<summary>FL_TrapeziusCervical · activation_time_constant_s</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_TrapeziusCervical |
+| Parameter | activation_time_constant_s |
+| Unit | s |
+| Meaning | Native activation/deactivation time constant. |
+| Source value | Not established |
+| Value used in this model | 0.015 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Specified activation-dynamics constants in Data/Model_Parameters/activation.py; a verified primary numerical source is not established, and these constants are not independently identified by this fit. |
+
+</details>
+
+<details>
+<summary>FL_TrapeziusCervical · deactivation_time_constant_s</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_TrapeziusCervical |
+| Parameter | deactivation_time_constant_s |
+| Unit | s |
+| Meaning | Native activation/deactivation time constant. |
+| Source value | Not established |
+| Value used in this model | 0.05 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Specified activation-dynamics constants in Data/Model_Parameters/activation.py; a verified primary numerical source is not established, and these constants are not independently identified by this fit. |
+
+</details>
+
+<details>
+<summary>FL_TrapeziusCervical · switch_smoothing_width</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_TrapeziusCervical |
+| Parameter | switch_smoothing_width |
+| Unit | 1 |
+| Meaning | Width of native smooth switching between time constants; zero uses the piecewise equation. |
+| Source value | Not established |
+| Value used in this model | 0 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Specified activation-dynamics constants in Data/Model_Parameters/activation.py; a verified primary numerical source is not established, and these constants are not independently identified by this fit. |
+
+</details>
+
+<details>
+<summary>FR_TrapeziusCervical · activation_time_constant_s</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FR_TrapeziusCervical |
+| Parameter | activation_time_constant_s |
+| Unit | s |
+| Meaning | Native activation/deactivation time constant. |
+| Source value | Not established |
+| Value used in this model | 0.015 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Specified activation-dynamics constants in Data/Model_Parameters/activation.py; a verified primary numerical source is not established, and these constants are not independently identified by this fit. |
+
+</details>
+
+<details>
+<summary>FR_TrapeziusCervical · deactivation_time_constant_s</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FR_TrapeziusCervical |
+| Parameter | deactivation_time_constant_s |
+| Unit | s |
+| Meaning | Native activation/deactivation time constant. |
+| Source value | Not established |
+| Value used in this model | 0.05 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Specified activation-dynamics constants in Data/Model_Parameters/activation.py; a verified primary numerical source is not established, and these constants are not independently identified by this fit. |
+
+</details>
+
+<details>
+<summary>FR_TrapeziusCervical · switch_smoothing_width</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FR_TrapeziusCervical |
+| Parameter | switch_smoothing_width |
+| Unit | 1 |
+| Meaning | Width of native smooth switching between time constants; zero uses the piecewise equation. |
+| Source value | Not established |
+| Value used in this model | 0 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Specified activation-dynamics constants in Data/Model_Parameters/activation.py; a verified primary numerical source is not established, and these constants are not independently identified by this fit. |
+
+</details>
+
+<details>
+<summary>FL_TrapeziusThoracic · activation_time_constant_s</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_TrapeziusThoracic |
+| Parameter | activation_time_constant_s |
+| Unit | s |
+| Meaning | Native activation/deactivation time constant. |
+| Source value | Not established |
+| Value used in this model | 0.015 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Specified activation-dynamics constants in Data/Model_Parameters/activation.py; a verified primary numerical source is not established, and these constants are not independently identified by this fit. |
+
+</details>
+
+<details>
+<summary>FL_TrapeziusThoracic · deactivation_time_constant_s</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_TrapeziusThoracic |
+| Parameter | deactivation_time_constant_s |
+| Unit | s |
+| Meaning | Native activation/deactivation time constant. |
+| Source value | Not established |
+| Value used in this model | 0.05 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Specified activation-dynamics constants in Data/Model_Parameters/activation.py; a verified primary numerical source is not established, and these constants are not independently identified by this fit. |
+
+</details>
+
+<details>
+<summary>FL_TrapeziusThoracic · switch_smoothing_width</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_TrapeziusThoracic |
+| Parameter | switch_smoothing_width |
+| Unit | 1 |
+| Meaning | Width of native smooth switching between time constants; zero uses the piecewise equation. |
+| Source value | Not established |
+| Value used in this model | 0 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Specified activation-dynamics constants in Data/Model_Parameters/activation.py; a verified primary numerical source is not established, and these constants are not independently identified by this fit. |
+
+</details>
+
+<details>
+<summary>FR_TrapeziusThoracic · activation_time_constant_s</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FR_TrapeziusThoracic |
+| Parameter | activation_time_constant_s |
+| Unit | s |
+| Meaning | Native activation/deactivation time constant. |
+| Source value | Not established |
+| Value used in this model | 0.015 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Specified activation-dynamics constants in Data/Model_Parameters/activation.py; a verified primary numerical source is not established, and these constants are not independently identified by this fit. |
+
+</details>
+
+<details>
+<summary>FR_TrapeziusThoracic · deactivation_time_constant_s</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FR_TrapeziusThoracic |
+| Parameter | deactivation_time_constant_s |
+| Unit | s |
+| Meaning | Native activation/deactivation time constant. |
+| Source value | Not established |
+| Value used in this model | 0.05 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Specified activation-dynamics constants in Data/Model_Parameters/activation.py; a verified primary numerical source is not established, and these constants are not independently identified by this fit. |
+
+</details>
+
+<details>
+<summary>FR_TrapeziusThoracic · switch_smoothing_width</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FR_TrapeziusThoracic |
+| Parameter | switch_smoothing_width |
+| Unit | 1 |
+| Meaning | Width of native smooth switching between time constants; zero uses the piecewise equation. |
+| Source value | Not established |
+| Value used in this model | 0 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Specified activation-dynamics constants in Data/Model_Parameters/activation.py; a verified primary numerical source is not established, and these constants are not independently identified by this fit. |
+
+</details>
+
+<details>
+<summary>FL_LatissimusDorsi · activation_time_constant_s</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_LatissimusDorsi |
+| Parameter | activation_time_constant_s |
+| Unit | s |
+| Meaning | Native activation/deactivation time constant. |
+| Source value | Not established |
+| Value used in this model | 0.015 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Specified activation-dynamics constants in Data/Model_Parameters/activation.py; a verified primary numerical source is not established, and these constants are not independently identified by this fit. |
+
+</details>
+
+<details>
+<summary>FL_LatissimusDorsi · deactivation_time_constant_s</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_LatissimusDorsi |
+| Parameter | deactivation_time_constant_s |
+| Unit | s |
+| Meaning | Native activation/deactivation time constant. |
+| Source value | Not established |
+| Value used in this model | 0.05 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Specified activation-dynamics constants in Data/Model_Parameters/activation.py; a verified primary numerical source is not established, and these constants are not independently identified by this fit. |
+
+</details>
+
+<details>
+<summary>FL_LatissimusDorsi · switch_smoothing_width</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_LatissimusDorsi |
+| Parameter | switch_smoothing_width |
+| Unit | 1 |
+| Meaning | Width of native smooth switching between time constants; zero uses the piecewise equation. |
+| Source value | Not established |
+| Value used in this model | 0 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Specified activation-dynamics constants in Data/Model_Parameters/activation.py; a verified primary numerical source is not established, and these constants are not independently identified by this fit. |
+
+</details>
+
+<details>
+<summary>FR_LatissimusDorsi · activation_time_constant_s</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FR_LatissimusDorsi |
+| Parameter | activation_time_constant_s |
+| Unit | s |
+| Meaning | Native activation/deactivation time constant. |
+| Source value | Not established |
+| Value used in this model | 0.015 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Specified activation-dynamics constants in Data/Model_Parameters/activation.py; a verified primary numerical source is not established, and these constants are not independently identified by this fit. |
+
+</details>
+
+<details>
+<summary>FR_LatissimusDorsi · deactivation_time_constant_s</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FR_LatissimusDorsi |
+| Parameter | deactivation_time_constant_s |
+| Unit | s |
+| Meaning | Native activation/deactivation time constant. |
+| Source value | Not established |
+| Value used in this model | 0.05 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Specified activation-dynamics constants in Data/Model_Parameters/activation.py; a verified primary numerical source is not established, and these constants are not independently identified by this fit. |
+
+</details>
+
+<details>
+<summary>FR_LatissimusDorsi · switch_smoothing_width</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FR_LatissimusDorsi |
+| Parameter | switch_smoothing_width |
+| Unit | 1 |
+| Meaning | Width of native smooth switching between time constants; zero uses the piecewise equation. |
+| Source value | Not established |
+| Value used in this model | 0 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Specified activation-dynamics constants in Data/Model_Parameters/activation.py; a verified primary numerical source is not established, and these constants are not independently identified by this fit. |
+
+</details>
+
+<details>
+<summary>FL_PectoralisProfundus · activation_time_constant_s</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_PectoralisProfundus |
+| Parameter | activation_time_constant_s |
+| Unit | s |
+| Meaning | Native activation/deactivation time constant. |
+| Source value | Not established |
+| Value used in this model | 0.015 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Specified activation-dynamics constants in Data/Model_Parameters/activation.py; a verified primary numerical source is not established, and these constants are not independently identified by this fit. |
+
+</details>
+
+<details>
+<summary>FL_PectoralisProfundus · deactivation_time_constant_s</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_PectoralisProfundus |
+| Parameter | deactivation_time_constant_s |
+| Unit | s |
+| Meaning | Native activation/deactivation time constant. |
+| Source value | Not established |
+| Value used in this model | 0.05 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Specified activation-dynamics constants in Data/Model_Parameters/activation.py; a verified primary numerical source is not established, and these constants are not independently identified by this fit. |
+
+</details>
+
+<details>
+<summary>FL_PectoralisProfundus · switch_smoothing_width</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_PectoralisProfundus |
+| Parameter | switch_smoothing_width |
+| Unit | 1 |
+| Meaning | Width of native smooth switching between time constants; zero uses the piecewise equation. |
+| Source value | Not established |
+| Value used in this model | 0 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Specified activation-dynamics constants in Data/Model_Parameters/activation.py; a verified primary numerical source is not established, and these constants are not independently identified by this fit. |
+
+</details>
+
+<details>
+<summary>FR_PectoralisProfundus · activation_time_constant_s</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FR_PectoralisProfundus |
+| Parameter | activation_time_constant_s |
+| Unit | s |
+| Meaning | Native activation/deactivation time constant. |
+| Source value | Not established |
+| Value used in this model | 0.015 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Specified activation-dynamics constants in Data/Model_Parameters/activation.py; a verified primary numerical source is not established, and these constants are not independently identified by this fit. |
+
+</details>
+
+<details>
+<summary>FR_PectoralisProfundus · deactivation_time_constant_s</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FR_PectoralisProfundus |
+| Parameter | deactivation_time_constant_s |
+| Unit | s |
+| Meaning | Native activation/deactivation time constant. |
+| Source value | Not established |
+| Value used in this model | 0.05 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Specified activation-dynamics constants in Data/Model_Parameters/activation.py; a verified primary numerical source is not established, and these constants are not independently identified by this fit. |
+
+</details>
+
+<details>
+<summary>FR_PectoralisProfundus · switch_smoothing_width</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FR_PectoralisProfundus |
+| Parameter | switch_smoothing_width |
+| Unit | 1 |
+| Meaning | Width of native smooth switching between time constants; zero uses the piecewise equation. |
+| Source value | Not established |
+| Value used in this model | 0 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Specified activation-dynamics constants in Data/Model_Parameters/activation.py; a verified primary numerical source is not established, and these constants are not independently identified by this fit. |
+
+</details>
+
+<details>
+<summary>FL_PectoralisSuperficialis · activation_time_constant_s</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_PectoralisSuperficialis |
+| Parameter | activation_time_constant_s |
+| Unit | s |
+| Meaning | Native activation/deactivation time constant. |
+| Source value | Not established |
+| Value used in this model | 0.015 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Specified activation-dynamics constants in Data/Model_Parameters/activation.py; a verified primary numerical source is not established, and these constants are not independently identified by this fit. |
+
+</details>
+
+<details>
+<summary>FL_PectoralisSuperficialis · deactivation_time_constant_s</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_PectoralisSuperficialis |
+| Parameter | deactivation_time_constant_s |
+| Unit | s |
+| Meaning | Native activation/deactivation time constant. |
+| Source value | Not established |
+| Value used in this model | 0.05 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Specified activation-dynamics constants in Data/Model_Parameters/activation.py; a verified primary numerical source is not established, and these constants are not independently identified by this fit. |
+
+</details>
+
+<details>
+<summary>FL_PectoralisSuperficialis · switch_smoothing_width</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_PectoralisSuperficialis |
+| Parameter | switch_smoothing_width |
+| Unit | 1 |
+| Meaning | Width of native smooth switching between time constants; zero uses the piecewise equation. |
+| Source value | Not established |
+| Value used in this model | 0 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Specified activation-dynamics constants in Data/Model_Parameters/activation.py; a verified primary numerical source is not established, and these constants are not independently identified by this fit. |
+
+</details>
+
+<details>
+<summary>FR_PectoralisSuperficialis · activation_time_constant_s</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FR_PectoralisSuperficialis |
+| Parameter | activation_time_constant_s |
+| Unit | s |
+| Meaning | Native activation/deactivation time constant. |
+| Source value | Not established |
+| Value used in this model | 0.015 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Specified activation-dynamics constants in Data/Model_Parameters/activation.py; a verified primary numerical source is not established, and these constants are not independently identified by this fit. |
+
+</details>
+
+<details>
+<summary>FR_PectoralisSuperficialis · deactivation_time_constant_s</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FR_PectoralisSuperficialis |
+| Parameter | deactivation_time_constant_s |
+| Unit | s |
+| Meaning | Native activation/deactivation time constant. |
+| Source value | Not established |
+| Value used in this model | 0.05 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Specified activation-dynamics constants in Data/Model_Parameters/activation.py; a verified primary numerical source is not established, and these constants are not independently identified by this fit. |
+
+</details>
+
+<details>
+<summary>FR_PectoralisSuperficialis · switch_smoothing_width</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FR_PectoralisSuperficialis |
+| Parameter | switch_smoothing_width |
+| Unit | 1 |
+| Meaning | Width of native smooth switching between time constants; zero uses the piecewise equation. |
+| Source value | Not established |
+| Value used in this model | 0 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Specified activation-dynamics constants in Data/Model_Parameters/activation.py; a verified primary numerical source is not established, and these constants are not independently identified by this fit. |
+
+</details>
+
+<details>
+<summary>FL_Clavobrachialis · activation_time_constant_s</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_Clavobrachialis |
+| Parameter | activation_time_constant_s |
+| Unit | s |
+| Meaning | Native activation/deactivation time constant. |
+| Source value | Not established |
+| Value used in this model | 0.015 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Specified activation-dynamics constants in Data/Model_Parameters/activation.py; a verified primary numerical source is not established, and these constants are not independently identified by this fit. |
+
+</details>
+
+<details>
+<summary>FL_Clavobrachialis · deactivation_time_constant_s</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_Clavobrachialis |
+| Parameter | deactivation_time_constant_s |
+| Unit | s |
+| Meaning | Native activation/deactivation time constant. |
+| Source value | Not established |
+| Value used in this model | 0.05 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Specified activation-dynamics constants in Data/Model_Parameters/activation.py; a verified primary numerical source is not established, and these constants are not independently identified by this fit. |
+
+</details>
+
+<details>
+<summary>FL_Clavobrachialis · switch_smoothing_width</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FL_Clavobrachialis |
+| Parameter | switch_smoothing_width |
+| Unit | 1 |
+| Meaning | Width of native smooth switching between time constants; zero uses the piecewise equation. |
+| Source value | Not established |
+| Value used in this model | 0 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Specified activation-dynamics constants in Data/Model_Parameters/activation.py; a verified primary numerical source is not established, and these constants are not independently identified by this fit. |
+
+</details>
+
+<details>
+<summary>FR_Clavobrachialis · activation_time_constant_s</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FR_Clavobrachialis |
+| Parameter | activation_time_constant_s |
+| Unit | s |
+| Meaning | Native activation/deactivation time constant. |
+| Source value | Not established |
+| Value used in this model | 0.015 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Specified activation-dynamics constants in Data/Model_Parameters/activation.py; a verified primary numerical source is not established, and these constants are not independently identified by this fit. |
+
+</details>
+
+<details>
+<summary>FR_Clavobrachialis · deactivation_time_constant_s</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FR_Clavobrachialis |
+| Parameter | deactivation_time_constant_s |
+| Unit | s |
+| Meaning | Native activation/deactivation time constant. |
+| Source value | Not established |
+| Value used in this model | 0.05 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Specified activation-dynamics constants in Data/Model_Parameters/activation.py; a verified primary numerical source is not established, and these constants are not independently identified by this fit. |
+
+</details>
+
+<details>
+<summary>FR_Clavobrachialis · switch_smoothing_width</summary>
+
+| Field | Value |
+| --- | --- |
+| Object | FR_Clavobrachialis |
+| Parameter | switch_smoothing_width |
+| Unit | 1 |
+| Meaning | Width of native smooth switching between time constants; zero uses the piecewise equation. |
+| Source value | Not established |
+| Value used in this model | 0 |
+| What changed and why | No verified source value is available for direct comparison. The available record does not establish an individual source-to-model adjustment rationale; no more specific reason is claimed. |
+| Source / evidence | Specified activation-dynamics constants in Data/Model_Parameters/activation.py; a verified primary numerical source is not established, and these constants are not independently identified by this fit. |
+
+</details>
